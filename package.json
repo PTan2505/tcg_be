@@ -1,0 +1,17 @@
+{
+  "name": "tcg_be",
+  "scripts": {
+    "dev": "bun run --hot src/index.ts",
+    "import-pokemon-data": "bun run scripts/importPokemonData.ts",
+    "import-yugioh-data": "bun run scripts/yugioh/importData.ts"
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "dotenv": "^17.2.1",
+    "hono": "^4.8.12",
+    "mongoose": "^8.17.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
