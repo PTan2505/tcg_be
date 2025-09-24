@@ -5,6 +5,7 @@ import { swaggerDoc } from "./config/swagger";
 import { connectDB } from "./db/db";
 import "./models/user"; // Import User model to ensure it's registered
 import authRoutes from "./routes/auth.routes";
+import userRoutes from "./routes/user.routes";
 
 // Create Hono app
 const app = new Hono();
@@ -26,8 +27,9 @@ app.get("/", (c) => {
   return c.text("Hello Hono!");
 });
 
-// Mount auth routes
+// Mount routes
 app.route("/auth", authRoutes);
+app.route("/users", userRoutes);
 
 // Start the server if not in production
 if (process.env.NODE_ENV !== "production") {

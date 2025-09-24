@@ -1,7 +1,6 @@
 import { Schema, model } from "mongoose";
 
 export interface User {
-  username: string;
   email: string;
   password: string;
   firstName: string;
@@ -15,13 +14,6 @@ export interface User {
 
 const userSchema = new Schema<User>(
   {
-    username: {
-      type: String,
-      required: true,
-      unique: true,
-      trim: true,
-      minlength: 3,
-    },
     email: {
       type: String,
       required: true,

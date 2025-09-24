@@ -5,7 +5,6 @@ export interface LoginDTO {
 
 export interface RegisterDTO {
   email: string;
-  username: string;
   password: string;
   firstName: string;
   lastName: string;
@@ -17,7 +16,21 @@ export interface AuthTokens {
   refreshToken: string;
 }
 
+export interface RefreshTokenDTO {
+  refreshToken: string;
+}
+
 export interface EmailVerificationToken {
   userId: string;
   token: string;
+}
+
+export interface ForgotPasswordDTO {
+  email: string;
+}
+
+export interface ResetPasswordDTO {
+  token: string;
+  newPassword: string;
+  confirmPassword: string;
 }

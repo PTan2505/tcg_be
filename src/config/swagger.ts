@@ -18,6 +18,10 @@ export const swaggerDoc: OpenAPIV3.Document = {
       name: "Authentication",
       description: "Authentication endpoints",
     },
+    {
+      name: "Users",
+      description: "User management endpoints",
+    },
   ],
   paths: {
     "/auth/register": {
@@ -32,7 +36,6 @@ export const swaggerDoc: OpenAPIV3.Document = {
                 type: "object",
                 required: [
                   "email",
-                  "username",
                   "password",
                   "firstName",
                   "lastName",
@@ -44,12 +47,6 @@ export const swaggerDoc: OpenAPIV3.Document = {
                     format: "email",
                     description: "User email address",
                     example: "user@example.com",
-                  },
-                  username: {
-                    type: "string",
-                    minLength: 3,
-                    description: "Username",
-                    example: "johndoe",
                   },
                   password: {
                     type: "string",
@@ -220,8 +217,460 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
+    "/auth/forgot-password": {
+      post: {
+        tags: ["Authentication"],
+        summary: "Request password reset",
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                required: ["email"],
+                properties: {
+                  email: {
+                    type: "string",
+                    format: "email",
+                    description: "User's email address",
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "200": {
+            description: "Reset instructions sent (if email exists)",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    message: {
+                      type: "string",
+                      example:
+                        "If the email exists, password reset instructions have been sent",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "400": {
+            description: "Invalid input",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/users/profile": {
+      get: {
+        tags: ["Users"],
+        summary: "Get authenticated user's profile",
+        security: [{ bearerAuth: [] }],
+        responses: {
+          "200": {
+            description: "User profile retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/User",
+                },
+              },
+            },
+          },
+          "401": {
+            description: "Unauthorized - Invalid or missing token",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+
+    "/auth/refresh-token": {
+      post: {
+        tags: ["Authentication"],
+        summary: "Refresh access token using refresh token",
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                required: ["refreshToken"],
+                properties: {
+                  refreshToken: {
+                    type: "string",
+                    description: "JWT refresh token obtained from login",
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "200": {
+            description: "New access token generated successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    accessToken: {
+                      type: "string",
+                      description: "New JWT access token",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "400": {
+            description: "Invalid refresh token",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/auth/reset-password": {
+      post: {
+        tags: ["Authentication"],
+        summary: "Reset password using token",
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                required: ["token", "newPassword"],
+                properties: {
+                  token: {
+                    type: "string",
+                    description: "Password reset token received via email",
+                  },
+                  newPassword: {
+                    type: "string",
+                    format: "password",
+                    minLength: 8,
+                    description:
+                      "New password (must contain uppercase, lowercase, and number)",
+                    pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)",
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "200": {
+            description: "Password reset successful",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    message: {
+                      type: "string",
+                      example: "Password reset successful",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "400": {
+            description: "Invalid input or token",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/users": {
+      get: {
+        tags: ["Users"],
+        summary: "Get all users",
+        responses: {
+          "200": {
+            description: "List of users",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "array",
+                  items: {
+                    $ref: "#/components/schemas/User",
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/users/{id}": {
+      get: {
+        tags: ["Users"],
+        summary: "Get user by ID",
+        parameters: [
+          {
+            in: "path",
+            name: "id",
+            required: true,
+            schema: {
+              type: "string",
+            },
+            description: "User ID",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "User found",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/User",
+                },
+              },
+            },
+          },
+          "404": {
+            description: "User not found",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+        },
+      },
+      patch: {
+        tags: ["Users"],
+        summary: "Update user",
+        parameters: [
+          {
+            in: "path",
+            name: "id",
+            required: true,
+            schema: {
+              type: "string",
+            },
+            description: "User ID",
+          },
+        ],
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                properties: {
+                  firstName: {
+                    type: "string",
+                    minLength: 1,
+                  },
+                  lastName: {
+                    type: "string",
+                    minLength: 1,
+                  },
+                  dateOfBirth: {
+                    type: "string",
+                    format: "date",
+                    description: "Date of birth (YYYY-MM-DD)",
+                  },
+                  avatarUrl: {
+                    type: "string",
+                    format: "uri",
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "200": {
+            description: "User updated successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/User",
+                },
+              },
+            },
+          },
+          "400": {
+            description: "Invalid input",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+          "404": {
+            description: "User not found",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+        },
+      },
+      delete: {
+        tags: ["Users"],
+        summary: "Delete user",
+        parameters: [
+          {
+            in: "path",
+            name: "id",
+            required: true,
+            schema: {
+              type: "string",
+            },
+            description: "User ID",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "User deleted successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    message: {
+                      type: "string",
+                      example: "User deleted successfully",
+                    },
+                    user: {
+                      $ref: "#/components/schemas/User",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "404": {
+            description: "User not found",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/users/change-password": {
+      post: {
+        tags: ["Users"],
+        summary: "Change authenticated user's password",
+        security: [{ bearerAuth: [] }],
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                required: ["currentPassword", "newPassword"],
+                properties: {
+                  currentPassword: {
+                    type: "string",
+                    minLength: 8,
+                    description: "Current password",
+                  },
+                  newPassword: {
+                    type: "string",
+                    minLength: 8,
+                    description:
+                      "New password (must contain uppercase, lowercase, and number)",
+                    pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)",
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "200": {
+            description: "Password changed successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    message: {
+                      type: "string",
+                      example: "Password changed successfully",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "400": {
+            description: "Invalid input or current password incorrect",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+          "404": {
+            description: "User not found",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
   },
   components: {
+    securitySchemes: {
+      bearerAuth: {
+        type: "http",
+        scheme: "bearer",
+        bearerFormat: "JWT",
+      },
+    },
     schemas: {
       User: {
         type: "object",
@@ -230,10 +679,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
             type: "string",
             description: "User ID",
           },
-          username: {
-            type: "string",
-            description: "Username",
-          },
+
           email: {
             type: "string",
             format: "email",

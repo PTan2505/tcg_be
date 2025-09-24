@@ -1,9 +1,15 @@
-import { zValidator } from "@hono/zod-validator";
 import { Hono } from "hono";
 import { AuthController } from "../controllers/auth.controller";
+import { validateRequest } from "../middlewares/validation.middleware";
 import { AuthService } from "../services/auth.service";
 import { EmailService } from "../services/email.service";
-import { loginSchema, registerSchema } from "../validators/auth.validator";
+import {
+  forgotPasswordSchema,
+  loginSchema,
+  refreshTokenSchema,
+  registerSchema,
+  resetPasswordSchema,
+} from "../validators/auth.validator";
 
 const authRoutes = new Hono();
 
@@ -15,14 +21,26 @@ const authController = new AuthController(authService);
 // Routes
 authRoutes.post(
   "/register",
-  zValidator("json", registerSchema),
+  validateRequest(registerSchema),
   authController.register
 );
-authRoutes.post(
-  "/login",
-  zValidator("json", loginSchema),
-  authController.login
-);
+authRoutes.post("/login", validateRequest(loginSchema), authController.login);
 authRoutes.get("/verify-email", authController.verifyEmail);
+authRoutes.post(
+  "/forgot-password",
+  validateRequest(forgotPasswordSchema),
+  authController.forgotPassword
+);
+authRoutes.post(
+  "/reset-password",
+  validateRequest(resetPasswordSchema),
+  authController.resetPassword
+);
+
+authRoutes.post(
+  "/refresh-token",
+  validateRequest(refreshTokenSchema),
+  authController.refreshToken
+);
 
 export default authRoutes;
