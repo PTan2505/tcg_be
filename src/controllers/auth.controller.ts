@@ -8,13 +8,13 @@ export class AuthController {
     try {
       const data = await c.req.json();
       const user = await this.authService.register(data);
-      const userData = user.toObject();
-      delete userData.password; // Remove sensitive data
+      console.log("Registered user:", user);
+
       return c.json(
         {
           message:
             "Registration successful. Please check your email to verify your account.",
-          user: userData,
+          user: user.toJSON(),
         },
         201
       );

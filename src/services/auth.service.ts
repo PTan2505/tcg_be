@@ -39,7 +39,7 @@ export class AuthService implements IAuthService {
     // Check if user exists
     const existingUser = await UserModel.findOne({
       $or: [{ email: data.email }, { username: data.username }],
-    });
+    }).exec();
 
     if (existingUser) {
       throw new Error("User already exists");
@@ -47,14 +47,21 @@ export class AuthService implements IAuthService {
 
     // Hash password
     const salt = await bcrypt.genSalt(10);
-    const password = await bcrypt.hash(data.password, salt);
+    const hashedPassword = await bcrypt.hash(data.password, salt);
 
-    // Create user
-    const user = await UserModel.create({
-      ...data,
-      password,
+    // Prepare user data
+    const userData = {
+      email: data.email,
+      username: data.username,
+      password: hashedPassword,
+      firstName: data.firstName,
+      lastName: data.lastName,
+      dateOfBirth: new Date(data.dateOfBirth),
       isEmailVerified: false,
-    });
+    };
+
+    // Create and save user
+    const user = await UserModel.create(userData);
 
     // Generate and send verification token
     const verificationToken = this.generateVerificationToken(user.id);
@@ -62,7 +69,6 @@ export class AuthService implements IAuthService {
       user.email,
       verificationToken
     );
-
     return user;
   }
 

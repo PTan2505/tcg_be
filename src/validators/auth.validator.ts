@@ -8,5 +8,10 @@ export const loginSchema = z.object({
 export const registerSchema = z.object({
   email: z.string().email(),
   username: z.string().min(3),
-  password: z.string().min(6),
+  password: z.string().min(8),
+  firstName: z.string().min(1),
+  lastName: z.string().min(1),
+  dateOfBirth: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/, "Date must be in YYYY-MM-DD format"),
 });

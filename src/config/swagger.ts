@@ -30,22 +30,50 @@ export const swaggerDoc: OpenAPIV3.Document = {
             "application/json": {
               schema: {
                 type: "object",
-                required: ["email", "username", "password"],
+                required: [
+                  "email",
+                  "username",
+                  "password",
+                  "firstName",
+                  "lastName",
+                  "dateOfBirth",
+                ],
                 properties: {
                   email: {
                     type: "string",
                     format: "email",
                     description: "User email address",
+                    example: "user@example.com",
                   },
                   username: {
                     type: "string",
                     minLength: 3,
                     description: "Username",
+                    example: "johndoe",
                   },
                   password: {
                     type: "string",
-                    minLength: 6,
+                    minLength: 8,
                     description: "Password",
+                    example: "password123",
+                  },
+                  firstName: {
+                    type: "string",
+                    minLength: 1,
+                    description: "First name",
+                    example: "John",
+                  },
+                  lastName: {
+                    type: "string",
+                    minLength: 1,
+                    description: "Last name",
+                    example: "Doe",
+                  },
+                  dateOfBirth: {
+                    type: "string",
+                    format: "date",
+                    description: "Date of birth (YYYY-MM-DD)",
+                    example: "1990-01-01",
                   },
                 },
               },
