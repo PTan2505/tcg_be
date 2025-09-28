@@ -1,5 +1,5 @@
 import { Context } from "hono";
-import { IAuthService } from "../services/auth.service";
+import { IAuthService } from "./auth.service";
 
 export class AuthController {
   constructor(private authService: IAuthService) {}

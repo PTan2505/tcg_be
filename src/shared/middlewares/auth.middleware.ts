@@ -1,6 +1,6 @@
 import { Context, Next } from "hono";
 import jwt from "jsonwebtoken";
-import UserModel from "../models/user";
+import UserModel from "../../database/models/user";
 
 export const authMiddleware = async (c: Context, next: Next) => {
   try {

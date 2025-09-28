@@ -29,7 +29,7 @@ export class EmailService implements IEmailService {
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
 
-    const templatePath = path.join(__dirname, "../config/email.html"); // adjust relative path
+    const templatePath = path.join(__dirname, "config/email.html"); // correct relative path
     let html = fs.readFileSync(templatePath, "utf-8");
 
     // Replace placeholders
@@ -52,7 +52,7 @@ export class EmailService implements IEmailService {
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
 
-    const templatePath = path.join(__dirname, "../config/email.html"); // adjust relative path
+    const templatePath = path.join(__dirname, "config/email.html"); // correct relative path
     let html = fs.readFileSync(templatePath, "utf-8");
 
     // Replace placeholders

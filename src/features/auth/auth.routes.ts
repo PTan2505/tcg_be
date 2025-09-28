@@ -1,15 +1,15 @@
 import { Hono } from "hono";
-import { AuthController } from "../controllers/auth.controller";
-import { validateRequest } from "../middlewares/validation.middleware";
-import { AuthService } from "../services/auth.service";
-import { EmailService } from "../services/email.service";
+import { EmailService } from "../../shared/email.service";
+import { validateRequest } from "../../shared/middlewares/validation.middleware";
+import { AuthController } from "./auth.controller";
+import { AuthService } from "./auth.service";
 import {
-  forgotPasswordSchema,
-  loginSchema,
-  refreshTokenSchema,
-  registerSchema,
-  resetPasswordSchema,
-} from "../validators/auth.validator";
+    forgotPasswordSchema,
+    loginSchema,
+    refreshTokenSchema,
+    registerSchema,
+    resetPasswordSchema,
+} from "./auth.validator";
 
 const authRoutes = new Hono();
 

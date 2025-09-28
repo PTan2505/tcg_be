@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs";
 import { Document, FilterQuery } from "mongoose";
-import UserModel, { User } from "../models/user";
+import UserModel, { User } from "../../database/models/user";
 
 export interface IUserService {
   createUser(data: Partial<User>): Promise<Document & User>;

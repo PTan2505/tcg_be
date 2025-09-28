@@ -1,12 +1,12 @@
 import { Hono } from "hono";
-import { UserController } from "../controllers/user.controller";
-import { authMiddleware } from "../middlewares/auth.middleware";
-import { validateRequest } from "../middlewares/validation.middleware";
-import { UserService } from "../services/user.service";
+import { UserController } from "./user.controller";
+import { authMiddleware } from "../../shared/middlewares/auth.middleware";
+import { validateRequest } from "../../shared/middlewares/validation.middleware";
+import { UserService } from "./user.service";
 import {
   changePasswordSchema,
   updateUserSchema,
-} from "../validators/user.validator";
+} from "./user.validator";
 
 const userRoutes = new Hono();
 

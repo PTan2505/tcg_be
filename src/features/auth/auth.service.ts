@@ -1,7 +1,7 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import UserModel, { User } from "../models/user";
-import { AuthTokens, LoginDTO, RegisterDTO } from "../types/auth.types";
+import UserModel, { User } from "../../database/models/user";
+import { AuthTokens, LoginDTO, RegisterDTO } from "./auth.types";
 import { IEmailService } from "./email.service";
 
 import { Document } from "mongoose";

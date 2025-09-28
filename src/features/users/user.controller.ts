@@ -1,5 +1,5 @@
 import { Context } from "hono";
-import { IUserService } from "../services/user.service";
+import { IUserService } from "./user.service";
 
 export class UserController {
   constructor(private userService: IUserService) {}
