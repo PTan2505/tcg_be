@@ -1,8 +1,8 @@
 import { readFile } from "fs/promises";
 import mongoose from "mongoose";
 import path from "path";
-import { PokemonCard } from "../../src/models/pokemon/pokemonCard";
-import { PokemonDeck } from "../../src/models/pokemon/pokemonDeck";
+import { PokemonCard } from "../../src/database/models/pokemon/pokemonCard";
+import { PokemonDeck } from "../../src/database/models/pokemon/pokemonDeck";
 
 export async function importDecks() {
   try {

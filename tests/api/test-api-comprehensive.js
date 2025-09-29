@@ -1003,7 +1003,263 @@ async function testUserManagement() {
   );
 }
 
+// =============================================================================
+// 🃏 SET MANAGEMENT TESTS
+// =============================================================================
 
+async function testSetManagement() {
+  console.log('\n🃏 === SET MANAGEMENT TESTS ===\n');
+
+  // Test 6.1: Get All Sets - Basic Request
+  console.log('📋 Test 6.1: Get All Sets (Basic)');
+  const { data: allSetsData } = await makeRequest(`${BASE_URL}/sets?page=1&limit=10`);
+  
+  assert(
+    allSetsData.success && Array.isArray(allSetsData.data),
+    'All sets endpoint should return array',
+    'success with array',
+    allSetsData.success ? `array with ${allSetsData.data?.length || 0} items` : 'failure'
+  );
+
+  // Store set IDs for later tests
+  let pokemonSetId = null;
+  let yugiohSetId = null;
+
+  // Test 6.2: Get Pokemon Sets Only
+  console.log('📋 Test 6.2: Get Pokemon Sets Only');
+  const { data: pokemonSetsData } = await makeRequest(`${BASE_URL}/sets?type=pokemon&page=1&limit=5`);
+  
+  assert(
+    pokemonSetsData.success && Array.isArray(pokemonSetsData.data),
+    'Pokemon sets should be filtered correctly',
+    'success with pokemon sets',
+    pokemonSetsData.success ? `${pokemonSetsData.data?.length || 0} pokemon sets` : 'failure'
+  );
+
+  if (pokemonSetsData.success && pokemonSetsData.data.length > 0) {
+    pokemonSetId = pokemonSetsData.data[0]._id;
+    console.log(`✅ Got Pokemon Set ID: ${pokemonSetId}`);
+  }
+
+  // Test 6.3: Get Yugioh Sets Only
+  console.log('📋 Test 6.3: Get Yugioh Sets Only');
+  const { data: yugiohSetsData } = await makeRequest(`${BASE_URL}/sets?type=yugioh&page=1&limit=5`);
+  
+  assert(
+    yugiohSetsData.success && Array.isArray(yugiohSetsData.data),
+    'Yugioh sets should be filtered correctly',
+    'success with yugioh sets',
+    yugiohSetsData.success ? `${yugiohSetsData.data?.length || 0} yugioh sets` : 'failure'
+  );
+
+  if (yugiohSetsData.success && yugiohSetsData.data.length > 0) {
+    yugiohSetId = yugiohSetsData.data[0]._id;
+    console.log(`✅ Got Yugioh Set ID: ${yugiohSetId}`);
+  }
+
+  // Test 6.4: Get Sets with Invalid Type
+  console.log('📋 Test 6.4: Get Sets (Invalid Type)');
+  const { data: invalidTypeData } = await makeRequest(`${BASE_URL}/sets?type=invalid&page=1&limit=5`);
+  
+  assert(
+    !invalidTypeData.success && invalidTypeData.error,
+    'Invalid set type should be rejected',
+    'validation error',
+    invalidTypeData.success ? 'success' : 'validation error'
+  );
+
+  // Test 6.5: Get Sets with Invalid Pagination
+  console.log('📋 Test 6.5: Get Sets (Invalid Pagination)');
+  const { data: invalidPaginationData } = await makeRequest(`${BASE_URL}/sets?page=-1&limit=1000`);
+  
+  assert(
+    !invalidPaginationData.success && invalidPaginationData.error,
+    'Invalid pagination should be rejected',
+    'validation error',
+    invalidPaginationData.success ? 'success' : 'validation error'
+  );
+
+  // Test 6.6: Search Sets - Valid Query
+  console.log('📋 Test 6.6: Search Sets (Valid Query)');
+  const { data: searchSetsData } = await makeRequest(`${BASE_URL}/sets/search?q=base&page=1&limit=5`);
+  
+  assert(
+    searchSetsData.success && Array.isArray(searchSetsData.data),
+    'Set search should work with valid query',
+    'success with results',
+    searchSetsData.success ? `${searchSetsData.data?.length || 0} search results` : 'failure'
+  );
+
+  // Test 6.7: Search Sets - Missing Query
+  console.log('📋 Test 6.7: Search Sets (Missing Query)');
+  const { data: missingQueryData } = await makeRequest(`${BASE_URL}/sets/search?page=1&limit=5`);
+  
+  assert(
+    !missingQueryData.success && missingQueryData.error,
+    'Search without query should be rejected',
+    'validation error',
+    missingQueryData.success ? 'success' : 'validation error'
+  );
+
+  // Test 6.8: Search Sets - Empty Query
+  console.log('📋 Test 6.8: Search Sets (Empty Query)');
+  const { data: emptyQueryData } = await makeRequest(`${BASE_URL}/sets/search?q=&page=1&limit=5`);
+  
+  assert(
+    !emptyQueryData.success && emptyQueryData.error,
+    'Search with empty query should be rejected',
+    'validation error',
+    emptyQueryData.success ? 'success' : 'validation error'
+  );
+
+  // Test 6.9: Search Pokemon Sets Specifically
+  console.log('📋 Test 6.9: Search Pokemon Sets');
+  const { data: searchPokemonData } = await makeRequest(`${BASE_URL}/sets/search?q=base&type=pokemon&page=1&limit=3`);
+  
+  assert(
+    searchPokemonData.success && Array.isArray(searchPokemonData.data),
+    'Pokemon set search should work',
+    'success with pokemon results',
+    searchPokemonData.success ? `${searchPokemonData.data?.length || 0} pokemon results` : 'failure'
+  );
+
+  // Test 6.10: Search Yugioh Sets Specifically
+  console.log('📋 Test 6.10: Search Yugioh Sets');
+  const { data: searchYugiohData } = await makeRequest(`${BASE_URL}/sets/search?q=legend&type=yugioh&page=1&limit=3`);
+  
+  assert(
+    searchYugiohData.success && Array.isArray(searchYugiohData.data),
+    'Yugioh set search should work',
+    'success with yugioh results',
+    searchYugiohData.success ? `${searchYugiohData.data?.length || 0} yugioh results` : 'failure'
+  );
+
+  // Test 6.11: Get Specific Set by ID (Pokemon)
+  if (pokemonSetId) {
+    console.log('📋 Test 6.11: Get Pokemon Set by ID');
+    const { data: pokemonSetData } = await makeRequest(`${BASE_URL}/sets/${pokemonSetId}`);
+    
+    assert(
+      pokemonSetData.success && pokemonSetData.data,
+      'Pokemon set by ID should be retrieved',
+      'success with set data',
+      pokemonSetData.success ? 'success' : 'failure'
+    );
+  } else {
+    skip('Test 6.11: Get Pokemon Set by ID', 'No Pokemon set ID available');
+  }
+
+  // Test 6.12: Get Specific Set by ID (Yugioh)
+  if (yugiohSetId) {
+    console.log('📋 Test 6.12: Get Yugioh Set by ID');
+    const { data: yugiohSetData } = await makeRequest(`${BASE_URL}/sets/${yugiohSetId}`);
+    
+    assert(
+      yugiohSetData.success && yugiohSetData.data,
+      'Yugioh set by ID should be retrieved',
+      'success with set data',
+      yugiohSetData.success ? 'success' : 'failure'
+    );
+  } else {
+    skip('Test 6.12: Get Yugioh Set by ID', 'No Yugioh set ID available');
+  }
+
+  // Test 6.13: Get Set by Invalid ID
+  console.log('📋 Test 6.13: Get Set by Invalid ID');
+  const { data: invalidSetData } = await makeRequest(`${BASE_URL}/sets/invalid-set-id`);
+  
+  assert(
+    !invalidSetData.success && invalidSetData.error,
+    'Invalid set ID should return error',
+    'not found error',
+    invalidSetData.success ? 'success' : 'not found error'
+  );
+
+  // Test 6.14: Get Cards by Set ID (Pokemon)
+  if (pokemonSetId) {
+    console.log('📋 Test 6.14: Get Pokemon Cards by Set');
+    const { data: pokemonCardsData } = await makeRequest(`${BASE_URL}/cards/pokemon/sets/${pokemonSetId}?page=1&limit=5`);
+    
+    assert(
+      pokemonCardsData.success && Array.isArray(pokemonCardsData.data),
+      'Pokemon cards by set should be retrieved',
+      'success with cards',
+      pokemonCardsData.success ? `${pokemonCardsData.data?.length || 0} cards from set` : 'failure'
+    );
+  } else {
+    skip('Test 6.14: Get Pokemon Cards by Set', 'No Pokemon set ID available');
+  }
+
+  // Test 6.15: Get Cards by Set ID (Yugioh)
+  if (yugiohSetId) {
+    console.log('📋 Test 6.15: Get Yugioh Cards by Set');
+    const { data: yugiohCardsData } = await makeRequest(`${BASE_URL}/cards/yugioh/sets/${yugiohSetId}?page=1&limit=5`);
+    
+    assert(
+      yugiohCardsData.success && Array.isArray(yugiohCardsData.data),
+      'Yugioh cards by set should be retrieved',
+      'success with cards',
+      yugiohCardsData.success ? `${yugiohCardsData.data?.length || 0} cards from set` : 'failure'
+    );
+  } else {
+    skip('Test 6.15: Get Yugioh Cards by Set', 'No Yugioh set ID available');
+  }
+
+  // Test 6.16: Get Cards by Set - Invalid Card Type
+  console.log('📋 Test 6.16: Get Cards by Set (Invalid Card Type)');
+  const { data: invalidCardTypeData } = await makeRequest(`${BASE_URL}/cards/invalid/sets/some-set-id?page=1&limit=5`);
+  
+  assert(
+    !invalidCardTypeData.success && invalidCardTypeData.error,
+    'Invalid card type for cards by set should be rejected',
+    'validation error',
+    invalidCardTypeData.success ? 'success' : 'validation error'
+  );
+
+  // Test 6.17: Get Cards by Set - Invalid Set ID
+  console.log('📋 Test 6.17: Get Cards by Set (Invalid Set ID)');
+  const { data: invalidSetIdData } = await makeRequest(`${BASE_URL}/cards/pokemon/sets/invalid-set-id?page=1&limit=5`);
+  
+  assert(
+    !invalidSetIdData.success && invalidSetIdData.error,
+    'Invalid set ID for cards by set should return error',
+    'not found error',
+    invalidSetIdData.success ? 'success' : 'not found error'
+  );
+
+  // Test 6.18: Sets with Sorting
+  console.log('📋 Test 6.18: Get Sets with Sorting');
+  const { data: sortedSetsData } = await makeRequest(`${BASE_URL}/sets?type=pokemon&sortBy=name&sortOrder=asc&limit=5`);
+  
+  assert(
+    sortedSetsData.success && Array.isArray(sortedSetsData.data),
+    'Sets with sorting should work',
+    'success with sorted results',
+    sortedSetsData.success ? 'sorted successfully' : 'failure'
+  );
+
+  // Test 6.19: Sets with Different Sorting
+  console.log('📋 Test 6.19: Get Sets with Card Count Sorting');
+  const { data: cardCountSortData } = await makeRequest(`${BASE_URL}/sets?type=yugioh&sortBy=cardCount&sortOrder=desc&limit=5`);
+  
+  assert(
+    cardCountSortData.success && Array.isArray(cardCountSortData.data),
+    'Sets with card count sorting should work',
+    'success with sorted results',
+    cardCountSortData.success ? 'sorted by card count' : 'failure'
+  );
+
+  // Test 6.20: Large Page Number for Sets
+  console.log('📋 Test 6.20: Get Sets (Large Page Number)');
+  const { data: largePageData } = await makeRequest(`${BASE_URL}/sets?page=999&limit=5`);
+  
+  assert(
+    largePageData.success && Array.isArray(largePageData.data),
+    'Large page number should return empty array gracefully',
+    'empty array',
+    largePageData.success ? `${largePageData.data?.length || 0} results` : 'failure'
+  );
+}
 
 // =============================================================================
 // 🚨 ERROR HANDLING & EDGE CASES TESTS
@@ -1201,6 +1457,7 @@ async function runAllTests() {
     // Run all comprehensive test suites
     await testAuthentication();
     await testCardManagement(); 
+    await testSetManagement();
     await testCollectionManagement();
     await testDeckManagement();
     await testUserManagement();

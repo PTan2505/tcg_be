@@ -1,6 +1,6 @@
 import UserModel from '../../database/models/user';
 import { CardCategory, IUserCard, UserCard } from '../../database/models/userCard';
-import { YugiohCard } from '../../database/models/yugioh/yugiohModel';
+import { YugiohCard } from '../../database/models/yugioh/yugiohCard';
 
 export interface IUserCardService {
   addCardToCollection(userId: string, cardId: string, category: CardCategory): Promise<IUserCard>;

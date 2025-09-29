@@ -34,6 +34,10 @@ export const swaggerDoc: OpenAPIV3.Document = {
       name: "Cards",
       description: "Card browsing and discovery",
     },
+    {
+      name: "Sets",
+      description: "Card set management and discovery",
+    },
   ],
   paths: {
     "/auth/register": {
@@ -1687,6 +1691,366 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
+    "/cards/{type}/sets/{setId}": {
+      get: {
+        tags: ["Cards"],
+        summary: "Get cards by set ID and type",
+        parameters: [
+          {
+            in: "path",
+            name: "type",
+            required: true,
+            schema: {
+              type: "string",
+              enum: ["pokemon", "yugioh"],
+            },
+            description: "Card type (pokemon or yugioh)",
+          },
+          {
+            in: "path",
+            name: "setId",
+            required: true,
+            schema: {
+              type: "string",
+            },
+            description: "Set ID",
+          },
+          {
+            in: "query",
+            name: "page",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              default: 1,
+            },
+            description: "Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              maximum: 100,
+              default: 20,
+            },
+            description: "Number of cards per page",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Cards from set retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      type: "array",
+                      items: {
+                        $ref: "#/components/schemas/CardDetails",
+                      },
+                    },
+                    pagination: {
+                      type: "object",
+                      properties: {
+                        page: { type: "integer" },
+                        limit: { type: "integer" },
+                        total: { type: "integer" },
+                        totalPages: { type: "integer" },
+                        hasNext: { type: "boolean" },
+                        hasPrev: { type: "boolean" },
+                      },
+                    },
+                    setInfo: {
+                      type: "object",
+                      description: "Information about the set",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "404": {
+            description: "Set not found",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+          "400": {
+            description: "Invalid card type or set ID",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/ValidationError",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/sets": {
+      get: {
+        tags: ["Sets"],
+        summary: "Get sets with pagination and filtering",
+        parameters: [
+          {
+            in: "query",
+            name: "type",
+            schema: {
+              type: "string",
+              enum: ["pokemon", "yugioh"],
+            },
+            description: "Filter by set type (pokemon or yugioh)",
+          },
+          {
+            in: "query",
+            name: "page",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              default: 1,
+            },
+            description: "Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              maximum: 100,
+              default: 20,
+            },
+            description: "Number of sets per page",
+          },
+          {
+            in: "query",
+            name: "search",
+            schema: {
+              type: "string",
+            },
+            description: "Search sets by name",
+          },
+          {
+            in: "query",
+            name: "sortBy",
+            schema: {
+              type: "string",
+              enum: ["name", "releaseDate", "cardCount", "createdAt"],
+            },
+            description: "Sort field",
+          },
+          {
+            in: "query",
+            name: "sortOrder",
+            schema: {
+              type: "string",
+              enum: ["asc", "desc"],
+            },
+            description: "Sort order",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Sets retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      type: "array",
+                      items: {
+                        $ref: "#/components/schemas/SetDetails",
+                      },
+                    },
+                    pagination: {
+                      type: "object",
+                      properties: {
+                        page: { type: "integer" },
+                        limit: { type: "integer" },
+                        total: { type: "integer" },
+                        totalPages: { type: "integer" },
+                        hasNext: { type: "boolean" },
+                        hasPrev: { type: "boolean" },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "400": {
+            description: "Invalid parameters",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/ValidationError",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/sets/{setId}": {
+      get: {
+        tags: ["Sets"],
+        summary: "Get set by ID",
+        parameters: [
+          {
+            in: "path",
+            name: "setId",
+            required: true,
+            schema: {
+              type: "string",
+            },
+            description: "Set ID",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Set retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      $ref: "#/components/schemas/SetDetails",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "404": {
+            description: "Set not found",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/sets/search": {
+      get: {
+        tags: ["Sets"],
+        summary: "Search sets with advanced filters",
+        parameters: [
+          {
+            in: "query",
+            name: "q",
+            required: true,
+            schema: {
+              type: "string",
+            },
+            description: "Search query",
+          },
+          {
+            in: "query",
+            name: "type",
+            schema: {
+              type: "string",
+              enum: ["pokemon", "yugioh"],
+            },
+            description: "Filter by set type",
+          },
+          {
+            in: "query",
+            name: "page",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              default: 1,
+            },
+            description: "Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              maximum: 100,
+              default: 20,
+            },
+            description: "Number of sets per page",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Search results retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      type: "array",
+                      items: {
+                        $ref: "#/components/schemas/SetDetails",
+                      },
+                    },
+                    pagination: {
+                      type: "object",
+                      properties: {
+                        page: { type: "integer" },
+                        limit: { type: "integer" },
+                        total: { type: "integer" },
+                        totalPages: { type: "integer" },
+                        hasNext: { type: "boolean" },
+                        hasPrev: { type: "boolean" },
+                      },
+                    },
+                    query: {
+                      type: "string",
+                      description: "Search query used",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "400": {
+            description: "Invalid search parameters",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/ValidationError",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
   },
   components: {
     securitySchemes: {
@@ -1957,6 +2321,51 @@ export const swaggerDoc: OpenAPIV3.Document = {
               maxAllowed: { type: "integer" },
             },
             description: "Card count statistics",
+          },
+        },
+      },
+      SetDetails: {
+        type: "object",
+        properties: {
+          _id: {
+            type: "string",
+            description: "Set ID",
+          },
+          set_name: {
+            type: "string",
+            description: "Set name",
+          },
+          set_code: {
+            type: "string",
+            description: "Set code",
+          },
+          num_of_cards: {
+            type: "integer",
+            description: "Number of cards in set",
+          },
+          tcg_date: {
+            type: "string",
+            format: "date",
+            description: "TCG release date",
+          },
+          set_image: {
+            type: "string",
+            description: "Set image URL",
+          },
+          setType: {
+            type: "string",
+            enum: ["pokemon", "yugioh"],
+            description: "Set type",
+          },
+          createdAt: {
+            type: "string",
+            format: "date-time",
+            description: "Creation timestamp",
+          },
+          updatedAt: {
+            type: "string",
+            format: "date-time",
+            description: "Last update timestamp",
           },
         },
       },

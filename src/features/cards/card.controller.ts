@@ -188,4 +188,93 @@ export class CardController {
       }, 500);
     }
   };
+
+  getCardsBySet = async (c: Context) => {
+    try {
+      const { type, setId } = c.req.param();
+      const {
+        page,
+        limit,
+        search,
+        sortBy,
+        sortOrder
+      } = c.req.query();
+
+      // Validate card type
+      if (!['pokemon', 'yugioh'].includes(type)) {
+        return c.json({
+          success: false,
+          error: {
+            name: 'ValidationError',
+            field: 'type',
+            message: 'Card type must be either "pokemon" or "yugioh"'
+          }
+        }, 400);
+      }
+
+      // Validate set identifier
+      if (!setId || setId.trim().length === 0) {
+        return c.json({
+          success: false,
+          error: {
+            name: 'ValidationError',
+            field: 'setId',
+            message: 'Set ID is required'
+          }
+        }, 400);
+      }
+
+      const options: GetCardsOptions = {
+        page: page ? parseInt(page) : undefined,
+        limit: limit ? parseInt(limit) : undefined,
+        search,
+        sortBy,
+        sortOrder: sortOrder as 'asc' | 'desc'
+      };
+
+      // Validate pagination parameters
+      if (options.page && options.page < 1) {
+        return c.json({
+          success: false,
+          error: {
+            name: 'ValidationError',
+            field: 'page',
+            message: 'Page must be greater than 0'
+          }
+        }, 400);
+      }
+
+      if (options.limit && (options.limit < 1 || options.limit > 100)) {
+        return c.json({
+          success: false,
+          error: {
+            name: 'ValidationError',
+            field: 'limit',
+            message: 'Limit must be between 1 and 100'
+          }
+        }, 400);
+      }
+
+      const result = await this.cardService.getCardsBySet(type as CardType, setId, options);
+
+      return c.json({
+        success: true,
+        data: result.cards,
+        pagination: result.pagination,
+        metadata: {
+          setId,
+          cardType: type
+        }
+      });
+    } catch (error: any) {
+      return c.json({
+        success: false,
+        error: {
+          name: 'Error',
+          field: 'general',
+          message: error.message || 'Failed to fetch cards by set'
+        }
+      }, 500);
+    }
+  };
 }
