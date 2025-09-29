@@ -12,25 +12,25 @@ export const setRoutes = new Hono();
 // Apply rate limiting to prevent abuse
 setRoutes.use('/*', rateLimitMiddleware(300, 60000)); // 300 requests per minute
 
-// Search sets with advanced filters (must come before /:setId)
+// Search sets with advanced filters by category (must come before /:category/:setId)
 setRoutes.get(
-  '/search',
+  '/:category/search',
   cacheMiddleware(10 * 60 * 1000), // Cache for 10 minutes
   setController.searchSets
 );
 
-// Get all sets with optional type filtering and pagination
+// Get specific set by ID within a category (must come before /:category)
 setRoutes.get(
-  '/',
-  cacheMiddleware(15 * 60 * 1000), // Cache for 15 minutes
-  setController.getAllSets
-);
-
-// Get specific set by ID
-setRoutes.get(
-  '/:setId',
+  '/:category/:setId',
   validateParamsMiddleware(['setId']),
   setController.getSetById
+);
+
+// Get all sets by category with pagination and filtering (must come last)
+setRoutes.get(
+  '/:category',
+  cacheMiddleware(15 * 60 * 1000), // Cache for 15 minutes
+  setController.getAllSets
 );
 
 export default setRoutes;

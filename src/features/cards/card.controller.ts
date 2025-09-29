@@ -1,12 +1,13 @@
 import { Context } from 'hono';
-import { CardType, GetCardsOptions, ICardService } from './card.service';
+import { getCardCategory, getValidCardCategories } from '../../shared/types/card.types';
+import { GetCardsOptions, ICardService } from './card.service';
 
 export class CardController {
   constructor(private cardService: ICardService) {}
 
   getCardsByType = async (c: Context) => {
     try {
-      const { type } = c.req.param();
+      const { category } = c.req.param();
       const {
         page,
         limit,
@@ -20,14 +21,16 @@ export class CardController {
         race
       } = c.req.query();
 
-      // Validate card type
-      if (!['pokemon', 'yugioh'].includes(type)) {
+      // Validate card category
+      try {
+        getCardCategory(category); // This will throw if invalid
+      } catch (error) {
         return c.json({
           success: false,
           error: {
             name: 'ValidationError',
-            field: 'type',
-            message: 'Card type must be either "pokemon" or "yugioh"'
+            field: 'category',
+            message: `Card category must be one of: ${getValidCardCategories().join(', ')}`
           }
         }, 400);
       }
@@ -70,7 +73,8 @@ export class CardController {
         }, 400);
       }
 
-      const result = await this.cardService.getCardsByType(type as CardType, options);
+      const cardCategory = getCardCategory(category);
+      const result = await this.cardService.getCardsByType(cardCategory, options);
 
       return c.json({
         success: true,
@@ -91,21 +95,22 @@ export class CardController {
 
   getCardById = async (c: Context) => {
     try {
-      const { type, cardId } = c.req.param();
+      const { category, cardId } = c.req.param();
 
-      // Validate card type
-      if (!['pokemon', 'yugioh'].includes(type)) {
+      // Validate card category
+      if (!['pokemon', 'yugioh'].includes(category)) {
         return c.json({
           success: false,
           error: {
             name: 'ValidationError',
-            field: 'type',
-            message: 'Card type must be either "pokemon" or "yugioh"'
+            field: 'category',
+            message: 'Card category must be either "pokemon" or "yugioh"'
           }
         }, 400);
       }
 
-      const card = await this.cardService.getCardById(cardId, type as CardType);
+      const cardCategory = getCardCategory(category);
+      const card = await this.cardService.getCardById(cardId, cardCategory);
 
       return c.json({
         success: true,
@@ -136,17 +141,17 @@ export class CardController {
 
   searchCards = async (c: Context) => {
     try {
-      const { type } = c.req.param();
+      const { category } = c.req.param();
       const { q: query, page, limit, sortBy, sortOrder } = c.req.query();
 
-      // Validate card type
-      if (!['pokemon', 'yugioh'].includes(type)) {
+      // Validate card category
+      if (!['pokemon', 'yugioh'].includes(category)) {
         return c.json({
           success: false,
           error: {
             name: 'ValidationError',
-            field: 'type',
-            message: 'Card type must be either "pokemon" or "yugioh"'
+            field: 'category',
+            message: 'Card category must be either "pokemon" or "yugioh"'
           }
         }, 400);
       }
@@ -170,7 +175,8 @@ export class CardController {
         sortOrder: sortOrder as 'asc' | 'desc'
       };
 
-      const result = await this.cardService.searchCards(type as CardType, query, options);
+      const cardCategory = getCardCategory(category);
+      const result = await this.cardService.searchCards(cardCategory, query, options);
 
       return c.json({
         success: true,
@@ -191,7 +197,7 @@ export class CardController {
 
   getCardsBySet = async (c: Context) => {
     try {
-      const { type, setId } = c.req.param();
+      const { category, setId } = c.req.param();
       const {
         page,
         limit,
@@ -200,14 +206,14 @@ export class CardController {
         sortOrder
       } = c.req.query();
 
-      // Validate card type
-      if (!['pokemon', 'yugioh'].includes(type)) {
+      // Validate card category
+      if (!['pokemon', 'yugioh'].includes(category)) {
         return c.json({
           success: false,
           error: {
             name: 'ValidationError',
-            field: 'type',
-            message: 'Card type must be either "pokemon" or "yugioh"'
+            field: 'category',
+            message: 'Card category must be either "pokemon" or "yugioh"'
           }
         }, 400);
       }
@@ -255,7 +261,8 @@ export class CardController {
         }, 400);
       }
 
-      const result = await this.cardService.getCardsBySet(type as CardType, setId, options);
+      const cardCategory = getCardCategory(category);
+      const result = await this.cardService.getCardsBySet(cardCategory, setId, options);
 
       return c.json({
         success: true,
@@ -263,7 +270,7 @@ export class CardController {
         pagination: result.pagination,
         metadata: {
           setId,
-          cardType: type
+          cardCategory: category
         }
       });
     } catch (error: any) {

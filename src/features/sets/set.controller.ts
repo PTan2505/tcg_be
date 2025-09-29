@@ -6,8 +6,8 @@ export class SetController {
 
   getAllSets = async (c: Context) => {
     try {
+      const { category } = c.req.param();
       const {
-        type,
         page,
         limit,
         search,
@@ -15,14 +15,25 @@ export class SetController {
         sortOrder
       } = c.req.query();
 
-      // Validate set type if provided
-      if (type && !['pokemon', 'yugioh'].includes(type)) {
+      // Validate set category is required
+      if (!category) {
         return c.json({
           success: false,
           error: {
             name: 'ValidationError',
-            field: 'type',
-            message: 'Set type must be either "pokemon" or "yugioh"'
+            field: 'category',
+            message: 'Category parameter is required. Must be either "pokemon" or "yugioh"'
+          }
+        }, 400);
+      }
+
+      if (!['pokemon', 'yugioh'].includes(category)) {
+        return c.json({
+          success: false,
+          error: {
+            name: 'ValidationError',
+            field: 'category',
+            message: 'Set category must be either "pokemon" or "yugioh"'
           }
         }, 400);
       }
@@ -58,9 +69,7 @@ export class SetController {
         }, 400);
       }
 
-      const result = type 
-        ? await this.setService.getSetsByType(type as SetType, options)
-        : await this.setService.getAllSets(options);
+      const result = await this.setService.getSetsByType(category as SetType, options);
 
       return c.json({
         success: true,
@@ -154,7 +163,19 @@ export class SetController {
 
   getSetById = async (c: Context) => {
     try {
-      const { setId } = c.req.param();
+      const { category, setId } = c.req.param();
+
+      // Validate set category
+      if (!category || !['pokemon', 'yugioh'].includes(category)) {
+        return c.json({
+          success: false,
+          error: {
+            name: 'ValidationError',
+            field: 'category',
+            message: 'Set category must be either "pokemon" or "yugioh"'
+          }
+        }, 400);
+      }
 
       const set = await this.setService.getSetById(setId);
 
@@ -187,7 +208,8 @@ export class SetController {
 
   searchSets = async (c: Context) => {
     try {
-      const { q: query, type, page, limit, sortBy, sortOrder } = c.req.query();
+      const { category } = c.req.param();
+      const { q: query, page, limit, sortBy, sortOrder } = c.req.query();
 
       // Validate search query
       if (!query || query.trim().length === 0) {
@@ -201,14 +223,25 @@ export class SetController {
         }, 400);
       }
 
-      // Validate set type if provided
-      if (type && !['pokemon', 'yugioh'].includes(type)) {
+      // Validate set category is required
+      if (!category) {
         return c.json({
           success: false,
           error: {
             name: 'ValidationError',
-            field: 'type',
-            message: 'Set type must be either "pokemon" or "yugioh"'
+            field: 'category',
+            message: 'Category parameter is required. Must be either "pokemon" or "yugioh"'
+          }
+        }, 400);
+      }
+
+      if (!['pokemon', 'yugioh'].includes(category)) {
+        return c.json({
+          success: false,
+          error: {
+            name: 'ValidationError',
+            field: 'category',
+            message: 'Set category must be either "pokemon" or "yugioh"'
           }
         }, 400);
       }
@@ -220,9 +253,7 @@ export class SetController {
         sortOrder: sortOrder as 'asc' | 'desc'
       };
 
-      const result = type 
-        ? await this.setService.searchSets(type as SetType, query, options)
-        : await this.setService.searchAllSets(query, options);
+      const result = await this.setService.searchSets(category as SetType, query, options);
 
       return c.json({
         success: true,

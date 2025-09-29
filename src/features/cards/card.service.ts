@@ -1,8 +1,10 @@
 import { PokemonCard } from '../../database/models/pokemon/pokemonCard';
 import { PokemonSet } from '../../database/models/pokemon/pokemonSet';
 import { YugiohCard, YugiohSet } from '../../database/models/yugioh';
+import { CardCategory } from '../../shared/types/card.types';
 
-export type CardType = 'pokemon' | 'yugioh';
+// Keep backward compatibility with string type for now, but prefer enum
+export type CardType = CardCategory;
 
 export interface GetCardsOptions {
   page?: number;
@@ -57,7 +59,7 @@ export class CardService implements ICardService {
     let total: number;
 
     // Select appropriate model and build query based on card type
-    if (cardType === 'pokemon') {
+    if (cardType === CardCategory.POKEMON) {
       query = this.buildPokemonQuery(search, filters);
       
       const [pokemonCards, pokemonTotal] = await Promise.all([
@@ -72,7 +74,7 @@ export class CardService implements ICardService {
       
       cards = pokemonCards;
       total = pokemonTotal;
-    } else if (cardType === 'yugioh') {
+    } else if (cardType === CardCategory.YUGIOH) {
       let baseQuery = this.buildYugiohQuery(search, filters);
       
       // Handle set and rarity filters through YugiohSet collection
@@ -139,15 +141,15 @@ export class CardService implements ICardService {
   async getCardById(cardId: string, cardType: CardType): Promise<any> {
     let card: any;
 
-    if (cardType === 'pokemon') {
+    if (cardType === CardCategory.POKEMON) {
       card = await PokemonCard.findById(cardId)
         .populate('set')
         .lean();
-    } else if (cardType === 'yugioh') {
+    } else if (cardType === CardCategory.YUGIOH) {
       card = await YugiohCard.findById(cardId)
         .lean();
     } else {
-      throw new Error('Invalid card type. Must be "pokemon" or "yugioh"');
+      throw new Error('Invalid card category. Must be "pokemon" or "yugioh"');
     }
 
     if (!card) {
@@ -181,7 +183,7 @@ export class CardService implements ICardService {
     let cards: any[];
     let total: number;
 
-    if (cardType === 'pokemon') {
+    if (cardType === CardCategory.POKEMON) {
       // For Pokemon, setId can be set name or set ID
       let setQuery: any = {};
 
@@ -255,7 +257,7 @@ export class CardService implements ICardService {
       cards = pokemonCards;
       total = pokemonTotal;
 
-    } else if (cardType === 'yugioh') {
+    } else if (cardType === CardCategory.YUGIOH) {
       // For Yu-Gi-Oh!, find all cards that appear in the specified set
       
       // Validate if setId looks like a reasonable set identifier

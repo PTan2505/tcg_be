@@ -1398,20 +1398,20 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/cards/{type}": {
+    "/cards/{category}": {
       get: {
         tags: ["Cards"],
-        summary: "Get cards by type with pagination and filtering",
+        summary: "Get cards by category with pagination and filtering",
         parameters: [
           {
             in: "path",
-            name: "type",
+            name: "category",
             required: true,
             schema: {
               type: "string",
               enum: ["pokemon", "yugioh"],
             },
-            description: "Card type (pokemon or yugioh)",
+            description: "Card category (pokemon or yugioh)",
           },
           {
             in: "query",
@@ -1496,7 +1496,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
             },
           },
           "400": {
-            description: "Invalid card type or parameters",
+            description: "Invalid card category or parameters",
             content: {
               "application/json": {
                 schema: {
@@ -1508,20 +1508,20 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/cards/{type}/{cardId}": {
+    "/cards/{category}/{cardId}": {
       get: {
         tags: ["Cards"],
-        summary: "Get specific card by ID and type",
+        summary: "Get specific card by ID and category",
         parameters: [
           {
             in: "path",
-            name: "type",
+            name: "category",
             required: true,
             schema: {
               type: "string",
               enum: ["pokemon", "yugioh"],
             },
-            description: "Card type (pokemon or yugioh)",
+            description: "Card category (pokemon or yugioh)",
           },
           {
             in: "path",
@@ -1564,7 +1564,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
             },
           },
           "400": {
-            description: "Invalid card type",
+            description: "Invalid card category",
             content: {
               "application/json": {
                 schema: {
@@ -1576,20 +1576,20 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/cards/{type}/search": {
+    "/cards/{category}/search": {
       get: {
         tags: ["Cards"],
-        summary: "Search cards by type with advanced filters",
+        summary: "Search cards by category with advanced filters",
         parameters: [
           {
             in: "path",
-            name: "type",
+            name: "category",
             required: true,
             schema: {
               type: "string",
               enum: ["pokemon", "yugioh"],
             },
-            description: "Card type (pokemon or yugioh)",
+            description: "Card category (pokemon or yugioh)",
           },
           {
             in: "query",
@@ -1691,20 +1691,20 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/cards/{type}/sets/{setId}": {
+    "/cards/{category}/sets/{setId}": {
       get: {
         tags: ["Cards"],
-        summary: "Get cards by set ID and type",
+        summary: "Get cards by set ID and category",
         parameters: [
           {
             in: "path",
-            name: "type",
+            name: "category",
             required: true,
             schema: {
               type: "string",
               enum: ["pokemon", "yugioh"],
             },
-            description: "Card type (pokemon or yugioh)",
+            description: "Card category (pokemon or yugioh)",
           },
           {
             in: "path",
@@ -1786,7 +1786,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
             },
           },
           "400": {
-            description: "Invalid card type or set ID",
+            description: "Invalid card category or set ID",
             content: {
               "application/json": {
                 schema: {
@@ -1798,19 +1798,20 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/sets": {
+    "/sets/{category}": {
       get: {
         tags: ["Sets"],
         summary: "Get sets with pagination and filtering",
         parameters: [
           {
-            in: "query",
-            name: "type",
+            in: "path",
+            name: "category",
+            required: true,
             schema: {
               type: "string",
               enum: ["pokemon", "yugioh"],
             },
-            description: "Filter by set type (pokemon or yugioh)",
+            description: "Set category (pokemon or yugioh)",
           },
           {
             in: "query",
@@ -1907,11 +1908,21 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/sets/{setId}": {
+    "/sets/{category}/{setId}": {
       get: {
         tags: ["Sets"],
-        summary: "Get set by ID",
+        summary: "Get set by ID and category",
         parameters: [
+          {
+            in: "path",
+            name: "category",
+            required: true,
+            schema: {
+              type: "string",
+              enum: ["pokemon", "yugioh"],
+            },
+            description: "Set category (pokemon or yugioh)",
+          },
           {
             in: "path",
             name: "setId",
@@ -1955,11 +1966,21 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/sets/search": {
+    "/sets/{category}/search": {
       get: {
         tags: ["Sets"],
         summary: "Search sets with advanced filters",
         parameters: [
+          {
+            in: "path",
+            name: "category",
+            required: true,
+            schema: {
+              type: "string",
+              enum: ["pokemon", "yugioh"],
+            },
+            description: "Set category (pokemon or yugioh)",
+          },
           {
             in: "query",
             name: "q",
@@ -1968,15 +1989,6 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "string",
             },
             description: "Search query",
-          },
-          {
-            in: "query",
-            name: "type",
-            schema: {
-              type: "string",
-              enum: ["pokemon", "yugioh"],
-            },
-            description: "Filter by set type",
           },
           {
             in: "query",
@@ -2194,7 +2206,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
           },
           type: {
             type: "string",
-            description: "Card type",
+            description: "Card category (pokemon or yugioh)",
           },
           desc: {
             type: "string",
@@ -2355,7 +2367,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
           setType: {
             type: "string",
             enum: ["pokemon", "yugioh"],
-            description: "Set type",
+            description: "Set category (pokemon or yugioh)",
           },
           createdAt: {
             type: "string",

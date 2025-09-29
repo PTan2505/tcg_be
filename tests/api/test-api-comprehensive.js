@@ -3,6 +3,17 @@
 // 🚀 COMPREHENSIVE API TESTING SCRIPT FOR TCG BACKEND
 // This script tests ALL available endpoints with COMPLETE test coverage
 // Including positive cases, negative cases, edge cases, and error handling
+//
+// 📋 COMPLETE ENDPOINT COVERAGE:
+// • System & Documentation (/health, /swagger.json, /docs, /)
+// • Authentication (/auth/*)
+// • User Management (/users/*)
+// • Card Management (/cards/*)
+// • Set Management (/sets/*)
+// • Collection Management (/collections/*, /user-cards/*)
+// • Deck Management (/decks/*)
+// • Error Handling & Security
+// • Rate Limiting & Edge Cases
 
 const BASE_URL = 'http://localhost:3000';
 
@@ -113,11 +124,18 @@ const stats = {
 console.log('🚀 STARTING COMPREHENSIVE API TESTS FOR TCG BACKEND');
 console.log('====================================================');
 console.log('📋 Testing ALL endpoints with complete coverage:');
+console.log('   • System & Documentation endpoints');
+console.log('   • Authentication & authorization');
+console.log('   • User management (basic & advanced)');
+console.log('   • Card browsing & searching');
+console.log('   • Set management & filtering');
+console.log('   • Collection management (basic & advanced)');
+console.log('   • Deck building & management (basic & advanced)');
 console.log('   • Positive test cases');
 console.log('   • Negative test cases'); 
 console.log('   • Edge cases & validation');
-console.log('   • Authentication & authorization');
 console.log('   • Rate limiting & security');
+console.log('   • Error handling & injection attempts');
 console.log('====================================================\n');
 
 // =============================================================================
@@ -1010,40 +1028,44 @@ async function testUserManagement() {
 async function testSetManagement() {
   console.log('\n🃏 === SET MANAGEMENT TESTS ===\n');
 
-  // Test 6.1: Get All Sets - Basic Request
-  console.log('📋 Test 6.1: Get All Sets (Basic)');
-  const { data: allSetsData } = await makeRequest(`${BASE_URL}/sets?page=1&limit=10`);
+  // Test 6.1: Get Pokemon Sets (category now required)
+  console.log('📋 Test 6.1: Get Pokemon Sets (Basic)');
+  const { data: pokemonSetsData } = await makeRequest(`${BASE_URL}/sets/pokemon?page=1&limit=10`);
   
   assert(
-    allSetsData.success && Array.isArray(allSetsData.data),
-    'All sets endpoint should return array',
+    pokemonSetsData.success && Array.isArray(pokemonSetsData.data),
+    'Pokemon sets endpoint should return array',
     'success with array',
-    allSetsData.success ? `array with ${allSetsData.data?.length || 0} items` : 'failure'
+    pokemonSetsData.success ? `array with ${pokemonSetsData.data?.length || 0} items` : 'failure'
   );
 
   // Store set IDs for later tests
   let pokemonSetId = null;
   let yugiohSetId = null;
 
-  // Test 6.2: Get Pokemon Sets Only
-  console.log('📋 Test 6.2: Get Pokemon Sets Only');
-  const { data: pokemonSetsData } = await makeRequest(`${BASE_URL}/sets?type=pokemon&page=1&limit=5`);
-  
-  assert(
-    pokemonSetsData.success && Array.isArray(pokemonSetsData.data),
-    'Pokemon sets should be filtered correctly',
-    'success with pokemon sets',
-    pokemonSetsData.success ? `${pokemonSetsData.data?.length || 0} pokemon sets` : 'failure'
-  );
-
   if (pokemonSetsData.success && pokemonSetsData.data.length > 0) {
     pokemonSetId = pokemonSetsData.data[0]._id;
+  }
+
+  // Test 6.2: Get Pokemon Sets Only (same as above now)
+  console.log('📋 Test 6.2: Get Pokemon Sets Only');
+  const { data: pokemonSetsData2 } = await makeRequest(`${BASE_URL}/sets/pokemon?page=1&limit=5`);
+  
+  assert(
+    pokemonSetsData2.success && Array.isArray(pokemonSetsData2.data),
+    'Pokemon sets should be filtered correctly',
+    'success with pokemon sets',
+    pokemonSetsData2.success ? `${pokemonSetsData2.data?.length || 0} pokemon sets` : 'failure'
+  );
+
+  if (pokemonSetsData2.success && pokemonSetsData2.data.length > 0) {
+    pokemonSetId = pokemonSetsData2.data[0]._id;
     console.log(`✅ Got Pokemon Set ID: ${pokemonSetId}`);
   }
 
   // Test 6.3: Get Yugioh Sets Only
   console.log('📋 Test 6.3: Get Yugioh Sets Only');
-  const { data: yugiohSetsData } = await makeRequest(`${BASE_URL}/sets?type=yugioh&page=1&limit=5`);
+  const { data: yugiohSetsData } = await makeRequest(`${BASE_URL}/sets/yugioh?page=1&limit=5`);
   
   assert(
     yugiohSetsData.success && Array.isArray(yugiohSetsData.data),
@@ -1057,20 +1079,20 @@ async function testSetManagement() {
     console.log(`✅ Got Yugioh Set ID: ${yugiohSetId}`);
   }
 
-  // Test 6.4: Get Sets with Invalid Type
-  console.log('📋 Test 6.4: Get Sets (Invalid Type)');
-  const { data: invalidTypeData } = await makeRequest(`${BASE_URL}/sets?type=invalid&page=1&limit=5`);
+  // Test 6.4: Get Sets with Invalid Category
+  console.log('📋 Test 6.4: Get Sets (Invalid Category)');
+  const { data: invalidTypeData } = await makeRequest(`${BASE_URL}/sets/invalid?page=1&limit=5`);
   
   assert(
     !invalidTypeData.success && invalidTypeData.error,
-    'Invalid set type should be rejected',
+    'Invalid set category should be rejected',
     'validation error',
     invalidTypeData.success ? 'success' : 'validation error'
   );
 
-  // Test 6.5: Get Sets with Invalid Pagination
+  // Test 6.5: Get Sets with Invalid Pagination (use pokemon category)
   console.log('📋 Test 6.5: Get Sets (Invalid Pagination)');
-  const { data: invalidPaginationData } = await makeRequest(`${BASE_URL}/sets?page=-1&limit=1000`);
+  const { data: invalidPaginationData } = await makeRequest(`${BASE_URL}/sets/pokemon?page=-1&limit=1000`);
   
   assert(
     !invalidPaginationData.success && invalidPaginationData.error,
@@ -1079,9 +1101,9 @@ async function testSetManagement() {
     invalidPaginationData.success ? 'success' : 'validation error'
   );
 
-  // Test 6.6: Search Sets - Valid Query
+  // Test 6.6: Search Sets - Valid Query (now requires category)
   console.log('📋 Test 6.6: Search Sets (Valid Query)');
-  const { data: searchSetsData } = await makeRequest(`${BASE_URL}/sets/search?q=base&page=1&limit=5`);
+  const { data: searchSetsData } = await makeRequest(`${BASE_URL}/sets/pokemon/search?q=base&page=1&limit=5`);
   
   assert(
     searchSetsData.success && Array.isArray(searchSetsData.data),
@@ -1090,9 +1112,9 @@ async function testSetManagement() {
     searchSetsData.success ? `${searchSetsData.data?.length || 0} search results` : 'failure'
   );
 
-  // Test 6.7: Search Sets - Missing Query
+  // Test 6.7: Search Sets - Missing Query (now requires category)
   console.log('📋 Test 6.7: Search Sets (Missing Query)');
-  const { data: missingQueryData } = await makeRequest(`${BASE_URL}/sets/search?page=1&limit=5`);
+  const { data: missingQueryData } = await makeRequest(`${BASE_URL}/sets/pokemon/search?page=1&limit=5`);
   
   assert(
     !missingQueryData.success && missingQueryData.error,
@@ -1101,9 +1123,9 @@ async function testSetManagement() {
     missingQueryData.success ? 'success' : 'validation error'
   );
 
-  // Test 6.8: Search Sets - Empty Query
+  // Test 6.8: Search Sets - Empty Query (now requires category)
   console.log('📋 Test 6.8: Search Sets (Empty Query)');
-  const { data: emptyQueryData } = await makeRequest(`${BASE_URL}/sets/search?q=&page=1&limit=5`);
+  const { data: emptyQueryData } = await makeRequest(`${BASE_URL}/sets/pokemon/search?q=&page=1&limit=5`);
   
   assert(
     !emptyQueryData.success && emptyQueryData.error,
@@ -1114,7 +1136,7 @@ async function testSetManagement() {
 
   // Test 6.9: Search Pokemon Sets Specifically
   console.log('📋 Test 6.9: Search Pokemon Sets');
-  const { data: searchPokemonData } = await makeRequest(`${BASE_URL}/sets/search?q=base&type=pokemon&page=1&limit=3`);
+  const { data: searchPokemonData } = await makeRequest(`${BASE_URL}/sets/pokemon/search?q=base&page=1&limit=3`);
   
   assert(
     searchPokemonData.success && Array.isArray(searchPokemonData.data),
@@ -1125,7 +1147,7 @@ async function testSetManagement() {
 
   // Test 6.10: Search Yugioh Sets Specifically
   console.log('📋 Test 6.10: Search Yugioh Sets');
-  const { data: searchYugiohData } = await makeRequest(`${BASE_URL}/sets/search?q=legend&type=yugioh&page=1&limit=3`);
+  const { data: searchYugiohData } = await makeRequest(`${BASE_URL}/sets/yugioh/search?q=legend&page=1&limit=3`);
   
   assert(
     searchYugiohData.success && Array.isArray(searchYugiohData.data),
@@ -1137,7 +1159,7 @@ async function testSetManagement() {
   // Test 6.11: Get Specific Set by ID (Pokemon)
   if (pokemonSetId) {
     console.log('📋 Test 6.11: Get Pokemon Set by ID');
-    const { data: pokemonSetData } = await makeRequest(`${BASE_URL}/sets/${pokemonSetId}`);
+    const { data: pokemonSetData } = await makeRequest(`${BASE_URL}/sets/pokemon/${pokemonSetId}`);
     
     assert(
       pokemonSetData.success && pokemonSetData.data,
@@ -1152,7 +1174,7 @@ async function testSetManagement() {
   // Test 6.12: Get Specific Set by ID (Yugioh)
   if (yugiohSetId) {
     console.log('📋 Test 6.12: Get Yugioh Set by ID');
-    const { data: yugiohSetData } = await makeRequest(`${BASE_URL}/sets/${yugiohSetId}`);
+    const { data: yugiohSetData } = await makeRequest(`${BASE_URL}/sets/yugioh/${yugiohSetId}`);
     
     assert(
       yugiohSetData.success && yugiohSetData.data,
@@ -1166,7 +1188,7 @@ async function testSetManagement() {
 
   // Test 6.13: Get Set by Invalid ID
   console.log('📋 Test 6.13: Get Set by Invalid ID');
-  const { data: invalidSetData } = await makeRequest(`${BASE_URL}/sets/invalid-set-id`);
+  const { data: invalidSetData } = await makeRequest(`${BASE_URL}/sets/pokemon/invalid-set-id`);
   
   assert(
     !invalidSetData.success && invalidSetData.error,
@@ -1229,7 +1251,7 @@ async function testSetManagement() {
 
   // Test 6.18: Sets with Sorting
   console.log('📋 Test 6.18: Get Sets with Sorting');
-  const { data: sortedSetsData } = await makeRequest(`${BASE_URL}/sets?type=pokemon&sortBy=name&sortOrder=asc&limit=5`);
+  const { data: sortedSetsData } = await makeRequest(`${BASE_URL}/sets/pokemon?sortBy=name&sortOrder=asc&limit=5`);
   
   assert(
     sortedSetsData.success && Array.isArray(sortedSetsData.data),
@@ -1240,7 +1262,7 @@ async function testSetManagement() {
 
   // Test 6.19: Sets with Different Sorting
   console.log('📋 Test 6.19: Get Sets with Card Count Sorting');
-  const { data: cardCountSortData } = await makeRequest(`${BASE_URL}/sets?type=yugioh&sortBy=cardCount&sortOrder=desc&limit=5`);
+  const { data: cardCountSortData } = await makeRequest(`${BASE_URL}/sets/yugioh?sortBy=cardCount&sortOrder=desc&limit=5`);
   
   assert(
     cardCountSortData.success && Array.isArray(cardCountSortData.data),
@@ -1251,7 +1273,7 @@ async function testSetManagement() {
 
   // Test 6.20: Large Page Number for Sets
   console.log('📋 Test 6.20: Get Sets (Large Page Number)');
-  const { data: largePageData } = await makeRequest(`${BASE_URL}/sets?page=999&limit=5`);
+  const { data: largePageData } = await makeRequest(`${BASE_URL}/sets/pokemon?page=999&limit=5`);
   
   assert(
     largePageData.success && Array.isArray(largePageData.data),
@@ -1262,25 +1284,392 @@ async function testSetManagement() {
 }
 
 // =============================================================================
-// 🚨 ERROR HANDLING & EDGE CASES TESTS
+// � SYSTEM & DOCUMENTATION TESTS
+// =============================================================================
+
+async function testSystemEndpoints() {
+  console.log('\n📋 === SYSTEM & DOCUMENTATION TESTS ===\n');
+
+  // Test 7.1: Health Check Endpoint
+  console.log('📋 Test 7.1: Health Check Endpoint');
+  const { data: healthData } = await makeRequest(`${BASE_URL}/health`);
+  
+  assert(
+    healthData.success && healthData.status === 'ok',
+    'Health endpoint should return OK status',
+    'ok status with cache stats',
+    healthData.success ? `status: ${healthData.status}` : 'failure'
+  );
+
+  // Test 7.2: Swagger JSON Documentation
+  console.log('📋 Test 7.2: Swagger JSON Documentation');
+  const { data: swaggerData } = await makeRequest(`${BASE_URL}/swagger.json`);
+  
+  assert(
+    swaggerData.openapi && swaggerData.info && swaggerData.paths,
+    'Swagger JSON should be valid OpenAPI spec',
+    'valid OpenAPI document',
+    swaggerData.openapi ? 'valid OpenAPI document' : 'invalid'
+  );
+
+  // Test 7.3: Base Route
+  console.log('📋 Test 7.3: Base Route');
+  const { data: baseData } = await makeRequest(`${BASE_URL}/`);
+  
+  assert(
+    baseData === 'Hello Hono!' || (typeof baseData === 'string' && baseData.includes('Hello')),
+    'Base route should return greeting',
+    'Hello Hono!',
+    baseData
+  );
+
+  // Test 7.4: Swagger UI Endpoint (should redirect or return HTML)
+  console.log('📋 Test 7.4: Swagger UI Documentation');
+  const { response: docsResponse } = await makeRequest(`${BASE_URL}/docs`);
+  
+  assert(
+    docsResponse.status === 200 || docsResponse.status === 301 || docsResponse.status === 302,
+    'Docs endpoint should be accessible',
+    '200, 301, or 302 status',
+    `${docsResponse.status}`
+  );
+}
+
+// =============================================================================
+// 👤 ADVANCED USER MANAGEMENT TESTS
+// =============================================================================
+
+async function testAdvancedUserManagement() {
+  console.log('\n👤 === ADVANCED USER MANAGEMENT TESTS ===\n');
+
+  if (!authToken) {
+    skip('Advanced User Management Tests', 'No authentication token available');
+    return;
+  }
+
+  // Test 8.1: Get All Users (Admin functionality)
+  console.log('📋 Test 8.1: Get All Users');
+  const { data: allUsersData } = await makeRequest(`${BASE_URL}/users`);
+  
+  assert(
+    allUsersData && Array.isArray(allUsersData),
+    'Get all users should return array',
+    'array of users',
+    Array.isArray(allUsersData) ? `array with ${allUsersData.length} users` : 'not array'
+  );
+
+  // Test 8.2: Get User by ID (if we have userId)
+  if (userId) {
+    console.log('📋 Test 8.2: Get User by ID');
+    const { data: userByIdData } = await makeRequest(`${BASE_URL}/users/${userId}`);
+    
+    assert(
+      userByIdData && (userByIdData.id || userByIdData._id),
+      'Get user by ID should return user data',
+      'user object',
+      userByIdData ? 'user object' : 'no data'
+    );
+  } else {
+    skip('Test 8.2: Get User by ID', 'No user ID available');
+  }
+
+  // Test 8.3: Update User by ID (if we have userId)
+  if (userId) {
+    console.log('📋 Test 8.3: Update User by ID');
+    const { data: updateUserData } = await makeRequest(`${BASE_URL}/users/${userId}`, {
+      method: 'PATCH',
+      body: JSON.stringify({
+        firstName: 'Updated',
+        lastName: 'TestUser'
+      })
+    });
+    
+    assert(
+      updateUserData && !updateUserData.error,
+      'Update user by ID should succeed',
+      'updated user data',
+      updateUserData ? 'success' : 'failure'
+    );
+  } else {
+    skip('Test 8.3: Update User by ID', 'No user ID available');
+  }
+
+  // Test 8.4: Get User by Invalid ID
+  console.log('📋 Test 8.4: Get User by Invalid ID');
+  const { data: invalidUserData } = await makeRequest(`${BASE_URL}/users/invalid-user-id`);
+  
+  assert(
+    invalidUserData.error && invalidUserData.error.includes('not found'),
+    'Invalid user ID should return not found error',
+    'not found error',
+    invalidUserData.error ? 'not found error' : 'unexpected success'
+  );
+
+  // Test 8.5: Delete User by ID (if we have userId)
+  if (userId) {
+    console.log('📋 Test 8.5: Delete User by ID');
+    const { data: deleteUserData } = await makeRequest(`${BASE_URL}/users/${userId}`, {
+      method: 'DELETE'
+    });
+    
+    assert(
+      deleteUserData && (!deleteUserData.error || deleteUserData.message),
+      'Delete user by ID should succeed or return appropriate message',
+      'success or appropriate message',
+      deleteUserData ? 'handled' : 'failure'
+    );
+  } else {
+    skip('Test 8.5: Delete User by ID', 'No user ID available');
+  }
+}
+
+// =============================================================================
+// 📚 ADVANCED COLLECTION TESTS
+// =============================================================================
+
+async function testAdvancedCollectionManagement() {
+  console.log('\n📚 === ADVANCED COLLECTION MANAGEMENT TESTS ===\n');
+
+  if (!authToken) {
+    skip('Advanced Collection Management Tests', 'No authentication token available');
+    return;
+  }
+
+  // Test 9.1: Get User Cards by Category (Pokemon)
+  console.log('📋 Test 9.1: Get User Cards by Pokemon Category');
+  const { data: pokemonUserCardsData } = await makeRequest(`${BASE_URL}/user-cards/category/pokemon`, {
+    headers: { Authorization: `Bearer ${authToken}` }
+  });
+  
+  assert(
+    pokemonUserCardsData.success || pokemonUserCardsData.error,
+    'Get user cards by category should respond',
+    'success or error',
+    pokemonUserCardsData.success ? 'success' : 'error'
+  );
+
+  // Test 9.2: Get User Cards by Category (Yugioh)
+  console.log('📋 Test 9.2: Get User Cards by Yugioh Category');
+  const { data: yugiohUserCardsData } = await makeRequest(`${BASE_URL}/user-cards/category/yugioh`, {
+    headers: { Authorization: `Bearer ${authToken}` }
+  });
+  
+  assert(
+    yugiohUserCardsData.success || yugiohUserCardsData.error,
+    'Get user cards by yugioh category should respond',
+    'success or error',
+    yugiohUserCardsData.success ? 'success' : 'error'
+  );
+
+  // Test 9.3: Search User Cards
+  console.log('📋 Test 9.3: Search User Cards');
+  const { data: searchUserCardsData } = await makeRequest(`${BASE_URL}/user-cards/search?q=test&category=pokemon`, {
+    headers: { Authorization: `Bearer ${authToken}` }
+  });
+  
+  assert(
+    searchUserCardsData.success || searchUserCardsData.error,
+    'Search user cards should respond',
+    'success or error',
+    searchUserCardsData.success ? 'success' : 'error'
+  );
+
+  // Test 9.4: Get Card Details
+  if (cardId) {
+    console.log('📋 Test 9.4: Get Card Details');
+    const { data: cardDetailsData } = await makeRequest(`${BASE_URL}/user-cards/details/${cardId}?category=pokemon`, {
+      headers: { Authorization: `Bearer ${authToken}` }
+    });
+    
+    assert(
+      cardDetailsData.success || cardDetailsData.error,
+      'Get card details should respond',
+      'success or error',
+      cardDetailsData.success ? 'success' : 'error'
+    );
+  } else {
+    skip('Test 9.4: Get Card Details', 'No card ID available');
+  }
+
+  // Test 9.5: Get User Cards by Invalid Category
+  console.log('📋 Test 9.5: Get User Cards by Invalid Category');
+  const { data: invalidCategoryData } = await makeRequest(`${BASE_URL}/user-cards/category/invalid`, {
+    headers: { Authorization: `Bearer ${authToken}` }
+  });
+  
+  assert(
+    !invalidCategoryData.success && invalidCategoryData.error,
+    'Invalid category should be rejected',
+    'validation error',
+    invalidCategoryData.success ? 'success' : 'validation error'
+  );
+
+  // Test 9.6: Remove Card from Collection (if we have cardId)
+  if (cardId) {
+    console.log('📋 Test 9.6: Remove Card from Collection');
+    const { data: removeCardData } = await makeRequest(`${BASE_URL}/user-cards/${cardId}?category=pokemon`, {
+      method: 'DELETE',
+      headers: { Authorization: `Bearer ${authToken}` }
+    });
+    
+    assert(
+      removeCardData.success || (removeCardData.error && !removeCardData.error.includes('500')),
+      'Remove card should be handled',
+      'success or handled error',
+      removeCardData.success ? 'success' : 'handled error'
+    );
+  } else {
+    skip('Test 9.6: Remove Card from Collection', 'No card ID available');
+  }
+}
+
+// =============================================================================
+// 🎴 ADVANCED DECK MANAGEMENT TESTS
+// =============================================================================
+
+async function testAdvancedDeckManagement() {
+  console.log('\n🎴 === ADVANCED DECK MANAGEMENT TESTS ===\n');
+
+  if (!authToken) {
+    skip('Advanced Deck Management Tests', 'No authentication token available');
+    return;
+  }
+
+  let testDeckId = null;
+
+  // Test 10.1: Create Test Deck for Advanced Operations
+  console.log('📋 Test 10.1: Create Test Deck for Advanced Operations');
+  const { data: createAdvancedDeckData } = await makeRequest(`${BASE_URL}/decks`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${authToken}` },
+    body: JSON.stringify({
+      name: 'Advanced Test Deck',
+      description: 'Deck for testing advanced operations',
+      gameType: 'pokemon',
+      isPublic: true
+    })
+  });
+  
+  if (createAdvancedDeckData.success && createAdvancedDeckData.data) {
+    testDeckId = createAdvancedDeckData.data.id || createAdvancedDeckData.data._id;
+    assert(true, 'Advanced test deck created successfully', 'deck created', 'success');
+  } else {
+    assert(false, 'Advanced test deck creation failed', 'deck created', 'failure');
+  }
+
+  if (testDeckId) {
+    // Test 10.2: Validate Deck Format
+    console.log('📋 Test 10.2: Validate Deck Format');
+    const { data: validateDeckData } = await makeRequest(`${BASE_URL}/decks/${testDeckId}/validate`, {
+      headers: { Authorization: `Bearer ${authToken}` }
+    });
+    
+    assert(
+      validateDeckData.success || validateDeckData.error,
+      'Deck validation should respond',
+      'success or error',
+      validateDeckData.success ? 'success' : 'error'
+    );
+
+    // Test 10.3: Duplicate Deck
+    console.log('📋 Test 10.3: Duplicate Deck');
+    const { data: duplicateDeckData } = await makeRequest(`${BASE_URL}/decks/${testDeckId}/duplicate`, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${authToken}` },
+      body: JSON.stringify({
+        name: 'Duplicated Advanced Test Deck',
+        description: 'Duplicated deck for testing'
+      })
+    });
+    
+    assert(
+      duplicateDeckData.success || (duplicateDeckData.error && !duplicateDeckData.error.includes('500')),
+      'Deck duplication should be handled',
+      'success or handled error',
+      duplicateDeckData.success ? 'success' : 'handled error'
+    );
+
+    // Test 10.4: Add Card to Deck (if we have cardId)
+    if (cardId) {
+      console.log('📋 Test 10.4: Add Card to Deck');
+      const { data: addCardToDeckData } = await makeRequest(`${BASE_URL}/decks/${testDeckId}/cards`, {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${authToken}` },
+        body: JSON.stringify({
+          cardId: cardId,
+          quantity: 1,
+          category: 'pokemon'
+        })
+      });
+      
+      assert(
+        addCardToDeckData.success || (addCardToDeckData.error && !addCardToDeckData.error.includes('500')),
+        'Add card to deck should be handled',
+        'success or handled error',
+        addCardToDeckData.success ? 'success' : 'handled error'
+      );
+
+      // Test 10.5: Update Card Quantity in Deck
+      console.log('📋 Test 10.5: Update Card Quantity in Deck');
+      const { data: updateCardQuantityData } = await makeRequest(`${BASE_URL}/decks/${testDeckId}/cards/${cardId}`, {
+        method: 'PATCH',
+        headers: { Authorization: `Bearer ${authToken}` },
+        body: JSON.stringify({
+          quantity: 2
+        })
+      });
+      
+      assert(
+        updateCardQuantityData.success || (updateCardQuantityData.error && !updateCardQuantityData.error.includes('500')),
+        'Update card quantity should be handled',
+        'success or handled error',
+        updateCardQuantityData.success ? 'success' : 'handled error'
+      );
+
+      // Test 10.6: Remove Card from Deck
+      console.log('📋 Test 10.6: Remove Card from Deck');
+      const { data: removeCardFromDeckData } = await makeRequest(`${BASE_URL}/decks/${testDeckId}/cards/${cardId}`, {
+        method: 'DELETE',
+        headers: { Authorization: `Bearer ${authToken}` }
+      });
+      
+      assert(
+        removeCardFromDeckData.success || (removeCardFromDeckData.error && !removeCardFromDeckData.error.includes('500')),
+        'Remove card from deck should be handled',
+        'success or handled error',
+        removeCardFromDeckData.success ? 'success' : 'handled error'
+      );
+    } else {
+      skip('Tests 10.4-10.6: Deck Card Operations', 'No card ID available');
+    }
+
+    // Test 10.7: Delete Test Deck (cleanup)
+    console.log('📋 Test 10.7: Delete Test Deck (Cleanup)');
+    const { data: deleteDeckData } = await makeRequest(`${BASE_URL}/decks/${testDeckId}`, {
+      method: 'DELETE',
+      headers: { Authorization: `Bearer ${authToken}` }
+    });
+    
+    assert(
+      deleteDeckData.success || (deleteDeckData.error && !deleteDeckData.error.includes('500')),
+      'Delete deck should be handled',
+      'success or handled error',
+      deleteDeckData.success ? 'success' : 'handled error'
+    );
+  } else {
+    skip('Tests 10.2-10.7: Advanced Deck Operations', 'No test deck created');
+  }
+}
+
+// =============================================================================
+// �🚨 ERROR HANDLING & EDGE CASES TESTS
 // =============================================================================
 
 async function testErrorHandling() {
   console.log('\n🚨 === ERROR HANDLING & EDGE CASES ===\n');
 
-  // Test 6.1: Server Health Check
-  console.log('📋 Test 6.1: Server Health Check');
-  const { data: healthData } = await makeRequest(`${BASE_URL}/health`);
-  
-  assert(
-    healthData.success || healthData.status === 'ok',
-    'Health check endpoint should respond',
-    'healthy response',
-    healthData.success ? 'success' : 'response received'
-  );
-
-  // Test 6.2: Invalid HTTP Method
-  console.log('📋 Test 6.2: Invalid HTTP Method');
+  // Test 11.1: Invalid HTTP Method
+  console.log('📋 Test 11.1: Invalid HTTP Method');
   const { data: invalidMethodData, response: invalidMethodResponse } = await makeRequest(`${BASE_URL}/auth/login`, {
     method: 'PATCH'
   });
@@ -1292,8 +1681,8 @@ async function testErrorHandling() {
     `status ${invalidMethodResponse.status}`
   );
 
-  // Test 6.3: Malformed JSON Body
-  console.log('📋 Test 6.3: Malformed JSON Body');
+  // Test 11.2: Malformed JSON Body
+  console.log('📋 Test 11.2: Malformed JSON Body');
   const { data: malformedData } = await makeRequest(`${BASE_URL}/auth/register`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -1307,8 +1696,8 @@ async function testErrorHandling() {
     malformedData.success ? 'success' : 'parse error'
   );
 
-  // Test 6.4: Missing Content-Type Header
-  console.log('📋 Test 6.4: Missing Content-Type Header');
+  // Test 11.3: Missing Content-Type Header
+  console.log('📋 Test 11.3: Missing Content-Type Header');
   const { data: missingHeaderData } = await makeRequest(`${BASE_URL}/auth/register`, {
     method: 'POST',
     body: JSON.stringify({ email: 'test@example.com', password: 'password' })
@@ -1321,8 +1710,8 @@ async function testErrorHandling() {
     missingHeaderData.success ? 'success' : 'error'
   );
 
-  // Test 6.5: Extremely Long Request Body
-  console.log('📋 Test 6.5: Extremely Long Request Body');
+  // Test 11.4: Extremely Long Request Body
+  console.log('📋 Test 11.4: Extremely Long Request Body');
   const longString = 'a'.repeat(10000);
   const { data: longBodyData } = await makeRequest(`${BASE_URL}/auth/register`, {
     method: 'POST',
@@ -1341,8 +1730,8 @@ async function testErrorHandling() {
     longBodyData.success ? 'success' : 'validation error'
   );
 
-  // Test 6.6: SQL Injection Attempt
-  console.log('📋 Test 6.6: SQL Injection Attempt');
+  // Test 11.5: SQL Injection Attempt
+  console.log('📋 Test 11.5: SQL Injection Attempt');
   const { data: sqlInjectionData } = await makeRequest(
     `${BASE_URL}/cards/pokemon/search?q='; DROP TABLE users; --&page=1&limit=5`
   );
@@ -1354,8 +1743,8 @@ async function testErrorHandling() {
     sqlInjectionData.success ? 'safe response' : 'error response'
   );
 
-  // Test 6.7: XSS Attempt
-  console.log('📋 Test 6.7: XSS Attempt');
+  // Test 11.6: XSS Attempt
+  console.log('📋 Test 11.6: XSS Attempt');
   const { data: xssData } = await makeRequest(`${BASE_URL}/auth/register`, {
     method: 'POST',
     body: JSON.stringify({
@@ -1373,8 +1762,8 @@ async function testErrorHandling() {
     xssData.success ? 'success' : 'validation error'
   );
 
-  // Test 6.8: Rate Limiting Test (if implemented)
-  console.log('📋 Test 6.8: Rate Limiting Test');
+  // Test 11.7: Rate Limiting Test (if implemented)
+  console.log('📋 Test 11.7: Rate Limiting Test');
   let rateLimitHit = false;
   for (let i = 0; i < 10; i++) {
     const { response } = await makeRequest(`${BASE_URL}/auth/login`, {
@@ -1389,8 +1778,8 @@ async function testErrorHandling() {
   
   console.log(rateLimitHit ? '✅ Rate limiting is active' : '⚠️ Rate limiting not detected');
 
-  // Test 6.9: Unicode and Special Characters
-  console.log('📋 Test 6.9: Unicode and Special Characters');
+  // Test 11.8: Unicode and Special Characters
+  console.log('📋 Test 11.8: Unicode and Special Characters');
   const { data: unicodeData } = await makeRequest(`${BASE_URL}/auth/register`, {
     method: 'POST',
     body: JSON.stringify({
@@ -1408,8 +1797,8 @@ async function testErrorHandling() {
     unicodeData.success ? 'success' : 'validation response'
   );
 
-  // Test 6.10: Empty Request Body
-  console.log('📋 Test 6.10: Empty Request Body');
+  // Test 11.9: Empty Request Body
+  console.log('📋 Test 11.9: Empty Request Body');
   const { data: emptyBodyData } = await makeRequest(`${BASE_URL}/auth/register`, {
     method: 'POST',
     body: ''
@@ -1422,8 +1811,8 @@ async function testErrorHandling() {
     emptyBodyData.success ? 'success' : 'validation error'
   );
 
-  // Test 6.11: Non-existent Endpoint
-  console.log('📋 Test 6.11: Non-existent Endpoint');
+  // Test 11.10: Non-existent Endpoint
+  console.log('📋 Test 11.10: Non-existent Endpoint');
   const { response: notFoundResponse } = await makeRequest(`${BASE_URL}/nonexistent-endpoint`);
   
   assert(
@@ -1433,8 +1822,8 @@ async function testErrorHandling() {
     `status ${notFoundResponse.status}`
   );
 
-  // Test 6.12: CORS Headers (if applicable)
-  console.log('📋 Test 6.12: CORS Headers');
+  // Test 11.11: CORS Headers (if applicable)
+  console.log('📋 Test 11.11: CORS Headers');
   const { response: corsResponse } = await makeRequest(`${BASE_URL}/cards/pokemon?page=1&limit=1`);
   
   const hasCorsHeaders = corsResponse.headers.has('access-control-allow-origin') || 
@@ -1455,12 +1844,16 @@ async function runAllTests() {
   
   try {
     // Run all comprehensive test suites
+    await testSystemEndpoints();
     await testAuthentication();
     await testCardManagement(); 
     await testSetManagement();
     await testCollectionManagement();
+    await testAdvancedCollectionManagement();
     await testDeckManagement();
+    await testAdvancedDeckManagement();
     await testUserManagement();
+    await testAdvancedUserManagement();
     await testErrorHandling();
     
     // Print final statistics

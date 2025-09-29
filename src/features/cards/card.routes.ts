@@ -12,32 +12,32 @@ export const cardRoutes = new Hono();
 // Apply rate limiting to prevent abuse
 cardRoutes.use('/*', rateLimitMiddleware(300, 60000)); // 300 requests per minute
 
-// Get cards by type with pagination and filtering
+// Get cards by category with pagination and filtering
 cardRoutes.get(
-  '/:type',
-  validateParamsMiddleware(['type']),
+  '/:category',
+  validateParamsMiddleware(['category']),
   cacheMiddleware(10 * 60 * 1000), // Cache for 10 minutes
   cardController.getCardsByType
 );
 
-// Search cards by type (must come before /:type/:cardId)
+// Search cards by category (must come before /:category/:cardId)
 cardRoutes.get(
-  '/:type/search',
-  validateParamsMiddleware(['type']),
+  '/:category/search',
+  validateParamsMiddleware(['category']),
   cardController.searchCards
 );
 
-// Get cards by set (must come before /:type/:cardId)
+// Get cards by set (must come before /:category/:cardId)
 cardRoutes.get(
-  '/:type/sets/:setId',
-  validateParamsMiddleware(['type', 'setId']),
+  '/:category/sets/:setId',
+  validateParamsMiddleware(['category', 'setId']),
   cardController.getCardsBySet
 );
 
-// Get specific card by ID and type
+// Get specific card by ID and category
 cardRoutes.get(
-  '/:type/:cardId',
-  validateParamsMiddleware(['type', 'cardId']),
+  '/:category/:cardId',
+  validateParamsMiddleware(['category', 'cardId']),
   cardController.getCardById
 );
 
