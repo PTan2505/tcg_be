@@ -1,4 +1,5 @@
 import { Hono } from 'hono';
+import { authMiddleware } from '../../shared/middlewares/auth.middleware';
 import { cacheMiddleware } from '../../shared/middlewares/cache.middleware';
 import { rateLimitMiddleware, validateParamsMiddleware } from '../../shared/middlewares/security.middleware';
 import { SetController } from './set.controller';
@@ -9,7 +10,8 @@ const setController = new SetController(setService);
 
 export const setRoutes = new Hono();
 
-// Apply rate limiting to prevent abuse
+// All routes require authentication and rate limiting
+setRoutes.use('/*', authMiddleware);
 setRoutes.use('/*', rateLimitMiddleware(300, 60000)); // 300 requests per minute
 
 // Search sets with advanced filters by category (must come before /:category/:setId)
