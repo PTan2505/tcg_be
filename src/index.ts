@@ -14,6 +14,7 @@ import userCardRoutes from "./features/collections/userCard.routes";
 import deckRoutes from "./features/decks/deck.routes";
 import setRoutes from "./features/sets/set.routes";
 import userRoutes from "./features/users/user.routes";
+import { initializeSuperuser } from "./scripts/initSuperuser";
 import { swaggerDoc } from "./shared/config/swagger";
 import { getCacheStats } from "./shared/middlewares/cache.middleware";
 
@@ -27,6 +28,9 @@ const host = appUrl.hostname;
 
 // Connect to database
 await connectDB();
+
+// Initialize superuser for testing and administration
+await initializeSuperuser();
 
 // Swagger documentation
 app.get("/swagger.json", (c) => c.json(swaggerDoc));
