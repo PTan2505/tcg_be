@@ -5,6 +5,7 @@ import { fileURLToPath } from "url";
 
 export interface IEmailService {
   sendVerificationEmail(to: string, token: string): Promise<void>;
+  sendPasswordResetEmail(to: string, token: string): Promise<void>;
 }
 
 export class EmailService implements IEmailService {
@@ -41,6 +42,29 @@ export class EmailService implements IEmailService {
       from: `"Kādo" <${process.env.SMTP_FROM}>`,
       to,
       subject: "Verify your email address",
+      html,
+    });
+  }
+
+  async sendPasswordResetEmail(to: string, token: string): Promise<void> {
+    const resetLink = `${process.env.APP_URL}/auth/reset-password?token=${token}`;
+
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = path.dirname(__filename);
+
+    const templatePath = path.join(__dirname, "../config/email.html"); // adjust relative path
+    let html = fs.readFileSync(templatePath, "utf-8");
+
+    // Replace placeholders
+    html = html
+      .replace(/{{verificationLink}}/g, resetLink) // reusing the same template
+      .replace(/{{email}}/g, to)
+      .replace(/{{year}}/g, new Date().getFullYear().toString());
+
+    await this.transporter.sendMail({
+      from: `"Kādo" <${process.env.SMTP_FROM}>`,
+      to,
+      subject: "Reset your password",
       html,
     });
   }

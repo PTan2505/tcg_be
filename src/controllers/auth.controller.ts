@@ -6,7 +6,7 @@ export class AuthController {
 
   register = async (c: Context) => {
     try {
-      const data = await c.req.json();
+      const data = c.get("validatedData");
       const user = await this.authService.register(data);
       console.log("Registered user:", user);
 
@@ -25,7 +25,7 @@ export class AuthController {
 
   login = async (c: Context) => {
     try {
-      const data = await c.req.json();
+      const data = c.get("validatedData");
       const tokens = await this.authService.login(data);
       return c.json(tokens);
     } catch (error: any) {
@@ -42,6 +42,49 @@ export class AuthController {
       return c.json(
         { error: error?.message || "Email verification failed" },
         400
+      );
+    }
+  };
+
+  forgotPassword = async (c: Context) => {
+    try {
+      const { email } = c.get("validatedData");
+      await this.authService.forgotPassword(email);
+      return c.json({
+        message:
+          "If the email exists, password reset instructions have been sent",
+      });
+    } catch (error: any) {
+      return c.json({ error: "Failed to process request" }, 400);
+    }
+  };
+
+  resetPassword = async (c: Context) => {
+    try {
+      const { token, newPassword } = c.get("validatedData");
+      await this.authService.resetPassword(token, newPassword);
+      return c.json({ message: "Password reset successful" });
+    } catch (error: any) {
+      return c.json(
+        {
+          error: error?.message || "Password reset failed",
+        },
+        400
+      );
+    }
+  };
+
+  refreshToken = async (c: Context) => {
+    try {
+      const { refreshToken } = c.get("validatedData");
+      const tokens = await this.authService.refreshToken(refreshToken);
+      return c.json(tokens);
+    } catch (error: any) {
+      return c.json(
+        {
+          error: error?.message || "Token refresh failed",
+        },
+        401
       );
     }
   };
