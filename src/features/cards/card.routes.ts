@@ -1,4 +1,5 @@
 import { Hono } from 'hono';
+import { authMiddleware } from '../../shared/middlewares/auth.middleware';
 import { cacheMiddleware } from '../../shared/middlewares/cache.middleware';
 import { rateLimitMiddleware, validateParamsMiddleware } from '../../shared/middlewares/security.middleware';
 import { CardController } from './card.controller';
@@ -9,7 +10,8 @@ const cardController = new CardController(cardService);
 
 export const cardRoutes = new Hono();
 
-// Apply rate limiting to prevent abuse
+// All routes require authentication and rate limiting
+cardRoutes.use('/*', authMiddleware);
 cardRoutes.use('/*', rateLimitMiddleware(300, 60000)); // 300 requests per minute
 
 // Get cards by category with pagination and filtering

@@ -1,7 +1,7 @@
 import { Hono } from "hono";
-import { UserController } from "./user.controller";
 import { authMiddleware } from "../../shared/middlewares/auth.middleware";
 import { validateRequest } from "../../shared/middlewares/validation.middleware";
+import { UserController } from "./user.controller";
 import { UserService } from "./user.service";
 import {
   changePasswordSchema,
@@ -14,16 +14,18 @@ const userRoutes = new Hono();
 const userService = new UserService();
 const userController = new UserController(userService);
 
-// Protected routes
-userRoutes.get("/profile", authMiddleware, userController.getProfile);
+// All routes require authentication
+userRoutes.use('/*', authMiddleware);
+
+// User profile routes
+userRoutes.get("/profile", userController.getProfile);
 userRoutes.post(
   "/change-password",
-  authMiddleware,
   validateRequest(changePasswordSchema),
   userController.changePassword
 );
 
-// Regular routes
+// User management routes
 userRoutes.get("/", userController.getUsers);
 userRoutes.get("/:id", userController.getUserById);
 userRoutes.patch(
