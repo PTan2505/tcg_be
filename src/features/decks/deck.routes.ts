@@ -1,6 +1,6 @@
 import { Hono } from 'hono';
 import { authMiddleware } from '../../shared/middlewares/auth.middleware';
-import { ownershipMiddleware, rateLimitMiddleware, validateParamsMiddleware } from '../../shared/middlewares/security.middleware';
+import { rateLimitMiddleware, validateParamsMiddleware } from '../../shared/middlewares/security.middleware';
 import { validateRequest } from '../../shared/middlewares/validation.middleware';
 import { UserCardService } from '../collections/userCard.service';
 import { DeckController } from './deck.controller';
@@ -22,7 +22,6 @@ export const deckRoutes = new Hono();
 // All routes require authentication and rate limiting
 deckRoutes.use('/*', authMiddleware);
 deckRoutes.use('/*', rateLimitMiddleware(100, 60000)); // 100 requests per minute for deck operations
-deckRoutes.use('/*', ownershipMiddleware('deck'));
 
 // Create new deck
 deckRoutes.post(
