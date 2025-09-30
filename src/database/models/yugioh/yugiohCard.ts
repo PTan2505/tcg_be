@@ -30,6 +30,9 @@ export interface IYugiohCard extends Document {
   konamiId?: string; // Konami ID (different from passcode)
   name: string;
   
+  // Set references (card can appear in multiple sets)
+  cardSets: mongoose.Types.ObjectId[]; // Array of references to YugiohSet
+  
   // Card type and frame information
   type: string; // Normal Monster, Effect Monster, Synchro Monster, etc.
   frameType?: string; // normal, effect, synchro, spell, trap, etc.
@@ -104,6 +107,12 @@ const YugiohCardSchema = new Schema<IYugiohCard>({
     required: true,
     index: true 
   },
+  
+  // Set references array
+  cardSets: [{ 
+    type: Schema.Types.ObjectId, 
+    ref: 'YugiohSet'
+  }],
   
   // Card type and frame information
   type: { 
@@ -234,5 +243,7 @@ YugiohCardSchema.index({ type: 1, race: 1 }); // Filter by type and race
 YugiohCardSchema.index({ attribute: 1, level: 1 }); // Filter by attribute and level
 YugiohCardSchema.index({ atk: 1, def: 1 }); // Filter by ATK/DEF
 YugiohCardSchema.index({ archetype: 1, type: 1 }); // Archetype filtering
+YugiohCardSchema.index({ cardSets: 1 }); // Find cards in specific sets
+YugiohCardSchema.index({ name: 1, cardSets: 1 }); // Cards by name in specific sets
 
 export const YugiohCard = mongoose.model<IYugiohCard>('YugiohCard', YugiohCardSchema);

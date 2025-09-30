@@ -82,6 +82,14 @@ function skip(testName, reason = '') {
 
 // Test data for various scenarios
 const testUsers = {
+  // Use the actual superuser credentials that are in the database
+  superuser: {
+    email: 'phuctann2505@gmail.com', // Actual superuser email from database
+    password: 'Admin123', // Actual superuser password from .env
+    firstName: 'Super',
+    lastName: 'Admin',
+    dateOfBirth: '1990-01-01'
+  },
   valid: {
     email: 'testuser@example.com',
     password: 'TestPassword123!',

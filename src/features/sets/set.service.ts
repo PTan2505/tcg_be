@@ -143,64 +143,17 @@ export class SetService implements ISetService {
         ];
       }
 
-      // Get unique sets (group by setName and setCode)
-      const pipeline: any[] = [
-        ...(Object.keys(query).length > 0 ? [{ $match: query }] : []),
-        {
-          $group: {
-            _id: { setName: '$setName', setCode: '$setCode' },
-            setName: { $first: '$setName' },
-            setCode: { $first: '$setCode' },
-            cardCount: { $sum: 1 },
-            rarities: { $addToSet: '$setRarity' },
-            priceRange: {
-              $push: {
-                $cond: [
-                  { $ne: ['$setPrice', null] },
-                  { $toDouble: '$setPrice' },
-                  0
-                ]
-              }
-            }
-          }
-        },
-        {
-          $addFields: {
-            minPrice: { $min: '$priceRange' },
-            maxPrice: { $max: '$priceRange' }
-          }
-        },
-        {
-          $project: {
-            _id: 0,
-            setName: 1,
-            setCode: 1,
-            cardCount: 1,
-            rarities: 1,
-            minPrice: 1,
-            maxPrice: 1
-          }
-        },
-        { $sort: sort },
-        { $skip: skip },
-        { $limit: limit }
-      ];
-
-      const [yugiohSets, totalResult] = await Promise.all([
-        YugiohSet.aggregate(pipeline),
-        YugiohSet.aggregate([
-          ...(Object.keys(query).length > 0 ? [{ $match: query }] : []),
-          {
-            $group: {
-              _id: { setName: '$setName', setCode: '$setCode' }
-            }
-          },
-          { $count: 'total' }
-        ])
+      const [yugiohSets, yugiohTotal] = await Promise.all([
+        YugiohSet.find(query)
+          .sort(sort)
+          .skip(skip)
+          .limit(limit)
+          .lean(),
+        YugiohSet.countDocuments(query)
       ]);
       
       sets = yugiohSets;
-      total = totalResult[0]?.total || 0;
+      total = yugiohTotal;
 
     } else {
       throw new Error('Invalid set type. Must be "pokemon" or "yugioh"');
@@ -229,46 +182,42 @@ export class SetService implements ISetService {
       if (setType === 'pokemon') {
         set = await PokemonSet.findById(setId).lean();
       } else if (setType === 'yugioh') {
-        // For Yu-Gi-Oh!, setId can be setName or setCode
-        const setData = await YugiohSet.aggregate([
-          {
-            $match: {
-              $or: [
-                { setName: { $regex: setId, $options: 'i' } },
-                { setCode: { $regex: setId, $options: 'i' } }
-              ]
-            }
-          },
-          {
-            $group: {
-              _id: { setName: '$setName', setCode: '$setCode' },
-              setName: { $first: '$setName' },
-              setCode: { $first: '$setCode' },
-              cardCount: { $sum: 1 },
-              cards: {
-                $push: {
-                  cardExtId: '$cardExtId',
-                  setRarity: '$setRarity',
-                  setPrice: '$setPrice'
-                }
-              },
-              rarities: { $addToSet: '$setRarity' }
-            }
-          },
-          {
-            $project: {
-              _id: 0,
-              setName: 1,
-              setCode: 1,
-              cardCount: 1,
-              cards: 1,
-              rarities: 1,
-              setType: { $literal: 'yugioh' }
-            }
-          }
-        ]);
+        // For Yu-Gi-Oh!, find sets and get related card information
+        let query: any = {};
+        if (setId.match(/^[0-9a-fA-F]{24}$/)) {
+          // ObjectId format
+          query._id = setId;
+        } else {
+          // setName or setCode
+          query.$or = [
+            { setName: { $regex: setId, $options: 'i' } },
+            { setCode: { $regex: setId, $options: 'i' } }
+          ];
+        }
 
-        set = setData[0] || null;
+        const sets = await YugiohSet.find(query).lean();
+        
+        if (sets.length === 0) {
+          return null;
+        }
+
+        // Get the first matching set and find all related cards
+        const targetSet = sets[0];
+        const { YugiohCard } = await import('../../database/models/yugioh');
+        
+        const relatedCards = await YugiohCard.find({
+          cardSets: targetSet._id
+        }).countDocuments();
+
+        set = {
+          _id: targetSet._id,
+          setName: targetSet.setName,
+          setCode: targetSet.setCode,
+          setRarity: targetSet.setRarity,
+          setPrice: targetSet.setPrice,
+          cardCount: relatedCards,
+          setType: 'yugioh'
+        };
       }
     } else {
       // Search in both types
@@ -280,45 +229,38 @@ export class SetService implements ISetService {
         }
       } catch (error) {
         // If not found in Pokemon, try Yugioh
-        const setData = await YugiohSet.aggregate([
-          {
-            $match: {
-              $or: [
-                { setName: { $regex: setId, $options: 'i' } },
-                { setCode: { $regex: setId, $options: 'i' } }
-              ]
-            }
-          },
-          {
-            $group: {
-              _id: { setName: '$setName', setCode: '$setCode' },
-              setName: { $first: '$setName' },
-              setCode: { $first: '$setCode' },
-              cardCount: { $sum: 1 },
-              cards: {
-                $push: {
-                  cardExtId: '$cardExtId',
-                  setRarity: '$setRarity',
-                  setPrice: '$setPrice'
-                }
-              },
-              rarities: { $addToSet: '$setRarity' }
-            }
-          },
-          {
-            $project: {
-              _id: 0,
-              setName: 1,
-              setCode: 1,
-              cardCount: 1,
-              cards: 1,
-              rarities: 1,
-              setType: { $literal: 'yugioh' }
-            }
-          }
-        ]);
+        let query: any = {};
+        if (setId.match(/^[0-9a-fA-F]{24}$/)) {
+          // ObjectId format
+          query._id = setId;
+        } else {
+          // setName or setCode
+          query.$or = [
+            { setName: { $regex: setId, $options: 'i' } },
+            { setCode: { $regex: setId, $options: 'i' } }
+          ];
+        }
 
-        set = setData[0] || null;
+        const sets = await YugiohSet.find(query).lean();
+        
+        if (sets.length > 0) {
+          const targetSet = sets[0];
+          const { YugiohCard } = await import('../../database/models/yugioh');
+          
+          const relatedCards = await YugiohCard.find({
+            cardSets: targetSet._id
+          }).countDocuments();
+
+          set = {
+            _id: targetSet._id,
+            setName: targetSet.setName,
+            setCode: targetSet.setCode,
+            setRarity: targetSet.setRarity,
+            setPrice: targetSet.setPrice,
+            cardCount: relatedCards,
+            setType: 'yugioh'
+          };
+        }
       }
     }
 

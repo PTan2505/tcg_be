@@ -2,18 +2,22 @@ import mongoose, { Document, Schema } from 'mongoose';
 
 export interface IYugiohSet extends Document {
   // Set identification
-  setName: string; // Official set name
+  setName: string; // Official set name (e.g., "Battles of Legend: Relentless Revenge")
   setCode: string; // Set code (e.g., "BLRR-EN084")
   
-  // Card-specific set information
-  cardExtId: number; // Reference to the YugiohCard
-  setRarity: string; // Card rarity in this set
+  // Set-specific rarity and pricing information
+  setRarity: string; // Card rarity in this set (e.g., "Secret Rare")
   setRarityCode?: string; // Rarity code (e.g., "(ScR)")
-  setPrice?: string; // Price in this set ($ value)
+  setPrice?: string; // Price in this set ($ value, e.g., "4.08")
   
-  // TCGPlayer specific data (when tcgplayer_data=true)
+  // Additional set information
+  releaseDate?: Date; // Set release date
+  description?: string; // Set description
+  series?: string; // Series or category
+  
+  // TCGPlayer specific data
   setEdition?: string; // Set edition information
-  setUrl?: string; // TCGPlayer URL for this card in this set
+  setUrl?: string; // TCGPlayer URL for this set
   
   // Metadata
   createdAt?: Date;
@@ -30,16 +34,11 @@ const YugiohSetSchema = new Schema<IYugiohSet>({
   setCode: { 
     type: String, 
     required: true,
+    unique: true,
     index: true 
   },
   
-  // Card-specific set information
-  cardExtId: { 
-    type: Number, 
-    required: true,
-    ref: 'YugiohCard',
-    index: true 
-  },
+  // Set-specific rarity and pricing information
   setRarity: { 
     type: String, 
     required: true,
@@ -47,6 +46,17 @@ const YugiohSetSchema = new Schema<IYugiohSet>({
   },
   setRarityCode: String,
   setPrice: String,
+  
+  // Additional set information
+  releaseDate: {
+    type: Date,
+    index: true
+  },
+  description: String,
+  series: {
+    type: String,
+    index: true
+  },
   
   // TCGPlayer specific data
   setEdition: String,
@@ -57,8 +67,9 @@ const YugiohSetSchema = new Schema<IYugiohSet>({
 });
 
 // Create compound indexes for efficient queries
-YugiohSetSchema.index({ cardExtId: 1, setCode: 1 }, { unique: true }); // Prevent duplicate entries
-YugiohSetSchema.index({ setName: 1, setRarity: 1 }); // Filter by set and rarity
-YugiohSetSchema.index({ setName: 'text' }); // Text search on set names
+YugiohSetSchema.index({ setName: 'text', description: 'text' }); // Text search on set names and description
+YugiohSetSchema.index({ setName: 1, setRarity: 1 }); // Filter by set name and rarity
+YugiohSetSchema.index({ series: 1, releaseDate: 1 }); // Filter by series and release date
+YugiohSetSchema.index({ setRarity: 1, setPrice: 1 }); // Filter by rarity and price
 
 export const YugiohSet = mongoose.model<IYugiohSet>('YugiohSet', YugiohSetSchema);
