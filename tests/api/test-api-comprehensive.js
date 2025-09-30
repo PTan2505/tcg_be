@@ -94,10 +94,10 @@ function skip(testName, reason = '') {
 
 // Test data for various scenarios
 const testUsers = {
-  // Use the superuser credentials that are created on app startup
+  // Use the actual superuser credentials that are in the database
   superuser: {
-    email: 'admin@tcgbackend.local', // Default superuser email
-    password: 'SuperAdmin123!', // Default superuser password
+    email: 'phuctann2505@gmail.com', // Actual superuser email from database
+    password: 'Admin123', // Actual superuser password from .env
     firstName: 'Super',
     lastName: 'Admin',
     dateOfBirth: '1990-01-01'

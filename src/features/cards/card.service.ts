@@ -92,9 +92,9 @@ export class CardService implements ICardService {
           setFilters.setRarity = { $regex: filters.rarity, $options: 'i' };
         }
         
-        // Find cards that match the set/rarity criteria
-        const matchingSets = await YugiohSet.find(setFilters).distinct('cardExtId');
-        baseQuery.cardExtId = { $in: matchingSets };
+        // Find matching set ObjectIds
+        const matchingSets = await YugiohSet.find(setFilters).distinct('_id');
+        baseQuery.cardSets = { $in: matchingSets };
       }
       
       const [yugiohCards, yugiohTotal] = await Promise.all([
@@ -102,22 +102,13 @@ export class CardService implements ICardService {
           .sort(sort)
           .skip(skip)
           .limit(limit)
+          .populate('cardSets')
           .lean(),
         YugiohCard.countDocuments(baseQuery)
       ]);
       
-      // Enrich cards with set information
-      const enrichedCards = await Promise.all(
-        yugiohCards.map(async (card: any) => {
-          const cardSets = await YugiohSet.find({ cardExtId: card.cardExtId }).lean();
-          return {
-            ...card,
-            sets: cardSets
-          };
-        })
-      );
-      
-      cards = enrichedCards;
+      // Cards already have populated set information via populate
+      cards = yugiohCards;
       total = yugiohTotal;
     } else {
       throw new Error('Invalid card type. Must be "pokemon" or "yugioh"');
@@ -147,6 +138,7 @@ export class CardService implements ICardService {
         .lean();
     } else if (cardType === CardCategory.YUGIOH) {
       card = await YugiohCard.findById(cardId)
+        .populate('cardSets')
         .lean();
     } else {
       throw new Error('Invalid card category. Must be "pokemon" or "yugioh"');
@@ -258,7 +250,7 @@ export class CardService implements ICardService {
       total = pokemonTotal;
 
     } else if (cardType === CardCategory.YUGIOH) {
-      // For Yu-Gi-Oh!, find all cards that appear in the specified set
+      // For Yu-Gi-Oh!, find all cards that reference the specified set
       
       // Validate if setId looks like a reasonable set identifier
       if (setId.length < 2 || setId.includes('invalid') || setId.includes('fake')) {
@@ -267,13 +259,23 @@ export class CardService implements ICardService {
       
       let setQuery: any = {};
       
-      // Check if setId is a set name or set code
-      setQuery = {
-        $or: [
-          { setName: { $regex: setId, $options: 'i' } },
-          { setCode: { $regex: setId, $options: 'i' } }
-        ]
-      };
+      // Check if setId is a MongoDB ObjectId or set name/code
+      if (setId.match(/^[0-9a-fA-F]{24}$/)) {
+        // Valid MongoDB ObjectId format - check if it exists
+        const setExists = await YugiohSet.findById(setId);
+        if (!setExists) {
+          throw new Error(`Set with ID '${setId}' not found`);
+        }
+        setQuery = { _id: setId };
+      } else {
+        // Find set by name or code
+        setQuery = {
+          $or: [
+            { setName: { $regex: setId, $options: 'i' } },
+            { setCode: { $regex: setId, $options: 'i' } }
+          ]
+        };
+      }
 
       // Find all sets matching the identifier
       const yugiohSets = await YugiohSet.find(setQuery).lean();
@@ -293,15 +295,15 @@ export class CardService implements ICardService {
         };
       }
 
-      // Get all card IDs from the matching sets
-      const cardIds = yugiohSets.map(set => set.cardExtId);
+      // Get all set ObjectIds that match
+      const setObjectIds = yugiohSets.map(set => set._id);
 
-      // Build card query
-      let cardQuery: any = { cardExtId: { $in: cardIds } };
+      // Build card query - find cards that reference these sets
+      let cardQuery: any = { cardSets: { $in: setObjectIds } };
       
       if (search) {
         cardQuery.$and = [
-          { cardExtId: { $in: cardIds } },
+          { cardSets: { $in: setObjectIds } },
           {
             $or: [
               { name: { $regex: search, $options: 'i' } },
@@ -319,22 +321,12 @@ export class CardService implements ICardService {
           .sort(sort)
           .skip(skip)
           .limit(limit)
+          .populate('cardSets')
           .lean(),
         YugiohCard.countDocuments(cardQuery)
       ]);
-
-      // Enrich cards with set information
-      const enrichedCards = await Promise.all(
-        yugiohCards.map(async (card: any) => {
-          const cardSets = await YugiohSet.find({ cardExtId: card.cardExtId }).lean();
-          return {
-            ...card,
-            sets: cardSets
-          };
-        })
-      );
       
-      cards = enrichedCards;
+      cards = yugiohCards;
       total = yugiohTotal;
 
     } else {
