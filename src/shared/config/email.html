@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xác minh địa chỉ email</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f5f5f5;
+      }
+
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 40px 30px;
+        text-align: center;
+      }
+
+      .logo {
+        font-size: 32px;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 10px;
+        letter-spacing: -0.5px;
+      }
+
+      .header-subtitle {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 16px;
+      }
+
+      .content {
+        padding: 40px 30px;
+      }
+
+      .title {
+        font-size: 24px;
+        font-weight: 600;
+        color: #2d3748;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .message {
+        font-size: 16px;
+        color: #4a5568;
+        margin-bottom: 30px;
+        text-align: center;
+        line-height: 1.7;
+      }
+
+      .verify-button {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 30px;
+        padding: 16px 32px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #ffffff !important;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        text-align: center;
+        transition: transform 0.2s ease;
+      }
+
+      .verify-button:hover {
+        transform: translateY(-2px);
+      }
+
+      .alternative-link {
+        background-color: #f7fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+
+      .alternative-text {
+        font-size: 14px;
+        color: #718096;
+        margin-bottom: 10px;
+      }
+
+      .copy-link {
+        font-size: 12px;
+        color: #4299e1;
+        word-break: break-all;
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #e2e8f0;
+      }
+
+      .security-note {
+        background-color: #fef5e7;
+        border-left: 4px solid #f6ad55;
+        padding: 15px;
+        margin-bottom: 30px;
+        border-radius: 0 8px 8px 0;
+      }
+
+      .security-text {
+        font-size: 14px;
+        color: #744210;
+      }
+
+      .footer {
+        background-color: #f7fafc;
+        padding: 30px;
+        text-align: center;
+        border-top: 1px solid #e2e8f0;
+      }
+
+      .footer-text {
+        font-size: 12px;
+        color: #a0aec0;
+        line-height: 1.5;
+      }
+
+      .footer-link {
+        color: #4299e1;
+        text-decoration: none;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .email-container {
+          margin: 0;
+          border-radius: 0;
+        }
+
+        .content,
+        .header,
+        .footer {
+          padding: 30px 20px;
+        }
+
+        .title {
+          font-size: 22px;
+        }
+
+        .message {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <div class="header">
+        <div class="logo">Kādo</div>
+        <div class="header-subtitle">
+          Chào mừng bạn đến với cộng đồng của chúng tôi
+        </div>
+      </div>
+
+      <div class="content">
+        <h1 class="title">Xác minh địa chỉ email của bạn</h1>
+
+        <p class="message">
+          Cảm ơn bạn đã đăng ký! Chúng tôi rất vui mừng khi có bạn tham gia. Để
+          hoàn tất đăng ký và bảo vệ tài khoản, vui lòng xác minh địa chỉ email
+          của bạn bằng cách nhấn nút bên dưới.
+        </p>
+
+        <a href="{{verificationLink}}" class="verify-button">
+          Xác minh email
+        </a>
+
+        <div class="security-note">
+          <p class="security-text">
+            <strong>Lưu ý bảo mật:</strong> Liên kết xác minh này sẽ hết hạn sau
+            24 giờ vì lý do bảo mật. Nếu bạn không tạo tài khoản với chúng tôi,
+            vui lòng bỏ qua email này.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p class="footer-text">
+          Email này được gửi đến {{email}}<br />
+          Nếu có thắc mắc, liên hệ với chúng tôi tại
+          <a href="mailto:support@kado.com" class="footer-link"
+            >support@kado.com</a
+          ><br /><br />
+          © {{year}} Kādo. Bảo lưu mọi quyền.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

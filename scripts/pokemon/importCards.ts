@@ -1,7 +1,7 @@
 import { readFile } from "fs/promises";
 import path from "path";
-import { PokemonCard } from "../../src/models/pokemon/pokemonCard";
-import { PokemonSet } from "../../src/models/pokemon/pokemonSet";
+import { PokemonCard } from "../../src/database/models/pokemon/pokemonCard";
+import { PokemonSet } from "../../src/database/models/pokemon/pokemonSet";
 
 export async function importCards() {
   try {

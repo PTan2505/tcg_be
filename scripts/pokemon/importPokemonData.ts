@@ -1,4 +1,4 @@
-import { connectDB } from "../../src/db/db";
+import { connectDB } from "../../src/database/db/db";
 import { importCards } from "./importCards";
 import { importDecks } from "./importDecks";
 import { importSets } from "./importSets";

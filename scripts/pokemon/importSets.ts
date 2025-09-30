@@ -1,7 +1,7 @@
 // scripts/importSets.ts
 import { readFile } from "fs/promises";
 import path from "path";
-import { PokemonSet } from "../../src/models/pokemon/pokemonSet";
+import { PokemonSet } from "../../src/database/models/pokemon/pokemonSet";
 
 export async function importSets() {
   try {
