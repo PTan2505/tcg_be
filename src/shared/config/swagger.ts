@@ -27,8 +27,12 @@ export const swaggerDoc: OpenAPIV3.Document = {
       description: "User card collection management",
     },
     {
-      name: "Decks",
-      description: "Deck building and management",
+      name: "User Decks",
+      description: "User deck management operations (CRUD)",
+    },
+    {
+      name: "Pokemon Decks",
+      description: "Pokemon recommended deck browsing (read-only)",
     },
     {
       name: "Cards",
@@ -969,9 +973,9 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/decks": {
+    "/decks/user": {
       post: {
-        tags: ["Decks"],
+        tags: ["User Decks"],
         summary: "Create new deck",
         security: [{ bearerAuth: [] }],
         requestBody: {
@@ -1034,7 +1038,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
       get: {
-        tags: ["Decks"],
+        tags: ["User Decks"],
         summary: "Get user's decks",
         security: [{ bearerAuth: [] }],
         responses: {
@@ -1058,9 +1062,9 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/decks/{deckId}": {
+    "/decks/user/{deckId}": {
       get: {
-        tags: ["Decks"],
+        tags: ["User Decks"],
         summary: "Get deck by ID",
         security: [{ bearerAuth: [] }],
         parameters: [
@@ -1092,7 +1096,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
       patch: {
-        tags: ["Decks"],
+        tags: ["User Decks"],
         summary: "Update deck",
         security: [{ bearerAuth: [] }],
         parameters: [
@@ -1147,7 +1151,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
       delete: {
-        tags: ["Decks"],
+        tags: ["User Decks"],
         summary: "Delete deck",
         security: [{ bearerAuth: [] }],
         parameters: [
@@ -1175,9 +1179,9 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/decks/{deckId}/cards": {
+    "/decks/user/{deckId}/cards": {
       post: {
-        tags: ["Decks"],
+        tags: ["User Decks"],
         summary: "Add card to deck",
         security: [{ bearerAuth: [] }],
         parameters: [
@@ -1232,9 +1236,9 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/decks/{deckId}/cards/{cardId}": {
+    "/decks/user/{deckId}/cards/{cardId}": {
       delete: {
-        tags: ["Decks"],
+        tags: ["User Decks"],
         summary: "Remove card from deck",
         security: [{ bearerAuth: [] }],
         parameters: [
@@ -1264,7 +1268,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
       patch: {
-        tags: ["Decks"],
+        tags: ["User Decks"],
         summary: "Update card quantity in deck",
         security: [{ bearerAuth: [] }],
         parameters: [
@@ -1312,9 +1316,9 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/decks/{deckId}/validate": {
+    "/decks/user/{deckId}/validate": {
       get: {
-        tags: ["Decks"],
+        tags: ["User Decks"],
         summary: "Validate deck format compliance",
         security: [{ bearerAuth: [] }],
         parameters: [
@@ -1346,9 +1350,9 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/decks/{deckId}/duplicate": {
+    "/decks/user/{deckId}/duplicate": {
       post: {
-        tags: ["Decks"],
+        tags: ["User Decks"],
         summary: "Duplicate deck",
         security: [{ bearerAuth: [] }],
         parameters: [
@@ -1391,6 +1395,354 @@ export const swaggerDoc: OpenAPIV3.Document = {
                     success: { type: "boolean" },
                     data: { $ref: "#/components/schemas/Deck" },
                   },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/decks/pokemon": {
+      get: {
+        tags: ["Pokemon Decks"],
+        summary: "Get all Pokemon recommended decks",
+        parameters: [
+          {
+            in: "query",
+            name: "page",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              default: 1,
+            },
+            description: "Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              maximum: 100,
+              default: 20,
+            },
+            description: "Number of decks per page",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Pokemon decks retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "array",
+                      items: { $ref: "#/components/schemas/PokemonDeck" },
+                    },
+                    pagination: {
+                      type: "object",
+                      properties: {
+                        page: { type: "integer" },
+                        limit: { type: "integer" },
+                        total: { type: "integer" },
+                        totalPages: { type: "integer" },
+                        hasNext: { type: "boolean" },
+                        hasPrev: { type: "boolean" },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/decks/pokemon/search": {
+      get: {
+        tags: ["Pokemon Decks"],
+        summary: "Search Pokemon decks",
+        parameters: [
+          {
+            in: "query",
+            name: "query",
+            required: true,
+            schema: {
+              type: "string",
+            },
+            description: "Search query",
+          },
+          {
+            in: "query",
+            name: "page",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              default: 1,
+            },
+            description: "Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              maximum: 100,
+              default: 20,
+            },
+            description: "Number of decks per page",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Search results retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "array",
+                      items: { $ref: "#/components/schemas/PokemonDeck" },
+                    },
+                    pagination: {
+                      type: "object",
+                      properties: {
+                        page: { type: "integer" },
+                        limit: { type: "integer" },
+                        total: { type: "integer" },
+                        totalPages: { type: "integer" },
+                        hasNext: { type: "boolean" },
+                        hasPrev: { type: "boolean" },
+                      },
+                    },
+                    query: { type: "string" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/decks/pokemon/types": {
+      get: {
+        tags: ["Pokemon Decks"],
+        summary: "Get Pokemon decks by types",
+        parameters: [
+          {
+            in: "query",
+            name: "types",
+            required: true,
+            schema: {
+              type: "array",
+              items: { type: "string" },
+            },
+            description: "Pokemon types to filter by",
+          },
+          {
+            in: "query",
+            name: "page",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              default: 1,
+            },
+            description: "Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              maximum: 100,
+              default: 20,
+            },
+            description: "Number of decks per page",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Decks filtered by types retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "array",
+                      items: { $ref: "#/components/schemas/PokemonDeck" },
+                    },
+                    pagination: {
+                      type: "object",
+                      properties: {
+                        page: { type: "integer" },
+                        limit: { type: "integer" },
+                        total: { type: "integer" },
+                        totalPages: { type: "integer" },
+                        hasNext: { type: "boolean" },
+                        hasPrev: { type: "boolean" },
+                      },
+                    },
+                    types: {
+                      type: "array",
+                      items: { type: "string" },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/decks/pokemon/id/{deckId}": {
+      get: {
+        tags: ["Pokemon Decks"],
+        summary: "Get Pokemon deck by ID",
+        parameters: [
+          {
+            in: "path",
+            name: "deckId",
+            required: true,
+            schema: {
+              type: "string",
+            },
+            description: "Pokemon deck ID",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Pokemon deck retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: { $ref: "#/components/schemas/PokemonDeck" },
+                  },
+                },
+              },
+            },
+          },
+          "404": {
+            description: "Pokemon deck not found",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/decks/pokemon/ext/{deckExtId}": {
+      get: {
+        tags: ["Pokemon Decks"],
+        summary: "Get Pokemon deck by external ID",
+        parameters: [
+          {
+            in: "path",
+            name: "deckExtId",
+            required: true,
+            schema: {
+              type: "string",
+            },
+            description: "Pokemon deck external ID",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Pokemon deck retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: { $ref: "#/components/schemas/PokemonDeck" },
+                  },
+                },
+              },
+            },
+          },
+          "404": {
+            description: "Pokemon deck not found",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/decks/pokemon/id/{deckId}/stats": {
+      get: {
+        tags: ["Pokemon Decks"],
+        summary: "Get Pokemon deck statistics",
+        parameters: [
+          {
+            in: "path",
+            name: "deckId",
+            required: true,
+            schema: {
+              type: "string",
+            },
+            description: "Pokemon deck ID",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Pokemon deck statistics retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "object",
+                      properties: {
+                        totalCards: { type: "integer" },
+                        uniqueCards: { type: "integer" },
+                        pokemonCount: { type: "integer" },
+                        trainerCount: { type: "integer" },
+                        energyCount: { type: "integer" },
+                        typeDistribution: {
+                          type: "object",
+                          additionalProperties: { type: "integer" },
+                        },
+                        rarityDistribution: {
+                          type: "object",
+                          additionalProperties: { type: "integer" },
+                        },
+                        averageCost: { type: "number" },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "404": {
+            description: "Pokemon deck not found",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
                 },
               },
             },
@@ -2296,6 +2648,206 @@ export const swaggerDoc: OpenAPIV3.Document = {
             type: "array",
             items: { type: "string" },
             description: "Deck tags",
+          },
+          createdAt: {
+            type: "string",
+            format: "date-time",
+          },
+          updatedAt: {
+            type: "string",
+            format: "date-time",
+          },
+        },
+      },
+      PokemonDeck: {
+        type: "object",
+        properties: {
+          _id: {
+            type: "string",
+            description: "Pokemon deck ID",
+          },
+          name: {
+            type: "string",
+            description: "Deck name",
+          },
+          description: {
+            type: "string",
+            description: "Deck description",
+          },
+          extId: {
+            type: "string",
+            description: "External deck ID",
+          },
+          types: {
+            type: "array",
+            items: { type: "string" },
+            description: "Pokemon types in deck",
+          },
+          legality: {
+            type: "object",
+            properties: {
+              standard: { type: "boolean" },
+              expanded: { type: "boolean" },
+              unlimited: { type: "boolean" },
+            },
+            description: "Format legality",
+          },
+          cards: {
+            type: "array",
+            items: {
+              type: "object",
+              properties: {
+                count: { type: "integer" },
+                cardDetails: {
+                  type: "object",
+                  properties: {
+                    id: { type: "string" },
+                    name: { type: "string" },
+                    supertype: { type: "string" },
+                    subtypes: {
+                      type: "array",
+                      items: { type: "string" },
+                    },
+                    hp: { type: "string" },
+                    types: {
+                      type: "array",
+                      items: { type: "string" },
+                    },
+                    attacks: {
+                      type: "array",
+                      items: {
+                        type: "object",
+                        properties: {
+                          name: { type: "string" },
+                          cost: {
+                            type: "array",
+                            items: { type: "string" },
+                          },
+                          convertedEnergyCost: { type: "integer" },
+                          damage: { type: "string" },
+                          text: { type: "string" },
+                        },
+                      },
+                    },
+                    weaknesses: {
+                      type: "array",
+                      items: {
+                        type: "object",
+                        properties: {
+                          type: { type: "string" },
+                          value: { type: "string" },
+                        },
+                      },
+                    },
+                    resistances: {
+                      type: "array",
+                      items: {
+                        type: "object",
+                        properties: {
+                          type: { type: "string" },
+                          value: { type: "string" },
+                        },
+                      },
+                    },
+                    retreatCost: {
+                      type: "array",
+                      items: { type: "string" },
+                    },
+                    convertedRetreatCost: { type: "integer" },
+                    set: {
+                      type: "object",
+                      properties: {
+                        id: { type: "string" },
+                        name: { type: "string" },
+                        series: { type: "string" },
+                        printedTotal: { type: "integer" },
+                        total: { type: "integer" },
+                        legalities: {
+                          type: "object",
+                          additionalProperties: { type: "string" },
+                        },
+                        releaseDate: { type: "string" },
+                        updatedAt: { type: "string" },
+                        images: {
+                          type: "object",
+                          properties: {
+                            symbol: { type: "string" },
+                            logo: { type: "string" },
+                          },
+                        },
+                      },
+                    },
+                    number: { type: "string" },
+                    artist: { type: "string" },
+                    rarity: { type: "string" },
+                    flavorText: { type: "string" },
+                    nationalPokedexNumbers: {
+                      type: "array",
+                      items: { type: "integer" },
+                    },
+                    legalities: {
+                      type: "object",
+                      additionalProperties: { type: "string" },
+                    },
+                    images: {
+                      type: "object",
+                      properties: {
+                        small: { type: "string" },
+                        large: { type: "string" },
+                      },
+                    },
+                    tcgplayer: {
+                      type: "object",
+                      properties: {
+                        url: { type: "string" },
+                        updatedAt: { type: "string" },
+                        prices: {
+                          type: "object",
+                          additionalProperties: {
+                            type: "object",
+                            properties: {
+                              low: { type: "number" },
+                              mid: { type: "number" },
+                              high: { type: "number" },
+                              market: { type: "number" },
+                              directLow: { type: "number" },
+                            },
+                          },
+                        },
+                      },
+                    },
+                    cardmarket: {
+                      type: "object",
+                      properties: {
+                        url: { type: "string" },
+                        updatedAt: { type: "string" },
+                        prices: {
+                          type: "object",
+                          properties: {
+                            averageSellPrice: { type: "number" },
+                            lowPrice: { type: "number" },
+                            trendPrice: { type: "number" },
+                            germanProLow: { type: "number" },
+                            suggestedPrice: { type: "number" },
+                            reverseHoloSell: { type: "number" },
+                            reverseHoloLow: { type: "number" },
+                            reverseHoloTrend: { type: "number" },
+                            lowPriceExPlus: { type: "number" },
+                            avg1: { type: "number" },
+                            avg7: { type: "number" },
+                            avg30: { type: "number" },
+                            reverseHoloAvg1: { type: "number" },
+                            reverseHoloAvg7: { type: "number" },
+                            reverseHoloAvg30: { type: "number" },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+            description: "Cards in deck with details",
           },
           createdAt: {
             type: "string",
