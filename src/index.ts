@@ -4,6 +4,7 @@ import { Hono } from "hono";
 import { connectDB } from "./database/db/db";
 import "./database/models/deck"; // Import Deck model
 import "./database/models/pokemon/pokemonCard"; // Import PokemonCard model
+import "./database/models/pokemon/pokemonDeck"; // Import PokemonDeck model
 import "./database/models/pokemon/pokemonSet"; // Import PokemonSet model
 import "./database/models/user"; // Import User model to ensure it's registered
 import "./database/models/userCard"; // Import UserCard model
@@ -11,7 +12,7 @@ import "./database/models/yugioh"; // Import YugiohCard and YugiohSet models
 import authRoutes from "./features/auth/auth.routes";
 import cardRoutes from "./features/cards/card.routes";
 import userCardRoutes from "./features/collections/userCard.routes";
-import deckRoutes from "./features/decks/deck.routes";
+import allDeckRoutes from "./features/decks";
 import setRoutes from "./features/sets/set.routes";
 import userRoutes from "./features/users/user.routes";
 import { initializeSuperuser } from "./scripts/initSuperuser";
@@ -57,7 +58,7 @@ app.route("/auth", authRoutes);
 app.route("/users", userRoutes);
 app.route("/user-cards", userCardRoutes);
 app.route("/collections", userCardRoutes); // Alias for collections
-app.route("/decks", deckRoutes);
+app.route("/decks", allDeckRoutes);
 app.route("/cards", cardRoutes);
 app.route("/sets", setRoutes);
 
