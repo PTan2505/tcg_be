@@ -4,6 +4,7 @@ import UserModel from "../database/models/user";
 export interface SuperuserConfig {
   email: string;
   password: string;
+  username: string;
   firstName: string;
   lastName: string;
   dateOfBirth: string;
@@ -12,6 +13,7 @@ export interface SuperuserConfig {
 export const defaultSuperuserConfig: SuperuserConfig = {
   email: process.env.SUPERUSER_EMAIL || 'admin@tcgbackend.local',
   password: process.env.SUPERUSER_PASSWORD || 'SuperAdmin123!',
+  username: process.env.SUPERUSER_USERNAME || 'superadmin',
   firstName: 'Super',
   lastName: 'Admin',
   dateOfBirth: '1990-01-01'
@@ -45,6 +47,7 @@ export async function initializeSuperuser(config: SuperuserConfig = defaultSuper
     const superuser = await UserModel.create({
       email: config.email,
       password: hashedPassword,
+      username: config.username,
       firstName: config.firstName,
       lastName: config.lastName,
       dateOfBirth: new Date(config.dateOfBirth),

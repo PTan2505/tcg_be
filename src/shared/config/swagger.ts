@@ -42,6 +42,26 @@ export const swaggerDoc: OpenAPIV3.Document = {
       name: "Sets",
       description: "Card set management and discovery",
     },
+    {
+      name: "Social Posts",
+      description: "Social media posting features",
+    },
+    {
+      name: "Comments",
+      description: "Post comments and replies",
+    },
+    {
+      name: "Reactions",
+      description: "Like and dislike reactions",
+    },
+    {
+      name: "Friendship",
+      description: "Friend management and relationships",
+    },
+    {
+      name: "Notifications",
+      description: "Real-time notifications",
+    },
   ],
   paths: {
     "/auth/register": {
@@ -56,6 +76,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
                 type: "object",
                 required: [
                   "email",
+                  "username",
                   "password",
                   "firstName",
                   "lastName",
@@ -67,6 +88,14 @@ export const swaggerDoc: OpenAPIV3.Document = {
                     format: "email",
                     description: "User email address",
                     example: "user@example.com",
+                  },
+                  username: {
+                    type: "string",
+                    minLength: 3,
+                    maxLength: 30,
+                    pattern: "^[a-zA-Z0-9_]+$",
+                    description: "Unique username (letters, numbers, underscores only)",
+                    example: "john_doe",
                   },
                   password: {
                     type: "string",
@@ -2415,6 +2444,1054 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
+    "/posts": {
+      post: {
+        tags: ["Social Posts"],
+        summary: "Create a text-only post",
+        description: "Create a post without images. For posts with images, use /posts/with-files endpoint.",
+        security: [{ bearerAuth: [] }],
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                required: ["content"],
+                properties: {
+                  content: {
+                    type: "string",
+                    maxLength: 2000,
+                    description: "Post content",
+                  },
+                  cardReferences: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      properties: {
+                        cardId: { type: "string" },
+                        cardType: { type: "string", enum: ["pokemon", "yugioh"] },
+                      },
+                    },
+                    description: "Referenced cards",
+                  },
+                  deckReferences: {
+                    type: "array",
+                    items: { type: "string" },
+                    description: "Referenced deck IDs",
+                  },
+                  privacy: {
+                    type: "string",
+                    enum: ["public", "friends", "private"],
+                    default: "public",
+                    description: "Post privacy setting",
+                  },
+                  tags: {
+                    type: "array",
+                    items: { type: "string" },
+                    description: "Tagged user IDs",
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "201": {
+            description: "Post created successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: { $ref: "#/components/schemas/Post" },
+                    message: { type: "string" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/posts/with-files": {
+      post: {
+        tags: ["Social Posts"],
+        summary: "Create a new post with file uploads",
+        description: "Create a post with actual image file uploads (multipart/form-data)",
+        security: [{ bearerAuth: [] }],
+        requestBody: {
+          required: true,
+          content: {
+            "multipart/form-data": {
+              schema: {
+                type: "object",
+                required: ["content"],
+                properties: {
+                  content: {
+                    type: "string",
+                    maxLength: 2000,
+                    description: "Post content",
+                  },
+                  images: {
+                    type: "array",
+                    items: {
+                      type: "string",
+                      format: "binary",
+                    },
+                    description: "Image files to upload (max 5MB each)",
+                  },
+                  privacy: {
+                    type: "string",
+                    enum: ["public", "friends", "private"],
+                    default: "public",
+                    description: "Post privacy setting",
+                  },
+                  cardReferences: {
+                    type: "string",
+                    description: "JSON string of card references array",
+                  },
+                  deckReferences: {
+                    type: "string",
+                    description: "JSON string of deck reference IDs array",
+                  },
+                  tags: {
+                    type: "string",
+                    description: "JSON string of tagged user IDs array",
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "201": {
+            description: "Post created successfully with uploaded images",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: { $ref: "#/components/schemas/Post" },
+                    message: { type: "string" },
+                  },
+                },
+              },
+            },
+          },
+          "400": {
+            description: "Invalid file type or size",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/ValidationError",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/posts/feed": {
+      get: {
+        tags: ["Social Posts"],
+        summary: "Get user's feed",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "query",
+            name: "page",
+            schema: { type: "integer", minimum: 1, default: 1 },
+            description: "Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: { type: "integer", minimum: 1, maximum: 50, default: 10 },
+            description: "Posts per page",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Feed retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "object",
+                      properties: {
+                        posts: {
+                          type: "array",
+                          items: { $ref: "#/components/schemas/Post" },
+                        },
+                        total: { type: "integer" },
+                        hasMore: { type: "boolean" },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/posts/upload-url": {
+      post: {
+        tags: ["Social Posts"],
+        summary: "Get S3 upload URL for images",
+        security: [{ bearerAuth: [] }],
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                required: ["fileName", "mimeType"],
+                properties: {
+                  fileName: { type: "string", description: "File name" },
+                  mimeType: {
+                    type: "string",
+                    pattern: "^image/(jpeg|jpg|png|gif|webp)$",
+                    description: "Image MIME type",
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "200": {
+            description: "Upload URL generated successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "object",
+                      properties: {
+                        uploadUrl: { type: "string", format: "uri" },
+                        fileUrl: { type: "string", format: "uri" },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/posts/taggable-users": {
+      get: {
+        tags: ["Social Posts"],
+        summary: "Get taggable users for @mentions",
+        description: "Get list of users that can be tagged based on context (friends, post owner, comment owner)",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            name: "type",
+            in: "query",
+            required: false,
+            description: "Context type for tagging rules",
+            schema: {
+              type: "string",
+              enum: ["post", "comment", "reply"],
+              default: "post"
+            }
+          },
+          {
+            name: "postId",
+            in: "query",
+            required: false,
+            description: "Post ID (required for reply context)",
+            schema: { type: "string" }
+          },
+          {
+            name: "parentCommentId",
+            in: "query",
+            required: false,
+            description: "Parent comment ID (required for reply context)",
+            schema: { type: "string" }
+          }
+        ],
+        responses: {
+          "200": {
+            description: "Taggable users retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "array",
+                      items: {
+                        type: "object",
+                        properties: {
+                          _id: { type: "string" },
+                          username: { type: "string" },
+                          firstName: { type: "string" },
+                          lastName: { type: "string" }
+                        }
+                      }
+                    },
+                    message: { type: "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/posts/{id}": {
+      get: {
+        tags: ["Social Posts"],
+        summary: "Get specific post",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "path",
+            name: "id",
+            required: true,
+            schema: { type: "string" },
+            description: "Post ID",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Post retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: { $ref: "#/components/schemas/Post" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      put: {
+        tags: ["Social Posts"],
+        summary: "Update post",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "path",
+            name: "id",
+            required: true,
+            schema: { type: "string" },
+            description: "Post ID",
+          },
+        ],
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                properties: {
+                  content: { type: "string", maxLength: 2000 },
+                  privacy: {
+                    type: "string",
+                    enum: ["public", "friends", "private"],
+                  },
+                  tags: {
+                    type: "array",
+                    items: { type: "string" },
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "200": {
+            description: "Post updated successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: { $ref: "#/components/schemas/Post" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      delete: {
+        tags: ["Social Posts"],
+        summary: "Delete post",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "path",
+            name: "id",
+            required: true,
+            schema: { type: "string" },
+            description: "Post ID",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Post deleted successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    message: { type: "string" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/posts/{id}/reactions": {
+      post: {
+        tags: ["Reactions"],
+        summary: "Toggle post reaction (like/dislike)",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "path",
+            name: "id",
+            required: true,
+            schema: { type: "string" },
+            description: "Post ID",
+          },
+        ],
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                required: ["type"],
+                properties: {
+                  type: {
+                    type: "string",
+                    enum: ["like", "dislike"],
+                    description: "Reaction type",
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "200": {
+            description: "Reaction toggled successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "object",
+                      properties: {
+                        action: {
+                          type: "string",
+                          enum: ["added", "removed", "changed"],
+                        },
+                        likesCount: { type: "integer" },
+                        dislikesCount: { type: "integer" },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/posts/{postId}/comments": {
+      post: {
+        tags: ["Comments"],
+        summary: "Create comment on post",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "path",
+            name: "postId",
+            required: true,
+            schema: { type: "string" },
+            description: "Post ID",
+          },
+        ],
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                required: ["content"],
+                properties: {
+                  content: {
+                    type: "string",
+                    maxLength: 500,
+                    description: "Comment content",
+                  },
+                  parentComment: {
+                    type: "string",
+                    description: "Parent comment ID for replies",
+                  },
+                  tags: {
+                    type: "array",
+                    items: { type: "string" },
+                    description: "Tagged user IDs",
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "201": {
+            description: "Comment created successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: { $ref: "#/components/schemas/Comment" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      get: {
+        tags: ["Comments"],
+        summary: "Get comments for post",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "path",
+            name: "postId",
+            required: true,
+            schema: { type: "string" },
+            description: "Post ID",
+          },
+          {
+            in: "query",
+            name: "page",
+            schema: { type: "integer", minimum: 1, default: 1 },
+            description: "Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: { type: "integer", minimum: 1, maximum: 50, default: 20 },
+            description: "Comments per page",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Comments retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "object",
+                      properties: {
+                        comments: {
+                          type: "array",
+                          items: { $ref: "#/components/schemas/Comment" },
+                        },
+                        total: { type: "integer" },
+                        hasMore: { type: "boolean" },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/users/friends": {
+      get: {
+        tags: ["Friendship"],
+        summary: "Get friends list",
+        security: [{ bearerAuth: [] }],
+        responses: {
+          "200": {
+            description: "Friends list retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "array",
+                      items: { $ref: "#/components/schemas/Friend" },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/users/friends/request": {
+      post: {
+        tags: ["Friendship"],
+        summary: "Send friend request",
+        security: [{ bearerAuth: [] }],
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                required: ["userId"],
+                properties: {
+                  userId: {
+                    type: "string",
+                    description: "User ID to send friend request to",
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "201": {
+            description: "Friend request sent successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: { $ref: "#/components/schemas/Friendship" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/users/friends/{id}/respond": {
+      put: {
+        tags: ["Friendship"],
+        summary: "Respond to friend request",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            name: "id",
+            in: "path",
+            required: true,
+            description: "Friend request ID",
+            schema: { type: "string" },
+          },
+        ],
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                required: ["action"],
+                properties: {
+                  action: {
+                    type: "string",
+                    enum: ["accept", "decline"],
+                    description: "Response to the friend request",
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "200": {
+            description: "Friend request response processed successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    message: { type: "string" },
+                    data: { $ref: "#/components/schemas/Friendship" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/users/friends/{id}": {
+      delete: {
+        tags: ["Friendship"],
+        summary: "Unfriend a user",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            name: "id",
+            in: "path",
+            required: true,
+            description: "Friend ID to unfriend",
+            schema: { type: "string" },
+          },
+        ],
+        responses: {
+          "200": {
+            description: "User unfriended successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    message: { type: "string" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/users/friends/block": {
+      post: {
+        tags: ["Friendship"],
+        summary: "Block a user",
+        security: [{ bearerAuth: [] }],
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                required: ["userId"],
+                properties: {
+                  userId: {
+                    type: "string",
+                    description: "ID of the user to block",
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "200": {
+            description: "User blocked successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    message: { type: "string" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/users/friends/block/{id}": {
+      delete: {
+        tags: ["Friendship"],
+        summary: "Unblock a user",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            name: "id",
+            in: "path",
+            required: true,
+            description: "User ID to unblock",
+            schema: { type: "string" },
+          },
+        ],
+        responses: {
+          "200": {
+            description: "User unblocked successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    message: { type: "string" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/users/friends/pending": {
+      get: {
+        tags: ["Friendship"],
+        summary: "Get pending friend requests",
+        security: [{ bearerAuth: [] }],
+        responses: {
+          "200": {
+            description: "Pending friend requests retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "array",
+                      items: { $ref: "#/components/schemas/Friendship" },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/users/friends/status/{userId}": {
+      get: {
+        tags: ["Friendship"],
+        summary: "Get friendship status with a specific user",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            name: "userId",
+            in: "path",
+            required: true,
+            description: "User ID to check friendship status with",
+            schema: { type: "string" },
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Friendship status retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "object",
+                      properties: {
+                        status: {
+                          type: "string",
+                          enum: ["none", "pending", "accepted", "blocked"],
+                          description: "Current friendship status",
+                        },
+                        friendship: { $ref: "#/components/schemas/Friendship" },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/posts/notifications": {
+      get: {
+        tags: ["Notifications"],
+        summary: "Get user notifications",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "query",
+            name: "page",
+            schema: { type: "integer", minimum: 1, default: 1 },
+            description: "Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: { type: "integer", minimum: 1, maximum: 50, default: 20 },
+            description: "Notifications per page",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Notifications retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "object",
+                      properties: {
+                        notifications: {
+                          type: "array",
+                          items: { $ref: "#/components/schemas/Notification" },
+                        },
+                        total: { type: "integer" },
+                        hasMore: { type: "boolean" },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/posts/notifications/unread-count": {
+      get: {
+        tags: ["Notifications"],
+        summary: "Get unread notifications count",
+        security: [{ bearerAuth: [] }],
+        responses: {
+          "200": {
+            description: "Unread count retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "object",
+                      properties: {
+                        unreadCount: { type: "integer" },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/posts/notifications/{id}/read": {
+      put: {
+        tags: ["Notifications"],
+        summary: "Mark notification as read",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            name: "id",
+            in: "path",
+            required: true,
+            description: "Notification ID",
+            schema: { type: "string" },
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Notification marked as read successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    message: { type: "string" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/posts/notifications/read-all": {
+      put: {
+        tags: ["Notifications"],
+        summary: "Mark all notifications as read",
+        security: [{ bearerAuth: [] }],
+        responses: {
+          "200": {
+            description: "All notifications marked as read successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    message: { type: "string" },
+                    data: {
+                      type: "object",
+                      properties: {
+                        modifiedCount: { type: "integer" },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/posts/notifications/{id}": {
+      delete: {
+        tags: ["Notifications"],
+        summary: "Delete a notification",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            name: "id",
+            in: "path",
+            required: true,
+            description: "Notification ID",
+            schema: { type: "string" },
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Notification deleted successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    message: { type: "string" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
   },
   components: {
     securitySchemes: {
@@ -2432,11 +3509,14 @@ export const swaggerDoc: OpenAPIV3.Document = {
             type: "string",
             description: "User ID",
           },
-
           email: {
             type: "string",
             format: "email",
             description: "Email address",
+          },
+          username: {
+            type: "string",
+            description: "Unique username",
           },
           firstName: {
             type: "string",
@@ -2931,6 +4011,125 @@ export const swaggerDoc: OpenAPIV3.Document = {
             format: "date-time",
             description: "Last update timestamp",
           },
+        },
+      },
+      Post: {
+        type: "object",
+        properties: {
+          _id: { type: "string", description: "Post ID" },
+          author: { $ref: "#/components/schemas/User" },
+          content: { type: "string", description: "Post content" },
+          images: {
+            type: "array",
+            items: { type: "string", format: "uri" },
+            description: "Image URLs",
+          },
+          cardReferences: {
+            type: "array",
+            items: {
+              type: "object",
+              properties: {
+                cardId: { type: "string" },
+                cardType: { type: "string", enum: ["pokemon", "yugioh"] },
+              },
+            },
+            description: "Referenced cards",
+          },
+          deckReferences: {
+            type: "array",
+            items: { type: "string" },
+            description: "Referenced deck IDs",
+          },
+          privacy: {
+            type: "string",
+            enum: ["public", "friends", "private"],
+            description: "Post privacy setting",
+          },
+          tags: {
+            type: "array",
+            items: { $ref: "#/components/schemas/User" },
+            description: "Tagged users",
+          },
+          likesCount: { type: "integer", description: "Number of likes" },
+          dislikesCount: { type: "integer", description: "Number of dislikes" },
+          commentsCount: { type: "integer", description: "Number of comments" },
+          createdAt: { type: "string", format: "date-time" },
+          updatedAt: { type: "string", format: "date-time" },
+        },
+      },
+      Comment: {
+        type: "object",
+        properties: {
+          _id: { type: "string", description: "Comment ID" },
+          author: { $ref: "#/components/schemas/User" },
+          post: { type: "string", description: "Post ID" },
+          parentComment: { type: "string", description: "Parent comment ID" },
+          content: { type: "string", description: "Comment content" },
+          tags: {
+            type: "array",
+            items: { $ref: "#/components/schemas/User" },
+            description: "Tagged users",
+          },
+          likesCount: { type: "integer", description: "Number of likes" },
+          dislikesCount: { type: "integer", description: "Number of dislikes" },
+          repliesCount: { type: "integer", description: "Number of replies" },
+          createdAt: { type: "string", format: "date-time" },
+          updatedAt: { type: "string", format: "date-time" },
+        },
+      },
+      Notification: {
+        type: "object",
+        properties: {
+          _id: { type: "string", description: "Notification ID" },
+          recipient: { type: "string", description: "Recipient user ID" },
+          sender: { $ref: "#/components/schemas/User" },
+          type: {
+            type: "string",
+            enum: [
+              "post_like",
+              "post_dislike",
+              "post_comment",
+              "comment_like",
+              "comment_dislike",
+              "comment_reply",
+              "post_tag",
+              "comment_tag",
+              "friend_request",
+              "friend_accept",
+            ],
+            description: "Notification type",
+          },
+          post: { type: "string", description: "Related post ID" },
+          comment: { type: "string", description: "Related comment ID" },
+          isRead: { type: "boolean", description: "Read status" },
+          createdAt: { type: "string", format: "date-time" },
+          updatedAt: { type: "string", format: "date-time" },
+        },
+      },
+      Friendship: {
+        type: "object",
+        properties: {
+          _id: { type: "string", description: "Friendship ID" },
+          requester: { $ref: "#/components/schemas/User" },
+          recipient: { $ref: "#/components/schemas/User" },
+          status: {
+            type: "string",
+            enum: ["pending", "accepted", "declined", "blocked"],
+            description: "Friendship status",
+          },
+          createdAt: { type: "string", format: "date-time" },
+          updatedAt: { type: "string", format: "date-time" },
+        },
+      },
+      Friend: {
+        type: "object",
+        properties: {
+          _id: { type: "string", description: "User ID" },
+          firstName: { type: "string", description: "First name" },
+          lastName: { type: "string", description: "Last name" },
+          avatarUrl: { type: "string", format: "uri", description: "Avatar URL" },
+          friendshipId: { type: "string", description: "Friendship ID" },
+          friendsSince: { type: "string", format: "date-time" },
         },
       },
     },

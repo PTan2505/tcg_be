@@ -13,6 +13,10 @@
 // • Collection Management (/collections/*, /user-cards/*)
 // • User Deck Management (/decks/user/*) - Full CRUD operations
 // • Pokemon Recommended Decks (/decks/pokemon/*) - Read-only browsing
+// • Social Media Posts (/posts/*) - Create, read, update, delete posts
+// • Post Reactions & Comments (/posts/*) - Like/dislike and commenting system
+// • Friend Management (/posts/friends/*) - Friend requests and management
+// • Notifications (/posts/notifications/*) - Real-time notifications
 // • Error Handling & Security
 // • Rate Limiting & Edge Cases
 
@@ -99,6 +103,7 @@ const testUsers = {
   superuser: {
     email: 'phuctann2505@gmail.com', // Actual superuser email from database
     password: 'Admin123', // Actual superuser password from .env
+    username: 'superadmin',
     firstName: 'Super',
     lastName: 'Admin',
     dateOfBirth: '1990-01-01'
@@ -106,6 +111,7 @@ const testUsers = {
   valid: {
     email: 'testuser@example.com',
     password: 'TestPassword123!',
+    username: 'testuser123',
     firstName: 'Test',
     lastName: 'User',
     dateOfBirth: '1990-01-15'
@@ -113,6 +119,7 @@ const testUsers = {
   admin: {
     email: 'admin@example.com',
     password: 'AdminPassword123!',
+    username: 'adminuser',
     firstName: 'Admin',
     lastName: 'User',
     dateOfBirth: '1985-05-20'
@@ -120,6 +127,7 @@ const testUsers = {
   invalid: {
     email: 'invalid-email',
     password: '123',
+    username: '',
     firstName: '',
     lastName: '',
     dateOfBirth: 'invalid-date'
@@ -138,11 +146,11 @@ async function getSuperuserAuthToken() {
     })
   });
   
-  if (loginData && loginData.accessToken) {
+  if (loginData && loginData.success && loginData.data && loginData.data.accessToken) {
     console.log('✅ Superuser authentication successful!');
     return {
-      accessToken: loginData.accessToken,
-      refreshToken: loginData.refreshToken,
+      accessToken: loginData.data.accessToken,
+      refreshToken: loginData.data.refreshToken,
       userId: null // No user ID returned in token response
     };
   } else {
@@ -159,6 +167,9 @@ let userId = null;
 let cardId = null;
 let collectionItemId = null;
 let deckId = null;
+let postId = null;
+let commentId = null;
+let friendshipId = null;
 
 // Statistics tracking
 const stats = {
@@ -179,6 +190,10 @@ console.log('   • Set management & filtering');
 console.log('   • Collection management (basic & advanced)');
 console.log('   • User deck building & management (full CRUD)');
 console.log('   • Pokemon recommended deck browsing (read-only)');
+console.log('   • Social media posts (create, read, update, delete)');
+console.log('   • Post reactions & comments (like/dislike system)');
+console.log('   • Friend management (requests, accept, decline)');
+console.log('   • Notifications (real-time social interactions)');
 console.log('   • Positive test cases');
 console.log('   • Negative test cases'); 
 console.log('   • Edge cases & validation');
@@ -2168,6 +2183,457 @@ async function testErrorHandling() {
 }
 
 // =============================================================================
+// 📱 SOCIAL MEDIA POSTS TESTS
+// =============================================================================
+
+async function testSocialMediaPosts() {
+  console.log('\n📱 === SOCIAL MEDIA POSTS TESTS ===\n');
+
+  if (!authToken) {
+    skip('Social media posts tests', 'No authentication token available');
+    return;
+  }
+
+  // Test 7.1: Get Upload URL for Images
+  console.log('📋 Test 7.1: Get Upload URL for Images');
+  const { data: uploadUrlData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/upload-url`, {
+    method: 'POST',
+    body: JSON.stringify({
+      fileName: 'test-image.jpg',
+      mimeType: 'image/jpeg'
+    })
+  });
+  
+  assert(
+    uploadUrlData.success && uploadUrlData.data.uploadUrl && uploadUrlData.data.fileUrl,
+    'Upload URL generation should succeed',
+    'upload URL and file URL',
+    uploadUrlData.success ? 'success' : 'failure'
+  );
+
+  // Test 7.2: Create Post - Valid Data
+  console.log('📋 Test 7.2: Create Post (Valid Data)');
+  const { data: createPostData } = await makeAuthenticatedRequest(`${BASE_URL}/posts`, {
+    method: 'POST',
+    body: JSON.stringify({
+      content: 'This is my first test post! 🎮',
+      privacy: 'public',
+      images: uploadUrlData.success ? [uploadUrlData.data.fileUrl] : [],
+    })
+  });
+  
+  assert(
+    createPostData.success && createPostData.data,
+    'Valid post creation should succeed',
+    'success',
+    createPostData.success ? 'success' : 'failure'
+  );
+
+  if (createPostData.success && createPostData.data) {
+    postId = createPostData.data._id;
+  }
+
+  // Test 7.2b: Get Taggable Users
+  console.log('📋 Test 7.2b: Get Taggable Users for Posts');
+  const { data: taggableUsersData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/taggable-users?type=post`);
+  
+  assert(
+    taggableUsersData.success && Array.isArray(taggableUsersData.data),
+    'Taggable users should return array',
+    'users array',
+    taggableUsersData.success ? `${taggableUsersData.data?.length || 0} taggable users` : 'failure'
+  );
+
+  // Test 7.2c: Create Post with @mentions
+  console.log('📋 Test 7.2c: Create Post with @mentions');
+  const { data: mentionPostData } = await makeAuthenticatedRequest(`${BASE_URL}/posts`, {
+    method: 'POST',
+    body: JSON.stringify({
+      content: 'Testing @mentions in posts! Hey @testuser and @admin check this out!',
+      privacy: 'public',
+    })
+  });
+  
+  assert(
+    mentionPostData.success && mentionPostData.data,
+    'Post with @mentions should be created',
+    'success',
+    mentionPostData.success ? 'success' : 'failure'
+  );
+
+  // Test 7.3: Create Post - Invalid Data
+  console.log('📋 Test 7.3: Create Post (Invalid Data)');
+  const { data: invalidPostData } = await makeAuthenticatedRequest(`${BASE_URL}/posts`, {
+    method: 'POST',
+    body: JSON.stringify({
+      // Missing required content field
+      privacy: 'public'
+    })
+  });
+  
+  assert(
+    !invalidPostData.success && invalidPostData.error,
+    'Invalid post creation should be rejected',
+    'validation error',
+    invalidPostData.success ? 'success' : 'validation error'
+  );
+
+  // Test 7.4: Get Feed
+  console.log('📋 Test 7.4: Get Feed');
+  const { data: feedData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/feed?page=1&limit=10`);
+  
+  assert(
+    feedData.success && feedData.data && Array.isArray(feedData.data.posts),
+    'Feed should return posts array',
+    'posts array',
+    feedData.success ? `${feedData.data.posts?.length || 0} posts` : 'failure'
+  );
+
+  // Test 7.5: Get Specific Post
+  if (postId) {
+    console.log('📋 Test 7.5: Get Specific Post');
+    const { data: postData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/${postId}`);
+    
+    assert(
+      postData.success && postData.data,
+      'Getting specific post should succeed',
+      'success',
+      postData.success ? 'success' : 'failure'
+    );
+  } else {
+    skip('Test 7.5: Get Specific Post', 'No post ID available');
+  }
+
+  // Test 7.6: Update Post
+  if (postId) {
+    console.log('📋 Test 7.6: Update Post');
+    const { data: updatePostData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/${postId}`, {
+      method: 'PUT',
+      body: JSON.stringify({
+        content: 'This is my updated test post! 🎮✨',
+        privacy: 'friends'
+      })
+    });
+    
+    assert(
+      updatePostData.success && updatePostData.data,
+      'Post update should succeed',
+      'success',
+      updatePostData.success ? 'success' : 'failure'
+    );
+  } else {
+    skip('Test 7.6: Update Post', 'No post ID available');
+  }
+
+  // Test 7.7: React to Post (Like)
+  if (postId) {
+    console.log('📋 Test 7.7: React to Post (Like)');
+    const { data: likeData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/${postId}/reactions`, {
+      method: 'POST',
+      body: JSON.stringify({
+        type: 'like'
+      })
+    });
+    
+    assert(
+      likeData.success && likeData.data,
+      'Post like should succeed',
+      'success',
+      likeData.success ? 'success' : 'failure'
+    );
+  } else {
+    skip('Test 7.7: React to Post (Like)', 'No post ID available');
+  }
+
+  // Test 7.8: React to Post (Toggle to Dislike)
+  if (postId) {
+    console.log('📋 Test 7.8: React to Post (Toggle to Dislike)');
+    const { data: dislikeData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/${postId}/reactions`, {
+      method: 'POST',
+      body: JSON.stringify({
+        type: 'dislike'
+      })
+    });
+    
+    assert(
+      dislikeData.success && dislikeData.data,
+      'Post dislike should succeed',
+      'success',
+      dislikeData.success ? 'success' : 'failure'
+    );
+  } else {
+    skip('Test 7.8: React to Post (Toggle to Dislike)', 'No post ID available');
+  }
+}
+
+// =============================================================================
+// 💬 COMMENTS TESTS
+// =============================================================================
+
+async function testComments() {
+  console.log('\n💬 === COMMENTS TESTS ===\n');
+
+  if (!authToken || !postId) {
+    skip('Comments tests', 'No authentication token or post ID available');
+    return;
+  }
+
+  // Test 8.1: Create Comment
+  console.log('📋 Test 8.1: Create Comment');
+  const { data: createCommentData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/${postId}/comments`, {
+    method: 'POST',
+    body: JSON.stringify({
+      content: 'This is a test comment! 💬'
+    })
+  });
+  
+  assert(
+    createCommentData.success && createCommentData.data,
+    'Comment creation should succeed',
+    'success',
+    createCommentData.success ? 'success' : 'failure'
+  );
+
+  if (createCommentData.success && createCommentData.data) {
+    commentId = createCommentData.data._id;
+  }
+
+  // Test 8.1b: Create Comment with @mentions
+  console.log('📋 Test 8.1b: Create Comment with @mentions');
+  const { data: mentionCommentData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/${postId}/comments`, {
+    method: 'POST',
+    body: JSON.stringify({
+      content: 'Great post! @admin @testuser what do you think? 💬'
+    })
+  });
+  
+  assert(
+    mentionCommentData.success && mentionCommentData.data,
+    'Comment with @mentions should be created',
+    'success',
+    mentionCommentData.success ? 'success' : 'failure'
+  );
+
+  // Test 8.2: Get Comments for Post
+  console.log('📋 Test 8.2: Get Comments for Post');
+  const { data: commentsData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/${postId}/comments?page=1&limit=10`);
+  
+  assert(
+    commentsData.success && commentsData.data && Array.isArray(commentsData.data.comments),
+    'Getting comments should succeed',
+    'comments array',
+    commentsData.success ? `${commentsData.data.comments?.length || 0} comments` : 'failure'
+  );
+
+  // Test 8.3: Create Reply to Comment
+  if (commentId) {
+    console.log('📋 Test 8.3: Create Reply to Comment');
+    const { data: replyData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/${postId}/comments`, {
+      method: 'POST',
+      body: JSON.stringify({
+        content: 'This is a reply to the comment! 💭',
+        parentComment: commentId
+      })
+    });
+    
+    assert(
+      replyData.success && replyData.data,
+      'Reply creation should succeed',
+      'success',
+      replyData.success ? 'success' : 'failure'
+    );
+  } else {
+    skip('Test 8.3: Create Reply to Comment', 'No comment ID available');
+  }
+
+  // Test 8.4: React to Comment (Like)
+  if (commentId) {
+    console.log('📋 Test 8.4: React to Comment (Like)');
+    const { data: commentLikeData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/comments/${commentId}/reactions`, {
+      method: 'POST',
+      body: JSON.stringify({
+        type: 'like'
+      })
+    });
+    
+    assert(
+      commentLikeData.success && commentLikeData.data,
+      'Comment like should succeed',
+      'success',
+      commentLikeData.success ? 'success' : 'failure'
+    );
+  } else {
+    skip('Test 8.4: React to Comment (Like)', 'No comment ID available');
+  }
+
+  // Test 8.5: Update Comment
+  if (commentId) {
+    console.log('📋 Test 8.5: Update Comment');
+    const { data: updateCommentData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/comments/${commentId}`, {
+      method: 'PUT',
+      body: JSON.stringify({
+        content: 'This is an updated test comment! 💬✨'
+      })
+    });
+    
+    assert(
+      updateCommentData.success && updateCommentData.data,
+      'Comment update should succeed',
+      'success',
+      updateCommentData.success ? 'success' : 'failure'
+    );
+  } else {
+    skip('Test 8.5: Update Comment', 'No comment ID available');
+  }
+
+  // Test 8.6: Get Replies for Comment
+  if (commentId) {
+    console.log('📋 Test 8.6: Get Replies for Comment');
+    const { data: repliesData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/comments/${commentId}/replies?page=1&limit=10`);
+    
+    assert(
+      repliesData.success && repliesData.data && Array.isArray(repliesData.data.replies),
+      'Getting replies should succeed',
+      'replies array',
+      repliesData.success ? `${repliesData.data.replies?.length || 0} replies` : 'failure'
+    );
+  } else {
+    skip('Test 8.6: Get Replies for Comment', 'No comment ID available');
+  }
+}
+
+// =============================================================================
+// 👥 FRIENDSHIP MANAGEMENT TESTS
+// =============================================================================
+
+async function testFriendshipManagement() {
+  console.log('\n👥 === FRIENDSHIP MANAGEMENT TESTS ===\n');
+
+  if (!authToken) {
+    skip('Friendship management tests', 'No authentication token available');
+    return;
+  }
+
+  // Test 9.1: Get Friends List (Empty)
+  console.log('📋 Test 9.1: Get Friends List (Empty)');
+  const { data: friendsData } = await makeAuthenticatedRequest(`${BASE_URL}/users/friends`);
+  
+  assert(
+    friendsData.success && Array.isArray(friendsData.data),
+    'Friends list should return array',
+    'friends array',
+    friendsData.success ? `${friendsData.data?.length || 0} friends` : 'failure'
+  );
+
+  // Test 9.2: Get Pending Friend Requests
+  console.log('📋 Test 9.2: Get Pending Friend Requests');
+  const { data: pendingData } = await makeAuthenticatedRequest(`${BASE_URL}/users/friends/pending`);
+  
+  assert(
+    pendingData.success && pendingData.data && 
+    Array.isArray(pendingData.data.sent) && Array.isArray(pendingData.data.received),
+    'Pending requests should return array structure',
+    'pending requests arrays',
+    pendingData.success ? `${pendingData.data?.sent?.length || 0} sent, ${pendingData.data?.received?.length || 0} received` : 'failure'
+  );
+
+  // Test 9.3: Send Friend Request (Invalid User)
+  console.log('📋 Test 9.3: Send Friend Request (Invalid User)');
+  const { data: invalidRequestData } = await makeAuthenticatedRequest(`${BASE_URL}/users/friends/request`, {
+    method: 'POST',
+    body: JSON.stringify({
+      userId: 'invalid-user-id'
+    })
+  });
+  
+  assert(
+    !invalidRequestData.success && invalidRequestData.error,
+    'Invalid friend request should be rejected',
+    'validation error',
+    invalidRequestData.success ? 'success' : 'validation error'
+  );
+
+  // Test 9.4: Send Friend Request to Self
+  console.log('📋 Test 9.4: Send Friend Request to Self');
+  const { data: selfRequestData } = await makeAuthenticatedRequest(`${BASE_URL}/users/friends/request`, {
+    method: 'POST',
+    body: JSON.stringify({
+      userId: userId
+    })
+  });
+  
+  assert(
+    !selfRequestData.success && selfRequestData.error,
+    'Friend request to self should be rejected',
+    'validation error',
+    selfRequestData.success ? 'success' : 'validation error'
+  );
+
+  // Test 9.5: Get Friendship Status (Self)
+  if (userId) {
+    console.log('📋 Test 9.5: Get Friendship Status (Self)');
+    const { data: statusData } = await makeAuthenticatedRequest(`${BASE_URL}/users/friends/status/${userId}`);
+    
+    assert(
+      statusData.success && statusData.data,
+      'Friendship status should return data',
+      'status data',
+      statusData.success ? 'success' : 'failure'
+    );
+  } else {
+    skip('Test 9.5: Get Friendship Status (Self)', 'No user ID available');
+  }
+}
+
+// =============================================================================
+// 🔔 NOTIFICATIONS TESTS
+// =============================================================================
+
+async function testNotifications() {
+  console.log('\n🔔 === NOTIFICATIONS TESTS ===\n');
+
+  if (!authToken) {
+    skip('Notifications tests', 'No authentication token available');
+    return;
+  }
+
+  // Test 10.1: Get Notifications
+  console.log('📋 Test 10.1: Get Notifications');
+  const { data: notificationsData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/notifications?page=1&limit=10`);
+  
+  assert(
+    notificationsData.success && notificationsData.data && Array.isArray(notificationsData.data.notifications),
+    'Notifications should return array',
+    'notifications array',
+    notificationsData.success ? `${notificationsData.data.notifications?.length || 0} notifications` : 'failure'
+  );
+
+  // Test 10.2: Get Unread Count
+  console.log('📋 Test 10.2: Get Unread Count');
+  const { data: unreadData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/notifications/unread-count`);
+  
+  assert(
+    unreadData.success && typeof unreadData.data.unreadCount === 'number',
+    'Unread count should return number',
+    'unread count',
+    unreadData.success ? `${unreadData.data.unreadCount} unread` : 'failure'
+  );
+
+  // Test 10.3: Mark All as Read
+  console.log('📋 Test 10.3: Mark All as Read');
+  const { data: markAllData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/notifications/read-all`, {
+    method: 'PUT'
+  });
+  
+  assert(
+    markAllData.success && markAllData.data,
+    'Mark all as read should succeed',
+    'success',
+    markAllData.success ? 'success' : 'failure'
+  );
+}
+
+// =============================================================================
 // 🎯 MAIN TEST EXECUTION
 // =============================================================================
 
@@ -2190,6 +2656,13 @@ async function runAllTests() {
     await testAdvancedUserDeckManagement();
     await testUserManagement();
     await testAdvancedUserManagement();
+    
+    // Social Media Features
+    await testSocialMediaPosts();
+    await testComments();
+    await testFriendshipManagement();
+    await testNotifications();
+    
     await testErrorHandling();
     
     // Print final statistics

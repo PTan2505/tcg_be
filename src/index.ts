@@ -2,10 +2,16 @@ import { swaggerUI } from "@hono/swagger-ui";
 import "dotenv/config";
 import { Hono } from "hono";
 import { connectDB } from "./database/db/db";
+import "./database/models/comment"; // Import Comment model
+import "./database/models/commentReaction"; // Import CommentReaction model
 import "./database/models/deck"; // Import Deck model
+import "./database/models/friendship"; // Import Friendship model
+import "./database/models/notification"; // Import Notification model
 import "./database/models/pokemon/pokemonCard"; // Import PokemonCard model
 import "./database/models/pokemon/pokemonDeck"; // Import PokemonDeck model
 import "./database/models/pokemon/pokemonSet"; // Import PokemonSet model
+import "./database/models/post"; // Import Post model
+import "./database/models/postReaction"; // Import PostReaction model
 import "./database/models/user"; // Import User model to ensure it's registered
 import "./database/models/userCard"; // Import UserCard model
 import "./database/models/yugioh"; // Import YugiohCard and YugiohSet models
@@ -13,6 +19,7 @@ import authRoutes from "./features/auth/auth.routes";
 import cardRoutes from "./features/cards/card.routes";
 import userCardRoutes from "./features/collections/userCard.routes";
 import allDeckRoutes from "./features/decks";
+import postRoutes from "./features/posts/post.routes";
 import setRoutes from "./features/sets/set.routes";
 import userRoutes from "./features/users/user.routes";
 import { initializeSuperuser } from "./scripts/initSuperuser";
@@ -61,6 +68,7 @@ app.route("/collections", userCardRoutes); // Alias for collections
 app.route("/decks", allDeckRoutes);
 app.route("/cards", cardRoutes);
 app.route("/sets", setRoutes);
+app.route("/posts", postRoutes);
 
 // Start the server if not in production
 if (process.env.NODE_ENV !== "production") {

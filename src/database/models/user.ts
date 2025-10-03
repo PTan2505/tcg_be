@@ -3,6 +3,7 @@ import { Schema, model } from "mongoose";
 export interface User {
   email: string;
   password: string;
+  username: string;
   firstName: string;
   lastName: string;
   avatarUrl?: string;
@@ -24,6 +25,15 @@ const userSchema = new Schema<User>(
     password: {
       type: String,
       required: true,
+    },
+    username: {
+      type: String,
+      required: true,
+      unique: true,
+      trim: true,
+      minlength: 3,
+      maxlength: 30,
+      match: /^[a-zA-Z0-9_]+$/,
     },
     firstName: {
       type: String,

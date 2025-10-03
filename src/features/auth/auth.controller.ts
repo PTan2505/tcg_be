@@ -12,6 +12,7 @@ export class AuthController {
 
       return c.json(
         {
+          success: true,
           message:
             "Registration successful. Please check your email to verify your account.",
           user: user.toJSON(),
@@ -19,7 +20,10 @@ export class AuthController {
         201
       );
     } catch (error: any) {
-      return c.json({ error: error?.message || "Registration failed" }, 400);
+      return c.json({ 
+        success: false, 
+        error: error?.message || "Registration failed" 
+      }, 400);
     }
   };
 
@@ -27,9 +31,15 @@ export class AuthController {
     try {
       const data = c.get("validatedData");
       const tokens = await this.authService.login(data);
-      return c.json(tokens);
+      return c.json({
+        success: true,
+        data: tokens
+      });
     } catch (error: any) {
-      return c.json({ error: error?.message || "Login failed" }, 400);
+      return c.json({ 
+        success: false, 
+        error: error?.message || "Login failed" 
+      }, 400);
     }
   };
 
