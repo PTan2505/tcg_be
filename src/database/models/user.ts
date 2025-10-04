@@ -9,6 +9,10 @@ export interface User {
   avatarUrl?: string;
   dateOfBirth: Date;
   isEmailVerified: boolean;
+  emailVerificationSecret?: string;
+  emailVerificationOTPExpires?: Date;
+  passwordResetSecret?: string;
+  passwordResetOTPExpires?: Date;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -55,6 +59,18 @@ const userSchema = new Schema<User>(
     isEmailVerified: {
       type: Boolean,
       default: false,
+    },
+    emailVerificationSecret: {
+      type: String,
+    },
+    emailVerificationOTPExpires: {
+      type: Date,
+    },
+    passwordResetSecret: {
+      type: String,
+    },
+    passwordResetOTPExpires: {
+      type: Date,
     },
   },
   {

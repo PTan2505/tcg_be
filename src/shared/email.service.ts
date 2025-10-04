@@ -1,11 +1,17 @@
+import crypto from "crypto";
 import fs from "fs";
 import nodemailer from "nodemailer";
+import { hotp } from "otplib";
 import path from "path";
+import * as base32 from "thirty-two";
 import { fileURLToPath } from "url";
 
 export interface IEmailService {
-  sendVerificationEmail(to: string, token: string): Promise<void>;
-  sendPasswordResetEmail(to: string, token: string): Promise<void>;
+  sendVerificationOTP(to: string, otpCode: string): Promise<void>;
+  sendPasswordResetOTP(to: string, otpCode: string): Promise<void>;
+  generateHOTPSecret(): string;
+  generateHOTPWithTimestamp(secret: string, timestamp: number): string;
+  verifyHOTPWithTimestamp(token: string, secret: string, timestamp: number, windowMinutes?: number): boolean;
 }
 
 export class EmailService implements IEmailService {
@@ -23,49 +29,94 @@ export class EmailService implements IEmailService {
     });
   }
 
-  async sendVerificationEmail(to: string, token: string): Promise<void> {
-    const verificationLink = `${process.env.APP_URL}/auth/verify-email?token=${token}`;
-
+  async sendVerificationOTP(to: string, otpCode: string): Promise<void> {
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
 
-    const templatePath = path.join(__dirname, "config/email.html"); // correct relative path
+    // Use Vietnamese OTP template
+    const templatePath = path.join(__dirname, "config/email-verification-otp-vi.html");
     let html = fs.readFileSync(templatePath, "utf-8");
 
     // Replace placeholders
     html = html
-      .replace(/{{verificationLink}}/g, verificationLink)
+      .replace(/{{otpCode}}/g, otpCode)
       .replace(/{{email}}/g, to)
       .replace(/{{year}}/g, new Date().getFullYear().toString());
 
     await this.transporter.sendMail({
       from: `"Kādo" <${process.env.SMTP_FROM}>`,
       to,
-      subject: "Verify your email address",
+      subject: "✅ Mã OTP xác thực email - Kādo",
       html,
     });
   }
 
-  async sendPasswordResetEmail(to: string, token: string): Promise<void> {
-    const resetLink = `${process.env.APP_URL}/auth/reset-password?token=${token}`;
-
+  async sendPasswordResetOTP(to: string, otpCode: string): Promise<void> {
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
 
-    const templatePath = path.join(__dirname, "config/email.html"); // correct relative path
+    // Use Vietnamese template
+    const templatePath = path.join(__dirname, "config/password-reset-email-vi.html");
     let html = fs.readFileSync(templatePath, "utf-8");
 
     // Replace placeholders
     html = html
-      .replace(/{{verificationLink}}/g, resetLink) // reusing the same template
+      .replace(/{{otpCode}}/g, otpCode)
       .replace(/{{email}}/g, to)
       .replace(/{{year}}/g, new Date().getFullYear().toString());
 
     await this.transporter.sendMail({
       from: `"Kādo" <${process.env.SMTP_FROM}>`,
       to,
-      subject: "Reset your password",
+      subject: "🔐 Mã OTP đặt lại mật khẩu - Kādo",
       html,
     });
+  }
+
+  generateHOTPSecret(): string {
+    // Generate a random 20-byte secret for HOTP and encode to base32
+    const buffer = crypto.randomBytes(20);
+    return base32.encode(buffer).toString().replace(/=/g, ''); // Remove padding
+  }
+
+  generateHOTPWithTimestamp(secret: string, timestamp: number): string {
+    // Use timestamp divided by 30 seconds as counter for HOTP
+    // This creates 30-second windows for OTP validity
+    const counter = Math.floor(timestamp / 30);
+    
+    // Decode base32 secret to buffer for use with otplib
+    const secretBuffer = base32.decode(secret);
+    
+    // Configure HOTP options
+    hotp.options = {
+      digits: 6,
+    };
+    
+    // Convert buffer to hex string for otplib
+    const hexSecret = secretBuffer.toString('hex');
+    return hotp.generate(hexSecret, counter);
+  }
+
+  verifyHOTPWithTimestamp(token: string, secret: string, timestamp: number, windowMinutes: number = 15): boolean {
+    // Calculate the current time window
+    const currentCounter = Math.floor(timestamp / 30);
+    
+    // Calculate how many 30-second windows to check (window in minutes * 2)
+    const windowSize = windowMinutes * 2; // 15 minutes = 30 windows of 30 seconds each
+    
+    // Decode base32 secret to buffer
+    const secretBuffer = base32.decode(secret);
+    
+    // Configure HOTP options
+    hotp.options = {
+      digits: 6,
+      window: windowSize,
+    };
+    
+    // Convert buffer to hex string for otplib
+    const hexSecret = secretBuffer.toString('hex');
+    
+    // Verify the HOTP token within the time window
+    return hotp.check(token, hexSecret, currentCounter);
   }
 }
