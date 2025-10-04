@@ -1,0 +1,309 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extCardText,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extWeakness,extResistance,extRetreatCost,extAttack2
+518886,Pokemon Trading Card Game Classic,Pokemon Trading Card Game Classic,https://tcgplayer-cdn.tcgplayer.com/product/518886_200w.jpg,3,23323,https://cpt.tcgcsv.com/Lz96,2024-01-02T21:31:32.183,1,"Experience the timeless joy of the Pokémon TCG with Pokémon Trading Card Game Classic—a product designed for fans to enjoy friendly battles anytime and anywhere! Pokémon Trading Card Game Classic features a foldable, portable two-player game board complete with card placement zones for your Active Pokémon, Benched Pokémon, deck, discard pile, and Prize cards. Since this board features a compartment at the center, it can also hold up to three decks and a toolbox featuring accessories you need for battling.
+<br>
+<br>Recount the days of Venusaur, Charizard, and Blastoise from Base Set running wild with three specially constructed decks featuring these fully evolved Kanto first partner Pokémon. These decks also feature newly printed cards to go alongside the classics, letting you form new strategies with never-before-seen cards like Ho-Oh ex and Lugia ex. Except for Basic Energy cards, the cards in these decks are not legal for tournament play, but since the game is always changing, these static decks are perfect for challenging friends and family to an evergreen battle of the Pokémon TCG.
+<br>
+<br>Inside the toolbox, you'll find stackable damage counters that clearly indicate how much damage a Pokémon has taken, three-dimensional Poison and Burn markers, and metal orbs that take the place of Pokémon coins. At the center of the toolbox, you'll be able to roll these metal orbs down a small chute—if the orb lands in a white-bordered hole, it's treated as heads, and if it lands in a black-bordered hole, it's treated as tails. When playing with Pokémon Trading Card Game Classic, you'll never need to scrounge for dice or coins.
+<br>
+<br>Pokémon Trading Card Game Classic includes:
+<br>
+<br>• A game board that folds up to store all the items included in Pokémon Trading Card Game Classic.
+<br>• A toolbox for storing stackable damage counters, Poison and Burn markers, and metal orbs.
+<br>• Three Pokémon TCG decks featuring Venusaur, Charizard, and Blastoise, as well as newly printed cards to go along with the classics.
+<br>• Three deck boxes featuring Energy symbols matching the included Pokémon TCG decks.",279.0,370.0,1000.0,269.5,,Normal,,,,,,,,,,
+527883,Bulbasaur,Bulbasaur,https://tcgplayer-cdn.tcgplayer.com/product/527883_200w.jpg,3,23323,https://cpt.tcgcsv.com/H9f6,2024-07-18T16:12:23.533,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",6.0,10.0,18.99,8.58,10.0,Holofoil,001/034,Classic Collection,Grass,40,Basic,"[GG] Leech Seed (20)
+<br>Heal 10 damage from this Pokémon.",Rx2,None,1,
+527884,Ivysaur,Ivysaur,https://tcgplayer-cdn.tcgplayer.com/product/527884_200w.jpg,3,23323,https://cpt.tcgcsv.com/J9f6,2024-07-18T16:14:29.57,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",2.5,4.04,37.91,3.7,4.07,Holofoil,002/034,Classic Collection,Grass,60,Stage 1,[2G] Vine Whip (30),Rx2,None,1,"[GGG] Poisonpowder (20)
+<br>Your opponent's Active Pokémon is now Poisoned."
+527885,Venusaur,Venusaur,https://tcgplayer-cdn.tcgplayer.com/product/527885_200w.jpg,3,23323,https://cpt.tcgcsv.com/K9f6,2024-08-28T19:52:17.493,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+<strong>Pokémon Power: Energy Trans</strong> As often as you like during your turn, you may move 1 Grass Energy card from 1 of your Pokémon to another of your Pokémon. This Pokémon Power can't be used if this Pokémon is Asleep, Confused or Paralyzed.",20.7,28.93,55.0,23.7,,Holofoil,003/034,Classic Collection,Grass,100,Stage 2,[GGGG] Solar Beam (60),Rx2,None,2,
+527886,Paras,Paras,https://tcgplayer-cdn.tcgplayer.com/product/527886_200w.jpg,3,23323,https://cpt.tcgcsv.com/L9f6,2024-07-18T16:15:31.573,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",0.2,0.53,4.99,0.66,0.73,Holofoil,004/034,Classic Collection,Grass,50,Basic,"[1] Call for Family 
+<br>Search your deck for up to 2 Basic Pokemon and put them onto your Bench.  Then, shuffle your deck.",Rx2,None,1,"[G] Toxic Sport (10) 
+<br>Flip a coin.  If heads, the Defending Pokemon is now Poisoned."
+527887,Parasect,Parasect,https://tcgplayer-cdn.tcgplayer.com/product/527887_200w.jpg,3,23323,https://cpt.tcgcsv.com/M9f6,2024-07-18T16:15:34.02,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",0.26,0.51,8.99,0.52,0.58,Holofoil,005/034,Classic Collection,Grass,80,Stage 1,"[1] Nutritional Support 
+<br>Search your deck for up to 2 G Energy cards and attach them to your Pokémon in any way you like. Then, shuffle your deck.",R+20,None,1,"[1GG] Hibernation Spore (40) 
+<br>Your opponent's Active Pokémon is now Asleep. During Pokémon Checkup, your opponent flips 2 coins instead of 1. If either of them is tails, that Pokémon is still Asleep."
+527888,Scyther,Scyther,https://tcgplayer-cdn.tcgplayer.com/product/527888_200w.jpg,3,23323,https://cpt.tcgcsv.com/N9f6,2024-07-18T16:18:13.247,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",4.28,6.04,16.31,6.21,9.38,Holofoil,006/034,Classic Collection,Grass,70,Basic,"[G] Swords Dance
+<br>During your next turn, this Pokémon's Slash attack does 30 more damage <em>(before applying Weakness and Resistance)</em>.",Rx2,F-30,0,[3] Slash (30)
+527891,Pinsir,Pinsir,https://tcgplayer-cdn.tcgplayer.com/product/527891_200w.jpg,3,23323,https://cpt.tcgcsv.com/R9f6,2024-07-18T16:15:40.577,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",0.34,0.49,1.99,0.45,0.47,Holofoil,007/034,Classic Collection,Grass,110,Basic,"[2] Roof Fling
+<br>Flip a coin. If heads, return your opponent's Active Pokemon and attached all cards into your opponent's hand.",Rx2,None,2,[GG] Guillotine (50)
+527893,Sandshrew,Sandshrew,https://tcgplayer-cdn.tcgplayer.com/product/527893_200w.jpg,3,23323,https://cpt.tcgcsv.com/T9f6,2024-07-18T16:18:01.077,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",0.45,0.75,6.99,0.76,0.84,Holofoil,008/034,Classic Collection,Fighting,70,Basic,"[1] Collect
+<br>Draw a card.",Gx2,None,1,[2F] Rolling Tackle (30)
+527894,Sandslash,Sandslash,https://tcgplayer-cdn.tcgplayer.com/product/527894_200w.jpg,3,23323,https://cpt.tcgcsv.com/V9f6,2024-07-18T16:18:03.55,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",0.3,0.56,8.99,0.62,0.68,Holofoil,009/034,Classic Collection,Fighting,110,Stage 1,"[1] Continuous Scratch (30x)
+<br>Flip 4 coins. This attack does 30 damage for each heads.",Gx2,None,1,"[2F] Sand Tomb (90)
+<br>During your opponent's next turn, the Defending Pokémon can't retreat."
+527895,Onix,Onix,https://tcgplayer-cdn.tcgplayer.com/product/527895_200w.jpg,3,23323,https://cpt.tcgcsv.com/W9f6,2024-07-18T16:15:29.107,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",1.25,1.52,6.99,1.52,,Holofoil,010/034,Classic Collection,Fighting,120,Basic,[4] Land Crush (120),Gx2,None,4,
+527898,Hitmonlee,Hitmonlee,https://tcgplayer-cdn.tcgplayer.com/product/527898_200w.jpg,3,23323,https://cpt.tcgcsv.com/-9f6,2024-07-18T16:14:20.43,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",1.75,3.46,7.32,2.96,,Holofoil,011/034,Classic Collection,Fighting,120,Basic,[2] Low Sweep (40),Px2,None,1,"[1FF] Link Attack (80+)
+<br>If Hitmonchan is on your Bench, this attack does 80 more damage."
+527899,Hitmonchan,Hitmonchan,https://tcgplayer-cdn.tcgplayer.com/product/527899_200w.jpg,3,23323,https://cpt.tcgcsv.com/_9f6,2024-07-18T16:14:17.89,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",1.5,2.63,8.95,2.3,,Holofoil,012/034,Classic Collection,Fighting,120,Basic,"[F] Coordinated Beatdown (20+)
+<br>If Hitmonlee is on your Bench, this attack does 20 more damage.",Px2,None,1,[FF] Mach Cross (60)
+527900,Doduo,Doduo,https://tcgplayer-cdn.tcgplayer.com/product/527900_200w.jpg,3,23323,https://cpt.tcgcsv.com/0bf6,2024-07-18T16:13:23.727,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",0.25,0.5,2.0,0.47,0.52,Holofoil,013/034,Classic Collection,Colorless,60,Basic,"[1] Double Stab (10x)
+<br>Flip 2 coins. This attack does 10 damage times the number of heads.",Lx2,F-20,1,"[2] Doduo Delivery
+<br>Draw 2 cards."
+527901,Dodrio,Dodrio,https://tcgplayer-cdn.tcgplayer.com/product/527901_200w.jpg,3,23323,https://cpt.tcgcsv.com/2bf6,2024-07-18T16:13:18.78,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+<strong>[Poké-BODY] Retreat Aid</strong>
+<br>As long as This Pokémon is on your Bench, your Active Pokémon's Retreat Cost is [2] less.",0.4,0.58,2.3,0.57,,Holofoil,014/034,Classic Collection,Colorless,80,Stage 1,"[2] Incessant Peck (20+) 
+<br>Flip a coin until you get tails. This attack does 20 damage plus 20 more damage for each heads.",Lx2,F-20,1,
+527902,Chansey,Chansey,https://tcgplayer-cdn.tcgplayer.com/product/527902_200w.jpg,3,23323,https://cpt.tcgcsv.com/3bf6,2024-07-18T16:12:26.493,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",3.0,4.25,8.0,4.32,5.58,Holofoil,015/034,Classic Collection,Colorless,120,Basic,"[2] Scrunch
+<br>Flip a coin. If heads, during your opponent's next turn, prevent all damage done to this Pokémon by attacks.",Fx2,P-30,1,"[4] Double-edge (80)
+<br>This Pokémon also does 80 damage to itself."
+527903,Snorlax,Snorlax,https://tcgplayer-cdn.tcgplayer.com/product/527903_200w.jpg,3,23323,https://cpt.tcgcsv.com/5bf6,2024-07-18T16:18:15.993,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",2.99,3.29,4.99,3.22,,Holofoil,016/034,Classic Collection,Colorless,150,Basic,"[1] Collect
+<br>Draw 2 cards.",Fx2,None,4,"[3] Collapse (120)
+<br>This Pokemon is now Asleep."
+527905,Lugia ex,Lugia ex,https://tcgplayer-cdn.tcgplayer.com/product/527905_200w.jpg,3,23323,https://cpt.tcgcsv.com/7bf6,2024-07-18T16:15:05.287,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",0.5,1.22,15.99,1.2,1.59,Holofoil,017/034,Classic Collection,Colorless,230,Basic,"[2] Rising Wind (30)
+<br>Search your deck for a Basic Energy card and attach it to this Pokemon. Then, shuffle your deck.",Lx2,F-30,2,"[4] Aero Break (200)
+<br>This Pokemon also does 30 damage to itself."
+527907,Bill (CLV),Bill CLV,https://tcgplayer-cdn.tcgplayer.com/product/527907_200w.jpg,3,23323,https://cpt.tcgcsv.com/9bf6,2024-07-18T16:09:35.447,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Draw 2 cards.
+<br>You may only play 1 Supporter card during your turn.",0.06,0.25,4.95,0.16,,Holofoil,018/034,Classic Collection,Supporter,0,Supporter,,,,,
+527908,Boss's Orders (CLV),Bosss Orders CLV,https://tcgplayer-cdn.tcgplayer.com/product/527908_200w.jpg,3,23323,https://cpt.tcgcsv.com/bbf6,2024-07-18T16:12:15.21,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Switch in 1 of your opponent's Benched Pokémon to the Active Spot.
+<br>
+You may play only 1 Supporter card during your turn.",0.49,0.84,2.25,0.84,,Holofoil,019/034,Classic Collection,Supporter,,,,,,,
+527909,Computer Search (CLV),Computer Search CLV,https://tcgplayer-cdn.tcgplayer.com/product/527909_200w.jpg,3,23323,https://cpt.tcgcsv.com/cbf6,2024-07-18T16:13:10.927,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+You can use this card only if you discard 2 other cards from your hand.
+<br>Search your deck for a card and put it into your hand. Then, shuffle your deck.
+<br><br>You may play any number of Item cards during your turn.",0.13,0.36,1.99,0.32,0.28,Holofoil,020/034,Classic Collection,Trainer,,,,,,,
+527910,Poke Ball (CLV),Poke Ball CLV,https://tcgplayer-cdn.tcgplayer.com/product/527910_200w.jpg,3,23323,https://cpt.tcgcsv.com/dbf6,2024-07-18T16:16:02.49,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Flip a coin. If heads, search your deck for a Pokemon, reveal it, and put it into your hand. Then, shuffle your deck.
+<br>
+<br>You may play any number of Item cards during your turn.",0.07,0.25,4.99,0.18,,Holofoil,021/034,Classic Collection,Item,,,,,,,
+527911,Pokemon Fan Club (CLV),Pokemon Fan Club CLV,https://tcgplayer-cdn.tcgplayer.com/product/527911_200w.jpg,3,23323,https://cpt.tcgcsv.com/fbf6,2024-07-18T16:16:35.05,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Search your deck for up to 2 Basic Pokemon, reveal them, and put them into your hand. Then, shuffle your deck.
+<br>
+<br>You may play only 1 Supporter card during your turn (before your attack)",0.1,0.26,1.99,0.24,,Holofoil,022/034,Classic Collection,Supporter,,,,,,,
+527912,Pokemon Nurse,Pokemon Nurse,https://tcgplayer-cdn.tcgplayer.com/product/527912_200w.jpg,3,23323,https://cpt.tcgcsv.com/gbf6,2024-07-18T16:16:41.387,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+You can play only one Supporter card each turn.
+<br>
+<br>Heal all damage from 1 of your Pokémon. If you healed any damage in this way, discard all Energy from that Pokémon.",0.75,1.0,3.25,1.13,,Holofoil,023/034,Classic Collection,Supporter,,,,,,,
+527913,Professor Oak (CLV),Professor Oak CLV,https://tcgplayer-cdn.tcgplayer.com/product/527913_200w.jpg,3,23323,https://cpt.tcgcsv.com/hbf6,2024-07-18T16:17:07.117,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Discard your hand, then draw 7 cards.
+<br>
+<br>You may play only 1 Supporter card during your turn",0.09,0.25,3.99,0.23,,Holofoil,024/034,Classic Collection,Trainer,,,,,,,
+527916,Rare Candy (CLV),Rare Candy CLV,https://tcgplayer-cdn.tcgplayer.com/product/527916_200w.jpg,3,23323,https://cpt.tcgcsv.com/lbf6,2024-07-18T16:17:37.077,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Choose 1 of your Basic Pokemon in play. If you have a Stage 2 card in your hand that evolves from that Pokemon, put that card on the Basic Pokemon to evolve it, skipping the stage 1. You can't use this card during your first turn or on a Basic Pokemon that was put into play this turn.
+<br>
+<br>You may play any number of Item cards during your turn.",0.19,0.37,1.99,0.31,,Holofoil,025/034,Classic Collection,Item,,,,,,,
+527917,Rocket's Admin. (CLV),Rockets Admin CLV,https://tcgplayer-cdn.tcgplayer.com/product/527917_200w.jpg,3,23323,https://cpt.tcgcsv.com/mbf6,2024-07-18T16:17:57.68,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+You may play only one Supporter card each turn.
+<br>
+<br>Each player shuffles his or her hand into their deck.  Then, each player draws a card for each of their remaining Prize cards.",0.09,0.28,3.99,0.26,0.22,Holofoil,026/034,Classic Collection,Supporter,,,,,,,
+527918,Sun Seed,Sun Seed,https://tcgplayer-cdn.tcgplayer.com/product/527918_200w.jpg,3,23323,https://cpt.tcgcsv.com/nbf6,2024-07-18T16:18:41.653,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+The attacks by the Venusaur this card is attached to do 100 more damage to your opponent’s Active Pokémon <em>(before applying Weakness and Resistance).</em>",0.01,0.24,4.99,0.19,0.13,Holofoil,027/034,Classic Collection,Tool,,,,,,,
+527919,Super Rod (CLV),Super Rod CLV,https://tcgplayer-cdn.tcgplayer.com/product/527919_200w.jpg,3,23323,https://cpt.tcgcsv.com/pbf6,2024-07-18T16:19:29.88,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Shuffle up to 3 in any combination of Pokémon and Basic Energy cards from your discard pile into your deck.
+<br>
+You may play any number of Item cards during your turn.",0.32,0.55,2.49,0.51,,Holofoil,028/034,Classic Collection,Item,,,,,,,
+527920,Switch (CLV),Switch CLV,https://tcgplayer-cdn.tcgplayer.com/product/527920_200w.jpg,3,23323,https://cpt.tcgcsv.com/qbf6,2024-07-18T16:19:54.87,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Switch your Active Pokémon with 1 of your Benched Pokémon.
+<br>
+You may play as many Item cards as you like during your turn.",0.11,0.25,4.49,0.21,,Holofoil,029/034,Classic Collection,Item,,,,,,,
+527921,Ultra Ball (CLV),Ultra Ball CLV,https://tcgplayer-cdn.tcgplayer.com/product/527921_200w.jpg,3,23323,https://cpt.tcgcsv.com/rbf6,2024-07-18T16:20:14.83,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+You can use this card only if you discard 2 other cards from your hand.
+<br>Search your deck for a Pokemon, reveal it, and put it into your hand. Then, shuffle your deck.
+<br>You may play any number of Item cards during your turn.",0.15,0.31,2.24,0.28,,Holofoil,030/034,Classic Collection,Trainer — Item,,,,,,,
+527924,Basic Grass Energy,Basic Grass Energy,https://tcgplayer-cdn.tcgplayer.com/product/527924_200w.jpg,3,23323,https://cpt.tcgcsv.com/vbf6,2024-08-12T12:12:59.507,1,,0.3,0.64,2.99,0.55,0.56,Holofoil,033/034,Classic Collection,Basic Energy,,,,,,,
+527925,Basic Fighting Energy,Basic Fighting Energy,https://tcgplayer-cdn.tcgplayer.com/product/527925_200w.jpg,3,23323,https://cpt.tcgcsv.com/wbf6,2024-08-12T12:12:31.02,1,,0.2,0.5,1.99,0.44,,Holofoil,034/034,Classic Collection,Basic Energy,,,,,,,
+527926,Double Colorless Energy (CLV),Double Colorless Energy CLV,https://tcgplayer-cdn.tcgplayer.com/product/527926_200w.jpg,3,23323,https://cpt.tcgcsv.com/xbf6,2025-04-16T17:59:18.067,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+As long as this card is attached to a Pokémon, it provides [2] Energy",0.37,0.6,5.8,0.53,,Holofoil,032/034,Classic Collection,Special Energy,,,,,,,
+527936,Charmander,Charmander,https://tcgplayer-cdn.tcgplayer.com/product/527936_200w.jpg,3,23323,https://cpt.tcgcsv.com/Lbf6,2024-07-18T16:12:38.35,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",7.12,10.94,31.97,9.49,10.94,Holofoil,001/034,Classic Collection,Fire,50,Basic,[1] Scratch (10),Wx2,None,1,"[1R] Ember (30)
+<br>Discard 1 Fire Energy card attached to Charmander in order to use this attack."
+527937,Charmeleon,Charmeleon,https://tcgplayer-cdn.tcgplayer.com/product/527937_200w.jpg,3,23323,https://cpt.tcgcsv.com/Mbf6,2024-07-18T16:12:41.583,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",2.73,4.5,34.97,4.44,4.84,Holofoil,002/034,Classic Collection,Fire,80,Stage 1,[3] Slash (30),W,None,1,"[1RR] Flamethrower (50)
+<br>Discard 1 Fire Energy card attached to Charmeleon in order to use this attack."
+527938,Charizard,Charizard,https://tcgplayer-cdn.tcgplayer.com/product/527938_200w.jpg,3,23323,https://cpt.tcgcsv.com/Nbf6,2024-07-18T16:12:34.673,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+<strong>Pokémon Power: Energy Burn</strong> All Energy attached to this Pokémon are Fire Energy instead of their usual type. This Pokémon Power stops working if this Pokémon is Asleep, Confused, or Paralyzed.",105.34,122.5,163.58,109.02,,Holofoil,003/034,Classic Collection,Fire,120,Stage 2,"[RRRR] Fire Spin (100)
+<br>Discard 2 Energy from this Pokémon.",W,F-30,3,
+527939,Ponyta,Ponyta,https://tcgplayer-cdn.tcgplayer.com/product/527939_200w.jpg,3,23323,https://cpt.tcgcsv.com/Pbf6,2024-07-18T16:16:44.507,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",0.35,0.81,2.15,0.89,1.0,Holofoil,004/034,Classic Collection,Fire,60,Basic,[R] Flame Tail (20),Wx2,None,1,
+527940,Rapidash,Rapidash,https://tcgplayer-cdn.tcgplayer.com/product/527940_200w.jpg,3,23323,https://cpt.tcgcsv.com/Qbf6,2024-07-18T16:17:13,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",0.37,0.79,5.79,0.88,,Holofoil,005/034,Classic Collection,Fire,100,Stage 1,[R] Combustion (30),Wx2,None,1,"[1R] Ring of Fire (50)
+<br>Your opponent's Active Pokémon is now Burned. It can't retreat during your opponent's next turn."
+527941,Magmar,Magmar,https://tcgplayer-cdn.tcgplayer.com/product/527941_200w.jpg,3,23323,https://cpt.tcgcsv.com/Rbf6,2024-07-18T16:15:11.137,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",1.0,1.61,3.99,1.6,1.77,Holofoil,006/034,Classic Collection,Fire,70,Basic,"[R] Smokescreen (10)
+<br>If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",W,None,1,"[RR] Smog (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Poisoned."
+527942,Ho-oh ex,Ho oh ex,https://tcgplayer-cdn.tcgplayer.com/product/527942_200w.jpg,3,23323,https://cpt.tcgcsv.com/Sbf6,2024-08-28T19:17:01.943,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",0.01,0.72,10.5,0.53,0.6,Holofoil,007/034,Classic Collection,Fire,220,Basic,"[R] Phoenix Breath
+<br>Attach up to 2 Basic Energy cards from your discard pile to your Pokemon in any way you like.",Wx2,None,2,"[2RR] Eternal Blaze (180)
+<br>During your next turn, this Pokemon can't attack."
+527943,Pikachu,Pikachu,https://tcgplayer-cdn.tcgplayer.com/product/527943_200w.jpg,3,23323,https://cpt.tcgcsv.com/Tbf6,2024-07-18T16:15:37.5,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",13.97,17.99,45.0,14.42,13.97,Holofoil,008/034,Classic Collection,Lightning,40,Basic,[1] Gnaw (10),F,,1,"[1L] Thunder Jolt (30)
+<br>Flip a coin. If tails, this Pokémon does 10 damage to itself."
+527944,Raichu,Raichu,https://tcgplayer-cdn.tcgplayer.com/product/527944_200w.jpg,3,23323,https://cpt.tcgcsv.com/Vbf6,2024-07-18T16:17:10.25,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",1.11,1.53,3.99,1.55,,Holofoil,009/034,Classic Collection,Lightning,130,Stage 1,[1] Pain-full Punch (40),Fx2,None,1,[1LL] Mach Bolt (120)
+527945,Voltorb,Voltorb,https://tcgplayer-cdn.tcgplayer.com/product/527945_200w.jpg,3,23323,https://cpt.tcgcsv.com/Wbf6,2024-07-18T16:20:49.35,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",0.29,0.65,4.68,0.58,0.65,Holofoil,010/034,Classic Collection,Lightning,40,Basic,[1] Tackle (10),F,None,1,
+527946,Electrode,Electrode,https://tcgplayer-cdn.tcgplayer.com/product/527946_200w.jpg,3,23323,https://cpt.tcgcsv.com/Xbf6,2024-07-18T16:14:04.82,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+<strong>Pokémon Power: Buzzap</strong> Once during your turn, you may Knock Out this Pokémon and attach it to 1 of your other Pokémon as a Special Energy card. While this card is attached to a Pokémon, it provides every type of Energy but provides only 2 Energy at a time. This Pokémon Power can't be used if this Pokémon is Asleep, Confused or Paralyzed.",1.16,1.4,5.99,1.39,,Holofoil,011/034,Classic Collection,Lightning,80,Stage 1,"[LLL] Electric Shock (50)
+<br>Flip a coin. If tails, this Pokémon does 10 damage to itself.",F,None,1,
+527947,Zapdos,Zapdos,https://tcgplayer-cdn.tcgplayer.com/product/527947_200w.jpg,3,23323,https://cpt.tcgcsv.com/Zbf6,2024-07-18T16:21:30.973,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",1.0,1.99,49.97,1.8,2.11,Holofoil,012/034,Classic Collection,Lightning,120,Basic,"[L] Thunder Shock (20)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",Lx2,F-20,1,[4] Drill Peck (120)
+527948,Clefairy,Clefairy,https://tcgplayer-cdn.tcgplayer.com/product/527948_200w.jpg,3,23323,https://cpt.tcgcsv.com/-bf6,2024-07-18T16:12:48.973,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",2.28,3.79,6.38,3.42,,Holofoil,013/034,Classic Collection,Colorless,40,Basic,"[1] Sing
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Asleep.",F,P-30,1,"[3] Metronome
+<br>Choose 1 of your opponent's Active Pokémon's attacks and use it as this attack."
+527949,Clefable,Clefable,https://tcgplayer-cdn.tcgplayer.com/product/527949_200w.jpg,3,23323,https://cpt.tcgcsv.com/_bf6,2024-07-18T16:12:45.38,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",1.99,2.45,4.0,2.44,2.69,Holofoil,014/034,Classic Collection,Colorless,70,Stage 1,"[1] Metronome
+<br>Choose 1 of your opponent's Active Pokémon's attacks and use it as this attack.",F,P-30,2,"[2] Minimize
+<br>During your opponent's next turn, this Pokémon takes 20 less damage from attacks <em>(after applying Weakness and Resistance).</em>"
+527950,Stantler,Stantler,https://tcgplayer-cdn.tcgplayer.com/product/527950_200w.jpg,3,23323,https://cpt.tcgcsv.com/0cf6,2024-07-18T16:18:21.707,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",0.23,0.49,5.0,0.45,0.49,Holofoil,016/034,Classic Collection,Colorless,70,Basic,"[0] Lead
+<br>
+Search your deck for a Supporter card, reveal it, and put it into your hand. Then, shuffle your deck.",F+20,None,1,"[2] Frighten Horn (20)
+<br>
+If your opponent's Active Pokémon is a Basic Pokémon, it is now Confused."
+527951,Miltank,Miltank,https://tcgplayer-cdn.tcgplayer.com/product/527951_200w.jpg,3,23323,https://cpt.tcgcsv.com/2cf6,2024-07-18T16:15:17.647,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",0.39,0.69,4.68,0.81,0.89,Holofoil,017/034,Classic Collection,Colorless,90,Basic,"[0] Healing Milk
+<br>
+Choose 1 of your Pokémon, and then flip 2 coins. For each heads, heal 30 damage from that Pokémon.",F+20,None,2,"[2] Continuous Tumble (20x)
+<br>
+Flip a coin until you get tails. This attack does 20 damage for each heads."
+527952,Dunsparce,Dunsparce,https://tcgplayer-cdn.tcgplayer.com/product/527952_200w.jpg,3,23323,https://cpt.tcgcsv.com/3cf6,2024-07-18T16:13:56.367,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",0.32,0.5,1.99,0.5,0.55,Holofoil,015/034,Classic Collection,Colorless,50,Basic,"[1] Strike and Run 
+<br>Search your deck for up to 3 Basic Pokemon and put them onto your Bench.  Then, shuffle your deck. If you put any Pokémon onto your Bench in this way, you may switch this Pokémon with 1 of your Benched Pokémon.",F,None,1,"[1] Sudden Flash (10) 
+<br>Flip a coin.  If heads, your opponent's Active Pokémon is now Paralyzed."
+527954,Bill (CLC),Bill CLC,https://tcgplayer-cdn.tcgplayer.com/product/527954_200w.jpg,3,23323,https://cpt.tcgcsv.com/6cf6,2024-07-18T16:09:26.59,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Draw 2 cards.
+<br>You may only play 1 Supporter card during your turn.",0.03,0.25,3.99,0.13,,Holofoil,018/034,Classic Collection,Supporter,0,Supporter,,,,,
+527955,Boss's Orders (CLC),Bosss Orders CLC,https://tcgplayer-cdn.tcgplayer.com/product/527955_200w.jpg,3,23323,https://cpt.tcgcsv.com/7cf6,2025-03-23T08:20:42.757,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Switch in 1 of your opponent's Benched Pokémon to the Active Spot.
+<br>
+You may play only 1 Supporter card during your turn.",0.3,0.67,2.25,0.68,,Holofoil,019/034,Classic Collection,Supporter,,,,,,,
+527957,Computer Search (CLC),Computer Search CLC,https://tcgplayer-cdn.tcgplayer.com/product/527957_200w.jpg,3,23323,https://cpt.tcgcsv.com/9cf6,2024-07-18T16:13:04.303,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+You can use this card only if you discard 2 other cards from your hand.
+<br>Search your deck for a card and put it into your hand. Then, shuffle your deck.
+<br><br>You may play any number of Item cards during your turn.",0.13,0.4,4.99,0.33,,Holofoil,020/034,Classic Collection,Trainer,,,,,,,
+527958,Poke Ball (CLC),Poke Ball CLC,https://tcgplayer-cdn.tcgplayer.com/product/527958_200w.jpg,3,23323,https://cpt.tcgcsv.com/bcf6,2024-07-18T16:15:55.88,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Flip a coin. If heads, search your deck for a Pokemon, reveal it, and put it into your hand. Then, shuffle your deck.
+<br>
+<br>You may play any number of Item cards during your turn.",0.09,0.25,11.0,0.18,,Holofoil,021/034,Classic Collection,Item,,,,,,,
+527959,Pokemon Fan Club (CLC),Pokemon Fan Club CLC,https://tcgplayer-cdn.tcgplayer.com/product/527959_200w.jpg,3,23323,https://cpt.tcgcsv.com/ccf6,2024-07-18T16:16:27.817,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Search your deck for up to 2 Basic Pokemon, reveal them, and put them into your hand. Then, shuffle your deck.
+<br>
+<br>You may play only 1 Supporter card during your turn (before your attack)",0.09,0.25,1.99,0.22,,Holofoil,022/034,Classic Collection,Supporter,,,,,,,
+527960,Professor Oak (CLC),Professor Oak CLC,https://tcgplayer-cdn.tcgplayer.com/product/527960_200w.jpg,3,23323,https://cpt.tcgcsv.com/dcf6,2024-07-18T16:17:00.05,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Discard your hand, then draw 7 cards.
+<br>
+<br>You may play only 1 Supporter card during your turn",0.08,0.25,1.99,0.2,0.2,Holofoil,023/034,Classic Collection,Trainer,,,,,,,
+527961,Rare Candy (CLC),Rare Candy CLC,https://tcgplayer-cdn.tcgplayer.com/product/527961_200w.jpg,3,23323,https://cpt.tcgcsv.com/fcf6,2024-07-18T16:17:30.913,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Choose 1 of your Basic Pokemon in play. If you have a Stage 2 card in your hand that evolves from that Pokemon, put that card on the Basic Pokemon to evolve it, skipping the stage 1. You can't use this card during your first turn or on a Basic Pokemon that was put into play this turn.
+<br>
+<br>You may play any number of Item cards during your turn.",0.19,0.42,1.99,0.42,,Holofoil,024/034,Classic Collection,Item,,,,,,,
+527962,Rocket's Admin. (CLC),Rockets Admin CLC,https://tcgplayer-cdn.tcgplayer.com/product/527962_200w.jpg,3,23323,https://cpt.tcgcsv.com/gcf6,2024-07-18T16:17:48.763,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+You may play only one Supporter card each turn.
+<br>
+<br>Each player shuffles his or her hand into their deck.  Then, each player draws a card for each of their remaining Prize cards.",0.07,0.25,1.99,0.23,0.21,Holofoil,025/034,Classic Collection,Supporter,,,,,,,
+527967,Super Rod (CLC),Super Rod CLC,https://tcgplayer-cdn.tcgplayer.com/product/527967_200w.jpg,3,23323,https://cpt.tcgcsv.com/mcf6,2024-07-18T16:19:21.82,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Shuffle up to 3 in any combination of Pokémon and Basic Energy cards from your discard pile into your deck.
+<br>
+You may play any number of Item cards during your turn.",0.35,0.56,3.99,0.48,,Holofoil,027/034,Classic Collection,Item,,,,,,,
+527968,Switch (CLC),Switch CLC,https://tcgplayer-cdn.tcgplayer.com/product/527968_200w.jpg,3,23323,https://cpt.tcgcsv.com/ncf6,2024-07-18T16:19:48.907,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Switch your Active Pokémon with 1 of your Benched Pokémon.
+<br>
+You may play as many Item cards as you like during your turn.",0.07,0.25,3.2,0.19,,Holofoil,029/034,Classic Collection,Item,,,,,,,
+527970,Ultra Ball (CLC),Ultra Ball CLC,https://tcgplayer-cdn.tcgplayer.com/product/527970_200w.jpg,3,23323,https://cpt.tcgcsv.com/qcf6,2024-07-18T16:20:08.7,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+You can use this card only if you discard 2 other cards from your hand.
+<br>Search your deck for a Pokemon, reveal it, and put it into your hand. Then, shuffle your deck.
+<br>You may play any number of Item cards during your turn.",0.12,0.35,1.99,0.35,,Holofoil,030/034,Classic Collection,Trainer — Item,,,,,,,
+527972,Scorching Charcoal,Scorching Charcoal,https://tcgplayer-cdn.tcgplayer.com/product/527972_200w.jpg,3,23323,https://cpt.tcgcsv.com/scf6,2024-07-18T16:18:10.033,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+The attacks used by the Charizard this card is attached to do 100 more damage to your opponent's Active Pokemon <em>(before applying Weakness and Resistance)</em>.",0.01,0.25,4.99,0.22,,Holofoil,026/034,Classic Collection,Tool,,,,,,,
+527974,Double Colorless Energy (CLC),Double Colorless Energy CLC,https://tcgplayer-cdn.tcgplayer.com/product/527974_200w.jpg,3,23323,https://cpt.tcgcsv.com/vcf6,2024-07-18T16:13:36.593,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+As long as this card is attached to a Pokémon, it provides [2] Energy.",0.34,0.53,4.45,0.54,,Holofoil,032/034,Classic Collection,Special Colorless Energy,,,,,,,
+527983,Basic Fire Energy,Basic Fire Energy,https://tcgplayer-cdn.tcgplayer.com/product/527983_200w.jpg,3,23323,https://cpt.tcgcsv.com/Hcf6,2024-08-12T12:12:54.893,1,,0.5,0.95,2.5,0.89,,Holofoil,033/034,Classic Collection,Basic Energy,,,,,,,
+527984,Basic Lightning Energy,Basic Lightning Energy,https://tcgplayer-cdn.tcgplayer.com/product/527984_200w.jpg,3,23323,https://cpt.tcgcsv.com/Jcf6,2025-05-21T05:07:27.197,1,,0.7,0.97,2.5,0.79,0.87,Holofoil,034/034,Classic Collection,Basic Energy,,,,,,,
+527985,Squirtle,Squirtle,https://tcgplayer-cdn.tcgplayer.com/product/527985_200w.jpg,3,23323,https://cpt.tcgcsv.com/Kcf6,2024-07-18T16:18:19.437,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",5.65,7.24,15.99,6.58,6.97,Holofoil,001/034,Classic Collection,Water,40,Basic,"[W] Bubble (10)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",Lx2,None,1,"[1W] Withdraw
+<br>Flip a coin. If heads, during your opponent's next turn, prevent all damage done to this Pokémon by attacks."
+527987,Wartortle,Wartortle,https://tcgplayer-cdn.tcgplayer.com/product/527987_200w.jpg,3,23323,https://cpt.tcgcsv.com/Mcf6,2024-07-18T16:21:27.92,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",3.0,4.5,34.97,4.13,4.32,Holofoil,002/034,Classic Collection,Water,70,Stage 1,"[1W] WIthdraw
+<br>Flip a coin. If heads, during your opponent's next turn, prevent all damage done to this Pokémon by attacks.",L,None,1,[2W] Bite (40)
+527988,Blastoise,Blastoise,https://tcgplayer-cdn.tcgplayer.com/product/527988_200w.jpg,3,23323,https://cpt.tcgcsv.com/Ncf6,2024-07-18T16:11:50.997,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br> 
+<strong>Pokémon Power: Rain Dance</strong> As often as you like during your turn, you may attach a Basic Water Energy card from your hand to 1 of your Water Pokémon. This Pokémon Power can't be used if this Pokémon is Asleep, Confused or Paralyzed.",22.75,35.0,99.99,28.81,,Holofoil,003/034,Classic Collection,Water,100,Stage 2,"[WWW] Hydro Pump (40+)
+<br>This attack does 10 more damage for each extra Water Energy attached to this Pokémon <em>(in addition this attack's cost)</em>. You can't add more than 20 damage in this way.",L,None,3,
+527989,Staryu,Staryu,https://tcgplayer-cdn.tcgplayer.com/product/527989_200w.jpg,3,23323,https://cpt.tcgcsv.com/Pcf6,2024-07-18T16:18:28.033,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",0.45,0.63,4.68,0.73,0.8,Holofoil,004/034,Classic Collection,Water,60,Basic,"[1] Recover
+<br> Discard an Energy from this Pokémon and heal all damage from it.",Lx2,None,1,[W] Water Gun (10)
+527990,Starmie,Starmie,https://tcgplayer-cdn.tcgplayer.com/product/527990_200w.jpg,3,23323,https://cpt.tcgcsv.com/Qcf6,2024-07-18T16:18:25.323,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",0.44,0.7,5.75,0.67,0.76,Holofoil,005/034,Classic Collection,Water,90,Stage 1,"[1] Confuse Ray 
+<br>Your opponent's Active Pokémon is now Confused.",Lx2,None,0,"[W] Swift (50) 
+<br>This attack's damage isn't affected by Weakness or Resistance, or by any effects on your opponent's Active Pokémon."
+527991,Magikarp,Magikarp,https://tcgplayer-cdn.tcgplayer.com/product/527991_200w.jpg,3,23323,https://cpt.tcgcsv.com/Rcf6,2024-07-18T16:15:08.113,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",2.27,3.5,4.99,2.66,,Holofoil,006/034,Classic Collection,Water,30,Basic,[1] Splash (10),Lx2,,1,
+527992,Gyarados,Gyarados,https://tcgplayer-cdn.tcgplayer.com/product/527992_200w.jpg,3,23323,https://cpt.tcgcsv.com/Scf6,2024-07-18T16:14:15.13,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",5.1,6.28,7.16,5.62,,Holofoil,007/034,Classic Collection,Water,130,Stage 1,[2W] Hydro Splash (50),Lx2,F-20,3,"[2WW] Hyper Beam (80) 
+<br>Discard an Energy card from your opponent's Active Pokémon."
+527994,Lapras,Lapras,https://tcgplayer-cdn.tcgplayer.com/product/527994_200w.jpg,3,23323,https://cpt.tcgcsv.com/Vcf6,2024-07-18T16:14:54.52,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",2.2,2.89,5.99,2.94,3.85,Holofoil,008/034,Classic Collection,Water,90,Basic,"[2] Ice Beam (20) 
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",Mx2,,2,"[WW] Ice Blade 
+<br>This attack does 30 damage to 1 of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>"
+527996,Articuno,Articuno,https://tcgplayer-cdn.tcgplayer.com/product/527996_200w.jpg,3,23323,https://cpt.tcgcsv.com/Xcf6,2024-07-18T16:01:40.51,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",5.45,6.23,8.95,5.78,6.36,Holofoil,009/034,Classic Collection,Water,70,Basic,"[WWW] Freeze Dry (30)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",None,F-30,2,"[WWWW] Blizzard (50)
+<br>Flip a coin. If heads, this attack also does 10 damage to each of your opponent's Benched Pokémon. If tails, this attack also does 10 damage to each of your own Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>"
+527998,Suicune ex,Suicune ex,https://tcgplayer-cdn.tcgplayer.com/product/527998_200w.jpg,3,23323,https://cpt.tcgcsv.com/-cf6,2024-07-18T16:18:34.5,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+<strong>Ability — Aqua Lift</strong>
+<br>If this Pokemon has any W Energy attached, it has no Retreat Cost.",0.25,0.79,18.95,0.76,1.15,Holofoil,010/034,Classic Collection,Water,220,Basic,"[3] Crystal Blast (60+)
+<br>This attack does 30 more damage for each W Energy attached to this Pokemon.",Lx2,None,2,
+527999,Drowzee,Drowzee,https://tcgplayer-cdn.tcgplayer.com/product/527999_200w.jpg,3,23323,https://cpt.tcgcsv.com/_cf6,2024-07-18T16:13:53.33,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",0.35,0.52,1.99,0.51,0.56,Holofoil,011/034,Classic Collection,Psychic,70,Basic,"[P] Psychic Boom (10x)
+<br>This attack does 10 damage times the amount of Energy attached to your opponent's Active Pokemon.",Px2,None,2,[2] Headbutt (20)
+528000,Hypno,Hypno,https://tcgplayer-cdn.tcgplayer.com/product/528000_200w.jpg,3,23323,https://cpt.tcgcsv.com/0df6,2024-07-18T16:14:25.92,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",0.25,0.65,6.5,0.71,0.78,Holofoil,012/034,Classic Collection,Psychic,110,Stage 1,"[2] Meditate (20+)
+<br>This attack does 10 more damage for each damage counter on your opponent's Active Pokemon.",Px2,None,2,"[2P] Hypnoblast (70)
+<br>Your opponent's Active Pokemon is now Asleep."
+528002,Mewtwo,Mewtwo,https://tcgplayer-cdn.tcgplayer.com/product/528002_200w.jpg,3,23323,https://cpt.tcgcsv.com/3df6,2024-07-18T16:15:13.577,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",8.99,14.08,59.97,10.9,,Holofoil,014/034,Classic Collection,Psychic,60,Basic,"[1P] Psychic (20+)
+<br>Does 20 more damage for each Energy attached to your opponent's Active Pokémon.",P,None,3,"[PP] Barrier
+<br>During your opponent's next turn, prevent all damage from and effects of attacks done to this Pokémon. If 1 of your Pokémon used Barrier during your last turn, this attack can't be used."
+528003,Lt. Surge's Rattata,Lt Surges Rattata,https://tcgplayer-cdn.tcgplayer.com/product/528003_200w.jpg,3,23323,https://cpt.tcgcsv.com/5df6,2024-07-18T16:15:02.91,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",0.49,0.72,6.09,0.63,,Holofoil,015/034,Classic Collection,Colorless,40,Basic,"[1] Focus Energy
+<br>During your next turn, this Pokémon's Gnaw attack does 20 more damage <em>(before applying Weakness and Resistance)</em>.",F,P-30,1,[2] Gnaw (20)
+528004,Lt. Surge's Raticate,Lt Surges Raticate,https://tcgplayer-cdn.tcgplayer.com/product/528004_200w.jpg,3,23323,https://cpt.tcgcsv.com/6df6,2024-07-18T16:14:59.643,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",0.49,0.91,2.06,0.83,0.82,Holofoil,016/034,Classic Collection,Colorless,70,Stage 1,"[1] Super Fang
+<br>Put damage counters on your opponent's Active Pokémon until its remaining HP is halved, rounded down. <em>(If your opponent's Active Pokémon has 30 HP remaining, put 2 damage counters on it.)</em>",F,P-30,1,
+528005,Kangaskhan,Kangaskhan,https://tcgplayer-cdn.tcgplayer.com/product/528005_200w.jpg,3,23323,https://cpt.tcgcsv.com/7df6,2024-07-18T16:14:51.197,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span>",0.3,0.73,4.6,0.74,0.8,Holofoil,017/034,Classic Collection,Colorless,100,Basic,[1] Call for Family - Search your deck for 2 Basic Pokemon and put them onto your Bench.  Shuffle your deck afterward.,Fx2,,2,[2] Comet Punch (20x) Flip 4 coins.  This attack does 20 damage times the number of heads.
+528014,Bill (CLB),Bill CLB,https://tcgplayer-cdn.tcgplayer.com/product/528014_200w.jpg,3,23323,https://cpt.tcgcsv.com/jdf6,2024-07-18T16:09:16.057,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Draw 2 cards.
+<br>You may only play 1 Supporter card during your turn.",0.05,0.25,3.99,0.14,,Holofoil,018/034,Classic Collection,Supporter,0,Supporter,,,,,
+528015,Boss's Orders (CLB),Bosss Orders CLB,https://tcgplayer-cdn.tcgplayer.com/product/528015_200w.jpg,3,23323,https://cpt.tcgcsv.com/kdf6,2024-07-18T16:11:59.353,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Switch in 1 of your opponent's Benched Pokémon to the Active Spot.
+<br>
+You may play only 1 Supporter card during your turn.",0.49,0.64,1.99,0.63,,Holofoil,019/034,Classic Collection,Supporter,,,,,,,
+528016,Computer Search (CLB),Computer Search CLB,https://tcgplayer-cdn.tcgplayer.com/product/528016_200w.jpg,3,23323,https://cpt.tcgcsv.com/ldf6,2024-07-18T16:12:56.043,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+You can use this card only if you discard 2 other cards from your hand.
+<br>Search your deck for a card and put it into your hand. Then, shuffle your deck.
+<br><br>You may play any number of Item cards during your turn.",0.19,0.4,3.99,0.39,,Holofoil,020/034,Classic Collection,Trainer,,,,,,,
+528017,Double Colorless Energy (CLB),Double Colorless Energy CLB,https://tcgplayer-cdn.tcgplayer.com/product/528017_200w.jpg,3,23323,https://cpt.tcgcsv.com/mdf6,2025-02-01T04:23:26.87,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+As long as this card is attached to a Pokémon, it provides [2] Energy.",0.36,0.54,7.97,0.52,0.49,Holofoil,032/034,Classic Collection,Special Colorless Energy,,,,,,,
+528018,Poke Ball (CLB),Poke Ball CLB,https://tcgplayer-cdn.tcgplayer.com/product/528018_200w.jpg,3,23323,https://cpt.tcgcsv.com/ndf6,2024-07-18T16:15:47.61,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Flip a coin. If heads, search your deck for a Pokemon, reveal it, and put it into your hand. Then, shuffle your deck.
+<br>
+<br>You may play any number of Item cards during your turn.",0.07,0.25,1.99,0.17,,Holofoil,023/034,Classic Collection,Item,,,,,,,
+528019,Pokemon Fan Club (CLB),Pokemon Fan Club CLB,https://tcgplayer-cdn.tcgplayer.com/product/528019_200w.jpg,3,23323,https://cpt.tcgcsv.com/pdf6,2024-07-18T16:16:10.123,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Search your deck for up to 2 Basic Pokemon, reveal them, and put them into your hand. Then, shuffle your deck.
+<br>
+<br>You may play only 1 Supporter card during your turn (before your attack)",0.09,0.25,10.0,0.21,,Holofoil,024/034,Classic Collection,Supporter,,,,,,,
+528020,Professor Oak (CLB),Professor Oak CLB,https://tcgplayer-cdn.tcgplayer.com/product/528020_200w.jpg,3,23323,https://cpt.tcgcsv.com/qdf6,2024-07-18T16:16:51.05,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Discard your hand, then draw 7 cards.
+<br>
+<br>You may play only 1 Supporter card during your turn",0.08,0.25,1.99,0.21,,Holofoil,025/034,Classic Collection,Supporter,,,,,,,
+528021,Rare Candy (CLB),Rare Candy CLB,https://tcgplayer-cdn.tcgplayer.com/product/528021_200w.jpg,3,23323,https://cpt.tcgcsv.com/rdf6,2024-07-18T16:17:20.623,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Choose 1 of your Basic Pokemon in play. If you have a Stage 2 card in your hand that evolves from that Pokemon, put that card on the Basic Pokemon to evolve it, skipping the stage 1. You can't use this card during your first turn or on a Basic Pokemon that was put into play this turn.
+<br>
+<br>You may play any number of Item cards during your turn.",0.19,0.4,1.99,0.39,,Holofoil,026/034,Classic Collection,Item,,,,,,,
+528022,Rocket's Admin. (CLB),Rockets Admin CLB,https://tcgplayer-cdn.tcgplayer.com/product/528022_200w.jpg,3,23323,https://cpt.tcgcsv.com/sdf6,2024-07-18T16:17:42.807,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+You may play only one Supporter card each turn.
+<br>
+<br>Each player shuffles his or her hand into their deck.  Then, each player draws a card for each of their remaining Prize cards.",0.03,0.25,3.99,0.25,,Holofoil,027/034,Classic Collection,Supporter,,,,,,,
+528023,Super Rod (CLB),Super Rod CLB,https://tcgplayer-cdn.tcgplayer.com/product/528023_200w.jpg,3,23323,https://cpt.tcgcsv.com/tdf6,2024-07-18T16:19:14.097,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Shuffle up to 3 in any combination of Pokémon and Basic Energy cards from your discard pile into your deck.
+<br>
+You may play any number of Item cards during your turn.",0.39,0.62,3.15,0.56,,Holofoil,028/034,Classic Collection,Item,,,,,,,
+528024,Switch (CLB),Switch CLB,https://tcgplayer-cdn.tcgplayer.com/product/528024_200w.jpg,3,23323,https://cpt.tcgcsv.com/vdf6,2024-07-18T16:19:43.08,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Switch your Active Pokémon with 1 of your Benched Pokémon.
+<br>
+You may play any number of Item cards during your turn.",0.09,0.25,3.99,0.2,,Holofoil,029/034,Classic Collection,Item,,,,,,,
+528025,Ultra Ball (CLB),Ultra Ball CLB,https://tcgplayer-cdn.tcgplayer.com/product/528025_200w.jpg,3,23323,https://cpt.tcgcsv.com/wdf6,2024-07-18T16:20:01.99,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+You can use this card only if you discard 2 other cards from your hand.
+<br>Search your deck for a Pokemon, reveal it, and put it into your hand. Then, shuffle your deck.
+<br>
+You may play any number of Item cards during your turn.",0.14,0.32,5.0,0.29,,Holofoil,030/034,Classic Collection,Trainer — Item,,,,,,,
+528026,Drops in the Ocean,Drops in the Ocean,https://tcgplayer-cdn.tcgplayer.com/product/528026_200w.jpg,3,23323,https://cpt.tcgcsv.com/xdf6,2024-07-18T16:13:50.03,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+The attacks used by the Blastoise this card is attached to do 100 more damage to your opponent’s Active Pokémon (before applying Weakness and Resistance).",0.01,0.25,5.0,0.15,0.15,Holofoil,021/034,Classic Collection,Tool,,,,,,,
+528027,Fisherman,Fisherman,https://tcgplayer-cdn.tcgplayer.com/product/528027_200w.jpg,3,23323,https://cpt.tcgcsv.com/zdf6,2024-07-18T16:14:11.973,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Put 4 Basic Energy cards from your discard pile into your hand.
+<br>
+<br><em>You may play only 1 Supporter card during your turn (before your attack)</em>",0.14,0.35,1.99,0.35,,Holofoil,022/034,Classic Collection,Supporter,,,,,,,
+528028,Super Scoop Up,Super Scoop Up,https://tcgplayer-cdn.tcgplayer.com/product/528028_200w.jpg,3,23323,https://cpt.tcgcsv.com/Bdf6,2024-07-18T16:19:36.163,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Flip a coin. If heads, put 1 of your Pokemon and all cards attached to it into your hand.
+<br> You may play any number of Item cards during your turn.",0.18,0.3,1.99,0.3,,Holofoil,028/034,Classic Collection,Item,,,,,,,
+528184,Mr. Mime,Mr Mime,https://tcgplayer-cdn.tcgplayer.com/product/528184_200w.jpg,3,23323,https://cpt.tcgcsv.com/Jhf6,2024-07-18T16:15:25.963,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+<strong>Pokémon Power: Dampening Shield</strong> As long as this Pokémon is on your Bench, Pokémon in play <em>(both yours and your opponent's)</em> have no Weakness or Resistance.",0.4,0.99,17.5,0.76,,Holofoil,013/034,Classic Collection,Psychic,50,Basic,"[1P] Juggling (10x)
+<br>Flip 4 coins. This attack does 10 damage for each heads.",Px2,None,1,
+528200,VS Seeker (CLB),VS Seeker CLB,https://tcgplayer-cdn.tcgplayer.com/product/528200_200w.jpg,3,23323,https://cpt.tcgcsv.com/0jf6,2025-07-14T19:54:31.72,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Put a supporter card from your discard pile into your hand.
+<br>You may play any number of Item cards during your turn.",1.25,1.58,5.99,1.46,,Holofoil,031/034,Holo Rare,Item,,,,,,,
+528201,Basic Water Energy,Basic Water Energy,https://tcgplayer-cdn.tcgplayer.com/product/528201_200w.jpg,3,23323,https://cpt.tcgcsv.com/2jf6,2024-08-12T12:13:18.38,1,,0.4,0.7,5.0,0.56,,Holofoil,033/034,Classic Collection,Basic Energy,,,,,,,
+528203,Basic Psychic Energy,Basic Psychic Energy,https://tcgplayer-cdn.tcgplayer.com/product/528203_200w.jpg,3,23323,https://cpt.tcgcsv.com/5jf6,2024-08-12T12:13:11.467,1,,0.4,0.78,2.0,0.74,,Normal,034/034,Classic Collection,Basic Energy,,,,,,,
+528207,VS Seeker (CLC),VS Seeker CLC,https://tcgplayer-cdn.tcgplayer.com/product/528207_200w.jpg,3,23323,https://cpt.tcgcsv.com/9jf6,2024-07-18T16:21:09.1,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Put a supporter card from your discard pile into your hand.
+<br>You may play any number of Item cards during your turn.",1.0,1.74,14469.45,1.54,,Normal,031/034,Holo Rare,Item,,,,,,,
+528225,VS Seeker (CLV),VS Seeker CLV,https://tcgplayer-cdn.tcgplayer.com/product/528225_200w.jpg,3,23323,https://cpt.tcgcsv.com/wjf6,2024-07-18T16:21:24.48,1,"<span style=""color:red"">Note: This card is <strong>NOT</strong> tournament legal.</span><br>
+Put a supporter card from your discard pile into your hand.
+<br>You may play any number of Item cards during your turn.",1.25,1.65,4.99,1.6,,Holofoil,031/034,Holo Rare,Item,,,,,,,

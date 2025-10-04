@@ -32,6 +32,7 @@ authRoutes.post(
   validateRequest(emailOTPSchema),
   authController.verifyEmailWithOTP
 );
+
 authRoutes.post(
   "/resend-verification-otp",
   validateRequest(resendOTPSchema),

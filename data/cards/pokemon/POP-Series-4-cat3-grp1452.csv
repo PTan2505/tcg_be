@@ -1,0 +1,73 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extAttack2,extWeakness,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extCardText,extResistance
+84298,Chimecho (Delta Species),Chimecho Delta Species,https://tcgplayer-cdn.tcgplayer.com/product/84298_200w.jpg,3,1452,https://cpt.tcgcsv.com/-KH,2022-09-23T19:20:24.03,1,001/017,Rare,Metal,60,Basic,"[1] Wrap
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.","[1M] Sonicboom (30)
+<br>This attack's damage isn't affected by Weakness or Resistance.",P,1,,,,,,,,
+84409,Combusken,Combusken,https://tcgplayer-cdn.tcgplayer.com/product/84409_200w.jpg,3,1452,https://cpt.tcgcsv.com/cNH,2022-09-23T19:21:16.333,1,006/017,Uncommon,Fire,70,Stage 1,"[R] Smokescreen (10)
+<br>If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.","[2R] Sky Uppercut (40)
+<br>This attack's damage isn't affected by Resistance.",W,1,5.95,6.71,8.5,6.19,,Normal,,
+84409,Combusken,Combusken,https://tcgplayer-cdn.tcgplayer.com/product/84409_200w.jpg,3,1452,https://cpt.tcgcsv.com/cNH,2022-09-23T19:21:16.333,1,006/017,Uncommon,Fire,70,Stage 1,"[R] Smokescreen (10)
+<br>If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.","[2R] Sky Uppercut (40)
+<br>This attack's damage isn't affected by Resistance.",W,1,4.0,7.57,12.72,8.47,,Holofoil,,
+84765,Deoxys (Delta Species),Deoxys Delta Species,https://tcgplayer-cdn.tcgplayer.com/product/84765_200w.jpg,3,1452,https://cpt.tcgcsv.com/kWH,2022-09-23T19:24:54.53,1,002/017,Rare,Colorless,70,Basic,"[2] Crystal Laser (20)
+<br>During your next turn, Deoxys's attacks do 40 more damage to the Defending Pokémon <em>(before applying Weakness and Resistance)</em>.",,P,1,6.74,7.37,7.99,26.57,,Normal,"<strong>Poké-POWER — Form Change</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may search your deck for another Deoxys and switch it with Deoxys. (Any cards attached to Deoxys, damage counters, Special Conditions, and effects on it are now on the new Pokémon.) If you do, put Deoxys on top of your deck. Shuffle your deck afterward. You can't use more than 1 Form Change Poké-Power each turn.",
+84765,Deoxys (Delta Species),Deoxys Delta Species,https://tcgplayer-cdn.tcgplayer.com/product/84765_200w.jpg,3,1452,https://cpt.tcgcsv.com/kWH,2022-09-23T19:24:54.53,1,002/017,Rare,Colorless,70,Basic,"[2] Crystal Laser (20)
+<br>During your next turn, Deoxys's attacks do 40 more damage to the Defending Pokémon <em>(before applying Weakness and Resistance)</em>.",,P,1,56.0,80.4,199.99,40.08,,Holofoil,"<strong>Poké-POWER — Form Change</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may search your deck for another Deoxys and switch it with Deoxys. (Any cards attached to Deoxys, damage counters, Special Conditions, and effects on it are now on the new Pokémon.) If you do, put Deoxys on top of your deck. Shuffle your deck afterward. You can't use more than 1 Form Change Poké-Power each turn.",
+84774,Deoxys ex,Deoxys ex,https://tcgplayer-cdn.tcgplayer.com/product/84774_200w.jpg,3,1452,https://cpt.tcgcsv.com/vWH,2022-09-23T19:27:31.38,1,017/017,Ultra Rare,Psychic,110,Basic,"[3] Fastwave (50)
+<br>This attack's damage isn't affected by Resistance, Poké-Powers, Poké-Bodies, or any other effects on the Defending Pokémon.",,P,1,299.0,357.4,359.9,200.0,,Normal,"<strong>Poké-POWER — Form Change</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may search your deck for another Deoxys ex and switch it with Deoxys ex. (Any cards attached to Deoxys ex, damage counters, Special Conditions, and effects on it are now on the new Pokémon.) If you do, put Deoxys ex on top of your deck. Shuffle your deck afterward. You can't use more than 1 Form Change Poké-Power each turn.
+<br><br><em>Pokémon-EX rule — When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.</em>",
+85524,Flygon,Flygon,https://tcgplayer-cdn.tcgplayer.com/product/85524_200w.jpg,3,1452,https://cpt.tcgcsv.com/vdJ,2022-12-07T16:48:03.367,1,003/017,Rare,Fighting,120,Stage 2,[1F] Bite (30),"[3F] Sand Pit (70)
+<br>The Defending Pokémon can't retreat during your opponent's next turn.",W,2,0.02,0.02,0.02,14.0,,Normal,"<strong>Poké-BODY — Levitate</strong>
+<br>
+As long as Flygon has any Energy attached to it, the Retreat Cost for Flygon is 0.",
+85524,Flygon,Flygon,https://tcgplayer-cdn.tcgplayer.com/product/85524_200w.jpg,3,1452,https://cpt.tcgcsv.com/vdJ,2022-12-07T16:48:03.367,1,003/017,Rare,Fighting,120,Stage 2,[1F] Bite (30),"[3F] Sand Pit (70)
+<br>The Defending Pokémon can't retreat during your opponent's next turn.",W,2,10.32,14.83,17.8,19.24,,Holofoil,"<strong>Poké-BODY — Levitate</strong>
+<br>
+As long as Flygon has any Energy attached to it, the Retreat Cost for Flygon is 0.",
+85940,Grovyle,Grovyle,https://tcgplayer-cdn.tcgplayer.com/product/85940_200w.jpg,3,1452,https://cpt.tcgcsv.com/QnJ,2022-09-23T19:29:04.42,1,007/017,Uncommon,Grass,70,Stage 1,"[1] Quick Attack (10+)
+<br>Flip a coin. If heads, this attack does 10 damage plus 10 more damage.","[1G] Blot (20)
+<br>Remove 2 damage counters from Grovyle.",R,1,15.0,16.61,29.95,15.04,,Normal,,W
+86038,Heal Energy,Heal Energy,https://tcgplayer-cdn.tcgplayer.com/product/86038_200w.jpg,3,1452,https://cpt.tcgcsv.com/NqJ,2022-09-23T19:30:11.663,1,008/017,Uncommon,Special Energy,,,,,,,5.43,5.43,5.43,6.31,,Normal,"Heal Energy provides 1 Colorless Energy. When you attach this card from your hand to 1 of your Pokémon, remove 1 damage counter and all Special Conditions from that Pokémon. If Heal Energy is attached to Pokémon-ex, Heal Energy has no effect other than providing Energy.",
+87401,Mew,Mew,https://tcgplayer-cdn.tcgplayer.com/product/87401_200w.jpg,3,1452,https://cpt.tcgcsv.com/2-J,2022-09-23T19:31:19.253,1,004/017,Rare,Psychic,70,Basic,"[1P] Psyshock (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",,P,1,32.85,32.85,32.85,23.28,,Normal,"<strong>Poké-BODY — Reactive Barrier</strong>
+<br>
+As long as Mew has any React Energy cards attached to it, prevent all effects, excluding damage, done to Mew by attacks from your opponent's Pokémon.",
+87401,Mew,Mew,https://tcgplayer-cdn.tcgplayer.com/product/87401_200w.jpg,3,1452,https://cpt.tcgcsv.com/2-J,2022-09-23T19:31:19.253,1,004/017,Rare,Psychic,70,Basic,"[1P] Psyshock (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",,P,1,30.5,35.37,99.99,51.09,,Holofoil,"<strong>Poké-BODY — Reactive Barrier</strong>
+<br>
+As long as Mew has any React Energy cards attached to it, prevent all effects, excluding damage, done to Mew by attacks from your opponent's Pokémon.",
+87613,Mudkip,Mudkip,https://tcgplayer-cdn.tcgplayer.com/product/87613_200w.jpg,3,1452,https://cpt.tcgcsv.com/h3K,2022-09-23T19:32:02.287,1,011/017,Common,Water,50,Basic,"[1W] Super Hypno Wave (20)
+<br>The Defending Pokémon is now Asleep.",,G,1,24.0,24.85,25.69,6.34,,Normal,,
+87613,Mudkip,Mudkip,https://tcgplayer-cdn.tcgplayer.com/product/87613_200w.jpg,3,1452,https://cpt.tcgcsv.com/h3K,2022-09-23T19:32:02.287,1,011/017,Common,Water,50,Basic,"[1W] Super Hypno Wave (20)
+<br>The Defending Pokémon is now Asleep.",,G,1,50.9,50.9,50.9,11.79,,Holofoil,,
+88049,Pidgey,Pidgey,https://tcgplayer-cdn.tcgplayer.com/product/88049_200w.jpg,3,1452,https://cpt.tcgcsv.com/_dK,2022-09-23T19:34:44.033,1,012/017,Common,Colorless,40,Basic,"[2] Quick Attack (20+)
+<br>Flip a coin. If heads, this attack does 20 damage plus 10 more damage.",,L,1,2.5,3.1,3.69,3.11,,Normal,,F
+88083,Pikachu,Pikachu,https://tcgplayer-cdn.tcgplayer.com/product/88083_200w.jpg,3,1452,https://cpt.tcgcsv.com/HfK,2022-09-23T19:35:19.05,1,013/017,Common,Lightning,50,Basic,"[1L] Spark (20)
+<br>Does 10 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",,F,1,19.69,24.38,31.4,24.19,,Normal,,
+88083,Pikachu,Pikachu,https://tcgplayer-cdn.tcgplayer.com/product/88083_200w.jpg,3,1452,https://cpt.tcgcsv.com/HfK,2022-09-23T19:35:19.05,1,013/017,Common,Lightning,50,Basic,"[1L] Spark (20)
+<br>Does 10 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",,F,1,15.0,29.75,39.99,39.39,,Holofoil,,
+88226,Pokemon Fan Club,Pokemon Fan Club,https://tcgplayer-cdn.tcgplayer.com/product/88226_200w.jpg,3,1452,https://cpt.tcgcsv.com/xjK,2022-09-23T19:36:04.797,1,009/017,Uncommon,Supporter,,,,,,,50.0,50.0,50.0,90.87,,Normal,"You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card.
+<br>
+<br>Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Shuffle your deck afterward.",
+88948,Sceptile,Sceptile,https://tcgplayer-cdn.tcgplayer.com/product/88948_200w.jpg,3,1452,https://cpt.tcgcsv.com/-BK,2022-09-23T19:38:28.393,1,005/017,Rare,Grass,100,Stage 2,"[2G] Tail Rap (50x)
+<br>Flip 2 coins. This attack does 50 damage times the number of heads.",,R,3,150.0,175.66,229.98,149.99,,Normal,"<strong>Poké-POWER — Energy Trans</strong>
+<br>
+As often as you like during your turn <em>(before your attack)</em>, move a Grass Energy card attached to 1 of your Pokémon to another of your Pokémon. This power can't be used if Sceptile is affected by a Special Condition.",W
+88988,Scramble Energy,Scramble Energy,https://tcgplayer-cdn.tcgplayer.com/product/88988_200w.jpg,3,1452,https://cpt.tcgcsv.com/NCK,2022-09-23T19:40:48.043,1,010/017,Uncommon,Special Energy,,,,,,,4.74,5.14,8.76,5.24,,Normal,"Scramble Energy can be attached only to an Evolved Pokémon (excluding Pokémon-ex). Scramble Energy provides 1 Colorless Energy. While in play, if you have more Prize cards left than your opponent, Scramble Energy provides every type of Energy but provides only 3 in any combination at a time. If the Pokémon Scramble Energy is attached to isn't an Evolved Pokémon (or evolves into Pokémon-ex), discard Scramble Energy.",
+89493,Squirtle,Squirtle,https://tcgplayer-cdn.tcgplayer.com/product/89493_200w.jpg,3,1452,https://cpt.tcgcsv.com/TPK,2023-02-01T15:02:28.727,1,014/017,Common,Water,50,Basic,[1] Tackle (10),,L,1,20.0,33.5,47.0,23.25,,Normal,"<strong>Poké-BODY — Shell Retreat</strong>
+<br>
+As long as Squirtle has any Energy cards attached to it, damage done to Squirtle by an opponent's attack is reduced by 10 <em>(after applying Weakness and Resistance)</em>.",
+90045,Treecko (Delta Species),Treecko Delta Species,https://tcgplayer-cdn.tcgplayer.com/product/90045_200w.jpg,3,1452,https://cpt.tcgcsv.com/W0L,2022-09-23T19:42:27.793,1,015/017,Common,Psychic,40,Basic,[1] Pound (10),"[P] Shining Claws (10)
+<br>Flip a coin. If heads, the Defending Pokémon is now Confused.",R,1,3.5,3.69,9.0,4.14,,Normal,,W
+90618,Wobbuffet,Wobbuffet,https://tcgplayer-cdn.tcgplayer.com/product/90618_200w.jpg,3,1452,https://cpt.tcgcsv.com/ngL,2022-09-23T19:43:19.317,1,016/017,Common,Psychic,80,Basic,"[1] Nap
+<br>Remove 2 damage counters from Wobbuffet.","[1P] Expand (20)
+<br>During your opponent's next turn, any damage done to Wobbuffet is reduced by 20 <em>(after applying Weakness and Resistance.)</em>.",P,2,0.85,1.06,1.95,0.9,,Normal,,
+90618,Wobbuffet,Wobbuffet,https://tcgplayer-cdn.tcgplayer.com/product/90618_200w.jpg,3,1452,https://cpt.tcgcsv.com/ngL,2022-09-23T19:43:19.317,1,016/017,Common,Psychic,80,Basic,"[1] Nap
+<br>Remove 2 damage counters from Wobbuffet.","[1P] Expand (20)
+<br>During your opponent's next turn, any damage done to Wobbuffet is reduced by 20 <em>(after applying Weakness and Resistance.)</em>.",P,2,0.99,4.25,6.0,5.74,,Holofoil,,
+190533,POP Series 4 Pack,POP Series 4 Pack,https://tcgplayer-cdn.tcgplayer.com/product/190533_200w.jpg,3,1452,https://cpt.tcgcsv.com/Hdx2,2019-05-16T15:23:12.47,1,,,,,,,,,,92.9,92.9,92.9,81.33,,Normal,Each POP Series 4 Pack contains 2 random cards for the Promotional POP Series 4.,

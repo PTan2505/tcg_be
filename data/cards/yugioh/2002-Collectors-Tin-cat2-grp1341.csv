@@ -1,0 +1,43 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extAttribute,extMonsterType,extCardType,extAttack,extDefense,extDescription,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName
+22794,Dark Magician,Dark Magician,https://tcgplayer-cdn.tcgplayer.com/product/22794_200w.jpg,2,1341,https://cpt.tcgcsv.com/V7c,2024-03-28T15:37:08.62,1,BPT-001,Secret Rare,DARK,Spellcaster,Normal Monster,2500,2100,<em>The ultimate wizard in terms of attack and defense.</em>,49.0,100.0,130.78,111.52,,Limited
+22795,Summoned Skull,Summoned Skull,https://tcgplayer-cdn.tcgplayer.com/product/22795_200w.jpg,2,1341,https://cpt.tcgcsv.com/W7c,2025-02-21T20:52:02.617,1,BPT-002,Secret Rare,DARK,Fiend,Normal Monster,2500,1200,"<em>A fiend with dark powers for confusing the enemy. Among the Fiend-Type monsters, this monster boasts considerable force.</em>",23.0,42.49,99.99,60.58,63.22,Limited
+22796,Blue-Eyes White Dragon,Blue Eyes White Dragon,https://tcgplayer-cdn.tcgplayer.com/product/22796_200w.jpg,2,1341,https://cpt.tcgcsv.com/X7c,2024-08-31T08:52:20.87,1,BPT-003,Secret Rare,LIGHT,Dragon,Normal Monster,3000,2500,"<em>This legendary dragon is a powerful engine of destruction. Virtually invincible, very few have faced this awesome creature and lived to tell the tale.</em>",26.08,60.0,500.0,54.33,,Limited
+22797,Lord of D.,Lord of D,https://tcgplayer-cdn.tcgplayer.com/product/22797_200w.jpg,2,1341,https://cpt.tcgcsv.com/Z7c,2025-02-24T18:12:12.857,1,BPT-004,Secret Rare,DARK,Spellcaster,Effect Monster,1200,1100,"All Dragon-Type monsters cannot be targeted by Spell Cards, Trap Cards, or other effects that specifically designate a target while this card is face-up on the field.",6.1,15.95,24.0,21.08,,Limited
+22798,Red-Eyes B. Dragon,Red Eyes B Dragon,https://tcgplayer-cdn.tcgplayer.com/product/22798_200w.jpg,2,1341,https://cpt.tcgcsv.com/-7c,2025-02-21T20:50:55.837,1,BPT-005,Secret Rare,DARK,Dragon,Normal Monster,2400,2000,<em>A ferocious dragon with a deadly attack.</em>,31.0,46.0,93.99,75.88,,Limited
+22799,B. Skull Dragon,B Skull Dragon,https://tcgplayer-cdn.tcgplayer.com/product/22799_200w.jpg,2,1341,https://cpt.tcgcsv.com/_7c,2024-03-28T15:37:08.917,1,BPT-006,Secret Rare,DARK,Dragon,Fusion Monster,3200,2500,"""Summoned Skull"" + ""Red-Eyes B. Dragon""",31.33,60.88,79.99,64.6,,Limited
+206876,2002 Collectors Tin: Yami Yugi & Dark Magician,2002 Collectors Tin Yami Yugi and Dark Magician,https://tcgplayer-cdn.tcgplayer.com/product/206876_200w.jpg,2,1341,https://cpt.tcgcsv.com/xMG2,2021-04-09T12:52:41.677,1,,,,,,,,"Each Collectible Tin 2002 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 2 Legend of Blue Eyes White Dragon
+<br><span style=""color:white"">____</span> • 2 Metal Raiders
+<br><span style=""color:white"">____</span> • 1 Magic Ruler
+<br>• 1 Secret Rare promotional card",,,,,,
+206877,2002 Collectors Tin: Yami Yugi & Summoned Skull,2002 Collectors Tin Yami Yugi and Summoned Skull,https://tcgplayer-cdn.tcgplayer.com/product/206877_200w.jpg,2,1341,https://cpt.tcgcsv.com/zMG2,2020-01-16T20:52:47.767,1,,,,,,,,"Each Collectible Tin 2002 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 2 Legend of Blue Eyes White Dragon
+<br><span style=""color:white"">____</span> • 2 Metal Raiders
+<br><span style=""color:white"">____</span> • 1 Spell Ruler <em>(formally Magic Ruler)</em>
+<br>• 1 Secret Rare promotional card",,,,,,
+206878,2002 Collectors Tin: Seto Kaiba & Blue-Eyes White Dragon,2002 Collectors Tin Seto Kaiba and Blue Eyes White Dragon,https://tcgplayer-cdn.tcgplayer.com/product/206878_200w.jpg,2,1341,https://cpt.tcgcsv.com/BMG2,2020-01-16T20:51:33.56,1,,,,,,,,"Each Collectible Tin 2002 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 2 Legend of Blue Eyes White Dragon
+<br><span style=""color:white"">____</span> • 2 Metal Raiders
+<br><span style=""color:white"">____</span> • 1 Spell Ruler <em>(formally Magic Ruler)</em>
+<br>• 1 Secret Rare promotional card",,,,,,
+206879,2002 Collectors Tin: Seto Kaiba & Lord of D.,2002 Collectors Tin Seto Kaiba and Lord of D,https://tcgplayer-cdn.tcgplayer.com/product/206879_200w.jpg,2,1341,https://cpt.tcgcsv.com/CMG2,2020-01-16T20:51:41.077,1,,,,,,,,"Each Collectible Tin 2002 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 2 Legend of Blue Eyes White Dragon
+<br><span style=""color:white"">____</span> • 2 Metal Raiders
+<br><span style=""color:white"">____</span> • 1 Spell Ruler <em>(formally Magic Ruler)</em>
+<br>• 1 Secret Rare promotional card",,,,,,
+206880,2002 Collectors Tin: Joey Wheeler & Red-Eyes B. Dragon,2002 Collectors Tin Joey Wheeler and Red Eyes B Dragon,https://tcgplayer-cdn.tcgplayer.com/product/206880_200w.jpg,2,1341,https://cpt.tcgcsv.com/DMG2,2020-01-16T20:50:41.737,1,,,,,,,,"Each Collectible Tin 2002 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 2 Legend of Blue Eyes White Dragon
+<br><span style=""color:white"">____</span> • 2 Metal Raiders
+<br><span style=""color:white"">____</span> • 1 Spell Ruler <em>(formally Magic Ruler)</em>
+<br>• 1 Secret Rare promotional card",,,,,,
+206881,2002 Collectors Tin: Joey Wheeler & B. Skull Dragon,2002 Collectors Tin Joey Wheeler and B Skull Dragon,https://tcgplayer-cdn.tcgplayer.com/product/206881_200w.jpg,2,1341,https://cpt.tcgcsv.com/FMG2,2020-01-16T20:50:32.993,1,,,,,,,,"Each Collectible Tin 2002 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 2 Legend of Blue Eyes White Dragon
+<br><span style=""color:white"">____</span> • 2 Metal Raiders
+<br><span style=""color:white"">____</span> • 1 Spell Ruler <em>(formally Magic Ruler)</em>
+<br>• 1 Secret Rare promotional card",,,,,,

@@ -1,0 +1,23 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extDescription,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extNumber,extRarity,extAttribute,extMonsterType,extCardType,extAttack,extDefense
+145608,Yugi's Collector Box,Yugis Collector Box,https://tcgplayer-cdn.tcgplayer.com/product/145608_200w.jpg,2,2052,https://cpt.tcgcsv.com/bgb2,2018-01-02T14:51:34.343,1,"Each Yugi's Collector Box contains:
+<br>
+<br>
+<br>• 1 Starter Deck: Yugi Reloaded
+<br>• 3 Duelist Pack: Yugi Booster Packs
+<br>• 3 Duelist Pack: Kaiba Booster Packs
+<br>• 1 Ultra Rare ""Dark Magician""
+<br>• 1 Case Topper ""Dark Magician""",99.99,99.99,99.99,94.68,,Normal,,,,,,,
+146150,Dark Magician,Dark Magician,https://tcgplayer-cdn.tcgplayer.com/product/146150_200w.jpg,2,2052,https://cpt.tcgcsv.com/0tb2,2017-12-22T14:19:44.643,1,<em>The ultimate wizard in terms of attack and defense.</em>,0.98,1.56,6.33,1.48,,Limited,YUCB-EN001,Ultra Rare,DARK,Spellcaster,Normal Monster,2500,2100
+146151,Dark Magician (Oversized),Dark Magician Oversized,https://tcgplayer-cdn.tcgplayer.com/product/146151_200w.jpg,2,2052,https://cpt.tcgcsv.com/2tb2,2019-06-24T19:11:21.93,1,<em>The ultimate wizard in terms of attack and defense.</em>,5.0,7.15,25.0,7.13,,Limited,YUCB-EN001,Promo,DARK,Spellcaster,Normal Monster,2500,2100
+149407,Kaiba's Collector Box,Kaibas Collector Box,https://tcgplayer-cdn.tcgplayer.com/product/149407_200w.jpg,2,2052,https://cpt.tcgcsv.com/9Nc2,2017-12-22T14:18:41.503,1,"The Starter Deck: Kaiba Reloaded is a modern revamp of the original Dueling Legend’s Starter Deck; this 50-card Deck features Kaiba’s favorite cards, like <strong>Battle Ox</strong>, <strong>Vorse Raider</strong>, and <strong>Enemy Controller</strong>, and is tuned to provide a fun and entertaining experience for players of all skill levels. Fans can enhance their <em>Starter Deck: Kaiba Reloaded</em> further with the 3 booster packs of <em>Duelist Pack: Kaiba</em> and 3 booster packs of <em>Duelist Pack: Yugi</em> that are also included. <em>Duelist Pack: Kaiba</em> and <em>Duelist Pack: Yugi</em> have both been out of print for years, and contain highly sought-after cards like <strong>Chaos Emperor Dragon - Envoy of the End</strong>, <strong>Sorcerer of Dark Magic</strong>, <strong>Pot of Greed</strong>, and <strong>Crush Card Virus</strong>.
+<br>
+<br>Unleash the raw power of your Deck just like Seto Kaiba and decimate your opponents with his <strong>Blue-Eyes White Dragon</strong>!
+<br>
+<br>Each Kaiba’s Collector Box contains:
+<br>1 Starter Deck: Kaiba Reloaded
+<br>3 Duelist Pack: Kaiba booster packs
+<br>3 Duelist Pack: Yugi booster packs
+<br>1 Ultra Rare variant art Blue-Eyes White Dragon
+<br>1 variant art Oversized Blue-Eyes White Dragon Card",84.99,97.25,159.96,84.56,,Normal,,,,,,,
+152428,Blue-Eyes White Dragon,Blue Eyes White Dragon,https://tcgplayer-cdn.tcgplayer.com/product/152428_200w.jpg,2,2052,https://cpt.tcgcsv.com/B-d2,2017-12-22T14:19:14.817,1,"<em>This legendary dragon is a powerful engine of destruction. Virtually invincible, very few have faced this awesome creature and lived to tell the tale.</em>",1.0,2.21,6.49,2.37,,Limited,KACB-EN001,Ultra Rare,LIGHT,Dragon,Normal Monster,3000,2500
+152429,Blue-Eyes White Dragon (Oversized),Blue Eyes White Dragon Oversized,https://tcgplayer-cdn.tcgplayer.com/product/152429_200w.jpg,2,2052,https://cpt.tcgcsv.com/C-d2,2021-04-16T20:46:24.65,1,"<em>This legendary dragon is a powerful engine of destruction. Virtually invincible, very few have faced this awesome creature and lived to tell the tale.</em>",4.99,6.5,25.0,5.5,,Limited,KACB-EN001,Promo,LIGHT,Dragon,Normal Monster,3000,2500

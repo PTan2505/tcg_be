@@ -1,0 +1,53 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extAttribute,extMonsterType,extCardType,extAttack,extDefense,extDescription,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName
+26452,Elemental HERO Neos,Elemental HERO Neos,https://tcgplayer-cdn.tcgplayer.com/product/26452_200w.jpg,2,129,https://cpt.tcgcsv.com/3Cd,2025-03-21T19:14:17.093,1,CT03-EN001,Secret Rare,LIGHT,Warrior,Normal Monster,2500,2000,<em>A new Elemental Hero has arrived from Neo-Space! When he initiates a Contact Fusion with a Neo-Spacian his unknown powers are unleashed.</em>,5.96,13.59,84.98,13.16,,Limited
+26453,Cyber Dragon,Cyber Dragon,https://tcgplayer-cdn.tcgplayer.com/product/26453_200w.jpg,2,129,https://cpt.tcgcsv.com/5Cd,2025-03-21T19:13:15.977,1,CT03-EN002,Secret Rare,LIGHT,Machine,Effect Monster,2100,1600,"If there is a monster on your opponent's side of the field and there are no monsters on your side of the field, you can Special Summon this card from your hand.",8.5,13.83,25.0,11.34,,Limited
+26454,"Raviel, Lord of Phantasms",Raviel Lord of Phantasms,https://tcgplayer-cdn.tcgplayer.com/product/26454_200w.jpg,2,129,https://cpt.tcgcsv.com/6Cd,2025-03-21T19:10:03.033,1,CT03-EN003,Secret Rare,DARK,Fiend,Effect Monster,4000,4000,"This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except by Tributing 3 Fiend-Type monsters. Each time your opponent Normal Summons a monster(s), Special Summon 1 ""Phantasm Token"" (Fiend-Type/DARK/Level 1/ATK 1000/DEF 1000). This token cannot declare an attack. Once per turn, by Tributing 1 monster, this card gains ATK equal to that monster's original ATK, until the End Phase.",0.99,2.75,22.0,2.46,,Limited
+80158,"Hamon, Lord of Striking Thunder",Hamon Lord of Striking Thunder,https://tcgplayer-cdn.tcgplayer.com/product/80158_200w.jpg,2,129,https://cpt.tcgcsv.com/b5G,2025-03-21T19:23:33.68,1,CT03-EN006,Secret Rare,LIGHT,Thunder,Effect Monster,4000,4000,"This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except by sending 3 face-up Continuous Spell Cards from your Side of the field to the Graveyard. When this card destroys your opponent's monster by battle and sends it to the Graveyard, inflict 1000 damage to your opponent. While this card is in face-up Defense Position, your opponent cannot select another monster as an attack target.",2.73,5.89,19.99,6.31,2.98,Limited
+90804,"Uria, Lord of Searing Flames",Uria Lord of Searing Flames,https://tcgplayer-cdn.tcgplayer.com/product/90804_200w.jpg,2,129,https://cpt.tcgcsv.com/6lL,2025-03-21T19:27:06.117,1,CT03-EN005,Secret Rare,FIRE,Pyro,Effect Monster,0,0,"This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except by sending 3 face-up Trap Cards from your side of the field to the Graveyard. This card gains 1000 ATK for each Continuous Trap Card in your Graveyard. Once per turn, you can destroy 1 Set Spell or Trap Card in your opponent's side of the field. Spell and Trap Cards cannot be activated in response to this effect's activation.",3.12,6.52,25.0,6.95,,Limited
+90983,Elemental HERO Shining Flare Wingman,Elemental HERO Shining Flare Wingman,https://tcgplayer-cdn.tcgplayer.com/product/90983_200w.jpg,2,129,https://cpt.tcgcsv.com/HpL,2025-03-21T19:17:56.523,1,CT03-EN004,Secret Rare,LIGHT,Warrior,Fusion/Effect Monster,2500,2100,"""E-Hero Flame Wingman"" + ""E-Hero Sparkman""
+This monster cannot be Special Summoned except by Fusion Summon. This card gains 300 ATK for each ""Elemental Hero"" card in your Graveyard. When this card destroys a monster by battle and sends it to the Graveyard, inflict damage to your opponent equal to the ATK of the destroyed monster.",2.99,7.14,15.99,7.14,4.18,Limited
+206870,"2006 Collectors Tin: Wave 1 - ""Elemental HERO Neos""",2006 Collectors Tin Wave 1 Elemental HERO Neos,https://tcgplayer-cdn.tcgplayer.com/product/206870_200w.jpg,2,129,https://cpt.tcgcsv.com/qMG2,2020-01-07T14:32:49.287,1,,,,,,,,"Each Collectible Tin 2006 Wave 1 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 2 Cybernetic Revolution
+<br><span style=""color:white"">____</span> • 1 Elemental Energy
+<br><span style=""color:white"">____</span> • 1 Shadow of Infinity
+<br><span style=""color:white"">____</span> • 1 Enemy of Justice
+<br>• 1 Secret Rare promotional card",499.94,499.94,499.94,,,Normal
+206871,"2006 Collectors Tin: Wave 1 - ""Cyber Dragon""",2006 Collectors Tin Wave 1 Cyber Dragon,https://tcgplayer-cdn.tcgplayer.com/product/206871_200w.jpg,2,129,https://cpt.tcgcsv.com/rMG2,2020-01-07T14:32:45.917,1,,,,,,,,"Each Collectible Tin 2006 Wave 1 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 2 Cybernetic Revolution
+<br><span style=""color:white"">____</span> • 1 Elemental Energy
+<br><span style=""color:white"">____</span> • 1 Shadow of Infinity
+<br><span style=""color:white"">____</span> • 1 Enemy of Justice
+<br>• 1 Secret Rare promotional card",875.0,887.48,899.95,,,Normal
+206872,"2006 Collectors Tin: Wave 1 - ""Raviel, Lord of Phantasms""",2006 Collectors Tin Wave 1 Raviel Lord of Phantasms,https://tcgplayer-cdn.tcgplayer.com/product/206872_200w.jpg,2,129,https://cpt.tcgcsv.com/sMG2,2020-01-07T14:32:41.763,1,,,,,,,,"Each Collectible Tin 2006 Wave 1 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 2 Cybernetic Revolution
+<br><span style=""color:white"">____</span> • 1 Elemental Energy
+<br><span style=""color:white"">____</span> • 1 Shadow of Infinity
+<br><span style=""color:white"">____</span> • 1 Enemy of Justice
+<br>• 1 Secret Rare promotional card",370.0,382.45,394.9,,,Normal
+206873,"2006 Collectors Tin: Wave 2 - ""Elemental HERO Shining Flare Wingman""",2006 Collectors Tin Wave 2 Elemental HERO Shining Flare Wingman,https://tcgplayer-cdn.tcgplayer.com/product/206873_200w.jpg,2,129,https://cpt.tcgcsv.com/tMG2,2020-01-07T14:32:26.5,1,,,,,,,,"Each Collectible Tin 2006 Wave 2 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Cybernetic Revolution
+<br><span style=""color:white"">____</span> • 1 Elemental Energy
+<br><span style=""color:white"">____</span> • 1 Shadow of Infinity
+<br><span style=""color:white"">____</span> • 1 Enemy of Justice
+<br><span style=""color:white"">____</span> • 1 Power of the Duelist
+<br>• 1 Secret Rare promotional card",399.95,419.98,440.0,,,Normal
+206874,"2006 Collectors Tin: Wave 2 - ""Uria, Lord of Searing Flames""",2006 Collectors Tin Wave 2 Uria Lord of Searing Flames,https://tcgplayer-cdn.tcgplayer.com/product/206874_200w.jpg,2,129,https://cpt.tcgcsv.com/vMG2,2020-01-07T14:32:24.073,1,,,,,,,,"Each Collectible Tin 2006 Wave 2 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Cybernetic Revolution
+<br><span style=""color:white"">____</span> • 1 Elemental Energy
+<br><span style=""color:white"">____</span> • 1 Shadow of Infinity
+<br><span style=""color:white"">____</span> • 1 Enemy of Justice
+<br><span style=""color:white"">____</span> • 1 Power of the Duelist
+<br>• 1 Secret Rare promotional card",489.95,489.95,489.95,,,Normal
+206875,"2006 Collectors Tin: Wave 2 - ""Hamon, Lord of Striking Thunder""",2006 Collectors Tin Wave 2 Hamon Lord of Striking Thunder,https://tcgplayer-cdn.tcgplayer.com/product/206875_200w.jpg,2,129,https://cpt.tcgcsv.com/wMG2,2020-01-07T14:32:21.117,1,,,,,,,,"Each Collectible Tin 2006 Wave 2 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Cybernetic Revolution
+<br><span style=""color:white"">____</span> • 1 Elemental Energy
+<br><span style=""color:white"">____</span> • 1 Shadow of Infinity
+<br><span style=""color:white"">____</span> • 1 Enemy of Justice
+<br><span style=""color:white"">____</span> • 1 Power of the Duelist
+<br>• 1 Secret Rare promotional card",499.95,499.95,499.95,,,Normal

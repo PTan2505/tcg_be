@@ -1,0 +1,452 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extCardText,extAttack1,extWeakness,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extAttack2,extResistance
+83520,Altaria - BW48 (Prerelease),Altaria BW48 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/83520_200w.jpg,3,1407,https://cpt.tcgcsv.com/qqH,2023-11-13T16:39:21.607,1,BW48,Promo,Dragon,70,Basic,"<strong>Ability — Fight Song</strong>
+<br>
+Your Dragon Pokémon's attacks do 20 more damage to the Active Pokémon <em>(before applying Weakness and Resistance)</em>.",[1MW] Glide (40),Ox2,1,8.75,9.5,15.1,8.03,,Holofoil,,
+83548,Ampharos - BW67,Ampharos BW67,https://tcgplayer-cdn.tcgplayer.com/product/83548_200w.jpg,3,1407,https://cpt.tcgcsv.com/-qH,2022-08-09T18:18:16.013,1,BW67,Promo,Lightning,140,Stage 2,,"[L] Random Spark 
+<br>
+This attack does 30 damage to 1 of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>",Fx2,2,8.0,8.0,8.0,11.8,,Holofoil,"[1LL] Electricannon (60+) 
+<br>
+You may discard all L Energy attached to this Pokémon. If you do, this attack does 60 more damage.",
+83666,Axew - BW10,Axew BW10,https://tcgplayer-cdn.tcgplayer.com/product/83666_200w.jpg,3,1407,https://cpt.tcgcsv.com/ltH,2022-08-09T18:18:39.493,1,BW10,Promo,Colorless,50,Basic,,"[2] Dragon Rage (50) 
+<br>
+Flip 2 coins. If either of them is tails, this attack does nothing.",,1,0.75,1.82,7.0,1.84,,Holofoil,,
+83667,Axew - BW16,Axew BW16,https://tcgplayer-cdn.tcgplayer.com/product/83667_200w.jpg,3,1407,https://cpt.tcgcsv.com/mtH,2022-08-08T21:23:54.507,1,BW16,Promo,Colorless,50,Basic,,"[2] Dragon Rage (50) 
+<br>
+Flip 2 coins. If either of them is tails, this attack does nothing.",,1,50.0,74.35,77.41,73.75,,Normal,,
+83669,Axew - BW26,Axew BW26,https://tcgplayer-cdn.tcgplayer.com/product/83669_200w.jpg,3,1407,https://cpt.tcgcsv.com/ptH,2022-08-09T18:19:10.15,1,BW26,Promo,Colorless,50,Basic,,"[2] Big Bite (20) 
+<br>
+The Defending Pokémon can't retreat during your opponent's next turn.",,1,3.99,4.64,5.0,3.96,,Holofoil,,
+83739,Battle City - BW39,Battle City BW39,https://tcgplayer-cdn.tcgplayer.com/product/83739_200w.jpg,3,1407,https://cpt.tcgcsv.com/PvH,2022-08-09T18:19:23.987,1,BW39,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, that player may flip a coin. If heads, the player draws a card.",,,,1.82,4.5,38.0,4.62,,Holofoil,,
+83852,Black Kyurem - BW58,Black Kyurem BW58,https://tcgplayer-cdn.tcgplayer.com/product/83852_200w.jpg,3,1407,https://cpt.tcgcsv.com/3zH,2022-08-09T18:19:45.167,1,BW58,Promo,Dragon,130,Basic,,"[1L] Dual Claw (20x)
+<br>
+Flip 2 coins. This attack does 20 damage times the number of heads.",Ox2,2,18.0,19.98,20.33,19.94,,Holofoil,"[2LW] Flash Freeze (100) 
+<br>
+Discard an Energy attached to this Pokémon.",
+83855,Black Kyurem EX - BW62,Black Kyurem EX BW62,https://tcgplayer-cdn.tcgplayer.com/product/83855_200w.jpg,3,1407,https://cpt.tcgcsv.com/7zH,2022-08-09T18:20:53.067,1,BW62,Promo,Dragon,180,Basic,,"[2L] Dragon Fang (60) 
+<br>
+Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",Ox2,3,2.62,4.22,6.7,4.59,,Holofoil,"[1LLW] Freeze Shock (150) 
+<br>
+This Pokémon can't attack during your next turn.",
+84162,Champions Festival - BW95 (Worlds 13),Champions Festival BW95 Worlds 13,https://tcgplayer-cdn.tcgplayer.com/product/84162_200w.jpg,3,1407,https://cpt.tcgcsv.com/gHH,2022-08-09T18:21:03.45,1,BW95,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play.  If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, if that player has 6 Pokémon in play, he or she may heal 10 damage from each of his or her Pokémon.",,,,,,,,,,,
+84379,Cobalion - BW72,Cobalion BW72,https://tcgplayer-cdn.tcgplayer.com/product/84379_200w.jpg,3,1407,https://cpt.tcgcsv.com/CMH,2022-08-09T18:23:31.25,1,BW72,Promo,Metal,120,Basic,"<strong>Ability — Justified</strong>
+<br>
+Each of this Pokémon's attacks does 50 more damage to Darkness Pokémon <em>(before applying Weakness and Resistance)</em>.","[1MM] Iron Head (60+) 
+<br>
+Flip a coin until you get tails. This attack does 20 more damage for each heads.",Rx2,3,1.01,2.86,7.0,2.66,,Holofoil,,P-20
+84492,Crobat - BW51 (Team Plasma) (Prerelease),Crobat BW51 Team Plasma Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/84492_200w.jpg,3,1407,https://cpt.tcgcsv.com/SPH,2022-08-09T18:23:54.777,1,BW51,Promo,Psychic,130,Stage 2,"<strong>Ability — Night Sight</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may draw a card.","[2P] Ultra-Toxic Fang (40) 
+<br>
+The Defending Pokémon is now Poisoned. Put 4 damage counters instead of 1 on this Pokémon between turns.",Lx2,0,14.99,21.1,39.99,16.39,,Holofoil,,F-20
+84703,Darkrai (Team Plasma) - BW73,Darkrai Team Plasma BW73,https://tcgplayer-cdn.tcgplayer.com/product/84703_200w.jpg,3,1407,https://cpt.tcgcsv.com/5VH,2022-08-09T18:24:58.017,1,BW73,Promo,Darkness,110,Basic,,"[1D] Hide in Shadows (30) 
+<br>You may switch this Pokémon with 1 of your Benched Pokémon.",Fx2,2,299.21,325.52,350.0,122.48,,Holofoil,"[2DD] Dark Hole (90) 
+<br>Flip a coin. If heads, the Defending Pokémon is now Asleep.",P-20
+84707,Darkrai EX - BW46,Darkrai EX BW46,https://tcgplayer-cdn.tcgplayer.com/product/84707_200w.jpg,3,1407,https://cpt.tcgcsv.com/9VH,2022-08-09T18:25:09.12,1,BW46,Promo,Darkness,180,Basic,"<strong>Ability — Dark Cloak</strong>
+<br>
+Each of your Pokémon that has any Darkness Energy attached to it has no Retreat Cost.","[1DD] Night Spear (90) 
+<br>Does 30 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",Fx2,2,4.47,6.16,24.99,8.79,,Holofoil,,P-20
+84720,Darumaka - BW18,Darumaka BW18,https://tcgplayer-cdn.tcgplayer.com/product/84720_200w.jpg,3,1407,https://cpt.tcgcsv.com/qVH,2022-08-09T18:25:29.383,1,BW18,Promo,Fire,60,Basic,,"[1R] Searing Flame (20) 
+<br>Flip a coin. If heads, the Defending Pokémon is now Burned.",Wx2,2,5.46,9.99,27.36,5.75,19.54,Holofoil,,
+84776,Deoxys EX (Team Plasma) - BW82,Deoxys EX Team Plasma BW82,https://tcgplayer-cdn.tcgplayer.com/product/84776_200w.jpg,3,1407,https://cpt.tcgcsv.com/xWH,2022-08-09T18:25:43.02,1,BW82,Promo,Psychic,170,Basic,"<strong>Ability — Power Connect</strong>
+<br>
+Your Team Plasma Pokémon’s attacks (excluding Deoxys-EX) do 10 more damage to the Active Pokémon <em>(before applying Weakness and Resistance)</em>.","[1P] Helix Force (30+) 
+<br>If this Pokémon has any Plasma Energy attached to it, this attack does 30 more damage for each Energy attached to the Defending Pokémon.",Px2,2,5.93,10.99,45.3,11.89,4.5,Holofoil,,
+84950,Drifblim - BW64,Drifblim BW64,https://tcgplayer-cdn.tcgplayer.com/product/84950_200w.jpg,3,1407,https://cpt.tcgcsv.com/0_H,2022-08-09T18:26:51.393,1,BW64,Promo,Psychic,100,Stage 1,,"[1] Shadow Steal (50x) 
+<br>Does 50 damage times the number of Special Energy cards in your opponent's discard pile.",Dx2,1,1.3,2.99,10.01,5.94,,Holofoil,"[1P] Plentiful Placement 
+<br>Put 4 damage counters on 1 of your opponent's Pokémon.",
+84983,Druddigon (Team Plasma) - BW80,Druddigon Team Plasma BW80,https://tcgplayer-cdn.tcgplayer.com/product/84983_200w.jpg,3,1407,https://cpt.tcgcsv.com/H_H,2022-08-09T18:27:01.303,1,BW80,Promo,Dragon,100,Basic,,"[1] Taunt  
+<br>Switch 1 of your opponent's Benched Pokémon with the Defending Pokémon.",Ox2,2,1.78,2.99,10.0,5.49,,Holofoil,"[1RW] Boost Claw (60) 
+<br>During your next turn, each of this Pokémon's attacks does 30 more damage <em>(before applying Weakness and Resistance)</em>.",
+84992,Ducklett - BW17,Ducklett BW17,https://tcgplayer-cdn.tcgplayer.com/product/84992_200w.jpg,3,1407,https://cpt.tcgcsv.com/S_H,2022-08-09T18:28:01.963,1,BW17,Promo,Water,60,Basic,,[W] Water Gun (10),Lx2,1,0.6,1.0,9.99,0.98,,Holofoil,,F-20
+85095,Eevee - BW94,Eevee BW94,https://tcgplayer-cdn.tcgplayer.com/product/85095_200w.jpg,3,1407,https://cpt.tcgcsv.com/W2J,2022-08-09T18:28:10.88,1,BW94,Promo,Colorless,60,Basic,,"[1] Growl 
+<br>During your opponent's next turn, any damage done by attacks from the Defending Pokémon is reduced by 20 <em>(before applying Weakness and Resistance)</em>.",Fx2,1,37.23,55.06,87.36,59.24,55.98,Holofoil,"[2] Quick Attack (10+)
+<br>Flip a coin. If heads, this attack does 10 more damage.",
+85096,Eevee - BW97,Eevee BW97,https://tcgplayer-cdn.tcgplayer.com/product/85096_200w.jpg,3,1407,https://cpt.tcgcsv.com/X2J,2022-08-09T18:28:18.61,1,BW97,Promo,Colorless,60,Basic,,"[1] Growl 
+<br>During your opponent's next turn, any damage done by attacks from the Defending Pokémon is reduced by 20 <em>(before applying Weakness and Resistance)</em>.",Fx2,1,200.0,200.0,200.0,200.27,,Holofoil,"[2] Quick Attack (10+) 
+<br>Flip a coin. If heads, this attack does 10 more damage.",
+85164,Electrode (Team Plasma) - BW76,Electrode Team Plasma BW76,https://tcgplayer-cdn.tcgplayer.com/product/85164_200w.jpg,3,1407,https://cpt.tcgcsv.com/j5J,2022-08-09T18:29:13.917,1,BW76,Promo,Lightning,100,Stage 1,,"[L] Electribeam (20) 
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",Fx2,0,7.99,9.11,12.45,16.79,,Holofoil,"[2L] Self Destruct (100) 
+<br>This Pokémon does 100 damage to itself.",
+85178,Elgyem - BW55,Elgyem BW55,https://tcgplayer-cdn.tcgplayer.com/product/85178_200w.jpg,3,1407,https://cpt.tcgcsv.com/B5J,2022-08-09T18:29:24.667,1,BW55,Promo,Psychic,60,Basic,"<strong>Ability — Weak Barrier</strong>
+<br>
+If this Pokémon has any Psychic Energy attached to it, this Pokémon has no Weakness.","[2] Quick Blow (10+) 
+<br>Flip a coin. If heads, this attack does 20 more damage.",Px2,1,2.85,3.25,10.0,3.35,,Normal,,
+85183,Emboar - BW21,Emboar BW21,https://tcgplayer-cdn.tcgplayer.com/product/85183_200w.jpg,3,1407,https://cpt.tcgcsv.com/H5J,2022-08-09T18:30:22.583,1,BW21,Promo,Fire,150,Stage 2,"<strong>Ability — Inferno Fandango</strong>
+<br>
+As often as you like during your turn <em>(before your attack)</em>, you may attach a Fire Energy card from your hand to 1 of your Pokémon.",[2RR] Heat Crash (80),Wx2,4,1.75,2.25,4.04,2.71,,Holofoil,,
+85202,Empoleon - BW56,Empoleon BW56,https://tcgplayer-cdn.tcgplayer.com/product/85202_200w.jpg,3,1407,https://cpt.tcgcsv.com/36J,2022-08-09T18:31:14.893,1,BW56,Promo,Water,140,Stage 2,,"[W] Fury Attack (30x) 
+<br>Flip 3 coins. This attack does 30 damage times the number of heads.",Lx2,2,1.1,2.73,3.55,4.31,,Holofoil,"[2W] Cold Crush (70) 
+<br>You may discard an Energy attached to this Pokémon. If you do, discard an Energy attached to the Defending Pokémon.",
+85326,Espeon - BW92,Espeon BW92,https://tcgplayer-cdn.tcgplayer.com/product/85326_200w.jpg,3,1407,https://cpt.tcgcsv.com/x8J,2022-08-09T18:31:33.673,1,BW92,Promo,Psychic,90,Stage 1,"<strong>Ability — Solar Revelation</strong>
+<br>
+Prevent all effects of your opponent's attacks, except damage, done to each of your Pokémon that has any Energy attached to it.","[2P] Psy Report (60) 
+<br>Your opponent reveals his or her hand.",Px2,1,30.95,46.87,119.0,41.82,,Holofoil,,
+85528,Flygon - BW53 (Prerelease),Flygon BW53 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/85528_200w.jpg,3,1407,https://cpt.tcgcsv.com/BdJ,2022-08-09T18:32:56.28,1,BW53,Promo,Dragon,140,Stage 2,"<strong>Ability — Sand Slammer</strong>
+<br>
+At any time between your turns, if this Pokémon is your Active Pokémon, put 1 damage counter on each of your opponent's Pokémon.","[2GF] Flying Beatdown (80) 
+<br>You may discard a Grass Energy and a Fighting Energy attached to this Pokémon. If you do, the Defending Pokémon is now Paralyzed.",Ox2,1,24.99,39.99,100.57,14.65,,Holofoil,,
+85663,Genesect - BW99,Genesect BW99,https://tcgplayer-cdn.tcgplayer.com/product/85663_200w.jpg,3,1407,https://cpt.tcgcsv.com/hhJ,2022-08-09T18:34:21.547,1,BW99,Promo,Grass,110,Basic,,"[2] Hyper Beam (30)
+<br>Flip a coin. If heads, discard an Energy attached to the Defending Pokémon.",Rx2,2,,,,,,,"[1GG] Breaker Bazooka (100)
+<br>Discard all Grass Energy attached to this Pokémon.",
+85664,Genesect (Team Plasma) - BW86,Genesect Team Plasma BW86,https://tcgplayer-cdn.tcgplayer.com/product/85664_200w.jpg,3,1407,https://cpt.tcgcsv.com/jhJ,2022-08-09T18:33:51.983,1,BW86,Promo,Grass,100,Basic,,"[1G] Signal Beam (30) 
+<br>Flip a coin. If heads, the Defending Pokémon is now Confused.",Rx2,2,99.99,145.55,149.99,142.71,,Holofoil,"[2GG] Overdrive Smash (60) 
+<br>During your next turn, this Pokémon's Overdrive Smash attack does 60 more damage <em>(before applying Weakness and Resistance)</em>.",
+85739,Giratina (Team Plasma),Giratina Team Plasma,https://tcgplayer-cdn.tcgplayer.com/product/85739_200w.jpg,3,1407,https://cpt.tcgcsv.com/PjJ,2022-08-09T18:05:32.987,1,BW74,Holo Rare,Psychic,130,Basic,,"[2P] Hex (50+) 
+<br>If the Defending Pokémon is affected by a Special Condition, this attack does 50 more damage.",Dx2,3,243.4,348.5,499.99,115.0,,Holofoil,"[2PP] Shadow Claw (90) 
+<br>Discard a random card from your opponent's hand.",
+85748,Glaceon - BW90,Glaceon BW90,https://tcgplayer-cdn.tcgplayer.com/product/85748_200w.jpg,3,1407,https://cpt.tcgcsv.com/-jJ,2022-08-09T18:38:10.33,1,BW90,Promo,Water,90,Stage 1,,"[1] Quick Attack (10+) 
+<br>Flip a coin. If heads, this attack does 30 more damage.",Mx2,1,23.26,34.98,98.99,34.08,34.98,Holofoil,"[1W] Reflect Energy (40) 
+<br>Move an Energy from this Pokémon to 1 of your Benched Pokémon.",
+86035,Haxorus - BW57,Haxorus BW57,https://tcgplayer-cdn.tcgplayer.com/product/86035_200w.jpg,3,1407,https://cpt.tcgcsv.com/KqJ,2022-08-09T18:38:28.13,1,BW57,Promo,Dragon,140,Stage 2,,"[1M] Armor Press (40) 
+<br>During your opponent's next turn, any damage done to this Pokémon by attacks is reduced by 20 <em>(after applying Weakness and Resistance)</em>.",Ox2,3,8.27,16.81,39.99,15.33,,Holofoil,"[1FM] Dual Chop (90x) 
+<br>Flip 2 coins. This attack does 90 damage times the number of heads.",
+86321,Jigglypuff - BW65,Jigglypuff BW65,https://tcgplayer-cdn.tcgplayer.com/product/86321_200w.jpg,3,1407,https://cpt.tcgcsv.com/rxJ,2022-08-09T18:40:31.347,1,BW65,Promo,Colorless,60,Basic,,"[1] Continuous Tumble (10x) 
+<br>Flip a coin until you get tails. This attack does 10 damage times the number of heads.",Fx2,1,49.99,59.99,69.99,6.69,,Normal,,
+86348,Jolteon - BW91,Jolteon BW91,https://tcgplayer-cdn.tcgplayer.com/product/86348_200w.jpg,3,1407,https://cpt.tcgcsv.com/-xJ,2022-08-09T18:42:39.487,1,BW91,Promo,Lightning,90,Stage 1,,"[1] Electrigun (20+) 
+<br>You may discard a L Energy attached to this Pokémon. If you do, this attack does 40 more damage.",Fx2,,39.95,53.0,129.0,36.64,,Holofoil,"[2L] Pin Missile (40x) 
+<br>Flip 4 coins. This attack does 40 damage times the number of heads.",
+86435,Keldeo - BW60 (Tinsel Holo),Keldeo BW60 Tinsel Holo,https://tcgplayer-cdn.tcgplayer.com/product/86435_200w.jpg,3,1407,https://cpt.tcgcsv.com/KBJ,2022-08-09T18:45:50.127,1,BW60,Promo,Water,90,Basic,,"[1] Swords Dance 
+<br>During your next turn, this Pokémon's Aqua Blade attack's base damage is 120.",Gx2,1,1.95,3.67,8.39,5.74,,Holofoil,[1WW] Aqua Blade (60),
+86437,Keldeo EX - BW61,Keldeo EX BW61,https://tcgplayer-cdn.tcgplayer.com/product/86437_200w.jpg,3,1407,https://cpt.tcgcsv.com/MBJ,2023-05-22T19:32:53.927,1,BW61,Promo,Water,170,Basic,"<strong>Ability — Rush In</strong>
+<br>Once during your turn <em>(before your attack)</em>, if this Pokémon is on your Bench, you may switch this Pokémon with your Active Pokémon.","[3] Secret Sword (50+) 
+<br>Does 20 more damage for each Water Energy attached to this Pokémon.",Gx2,2,0.99,1.89,9.99,1.89,,Holofoil,,
+86562,Kyurem - BW44,Kyurem BW44,https://tcgplayer-cdn.tcgplayer.com/product/86562_200w.jpg,3,1407,https://cpt.tcgcsv.com/gFJ,2022-08-09T18:50:44.07,1,BW44,Promo,Water,130,Basic,,"[2] Outrage (20+) 
+<br>Does 10 more damage for each damage counter on this Pokémon.",Mx2,2,2.44,3.55,7.0,3.42,,Holofoil,"[1WW] Glaciate 
+<br>This attack does 30 damage to each of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",
+86567,Kyurem EX - BW37,Kyurem EX BW37,https://tcgplayer-cdn.tcgplayer.com/product/86567_200w.jpg,3,1407,https://cpt.tcgcsv.com/mFJ,2022-08-09T18:55:28.443,1,BW37,Promo,Water,180,Basic,,"[2W] Frozen Wings (60) 
+<br>Discard a Special Energy attached to the Defending Pokémon.",Mx2,3,2.0,4.0,23.5,4.99,,Holofoil,"[2WW] Hail Blizzard (120) 
+<br>This Pokémon can't use Hail Blizzard during your next turn.",
+86592,Landorus - BW43,Landorus BW43,https://tcgplayer-cdn.tcgplayer.com/product/86592_200w.jpg,3,1407,https://cpt.tcgcsv.com/SFJ,2022-08-09T18:57:39.537,1,BW43,Promo,Fighting,110,Basic,,"[F] Abundant Harvest 
+<br>Attach a basic Energy card from your discard pile to this Pokémon.",Wx2,1,9.2,33.98,81.9,17.82,,Holofoil,"[1FF] Gaia Hammer (80) 
+<br>Does 10 damage to each Benched Pokémon <em>(both yours and your opponent's)</em>.  <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",L-20
+86594,Landorus (Team Plasma) - BW79,Landorus Team Plasma BW79,https://tcgplayer-cdn.tcgplayer.com/product/86594_200w.jpg,3,1407,https://cpt.tcgcsv.com/VFJ,2022-08-09T18:59:38.523,1,BW79,Promo,Fighting,110,Basic,,"[1F] Extrasensory (20+)
+<br>If you have the same number of cards in your hand as your opponent, this attack does 30 more damage.",Wx2,2,165.0,195.47,499.99,194.95,,Holofoil,"[2FF] Rock Tomb (90) 
+<br>The Defending Pokémon can't retreat during your opponent's next turn.",L-20
+86795,Lilligant - BW49,Lilligant BW49,https://tcgplayer-cdn.tcgplayer.com/product/86795_200w.jpg,3,1407,https://cpt.tcgcsv.com/WKJ,2022-08-09T19:03:20.283,1,BW49,Promo,Grass,90,Stage 1,,"[1] Lead 
+<br>Search your deck for a Supporter card, reveal it, and put it into your hand. Shuffle your deck afterward.",Rx2,1,21.0,23.0,25.69,19.0,,Holofoil,"[1G] Dream Dance (30) 
+<br>Both this Pokémon and the Defending Pokémon are now Asleep.",W-20
+86801,Lillipup - BW52,Lillipup BW52,https://tcgplayer-cdn.tcgplayer.com/product/86801_200w.jpg,3,1407,https://cpt.tcgcsv.com/2LJ,2022-08-09T19:15:19.8,1,BW52,Promo,Colorless,50,Basic,,"[2] Knock Away (10+) 
+<br>Flip a coin. If heads, this attack does 10 more damage.",Fx2,1,2.35,3.64,5.94,3.64,3.43,Reverse Holofoil,,
+86810,Litwick - BW27,Litwick BW27,https://tcgplayer-cdn.tcgplayer.com/product/86810_200w.jpg,3,1407,https://cpt.tcgcsv.com/dLJ,2022-08-09T19:16:31.523,1,BW27,Promo,Psychic,50,Basic,,"[1] Call for Family 
+<br>Search your deck for a Basic Pokémon and put it onto your Bench. Shuffle your deck afterward.",Dx2,1,16.38,20.4,99.99,20.4,,Holofoil,[1P] Will-O-Wisp (20),
+86885,Lucario - BW85,Lucario BW85,https://tcgplayer-cdn.tcgplayer.com/product/86885_200w.jpg,3,1407,https://cpt.tcgcsv.com/KMJ,2022-08-09T19:18:11.463,1,BW85,Holo Rare,Fighting,100,Stage 1,"<strong>Ability — Intuition</strong>
+<br>
+When you play this Pokémon from your hand to evolve 1 of your Pokémon, you may draw 2 cards.","[2F] Fast Punch (60+) 
+<br>Flip a coin. If heads, this attack does 30 more damage.",Px2,2,,,,,,,,
+86914,Lugia EX (Team Plasma) - BW83,Lugia EX Team Plasma BW83,https://tcgplayer-cdn.tcgplayer.com/product/86914_200w.jpg,3,1407,https://cpt.tcgcsv.com/jNJ,2022-08-09T19:20:29.297,1,BW83,Promo,Colorless,180,Basic,"<strong>Ability — Overflow</strong>
+<br>
+If your opponent's Pokémon is Knocked Out by damage from an attack of this Pokémon, take 1 more Prize card.","[4] Plasma Gale (120) 
+<br>Discard a Plasma Energy attached to this Pokémon. If you can't discard a Plasma Energy, this attack does nothing.",Lx2,2,8.0,15.0,23.12,20.3,,Holofoil,,F-20
+86945,Luxio - BW34 (Cosmos Holo),Luxio BW34 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/86945_200w.jpg,3,1407,https://cpt.tcgcsv.com/WNJ,2022-08-09T19:22:10.09,1,BW34,Holo Rare,Lightning,80,Stage 1,,"[L] Dazzle Blast (10) 
+<br>Flip a coin. If heads, the Defending Pokémon is now Confused.",Fx2,1,34.95,34.95,34.95,17.26,,Holofoil,"[2L] Random Spark 
+<br>This attack does 40 damage to 1 of your opponent's Pokemon.  (Don't apply Weakness and Resistance for Benched Pokemon.)",
+87300,Meloetta - BW68,Meloetta BW68,https://tcgplayer-cdn.tcgplayer.com/product/87300_200w.jpg,3,1407,https://cpt.tcgcsv.com/0XJ,2022-08-09T19:25:44.177,1,BW68,Promo,Psychic,80,Basic,,"[P] Sing 
+<br>The Defending Pokémon is now Asleep.",Px2,1,0.98,1.31,7.0,1.33,,Normal,[2P] Psyburn (50),
+87301,Meloetta - BW69,Meloetta BW69,https://tcgplayer-cdn.tcgplayer.com/product/87301_200w.jpg,3,1407,https://cpt.tcgcsv.com/2XJ,2022-08-09T19:27:01.973,1,BW69,Promo,Fighting,80,Basic,,[F] Smack (10),Px2,1,0.35,0.57,7.0,0.5,,Normal,"[2F] Acrobatics (40+) 
+<br>Flip 2 coins. This attack does 20 more damage for each heads.",
+87327,Meowth - BW35,Meowth BW35,https://tcgplayer-cdn.tcgplayer.com/product/87327_200w.jpg,3,1407,https://cpt.tcgcsv.com/zXJ,2022-08-09T19:29:38.123,1,BW35,Promo,Colorless,60,Basic,,"[1] Nap  
+<br>Heal 20 damage from this Pokémon.",Fx2,1,38.75,38.75,38.75,13.99,,Normal,"[2] Jump On (20+) 
+<br>Flip a coin. If heads, this attack does 10 more damage.",
+87344,Metagross - BW75 (Team Plasma) (Prerelease),Metagross BW75 Team Plasma Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/87344_200w.jpg,3,1407,https://cpt.tcgcsv.com/VXJ,2022-08-09T19:33:34.717,1,BW75,Promo,Psychic,140,Stage 2,"<strong>Ability — Plasma Search</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may search your deck for a Team Plasma card, reveal it, and put it into your hand. Shuffle your deck afterward. You may not use an Ability with the same name during your turn.","[3P] Mind Bend (60) 
+<br>The Defending Pokémon is now Confused.",Px2,2,21.25,24.38,27.5,19.91,,Holofoil,,
+87406,Mew - BW98,Mew BW98,https://tcgplayer-cdn.tcgplayer.com/product/87406_200w.jpg,3,1407,https://cpt.tcgcsv.com/8-J,2022-08-09T19:37:15.073,1,BW98,Promo,Psychic,60,Basic,"<strong>Ability — Psyscan</strong>
+<br>
+Once during your turn <em>(before your attack)</em), if this Pokémon is your Active Pokémon, you may have your opponent reveal his or her hand.","[1] Psychic Exchange 
+<br>Shuffle your hand into your deck. Then, draw 6 cards.",Px2,1,166.66,208.32,249.98,199.9,,Holofoil,,None
+87430,Mewtwo EX - BW45,Mewtwo EX BW45,https://tcgplayer-cdn.tcgplayer.com/product/87430_200w.jpg,3,1407,https://cpt.tcgcsv.com/D-J,2022-08-09T20:02:50.15,1,BW45,Promo,Psychic,170,Basic,,"[2] X Ball (20x) 
+<br>Does 20 damage times the amount of Energy attached to this Pokémon and the Defending Pokémon.",Px2,2,8.07,12.29,21.21,12.29,,Holofoil,"[1PP] Psydrive (120) 
+<br>Discard an Energy attached to this Pokémon.",
+87475,Minccino - BW13 (Cosmos Holo),Minccino BW13 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/87475_200w.jpg,3,1407,https://cpt.tcgcsv.com/w_J,2022-08-09T20:03:52.187,1,BW13,Promo,Colorless,50,Basic,,[1] Gnaw (10),Fx2,1,10.98,11.29,13.0,10.31,11.29,Holofoil,[2] Tail Smack (20),
+87677,N (Supporter) - BW100,N Supporter BW100,https://tcgplayer-cdn.tcgplayer.com/product/87677_200w.jpg,3,1407,https://cpt.tcgcsv.com/z5K,2022-08-09T20:05:40.103,1,BW100,Promo,Supporter,,,"<em>You may play only 1 Supporter card per turn (before your attack).</em>
+<br>
+Each player shuffles his or her hand into his or her deck. Then, each player draws a card for each of his or her remaining Prize cards.",,,,6.99,9.19,15.0,9.43,,Holofoil,,
+87779,Ninetales - BW66,Ninetales BW66,https://tcgplayer-cdn.tcgplayer.com/product/87779_200w.jpg,3,1407,https://cpt.tcgcsv.com/C7K,2022-08-09T20:07:21.987,1,BW66,Promo,Fire,90,Stage 1,"<strong>Ability — Bright Look</strong>
+<br>
+When you play this Pokémon from your hand to evolve 1 of your Pokémon, you may switch 1 of your opponent's Benched Pokémon with his or her Active Pokémon.","[R] Hexed Flame (20+) 
+<br>Does 50 more damage for each Special Condition affecting the Defending Pokémon.",Wx2,1,7.97,8.47,8.96,12.51,,Holofoil,,
+87892,Oshawott - BW03,Oshawott BW03,https://tcgplayer-cdn.tcgplayer.com/product/87892_200w.jpg,3,1407,https://cpt.tcgcsv.com/S9K,2022-08-09T20:08:40.81,1,BW03,Promo,Water,60,Basic,,"[1W] Water Pulse (20) 
+<br>Flip a coin. If heads, the Defending Pokémon is now Asleep.",Lx2,1,2.0,2.89,5.94,3.44,1.16,Holofoil,,
+87894,Oshawott - BW08,Oshawott BW08,https://tcgplayer-cdn.tcgplayer.com/product/87894_200w.jpg,3,1407,https://cpt.tcgcsv.com/V9K,2023-04-05T08:00:28.95,1,BW08,Promo,Water,60,Basic,,"[1] Sleep Pulse 
+<br>Flip a coin. If heads, the Defending Pokémon is now Asleep.",Lx2,1,1.0,2.48,8.9,2.86,1.2,Holofoil,"[1W] Surprise Attack (30) 
+<br>Flip a coin. If tails, this attack does nothing.",
+87934,Pansage - BW11,Pansage BW11,https://tcgplayer-cdn.tcgplayer.com/product/87934_200w.jpg,3,1407,https://cpt.tcgcsv.com/JbK,2022-08-09T20:21:57.827,1,BW11,Promo,Grass,60,Basic,,"[1G] Bullet Seed (10x) 
+<br>Flip 4 coins. This attack does 10 damage times the number of heads.",Rx2,1,1.78,2.99,7.0,1.98,5.24,Holofoil,,W-20
+87935,Pansage - BW14,Pansage BW14,https://tcgplayer-cdn.tcgplayer.com/product/87935_200w.jpg,3,1407,https://cpt.tcgcsv.com/KbK,2022-08-09T20:24:52.5,1,BW14,Promo,Grass,60,Basic,,"[1G] Bullet Seed (10x) 
+<br>Flip 4 coins. This attack does 10 damage times the number of heads.",Rx2,1,34.64,67.32,99.99,33.43,,Normal,,W-20
+88057,Pidove - BW15,Pidove BW15,https://tcgplayer-cdn.tcgplayer.com/product/88057_200w.jpg,3,1407,https://cpt.tcgcsv.com/9fK,2022-08-09T20:27:31.607,1,BW15,Rare,Colorless,50,Basic,,[2] Gust (20),Lx2,1,45.0,57.5,69.99,40.0,,Normal,,F-20
+88318,Porygon-Z (Team Plasma) - BW84 (Prerelease),Porygon Z Team Plasma BW84 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/88318_200w.jpg,3,1407,https://cpt.tcgcsv.com/nlK,2022-08-09T20:47:49.927,1,BW84,Promo,Colorless,130,Stage 2,"<strong>Ability — Plasma Transfer</strong>
+<br>
+As often as you like during your turn <em>(before your attack)</em>, you may move a Plasma Energy attached to 1 of your Pokémon to another of your Pokémon.","[3] Tri Attack (50x) 
+<br>Flip 3 coins. This attack does 50 damage times the number of heads.",Fx2,1,9.99,17.0,18.0,10.42,,Holofoil,,
+88646,Rayquaza EX -BW47,Rayquaza EX BW47,https://tcgplayer-cdn.tcgplayer.com/product/88646_200w.jpg,3,1407,https://cpt.tcgcsv.com/XsK,2022-08-09T20:50:26.793,1,BW47,Promo,Dragon,170,Basic,,"[1] Celestial Roar  
+<br>Discard the top 3 cards of your deck. If any of those cards are Energy cards, attach them to this Pokémon.",Ox2,1,9.31,20.0,59.0,19.01,,Holofoil,"[RL] Dragon Burst (60x) 
+<br>Discard all basic Fire Energy or all basic Lightning Energy attached to this Pokémon. This attack does 60 damage times the number of Energy cards you discarded.",
+88705,Reshiram - BW004,Reshiram BW004,https://tcgplayer-cdn.tcgplayer.com/product/88705_200w.jpg,3,1407,https://cpt.tcgcsv.com/7vK,2022-08-09T20:52:42.303,1,BW004,Promo,Fire,130,Basic,,"[2] Outrage (20+) 
+<br>Does 10 more damage for each damage counter on this Pokémon.",Wx2,2,0.99,3.09,6.84,3.45,3.18,Holofoil,"[1RR] Blue Flare (120) 
+<br>Discard 2 FIre Energy attached to this Pokémon.",
+88706,Reshiram - BW23,Reshiram BW23,https://tcgplayer-cdn.tcgplayer.com/product/88706_200w.jpg,3,1407,https://cpt.tcgcsv.com/8vK,2022-08-09T20:55:24.96,1,BW23,Promo,Fire,130,Basic,,"[2] Outrage (20+) 
+<br>Does 10 more damage for each damage counter on this Pokémon.",Wx2,2,2.73,5.0,7.83,6.0,,Holofoil,"[1RR] Blue Flare (120) 
+<br>Discard 2 Fire Energy attached to this Pokémon.",
+88714,Reshiram EX - BW36,Reshiram EX BW36,https://tcgplayer-cdn.tcgplayer.com/product/88714_200w.jpg,3,1407,https://cpt.tcgcsv.com/jvK,2022-08-09T20:56:42.603,1,BW36,Promo,Fire,180,Basic,,"[2R] Glinting Claw (50+) 
+<br>Flip a coin. If heads, this attack does 30 more damage.",Wx2,3,3.67,6.42,35.0,7.0,,Holofoil,"[2RR] Brave Fire (150) 
+<br>Flip a coin. If tails, this Pokemon does 50 damage to itself.",
+88760,Riolu - BW33 (Cosmos Holo),Riolu BW33 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/88760_200w.jpg,3,1407,https://cpt.tcgcsv.com/dwK,2024-07-08T14:11:23.523,1,BW33,Promo,Fighting,60,Basic,,"[1] Run Around 
+<br>Switch this Pokémon with 1 of your Benched Pokémon.",Px2,1,,,,,,,[1F] Hook (30),
+88909,Samurott - BW22,Samurott BW22,https://tcgplayer-cdn.tcgplayer.com/product/88909_200w.jpg,3,1407,https://cpt.tcgcsv.com/cBK,2022-08-09T21:00:18.233,1,BW22,Promo,Water,140,Stage 2,"<strong>Ability — Shell Armor</strong>
+<br>
+Any damage done to this Pokémon by attacks is reduced by 20 <em>(after applying Weakness and Resistance)</em>.","[3] Hydro Pump (70+) 
+<br>Does 10 more damage for each Water Energy attached to this Pokémon.",Lx2,2,1.0,3.01,8.31,2.72,,Holofoil,,
+88982,Scraggy - BW25 (Cosmos Holo),Scraggy BW25 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/88982_200w.jpg,3,1407,https://cpt.tcgcsv.com/GCK,2022-08-09T21:01:55.197,1,BW25,Promo,Darkness,50,Basic,,"[1] Paralyzing Gaze 
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",Fx2,1,1.0,1.33,7.0,2.91,,Holofoil,[2D] High Jump Kick (30),P-20
+89071,Serperior - BW20,Serperior BW20,https://tcgplayer-cdn.tcgplayer.com/product/89071_200w.jpg,3,1407,https://cpt.tcgcsv.com/rFK,2022-08-09T21:04:44.57,1,BW20,Promo,Grass,130,Stage 2,"<strong>Ability — Royal Heal</strong>
+<br>
+At any time between turns, heal 10 damage from each of your Pokémon.","[1G] Leaf Tornado (60) 
+<br>Move as many Grass Energy attached to your Pokémon to your other Pokémon in any way you like.",Rx2,1,1.1,6.08,14.95,8.51,,Holofoil,,W-20
+89377,Snivy - BW01,Snivy BW01,https://tcgplayer-cdn.tcgplayer.com/product/89377_200w.jpg,3,1407,https://cpt.tcgcsv.com/zMK,2022-08-09T21:05:49.71,1,BW01,Promo,Grass,60,Basic,,"[1G] Slam (20x) 
+<br>Flip 2 coins. This attack does 20 damage times the number of heads.",Rx2,1,0.97,1.17,7.0,1.36,,Holofoil,,W-20
+89379,Snivy - BW06,Snivy BW06,https://tcgplayer-cdn.tcgplayer.com/product/89379_200w.jpg,3,1407,https://cpt.tcgcsv.com/CMK,2022-08-09T21:11:14.863,1,BW06,Promo,Grass,60,Basic,,"[1] Paralyzing Gaze 
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",Fx2,1,0.72,1.0,7.0,1.29,,Holofoil,[1G] Tail Smack (20),W-20
+89881,Tepig (BW02),Tepig BW02,https://tcgplayer-cdn.tcgplayer.com/product/89881_200w.jpg,3,1407,https://cpt.tcgcsv.com/FZK,2021-08-15T09:35:21.723,1,BW02,Holo Rare,Fire,70,Basic,,"[1R] Ember (30) 
+<br>Discard an Energy attached to this Pokemon.",Wx2,2,0.5,1.57,7.0,1.55,2.5,Holofoil,,
+89883,Tepig - BW07,Tepig BW07,https://tcgplayer-cdn.tcgplayer.com/product/89883_200w.jpg,3,1407,https://cpt.tcgcsv.com/HZK,2022-08-09T21:12:51.18,1,BW07,Promo,Fire,60,Basic,,"[1] Singe 
+<br>Flip a coin. If heads, the Defending Pokémon is now Burned.",Wx2,1,0.81,1.13,7.0,1.09,,Holofoil,"[1R] Firebreathing (10+) 
+<br>Flip a coin. If heads, this attack does 20 more damage.",
+89889,Terrakion - BW71,Terrakion BW71,https://tcgplayer-cdn.tcgplayer.com/product/89889_200w.jpg,3,1407,https://cpt.tcgcsv.com/PZK,2022-08-09T21:14:44.303,1,BW71,Promo,Fighting,130,Basic,"<strong>Ability — Justified</strong>
+<br>
+Each of this Pokémon's attacks does 50 more damage to Darkness Pokémon <em>(before applying Weakness and Resistance)</em>.","[2FF] Crushing Blow (80) 
+<br>Flip a coin. If heads, discard an Energy attached to the Defending Pokémon.",Gx2,4,0.85,2.16,7.0,2.45,0.99,Holofoil,,
+89904,Thundurus - BW41,Thundurus BW41,https://tcgplayer-cdn.tcgplayer.com/product/89904_200w.jpg,3,1407,https://cpt.tcgcsv.com/6-K,2022-08-09T21:16:04.71,1,BW41,Promo,Lightning,110,Basic,,"[1] Charge 
+<br>Search your deck for a Lightning Energy card and attach it to this Pokémon. Shuffle your deck afterward.",Fx2,1,1.0,1.1,7.0,1.15,,Reverse Holofoil,"[1LL] Disaster Volt (80) 
+<br>Discard an Energy attached to this Pokémon.",
+89908,Thundurus EX (Team Plasma) - BW81,Thundurus EX Team Plasma BW81,https://tcgplayer-cdn.tcgplayer.com/product/89908_200w.jpg,3,1407,https://cpt.tcgcsv.com/b-K,2022-08-09T21:17:04.433,1,BW81,Promo,Lightning,170,Basic,,"[L] Raiden Knuckle (30) 
+<br>Attach an Energy card from your discard pile to 1 of your Benched Team Plasma Pokémon.",Fx2,1,1.81,3.0,30.0,3.41,,Holofoil,"[2LL] Thunderous Noise (90) 
+<br>If this Pokémon has any Plasma Energy attached to it, discard an Energy attached to the Defending Pokémon.",
+89975,Tornadus - BW42,Tornadus BW42,https://tcgplayer-cdn.tcgplayer.com/product/89975_200w.jpg,3,1407,https://cpt.tcgcsv.com/w_K,2022-08-09T21:18:08.883,1,BW42,Promo,Colorless,110,Basic,,"[1] Energy Wheel 
+<br>Move an Energy from 1 of your Benched Pokémon to this Pokémon.",Lx2,1,1.09,2.0,7.0,2.32,,Reverse Holofoil,"[3] Hurricane (80) 
+<br>Move a basic Energy from this Pokémon to 1 of your Benched Pokémon.",F-20
+89979,Tornadus EX - BW96 (Prerelease),Tornadus EX BW96 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/89979_200w.jpg,3,1407,https://cpt.tcgcsv.com/C_K,2022-08-09T21:19:32.557,1,BW96,Promo,Colorless,170,Basic,,"[2] Blow Through (30+) 
+<br>If there is any Stadium card in play, this attack does 30 more damage.",Lx2,1,10.99,13.82,39.99,18.16,,Holofoil,"[3] Power Blast (100) 
+<br>Flip a coin. If tails, discard an Energy attached to this Pokémon.",F-20
+90048,Tropical Beach - BW28 (Worlds 11),Tropical Beach BW28 Worlds 11,https://tcgplayer-cdn.tcgplayer.com/product/90048_200w.jpg,3,1407,https://cpt.tcgcsv.com/-0L,2022-08-09T21:24:04.493,1,BW28,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play.  If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, that player may draw cards until he or she has 7 cards in his or her hand. If he or she does, that player's turn ends.",,,,1500.0,1500.0,1500.0,,,Normal,,
+90049,Tropical Beach - BW50 (Worlds 12),Tropical Beach BW50 Worlds 12,https://tcgplayer-cdn.tcgplayer.com/product/90049_200w.jpg,3,1407,https://cpt.tcgcsv.com/_0L,2022-08-09T21:23:57.15,1,BW50,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, that player may draw cards until he or she has 7 cards in his or her hand. If he or she does, that player's turn ends.",,,,499.99,499.99,499.99,,,Normal,,
+90150,Umbreon - BW93,Umbreon BW93,https://tcgplayer-cdn.tcgplayer.com/product/90150_200w.jpg,3,1407,https://cpt.tcgcsv.com/05L,2022-08-09T21:50:19.337,1,BW93,Promo,Darkness,100,Stage 1,,"[2] Shadow Drain (30) 
+<br>Heal from this Pokémon the same amount of damage you did to the Defending Pokémon.",Fx2,2,100.0,135.39,249.99,138.37,77.99,Holofoil,[2D] Slashing Strike (80),P-20
+90289,Vaporeon - BW89,Vaporeon BW89,https://tcgplayer-cdn.tcgplayer.com/product/90289_200w.jpg,3,1407,https://cpt.tcgcsv.com/P7L,2022-08-09T21:55:13.587,1,BW89,Promo,Water,110,Stage 1,,"[1] Muddy Water (20) 
+<br>Does 20 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",Lx2,2,24.3,37.99,70.0,30.77,,Holofoil,"[2W] Spiral Drain (60) 
+<br>Heal 20 damage from this Pokémon.",None
+90346,Victini - BW32,Victini BW32,https://tcgplayer-cdn.tcgplayer.com/product/90346_200w.jpg,3,1407,https://cpt.tcgcsv.com/X8L,2022-08-09T21:56:17.79,1,BW32,Promo,Fire,60,Basic,"<strong>Ability — Victory Star</strong>
+<br>
+Once during your turn, after you flip any coins for an attack, you may ignore all effects of those coin flips and begin flipping those coins again. You can't usemore than 1 Victory Star Ability each turn.","[1R] Stored Power (30) 
+<br>Move an Energy attached to this Pokémon to 1 of your Benched Pokémon.",Wx2,1,3.0,12.01,39.99,5.93,,Holofoil,,
+90353,Victory Cup - BW31 (Battle Road Autumn 2011) [1st Place],Victory Cup BW31 Battle Road Autumn 2011 1st Place,https://tcgplayer-cdn.tcgplayer.com/product/90353_200w.jpg,3,1407,https://cpt.tcgcsv.com/59L,2022-08-09T22:04:49.213,1,BW31,Promo,Item,,,"<em>You may play as many Item cards as you like during your turn (before your attack.)</em>
+<br>
+Flip a coin. If heads, search your deck for a Pokémon, reveal it, and put it into your hand. Shuffle your deck afterward.",,,,300.0,350.0,399.99,115.71,,Holofoil,,
+90354,Victory Cup - BW30 (Battle Road Autumn 2011) [2nd Place],Victory Cup BW30 Battle Road Autumn 2011 2nd Place,https://tcgplayer-cdn.tcgplayer.com/product/90354_200w.jpg,3,1407,https://cpt.tcgcsv.com/69L,2022-08-09T22:08:04.32,1,BW30,Promo,Item,,,"<em>You may play as many Item cards as you like during your turn (before your attack.)</em>
+<br>
+Flip a coin. If heads, search your deck for a Pokémon, reveal it, and put it into your hand. Shuffle your deck afterward.",,,,70.0,79.78,79.94,49.99,,Holofoil,,
+90355,Victory Cup - BW29 (Battle Road Autumn 2011) [3rd Place],Victory Cup BW29 Battle Road Autumn 2011 3rd Place,https://tcgplayer-cdn.tcgplayer.com/product/90355_200w.jpg,3,1407,https://cpt.tcgcsv.com/79L,2022-08-09T22:10:36.377,1,BW29,Promo,Item,,,"<em>You may play as many Item cards as you like during your turn (before your attack.)</em>
+<br>
+Flip a coin. If heads, search your deck for a Pokémon, reveal it, and put it into your hand. Shuffle your deck afterward.",,,,71.99,80.0,84.23,74.9,,Holofoil,,
+90389,Virizion - BW70,Virizion BW70,https://tcgplayer-cdn.tcgplayer.com/product/90389_200w.jpg,3,1407,https://cpt.tcgcsv.com/P9L,2022-08-09T22:14:34.59,1,BW70,Promo,Grass,100,Basic,"<strong>Ability — Justified</strong>
+<br>
+Each of this Pokémon's attacks does 50 more damage to Darkness Pokémon <em>(before applying Weakness and Resistance)</em>.","[2G] Leaf Blade (50+) 
+<br>Flip a coin. If heads, this attack does 30 more damage.",Rx2,1,1.0,1.99,7.0,1.75,,Holofoil,,W-20
+90403,Volcarona - BW40 (Prerelease),Volcarona BW40 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/90403_200w.jpg,3,1407,https://cpt.tcgcsv.com/5bL,2022-08-09T22:16:16.177,1,BW40,Promo,Fire,110,Stage 1,"<strong>Ability — Scorching Scales</strong>
+<br>
+Put 4 damage counters instead of 2 on your opponent's Burned Pokémon between turns.","[2R] Burning Wind (70) 
+<br>You may discard an Energy attached to this Pokémon. If you do, the Defending Pokémon is now Burned.",Wx2,3,9.75,15.0,19.99,16.68,,Holofoil,,
+90587,White Kyurem - BW59,White Kyurem BW59,https://tcgplayer-cdn.tcgplayer.com/product/90587_200w.jpg,3,1407,https://cpt.tcgcsv.com/MfL,2022-08-09T22:18:24.107,1,BW59,Promo,Dragon,130,Basic,,"[1R] Damage Rush (20x) 
+<br>Flip a coin until you get tails. This attack does 20 damage times the number of heads.",Ox2,2,4.99,19.0,29.99,22.03,,Holofoil,"[2RW] Cold Fire (80+) 
+<br>Flip a coin. If heads, this attack does 40 more damage.",
+90590,White Kyurem EX - BW63,White Kyurem EX BW63,https://tcgplayer-cdn.tcgplayer.com/product/90590_200w.jpg,3,1407,https://cpt.tcgcsv.com/QfL,2022-08-09T22:19:31.793,1,BW63,Promo,Dragon,180,Basic,,"[2R] Dragon Stream (60) 
+<br>Flip a coin. If heads, attach a basic Energy card from your discard pile to this Pokémon.",Ox2,3,4.0,6.07,7.64,6.14,,Holofoil,"[1RRW] Ice Burn (150) 
+<br>Discard 2 Fire Energy attached to this Pokémon. The Defending Pokémon is now Burned.",
+90733,Zekrom - BW005,Zekrom BW005,https://tcgplayer-cdn.tcgplayer.com/product/90733_200w.jpg,3,1407,https://cpt.tcgcsv.com/HjL,2022-08-09T22:20:45.907,1,BW005,Promo,Lightning,130,Basic,,"[2] Outrage (20+) 
+<br>Does 10 more damage for each damage counter on this Pokémon.",Fx2,2,1.21,2.89,13.33,2.73,,Holofoil,"[1LL] Bolt Strike (120) 
+<br>This Pokémon does 40 damage to itself.",
+90734,Zekrom - BW24,Zekrom BW24,https://tcgplayer-cdn.tcgplayer.com/product/90734_200w.jpg,3,1407,https://cpt.tcgcsv.com/JjL,2022-08-09T22:21:36.443,1,BW24,Promo,Lightning,130,Basic,,"[2] Outrage (20+) 
+<br>Does 10 more damage for each damage counter on this Pokémon.",Fx2,2,2.48,2.99,10.99,4.33,,Holofoil,"[1LL] Bolt Strike (120) 
+<br>This Pokémon does 40 damage to itself.",
+90741,Zekrom EX - BW38,Zekrom EX BW38,https://tcgplayer-cdn.tcgplayer.com/product/90741_200w.jpg,3,1407,https://cpt.tcgcsv.com/RjL,2022-08-09T22:22:50.153,1,BW38,Promo,Lightning,180,Basic,,"[2L] Glinting Claw (50+) 
+<br>Flip a coin. If heads, this attack does 30 more damage.",Fx2,3,4.0,5.5,8.99,5.99,3.56,Holofoil,"[2LL] Strong Volt (150) 
+<br>Discard 2 Energy attached to this Pokémon.",
+90751,Zoroark - BW09,Zoroark BW09,https://tcgplayer-cdn.tcgplayer.com/product/90751_200w.jpg,3,1407,https://cpt.tcgcsv.com/2kL,2022-08-09T22:24:13.98,1,BW09,Promo,Darkness,100,Stage 1,,"[D] Nasty Plot 
+<br>Search your deck for a card and put it into your hand. Shuffle your deck afterward.",Fx2,1,0.85,2.35,8.9,3.11,,Holofoil,"[2] Foul Play 
+<br>Choose 1 of the Defending Pokémon's attacks and use it as this attack.",P-20
+90752,Zoroark - BW19,Zoroark BW19,https://tcgplayer-cdn.tcgplayer.com/product/90752_200w.jpg,3,1407,https://cpt.tcgcsv.com/3kL,2022-08-09T22:25:41.8,1,BW19,Promo,Darkness,100,Stage 1,,"[1] Punishment (20+) 
+<br>If the Defending Pokémon is a Stage 2 Pokémon, this attack does 20 more damage.",Fx2,1,0.71,1.99,6.0,2.64,,Holofoil,"[1DD] Snarl (60) 
+<br>During your opponent's next turn, any damage done by attacks from the Defending Pokémon is reduced by 20 <em>(before applying Weakness and Resistance)</em>.",P-20
+90760,Zorua - BW12,Zorua BW12,https://tcgplayer-cdn.tcgplayer.com/product/90760_200w.jpg,3,1407,https://cpt.tcgcsv.com/dkL,2022-08-09T22:27:02.73,1,BW12,Promo,Darkness,60,Basic,,"[1D] Jump On (20+) 
+<br>Flip a coin. If heads, this attack does 10 more damage.",Fx2,1,14.0,27.49,49.99,18.23,,Holofoil,,P-20
+91599,Flareon - BW88,Flareon BW88,https://tcgplayer-cdn.tcgplayer.com/product/91599_200w.jpg,3,1407,https://cpt.tcgcsv.com/_FL,2022-08-09T18:32:41.82,1,BW88,Promo,Fire,90,Stage 1,,"[1] Sand-Attack (20) 
+<br>If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",Wx2,1,30.0,35.74,70.83,34.96,35.59,Holofoil,"[2R] Fire Slash (60+)
+<br>You may discard a Fire energy attached to this Pokémon. If you do, this attack does 30 more damage.",
+91600,Leafeon - BW87,Leafeon BW87,https://tcgplayer-cdn.tcgplayer.com/product/91600_200w.jpg,3,1407,https://cpt.tcgcsv.com/0GL,2023-04-23T10:08:11.723,1,BW87,Promo,Grass,90,Stage 1,,"[1] Quick Attack (10+) 
+<br>Flip a coin. If heads, this attack does 30 more damage.",Rx2,1,36.7,47.98,60.56,48.86,49.99,Holofoil,"[1G] Energy Assist (40) 
+<br>Attach a basic Energy Card from your discard pile to 1 of your Benched Pokémon.",W-20
+96566,Altaria - BW48 (Prerelease) [Staff],Altaria BW48 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/96566_200w.jpg,3,1407,https://cpt.tcgcsv.com/lFN,2023-11-10T16:15:07.347,1,BW48,Promo,Dragon,70,Basic,"<strong>Ability — Fight Song</strong>
+<br>
+Your Dragon Pokémon's attacks do 20 more damage to the Active Pokémon <em>(before applying Weakness and Resistance)</em>.",[1WM] Glide (40),Ox2,1,,,,,,,,
+96567,Champions Festival - BW95 (Worlds 13) [Top Thirty-Two],Champions Festival BW95 Worlds 13 Top Thirty Two,https://tcgplayer-cdn.tcgplayer.com/product/96567_200w.jpg,3,1407,https://cpt.tcgcsv.com/mFN,2022-08-09T18:22:58.11,1,BW95,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, if that player has 6 Pokémon in play, he or she may heal 10 damage from each of his or her Pokémon.",,,,,,,,,,,
+96568,Champions Festival - BW95 (Worlds 13) [Top 16],Champions Festival BW95 Worlds 13 Top 16,https://tcgplayer-cdn.tcgplayer.com/product/96568_200w.jpg,3,1407,https://cpt.tcgcsv.com/nFN,2022-08-09T18:22:46.257,1,BW95,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, if that player has 6 Pokémon in play, he or she may heal 10 damage from each of his or her Pokémon.",,,,,,,,,,,
+96569,Champions Festival - BW95 (Worlds 13) [Quarter-Finalist],Champions Festival BW95 Worlds 13 Quarter Finalist,https://tcgplayer-cdn.tcgplayer.com/product/96569_200w.jpg,3,1407,https://cpt.tcgcsv.com/pFN,2022-08-09T21:30:24.787,1,BW95,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, if that player has 6 Pokémon in play, he or she may heal 10 damage from each of his or her Pokémon.",,,,,,,,,,,
+96570,Champions Festival - BW95 (Worlds 13) [Semi-Finalist],Champions Festival BW95 Worlds 13 Semi Finalist,https://tcgplayer-cdn.tcgplayer.com/product/96570_200w.jpg,3,1407,https://cpt.tcgcsv.com/qFN,2022-08-09T18:21:42.983,1,BW95,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, if that player has 6 Pokémon in play, he or she may heal 10 damage from each of his or her Pokémon.",,,,,,,,,,,
+96571,Champions Festival - BW95 (Worlds 13) [Finalist],Champions Festival BW95 Worlds 13 Finalist,https://tcgplayer-cdn.tcgplayer.com/product/96571_200w.jpg,3,1407,https://cpt.tcgcsv.com/rFN,2022-08-09T18:21:22.393,0,BW95,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, if that player has 6 Pokémon in play, he or she may heal 10 damage from each of his or her Pokémon.",,,,,,,,,,,
+96572,Champions Festival - BW95 (Worlds 13) [Staff],Champions Festival BW95 Worlds 13 Staff,https://tcgplayer-cdn.tcgplayer.com/product/96572_200w.jpg,3,1407,https://cpt.tcgcsv.com/sFN,2022-08-09T18:22:34.543,1,BW95,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, if that player has 6 Pokémon in play, he or she may heal 10 damage from each of his or her Pokémon.",,,,399.0,399.0,399.0,,,Normal,,
+96573,Crobat - BW51 (Team Plasma) (Prerelease) [Staff],Crobat BW51 Team Plasma Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/96573_200w.jpg,3,1407,https://cpt.tcgcsv.com/tFN,2022-08-09T18:24:25.363,1,BW51,Promo,Psychic,130,Stage 2,"<strong>Ability — Night Sight</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may draw a card.","[2P] Ultra-Toxic Fang (40) 
+<br>
+The Defending Pokémon is now Poisoned. Put 4 damage counters instead of 1 on this Pokémon between turns.",Lx2,0,85.0,85.0,85.0,65.0,,Holofoil,,F-20
+96574,Flygon - BW53 (Prerelease) [Staff],Flygon BW53 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/96574_200w.jpg,3,1407,https://cpt.tcgcsv.com/vFN,2022-08-09T18:33:40.367,1,BW53,Promo,Dragon,140,Stage 2,"<strong>Ability — Sand Slammer</strong>
+<br>
+At any time between your turns, if this Pokémon is your Active Pokémon, put 1 damage counter on each of your opponent's Pokémon.","[2GF] Flying Beatdown (80) 
+<br>You may discard a Grass Energy and a Fighting Energy attached to this Pokémon. If you do, the Defending Pokémon is now Paralyzed.",Ox2,1,,,,,,,,
+96860,Victory Cup - BW31 (Battle Road Autumn 2012) [1st Place],Victory Cup BW31 Battle Road Autumn 2012 1st Place,https://tcgplayer-cdn.tcgplayer.com/product/96860_200w.jpg,3,1407,https://cpt.tcgcsv.com/dMN,2022-08-09T22:06:11.287,1,BW31,Promo,Item,,,"<em>You may play as many Item cards as you like during your turn (before your attack.)</em>
+<br>
+Flip a coin. If heads, search your deck for a Pokémon, reveal it, and put it into your hand. Shuffle your deck afterward.",,,,129.99,129.99,129.99,132.95,,Holofoil,,
+96861,Victory Cup - BW30 (Battle Road Autumn 2012) [2nd Place],Victory Cup BW30 Battle Road Autumn 2012 2nd Place,https://tcgplayer-cdn.tcgplayer.com/product/96861_200w.jpg,3,1407,https://cpt.tcgcsv.com/fMN,2024-08-29T09:40:27.593,1,BW30,Promo,Item,,,"<em>You may play as many Item cards as you like during your turn (before your attack.)</em>
+<br>
+Flip a coin. If heads, search your deck for a Pokémon, reveal it, and put it into your hand. Shuffle your deck afterward.",,,,69.99,88.35,112.0,94.99,,Holofoil,,
+96862,Victory Cup - BW29 (Battle Road Autumn 2012) [3rd Place],Victory Cup BW29 Battle Road Autumn 2012 3rd Place,https://tcgplayer-cdn.tcgplayer.com/product/96862_200w.jpg,3,1407,https://cpt.tcgcsv.com/gMN,2022-08-09T22:11:08.237,1,BW29,Promo,Item,,,"<em>You may play as many Item cards as you like during your turn (before your attack.)</em>
+<br>
+Flip a coin. If heads, search your deck for a Pokémon, reveal it, and put it into your hand. Shuffle your deck afterward.",,,,40.98,45.78,63.95,40.99,,Holofoil,,
+96863,Victory Cup - BW29 (Battle Road Spring 2012) [3rd Place],Victory Cup BW29 Battle Road Spring 2012 3rd Place,https://tcgplayer-cdn.tcgplayer.com/product/96863_200w.jpg,3,1407,https://cpt.tcgcsv.com/hMN,2022-08-09T22:11:32.65,1,BW29,Promo,Item,,,"<em>You may play as many Item cards as you like during your turn (before your attack.)</em>
+<br>
+Flip a coin. If heads, search your deck for a Pokémon, reveal it, and put it into your hand. Shuffle your deck afterward.",,,,54.95,90.0,97.35,49.95,,Holofoil,,
+96864,Victory Cup - BW30 (Battle Road Spring 2012) [2nd Place],Victory Cup BW30 Battle Road Spring 2012 2nd Place,https://tcgplayer-cdn.tcgplayer.com/product/96864_200w.jpg,3,1407,https://cpt.tcgcsv.com/jMN,2022-08-09T22:09:44.617,1,BW30,Promo,Item,,,"<em>You may play as many Item cards as you like during your turn (before your attack.)</em>
+<br>
+Flip a coin. If heads, search your deck for a Pokémon, reveal it, and put it into your hand. Shuffle your deck afterward.",,,,59.99,60.24,66.26,60.24,,Holofoil,,
+96865,Victory Cup - BW31 (Battle Road Spring 2012) [1st Place],Victory Cup BW31 Battle Road Spring 2012 1st Place,https://tcgplayer-cdn.tcgplayer.com/product/96865_200w.jpg,3,1407,https://cpt.tcgcsv.com/kMN,2022-08-09T22:06:02.667,1,BW31,Promo,Item,,,"<em>You may play as many Item cards as you like during your turn (before your attack.)</em>
+<br>
+Flip a coin. If heads, search your deck for a Pokémon, reveal it, and put it into your hand. Shuffle your deck afterward.",,,,89.99,294.99,499.99,83.74,,Holofoil,,
+96866,Victory Cup - BW31 (Battle Road Spring 2013) [1st Place],Victory Cup BW31 Battle Road Spring 2013 1st Place,https://tcgplayer-cdn.tcgplayer.com/product/96866_200w.jpg,3,1407,https://cpt.tcgcsv.com/lMN,2022-08-09T22:06:35.49,1,BW31,Promo,Item,,,"<em>You may play as many Item cards as you like during your turn (before your attack.)</em>
+<br>
+Flip a coin. If heads, search your deck for a Pokémon, reveal it, and put it into your hand. Shuffle your deck afterward.",,,,,,,,,,,
+96867,Victory Cup - BW30 (Battle Road Spring 2013) [2nd Place],Victory Cup BW30 Battle Road Spring 2013 2nd Place,https://tcgplayer-cdn.tcgplayer.com/product/96867_200w.jpg,3,1407,https://cpt.tcgcsv.com/mMN,2022-08-09T22:10:08.06,1,BW30,Promo,Item,,,"<em>You may play as many Item cards as you like during your turn (before your attack.)</em>
+<br>
+Flip a coin. If heads, search your deck for a Pokémon, reveal it, and put it into your hand. Shuffle your deck afterward.",,,,72.49,130.0,9999.0,,,Holofoil,,
+96868,Victory Cup - BW29 (Battle Road Spring 2013) [3rd Place],Victory Cup BW29 Battle Road Spring 2013 3rd Place,https://tcgplayer-cdn.tcgplayer.com/product/96868_200w.jpg,3,1407,https://cpt.tcgcsv.com/nMN,2022-08-09T22:11:56.6,1,BW29,Promo,Item,,,"<em>You may play as many Item cards as you like during your turn (before your attack.)</em>
+<br>
+Flip a coin. If heads, search your deck for a Pokémon, reveal it, and put it into your hand. Shuffle your deck afterward.",,,,55.99,73.47,86.99,,,Holofoil,,
+96869,Tropical Beach - BW28 (Worlds 11) [Top 32],Tropical Beach BW28 Worlds 11 Top 32,https://tcgplayer-cdn.tcgplayer.com/product/96869_200w.jpg,3,1407,https://cpt.tcgcsv.com/pMN,2022-08-09T21:47:38.643,1,BW28,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play.  If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, that player may draw cards until he or she has 7 cards in his or her hand. If he or she does, that player's turn ends.",,,,,,,,,,,
+96870,Tropical Beach - BW28 (Worlds 11) [Top 16],Tropical Beach BW28 Worlds 11 Top 16,https://tcgplayer-cdn.tcgplayer.com/product/96870_200w.jpg,3,1407,https://cpt.tcgcsv.com/qMN,2022-08-09T21:44:07.45,1,BW28,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, that player may draw cards until he or she has 7 cards in his or her hand. If he or she does, that player's turn ends.",,,,,,,,,,,
+96871,Tropical Beach - BW28 (Worlds 11) [Quarter-Finalist],Tropical Beach BW28 Worlds 11 Quarter Finalist,https://tcgplayer-cdn.tcgplayer.com/product/96871_200w.jpg,3,1407,https://cpt.tcgcsv.com/rMN,2022-08-09T21:34:21.867,1,BW28,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, that player may draw cards until he or she has 7 cards in his or her hand. If he or she does, that player's turn ends.",,,,,,,,,,,
+96872,Tropical Beach - BW28 (Worlds 11) [Semi Finalist],Tropical Beach BW28 Worlds 11 Semi Finalist,https://tcgplayer-cdn.tcgplayer.com/product/96872_200w.jpg,3,1407,https://cpt.tcgcsv.com/sMN,2022-08-09T21:39:36.983,1,BW28,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.</em?
+<br>
+Once during each player's turn, that player may draw cards until he or she has 7 cards in his or her hand. If he or she does, that player's turn ends.",,,,,,,,,,,
+96873,Tropical Beach - BW28 (Worlds 11) [Finalist],Tropical Beach BW28 Worlds 11 Finalist,https://tcgplayer-cdn.tcgplayer.com/product/96873_200w.jpg,3,1407,https://cpt.tcgcsv.com/tMN,2022-08-09T21:26:19.857,0,BW28,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, that player may draw cards until he or she has 7 cards in his or her hand. If he or she does, that player's turn ends.",,,,,,,,,,,
+96874,Tropical Beach - BW28 (Worlds 11) [Staff],Tropical Beach BW28 Worlds 11 Staff,https://tcgplayer-cdn.tcgplayer.com/product/96874_200w.jpg,3,1407,https://cpt.tcgcsv.com/vMN,2022-08-09T21:41:47.653,1,BW28,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, that player may draw cards until he or she has 7 cards in his or her hand. If he or she does, that player's turn ends.",,,,599.99,899.99,999.99,,,Normal,,
+96875,Tropical Beach - BW50 (Worlds 12) [Top 32],Tropical Beach BW50 Worlds 12 Top 32,https://tcgplayer-cdn.tcgplayer.com/product/96875_200w.jpg,3,1407,https://cpt.tcgcsv.com/wMN,2022-08-09T21:44:47.423,1,BW50,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, that player may draw cards until he or she has 7 cards in his or her hand. If he or she does, that player's turn ends.",,,,599.97,599.97,599.97,,,Normal,,
+96876,Tropical Beach - BW50 (Worlds 12) [Top 16],Tropical Beach BW50 Worlds 12 Top 16,https://tcgplayer-cdn.tcgplayer.com/product/96876_200w.jpg,3,1407,https://cpt.tcgcsv.com/xMN,2022-08-09T21:42:38.14,1,BW50,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, that player may draw cards until he or she has 7 cards in his or her hand. If he or she does, that player's turn ends.",,,,,,,,,,,
+96877,Tropical Beach - BW50 (Worlds 12) [Quarter-Finalist],Tropical Beach BW50 Worlds 12 Quarter Finalist,https://tcgplayer-cdn.tcgplayer.com/product/96877_200w.jpg,3,1407,https://cpt.tcgcsv.com/zMN,2022-08-09T21:27:12.977,0,BW50,Promo,Stadium,,,"<emThis card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, that player may draw cards until he or she has 7 cards in his or her hand. If he or she does, that player's turn ends.",,,,,,,,,,,
+96878,Tropical Beach - BW50 (Worlds 12) [Semi-Finalist],Tropical Beach BW50 Worlds 12 Semi Finalist,https://tcgplayer-cdn.tcgplayer.com/product/96878_200w.jpg,3,1407,https://cpt.tcgcsv.com/BMN,2022-08-09T21:36:08.643,1,BW50,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, that player may draw cards until he or she has 7 cards in his or her hand. If he or she does, that player's turn ends.",,,,,,,,,,,
+96879,Tropical Beach - BW50 (Worlds 12) [Finalist],Tropical Beach BW50 Worlds 12 Finalist,https://tcgplayer-cdn.tcgplayer.com/product/96879_200w.jpg,3,1407,https://cpt.tcgcsv.com/CMN,2022-08-09T21:24:39.187,0,BW50,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, that player may draw cards until he or she has 7 cards in his or her hand. If he or she does, that player's turn ends.",,,,,,,,,,,
+96880,Tropical Beach - BW50 (Worlds 12) [Staff],Tropical Beach BW50 Worlds 12 Staff,https://tcgplayer-cdn.tcgplayer.com/product/96880_200w.jpg,3,1407,https://cpt.tcgcsv.com/DMN,2022-08-09T21:40:40.193,1,BW50,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, that player may draw cards until he or she has 7 cards in his or her hand. If he or she does, that player's turn ends.",,,,,,,,,,,
+96881,Minccino - BW13 (Cracked Ice Holo),Minccino BW13 Cracked Ice Holo,https://tcgplayer-cdn.tcgplayer.com/product/96881_200w.jpg,3,1407,https://cpt.tcgcsv.com/FMN,2022-08-10T14:14:51.753,1,BW13,Promo,Colorless,50,Basic,,[1] Gnaw (10),Fx2,1,4.07,8.22,14.98,6.29,,Holofoil,[2] Tail Smack (20),
+96882,Scraggy - BW25 (Cracked Ice Holo),Scraggy BW25 Cracked Ice Holo,https://tcgplayer-cdn.tcgplayer.com/product/96882_200w.jpg,3,1407,https://cpt.tcgcsv.com/GMN,2022-08-09T21:03:10.34,1,BW25,Promo,Darkness,50,Basic,"<strong>Ability — Shell Armor</strong>
+<br>
+Any damage done to this Pokémon by attacks is reduced by 20 <em>(after applying Weakness and Resistance)</em>.","[1] Paralyzing Gaze 
+<br> Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",Fx2,1,4.7,8.5,9.9,5.04,,Holofoil,[2D] High Jump Kick (30),P-20
+96883,Riolu - BW33,Riolu BW33,https://tcgplayer-cdn.tcgplayer.com/product/96883_200w.jpg,3,1407,https://cpt.tcgcsv.com/HMN,2024-07-08T14:09:08.223,1,BW33,Promo,Fighting,60,Basic,,"[1] Run Around  
+<br>Switch this Pokémon with 1 of your Benched Pokémon.",Px2,1,6.88,19.99,22.29,14.96,,Normal,[1F] Hook (30),
+96884,Luxio - BW34 (Cracked Ice Holo),Luxio BW34 Cracked Ice Holo,https://tcgplayer-cdn.tcgplayer.com/product/96884_200w.jpg,3,1407,https://cpt.tcgcsv.com/JMN,2022-08-09T19:24:32.847,1,BW34,Promo,Lightning,80,Stage 1,,"[L] Dazzle Blast (10) 
+<br>Flip a coin. If heads, the Defending Pokémon is now Confused.",Fx2,1,,,,,,,"[2L] Random Spark 
+<br>This attack does 40 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+96885,Keldeo - BW60,Keldeo BW60,https://tcgplayer-cdn.tcgplayer.com/product/96885_200w.jpg,3,1407,https://cpt.tcgcsv.com/KMN,2022-08-09T18:45:02.19,1,BW60,Promo,Water,90,Basic,,"[1] Swords Dance 
+<br>During your next turn, this Pokémon's Aqua Blade attack's base damage is 120.",Gx2,1,5.17,10.59,11.0,12.72,,Normal,[1WW] Aqua Blade (60),
+97089,Champions Festival - BW95 (Worlds 13) [Champion],Champions Festival BW95 Worlds 13 Champion,https://tcgplayer-cdn.tcgplayer.com/product/97089_200w.jpg,3,1407,https://cpt.tcgcsv.com/PRN,2022-08-09T18:21:12.12,0,BW95,Promo,Stadium,,,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.</em>
+<br>
+Once during each player's turn, if that player has 6 Pokémon in play, he or she may heal 10 damage from each of his or her Pokémon.",,,,,,,,,,,
+97090,Metagross - BW75 (Team Plasma) (Prerelease) [Staff],Metagross BW75 Team Plasma Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/97090_200w.jpg,3,1407,https://cpt.tcgcsv.com/QRN,2022-08-09T19:34:45.47,1,BW75,Promo,Psychic,140,Stage 2,"<strong>Ability — Plasma Search</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may search your deck for a Team Plasma card, reveal it, and put it into your hand. Shuffle your deck afterward. You may not use an Ability with the same name during your turn.","[3P] Mind Bend (60) 
+<br>The Defending Pokémon is now Confused.",Px2,2,500.0,500.0,500.0,102.99,,Holofoil,,
+97091,Porygon-Z (Team Plasma) - BW84 (Prerelease) [Staff],Porygon Z Team Plasma BW84 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/97091_200w.jpg,3,1407,https://cpt.tcgcsv.com/RRN,2022-08-09T20:48:45.463,1,BW84,Promo,Colorless,130,Stage 2,"<strong>Ability — Plasma Transfer</strong>
+<br>
+As often as you like during your turn <em>(before your attack)</em>, you may move a Plasma Energy attached to 1 of your Pokémon to another of your Pokémon.","[3] Tri Attack (50x) 
+<br>Flip 3 coins. This attack does 50 damage times the number of heads.",Fx2,1,100.0,100.0,100.0,73.95,,Holofoil,,
+97092,Tornadus EX - BW96 (Prerelease) [Staff],Tornadus EX BW96 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/97092_200w.jpg,3,1407,https://cpt.tcgcsv.com/SRN,2022-08-09T21:20:42.86,1,BW96,Promo,Colorless,170,Basic,,"[2] Blow Through (30+) 
+<br>If there is any Stadium card in play, this attack does 30 more damage.",Lx2,1,,,,,,,"[3] Power Blast (100) 
+<br>Flip a coin. If tails, discard an Energy attached to this Pokémon.",F-20
+97093,Volcarona - BW40 (Prerelease) [Staff],Volcarona BW40 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/97093_200w.jpg,3,1407,https://cpt.tcgcsv.com/TRN,2022-08-09T22:17:17.933,1,BW40,Promo,Fire,110,Stage 1,"<strong>Ability — Scorching Scales</strong>
+<br>
+Put 4 damage counters instead of 2 on your opponent's Burned Pokémon between turns.","[2R] Burning Wind (70) 
+<br>You may discard an Energy attached to this Pokémon. If you do, the Defending Pokémon is now Burned.",Wx2,3,,,,,,,,
+108421,Genesect - BW101,Genesect BW101,https://tcgplayer-cdn.tcgplayer.com/product/108421_200w.jpg,3,1407,https://cpt.tcgcsv.com/rnT,2022-08-09T18:34:12.737,1,BW101,Promo,Grass,110,Basic,,"[2] Hyper Beam (30)
+<br>Flip a coin. If heads, discard an Energy attached to the Defending Pokémon.",Rx2,2,55.0,58.02,299.99,67.95,,Normal,"[1GG] Breaker Bazooka (100)
+<br>Discard all Grass Energy attached to this Pokémon.",
+173095,Gigalith - 53/98 (Prerelease),Gigalith 53 98 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/173095_200w.jpg,3,1407,https://cpt.tcgcsv.com/Wfp2,2022-11-25T17:19:00.26,1,53/98,Promo,Fighting,140,Stage 2,,"[F] Shear 
+<br>Discard the top 5 cards of your deck. If any of those cards are Fighting Energy cards, attach them to this Pokémon.",Gx2,4,4.99,6.8,15.99,6.8,,Holofoil,"[4] Rock Bullet (40+) 
+<br>Does 20 more damage for each Fighting Energy attached to this Pokémon.",
+173096,Gigalith 53/98 (Prerelease) [Staff],Gigalith 53 98 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/173096_200w.jpg,3,1407,https://cpt.tcgcsv.com/Xfp2,2022-08-09T18:36:53.233,1,53/98,Promo,Fighting,140,Stage 2,,"[F] Shear 
+<br>Discard the top 5 cards of your deck. If any of those cards are Fighting Energy cards, attach them to this Pokémon.",Gx2,4,27.45,44.99,53.39,28.36,,Holofoil,"[4] Rock Bullet (40+) 
+<br>Does 20 more damage for each Fighting Energy attached to this Pokémon.",
+202379,Pikachu - BW54,Pikachu BW54,https://tcgplayer-cdn.tcgplayer.com/product/202379_200w.jpg,3,1407,https://cpt.tcgcsv.com/CZD2,2022-10-06T21:54:39.653,1,BW54,Rare,Lightning,60,Basic,,"[L] Quick Attack (10+) 
+<br>Flip a coin. If heads, this attack does 10 more damage.",Fx2,1,49.99,56.64,86.0,49.91,,Normal,[1LL] Electro Ball (50),
+228483,Darmanitan - 25/114 (Prerelease),Darmanitan 25 114 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/228483_200w.jpg,3,1407,https://cpt.tcgcsv.com/HpR2,2022-08-09T16:16:42.103,1,25/114,Promo,Fire,120,Stage 1,,"[1R] Fire Fang (20) 
+<br>The Defending Pokémon is now Burned.",Wx2,2,4.83,9.49,19.99,10.69,,Holofoil,"[2R] Thrash (70+) 
+<br>Flip a coin. If heads, this attack does 20 more damage. If tails, this Pokémon does 20 damage to itself.",
+228485,Darmanitan - 25/114 (Prerelease) [Staff],Darmanitan 25 114 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/228485_200w.jpg,3,1407,https://cpt.tcgcsv.com/KpR2,2022-08-09T16:17:38.13,1,25/114,Promo,Fire,120,Stage 1,,"[1R] Fire Fang (20) 
+<br>The Defending Pokémon is now Burned.",Wx2,2,49.0,55.5,55.5,36.4,,Holofoil,"[2R] Thrash (70+) 
+<br>Flip a coin. If heads, this attack does 20 more damage. If tails, this Pokémon does 20 damage to itself.",
+228499,Victini - 43/101 (Prerelease),Victini 43 101 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/228499_200w.jpg,3,1407,https://cpt.tcgcsv.com/_pR2,2022-08-09T21:59:19.747,1,43/101,Promo,Psychic,60,Basic,,"[P] V-blast (120) 
+<br>Flip 2 coins. If either of them is tails, this attack does nothing.",Px2,1,25.0,27.5,37.0,26.83,,Holofoil,,
+228500,Victini - 43/101 (Prerelease) [Staff],Victini 43 101 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/228500_200w.jpg,3,1407,https://cpt.tcgcsv.com/0qR2,2022-08-09T21:59:50.593,1,43/101,Promo,Psychic,60,Basic,,"[P] V-blast (120) 
+<br>Flip 2 coins. If either of them is tails, this attack does nothing.",Px2,1,,,,,,,,
+230421,Arcanine - 12/99 (Prerelease),Arcanine 12 99 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/230421_200w.jpg,3,1407,https://cpt.tcgcsv.com/rbS2,2022-12-05T13:33:20.967,1,12/99,Promo,Fire,130,Stage 1,"<strong>Ability — Blazing Mane</strong>
+<br>If this Pokémon is your Active Pokémon and is damaged by an opponent's attack <em>(even if this Pokémon is Knocked Out)</em>, the Attacking Pokémon is now Burned.","[1RR] Fire Spin (100)
+<br>
+Flip a coin. If tails, discard 2 Energy attached to this Pokémon.",Wx2,3,42.49,45.73,50.0,46.99,42.95,Holofoil,,
+230422,Arcanine - 12/99 (Prerelease) [Staff],Arcanine 12 99 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/230422_200w.jpg,3,1407,https://cpt.tcgcsv.com/sbS2,2022-11-24T15:20:14.123,1,12/99,Promo,Fire,130,Stage 1,"<strong>Ability — Blazing Mane</strong>
+<br>
+If this Pokémon is your Active Pokémon and is damaged by an opponent's attack <em>(even if this Pokémon is Knocked Out)</em>, the Attacking Pokémon is now Burned.","[1RR] Fire Spin (100) 
+<br>
+Flip a coin. If tails, discard 2 Energy attached to this Pokémon.",Wx2,3,,,,,,,,
+242032,Druddigon (Team Plasma) - BW80 (Cosmos Holo),Druddigon Team Plasma BW80 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/242032_200w.jpg,3,1407,https://cpt.tcgcsv.com/GQX2,2022-08-09T18:27:38.307,1,BW80,Promo,Dragon,100,Basic,,"[1] Taunt  
+<br>Switch 1 of your opponent's Benched Pokémon with the Defending Pokémon.",Ox2,2,,,,,,,"[1RW] Boost Claw (60) 
+<br>During your next turn, each of this Pokémon's attacks does 30 more damage <em>(before applying Weakness and Resistance)</em>.",

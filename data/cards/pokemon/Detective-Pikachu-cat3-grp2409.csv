@@ -1,0 +1,119 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extCardText,extUPC,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extWeakness,extResistance,extRetreatCost,extAttack2
+185242,Detective Pikachu: Charizard GX Case File,Detective Pikachu Charizard GX Case File,https://tcgplayer-cdn.tcgplayer.com/product/185242_200w.jpg,3,2409,https://cpt.tcgcsv.com/S6v2,2019-05-14T16:08:34.787,1,"Add the super-hot Charizard GX promo card to your collection, and celebrate the Detective Pikachu movie with a real metal coin and Charizard GX at giant size. This Special Case File includes a treasure trove of Pokemon TCG cards as well! Tear into five special Pokemon TCG: Detective Pikachu booster packs and two more Pokemon TCG boosters to expand your collection.",PKU80633,199.95,599.97,999.99,104.3,,Normal,,,,,,,,,,
+185243,Detective Pikachu: Greninja GX Case File,Detective Pikachu Greninja GX Case File,https://tcgplayer-cdn.tcgplayer.com/product/185243_200w.jpg,3,2409,https://cpt.tcgcsv.com/T6v2,2021-04-27T21:28:12.253,1,"It takes a sharp eye to keep track of Greninja GX, but fortunately, there’s an amazing Pokemon detective in town! Celebrate the Detective Pikachu movie with a foil promo card and an oversized card featuring Greninja GX—both of them prized elements of any Pokémon TCG collection. And that’s not all! You also get a cool Greninja pin, and you can tear into five special Pokemon TCG: Detective Pikachu booster packs and two additional Pokemon TCG booster packs to expand your collection—and to uncover a few more Pokémon that might have been lurking in the shadows.",820650803871,98.0,107.5,139.0,92.5,,Normal,,,,,,,,,,
+185244,Detective Pikachu: Collector Chest,Detective Pikachu Collector Chest,https://tcgplayer-cdn.tcgplayer.com/product/185244_200w.jpg,3,2409,https://cpt.tcgcsv.com/V6v2,2019-02-19T13:58:23.99,1,"Contents:
+<br>• 7 Pokémon TCG: Detective Pikachu booster packs
+<br>• 2 Pokémon TCG: Sun & Moon Series booster packs
+<br>• A cool collector’s pin inspired by Detective Pikachu
+<br>• A Pokémon notepad and sticker sheet",,,,,,,,,,,,,,,,,
+185245,Detective Pikachu Case File,Detective Pikachu Case File,https://tcgplayer-cdn.tcgplayer.com/product/185245_200w.jpg,3,2409,https://cpt.tcgcsv.com/W6v2,2019-02-19T14:00:54.967,1,"Contents:
+<br>• 1 Promo card featuring Detective Pikachu—on the case!
+<br>• 2 Pokémon TCG: Detective Pikachu booster packs
+<br>• 1 Additional Pokémon TCG booster pack
+<br>• 1 Metallic coin inspired by Detective Pikachu
+<br>• 1 Code card for the Pokémon Trading Card Game Online",PKU80384,63.99,63.99,65.99,39.75,,Normal,,,,,,,,,,
+186001,Bulbasaur (Holo Common),Bulbasaur Holo Common,https://tcgplayer-cdn.tcgplayer.com/product/186001_200w.jpg,3,2409,https://cpt.tcgcsv.com/2qv2,2024-07-26T17:23:28.783,1,,,0.08,0.5,5.03,0.61,,Holofoil,1/18,Common,Grass,60,Basic,"[G] Find a Friend
+<br>Search your deck for a Grass Pokemon, reveal it, and put it into your hand. Then, shuffle your deck.",Rx2,None,1,
+186003,Ludicolo,Ludicolo,https://tcgplayer-cdn.tcgplayer.com/product/186003_200w.jpg,3,2409,https://cpt.tcgcsv.com/5qv2,2024-07-26T17:23:28.857,1,"<strong>Ability — Table Service</strong>
+<br>Once during your turn <em>(before your attack)</em>, you may heal 30 damage from 1 of your Pokemon.",,0.35,0.69,2.99,0.7,,Holofoil,2/18,Rare,Grass,140,Stage 2,"[2G] Punch and Run (70)
+<br>Switch this Pokemon with 1 of your Benched Pokemon.",Rx2,None,3,
+186004,Morelull (Holo Common),Morelull Holo Common,https://tcgplayer-cdn.tcgplayer.com/product/186004_200w.jpg,3,2409,https://cpt.tcgcsv.com/6qv2,2024-07-26T17:23:28.917,1,,,0.07,0.25,4.03,0.25,,Holofoil,3/18,Common,Grass,50,Basic,"[G] Sleep Spore (10)
+<br>Your opponent's Active Pokemon is now Asleep.",Rx2,None,1,
+186005,Charmander (Holo Common),Charmander Holo Common,https://tcgplayer-cdn.tcgplayer.com/product/186005_200w.jpg,3,2409,https://cpt.tcgcsv.com/7qv2,2024-07-26T17:23:28.95,1,,,0.1,0.4,7.8,0.43,0.25,Holofoil,4/18,Common,Fire,60,Basic,"[1] Reckless Charge (20)
+<br>This Pokemon does 10 damage to itself.",Wx2,None,1,
+186007,Charizard,Charizard,https://tcgplayer-cdn.tcgplayer.com/product/186007_200w.jpg,3,2409,https://cpt.tcgcsv.com/9qv2,2024-11-21T11:15:54.583,1,,,5.52,8.02,20.0,8.19,,Holofoil,5/18,Holo Rare,Fire,180,Stage 2,[2R] Slash (70),Wx2,None,3,"[3R] Wild Tackle (180)
+<br>This Pokemon does 50 damage to itself."
+186009,Arcanine,Arcanine,https://tcgplayer-cdn.tcgplayer.com/product/186009_200w.jpg,3,2409,https://cpt.tcgcsv.com/cqv2,2022-12-08T21:06:05.033,1,"<strong>Ability — Security Guard</strong>
+<br>As long as this Pokemon is your Active Pokemon, all of your Pokemon take 30 less damage from your opponent's attacks <em>(after applying Weakness and Resistance)</em>.",,0.95,2.2,7.0,2.61,1.37,Holofoil,6/18,Rare,Fire,120,Stage 1,[2R] Sharp Fang (90),Wx2,None,3,
+186010,Psyduck (Holo Common),Psyduck Holo Common,https://tcgplayer-cdn.tcgplayer.com/product/186010_200w.jpg,3,2409,https://cpt.tcgcsv.com/dqv2,2024-07-26T17:23:28.997,1,,,0.07,0.4,2.0,0.41,,Holofoil,7/18,Common,Water,80,Basic,"[W] Panic (10)
+<br>This Pokemon is now Confused.",Gx2,None,3,
+186012,Magikarp (Holo Common),Magikarp Holo Common,https://tcgplayer-cdn.tcgplayer.com/product/186012_200w.jpg,3,2409,https://cpt.tcgcsv.com/gqv2,2024-07-26T17:23:29.06,1,,,0.05,0.35,7.6,0.38,0.31,Holofoil,8/18,Common,Water,30,Basic,"[W] Hold Still
+<br>Heal 10 damage from this Pokemon.",Lx2,None,1,
+186013,Greninja,Greninja,https://tcgplayer-cdn.tcgplayer.com/product/186013_200w.jpg,3,2409,https://cpt.tcgcsv.com/hqv2,2022-12-08T21:06:31.203,1,"<strong>Ability — Evasion Jutsu</strong>
+<br>If any damage is done to this Pokemon by attacks, flip a coin. If heads, prevent that damage.",,2.75,3.99,7.99,4.92,4.83,Holofoil,9/18,Holo Rare,Water,140,Stage 2,"[WW] Furious Shurikens
+<br>This attack does 50 damage to 2 of your opponent's Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>",Gx2,None,1,
+186015,Detective Pikachu,Detective Pikachu,https://tcgplayer-cdn.tcgplayer.com/product/186015_200w.jpg,3,2409,https://cpt.tcgcsv.com/kqv2,2024-11-21T08:48:16.783,1,,,2.49,4.65,19.97,4.65,2.89,Holofoil,10/18,Rare,Lightning,90,Basic,"[L] Scout
+<br>Your opponent reveals their hand.",Fx2,M-20,2,"[3] Surprise Attack (80)
+<br>Flip a coin. If tails, this attack does nothing."
+186019,Mr. Mime,Mr Mime,https://tcgplayer-cdn.tcgplayer.com/product/186019_200w.jpg,3,2409,https://cpt.tcgcsv.com/pqv2,2024-11-21T11:16:06.7,1,"<strong>Ability — Pantomime</strong>
+<br>When you play this Pokemon from your hand onto your Bench during your turn, you may switch 1 of your face-down Prize cards with the top card of your deck.",,0.4,1.35,5.0,1.46,0.75,Holofoil,11/18,Rare,Psychic,80,Basic,"[1P] Juggling (20x)
+<br>Flip 4 coins. This attack does 20 damage for each heads.",Px2,None,1,
+186020,Mewtwo,Mewtwo,https://tcgplayer-cdn.tcgplayer.com/product/186020_200w.jpg,3,2409,https://cpt.tcgcsv.com/qqv2,2022-12-08T21:06:56.167,1,,,3.59,6.0,10.53,6.4,8.99,Holofoil,12/18,Holo Rare,Psychic,130,Basic,"[1P] Psyjack (30)
+<br>Choose 1 of your opponent's Active Pokemon's attacks. That Pokemon can't use that attack during your opponent's next turn.",Px2,None,2,"[1PP] Break Burn (130)
+<br>Discard 2 Psychic Energy from this Pokemon."
+186021,Machamp,Machamp,https://tcgplayer-cdn.tcgplayer.com/product/186021_200w.jpg,3,2409,https://cpt.tcgcsv.com/rqv2,2023-05-21T08:31:01.367,1,,,0.3,1.0,2.99,1.01,0.86,Holofoil,13/18,Rare,Fighting,160,Stage 2,"[F] Directing Traffic
+<br>Look at the top 5 cards of your deck and put them back in any order.",Px2,None,2,"[FF] Cross Chop (80+)
+<br>Flip a coin. If heads, this attack does 60 more damage."
+186022,Jigglypuff (Holo Common),Jigglypuff Holo Common,https://tcgplayer-cdn.tcgplayer.com/product/186022_200w.jpg,3,2409,https://cpt.tcgcsv.com/sqv2,2025-05-20T19:03:06.537,1,,,0.05,0.32,4.03,0.31,0.29,Holofoil,14/18,Common,Fairy,60,Basic,"[Y] Healing Melody
+<br>Heal 10 damage from each of your Pokemon.",Mx2,D-20,1,
+186023,Snubbull (Holo Common),Snubbull Holo Common,https://tcgplayer-cdn.tcgplayer.com/product/186023_200w.jpg,3,2409,https://cpt.tcgcsv.com/tqv2,2022-12-08T21:07:25.69,1,,,0.05,0.25,8.0,0.21,,Holofoil,15/18,Common,Fairy,70,Basic,"[2] Play Rough (10+)
+<br>Flip a coin. If heads, this attack does 30 more damage.",Mx2,D-20,2,
+186024,Lickitung (Holo Common),Lickitung Holo Common,https://tcgplayer-cdn.tcgplayer.com/product/186024_200w.jpg,3,2409,https://cpt.tcgcsv.com/vqv2,2024-07-26T17:23:29.2,1,,,0.01,0.26,3.0,0.3,,Holofoil,16/18,Common,Colorless,100,Basic,"[2] Continuous Lick (20x)
+<br>Flip a coin until you get tails. This attack does 20 damage for each heads.",Fx2,None,3,
+186025,Ditto,Ditto,https://tcgplayer-cdn.tcgplayer.com/product/186025_200w.jpg,3,2409,https://cpt.tcgcsv.com/wqv2,2022-12-08T21:08:13.813,1,,,2.0,4.37,7.0,4.41,,Holofoil,17/18,Holo Rare,Colorless,60,Basic,"[1] Copy Anything
+<br>Choose 1 of your opponent's Pokemon's attacks and use it as this attack. If this Pokemon doesn't have the necessary Energy to use that attack, this attack does nothing.",Fx2,None,1,
+186026,Slaking,Slaking,https://tcgplayer-cdn.tcgplayer.com/product/186026_200w.jpg,3,2409,https://cpt.tcgcsv.com/xqv2,2024-07-26T17:23:29.247,1,,,0.3,0.74,2.99,0.72,,Holofoil,18/18,Rare,Colorless,180,Stage 2,"[4] Pitch (150)
+<br>Your opponent switches their Active Pokemon with 1 of their Benched Pokemon.",Fx2,None,4,
+187239,Detective Pikachu Booster Pack,Detective Pikachu Booster Pack,https://tcgplayer-cdn.tcgplayer.com/product/187239_200w.jpg,3,2409,https://cpt.tcgcsv.com/PVv2,2021-07-02T19:55:48.62,1,Each Detective Pikachu booster pack contains 4 random cards.,,11.0,14.99,19.99,12.75,,Normal,,,,,,,,,,
+189810,Detective Pikachu Special Promo Booster Pack,Detective Pikachu Special Promo Booster Pack,https://tcgplayer-cdn.tcgplayer.com/product/189810_200w.jpg,3,2409,https://cpt.tcgcsv.com/dXw2,2019-05-08T20:05:42.78,1,"Each promo booster pack contains 2 cards; one SM190 Detective Pikachu Promo, and 1 mystery card.
+<br>
+<br><em>This promo booster was distributed with tickets during Opening Weekend of the Detective Pikachu movie.</em>",,11.49,14.99,16.42,13.94,,Normal,,,,,,,,,,
+190324,Detective Pikachu: Mewtwo GX Case File,Detective Pikachu Mewtwo GX Case File,https://tcgplayer-cdn.tcgplayer.com/product/190324_200w.jpg,3,2409,https://cpt.tcgcsv.com/v8x2,2019-05-14T16:08:46.613,1,"Time for some serious Pokemon sleuthing—because there's an amazing Pokemon detective in town! Celebrate the POKEMON Detective Pikachu movie with a high-powered foil promo card and an oversize card featuring Mewtwo GX—both of them clear highlights of any Pokemon TCG collection. 
+<br>
+<br><strong>Contents:</strong>
+• 1 foil promo card featuring Mewtwo GX
+• 1 foil jumbo-sized card featuring Mewtwo GX
+• 4 Pokemon TCG: Detective Pikachu booster packs <em>(Each pack contains 4 random cards.)</em>
+• 2 additional Pokemon TCG booster packs <em>(Each Sun & Moon Series pack includes 10 cards and 1 basic Energy. Each XY Series pack includes 10 cards.)</em>
+• 1 code card for the Pokemon Trading Card Game Online
+
+<br><em>Cards vary by pack. Packs may vary by products.</em>",,175.0,188.88,199.9,117.91,,Normal,,,,,,,,,,
+190325,Detective Pikachu Special Case File - 3 Pack Booster Blister,Detective Pikachu Special Case File 3 Pack Booster Blister,https://tcgplayer-cdn.tcgplayer.com/product/190325_200w.jpg,3,2409,https://cpt.tcgcsv.com/w8x2,2019-08-22T12:53:48.017,1,"<strong>Contents:</strong>
+<br>• 1 foil promo card featuring Detective Pikachu
+<br>• 2 Pokemon TCG: Detective Pikachu booster packs <em>(Each pack contains 4 random cards.)</em>
+<br>• 1 metallic Detective Pikachu inspired coin
+<br>• 1 additional Pokemon TCG booster pack 
+<br>• 1 code card for the Pokemon Trading Card Game Online
+<br>• 1 official Detective Pikachu 4-pocket binder
+
+<br><em>Cards vary by pack. Packs may vary by products.</em>",820650806278,84.99,84.99,84.99,84.99,,Normal,,,,,,,,,,
+197563,Detective Pikachu On the Case Figure Collection,Detective Pikachu On the Case Figure Collection,https://tcgplayer-cdn.tcgplayer.com/product/197563_200w.jpg,3,2409,https://cpt.tcgcsv.com/h2C2,2019-08-21T20:42:57.77,1,"Detective Pikachu has a nose for clues, for a mystery, for things other detectives might miss! Get your own sculpted Detective Pikachu figure featuring the famous Pokémon in a classic sleuthing cap, standing atop an enormous magnifying glass! This collection also includes a roundup of awesome foil promo cards featuring the famous detective and some of the other Pokémon with prominent roles in the POKÉMON Detective Pikachu movie. In addition, you'll get plenty of Pokémon TCG cards, including three Detective Pikachu 4-card booster packs!
+<br>
+<br>The Pokémon TCG: Detective Pikachu On the Case Figure Collection includes:
+<br>• 4 foil promo cards featuring Detective Pikachu, Psyduck, Bulbasaur, and Snubbull
+<br>• 1 beautifully sculpted Detective Pikachu figure, standing on a magnifying glass
+<br>• 3 Pokémon TCG: Detective Pikachu 4-card booster packs
+<br>• 2 additional Pokémon TCG booster packs
+<br>• A code card for the Pokémon Trading Card Game Online",0820650806360,114.95,119.9,119.94,74.4,,Normal,,,,,,,,,,
+237678,Detective Pikachu: Charizard GX Special Case File,Detective Pikachu Charizard GX Special Case File,https://tcgplayer-cdn.tcgplayer.com/product/237678_200w.jpg,3,2409,https://cpt.tcgcsv.com/B5W2,2021-04-27T21:30:22.267,1,"Add the super-hot Charizard-GX promo card to your collection, and celebrate the Pokemon Detective Pikachu movie with a real metal coin and Charizard-GX at giant size. This Special Case File includes a treasure trove of Pokémon TCG cards as well! Tear into five special Pokémon TCG: Detective Pikachu booster packs, plus two more Pokémon TCG boosters to expand your collection!
+<br>The Pokemon TCG: Detective Pikachu Charizard-GX Special Case File includes:
+<br>• 1 promo card featuring Charizard-GX
+<br>• 1 oversize card featuring Charizard-GX
+<br>• 1 metal coin
+<br>• 5 Pokemon TCG: Detective Pikachu booster packs
+<br>• 2 additional Pokemon TCG booster packs
+<br>• 1 code card for the Pokemon Trading Card Game Online",820650806339,204.5,210.0,222.0,203.5,,Normal,,,,,,,,,,
+257545,Code Card - Detective Pikachu Case File,Code Card Detective Pikachu Case File,https://tcgplayer-cdn.tcgplayer.com/product/257545_200w.jpg,3,2409,https://cpt.tcgcsv.com/W053,2022-07-20T19:24:34.027,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",,0.15,0.25,1.0,0.18,,Normal,,Code Card,,,,,,,,
+264258,Detective Pikachu Two Pack Blister,Detective Pikachu Two Pack Blister,https://tcgplayer-cdn.tcgplayer.com/product/264258_200w.jpg,3,2409,https://cpt.tcgcsv.com/bK73,2022-02-18T20:58:18.98,2,,,60.0,60.0,60.0,45.0,,Normal,,,,,,,,,,
+264420,Detective Pikachu Cafe Figure Collection,Detective Pikachu Cafe Figure Collection,https://tcgplayer-cdn.tcgplayer.com/product/264420_200w.jpg,3,2409,https://cpt.tcgcsv.com/qN73,2022-02-22T16:28:23.737,1,"This product contains —
+<br>• Detective Pikachu SM Black Star Promo 
+<br>• A figure of Detective Pikachu holding a cup of coffee 
+<br>• Four Detective Pikachu booster packs 
+<br>• Two other Sun & Moon Series booster packs 
+<br>• A code card for the TCGO.",,,,,,,,,,,,,,,,,
+267727,Code Card - Detective Pikachu 4 Card Booster Pack,Code Card Detective Pikachu 4 Card Booster Pack,https://tcgplayer-cdn.tcgplayer.com/product/267727_200w.jpg,3,2409,https://cpt.tcgcsv.com/z693,2023-03-31T16:05:10.11,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",,0.14,0.19,0.5,0.17,,Normal,,Code Card,,,,,,,,
+267732,Code Card - Detective Pikachu On The Case Figure Collection,Code Card Detective Pikachu On The Case Figure Collection,https://tcgplayer-cdn.tcgplayer.com/product/267732_200w.jpg,3,2409,https://cpt.tcgcsv.com/G693,2023-03-31T16:05:57.363,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",,0.17,0.17,0.17,,,Normal,,Code Card,,,,,,,,
+267733,Code Card - Detective Pikachu Tin [Mewtwo GX],Code Card Detective Pikachu Tin Mewtwo GX,https://tcgplayer-cdn.tcgplayer.com/product/267733_200w.jpg,3,2409,https://cpt.tcgcsv.com/H693,2023-03-31T16:06:32.42,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",,,,,,,,,Code Card,,,,,,,,
+267734,Code Card - Detective Pikachu Case File [Mewtwo GX],Code Card Detective Pikachu Case File Mewtwo GX,https://tcgplayer-cdn.tcgplayer.com/product/267734_200w.jpg,3,2409,https://cpt.tcgcsv.com/J693,2023-03-31T16:05:44.37,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",,0.5,1.25,2.0,,,Normal,,Code Card,,,,,,,,
+267735,Code Card - Detective Pikachu Case File [Greninja GX],Code Card Detective Pikachu Case File Greninja GX,https://tcgplayer-cdn.tcgplayer.com/product/267735_200w.jpg,3,2409,https://cpt.tcgcsv.com/K693,2023-03-31T16:05:25.79,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",,1.25,2.82,6.99,1.25,,Normal,,Code Card,,,,,,,,
+502477,Detective Pikachu Tin [Charizard],Detective Pikachu Tin Charizard,https://tcgplayer-cdn.tcgplayer.com/product/502477_200w.jpg,3,2409,https://cpt.tcgcsv.com/z_06,2023-06-29T12:14:29.733,1,"Each Detective Pikachu Exclusive Collector Tin contains the following:
+<br>• 4 Pokemon TCG: Detective Pikachu Booster Packs
+<br>• A GX promotional card (featuring Charizard)
+<br>• 2 Additional Booster Packs
+<br>• A Code Card for Pokemon TCG Online.",,120.0,147.97,200.0,115.15,,Normal,,,,,,,,,,
+502478,Detective Pikachu Tin [Mewtwo],Detective Pikachu Tin Mewtwo,https://tcgplayer-cdn.tcgplayer.com/product/502478_200w.jpg,3,2409,https://cpt.tcgcsv.com/B_06,2023-06-29T12:14:51.777,1,"Each Detective Pikachu Exclusive Collector Tin contains the following:
+<br>• 4 Pokemon TCG: Detective Pikachu Booster Packs
+<br>• A GX promotional card (featuring Mewtwo)
+<br>• 2 Additional Booster Packs
+<br>• A Code Card for Pokemon TCG Online.",,99.99,144.99,150.0,86.33,,Normal,,,,,,,,,,
+589417,Code Card - Detective Pikachu Cafe Figure Collection,Code Card Detective Pikachu Cafe Figure Collection,https://tcgplayer-cdn.tcgplayer.com/product/589417_200w.jpg,3,2409,https://cpt.tcgcsv.com/mNK6,2024-10-27T18:29:17.003,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",,0.99,0.99,0.99,0.99,,Normal,,Code Card,,,,,,,,

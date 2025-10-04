@@ -1,0 +1,105 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extCardText,extUPC,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extAttack2,extWeakness,extResistance,extRetreatCost
+162111,Sun & Moon Trainer Kit: Alolan Sandslash & Alolan Ninetales,Sun and Moon Trainer Kit Alolan Sandslash and Alolan Ninetales,https://tcgplayer-cdn.tcgplayer.com/product/162111_200w.jpg,3,2208,https://cpt.tcgcsv.com/fSj2,2021-07-02T21:03:37.413,1,"Each kit comes with two pre-constructed decks ready to play, each with their own special foil card and a guided game play booklet to help new players get going right away. One deck features the Alolan Sandslash while the other offers up the Alolan Ninetales. The decks are designed so they can be played against each other, or combined into a full 60-card deck.
+<br>
+<br>The kit also includes a two-player game mat with tips and rules on the back, damage counters and special condition markers, a game coin, an illustrated deck box, and a code for the online game.",0820650803826,28.0,44.0,60.0,29.93,,Normal,,,,,,,,,,
+168146,Hoothoot (1),Hoothoot 1,https://tcgplayer-cdn.tcgplayer.com/product/168146_200w.jpg,3,2208,https://cpt.tcgcsv.com/Xgm2,2023-01-06T19:13:47.303,1,,,0.1,0.23,1.0,0.19,,Normal,106/147,Common,Colorless,60,Basic,"[1] See Through
+<br>Your opponent reveals their hand.",[2] Peck (20),Lx2,F-20,1
+168174,Water Energy (2),Water Energy 2,https://tcgplayer-cdn.tcgplayer.com/product/168174_200w.jpg,3,2208,https://cpt.tcgcsv.com/vhm2,2023-01-06T21:31:31.63,1,,,0.05,0.12,0.37,0.11,,Normal,,Common,Basic Energy,,,,,,,
+168175,Water Energy (3),Water Energy 3,https://tcgplayer-cdn.tcgplayer.com/product/168175_200w.jpg,3,2208,https://cpt.tcgcsv.com/whm2,2023-01-06T21:16:47.123,1,,,0.05,0.24,0.5,,,Normal,,Common,Basic Energy,,,,,,,
+168176,Water Energy (5),Water Energy 5,https://tcgplayer-cdn.tcgplayer.com/product/168176_200w.jpg,3,2208,https://cpt.tcgcsv.com/xhm2,2023-01-06T21:22:25.253,1,,,0.05,0.22,0.37,,,Normal,,Common,Basic Energy,,,,,,,
+168177,Water Energy (6),Water Energy 6,https://tcgplayer-cdn.tcgplayer.com/product/168177_200w.jpg,3,2208,https://cpt.tcgcsv.com/zhm2,2023-01-06T21:34:34.823,1,,,0.05,0.2,0.37,,,Normal,,Common,Basic Energy,,,,,,,
+168178,Water Energy (7),Water Energy 7,https://tcgplayer-cdn.tcgplayer.com/product/168178_200w.jpg,3,2208,https://cpt.tcgcsv.com/Bhm2,2023-01-06T21:35:21.867,1,,,0.01,0.23,0.5,,,Normal,,Common,Basic Energy,,,,,,,
+168179,Water Energy (26),Water Energy 26,https://tcgplayer-cdn.tcgplayer.com/product/168179_200w.jpg,3,2208,https://cpt.tcgcsv.com/Chm2,2023-01-06T21:06:28.5,1,,,0.05,0.25,0.37,0.04,,Normal,,Common,Basic Energy,,,,,,,
+168187,Metal Energy (8),Metal Energy 8,https://tcgplayer-cdn.tcgplayer.com/product/168187_200w.jpg,3,2208,https://cpt.tcgcsv.com/Mhm2,2023-01-06T21:28:58.017,1,,,0.01,0.25,0.69,0.48,,Normal,,Common,Basic Energy,,,,,,,
+168189,Metal Energy (9),Metal Energy 9,https://tcgplayer-cdn.tcgplayer.com/product/168189_200w.jpg,3,2208,https://cpt.tcgcsv.com/Phm2,2023-01-06T21:29:43.123,1,,,0.05,0.25,0.49,,,Normal,,Common,Basic Energy,,,,,,,
+168190,Metal Energy (10),Metal Energy 10,https://tcgplayer-cdn.tcgplayer.com/product/168190_200w.jpg,3,2208,https://cpt.tcgcsv.com/Qhm2,2023-01-06T19:17:34.507,1,,,0.05,0.25,0.49,,,Normal,,Common,Basic Energy,,,,,,,
+168191,Metal Energy (17),Metal Energy 17,https://tcgplayer-cdn.tcgplayer.com/product/168191_200w.jpg,3,2208,https://cpt.tcgcsv.com/Rhm2,2023-01-06T20:37:54.853,1,,,0.05,0.23,0.49,0.02,,Normal,,Common,Basic Energy,,,,,,,
+168192,Metal Energy (20),Metal Energy 20,https://tcgplayer-cdn.tcgplayer.com/product/168192_200w.jpg,3,2208,https://cpt.tcgcsv.com/Shm2,2023-01-06T21:35:54.37,1,,,0.02,0.25,0.49,0.02,,Normal,,Common,Basic Energy,,,,,,,
+168194,Metal Energy (24),Metal Energy 24,https://tcgplayer-cdn.tcgplayer.com/product/168194_200w.jpg,3,2208,https://cpt.tcgcsv.com/Vhm2,2023-01-06T20:55:45.643,1,,,0.03,0.2,0.37,0.02,,Normal,,Common,Basic Energy,,,,,,,
+168196,Metal Energy (28),Metal Energy 28,https://tcgplayer-cdn.tcgplayer.com/product/168196_200w.jpg,3,2208,https://cpt.tcgcsv.com/Xhm2,2023-01-06T21:12:26.3,1,,,0.02,0.24,0.37,0.02,,Normal,,Common,Basic Energy,,,,,,,
+168198,Staravia (4),Staravia 4,https://tcgplayer-cdn.tcgplayer.com/product/168198_200w.jpg,3,2208,https://cpt.tcgcsv.com/-hm2,2023-01-06T21:20:49.013,1,,,0.05,0.26,1.49,0.06,,Normal,82/111,Uncommon,Colorless,80,Stage 1,[1] Flap (20),[3] Wing Attack (60),Lx2,F-20,1
+168201,Piplup (11),Piplup 11,https://tcgplayer-cdn.tcgplayer.com/product/168201_200w.jpg,3,2208,https://cpt.tcgcsv.com/2jm2,2023-01-06T19:24:43.813,1,,,34.99,39.49,43.99,2.14,,Normal,32/156,Common,Water,70,Basic,[1] Peck (10),[1W] Wave Splash (20),Lx2,,1
+168205,Stufful (12),Stufful 12,https://tcgplayer-cdn.tcgplayer.com/product/168205_200w.jpg,3,2208,https://cpt.tcgcsv.com/7jm2,2023-01-06T19:25:34.757,1,,,0.23,0.41,1.49,0.36,,Normal,110/147,Common,Colorless,70,Basic,"[1] Baby-Doll Eyes
+<br>The Defending Pokémon can't retreat during your opponent's next turn.",[2] Tackle (20),Fx2,,2
+168206,Prinplup (13),Prinplup 13,https://tcgplayer-cdn.tcgplayer.com/product/168206_200w.jpg,3,2208,https://cpt.tcgcsv.com/8jm2,2023-01-06T19:30:02.237,1,,,0.61,0.72,2.0,0.61,,Normal,33/156,Uncommon,Water,90,Stage 1,"[W] Bubble Beam (20)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",[1W] Wave Splash (40),Lx2,,2
+168208,Alolan Sandshrew (14),Alolan Sandshrew 14,https://tcgplayer-cdn.tcgplayer.com/product/168208_200w.jpg,3,2208,https://cpt.tcgcsv.com/bjm2,2023-01-06T19:38:51.49,1,,,0.18,0.29,1.49,0.23,,Normal,19/145,Common,Water,60,Basic,"[0] Defense Curl
+<br>Flip a coin. If heads, prevent all damage done to this Pokémon by attacks during your opponent's next turn.",[2W] Ice Ball (30),Mx2,,1
+168209,Alolan Sandshrew (29),Alolan Sandshrew 29,https://tcgplayer-cdn.tcgplayer.com/product/168209_200w.jpg,3,2208,https://cpt.tcgcsv.com/cjm2,2023-01-06T21:31:08.607,1,,,0.08,0.37,1.62,0.33,,Normal,19/145,Common,Water,60,Basic,"[0] Defense Curl
+<br>Flip a coin. If heads, prevent all damage done to this Pokémon by attacks during your opponent's next turn.",[2W] Ice Ball (30),Mx2,,1
+168210,Starly (15),Starly 15,https://tcgplayer-cdn.tcgplayer.com/product/168210_200w.jpg,3,2208,https://cpt.tcgcsv.com/djm2,2023-01-06T20:09:16.097,1,,,0.05,0.26,1.23,0.18,,Normal,81/111,Common,Colorless,60,Basic,"[1] Bug Search
+<br>Your opponent reveals their hand.",[2] Flap (20),Lx2,F-20,1
+168212,Alolan Sandslash (16),Alolan Sandslash 16,https://tcgplayer-cdn.tcgplayer.com/product/168212_200w.jpg,3,2208,https://cpt.tcgcsv.com/gjm2,2023-01-06T20:11:30.127,1,,,0.5,1.52,2.99,1.61,,Normal,SM127,Promo,Metal,120,Stage 1,[M] Metal Claw (20),"[1MM] Tumbling Attack (80+)
+Flip a coin. If heads, this attack does 40 more damage.",Rx2,P-20,2
+168213,Alolan Sandslash (30),Alolan Sandslash 30,https://tcgplayer-cdn.tcgplayer.com/product/168213_200w.jpg,3,2208,https://cpt.tcgcsv.com/hjm2,2023-01-06T21:19:05.94,1,,,0.8,1.39,3.38,1.38,,Holofoil,SM127,Promo,Metal,120,Stage 1,[M] Metal Claw (20),"[1MM] Tumbling Attack (80+)
+Flip a coin. If heads, this attack does 40 more damage.",Rx2,P-20,2
+168214,Aron (18),Aron 18,https://tcgplayer-cdn.tcgplayer.com/product/168214_200w.jpg,3,2208,https://cpt.tcgcsv.com/jjm2,2023-01-06T20:39:35.687,1,,,0.05,0.11,0.5,0.05,,Normal,65/111,Common,Metal,60,Basic,[M] Tackle (10),[2M] Metal Claw (30),Rx2,P-20,1
+168215,Hau (19) (Alolan Sandslash Half-Deck),Hau 19 Alolan Sandslash Half Deck,https://tcgplayer-cdn.tcgplayer.com/product/168215_200w.jpg,3,2208,https://cpt.tcgcsv.com/kjm2,2023-01-06T20:49:01.517,1,"Draw 3 cards.
+<br>
+You may only play 1 Supporter card during your turn <em>(before your attack)</em>.",,0.07,0.1,0.9,0.08,,Normal,120/149,Uncommon,Supporter,,,,,,,
+168216,Hau (23) (Alolan Sandslash Half-Deck),Hau 23 Alolan Sandslash Half Deck,https://tcgplayer-cdn.tcgplayer.com/product/168216_200w.jpg,3,2208,https://cpt.tcgcsv.com/ljm2,2023-01-06T20:53:02.633,1,"Draw 3 cards.
+<br>
+You may play only 1 Supporter card during your turn <em>(before your attack)</em>.",,0.09,0.18,1.39,0.14,,Normal,120/149,Uncommon,Supporter,,,,,,,
+168217,Hau (23) (Alolan Ninetales Half-Deck),Hau 23 Alolan Ninetales Half Deck,https://tcgplayer-cdn.tcgplayer.com/product/168217_200w.jpg,3,2208,https://cpt.tcgcsv.com/mjm2,2023-01-06T21:34:12.293,1,"Draw 3 cards.
+<br>
+You may play only 1 Supporter card during your turn <em>(before your attack)</em>.",,0.05,0.17,0.5,0.07,,Normal,120/149,Uncommon,Supporter,,,,,,,
+168218,Hau (19) (Alolan Ninetales Half-Deck),Hau 19 Alolan Ninetales Half Deck,https://tcgplayer-cdn.tcgplayer.com/product/168218_200w.jpg,3,2208,https://cpt.tcgcsv.com/njm2,2023-01-06T20:44:14.197,1,"Draw 3 cards.
+<br>
+You may play only 1 Supporter card during your turn <em>(before your attack)</em>.",,0.06,0.24,1.21,0.08,,Normal,120/149,Uncommon,Supporter,,,,,,,
+168219,"Great Ball (#21, Alolan Sandslash Half-Deck)",Great Ball 21 Alolan Sandslash Half Deck,https://tcgplayer-cdn.tcgplayer.com/product/168219_200w.jpg,3,2208,https://cpt.tcgcsv.com/pjm2,2022-12-14T15:11:42.12,1,Look at the top 7 cards of your deck. You may reveal a Pokemon you find there and put it into your hand. Shuffle the other cards back into your deck.,,0.03,0.29,1.4,0.17,,Normal,21/30,Uncommon,Item,,,,,,,
+168220,Great Ball (25) (Alolan Sandslash Half-Deck),Great Ball 25 Alolan Sandslash Half Deck,https://tcgplayer-cdn.tcgplayer.com/product/168220_200w.jpg,3,2208,https://cpt.tcgcsv.com/qjm2,2023-01-06T21:05:14.05,1,"Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck.
+<br>
+You may play as many Item cards as you like during your turn <em>(before your attack)</em>.",,0.1,0.25,0.99,0.13,,Normal,119/149,Uncommon,Item,,,,,,,
+168221,Great Ball (25) (Alolan Ninetales Half-Deck),Great Ball 25 Alolan Ninetales Half Deck,https://tcgplayer-cdn.tcgplayer.com/product/168221_200w.jpg,3,2208,https://cpt.tcgcsv.com/rjm2,2023-01-06T21:01:14.257,1,"Look at the top 7 cards of your deck. You may reveal a Pokémon you find there and put it into your hand. Shuffle the other cards back into your deck.
+<br>
+You may play as many Item cards as you like during your turn <em>(before your attack)</em>.",,0.1,0.25,5.24,0.14,,Normal,119/149,Uncommon,Item,,,,,,,
+168222,"Great Ball (#21, Alolan Ninetales Half-Deck)",Great Ball 21 Alolan Ninetales Half Deck,https://tcgplayer-cdn.tcgplayer.com/product/168222_200w.jpg,3,2208,https://cpt.tcgcsv.com/sjm2,2022-12-14T15:11:35.817,1,Look at the top 7 cards of your deck. You may reveal a Pokemon you find there and put it into your hand. Shuffle the other cards back into your deck.,,0.03,0.25,0.99,0.05,,Normal,21/30,Uncommon,Item,,,,,,,
+168223,Staraptor (22),Staraptor 22,https://tcgplayer-cdn.tcgplayer.com/product/168223_200w.jpg,3,2208,https://cpt.tcgcsv.com/tjm2,2023-01-06T21:33:25.303,1,,,0.05,0.28,1.49,0.17,,Normal,83/111,Rare,Colorless,140,Stage 2,"[2] Clutch (50)
+<br>The Defending Pokémon can't retreat during your opponent's next turn.","[4] Sky Hunting (120)
+<br>If your opponent's Pokémon is Knocked Out by the damage from this attack, switch this Pokémon with 1 of your Benched Pokémon.",Lx2,F-20,1
+168224,Big Malasada (27),Big Malasada 27,https://tcgplayer-cdn.tcgplayer.com/product/168224_200w.jpg,3,2208,https://cpt.tcgcsv.com/vjm2,2023-01-06T21:07:22.7,1,"Heal 20 damage and 1 Special Condition from your Active Pokémon.
+<br>
+You may play as many Item cards as you like during your turn <em>(before your attack)</em>.",,0.1,0.25,1.0,0.27,,Normal,114/149,Uncommon,Item,,,,,,,
+168225,Grass Energy (1),Grass Energy 1,https://tcgplayer-cdn.tcgplayer.com/product/168225_200w.jpg,3,2208,https://cpt.tcgcsv.com/wjm2,2023-01-06T19:07:03.96,1,,,0.04,0.26,0.37,0.04,,Normal,,Common,Basic Energy,,,,,,,
+168226,Grass Energy (2),Grass Energy 2,https://tcgplayer-cdn.tcgplayer.com/product/168226_200w.jpg,3,2208,https://cpt.tcgcsv.com/xjm2,2023-01-06T20:50:50.283,1,,,0.04,0.24,0.37,0.04,,Normal,,Common,Basic Energy,,,,,,,
+168227,Grass Energy (3),Grass Energy 3,https://tcgplayer-cdn.tcgplayer.com/product/168227_200w.jpg,3,2208,https://cpt.tcgcsv.com/zjm2,2023-01-06T21:15:31.217,1,,,0.02,0.16,0.37,0.02,,Normal,,Common,Basic Energy,,,,,,,
+168228,Grass Energy (5),Grass Energy 5,https://tcgplayer-cdn.tcgplayer.com/product/168228_200w.jpg,3,2208,https://cpt.tcgcsv.com/Bjm2,2023-01-06T21:21:58.187,1,,,0.02,0.22,0.37,0.02,,Normal,,Common,Basic Energy,,,,,,,
+168229,Grass Energy (7),Grass Energy 7,https://tcgplayer-cdn.tcgplayer.com/product/168229_200w.jpg,3,2208,https://cpt.tcgcsv.com/Cjm2,2023-01-06T21:34:57.243,1,,,0.05,0.25,0.37,0.05,,Normal,,Common,Basic Energy,,,,,,,
+168230,Grass Energy (27),Grass Energy 27,https://tcgplayer-cdn.tcgplayer.com/product/168230_200w.jpg,3,2208,https://cpt.tcgcsv.com/Djm2,2023-01-06T21:07:52.61,1,,,0.02,0.2,0.37,0.02,,Normal,,Common,Basic Energy,,,,,,,
+168231,Fairy Energy (8),Fairy Energy 8,https://tcgplayer-cdn.tcgplayer.com/product/168231_200w.jpg,3,2208,https://cpt.tcgcsv.com/Fjm2,2023-01-06T21:27:02.853,1,,,0.12,0.16,0.37,0.15,,Normal,,Common,Basic Energy,,,,,,,
+168232,Fairy Energy (9),Fairy Energy 9,https://tcgplayer-cdn.tcgplayer.com/product/168232_200w.jpg,3,2208,https://cpt.tcgcsv.com/Gjm2,2023-01-06T21:29:20.67,1,,,0.17,0.24,0.37,0.16,,Normal,,Common,Basic Energy,,,,,,,
+168233,Fairy Energy (10),Fairy Energy 10,https://tcgplayer-cdn.tcgplayer.com/product/168233_200w.jpg,3,2208,https://cpt.tcgcsv.com/Hjm2,2023-01-06T19:14:24.447,1,,,0.19,0.2,0.37,0.18,,Normal,,Common,Basic Energy,,,,,,,
+168234,Fairy Energy (12),Fairy Energy 12,https://tcgplayer-cdn.tcgplayer.com/product/168234_200w.jpg,3,2208,https://cpt.tcgcsv.com/Jjm2,2023-01-06T19:24:31.88,1,,,0.05,0.15,0.37,0.19,,Normal,,Common,Basic Energy,,,,,,,
+168235,Fairy Energy (20),Fairy Energy 20,https://tcgplayer-cdn.tcgplayer.com/product/168235_200w.jpg,3,2208,https://cpt.tcgcsv.com/Kjm2,2023-01-06T21:36:20.207,1,,,0.1,1.39,2.67,0.1,,Normal,,Common,Basic Energy,,,,,,,
+168236,Fairy Energy (24),Fairy Energy 24,https://tcgplayer-cdn.tcgplayer.com/product/168236_200w.jpg,3,2208,https://cpt.tcgcsv.com/Ljm2,2023-01-06T20:53:36.473,1,,,0.18,0.28,0.37,0.17,,Normal,,Common,Basic Energy,,,,,,,
+168237,Fairy Energy (28),Fairy Energy 28,https://tcgplayer-cdn.tcgplayer.com/product/168237_200w.jpg,3,2208,https://cpt.tcgcsv.com/Mjm2,2023-01-06T21:37:31.22,1,,,0.18,0.28,0.37,0.17,,Normal,,Common,Basic Energy,,,,,,,
+168238,Bunnelby (4),Bunnelby 4,https://tcgplayer-cdn.tcgplayer.com/product/168238_200w.jpg,3,2208,https://cpt.tcgcsv.com/Njm2,2023-01-06T21:20:12.827,1,,,0.05,0.25,1.49,0.13,,Normal,87/111,Common,Colorless,70,Basic,[2] Mud Shot (30),,Fx2,,2
+168239,Gloom (6),Gloom 6,https://tcgplayer-cdn.tcgplayer.com/product/168239_200w.jpg,3,2208,https://cpt.tcgcsv.com/Pjm2,2023-01-06T21:23:04.323,1,,,0.16,0.27,0.57,0.19,,Normal,5/147,Uncommon,Grass,80,Stage 1,"[G] Stinky Scent
+<br>Your opponent's Active Pokémon is now Confused.",[1G] Razor Leaf (30),Rx2,,2
+168240,Oddish (11),Oddish 11,https://tcgplayer-cdn.tcgplayer.com/product/168240_200w.jpg,3,2208,https://cpt.tcgcsv.com/Qjm2,2023-01-06T19:21:18.83,1,,,0.4,0.54,3.99,0.51,,Normal,4/147,Common,Grass,50,Basic,"[G] Poison Powder
+<br>Your opponent's Active Pokémon is now Poisoned.",,Rx2,,1
+168241,Skiddo (13),Skiddo 13,https://tcgplayer-cdn.tcgplayer.com/product/168241_200w.jpg,3,2208,https://cpt.tcgcsv.com/Rjm2,2023-01-06T19:35:15.51,1,,,0.1,0.2,0.99,0.19,,Normal,10/111,Common,Grass,70,Basic,[2] Seed Bomb (20),,Rx2,,1
+168242,Alolan Vulpix (14),Alolan Vulpix 14,https://tcgplayer-cdn.tcgplayer.com/product/168242_200w.jpg,3,2208,https://cpt.tcgcsv.com/Sjm2,2023-01-06T19:45:07.037,1,,,1.2,3.24,3.5,2.49,,Normal,21/145,Common,Water,60,Basic,"[0] Beacon
+<br>Search your deck for up to 2 Pokémon, reveal them, and put them into your hand. Then, shuffle your deck.",[2] Icy Snow (20),Mx2,,1
+168243,Potion (15),Potion 15,https://tcgplayer-cdn.tcgplayer.com/product/168243_200w.jpg,3,2208,https://cpt.tcgcsv.com/Tjm2,2023-01-06T19:45:57.58,1,"Heal 30 damage from 1 of your Pokémon.
+<br>
+You may play as many Item cards as you like during your turn <em>(before your attack)</em>.",,0.02,0.25,2.28,0.02,,Normal,127/149,Uncommon,Item,,,,,,,
+168244,Patrat (16),Patrat 16,https://tcgplayer-cdn.tcgplayer.com/product/168244_200w.jpg,3,2208,https://cpt.tcgcsv.com/Vjm2,2023-01-06T20:16:32.82,1,,,0.05,0.24,0.37,0.25,,Normal,107/145,Common,Colorless,60,Basic,"[1] Glance
+<br>Look at the top card of your opponent's deck.",[2] Tackle (20),Fx2,,1
+168246,Alolan Ninetales (17),Alolan Ninetales 17,https://tcgplayer-cdn.tcgplayer.com/product/168246_200w.jpg,3,2208,https://cpt.tcgcsv.com/Xjm2,2023-01-06T20:37:26.177,1,,,1.49,2.12,4.1,2.17,,Normal,SM128,Promo,Fairy,110,Stage 1,[2] Smash Kick (30),"[1YY] Spiral Drain (80)
+<br>Heal 30 damage from this Pokémon.",Mx2,D-20,1
+168247,Alolan Ninetales (30),Alolan Ninetales 30,https://tcgplayer-cdn.tcgplayer.com/product/168247_200w.jpg,3,2208,https://cpt.tcgcsv.com/Zjm2,2023-01-06T21:18:21.26,1,,,2.21,2.97,6.13,2.85,,Holofoil,SM128,Promo,Fairy,110,Stage 1,[2] Smash Kick (30),"[1YY] Spiral Drain (80)
+<br>Heal 30 damage from this Pokémon.",Mx2,D-20,1
+168248,Diggersby (18),Diggersby 18,https://tcgplayer-cdn.tcgplayer.com/product/168248_200w.jpg,3,2208,https://cpt.tcgcsv.com/-jm2,2023-01-06T20:41:02.473,1,,,0.1,0.25,1.49,0.21,,Normal,88/111,Uncommon,Colorless,130,Stage 1,"[3] Dig (60)
+<br>Flip a coin. If heads, prevent all effects of attacks, including damage, done to this Pokémon during your opponent's next turn.","[4] Hammer Arm (90)
+<br>Discard the top card of your opponent's deck.",Fx2,,3
+168249,Jigglypuff (22),Jigglypuff 22,https://tcgplayer-cdn.tcgplayer.com/product/168249_200w.jpg,3,2208,https://cpt.tcgcsv.com/_jm2,2023-01-06T21:32:26.64,1,,,2.24,3.06,3.99,3.06,,Normal,21/111,Common,Fairy,60,Basic,[1] Rollout (10),"[1Y] Double Slap (20x)
+<br>Flip 2 coins. This attack does 20 damage for each heads.",Mx2,D-20,1
+168250,Eevee (26),Eevee 26,https://tcgplayer-cdn.tcgplayer.com/product/168250_200w.jpg,3,2208,https://cpt.tcgcsv.com/0km2,2023-01-06T21:05:58.303,1,,,2.93,7.57,18.81,3.39,,Normal,104/156,Common,Colorless,60,Basic,[1] Gnaw (20),,Fx2,,1
+168251,Alolan Vulpix (29),Alolan Vulpix 29,https://tcgplayer-cdn.tcgplayer.com/product/168251_200w.jpg,3,2208,https://cpt.tcgcsv.com/2km2,2023-01-06T21:14:39.467,1,,,1.55,2.75,4.03,1.83,,Normal,21/145,Common,Water,60,Basic,"[0] Beacon 
+<br>Search your deck for up to 2 Pokémon, reveal them, and put them into your hand. Then, shuffle your deck.",[2] Icy Snow (20),Mx2,,1
+253837,Sun & Moon Trainer Kit: Alolan Sandslash & Alolan Ninetales Display,Sun and Moon Trainer Kit Alolan Sandslash and Alolan Ninetales Display,https://tcgplayer-cdn.tcgplayer.com/product/253837_200w.jpg,3,2208,https://cpt.tcgcsv.com/Mx23,2021-11-05T20:27:37.603,1,"Each display contains 8 trainer kits.
+<br>
+<br>Each kit comes with two pre-constructed decks ready to play, each with their own special foil card and a guided game play booklet to help new players get going right away. One deck features the Alolan Sandslash while the other offers up the Alolan Ninetales. The decks are designed so they can be played against each other, or combined into a full 60-card deck.
+<br>
+<br>The kit also includes a two-player game mat with tips and rules on the back, damage counters and special condition markers, a game coin, an illustrated deck box, and a code for the online game.",0820650813825,220.0,220.0,220.0,220.0,,Normal,,,,,,,,,,

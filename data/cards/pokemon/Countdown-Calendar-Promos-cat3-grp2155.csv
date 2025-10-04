@@ -1,0 +1,63 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extCardText,extAttack1,extWeakness,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extResistance,extAttack2
+153083,Abomasnow - 19/123,Abomasnow 19 123,https://tcgplayer-cdn.tcgplayer.com/product/153083_200w.jpg,3,2155,https://cpt.tcgcsv.com/Hff2,2022-09-21T19:35:25.16,1,019/123,Promo,Grass,100,Stage 1,"<strong>Poké-BODY — Glacier Snow</strong>
+<br>If Abomasnow is your Active Pokémon and is damaged by an opponent's attack <em>(even if Abomasnow is Knocked Out)</em>, the Attacking Pokémon is now Asleep.","[2W] Heavy Blizzard (60)
+<br>Flip a coin. If heads, put 1 damage counter on each of your opponent's Benched Pokémon.",R+30,3,41.0,50.0,78.18,53.0,,Normal,,
+153084,Bidoof - 73/123,Bidoof 73 123,https://tcgplayer-cdn.tcgplayer.com/product/153084_200w.jpg,3,2155,https://cpt.tcgcsv.com/Jff2,2022-09-21T19:38:50.667,1,073/123,Promo,Colorless,60,Basic,<strong>Held Item — Wacan Berry</strong> <em>Any damage done to Bidoof by attacks from Lightning Pokémon is reduced by 20 (after applying Weakness and Resistance).</em>,[2] Tackle (30),F+10,2,52.9,75.0,118.9,82.49,,Normal,,
+153085,Bronzor - 74/123,Bronzor 74 123,https://tcgplayer-cdn.tcgplayer.com/product/153085_200w.jpg,3,2155,https://cpt.tcgcsv.com/Kff2,2022-09-21T19:39:37.337,1,074/123,Promo,Metal,50,Basic,,"[1M] Dull Light (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Confused.",R+10,1,13.0,41.5,70.0,9.0,,Normal,P-20,
+153086,Buizel - 61/106,Buizel 61 106,https://tcgplayer-cdn.tcgplayer.com/product/153086_200w.jpg,3,2155,https://cpt.tcgcsv.com/Lff2,2022-09-21T19:39:23.127,1,061/106,Promo,Water,60,Basic,,[0] Headbutt (10),L+10,1,36.55,41.78,47.0,5.19,,Normal,,[WW] Surf (30)
+153087,Burmy (Plant Cloak) - 78/132,Burmy Plant Cloak 78 132,https://tcgplayer-cdn.tcgplayer.com/product/153087_200w.jpg,3,2155,https://cpt.tcgcsv.com/Mff2,2022-09-21T19:42:50.813,1,078/132,Promo,Grass,40,Basic,"<strong>Poké-POWER — Wear Cloak</strong>
+<br>Once during your turn <em>(before your attack)</em>, if Burmy (Plant Cloak) is your active Pokémon, you may search your discard pile for a basic Grass Energy card and attach it to Burmy (Plant Cloak).","[1] Plant Cloak Tackle (10+)
+<br>If Burmy (Plant Cloak) has any Grass Energy attached to it, this attack does 10 damage plus 10 more damage.",R+10,1,38.88,60.0,66.84,,,Normal,,
+153088,Chimchar - 57/100,Chimchar 57 100,https://tcgplayer-cdn.tcgplayer.com/product/153088_200w.jpg,3,2155,https://cpt.tcgcsv.com/Nff2,2022-09-21T19:43:00.51,1,057/100,Promo,Fire,50,Basic,"<strong>Held Item — Cheri Berry</strong> <em>If Chimchar is Paralyzed, remove the Special Condition Paralyzed from Chimchar at the end of each player's turn.</em>","[1] Fury Swipes (10x)
+<br>Flip 3 coins. This attack does 10 damage times the number of heads.",W+10,1,45.8,45.8,45.8,31.76,,Normal,,
+153089,Chingling - 42/123,Chingling 42 123,https://tcgplayer-cdn.tcgplayer.com/product/153089_200w.jpg,3,2155,https://cpt.tcgcsv.com/Pff2,2022-09-21T19:43:12.987,1,042/123,Promo,Psychic,40,Basic,"<strong>Poké-POWER — Baby Evolution</strong>
+<br>Once during your turn <em>(before your attack)</em>, you may put Chimecho from your hand onto Chingling (this counts as evolving Chingling) and remove all damage counters from Chingling.","[0] Inviting Bell
+<br>Search your deck for a Supporter card, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",P+10,1,39.0,50.0,80.0,19.01,,Normal,,
+153090,Combee - 59/100,Combee 59 100,https://tcgplayer-cdn.tcgplayer.com/product/153090_200w.jpg,3,2155,https://cpt.tcgcsv.com/Qff2,2022-09-21T19:43:26.52,1,059/100,Promo,Psychic,50,Basic,,"[1] Honey Scent
+<br>Remove 2 damage counters from 1 of your Pokémon.",R+10,1,12.7,12.7,12.7,,,Normal,F-20,"[GG] Flitter
+<br>Choose 1 of your opponent's Pokémon. This attack does 20 damage to that Pokémon. This attack's damage isn't affected by Weakness or Resistance."
+153091,Floatzel - 37/106,Floatzel 37 106,https://tcgplayer-cdn.tcgplayer.com/product/153091_200w.jpg,3,2155,https://cpt.tcgcsv.com/Rff2,2022-09-21T19:44:34.95,1,037/106,Promo,Water,80,Stage 1,,"[2] Agility (20)
+<br>Flip a coin. If heads, prevent all effects of an attack, including damage, done to Floatzel during your opponent's next turn.",L+20,1,69.9,75.99,150.0,,,Normal,,"[1WW] Aqua Jet (60)
+<br>Flip a coin. If heads, this attack does 10 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>"
+153092,Gabite - 48/123,Gabite 48 123,https://tcgplayer-cdn.tcgplayer.com/product/153092_200w.jpg,3,2155,https://cpt.tcgcsv.com/Sff2,2022-09-21T19:44:58.027,1,048/123,Promo,Colorless,80,Stage 1,,"[1] Gather Up
+<br>Search your discard pile for up to 2 Energy cards, show them to your opponent, and put them into your hand.",C+20,1,27.99,39.0,50.0,1.25,,Normal,,"[2] Marvelous Shine
+<br>Flip a coin. If heads, put 4 damage counters on 1 of your opponent's Pokémon. If tails, remove 4 damage counters from 1 of your Pokémon."
+153093,Glaceon - 20/100,Glaceon 20 100,https://tcgplayer-cdn.tcgplayer.com/product/153093_200w.jpg,3,2155,https://cpt.tcgcsv.com/Tff2,2022-09-21T19:45:08.093,1,020/100,Promo,Water,90,Stage 1,,"[1W] Ice Shot (30)
+<br>Does 10 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",M+20,1,40.99,40.99,40.99,,,Normal,,"[2W] Icy Wind (60)
+<br>Flip a coin. If heads, the Defending Pokémon is now Asleep."
+153094,Glameow 83/130,Glameow 83 130,https://tcgplayer-cdn.tcgplayer.com/product/153094_200w.jpg,3,2155,https://cpt.tcgcsv.com/Vff2,2022-09-21T19:45:22.75,1,083/130,Promo,Colorless,50,Basic,,"[1] Charm
+<br>During your opponent's next turn, any damage done by attacks from the Defending Pokémon is reduced by 20 <em>(before applying Weakness and Resistance)</em>.",F+10,1,19.19,39.17,80.0,6.55,,Normal,,"[2] Pose (30)
+<br>Flip a coin. If tails, this attack does nothing."
+153095,Happiny - 52/123,Happiny 52 123,https://tcgplayer-cdn.tcgplayer.com/product/153095_200w.jpg,3,2155,https://cpt.tcgcsv.com/Wff2,2022-09-21T19:45:59.19,1,052/123,Promo,Colorless,60,Basic,"<strong>Poké-POWER — Baby Evolution</strong>
+<br>Once during your turn <em>(before your attack)</em>, you may put Chansey from your hand onto Happiny (this counts as evolving Happiny) and remove all damage counters from Happiny.","[0] Lively
+<br>Remove 2 damage counters from 1 of your Pokémon.",F+10,1,259.4,271.4,283.4,180.0,,Normal,,
+153096,Kricketot - 86/123,Kricketot 86 123,https://tcgplayer-cdn.tcgplayer.com/product/153096_200w.jpg,3,2155,https://cpt.tcgcsv.com/Xff2,2022-09-21T19:46:16.693,1,086/123,Promo,Colorless,60,Basic,,"[1] Call For Family
+<br>Search your deck for a Basic Pokémon and put it onto your Bench. Shuffle your deck afterward.",R+10,2,14.7,16.25,70.0,10.17,,Normal,,[G] Sling (10)
+153097,Munchlax - 68/100,Munchlax 68 100,https://tcgplayer-cdn.tcgplayer.com/product/153097_200w.jpg,3,2155,https://cpt.tcgcsv.com/Zff2,2022-09-21T19:46:24.453,1,068/100,Promo,Colorless,60,Basic,"<strong>Poké-POWER — Baby Evolution</strong>
+<br>Once during your turn <em>(before your attack)</em>, you may put Snorlax from your hand onto Munchlax (this counts as evolving Munchlax) and remove all damage counters from Munchlax.","[2] Lick (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",F+10,2,180.1,199.0,265.44,2.13,,Normal,,
+153100,Pikachu - DP16,Pikachu DP16,https://tcgplayer-cdn.tcgplayer.com/product/153100_200w.jpg,3,2155,https://cpt.tcgcsv.com/0gf2,2022-08-11T19:22:39.777,1,DP16,Promo,Lightning,60,Basic,"<strong>Poké-POWER — Electro Recycle</strong>
+<br>Once during your turn <em>(before your attack)</em>, if Pichu is anywhere under Pikachu, you may search your discard pile for a Lightning Energy card, show it to your opponent, and put it into your hand. This power can't be used if Pikachu is affected by a Special Condition.
+<br>
+<em>(Unlike the other Countdown Calendar Promos, this special Pikachu is Holofoil with a silver snowflake stamp in the lower right of the card's art.)</em>","[1L] BikaBika (20+)
+<br>Flip a coin. If heads, this attack does 20 damage plus 10 more damage.",F+10,1,110.0,140.9,272.56,219.99,272.56,Holofoil,M-20,
+153102,Piplup - 72/100,Piplup 72 100,https://tcgplayer-cdn.tcgplayer.com/product/153102_200w.jpg,3,2155,https://cpt.tcgcsv.com/3gf2,2022-09-21T19:46:43.577,1,072/100,Promo,Water,50,Basic,"<strong>Held Item — Pecha Berry</strong> <em>If Piplup is Poisoned, remove the Special Condition Poisoned from Piplup at the end of each player's turn.</em>","[W] Splatter
+<br>Choose 1 of your opponent's Pokémon. This attack does 10 damage to that Pokémon. This attack's damage isn't affected by Weakness or Resistance.",L+10,1,,,,,,,,
+153104,Riolu - 61/130,Riolu 61 130,https://tcgplayer-cdn.tcgplayer.com/product/153104_200w.jpg,3,2155,https://cpt.tcgcsv.com/6gf2,2022-09-21T19:46:52.313,1,061/130,Promo,Fighting,60,Basic,,"[F] Wild Kick (30)
+<br>Flip a coin. If tails, this attack does nothing.",P+10,1,200.0,247.39,294.78,,,Normal,,
+153105,Shinx - 98/123,Shinx 98 123,https://tcgplayer-cdn.tcgplayer.com/product/153105_200w.jpg,3,2155,https://cpt.tcgcsv.com/7gf2,2022-09-21T19:47:11.87,1,098/123,Promo,Lightning,60,Basic,"<strong>Held Item — Rawst Berry</strong> <em>If Shinx is Burned, remoced the Special Condition Burned from Shinx at the end of each player's turn.</em>","[L] Plasma (10)
+<br>Flip a coin. If heads, search your discard pile for a Lightning Energy card and attach it to Shinx.",F+10,1,70.0,83.9,150.0,64.4,,Normal,M-20,
+153106,Skorupi - 99/130,Skorupi 99 130,https://tcgplayer-cdn.tcgplayer.com/product/153106_200w.jpg,3,2155,https://cpt.tcgcsv.com/8gf2,2022-09-21T19:47:22.703,1,099/130,Promo,Psychic,60,Basic,,"[P] Poison Sting 
+<br>Flip a coin. If heads, the Defending Pokémon is now Poisoned.",P+10,2,28.9,42.67,100.0,19.99,,Normal,,"[2] Pin Missile (10x)
+<br>Flip 4 coins. This attack does 10 damage times the number of heads."
+153107,Snover - 101/123,Snover 101 123,https://tcgplayer-cdn.tcgplayer.com/product/153107_200w.jpg,3,2155,https://cpt.tcgcsv.com/9gf2,2022-09-21T19:47:38.697,1,101/123,Promo,Grass,60,Basic,,"[0] Curiosity
+<br>Look at your opponent's hand.",R+10,2,5.0,33.03,80.0,,,Normal,,"[1W] Snowball Fight (30)
+<br>Flip a coin. If tails, Snover does 10 damage to itself."
+153108,Stunky - 102/130,Stunky 102 130,https://tcgplayer-cdn.tcgplayer.com/product/153108_200w.jpg,3,2155,https://cpt.tcgcsv.com/bgf2,2022-08-11T19:43:25.21,1,102/130,Promo,Darkness,60,Basic,,[1] Scratch (10),F+10,1,31.36,50.0,59.02,40.0,,Normal,P-20,"[1D] Severe Gas (10)
+<br>The Defending Pokémon is now Poisoned."
+153109,Turtwig - 78/100,Turtwig 78 100,https://tcgplayer-cdn.tcgplayer.com/product/153109_200w.jpg,3,2155,https://cpt.tcgcsv.com/cgf2,2022-09-21T19:48:22.61,1,078/100,Promo,Grass,60,Basic,"<strong>Held Item — Persim Berry</strong> <em>If Turtwig is Confused, remove the Special Condition Confused from Turtwig at the end of each player's turn.</em>",[1G] Bite (30),R+10,2,122.86,128.53,134.2,150.0,,Normal,W-20,
+153110,Weavile - 40/132,Weavile 40 132,https://tcgplayer-cdn.tcgplayer.com/product/153110_200w.jpg,3,2155,https://cpt.tcgcsv.com/dgf2,2022-09-21T19:48:30.323,1,040/132,Promo,Water,80,Stage 1,"<strong>Poké-POWER — Dark Engage</strong>
+<br>Once during your turn <em>(before your attack)</em>, you may use this power. Each of your Active Pokémon's type is Darkness until end of your turn. If that Pokémon is no longer your Active Pokémon, this effect ends.","[0] Shadow Charge
+<br>Search your deck for up to 2 Darkness Energy cards and attach them to any of your Pokémon in any way you like. Shuffle your deck afterward.",M+20,0,20.0,38.39,50.0,23.99,,Normal,,"[DD] Chip Off (40)
+<br>If your opponent has 6 or more cards in his or her hand, discard a number of cards without looking until your opponent has 5 cards left in his or her hand."

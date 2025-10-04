@@ -1,0 +1,64 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extAttribute,extMonsterType,extCardType,extAttack,extDefense,extDescription,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName
+33114,Stardust Dragon,Stardust Dragon,https://tcgplayer-cdn.tcgplayer.com/product/33114_200w.jpg,2,131,https://cpt.tcgcsv.com/jgh,2024-03-28T15:45:04.177,1,CT05-EN001,Secret Rare,WIND,Dragon,Synchro/Effect Monster,2500,2000,"1 Tuner + 1 or more non-Tuner monsters
+<br>You can Tribute this card to negate the activation of a Spell Card, Trap Card, or Effect Monster's effect that destroys a card(s) on the field, and destroy that card. If you negate an effect this way, you can Special Summon this card from your Graveyard during the End Phase.",16.43,25.5,59.99,26.89,44.99,Limited
+33115,Red Dragon Archfiend,Red Dragon Archfiend,https://tcgplayer-cdn.tcgplayer.com/product/33115_200w.jpg,2,131,https://cpt.tcgcsv.com/kgh,2024-03-28T15:45:04.24,1,CT05-EN002,Secret Rare,DARK,Dragon,Effect Monster,3000,2000,"1 Tuner + 1 or more non-Tuner monsters
+If this card attacks a Defense Position monster your opponent controls, destroy all Defense Position monsters your opponent controls after damage calculation. During your End Phase destroy all other monsters you control that did not declare an attack this turn.",4.36,7.9,16.95,6.83,,Limited
+33116,Black Rose Dragon,Black Rose Dragon,https://tcgplayer-cdn.tcgplayer.com/product/33116_200w.jpg,2,131,https://cpt.tcgcsv.com/lgh,2024-03-28T15:45:04.303,1,CT05-EN003,Secret Rare,FIRE,Dragon,,2400,1800,"1 Tuner + 1 or more non-Tuner monsters
+When this card is Synchro Summoned, you can destroy all cards on the field. Once per turn, you can remove from play 1 Plant-Type monster from your Graveyard to change 1 Defense Position monster your opponent controls to face-up Attack Position, and reduce its ATK to 0 until the End Phase.",6.0,9.56,27.97,9.65,6.0,Limited
+33117,Turbo Warrior,Turbo Warrior,https://tcgplayer-cdn.tcgplayer.com/product/33117_200w.jpg,2,131,https://cpt.tcgcsv.com/mgh,2024-03-28T15:45:04.363,1,CT05-EN004,Secret Rare,WIND,Warrior,,2500,1500,"Turbo Synchron + 1 or more non-Tuner monsters // When this card attacks a Level 6 or higher Synchro Monster, halve the monster's ATK until the end of the Damage Step. This card cannot be targeted by the effects of Level 6 or lower monsters.",1.69,2.43,5.0,2.57,,Limited
+79688,Goyo Guardian,Goyo Guardian,https://tcgplayer-cdn.tcgplayer.com/product/79688_200w.jpg,2,131,https://cpt.tcgcsv.com/NTF,2024-03-28T15:45:04.43,1,CT05-ENS03,Secret Rare,EARTH,Warrior,Synchro/Effect Monster,2800,2000,"1 Tuner + 1 or more non-Tuner monsters
+When this card destroys an opponent's monster by battle and sends it to the Graveyard, you can Special Summon that monster to your side of the field in face-up Defense Position.",8.5,15.73,119.99,15.67,,Limited
+79689,Nitro Warrior,Nitro Warrior,https://tcgplayer-cdn.tcgplayer.com/product/79689_200w.jpg,2,131,https://cpt.tcgcsv.com/PTF,2024-03-28T15:45:04.463,1,CT05-ENS02,Secret Rare,FIRE,Warrior,Synchro/Effect Monster,2800,1800,"""Nitro Synchron"" + 1 non-Tuner monsters
+Once per turn, during a turn in which you activated a Spell Card, this card gains 1000 ATK during damage calculation only. If this card destroys an opponent's monster by battle, you can switch 1 face-up Defense Position monster your opponent controls to Attack Position. Then this card attacks that monster once again in a row.",3.75,5.0,5.99,5.74,,Limited
+81774,Montage Dragon,Montage Dragon,https://tcgplayer-cdn.tcgplayer.com/product/81774_200w.jpg,2,131,https://cpt.tcgcsv.com/vKG,2016-10-24T12:50:03.34,1,CT05-ENS01,Secret Rare,EARTH,Dragon,Effect Monster,0,0,This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except by sending 3 other monsters from your hand to the Graveyard. This card's ATK is equal to the combined Levels of the sent monsters x 300.,3.0,4.95,9.49,4.13,,Limited
+206909,2008 Collectors Tin: Wave 1 - Stardust Dragon,2008 Collectors Tin Wave 1 Stardust Dragon,https://tcgplayer-cdn.tcgplayer.com/product/206909_200w.jpg,2,131,https://cpt.tcgcsv.com/cNG2,2020-01-07T15:33:41.367,1,,,,,,,,"Each Collectible Tin 2008 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 2 Phantom Darkness
+<br><span style=""color:white"">____</span> • 1 Light of Destruction
+<br><span style=""color:white"">____</span> • 2 The Duelist Genesis
+<br>• 1 Token Pack Version 1.0
+<br>• 1 Secret Rare promotional card",,,,,,
+206910,2008 Collectors Tin: Wave 1 - Red Dragon Archfiend,2008 Collectors Tin Wave 1 Red Dragon Archfiend,https://tcgplayer-cdn.tcgplayer.com/product/206910_200w.jpg,2,131,https://cpt.tcgcsv.com/dNG2,2020-01-07T15:34:03.657,1,,,,,,,,"Each Collectible Tin 2008 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 2 Phantom Darkness
+<br><span style=""color:white"">____</span> • 1 Light of Destruction
+<br><span style=""color:white"">____</span> • 2 The Duelist Genesis
+<br>• 1 Token Pack Version 1.0
+<br>• 1 Secret Rare promotional card",699.99,899.99,950.0,,,Normal
+206911,2008 Exclusive Collectors Tin: Yusei (White Version),2008 Exclusive Collectors Tin Yusei White Version,https://tcgplayer-cdn.tcgplayer.com/product/206911_200w.jpg,2,131,https://cpt.tcgcsv.com/fNG2,2020-01-07T15:38:13.843,1,,,,,,,,"Each Collectible Tin 2008 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Phantom Darkness
+<br><span style=""color:white"">____</span> • 2 Light of Destruction
+<br><span style=""color:white"">____</span> • 2 The Duelist Genesis
+<br>• 1 Token Pack Version 2.0
+<br>• 1 Secret Rare promotional card",699.99,699.99,699.99,,,Normal
+206912,2008 Exclusive Collectors Tin: Yusei (Red Version),2008 Exclusive Collectors Tin Yusei Red Version,https://tcgplayer-cdn.tcgplayer.com/product/206912_200w.jpg,2,131,https://cpt.tcgcsv.com/gNG2,2020-01-07T15:36:27.493,1,,,,,,,,"Each Collectible Tin 2008 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Phantom Darkness
+<br><span style=""color:white"">____</span> • 2 Light of Destruction
+<br><span style=""color:white"">____</span> • 2 The Duelist Genesis
+<br>• 1 Token Pack Version 2.0
+<br>• 1 Secret Rare promotional card",699.99,699.99,699.99,,,Normal
+206913,2008 Exclusive Collectors Tin: Yusei (Yellow Version),2008 Exclusive Collectors Tin Yusei Yellow Version,https://tcgplayer-cdn.tcgplayer.com/product/206913_200w.jpg,2,131,https://cpt.tcgcsv.com/hNG2,2020-01-07T15:37:56.317,1,,,,,,,,"Each Collectible Tin 2008 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Phantom Darkness
+<br><span style=""color:white"">____</span> • 2 Light of Destruction
+<br><span style=""color:white"">____</span> • 2 The Duelist Genesis
+<br>• 1 Token Pack Version 2.0
+<br>• 1 Secret Rare promotional card",899.99,899.99,899.99,,,Normal
+206914,2008 Collectors Tin: Wave 2 - Black Rose Dragon,2008 Collectors Tin Wave 2 Black Rose Dragon,https://tcgplayer-cdn.tcgplayer.com/product/206914_200w.jpg,2,131,https://cpt.tcgcsv.com/jNG2,2020-01-07T15:45:39.227,1,,,,,,,,"Each Collectible Tin 2008 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Phantom Darkness
+<br><span style=""color:white"">____</span> • 1 Light of Destruction
+<br><span style=""color:white"">____</span> • 1 The Duelist Genesis
+<br><span style=""color:white"">____</span> • 2 Crossroads of Chaos
+<br>• 1 Token Pack Version 2.0
+<br>• 1 Secret Rare promotional card",799.99,799.99,799.99,,,Normal
+206915,2008 Collectors Tin: Wave 2 - Turbo Warrior,2008 Collectors Tin Wave 2 Turbo Warrior,https://tcgplayer-cdn.tcgplayer.com/product/206915_200w.jpg,2,131,https://cpt.tcgcsv.com/kNG2,2020-01-07T15:46:02.967,1,,,,,,,,"Each Collectible Tin 2008 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Phantom Darkness
+<br><span style=""color:white"">____</span> • 1 Light of Destruction
+<br><span style=""color:white"">____</span> • 1 The Duelist Genesis
+<br><span style=""color:white"">____</span> • 2 Crossroads of Chaos
+<br>• 1 Token Pack Version 2.0
+<br>• 1 Secret Rare promotional card",549.99,549.99,549.99,,,Normal

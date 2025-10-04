@@ -1,0 +1,28 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extAttack2,extWeakness,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extResistance,extCardText
+516512,Sprigatito,Sprigatito,https://tcgplayer-cdn.tcgplayer.com/product/516512_200w.jpg,3,23306,https://cpt.tcgcsv.com/gD86,2024-02-02T21:25:50.7,1,001/015,Promo,Grass,70,Basic,[1] Scratch (10),[1G] Leafage (20),Rx2,1,0.75,1.59,5.0,1.6,,Holofoil,,
+516513,Fuecoco,Fuecoco,https://tcgplayer-cdn.tcgplayer.com/product/516513_200w.jpg,3,23306,https://cpt.tcgcsv.com/hD86,2024-02-02T21:26:19.457,1,002/015,Promo,Fire,80,Basic,[1] Gnaw (10),[1RR] Combustion (50),Wx2,2,0.45,0.99,3.0,0.94,,Holofoil,,
+516514,Quaxly,Quaxly,https://tcgplayer-cdn.tcgplayer.com/product/516514_200w.jpg,3,23306,https://cpt.tcgcsv.com/jD86,2024-02-02T21:26:50.69,1,003/015,Promo,Water,70,Basic,[1] Pound (10),[1W] Kick (20),Lx2,1,0.5,1.0,5.0,1.03,0.94,Holofoil,,
+516515,Cetoddle,Cetoddle,https://tcgplayer-cdn.tcgplayer.com/product/516515_200w.jpg,3,23306,https://cpt.tcgcsv.com/kD86,2023-09-13T20:30:12.713,1,004/015,Promo,Water,100,Basic,[W] Icicle (10),[2W] Sharp Fin (60),Mx2,3,0.07,0.22,2.22,0.22,,Normal,,
+516516,Cetitan,Cetitan,https://tcgplayer-cdn.tcgplayer.com/product/516516_200w.jpg,3,23306,https://cpt.tcgcsv.com/lD86,2024-02-02T21:27:14.633,1,005/015,Promo,Water,180,Stage 1,[2] Hammer In (50),"[2W] Sweeping Tackle (200-)
+<br>This attack does 20 less damage for each damage counter on this Pokémon.",Mx2,3,0.25,0.5,1.99,0.47,,Holofoil,,
+516517,Pikachu,Pikachu,https://tcgplayer-cdn.tcgplayer.com/product/516517_200w.jpg,3,23306,https://cpt.tcgcsv.com/mD86,2023-09-29T18:52:32.807,1,006/015,Promo,Lightning,70,Basic,"[1] Growl
+<br> During your opponent's next turn, the Defending Pokémon's attacks do 20 less damage (before applying Weakness and Resistance)",[1L] Pika Bolt (30),Fx2,1,1.45,3.03,10.0,3.69,,Holofoil,,
+516518,Pawmi,Pawmi,https://tcgplayer-cdn.tcgplayer.com/product/516518_200w.jpg,3,23306,https://cpt.tcgcsv.com/nD86,2023-09-13T20:29:48.717,1,007/015,Promo,Lightning,60,Basic,[1] Light Punch (10),[1L] Zap Kick (20),Fx2,1,0.01,0.26,1.5,0.31,,Normal,,
+516519,Kilowattrel,Kilowattrel,https://tcgplayer-cdn.tcgplayer.com/product/516519_200w.jpg,3,23306,https://cpt.tcgcsv.com/pD86,2023-09-13T20:29:37.27,1,008/015,Promo,Lightning,120,1,"[2] Skill Dive
+<br> This attack does 50 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and reistance for Benched Pokémon.)","[2L] Thunder Blast (140)
+<br>Discard a L energy from this Pokémon.",Lx2,1,0.05,0.21,1.97,0.22,,Normal,F-30,
+516520,Flittle,Flittle,https://tcgplayer-cdn.tcgplayer.com/product/516520_200w.jpg,3,23306,https://cpt.tcgcsv.com/qD86,2023-09-13T20:29:12.423,1,009/015,Promo,Psychic,30,Basic,[P] Ram (10),,Dx2,,0.01,0.25,2.47,0.26,,Normal,F-30,
+516521,Sandaconda,Sandaconda,https://tcgplayer-cdn.tcgplayer.com/product/516521_200w.jpg,3,23306,https://cpt.tcgcsv.com/rD86,2023-09-13T20:28:59.333,1,010/015,Promo,Fighting,140,Stage 1,[1FF] Skull Bash (120),"[1FFF] Sandstorm Spray
+<br> Discard 2 Energy from this Pokémon. If you discarded any Energy in this way, your opponent shuffles their Active Pokémon and all attached cards into their deck.",Gx2,3,0.01,0.22,1.97,0.2,,Normal,,
+516522,Klawf,Klawf,https://tcgplayer-cdn.tcgplayer.com/product/516522_200w.jpg,3,23306,https://cpt.tcgcsv.com/sD86,2023-10-02T20:09:15.973,1,011/015,Promo,Fighting,130,Basic,[FF] Vise Grip (50),"[FFF] Adrenaline Hammer (130)
+<br> This Pokemon is now confused.",Gx2,3,0.19,0.5,4.0,0.46,,Holofoil,,
+516523,Blissey,Blissey,https://tcgplayer-cdn.tcgplayer.com/product/516523_200w.jpg,3,23306,https://cpt.tcgcsv.com/tD86,2023-09-13T20:28:27.727,1,012/015,Promo,Colorless,150,Stage 1,"[3] Happy Cyclone (150)
+<br> Move all Energy from this Pokémon to 1 of your Benched Pokémon.",,Fx2,2,0.06,0.29,1.25,0.3,,Normal,,"<strong>Ability — Busybody Nurse</strong>
+<br> Once during your turn, you may use this Ability. Your Active Pokémon recovers from all Special Conditions."
+516524,Tandemaus,Tandemaus,https://tcgplayer-cdn.tcgplayer.com/product/516524_200w.jpg,3,23306,https://cpt.tcgcsv.com/vD86,2023-09-13T20:28:13.75,1,013/015,Promo,Colorless,40,Basic,"[2] Double Hit (30x)
+<br> Flip 2 coins. This attack does 30 damage for each heads.",,Fx2,1,0.09,0.32,1.36,0.32,,Normal,,
+516525,Cyclizar,Cyclizar,https://tcgplayer-cdn.tcgplayer.com/product/516525_200w.jpg,3,23306,https://cpt.tcgcsv.com/wD86,2023-09-29T18:53:03.167,1,014/015,Promo,Colorless,110,Basic,"[1] Touring
+<br> Draw 2 cards.",[3] Speed Attack (100),Fx2,,0.05,0.25,10.0,0.25,,Normal,,
+516526,Kirlia,Kirlia,https://tcgplayer-cdn.tcgplayer.com/product/516526_200w.jpg,3,23306,https://cpt.tcgcsv.com/xD86,2023-09-13T20:27:14.927,1,015/015,Promo,Psychic,90,Stage 1,[1P] Magical Shot (30),"[1PP] Psychic (60+)
+<br>This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon.",Dx2,1,1.25,1.85,3.99,1.81,,Normal,F-30,
+516527,McDonald's 2023 Match & Battle Pack,McDonalds 2023 Match and Battle Pack,https://tcgplayer-cdn.tcgplayer.com/product/516527_200w.jpg,3,23306,https://cpt.tcgcsv.com/zD86,2023-09-29T13:35:13.143,2,,,,,,,,,,2.25,3.0,20.0,2.77,,Normal,,Each promotional paper booster pack contains 4 random promotional cards <em>(1 holofoil & 3 non-holofoil)</em>.

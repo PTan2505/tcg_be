@@ -1,0 +1,61 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extCardText,extAttack1,extWeakness,extResistance,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extAttack2
+83735,Bastiodon,Bastiodon,https://tcgplayer-cdn.tcgplayer.com/product/83735_200w.jpg,3,1432,https://cpt.tcgcsv.com/KvH,2024-02-21T13:38:42.5,1,001/017,Rare,Metal,130,Stage 2,"<strong>Poké-BODY — Protective Wall</strong>
+<br>
+Prevent all damage done to your Benched Pokémon by your opponent's attacks.","[1MM] Anger Revenge (60)
+<br>If Bastiodon was damaged by an attack during your opponent's last turn, this attack does 40 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",R+40,P-20,3,1.1,1.35,4.99,1.59,,Normal,
+83826,Bidoof,Bidoof,https://tcgplayer-cdn.tcgplayer.com/product/83826_200w.jpg,3,1432,https://cpt.tcgcsv.com/xxH,2022-09-23T20:09:45.39,1,011/017,Common,Colorless,50,Basic,,"[1] Amnesia
+<br>Choose 1 of the Defending Pokémon's attacks. That Pokémon can't use that attack during your opponent's next turn.",F+10,,1,6.0,9.33,9.69,9.66,,Normal,"[1] Scavenge
+<br>Search your discard pile for a Trainer card, show it to your opponent, and put it into your hand."
+84038,Buneary,Buneary,https://tcgplayer-cdn.tcgplayer.com/product/84038_200w.jpg,3,1432,https://cpt.tcgcsv.com/NDH,2022-09-23T20:11:25.567,1,012/017,Common,Colorless,50,Basic,,[1] Splash (10),F+10,,1,1.11,2.11,3.82,2.17,,Normal,"[2] Jump Kick (10)
+<br>Does 10 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>"
+84260,Cherubi,Cherubi,https://tcgplayer-cdn.tcgplayer.com/product/84260_200w.jpg,3,1432,https://cpt.tcgcsv.com/dKH,2022-09-23T20:13:08.647,1,013/017,Common,Grass,50,Basic,,"[G] Sleep Powder
+<br>The Defending Pokémon is now Asleep.",R+10,W-20,1,2.5,3.06,3.99,3.22,,Normal,"[1G] Leech Seed (20)
+<br>If this attack does any damage to the Defending Pokémon <em>(after applying Weakness and Resistance)</em>, remove 1 damage counter from Cherubi."
+84283,Chimchar,Chimchar,https://tcgplayer-cdn.tcgplayer.com/product/84283_200w.jpg,3,1432,https://cpt.tcgcsv.com/HKH,2022-09-23T20:14:34.673,1,014/017,Common,Fire,50,Basic,,[0] Scratch (10),W+10,,1,0.99,1.26,2.49,1.45,,Normal,"[1R] Ember (30)
+<br>Flip a coin. If tails, discard a Fire Energy attached to Chimchar."
+84283,Chimchar,Chimchar,https://tcgplayer-cdn.tcgplayer.com/product/84283_200w.jpg,3,1432,https://cpt.tcgcsv.com/HKH,2022-09-23T20:14:34.673,1,014/017,Common,Fire,50,Basic,,[0] Scratch (10),W+10,,1,1.99,2.73,8.0,2.88,,Holofoil,"[1R] Ember (30)
+<br>Flip a coin. If tails, discard a Fire Energy attached to Chimchar."
+84954,Drifloon,Drifloon,https://tcgplayer-cdn.tcgplayer.com/product/84954_200w.jpg,3,1432,https://cpt.tcgcsv.com/6_H,2022-09-23T20:16:20.863,1,006/017,Uncommon,Psychic,60,Basic,,"[P] Blowing Wind
+<br>Flip a coin. If heads, put 1 of your Benched Pokémon and all cards attached to it on top of your deck. Shuffle your deck afterward.",D+10,C-20,1,28.0,28.0,28.0,25.44,,Normal,"[1P] Ominous Wind (10)
+<br>Flip a coin. If heads, the Defending Pokémon is now Confused and can't retreat during your opponent's next turn."
+85699,Gible,Gible,https://tcgplayer-cdn.tcgplayer.com/product/85699_200w.jpg,3,1432,https://cpt.tcgcsv.com/_hJ,2022-09-23T20:17:20.497,1,007/017,Common,Colorless,50,Basic,<strong>Oran Berry</strong> — Remove 1 damage counter from Gible at the end of your turn.,"[2] Surprise Attack (30)
+<br>Flip a coin. If tails, this attack does nothing.",C+10,,1,3.41,3.97,5.52,4.69,,Normal,
+85699,Gible,Gible,https://tcgplayer-cdn.tcgplayer.com/product/85699_200w.jpg,3,1432,https://cpt.tcgcsv.com/_hJ,2022-09-23T20:17:20.497,1,007/017,Common,Colorless,50,Basic,<strong>Oran Berry</strong> — Remove 1 damage counter from Gible at the end of your turn.,"[2] Surprise Attack (30)
+<br>Flip a coin. If tails, this attack does nothing.",C+10,,1,3.0,5.0,6.97,6.4,,Holofoil,
+86874,Lucario,Lucario,https://tcgplayer-cdn.tcgplayer.com/product/86874_200w.jpg,3,1432,https://cpt.tcgcsv.com/vMJ,2023-02-01T18:23:56.293,1,002/017,Rare,Fighting,90,Stage 1,,"[1] Feint (30)
+<br>This attack's damage isn't affected by Resistance.",P+20,,1,4.0,4.79,5.58,5.65,,Normal,"[FF] Aura Sphere (40)
+<br>Does 20 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>"
+87144,Manaphy,Manaphy,https://tcgplayer-cdn.tcgplayer.com/product/87144_200w.jpg,3,1432,https://cpt.tcgcsv.com/VSJ,2022-09-23T20:19:31.46,1,003/017,Rare,Water,70,Basic,,"[1] Call for Family
+<br>Search your deck for a Basic Pokémon and put it onto your Bench.  Shuffle your deck afterward.",L+20,,1,0.68,1.75,3.0,1.31,,Normal,"[WW] Aqua Ring (30)
+<br>Switch Manaphy with 1 of your Benched Pokémon."
+87144,Manaphy,Manaphy,https://tcgplayer-cdn.tcgplayer.com/product/87144_200w.jpg,3,1432,https://cpt.tcgcsv.com/VSJ,2022-09-23T20:19:31.46,1,003/017,Rare,Water,70,Basic,,"[1] Call for Family
+<br>Search your deck for a Basic Pokémon and put it onto your Bench.  Shuffle your deck afterward.",L+20,,1,2.21,6.96,8.99,7.48,,Holofoil,"[WW] Aqua Ring (30)
+<br>Switch Manaphy with 1 of your Benched Pokémon."
+87898,Pachirisu,Pachirisu,https://tcgplayer-cdn.tcgplayer.com/product/87898_200w.jpg,3,1432,https://cpt.tcgcsv.com/-9K,2022-09-23T20:21:09.333,1,004/017,Rare,Lightning,70,Basic,,"[1] Minor Errand-Running
+<br> Search your deck for a basic Energy card, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",F+20,M-20,1,1.49,2.47,3.69,2.47,,Normal,"[L] Thunder Jolt (20)
+<br>Flip a coin. If tails, Pachirisu does 10 damage to itself."
+88087,Pikachu,Pikachu,https://tcgplayer-cdn.tcgplayer.com/product/88087_200w.jpg,3,1432,https://cpt.tcgcsv.com/MfK,2022-09-23T20:22:01.667,1,009/017,Common,Lightning,50,Basic,<strong>Oran Berry</strong> — Remove 1 damage counter form Pikachu at the end of your turn.,"[1L] Spark (10)
+<br>Does 10 damage to 2 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",F+10,M-20,1,39.03,39.99,40.73,36.16,,Normal,
+88087,Pikachu,Pikachu,https://tcgplayer-cdn.tcgplayer.com/product/88087_200w.jpg,3,1432,https://cpt.tcgcsv.com/MfK,2022-09-23T20:22:01.667,1,009/017,Common,Lightning,50,Basic,<strong>Oran Berry</strong> — Remove 1 damage counter form Pikachu at the end of your turn.,"[1L] Spark (10)
+<br>Does 10 damage to 2 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",F+10,M-20,1,30.26,40.24,72.99,39.76,43.95,Holofoil,
+88143,Piplup,Piplup,https://tcgplayer-cdn.tcgplayer.com/product/88143_200w.jpg,3,1432,https://cpt.tcgcsv.com/TgK,2022-09-23T20:24:22.96,1,015/017,Common,Water,60,Basic,,[0] Peck (10),L+10,,1,4.67,5.59,6.58,7.42,,Normal,"[1W] Water Splash (20+)
+<br>Flip a coin. If heads, this attack does 20 damage plus 10 more damage."
+88143,Piplup,Piplup,https://tcgplayer-cdn.tcgplayer.com/product/88143_200w.jpg,3,1432,https://cpt.tcgcsv.com/TgK,2022-09-23T20:24:22.96,1,015/017,Common,Water,60,Basic,,[0] Peck (10),L+10,,1,4.62,7.0,9.0,4.87,,Holofoil,"[1W] Water Splash (20+)
+<br>Flip a coin. If heads, this attack does 20 damage plus 10 more damage."
+88570,Rampardos,Rampardos,https://tcgplayer-cdn.tcgplayer.com/product/88570_200w.jpg,3,1432,https://cpt.tcgcsv.com/qrK,2023-02-01T18:24:12.023,1,005/017,Rare,Fighting,120,Stage 2,,"[1F] Assurance (30)
+<br>As long as the Defending Pokémon's remaining HP is 60 or less, this attack's base damage is 60 instead of 30.",G+30,,1,1.25,1.78,3.25,1.32,,Normal,"[FFF] Hasty Headbutt (100)
+<br>Rampardos does 20 damage to itself. This attack's damage isn't affected by Weakness, Resistance, Poké-Powers, Poké-Bodies, or any other effects on the Defending Pokémon."
+88752,Riolu,Riolu,https://tcgplayer-cdn.tcgplayer.com/product/88752_200w.jpg,3,1432,https://cpt.tcgcsv.com/3wK,2022-09-23T20:26:50.82,1,008/017,Uncommon,Fighting,60,Basic,,"[F] Wild Kick (30)
+<br>Flip a coin. If tails, this attack does nothing.",P+10,,1,0.98,1.0,3.98,3.01,,Normal,
+88752,Riolu,Riolu,https://tcgplayer-cdn.tcgplayer.com/product/88752_200w.jpg,3,1432,https://cpt.tcgcsv.com/3wK,2022-09-23T20:26:50.82,1,008/017,Uncommon,Fighting,60,Basic,,"[F] Wild Kick (30)
+<br>Flip a coin. If tails, this attack does nothing.",P+10,,1,3.26,3.6,16.82,3.86,,Holofoil,
+89514,Staravia,Staravia,https://tcgplayer-cdn.tcgplayer.com/product/89514_200w.jpg,3,1432,https://cpt.tcgcsv.com/jQK,2022-09-23T20:28:07.117,1,010/015,Uncommon,Colorless,70,Stage 1,,"[2] Whirlwind (20)
+<br>Your opponent switches the Defending Pokémon with 1 of his or her Benched Pokémon.",L+20,F-20,,7.0,7.0,7.0,7.99,,Normal,"[2] Clutch (20)
+<br>The Defending Pokémon can't retreat during your opponent's next turn."
+89521,Starly,Starly,https://tcgplayer-cdn.tcgplayer.com/product/89521_200w.jpg,3,1432,https://cpt.tcgcsv.com/rQK,2022-09-23T20:29:03.91,1,016/017,Common,Colorless,50,Basic,,[1] Gust (10),L+10,F-20,1,2.6,2.91,3.69,2.75,,Normal,"[2] Quick Attack (10+)
+<br>Flip a coin. If heads, this attack does 10 damage plus 20 more damage."
+90072,Turtwig,Turtwig,https://tcgplayer-cdn.tcgplayer.com/product/90072_200w.jpg,3,1432,https://cpt.tcgcsv.com/s2L,2022-09-23T20:29:59.483,1,017/017,Common,Grass,60,Basic,,[0] Tackle (10),R+10,W-20,2,1.14,3.14,4.04,3.26,,Normal,[G] Razor Leaf (20)
+90072,Turtwig,Turtwig,https://tcgplayer-cdn.tcgplayer.com/product/90072_200w.jpg,3,1432,https://cpt.tcgcsv.com/s2L,2022-09-23T20:29:59.483,1,017/017,Common,Grass,60,Basic,,[0] Tackle (10),R+10,W-20,2,2.49,6.65,9.0,3.92,,Holofoil,[G] Razor Leaf (20)
+141229,POP Series 6 Pack,POP Series 6 Pack,https://tcgplayer-cdn.tcgplayer.com/product/141229_200w.jpg,3,1432,https://cpt.tcgcsv.com/Cv82,2017-08-16T19:11:05.497,0,,,,,,Each POP Series 6 Pack contains 2 random cards for the Promotional POP Series 6.,,,,,25.44,36.98,37.95,31.95,,Normal,
+276377,Pikachu (Pokemon Day Stamped),Pikachu Pokemon Day Stamped,https://tcgplayer-cdn.tcgplayer.com/product/276377_200w.jpg,3,1432,https://cpt.tcgcsv.com/zzd3,2022-09-23T20:23:14.623,1,009/017,Common,Lightning,50,Basic,<strong>Oran Berry</strong> — Remove 1 damage counter form Pikachu at the end of your turn.,"[1L] Spark (10)
+<br>Does 10 damage to 2 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",F+10,M-20,1,76.54,85.04,106.3,85.04,,Normal,

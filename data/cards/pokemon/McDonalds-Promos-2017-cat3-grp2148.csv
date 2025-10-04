@@ -1,0 +1,22 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extAttack2,extWeakness,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extResistance
+152681,Rowlet - 1/12,Rowlet 1 12,https://tcgplayer-cdn.tcgplayer.com/product/152681_200w.jpg,3,2148,https://cpt.tcgcsv.com/F5f2,2022-09-23T15:38:02.287,1,001/012,Promo,Grass,60,Basic,[1] Tackle (10),[1G] Leafage (20),Rx2,1,1.99,5.38,8.7,5.43,,Holofoil,
+152682,Grubbin - 2/12,Grubbin 2 12,https://tcgplayer-cdn.tcgplayer.com/product/152682_200w.jpg,3,2148,https://cpt.tcgcsv.com/G5f2,2022-09-23T15:30:02.107,1,002/012,Promo,Grass,70,Basic,[2] Vice Grip (20),,Rx2,2,1.67,3.04,7.49,3.09,,Holofoil,
+152683,Litten - 3/12,Litten 3 12,https://tcgplayer-cdn.tcgplayer.com/product/152683_200w.jpg,3,2148,https://cpt.tcgcsv.com/H5f2,2022-09-23T15:31:42.34,1,003/012,Promo,Fire,70,Basic,[R] Bite (10),[1R] Flare (20),Wx2,1,1.99,2.15,9.0,4.18,,Holofoil,
+152684,Popplio - 4/12,Popplio 4 12,https://tcgplayer-cdn.tcgplayer.com/product/152684_200w.jpg,3,2148,https://cpt.tcgcsv.com/J5f2,2022-09-23T15:36:29.613,1,004/012,Promo,Water,70,Basic,[1] Pound (10),[1W] Water Gun (20),Gx2,1,1.47,2.72,3.71,3.15,2.95,Holofoil,
+152685,Pikachu - 5/12,Pikachu 5 12,https://tcgplayer-cdn.tcgplayer.com/product/152685_200w.jpg,3,2148,https://cpt.tcgcsv.com/K5f2,2022-09-23T15:33:55.717,1,005/012,Promo,Lightning,70,Basic,"[L] Thunder Wave
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",[2L] Electro Ball (50),Fx2,1,10.79,17.03,40.0,18.85,,Holofoil,M-20
+152686,Cosmog - 6/12,Cosmog 6 12,https://tcgplayer-cdn.tcgplayer.com/product/152686_200w.jpg,3,2148,https://cpt.tcgcsv.com/L5f2,2022-09-23T15:24:53.327,1,006/012,Promo,Psychic,60,Basic,"[1] Dust Gathering
+<br>
+Draw a card.",,Px2,1,1.41,2.2,5.07,2.15,,Holofoil,
+152687,Crabrawler - 7/12,Crabrawler 7 12,https://tcgplayer-cdn.tcgplayer.com/product/152687_200w.jpg,3,2148,https://cpt.tcgcsv.com/M5f2,2022-09-23T15:26:56.013,1,007/012,Promo,Fighting,80,Basic,[2] Punch (20),[2F] Crabhammer (40),Px2,2,1.55,2.45,6.02,2.7,,Holofoil,
+152688,Alolan Meowth - 8/12,Alolan Meowth 8 12,https://tcgplayer-cdn.tcgplayer.com/product/152688_200w.jpg,3,2148,https://cpt.tcgcsv.com/N5f2,2022-09-23T15:23:14.583,1,008/012,Promo,Darkness,70,Basic,"[0] Fury Swipes (10x)
+<br>Flip 3 coins. This attack does 10 damage times the number of heads.",,Fx2,1,1.25,2.75,5.2,3.23,,Holofoil,P-20
+152689,Alolan Diglett - 9/12,Alolan Diglett 9 12,https://tcgplayer-cdn.tcgplayer.com/product/152689_200w.jpg,3,2148,https://cpt.tcgcsv.com/P5f2,2022-09-23T15:20:24.827,1,009/012,Promo,Metal,50,Basic,"[0] Spelunk
+<br>
+Look at the top 3 cards of your deck and put them back in any order.",[M] Mud-Slap (10),Rx2,1,2.87,5.15,7.2,4.44,,Holofoil,P-20
+152690,Cutiefly - 10/12,Cutiefly 10 12,https://tcgplayer-cdn.tcgplayer.com/product/152690_200w.jpg,3,2148,https://cpt.tcgcsv.com/Q5f2,2022-09-23T15:28:47.427,1,010/012,Promo,Fairy,30,Basic,"[Y] Fly About (10)
+<br>
+If any damage is done to this Pokémon by attacks during your opponent's next turn, flip a coin. If heads, prevent that damage.",,Mx2,1,3.0,4.57,5.56,4.13,,Holofoil,D-20
+152692,Pikipek - 11/12,Pikipek 11 12,https://tcgplayer-cdn.tcgplayer.com/product/152692_200w.jpg,3,2148,https://cpt.tcgcsv.com/S5f2,2022-09-23T15:35:19.577,1,011/012,Promo,Colorless,50,Basic,"[1] Rock Smash (10+)
+<br>Flip a coin. If heads, this attack does 10 more damage.",,Lx2,1,1.24,1.66,5.0,1.95,,Holofoil,F-20
+152693,Yungoos - 12/12,Yungoos 12 12,https://tcgplayer-cdn.tcgplayer.com/product/152693_200w.jpg,3,2148,https://cpt.tcgcsv.com/T5f2,2022-09-23T15:39:06.843,1,012/012,Promo,Colorless,70,Basic,[1] Tackle (10),[2] Bite (20),Fx2,1,1.45,1.95,3.98,1.97,,Holofoil,

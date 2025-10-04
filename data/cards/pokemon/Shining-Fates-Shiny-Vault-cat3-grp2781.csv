@@ -1,0 +1,277 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extCardText,extAttack1,extWeakness,extResistance,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extAttack2
+232343,Rowlet,Rowlet,https://tcgplayer-cdn.tcgplayer.com/product/232343_200w.jpg,3,2781,https://cpt.tcgcsv.com/TXS2,2023-12-30T16:03:22.85,1,SV001/SV122,Shiny Holo Rare,Grass,50,Basic,"<strong>Ability — Sky Circus</strong>
+<br>If you played Bird Keeper from your hand during this turn, ignore all Energy in the attack cost of each of this Pokémon's attacks.","[3] Wind Shard
+<br>This attack does 60 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",Rx2,None,1,1.0,2.0,9.99,2.13,2.69,Holofoil,
+232344,Dartrix,Dartrix,https://tcgplayer-cdn.tcgplayer.com/product/232344_200w.jpg,3,2781,https://cpt.tcgcsv.com/VXS2,2021-02-19T05:03:14.033,1,SV002/SV122,Shiny Holo Rare,Grass,80,Stage 1,,[G] Razor Leaf (40),Rx2,None,1,2.0,2.87,9.99,2.87,2.85,Holofoil,
+232345,Decidueye,Decidueye,https://tcgplayer-cdn.tcgplayer.com/product/232345_200w.jpg,3,2781,https://cpt.tcgcsv.com/WXS2,2021-10-06T12:55:25.483,1,SV003/SV122,Shiny Holo Rare,Grass,140,Stage 2,"<strong>Ability — Deep Forest Camo</strong>
+<br>Prevent all damage done to this Pokémon by attacks from your opponent's Pokémon V and Pokémon-GX.","[1G] Split Arrow (90)
+<br><em>This attack also does 20 damage to 2 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon)</em>",Rx2,None,2,3.0,4.33,14.99,4.37,4.54,Holofoil,
+232346,Grookey,Grookey,https://tcgplayer-cdn.tcgplayer.com/product/232346_200w.jpg,3,2781,https://cpt.tcgcsv.com/XXS2,2023-03-06T05:53:15.19,1,SV004/SV122,Shiny Holo Rare,Grass,60,Basic,,"[1] Fury Swipes (10x)
+<br>Flip 3 coins. This attack does 10 damage for each heads.",Rx2,None,1,0.75,1.69,6.65,1.57,2.48,Holofoil,
+232347,Thwackey,Thwackey,https://tcgplayer-cdn.tcgplayer.com/product/232347_200w.jpg,3,2781,https://cpt.tcgcsv.com/ZXS2,2021-02-19T05:03:14.033,1,SV005/SV122,Shiny Holo Rare,Grass,90,Basic,"<strong>Ability — Lay of the Land</strong>
+<br>If you have a Stadium in play, this Pokemon has no Retreat Cost.",[G] Branch poke (20),Rx2,None,2,1.4,2.19,17.0,1.9,2.61,Holofoil,
+232350,Rillaboom,Rillaboom,https://tcgplayer-cdn.tcgplayer.com/product/232350_200w.jpg,3,2781,https://cpt.tcgcsv.com/0ZS2,2024-02-28T13:01:05.73,1,SV006/SV122,Shiny Holo Rare,Grass,170,Stage 2,"<strong>Ability — Voltage Beat</strong>
+<br>Once during your turn, you may search your deck for up to 2 Grass Energy cards and attach them to 1 of your Pokémon. Then, shuffle your deck.",[1GGG] Hammer In (140),Rx2,None,3,1.49,2.57,15.99,2.41,2.99,Holofoil,
+232351,Blipbug,Blipbug,https://tcgplayer-cdn.tcgplayer.com/product/232351_200w.jpg,3,2781,https://cpt.tcgcsv.com/2ZS2,2021-06-09T12:21:07.29,1,SV007/SV122,Shiny Holo Rare,Grass,50,Basic,,[G] Gnaw (20),Rx2,None,1,0.93,1.63,6.95,1.47,1.49,Holofoil,
+232353,Dottler,Dottler,https://tcgplayer-cdn.tcgplayer.com/product/232353_200w.jpg,3,2781,https://cpt.tcgcsv.com/5ZS2,2021-02-19T05:03:14.033,1,SV008/SV122,Shiny Holo Rare,Grass,70,Stage 1,,"[1] Reflect
+<br>During your opponent's next turn, this Pokémon takes 40 less damage from attacks <em>(after applying Weakness and Resistance)</em>.",Rx2,None,2,0.95,1.41,4.99,1.33,1.79,Holofoil,[1G] Ram (30)
+232354,Orbeetle,Orbeetle,https://tcgplayer-cdn.tcgplayer.com/product/232354_200w.jpg,3,2781,https://cpt.tcgcsv.com/6ZS2,2021-06-15T12:16:50.397,1,SV009/SV122,Shiny Holo Rare,Grass,130,Stage 2,"<strong>Ability —Bug's Radar</strong>
+<br>Once during your turn, you may look at the top 3 cards of your opponent's deck and put them back on top of their deck in any order.","[1G] Brain Wave (90+)
+<br>This attack does 30 more damage for each Psychic Energy attached to this Pokémon.",Rx2,None,1,1.0,1.75,9.99,1.64,1.99,Holofoil,
+232356,Gossifleur,Gossifleur,https://tcgplayer-cdn.tcgplayer.com/product/232356_200w.jpg,3,2781,https://cpt.tcgcsv.com/8ZS2,2021-09-21T09:36:38.477,1,SV010/SV122,Shiny Holo Rare,Grass,50,Basic,,"[1] Call for Family
+<br>Search your deck for up to 3 Basic Pokémon and put them onto your Bench. Then, shuffle your deck.",Rx2,None,1,1.0,1.89,12.0,1.81,1.74,Holofoil,[G] Razor Leaf (10)
+232357,Eldegoss,Eldegoss,https://tcgplayer-cdn.tcgplayer.com/product/232357_200w.jpg,3,2781,https://cpt.tcgcsv.com/9ZS2,2022-08-03T16:08:13.99,1,SV011/SV122,Shiny Holo Rare,Grass,80,Stage 1,,"[1] Fluffy Blessings
+<br>Search your deck for up to 3 Grass Energy and attach them to your Pokémon in any way you like. Then, shuffle your deck.",Rx2,None,1,0.69,1.42,9.0,1.24,1.34,Holofoil,[G] Leafage (30)
+232359,Applin,Applin,https://tcgplayer-cdn.tcgplayer.com/product/232359_200w.jpg,3,2781,https://cpt.tcgcsv.com/cZS2,2021-09-22T17:33:16.6,1,SV012/SV122,Shiny Holo Rare,Grass,40,Basic,,"[1] Withdraw 
+<br>Flip a coin. If heads, during your opponent's next turn, prevent all damage done to this Pokemon by attacks.",Rx2,None,1,3.7,5.0,8.07,4.82,5.39,Holofoil,
+232360,Flapple,Flapple,https://tcgplayer-cdn.tcgplayer.com/product/232360_200w.jpg,3,2781,https://cpt.tcgcsv.com/dZS2,2021-02-19T05:03:14.033,1,SV013/SV122,Shiny Holo Rare,Grass,80,Stage 1,"<strong>Ability — Apple Drop</strong>
+<br>Once during your turn, you may put 2 damage counters on 1 of your opponent's Pokemon. If you placed any damage counters in this way, shuffle this Pokemon and all attached cards into your deck.","[2] Acid Spray (60)
+<br>Flip a coin. If heads, discard an Energy from your opponent's Active Pokemon.",Rx2,None,1,1.25,2.84,19.94,2.62,3.99,Holofoil,
+232361,Appletun,Appletun,https://tcgplayer-cdn.tcgplayer.com/product/232361_200w.jpg,3,2781,https://cpt.tcgcsv.com/fZS2,2021-02-19T05:03:14.033,1,SV014/SV122,Shiny Holo Rare,Grass,90,Stage 1,"<strong>Ability — Delicious Aroma</strong>
+<br>Once during your turn, you may flip a coin. If heads, switch 1 of your opponent's Benched Basic Pokemon with their Active Pokemon.",[1G] Solar Beam (70),Rx2,None,3,3.1,4.54,14.0,4.18,5.94,Holofoil,
+232362,Scorbunny,Scorbunny,https://tcgplayer-cdn.tcgplayer.com/product/232362_200w.jpg,3,2781,https://cpt.tcgcsv.com/gZS2,2022-07-07T15:48:35.313,1,SV015/SV122,Shiny Holo Rare,Fire,60,Basic,,"[R] Ember (30)
+<br>Discard an Energy from this Pokémon.",Wx2,None,1,1.0,1.99,13.5,1.73,1.19,Holofoil,
+232363,Raboot,Raboot,https://tcgplayer-cdn.tcgplayer.com/product/232363_200w.jpg,3,2781,https://cpt.tcgcsv.com/hZS2,2021-02-19T05:03:14.033,1,SV016/SV122,Shiny Holo Rare,Fire,90,Stage 1,,"[R] Flame Charge (20)
+<br>Search your deck for a Fire Energy card and attach it to this Pokémon. Then, shuffle your deck.",Wx2,None,1,4.0,4.99,19.95,4.99,5.39,Holofoil,[1RR] Magnum Kick (70)
+232365,Cinderace,Cinderace,https://tcgplayer-cdn.tcgplayer.com/product/232365_200w.jpg,3,2781,https://cpt.tcgcsv.com/kZS2,2021-02-19T05:03:14.033,1,SV017/SV122,Shiny Holo Rare,Fire,170,Stage 2,"<strong>Ability — Libero</strong>
+<br>Once during your turn, when this Pokémon moves from your Bench to the Active Spot, you may attach up to 2 Fire Energy cards from your discard pile to it.","[1RR] Flare Striker (190)
+<br>Discard 2 Energy from this Pokémon.",Wx2,None,1,3.5,4.63,9.0,4.38,5.03,Holofoil,
+232366,Sizzlipede,Sizzlipede,https://tcgplayer-cdn.tcgplayer.com/product/232366_200w.jpg,3,2781,https://cpt.tcgcsv.com/lZS2,2021-02-19T05:03:14.033,1,SV018/SV122,Shiny Holo Rare,Fire,70,Basic,,[1] Bite (10),Wx2,None,1,1.05,1.9,4.99,1.76,2.32,Holofoil,[2R] Combustion (50)
+232368,Centiskorch,Centiskorch,https://tcgplayer-cdn.tcgplayer.com/product/232368_200w.jpg,3,2781,https://cpt.tcgcsv.com/nZS2,2022-12-08T22:10:37.36,1,SV019/SV122,Shiny Holo Rare,Fire,130,Stage 1,,"[R] Hundred Foot Flames
+<br>For each [R] Energy attached to this Pokemon, discard the top card of your opponent's deck.",Wx2,None,3,1.1,2.0,9.0,1.81,2.69,Holofoil,"[3R] Searing Flame (110)
+<br>Your opponent's Active Pokemon is now burned."
+232369,Galarian Mr. Mime,Galarian Mr Mime,https://tcgplayer-cdn.tcgplayer.com/product/232369_200w.jpg,3,2781,https://cpt.tcgcsv.com/pZS2,2023-09-01T02:57:01.54,1,SV020/SV122,Shiny Holo Rare,Water,80,Basic,,"[W] Reflect
+<br>During your opponent's next turn, this Pokémon takes 30 less damage from attacks <em>(after applying Weakness and Resistance)</em>.",Mx2,None,1,1.0,1.5,9.99,1.27,,Holofoil,[2] Icy Snow (30)
+232370,Galarian Mr. Rime,Galarian Mr Rime,https://tcgplayer-cdn.tcgplayer.com/product/232370_200w.jpg,3,2781,https://cpt.tcgcsv.com/qZS2,2021-06-09T12:28:53.31,1,SV021/SV122,Shiny Holo Rare,Water,120,Stage 1,"<strong>Ability — Shuffle Dance</strong>
+<br>Once during your turn, you may switch 1 of your opponent's face-down Prize cards with the top card of their deck.","[2W] Mad Party (20x)
+<br>This attack does 20 damage times the number of Pokémon in your discard pile that have the Mad Party attack.",Mx2,None,2,0.25,1.03,10.57,1.0,0.75,Holofoil,
+232371,Suicune,Suicune,https://tcgplayer-cdn.tcgplayer.com/product/232371_200w.jpg,3,2781,https://cpt.tcgcsv.com/rZS2,2022-05-13T16:00:22.333,1,SV022/SV122,Shiny Holo Rare,Water,120,Basic,,[W] Wave Splash (20),Lx2,None,1,7.2,11.09,59.99,10.51,7.34,Holofoil,"[1WW] Aurora Loop (130)
+<br>Put 2 Water Energy attached to this Pokémon into your hand."
+232373,Galarian Darumaka,Galarian Darumaka,https://tcgplayer-cdn.tcgplayer.com/product/232373_200w.jpg,3,2781,https://cpt.tcgcsv.com/tZS2,2021-11-18T16:20:12.88,1,SV023/SV122,Shiny Holo Rare,Water,80,Basic,,"[1W] Ice Punch (30)
+<br>Flip a coin. If heads, your opponent’s Active Pokemon is now Paralyzed.",Mx2,None,2,1.2,1.98,9.99,1.77,1.74,Holofoil,
+232374,Galarian Darmanitan,Galarian Darmanitan,https://tcgplayer-cdn.tcgplayer.com/product/232374_200w.jpg,3,2781,https://cpt.tcgcsv.com/vZS2,2021-02-19T05:03:14.033,1,SV024/SV122,Shiny Holo Rare,Water,140,Stage 1,,"[2W] Blizzard (80)
+<br>This attack also does 10 damage to each of your opponent's Benched Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>",Mx2,None,3,0.8,1.41,5.95,1.3,1.94,Holofoil,"[2WW] Crushing Headbutt (170)
+<br>During your next turn, this Pokemon can't use Crushing Headbutt."
+232375,Sobble,Sobble,https://tcgplayer-cdn.tcgplayer.com/product/232375_200w.jpg,3,2781,https://cpt.tcgcsv.com/wZS2,2022-07-15T06:49:07.74,1,SV025/SV122,Shiny Holo Rare,Water,60,Basic,,[W] Water Gun (20),Lx2,None,1,0.94,1.62,9.95,1.39,2.03,Holofoil,
+232377,Drizzile,Drizzile,https://tcgplayer-cdn.tcgplayer.com/product/232377_200w.jpg,3,2781,https://cpt.tcgcsv.com/zZS2,2023-09-25T13:11:05.067,1,SV026/SV122,Shiny Holo Rare,Water,90,Stage 1,"<strong>Ability — Shady Dealings</strong>
+<br>When you play this Pokemon from your hand to evolve 1 of your Pokemon during your turn, you may search your deck for a Trainer card, reveal it, and put it into your hand. Then, shuffle your deck.",[1W] Water Drip (30),Lx2,None,1,1.54,3.12,19.81,3.12,4.48,Holofoil,
+232378,Inteleon,Inteleon,https://tcgplayer-cdn.tcgplayer.com/product/232378_200w.jpg,3,2781,https://cpt.tcgcsv.com/BZS2,2025-01-26T03:58:02.89,1,SV027/SV122,Shiny Holo Rare,Water,160,Stage 2,"<strong>Ability — Shady Dealings</strong>
+<br>When you play this Pokemon from your hand to evolve 1 of your Pokemon during your turn, you may search your deck for up to 2 Trainer cards, reveal them, and put them into your hand. Then, shuffle your deck.","[1W] Aqua Bullet (120)
+<br>This attack also does 20 damage to 1 of your opponent's Benched Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>",Lx2,None,1,3.25,4.61,10.75,4.51,4.91,Holofoil,
+232379,Chewtle,Chewtle,https://tcgplayer-cdn.tcgplayer.com/product/232379_200w.jpg,3,2781,https://cpt.tcgcsv.com/CZS2,2022-07-26T17:44:17.813,1,SV028/SV122,Shiny Holo Rare,Water,80,Basic,,[2] Bite (30),Lx2,None,2,1.0,1.85,8.99,1.71,1.74,Holofoil,[2W] Water Gun (50)
+232382,Drednaw,Drednaw,https://tcgplayer-cdn.tcgplayer.com/product/232382_200w.jpg,3,2781,https://cpt.tcgcsv.com/GZS2,2021-02-19T05:03:14.033,1,SV029/SV122,Shiny Holo Rare,Water,130,Stage 1,,"[2W] Vise Bite (60+)
+<br>This attack does 30 more damage for each   in your opponent's Active Pokemon's Retreat Cost.",Lx2,None,3,0.57,1.72,5.95,1.67,2.23,Holofoil,"[3W] Jaw Lock (130)
+<br>The Defending Pokemon can't retreat during your opponent's next turn."
+232383,Cramorant,Cramorant,https://tcgplayer-cdn.tcgplayer.com/product/232383_200w.jpg,3,2781,https://cpt.tcgcsv.com/HZS2,2025-02-07T20:14:18.143,1,SV030/SV122,Shiny Holo Rare,Water,110,Basic,,"[W] Dive (20)
+<br>Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to this Pokemon.",Lx2,F-30,1,0.46,1.0,12.99,0.79,,Holofoil,"[3] Hydro Pump (50+)
+<br>This attack does 20 more damage for each Water Energy attached to this Pokemon."
+232384,Arrokuda,Arrokuda,https://tcgplayer-cdn.tcgplayer.com/product/232384_200w.jpg,3,2781,https://cpt.tcgcsv.com/JZS2,2021-02-19T05:03:14.033,1,SV031/SV122,Shiny Holo Rare,Water,60,Basic,,[W] Rain Splash (20),Lx2,F-30,1,0.98,1.6,9.99,1.45,1.72,Holofoil,
+232385,Barraskewda,Barraskewda,https://tcgplayer-cdn.tcgplayer.com/product/232385_200w.jpg,3,2781,https://cpt.tcgcsv.com/KZS2,2021-02-19T05:03:14.033,1,SV032/SV122,Shiny Holo Rare,Water,120,Stage 1,,[1] Peck (30),Lx2,F-30,1,0.98,1.69,7.99,1.67,2.24,Holofoil,"[W] Spiral Jet (130)
+<br>Discard 2 Water Energy from your hand. If you don't, this attack does nothing."
+232387,Snom,Snom,https://tcgplayer-cdn.tcgplayer.com/product/232387_200w.jpg,3,2781,https://cpt.tcgcsv.com/MZS2,2021-10-17T13:58:17.78,1,SV033/SV122,Shiny Holo Rare,Water,50,Basic,,"[W] Call for Family
+<br> Search your deck for a Basic Pokemon and put it onto your Bench. Then, Shuffle your deck.",Mx2,None,2,1.0,2.0,10.34,1.82,2.64,Holofoil,
+232388,Frosmoth,Frosmoth,https://tcgplayer-cdn.tcgplayer.com/product/232388_200w.jpg,3,2781,https://cpt.tcgcsv.com/NZS2,2023-12-03T20:58:36.577,1,SV034/SV122,Shiny Holo Rare,Water,90,Stage 1,"<strong>Ability — Icy Snow Dance</strong>
+<br>As often as you like during your turn, you may attach a Water Energy card from your hand to 1 of your Benched Water Pokemon.",[1W] Aurora Beam (30),Mx2,None,2,1.75,3.0,19.99,2.93,3.59,Holofoil,
+232390,Eiscue,Eiscue,https://tcgplayer-cdn.tcgplayer.com/product/232390_200w.jpg,3,2781,https://cpt.tcgcsv.com/QZS2,2023-11-29T10:36:20.743,1,SV035/SV122,Shiny Holo Rare,Water,120,Basic,"<strong>Ability — Ice Face</strong>
+<br>If this Pokemon has full HP, it takes 60 less damage from your opponent's attacks <em>(after applying Weakness and Resistance)</em>.","[2W] Blizzard (70)
+<br>This attack also does 10 damage to each of your opponent's Benched Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>",Mx2,None,2,1.95,2.9,21.97,2.3,3.59,Holofoil,
+232391,Dracovish,Dracovish,https://tcgplayer-cdn.tcgplayer.com/product/232391_200w.jpg,3,2781,https://cpt.tcgcsv.com/RZS2,2021-10-14T13:50:28.777,1,SV036/SV122,Shiny Holo Rare,Water,150,Stage 1,"<strong>Ability — Primal Law</strong>
+<br>As long as this Pokémon is in the Active Spot, your opponent can't play any Pokémon from their hand to evolve their Pokémon.",[2W] Hammer In (120),Lx2,None,3,1.98,2.59,5.99,2.61,3.29,Holofoil,
+232393,Rotom,Rotom,https://tcgplayer-cdn.tcgplayer.com/product/232393_200w.jpg,3,2781,https://cpt.tcgcsv.com/TZS2,2022-02-14T16:39:46.827,1,SV038/SV122,Shiny Holo Rare,Lightning,80,Basic,"<strong>Ability — Roto Choice</strong>
+<br>When you play this Pokémon from your hand onto your Bench during your turn, you may search your deck for up to 2 Item cards that have the word ""Rotom"" in their name, reveal them, and put them into your hand. Then, shuffle your deck.","[1L] Thunder Shock (30)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",Fx2,None,1,2.0,2.97,9.95,2.93,4.49,Holofoil,
+232395,Yamper,Yamper,https://tcgplayer-cdn.tcgplayer.com/product/232395_200w.jpg,3,2781,https://cpt.tcgcsv.com/WZS2,2023-06-05T08:40:14.993,1,SV039/SV122,Shiny Holo Rare,Lightning,70,Basic,,"[1] Roar
+<br>Your opponent switches their Active Pokemon with 1 of their Benched Pokemon.",Fx2,None,1,4.0,6.35,8.75,5.86,7.49,Holofoil,[L] Static Shock (10)
+232397,Boltund,Boltund,https://tcgplayer-cdn.tcgplayer.com/product/232397_200w.jpg,3,2781,https://cpt.tcgcsv.com/ZZS2,2021-08-16T16:10:25.157,1,SV040/SV122,Shiny Holo Rare,Lightning,130,Stage 1,,"[2] Big Bite (50)
+<br>The Defending Pokemon can't retreat during your opponent's next turn.",Fx2,None,1,1.0,2.0,15.99,1.95,2.27,Holofoil,"[2L] Fighter Fang (90+)
+<br>If your opponent's Active Pokemon is a Pokemon V or Pokemon GX, this attack does 90 more damage."
+232399,Toxel,Toxel,https://tcgplayer-cdn.tcgplayer.com/product/232399_200w.jpg,3,2781,https://cpt.tcgcsv.com/_ZS2,2024-06-07T15:50:35.763,1,SV041/SV122,Shiny Holo Rare,Lightning,70,Basic,,[1] Slap (10),Fx2,None,2,2.25,3.09,12.47,3.03,3.14,Holofoil,[1L] Static Shock (20)
+232400,Toxtricity,Toxtricity,https://tcgplayer-cdn.tcgplayer.com/product/232400_200w.jpg,3,2781,https://cpt.tcgcsv.com/0-S2,2023-03-05T17:34:53.65,1,SV042/SV122,Shiny Holo Rare,Lightning,120,Stage 1,,"[2] Risk Taker
+<br>Flip a coin. If heads, discard the top 5 cards of your opponent's deck. If tails, discard the top 5 cards of your deck.",Fx2,None,2,0.35,1.17,25.89,0.96,0.98,Holofoil,"[1LL] Thunder Jolt (160)
+<br>This Pokémon does 30 damage to itself."
+232401,Pincurchin,Pincurchin,https://tcgplayer-cdn.tcgplayer.com/product/232401_200w.jpg,3,2781,https://cpt.tcgcsv.com/2-S2,2021-02-19T05:03:14.033,1,SV043/SV122,Shiny Holo Rare,Lightning,80,Basic,,"[LL] Sparking Needle (30x)
+<br>Flip 4 coins. This attack does 30 damage for each heads. If at least 2 of them are heads, your opponent's Active Pokemon is now Paralyzed.",Fx2,None,2,1.0,1.82,9.99,1.59,1.99,Holofoil,
+232403,Morpeko,Morpeko,https://tcgplayer-cdn.tcgplayer.com/product/232403_200w.jpg,3,2781,https://cpt.tcgcsv.com/5-S2,2021-06-15T12:15:58.373,1,SV044/SV122,Shiny Holo Rare,Lightning,80,Basic,,"[1] Torment (20)
+<br>Choose 1 of your opponent’s Active Pokemon’s attacks. The Defending Pokemon can’t use that attack during your opponent’s next turn.",Fx2,None,1,3.78,4.93,14.99,4.81,4.89,Holofoil,"[1L] Spark (50)
+<br>This attack does 20 damage to 1 of your opponent’s Benched Pokemon.<em> (Don’t apply Weakness and Resistance for Benched Pokemon.)</em>"
+232404,Dracozolt,Dracozolt,https://tcgplayer-cdn.tcgplayer.com/product/232404_200w.jpg,3,2781,https://cpt.tcgcsv.com/6-S2,2022-06-02T19:44:26.377,1,SV045/SV122,Shiny Holo Rare,Lightning,160,Stage 1,,"[L] Boosted Current (30)
+<Br>During your next turn, this Pokémon's Boosted Current attack does 90 more damage <em>(before applying Weakness and Resistance)</em>.",Fx2,None,4,1.0,2.1,8.99,2.12,4.98,Holofoil,"[4] Giga Impact (200)
+<br>During your next turn, this Pokémon can't attack."
+232405,Arctozolt,Arctozolt,https://tcgplayer-cdn.tcgplayer.com/product/232405_200w.jpg,3,2781,https://cpt.tcgcsv.com/7-S2,2022-03-23T20:11:01.487,1,SV046/SV122,Shiny Holo Rare,Lightning,130,Stage 1,"<strong>Ability — Biting Whirlpool</strong>
+<br>Whenever your opponent attaches an Energy card from their hand to 1 of their Pokémon, put 2 damage counters on that Pokémon.",[1L] Electro Ball (70),Fx2,None,2,2.0,3.4,8.8,3.39,4.04,Holofoil,
+232408,Galarian Ponyta,Galarian Ponyta,https://tcgplayer-cdn.tcgplayer.com/product/232408_200w.jpg,3,2781,https://cpt.tcgcsv.com/b-S2,2021-02-19T05:03:14.033,1,SV047/SV122,Shiny Holo Rare,Psychic,70,Basic,,"[P] Psy Bolt (10)
+<br>Flip a coin. If heads, your opponent's Active Pokemon is now Paralyzed.",Dx2,F-20,1,6.94,10.07,39.99,9.01,10.3,Holofoil,
+232410,Galarian Rapidash,Galarian Rapidash,https://tcgplayer-cdn.tcgplayer.com/product/232410_200w.jpg,3,2781,https://cpt.tcgcsv.com/d-S2,2023-06-16T18:05:34.62,1,SV048/SV122,Shiny Holo Rare,Psychic,100,Stage 1,"<strong>Ability — Pastel Veil</strong>
+<br>Each of your Pokemon can't be affected by any Special Conditions. Remove any Special Conditions affecting those Pokemon.","[1P] Psychic (30+)
+<br>This attack does 30 more damage times the amount of Energy attached to your opponent's Active Pokemon.",Dx2,F-30,1,4.87,6.15,42.0,5.92,7.81,Holofoil,
+232411,Galarian Corsola,Galarian Corsola,https://tcgplayer-cdn.tcgplayer.com/product/232411_200w.jpg,3,2781,https://cpt.tcgcsv.com/f-S2,2023-05-02T20:43:34.287,1,SV049/SV122,Shiny Holo Rare,Psychic,120,Basic,,"[P] Cursed Drop
+<br>Put 3 damage counters on your opponent's Pokemon in any way you like.",Dx2,F-30,2,1.23,1.89,7.99,1.66,2.51,Holofoil,
+232412,Galarian Cursola,Galarian Cursola,https://tcgplayer-cdn.tcgplayer.com/product/232412_200w.jpg,3,2781,https://cpt.tcgcsv.com/g-S2,2024-11-17T14:20:11.18,1,SV050/SV122,Shiny Holo Rare,Psychic,100,Stage 1,"<strong>Ability — Perish Body</strong>
+<br>If this Pokemon is in the Active Spot and is Knocked Out by damage from an opponent's attack, flip a coin. If heads, the Attacking Pokemon is Knocked Out.","[1P] Corner (60)
+<br>During your opponent's next turn, the Defending Pokemon can't retreat.",Dx2,F-30,2,1.0,1.75,8.97,1.65,2.25,Holofoil,
+232413,Dedenne,Dedenne,https://tcgplayer-cdn.tcgplayer.com/product/232413_200w.jpg,3,2781,https://cpt.tcgcsv.com/h-S2,2022-05-05T19:54:24.147,1,SV051/SV122,Shiny Holo Rare,Psychic,70,Basic,,"[2P] Mad Party (20x)
+<br>This attack does 20 damage times the number of Pokémon in your discard pile that have the Mad Party attack.",Mx2,None,1,0.99,2.02,13.48,1.79,2.3,Holofoil,
+232415,Sinistea,Sinistea,https://tcgplayer-cdn.tcgplayer.com/product/232415_200w.jpg,3,2781,https://cpt.tcgcsv.com/k-S2,2021-07-20T14:00:44,1,SV052/SV122,Shiny Holo Rare,Psychic,30,Basic,,"[1] Furtive Drop
+<br>Put 2 damage counters on your opponent's Active Pokémon.",Mx2,F-30,1,1.5,2.54,6.0,2.54,2.6,Holofoil,
+232416,Polteageist,Polteageist,https://tcgplayer-cdn.tcgplayer.com/product/232416_200w.jpg,3,2781,https://cpt.tcgcsv.com/l-S2,2025-02-07T20:14:18.323,1,SV053/SV122,Shiny Holo Rare,Psychic,60,Stage 1,"<strong>Ability — Tea Break</strong>
+<br>You must discard a Pokémon that has the Mad Party attack from your hand in order to use this Ability. Once during your turn, you may draw 2 cards.","[2] Mad Party (20x)
+<br>This attack does 20 damage times the number of Pokémon in your discard pile that have the Mad Party attack.",Mx2,F-30,1,0.49,1.05,9.99,0.92,,Holofoil,
+232417,Hatenna,Hatenna,https://tcgplayer-cdn.tcgplayer.com/product/232417_200w.jpg,3,2781,https://cpt.tcgcsv.com/m-S2,2021-06-15T12:12:53.56,1,SV054/SV122,Shiny Holo Rare,Psychic,60,Basic,,"[1] Find a Friend
+<br>Search your deck for a Pokemon, reveal it, and put it into your hand. Then, shuffle your deck.",Dx2,F-30,1,1.0,2.5,9.99,2.37,2.68,Holofoil,[2] Psychic Shot (20)
+232420,Hattrem,Hattrem,https://tcgplayer-cdn.tcgplayer.com/product/232420_200w.jpg,3,2781,https://cpt.tcgcsv.com/q-S2,2021-06-15T12:13:52.82,1,SV055/SV122,Shiny Holo Rare,Psychic,80,Stage 1,,"[1] Calm Mind
+<br>Heal 30 damage from this Pokemon.",Dx2,F-30,1,1.5,2.83,9.98,2.88,2.99,Holofoil,"[2] Brutal Swing (30+)
+<br>Flip a coin, If heads, this attack does 30 more damage."
+232421,Hatterene,Hatterene,https://tcgplayer-cdn.tcgplayer.com/product/232421_200w.jpg,3,2781,https://cpt.tcgcsv.com/r-S2,2024-12-06T15:21:53.577,1,SV056/SV122,Shiny Holo Rare,Psychic,150,Stage 2,"<strong>Ability — Mind Hat</strong>
+<br>Once during your turn, you may use this Ability. Each player discards a card from their hand. <em>(Your opponent discards first.)</em>","[P] Dripping Grudge
+<br>Put 1 counter on your opponent's Active Pokemon for each Pokemon in your discard pile.",Dx2,F-30,2,1.35,2.25,7.75,2.17,2.7,Holofoil,
+232422,Milcery,Milcery,https://tcgplayer-cdn.tcgplayer.com/product/232422_200w.jpg,3,2781,https://cpt.tcgcsv.com/s-S2,2021-02-19T05:03:14.033,1,SV057/SV122,Shiny Holo Rare,Psychic,50,Basic,,"[1] Aromatherapy
+<br>Heal 10 damage from each of your Pokemon.",Mx2,None,1,2.3,3.47,6.95,3.49,5.99,Holofoil,[1P] Tackle (20)
+232423,Alcremie,Alcremie,https://tcgplayer-cdn.tcgplayer.com/product/232423_200w.jpg,3,2781,https://cpt.tcgcsv.com/t-S2,2022-05-23T15:48:03.96,1,SV058/SV122,Shiny Holo Rare,Psychic,110,Basic,,"[1] Decorate 
+<br>Attach any number of basic Energy cards from your hand to your Pokemon in any way you like.",Mx2,None,1,2.5,3.6,6.69,3.61,4.72,Holofoil,"[1P] Draining Kiss (50)
+<br>Heal 30 damage from this Pokemon."
+232425,Indeedee,Indeedee,https://tcgplayer-cdn.tcgplayer.com/product/232425_200w.jpg,3,2781,https://cpt.tcgcsv.com/w-S2,2021-06-15T12:14:23.143,1,SV059/SV122,Shiny Holo Rare,Psychic,100,Basic,,"[1] Refresh Time
+<br>Heal 30 damage from to each of your Pokemon.",Dx2,F-30,1,1.19,1.84,7.5,1.79,1.66,Holofoil,"[1P] Psybeam (30)
+<br>Your opponent’s Active Pokemon is now Confused."
+232426,Dreepy,Dreepy,https://tcgplayer-cdn.tcgplayer.com/product/232426_200w.jpg,3,2781,https://cpt.tcgcsv.com/x-S2,2021-02-19T05:03:14.033,1,SV060/SV122,Shiny Holo Rare,Psychic,60,Basic,,"[P] Quick Attack (10)
+<br>Flip a coin. If heads, this attack does 10 more damage.",Dx2,F-30,1,3.0,4.69,12.0,4.69,6.23,Holofoil,
+232428,Drakloak,Drakloak,https://tcgplayer-cdn.tcgplayer.com/product/232428_200w.jpg,3,2781,https://cpt.tcgcsv.com/B-S2,2022-07-11T10:46:03.167,1,SV061/SV122,Shiny Holo Rare,Psychic,90,Stage 1,,"[1] Summon
+<br>Search your deck for a Dreepy and put it on your Bench. Then, shuffle your deck.",Dx2,F-30,1,2.49,3.28,12.74,3.28,4.67,Holofoil,[PP] Bite (40)
+232429,Dragapult,Dragapult,https://tcgplayer-cdn.tcgplayer.com/product/232429_200w.jpg,3,2781,https://cpt.tcgcsv.com/C-S2,2022-05-21T10:35:27.21,1,SV062/SV122,Shiny Holo Rare,Psychic,150,Stage 2,"<strong>Ability — Infiltrator</strong>
+<br>If any damage is done to this Pokemon by attacks, flip a coin. If heads, prevent that damage.","[PP] Phantom Force (120)
+<br>Put 3 damage counters on your opponent's Benched Pokemon in any way you like.",Dx2,F-30,0,1.1,2.0,50.0,1.73,2.49,Holofoil,
+232431,Galarian Farfetch'd,Galarian Farfetchd,https://tcgplayer-cdn.tcgplayer.com/product/232431_200w.jpg,3,2781,https://cpt.tcgcsv.com/F-S2,2025-04-26T02:18:41.057,1,SV063/SV122,Shiny Holo Rare,Fighting,80,Basic,,"[F] Rock Smash (10)
+<br>Flip a coin. If heads, this attack does 30 more damage.",Px2,None,1,1.15,2.15,3.99,2.1,2.5,Holofoil,[2] Pierce (30)
+232432,Galarian Sirfetch'd,Galarian Sirfetchd,https://tcgplayer-cdn.tcgplayer.com/product/232432_200w.jpg,3,2781,https://cpt.tcgcsv.com/G-S2,2022-05-16T17:23:41.82,1,SV064/SV122,Shiny Holo Rare,Fighting,130,Stage 1,,[F] Pierce (40),Px2,None,2,0.6,1.25,9.5,1.26,0.99,Holofoil,"[2F] Meteor Assault (180)
+<br>This Pokémon can't use Meteor Assault again until it leaves the Active Spot."
+232435,Galarian Yamask,Galarian Yamask,https://tcgplayer-cdn.tcgplayer.com/product/232435_200w.jpg,3,2781,https://cpt.tcgcsv.com/K-S2,2021-02-19T05:03:14.033,1,SV065/SV122,Shiny Holo Rare,Fighting,70,Basic,,"[2] Reckless Charge (50)
+<br>This Pokemon also does 30 damage to itself.",Gx2,None,2,0.5,1.64,6.0,1.61,2.04,Holofoil,
+232436,Galarian Runerigus,Galarian Runerigus,https://tcgplayer-cdn.tcgplayer.com/product/232436_200w.jpg,3,2781,https://cpt.tcgcsv.com/L-S2,2023-12-07T08:27:07.167,1,SV066/SV122,Shiny Holo Rare,Fighting,100,Stage 1,,"[2] Spreading Spite
+<br>For each damage counter on this Galarian Runerigus, put 2 damage counters on your opponent's Pokemon in any way you like.",Gx2,None,2,1.5,2.05,8.0,2.12,3.05,Holofoil,"[2F] Mad Hammer (120)
+<br>This Pokemon also does 30 damage to itself."
+232437,Rolycoly,Rolycoly,https://tcgplayer-cdn.tcgplayer.com/product/232437_200w.jpg,3,2781,https://cpt.tcgcsv.com/M-S2,2021-02-19T05:03:14.033,1,SV067/SV122,Shiny Holo Rare,Fighting,70,Basic,,[1] Ram (10),Gx2,None,2,0.9,1.49,7.0,1.3,1.8,Holofoil,
+232439,Carkol,Carkol,https://tcgplayer-cdn.tcgplayer.com/product/232439_200w.jpg,3,2781,https://cpt.tcgcsv.com/P-S2,2022-05-12T15:28:50.213,1,SV068/SV122,Shiny Holo Rare,Fighting,100,Stage 1,,[2] Ram (30),Gx2,None,3,0.89,1.72,9.99,1.66,2.34,Holofoil,[2F] Heat Stomp (60)
+232440,Coalossal,Coalossal,https://tcgplayer-cdn.tcgplayer.com/product/232440_200w.jpg,3,2781,https://cpt.tcgcsv.com/Q-S2,2021-06-09T12:23:42.61,1,SV069/SV122,Shiny Holo Rare,Fighting,160,Stage 2,"<strong>Ability —Tar Generator</strong>
+<br>Once during your turn, you may attach a Fire Energy card, a Fighting Energy card, or 1 of each from your discard pile to your Pokemon in any way you like.",[3F] Flaming Avalanche (130),Gx2,None,4,1.25,1.98,9.95,1.76,1.83,Holofoil,
+232441,Silicobra,Silicobra,https://tcgplayer-cdn.tcgplayer.com/product/232441_200w.jpg,3,2781,https://cpt.tcgcsv.com/R-S2,2021-02-19T05:03:14.033,1,SV070/SV122,Shiny Holo Rare,Fighting,80,Basic,,"[1] Sand Attack
+<br>If the Defending Pokemon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack doesn't happen.",Gx2,None,2,0.91,1.51,7.99,1.45,1.26,Holofoil,
+232442,Sandaconda,Sandaconda,https://tcgplayer-cdn.tcgplayer.com/product/232442_200w.jpg,3,2781,https://cpt.tcgcsv.com/S-S2,2021-02-19T05:03:14.033,1,SV071/SV122,Shiny Holo Rare,Fighting,140,Stage 1,,"[1] Coil (10)
+<br>During your next turn, this Pokemon's attacks do 120 more damage to your opponent's Active Pokemon <em>(before applying Weakness and Resistance)</em>.",Gx2,None,2,0.5,1.56,15.99,1.42,,Holofoil,[2F] Skull Bash (100)
+232444,Clobbopus,Clobbopus,https://tcgplayer-cdn.tcgplayer.com/product/232444_200w.jpg,3,2781,https://cpt.tcgcsv.com/V-S2,2021-10-14T13:50:16.373,1,SV072/SV122,Shiny Holo Rare,Fighting,60,Basic,,"[F] Bind (20)
+<br>Flip a coin. If heads, your opponent's Active Pokemon is now Paralyzed.",Px2,None,2,0.75,1.92,12.0,1.78,1.8,Holofoil,
+232445,Grapploct,Grapploct,https://tcgplayer-cdn.tcgplayer.com/product/232445_200w.jpg,3,2781,https://cpt.tcgcsv.com/W-S2,2021-06-09T12:29:52.74,1,SV073/SV122,Shiny Holo Rare,Fighting,310,Stage 1,,"[FF] Octolock
+<br>Until this Grapploct leaves the Active Spot, the Defending Pokemon's attacks cost Colorless Colorless more, and the Defending Pokemon can't retreat. This effect can't be applied more than once.",Px2,None,2,1.15,1.71,9.99,1.67,1.27,Holofoil,"[1FF] Tough Swing (130)
+<br>This attack's damage isn't affected by Resistance."
+232447,Falinks,Falinks,https://tcgplayer-cdn.tcgplayer.com/product/232447_200w.jpg,3,2781,https://cpt.tcgcsv.com/Z-S2,2021-06-09T12:27:17.22,1,SV074/SV122,Shiny Holo Rare,Fighting,90,Basic,,"[1] Call for Family 
+<br>Search your deck for up to 2 Basic Pokemon and put them onto your Bench. Then, shuffle your deck.",Px2,None,1,0.6,1.0,12.95,0.95,0.92,Holofoil,"[2] Team Attack (30x)
+<br>This attack does 30 damage for each of your Benched Pokemon that has “Falinks” in its name."
+232449,Stonjourner,Stonjourner,https://tcgplayer-cdn.tcgplayer.com/product/232449_200w.jpg,3,2781,https://cpt.tcgcsv.com/_-S2,2021-02-19T05:03:14.033,1,SV075/SV122,Shiny Holo Rare,Fighting,140,Basic,,[2F] Mega Kick (80),Gx2,None,4,0.5,1.36,8.99,1.34,1.16,Holofoil,"[3F] Power Press (120+)
+<br>If this Pokemon has at least 1 extra Energy attached <em>(in addition to this attack's cost)</em>, this attack does 60 more damage."
+232451,Koffing,Koffing,https://tcgplayer-cdn.tcgplayer.com/product/232451_200w.jpg,3,2781,https://cpt.tcgcsv.com/2_S2,2023-01-31T13:42:57.53,1,SV076/SV122,Shiny Holo Rare,Darkness,60,Basic,,[D] Suffocating Gas (10),Fx2,None,1,3.5,5.0,12.5,4.81,4.49,Holofoil,
+232452,Galarian Weezing,Galarian Weezing,https://tcgplayer-cdn.tcgplayer.com/product/232452_200w.jpg,3,2781,https://cpt.tcgcsv.com/3_S2,2024-03-26T18:53:14.973,1,SV077/SV122,Shiny Holo Rare,Darkness,130,Stage 1,"<strong>Ability — Neutralizing Gas</strong>
+<br>As long as this Pokemon is in the Active Spot, your opponent's Pokemon in play has no Abilities, except for Neutralizing Gas.","[D] Severe Poison
+<br>Your opponent's Active Pokemon is now Poisoned. Put 4 damage counters instead of 1 on that Pokemon during Pokemon Checkup.",Fx2,None,3,2.72,3.08,9.99,2.9,4.05,Holofoil,
+232454,Galarian Zigzagoon,Galarian Zigzagoon,https://tcgplayer-cdn.tcgplayer.com/product/232454_200w.jpg,3,2781,https://cpt.tcgcsv.com/6_S2,2021-12-22T17:31:14.623,1,SV078/SV122,Shiny Holo Rare,Darkness,70,Basic,"<strong>Ability — Tantrum Head</strong>
+<br>When you play this Pokemon from your hand onto your Bench during your turn, you may put 1 damage counter on 1 of your opponent's Pokemon.","[1D] Surprise Attack (30)
+<br>Flip a coin. If tails, this attack does nothing.",Gx2,None,1,0.95,1.5,15.99,1.35,1.55,Holofoil,
+232456,Galarian Linoone,Galarian Linoone,https://tcgplayer-cdn.tcgplayer.com/product/232456_200w.jpg,3,2781,https://cpt.tcgcsv.com/8_S2,2021-06-09T12:28:43.857,1,SV079/SV122,Shiny Holo Rare,Darkness,100,Stage 1,,"[D] Night Slash (20)
+<br>Switch this Pokemon with 1 of your Benched Pokemon.",Gx2,None,2,1.47,2.06,6.95,2.03,2.44,Holofoil,[2D] Hammer In (70)
+232457,Galarian Obstagoon,Galarian Obstagoon,https://tcgplayer-cdn.tcgplayer.com/product/232457_200w.jpg,3,2781,https://cpt.tcgcsv.com/9_S2,2021-06-25T16:02:15.457,1,SV080/SV122,Shiny Holo Rare,Darkness,100,Stage 1,"<strong>Ability — Untamed Shout</strong>
+<br>When you play this Pokemon from your hand to evolve 1 of your Pokemon during your turn, you may put 3 damage counters on 1 of your opponent's Pokemon.","[1D] Obstruct (90)
+<br>During your opponent's next turn, prevent all damage done to this Pokemon by attacks from Basic Pokemon.",Gx2,None,2,1.5,2.29,19.99,2.25,2.01,Holofoil,
+232460,Nickit,Nickit,https://tcgplayer-cdn.tcgplayer.com/product/232460_200w.jpg,3,2781,https://cpt.tcgcsv.com/d_S2,2022-01-18T16:24:33.863,1,SV081/SV122,Shiny Holo Rare,Darkness,70,Basic,,"[D] Instigate
+<br>Your opponent shuffles the cards in their hand without looking and puts them on the bottom of their deck. Then, your opponent draws 3 cards.",Gx2,None,1,1.0,2.0,4.99,1.9,1.55,Holofoil,
+232462,Thievul,Thievul,https://tcgplayer-cdn.tcgplayer.com/product/232462_200w.jpg,3,2781,https://cpt.tcgcsv.com/g_S2,2021-06-17T15:29:48.497,1,SV082/SV122,Shiny Holo Rare,Darkness,100,Stage 1,,[D] Thief (20),Gx2,None,1,0.57,1.76,11.95,1.76,2.02,Holofoil,[2D] Darkness Fang (90)
+232464,Impidimp,Impidimp,https://tcgplayer-cdn.tcgplayer.com/product/232464_200w.jpg,3,2781,https://cpt.tcgcsv.com/j_S2,2021-10-14T13:51:19.673,1,SV083/SV122,Shiny Holo Rare,Darkness,70,Basic,,[D] Beat (10),Gx2,None,1,1.19,1.87,19.98,1.78,2.49,Holofoil,[1D] Stampede (20)
+232465,Morgrem,Morgrem,https://tcgplayer-cdn.tcgplayer.com/product/232465_200w.jpg,3,2781,https://cpt.tcgcsv.com/k_S2,2021-02-19T05:03:14.033,1,SV084/SV122,Shiny Holo Rare,Darkness,90,Stage 1,,[D] Bite (30),Gx2,None,2,1.14,1.71,9.5,1.54,2.26,Holofoil,"[2D] False Surrender (60)
+<br>This damage isn’t affected by any effects on your opponent’s Active Pokemon."
+232466,Grimmsnarl,Grimmsnarl,https://tcgplayer-cdn.tcgplayer.com/product/232466_200w.jpg,3,2781,https://cpt.tcgcsv.com/l_S2,2021-07-25T19:43:59.84,1,SV085/SV122,Shiny Holo Rare,Darkness,170,Stage 2,"<strong>Ability — Dark Oath</strong>
+<br>As long as this Pokemon is in the Active Spot, your opponent's Active Pokemon's attacks cost Colorless more.","[2D] Energy Press (100+)
+<br>This attack does 30 more damage for each Energy attached to your opponent's Active Pokemon.",Gx2,None,3,0.99,2.0,19.99,2.04,2.56,Holofoil,
+232469,Galarian Meowth,Galarian Meowth,https://tcgplayer-cdn.tcgplayer.com/product/232469_200w.jpg,3,2781,https://cpt.tcgcsv.com/p_S2,2023-07-12T09:37:20.853,1,SV086/SV122,Shiny Holo Rare,Metal,70,Basic,"<strong>Ability — Evolution Roar</strong>
+<br>You must discard 2 cards from your hand in order to use this Ability. Once during your turn, you may search your deck for a Galarian Perrserker, reveal it, and put it into your hand. Then, shuffle your deck.",[1M] Scratch (20),Rx2,G-30,2,2.15,3.18,6.9,3.09,4.88,Holofoil,
+232471,Galarian Perrserker,Galarian Perrserker,https://tcgplayer-cdn.tcgplayer.com/product/232471_200w.jpg,3,2781,https://cpt.tcgcsv.com/r_S2,2022-03-11T18:58:49.64,1,SV087/SV122,Shiny Holo Rare,Metal,120,Stage 1,"<strong>Ability — Steely Spirit</strong>
+<br>Your Metal Pokemon's attacks do 20 more damage to your opponent's Active Pokemon <em>(before applying Weakness and Resistance)</em>.",[1MM] Metal Claw (70),Rx2,G-30,2,1.25,2.28,9.99,2.22,3.73,Holofoil,
+232472,Galarian Stunfisk,Galarian Stunfisk,https://tcgplayer-cdn.tcgplayer.com/product/232472_200w.jpg,3,2781,https://cpt.tcgcsv.com/s_S2,2021-10-14T13:51:06.217,1,SV088/SV122,Shiny Holo Rare,Metal,120,Basic,"<strong>Ability — Snap Trap</strong>
+<br>If this Pokemon is your Active Pokemon and is damaged by an opponent's attack <em>(even if this Pokemon is Knocked Out)</em>, discard an Energy attached to the Attacking Pokemon.","[1M] Damage Rush (30+)
+<br>Flip a coin until you get tails. This attack does 30 more damage for each heads.",Rx2,G-30,2,0.9,1.5,19.99,1.38,1.98,Holofoil,
+232473,Corviknight,Corviknight,https://tcgplayer-cdn.tcgplayer.com/product/232473_200w.jpg,3,2781,https://cpt.tcgcsv.com/t_S2,2025-02-07T20:14:18.527,1,SV089/SV122,Shiny Holo Rare,Colorless,160,Stage 2,"<strong>Ability — Flying Taxi</strong>
+<br>When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may put a Pokémon (excluding this Pokémon) and all cards attached to it into your hand.",[3] Blasting Wind (120),Lx2,F-30,2,0.75,1.25,9.99,1.06,,Holofoil,
+232474,Cufant,Cufant,https://tcgplayer-cdn.tcgplayer.com/product/232474_200w.jpg,3,2781,https://cpt.tcgcsv.com/v_S2,2022-09-06T14:55:05.77,1,SV090/SV122,Shiny Holo Rare,Metal,100,Basic,,[2M] Strength (60),Rx2,G-30,3,1.0,1.93,9.99,1.77,2.6,Holofoil,
+232476,Copperajah,Copperajah,https://tcgplayer-cdn.tcgplayer.com/product/232476_200w.jpg,3,2781,https://cpt.tcgcsv.com/x_S2,2022-08-28T03:59:35.87,1,SV091/SV122,Shiny Holo Rare,Metal,190,Stage 1,"<strong>Ability — Antibacterial Skin</strong>
+<br>This Pokémon can't be affected by any Special Conditions.","[2MM] Revenge Stompe (120+)
+<br>If your Benched Pokémon have any damage counters on them, this attack does 120 more damage.",Rx2,G-30,4,0.9,1.5,10.79,1.47,1.99,Holofoil,
+232477,Duraludon,Duraludon,https://tcgplayer-cdn.tcgplayer.com/product/232477_200w.jpg,3,2781,https://cpt.tcgcsv.com/z_S2,2025-02-12T04:47:03.163,1,SV092/SV122,Shiny Holo Rare,Metal,130,Basic,,"[1] Metal Sharpener (30)
+<br>Attach a Metal Energy card from your discard pile to 1 of your Pokemon.",Rx2,G-30,2,1.49,2.69,14.95,2.7,3.84,Holofoil,[1MM] Power Beam (110)
+232479,Minccino,Minccino,https://tcgplayer-cdn.tcgplayer.com/product/232479_200w.jpg,3,2781,https://cpt.tcgcsv.com/C_S2,2021-05-31T12:44:51.257,1,SV093/SV122,Shiny Holo Rare,Colorless,70,Basic,,"[1] Glance
+<br>Look at the top card of your opponent's deck.",Fx2,None,1,3.5,4.41,14.5,4.32,5.39,Holofoil,"[2] Tail Slap (20x)
+<br>Flip 2 coins. This attack does 20 damage for each heads."
+232480,Cinccino,Cinccino,https://tcgplayer-cdn.tcgplayer.com/product/232480_200w.jpg,3,2781,https://cpt.tcgcsv.com/D_S2,2022-11-19T15:39:24.643,1,SV094/SV122,Shiny Holo Rare,Colorless,90,Stage 1,"<strong>Ability — Make Do</strong>
+<br>You must discard a card from your hand in order to use this Ability. Once during your turn, you may draw 2 cards.","[1] Energy Assist (40)
+<br>Attach a basic Energy card from your discard pile to 1 of your Benched Pokemon.",Fx2,None,1,3.0,4.72,19.97,4.35,5.49,Holofoil,
+232482,Ducklett,Ducklett,https://tcgplayer-cdn.tcgplayer.com/product/232482_200w.jpg,3,2781,https://cpt.tcgcsv.com/G_S2,2021-02-19T05:03:14.033,1,SV095/SV122,Shiny Holo Rare,Colorless,50,Basic,,[1] Flap (20),Lx2,F-30,1,1.71,2.43,10.0,2.36,2.48,Holofoil,
+232483,Swanna,Swanna,https://tcgplayer-cdn.tcgplayer.com/product/232483_200w.jpg,3,2781,https://cpt.tcgcsv.com/H_S2,2021-02-19T05:03:14.033,1,SV096/SV122,Shiny Holo Rare,Colorless,110,Stage 1,"<strong>Ability — Sky Circus</strong>
+<br>If you played Bird Keeper from your hand during this turn, ignore all Energy in the attack cost of each of this Pokémon's attacks.","[3] Feather Slash (70+)
+<br>You may discard 1 card from your hand. If you do, this attack does 70 more damage.",Lx2,F-30,0,1.0,1.9,9.99,1.92,2.02,Holofoil,
+232485,Bunnelby,Bunnelby,https://tcgplayer-cdn.tcgplayer.com/product/232485_200w.jpg,3,2781,https://cpt.tcgcsv.com/K_S2,2025-02-07T20:14:18.643,1,SV097/SV122,Shiny Holo Rare,Colorless,40,Basic,,"[2] Mad Party (20x)
+<br>This attack does 20 damage times the number of Pokémon in your discard pile that have the Mad Party attack.",Fx2,None,1,0.5,1.0,9.99,0.95,,Holofoil,
+232486,Oranguru,Oranguru,https://tcgplayer-cdn.tcgplayer.com/product/232486_200w.jpg,3,2781,https://cpt.tcgcsv.com/L_S2,2024-02-09T14:03:12.553,1,SV098/SV122,Shiny Holo Rare,Colorless,120,Basic,"<strong>Ability — Monkey Wisdom</strong>
+<br>Once during your turn, you may switch a card from your hand with the top card of your deck.",[3] Whap Down (70),Fx2,None,2,0.99,1.6,11.11,1.53,1.74,Holofoil,
+232487,Skwovet,Skwovet,https://tcgplayer-cdn.tcgplayer.com/product/232487_200w.jpg,3,2781,https://cpt.tcgcsv.com/M_S2,2022-06-19T11:11:23.163,1,SV099/SV122,Shiny Holo Rare,Colorless,70,Basic,,[1] Tackle (10),Fx2,None,1,0.75,1.79,6.99,1.59,2.24,Holofoil,[2] Bite (20)
+232488,Greedent,Greedent,https://tcgplayer-cdn.tcgplayer.com/product/232488_200w.jpg,3,2781,https://cpt.tcgcsv.com/N_S2,2024-09-06T16:41:41.207,1,SV100/SV122,Shiny Holo Rare,Colorless,120,Stage 1,"<strong>Ability — Greedy Tail</strong>
+<br>Once during your turn, you may search your deck for a Pokemon Tool card, reveal it, and put it into your hand. Then, shuffle your deck.",[3] Tail Smack (80),Fx2,None,1,0.98,1.87,9.99,1.82,2.27,Holofoil,
+232489,Rookidee,Rookidee,https://tcgplayer-cdn.tcgplayer.com/product/232489_200w.jpg,3,2781,https://cpt.tcgcsv.com/P_S2,2021-02-19T05:03:14.033,1,SV101/SV122,Shiny Holo Rare,Colorless,60,Basic,,[1] Flap (10),Lx2,F-30,1,1.2,2.04,14.99,1.99,2.27,Holofoil,[2] Glide (30)
+232491,Corvisquire,Corvisquire,https://tcgplayer-cdn.tcgplayer.com/product/232491_200w.jpg,3,2781,https://cpt.tcgcsv.com/R_S2,2021-05-20T15:30:48.153,1,SV102/SV122,Shiny Holo Rare,Colorless,80,Stage 1,,"[1] Pluck (20)
+<br>Before doing damage, discard all Pokemon Tool cards from your opponent's Active Pokemon.",Lx2,F-30,1,1.0,1.85,9.99,1.65,1.74,Holofoil,[2] Drill Peck (50)
+232492,Wooloo,Wooloo,https://tcgplayer-cdn.tcgplayer.com/product/232492_200w.jpg,3,2781,https://cpt.tcgcsv.com/S_S2,2021-02-19T05:03:14.033,1,SV103/SV122,Shiny Holo Rare,Colorless,70,Basic,,"[2] Expand (30)
+<br>During your opponent's next turn, this Pokemon takes 10 less damage from attacks <em>(after applying Weakness and Resistance)</em>.",Fx2,None,1,1.0,2.05,13.68,1.95,3.22,Holofoil,
+232493,Dubwool,Dubwool,https://tcgplayer-cdn.tcgplayer.com/product/232493_200w.jpg,3,2781,https://cpt.tcgcsv.com/T_S2,2022-10-26T17:20:02.987,1,SV104/SV122,Shiny Holo Rare,Colorless,130,Stage 1,,"[1] Cotton Guard (30)
+<br>During your opponent's next turn, this Pokemon takes 30 less damage from attacks <em>(after applying Weakness and Resistance)</em>.",Fx2,None,2,1.0,1.49,9.45,1.31,,Holofoil,"[3] Double-Edge (120)
+<br>This Pokemon also does 30 damage to itself."
+232494,Rillaboom V,Rillaboom V,https://tcgplayer-cdn.tcgplayer.com/product/232494_200w.jpg,3,2781,https://cpt.tcgcsv.com/V_S2,2023-06-21T18:04:38.87,1,SV105/SV122,Shiny Holo Rare,Grass,220,Basic,,"[G] Forest Feast
+<br>Search your deck for up to 2 Basic Grass Pokemon and put them onto your Bench. Then, shuffle your deck.",Rx2,None,3,0.6,1.49,14.99,1.22,0.94,Holofoil,"[1GGG] Wood Hammer (220)
+<br>This Pokemon also does 30 damage to itself."
+232495,Rillaboom VMAX,Rillaboom VMAX,https://tcgplayer-cdn.tcgplayer.com/product/232495_200w.jpg,3,2781,https://cpt.tcgcsv.com/W_S2,2024-08-14T15:47:39.757,1,SV106/SV122,Shiny Holo Rare,Grass,330,VMAX,,[1] Scratch (50),Rx2,None,3,1.0,2.3,11.0,1.76,2.98,Holofoil,"[1GGG] Max Beating (130+)
+<br>You may discard up to 3 Grass Energy from this Pokemon. If you do, this attack does 50 more damage for each card you discarded in this way."
+232496,Charizard VMAX,Charizard VMAX,https://tcgplayer-cdn.tcgplayer.com/product/232496_200w.jpg,3,2781,https://cpt.tcgcsv.com/X_S2,2023-06-14T20:03:48.51,1,SV107/SV122,Shiny Holo Rare,Fire,330,VMAX,,[3] Claw Slash (100),Wx2,None,3,152.16,200.0,349.95,158.22,177.68,Holofoil,"[2RRR] G-Max Wildfire (300)
+<br>Discard 2 Energy from this Pokémon."
+232498,Centiskorch V,Centiskorch V,https://tcgplayer-cdn.tcgplayer.com/product/232498_200w.jpg,3,2781,https://cpt.tcgcsv.com/-_S2,2025-02-07T20:14:18.703,1,SV108/SV122,Shiny Holo Rare,Fire,210,Basic,,"[R] Heat Radiation (20)
+<br>You may discard an Energy from this Pokémon. If you do, discard an Energy attached to your opponent's Active Pokémon.",Wx2,None,3,0.75,1.5,25.99,1.28,1.98,Holofoil,[RRRR] Burning Train (180)
+232500,Centiskorch VMAX,Centiskorch VMAX,https://tcgplayer-cdn.tcgplayer.com/product/232500_200w.jpg,3,2781,https://cpt.tcgcsv.com/00T2,2021-11-26T22:14:59.567,1,SV109/SV122,Shiny Holo Rare,Fire,320,VMAX,,"[2] G-Max Centiferno (40+)
+<br>This attack does 40 more damage for each Fire Energy attached to this Pokémon. Then, you may attach a Fire Energy from your discard pile to this Pokémon.",Wx2,None,3,1.41,2.34,9.69,2.12,3.49,Holofoil,
+232501,Lapras V,Lapras V,https://tcgplayer-cdn.tcgplayer.com/product/232501_200w.jpg,3,2781,https://cpt.tcgcsv.com/20T2,2025-01-17T06:26:51,1,SV110/SV122,Shiny Holo Rare,Water,210,Basic,,"[1] Body Surf
+<br>Attach a Water Energy card from your hand to this Pokemon. If you do, switch it with 1 of your Benched Pokemon.",Lx2,None,2,2.73,3.99,20.0,3.61,3.8,Holofoil,"[1WWW] Ocean Loop (210)
+<br>Put 2 Water Energy attached to this Pokemon into your hand."
+232502,Lapras VMAX,Lapras VMAX,https://tcgplayer-cdn.tcgplayer.com/product/232502_200w.jpg,3,2781,https://cpt.tcgcsv.com/30T2,2022-05-13T08:55:35.137,1,SV111/SV122,Shiny Holo Rare,Water,320,Gigantamax,,"[3] G-Max Pump (90+)
+<br>This attack does 30 more damage for each Water Energy attached to this Pokemon.",Lx2,None,3,4.43,6.12,63.99,5.29,7.19,Holofoil,
+232504,Toxtricity V,Toxtricity V,https://tcgplayer-cdn.tcgplayer.com/product/232504_200w.jpg,3,2781,https://cpt.tcgcsv.com/60T2,2024-08-06T10:19:24.073,1,SV112/SV122,Shiny Holo Rare,Lightning,210,Basic,,"[L] Poison Jab (20)
+<br>Your opponent's Active Pokemon is now Poisoned.",Fx2,None,2,0.5,1.49,14.99,1.23,0.75,Holofoil,"[1LL] Electric Riot (90+)
+<br>If your opponent's Active Pokemon is Poisoned, this attack does 90 more damage."
+232506,Toxtricity VMAX,Toxtricity VMAX,https://tcgplayer-cdn.tcgplayer.com/product/232506_200w.jpg,3,2781,https://cpt.tcgcsv.com/80T2,2023-02-12T21:17:28.95,1,SV113/SV122,Shiny Holo Rare,Lightning,320,VMAX,,"[1LL] G-Max Riot (160+)
+<br>If your opponent's Active Pokemon is Poisoned, this attack does 80 more damage.",Fx2,None,2,2.2,3.25,29.95,2.83,4.19,Holofoil,
+232507,Indeedee V,Indeedee V,https://tcgplayer-cdn.tcgplayer.com/product/232507_200w.jpg,3,2781,https://cpt.tcgcsv.com/90T2,2025-02-07T20:14:18.74,1,SV114/SV122,Shiny Holo Rare,Psychic,180,Basic,"<strong>Ability — Watch Over</strong>
+<br>Once during your turn, you may heal 20 damage from your Active Pokemon.","[2P] Psychic (10+)
+<br>This attack does 60 more damage for each Energy attached to your opponent's Active Pokemon.",Dx2,F-30,2,0.49,1.04,14.95,0.88,,Holofoil,
+232508,Falinks V,Falinks V,https://tcgplayer-cdn.tcgplayer.com/product/232508_200w.jpg,3,2781,https://cpt.tcgcsv.com/b0T2,2025-02-07T20:14:18.787,1,SV115/SV122,Shiny Holo Rare,Fighting,160,Basic,"<strong>Ability — Iron Defense Formation</strong>
+<br>All of your Pokemon that have ""Falinks"" in their name take 20 less damage from your opponent's attacks <em>(after applying Weakness and Resistance)</em>.","[1FF] Giga Impact (210)
+<br>During your next turn, this Pokemon can't attack.",Px2,None,2,0.8,1.39,12.99,1.13,,Holofoil,
+232510,Grimmsnarl V,Grimmsnarl V,https://tcgplayer-cdn.tcgplayer.com/product/232510_200w.jpg,3,2781,https://cpt.tcgcsv.com/d0T2,2024-09-14T13:42:03.24,1,SV116/SV122,Shiny Holo Rare,Darkness,220,Basic,,[D] Bite (40),Gx2,None,2,0.5,1.5,20.0,1.23,1.2,Holofoil,"[DDD] Spiky Knuckle (200)
+<br>Put 2 Darkness Energy attached to this Pokémon into your hand."
+232511,Grimmsnarl VMAX,Grimmsnarl VMAX,https://tcgplayer-cdn.tcgplayer.com/product/232511_200w.jpg,3,2781,https://cpt.tcgcsv.com/f0T2,2021-11-04T15:30:42.913,1,SV117/SV122,Shiny Holo Rare,Darkness,330,VMAX,,"[DDD] G-Max Drill
+<br>This attack does 50 more damage for each extra Darkness Energy attached to this Pokémon (in addition to this attack's cost). You can't add more than 100 damage in this way.",Gx2,None,3,2.99,3.72,40.99,3.56,4.48,Holofoil,
+232513,Ditto V,Ditto V,https://tcgplayer-cdn.tcgplayer.com/product/232513_200w.jpg,3,2781,https://cpt.tcgcsv.com/h0T2,2022-11-29T09:02:41.017,1,SV118/SV122,Shiny Holo Rare,Colorless,170,Basic,"<strong>Ability — V Transformation</strong>
+<br>Once per turn, you may choose a Basic Pokemon V from your discard pile and switch it with this Pokemon. Any attacked cards, damaged counters, Special Condition, turns in play, and any other effects remain on the new Pokemon.","[1] Stick On
+<br>Attach a basic Energy card from your discard pile to this Pokemon.",Fx2,None,2,2.96,4.11,19.99,3.64,5.39,Holofoil,
+232514,Ditto VMAX,Ditto VMAX,https://tcgplayer-cdn.tcgplayer.com/product/232514_200w.jpg,3,2781,https://cpt.tcgcsv.com/j0T2,2022-05-11T19:37:07.28,1,SV119/SV122,Shiny Holo Rare,Colorless,320,VMAX,,"[3] Max Transform
+<br>Choose 1 of your opponent's Active Pokemon's attacks and use it as this attack.",Fx2,None,3,7.0,8.99,39.99,8.39,,Holofoil,
+232516,Dubwool V,Dubwool V,https://tcgplayer-cdn.tcgplayer.com/product/232516_200w.jpg,3,2781,https://cpt.tcgcsv.com/l0T2,2022-05-13T15:38:53.577,1,SV120/SV122,Shiny Holo Rare,Colorless,210,Basic,"<strong>Ability — Soft Wool</strong>
+<br>This Pokemon takes 30 less damage from attacks <em>(after applying Weakness and Resistance)</em>.","[3] Revenge Blast (120+)
+<br>This attack does 30 damage for each Prize card your opponent has taken.",Fx2,None,2,0.48,1.25,9.99,1.09,,Holofoil,
+232517,Eternatus V,Eternatus V,https://tcgplayer-cdn.tcgplayer.com/product/232517_200w.jpg,3,2781,https://cpt.tcgcsv.com/m0T2,2023-07-03T15:29:29.8,1,SV121/SV122,Shiny Holo Rare,Darkness,220,Basic,,"[1] Power Accelerator (30)
+<br>You may attach a Darkness Energy card from your hand to 1 of your Benched Pokémon.",Fx2,None,2,3.25,4.99,29.99,4.89,5.97,Holofoil,"[3D] Dynamax Cannon (120+)
+<br>If your opponent's Active Pokémon is a Pokémon VMAX, this attack does 120 more damage."
+232518,Eternatus VMAX,Eternatus VMAX,https://tcgplayer-cdn.tcgplayer.com/product/232518_200w.jpg,3,2781,https://cpt.tcgcsv.com/n0T2,2021-10-06T12:56:05.103,1,SV122/SV122,Shiny Holo Rare,Darkness,340,VMAX,"<strong>Ability — Eternal Zone</strong>
+<br>If all of your Pokémon in play are Darkness type, you can have up to 8 Pokémon on your Bench and you can't put non-Darkness Pokémon into play. <em>(If this Ability stops working, discard Pokémon from your Bench until you have 5.)</em>","[1D] Dread End (30x)
+<br>This attack does 30 damage for each of your Darkness Pokémon in play.",Fx2,None,3,4.0,5.72,99.99,5.47,8.46,Holofoil,
+232521,Arctovish,Arctovish,https://tcgplayer-cdn.tcgplayer.com/product/232521_200w.jpg,3,2781,https://cpt.tcgcsv.com/r0T2,2023-01-08T12:28:01.793,1,SV037/SV122,Shiny Holo Rare,Water,150,Stage 1,,"[2W] Hard Face (90)
+<br>During your opponent's next turn, this Pokémon takes 60 less damage from attacks <em>(after applying Weakness and Resistance)</em>.",Lx2,None,2,0.99,1.96,11.95,1.92,2.51,Holofoil,"[3W] Cold Breath (130)
+<br>Your opponent's Active Pokémon is now Asleep."
