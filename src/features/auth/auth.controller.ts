@@ -14,7 +14,7 @@ export class AuthController {
         {
           success: true,
           message:
-            "Registration successful. Please check your email to verify your account.",
+            "Đăng ký thành công. Vui lòng kiểm tra email để lấy mã OTP xác thực tài khoản.",
           user: user.toJSON(),
         },
         201
@@ -43,14 +43,39 @@ export class AuthController {
     }
   };
 
-  verifyEmail = async (c: Context) => {
+  verifyEmailWithOTP = async (c: Context) => {
     try {
-      const { token } = c.req.query();
-      await this.authService.verifyEmail(token);
-      return c.json({ message: "Email verified successfully" });
+      const { email, otp } = c.get("validatedData");
+      await this.authService.verifyEmailWithOTP(email, otp);
+      return c.json({ 
+        success: true,
+        message: "Xác thực email thành công" 
+      });
     } catch (error: any) {
       return c.json(
-        { error: error?.message || "Email verification failed" },
+        { 
+          success: false,
+          error: error?.message || "Xác thực email thất bại" 
+        },
+        400
+      );
+    }
+  };
+
+  resendEmailVerificationOTP = async (c: Context) => {
+    try {
+      const { email } = c.get("validatedData");
+      await this.authService.resendEmailVerificationOTP(email);
+      return c.json({ 
+        success: true,
+        message: "Mã OTP mới đã được gửi đến email của bạn" 
+      });
+    } catch (error: any) {
+      return c.json(
+        { 
+          success: false,
+          error: error?.message || "Không thể gửi lại mã OTP" 
+        },
         400
       );
     }
@@ -61,23 +86,30 @@ export class AuthController {
       const { email } = c.get("validatedData");
       await this.authService.forgotPassword(email);
       return c.json({
-        message:
-          "If the email exists, password reset instructions have been sent",
+        success: true,
+        message: "Nếu email tồn tại, mã OTP đã được gửi đến hộp thư của bạn",
       });
     } catch (error: any) {
-      return c.json({ error: "Failed to process request" }, 400);
+      return c.json({ 
+        success: false, 
+        error: "Không thể xử lý yêu cầu" 
+      }, 400);
     }
   };
 
-  resetPassword = async (c: Context) => {
+  resetPasswordWithOTP = async (c: Context) => {
     try {
-      const { token, newPassword } = c.get("validatedData");
-      await this.authService.resetPassword(token, newPassword);
-      return c.json({ message: "Password reset successful" });
+      const { email, otp, newPassword } = c.get("validatedData");
+      await this.authService.resetPasswordWithOTP(email, otp, newPassword);
+      return c.json({ 
+        success: true,
+        message: "Đặt lại mật khẩu thành công" 
+      });
     } catch (error: any) {
       return c.json(
         {
-          error: error?.message || "Password reset failed",
+          success: false,
+          error: error?.message || "Đặt lại mật khẩu thất bại",
         },
         400
       );

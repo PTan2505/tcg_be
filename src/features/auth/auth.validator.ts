@@ -30,12 +30,28 @@ export const forgotPasswordSchema = z.object({
   email: z.string().email(),
 });
 
+export const emailOTPSchema = z.object({
+  email: z.string().email(),
+  otp: z
+    .string()
+    .length(6, "OTP must be exactly 6 digits")
+    .regex(/^\d{6}$/, "OTP must contain only numbers"),
+});
+
+export const resendOTPSchema = z.object({
+  email: z.string().email(),
+});
+
 export const refreshTokenSchema = z.object({
   refreshToken: z.string(),
 });
 
-export const resetPasswordSchema = z.object({
-  token: z.string(),
+export const resetPasswordWithOTPSchema = z.object({
+  email: z.string().email(),
+  otp: z
+    .string()
+    .length(6, "OTP must be exactly 6 digits")
+    .regex(/^\d{6}$/, "OTP must contain only numbers"),
   newPassword: z
     .string()
     .min(8)

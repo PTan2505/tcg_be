@@ -134,10 +134,14 @@ export const swaggerDoc: OpenAPIV3.Document = {
                 schema: {
                   type: "object",
                   properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
                     message: {
                       type: "string",
                       example:
-                        "Registration successful. Please check your email to verify your account.",
+                        "Đăng ký thành công. Vui lòng kiểm tra email để lấy mã OTP xác thực tài khoản.",
                     },
                     user: {
                       $ref: "#/components/schemas/User",
@@ -195,13 +199,22 @@ export const swaggerDoc: OpenAPIV3.Document = {
                 schema: {
                   type: "object",
                   properties: {
-                    accessToken: {
-                      type: "string",
-                      description: "JWT access token",
+                    success: {
+                      type: "boolean",
+                      example: true,
                     },
-                    refreshToken: {
-                      type: "string",
-                      description: "JWT refresh token",
+                    data: {
+                      type: "object",
+                      properties: {
+                        accessToken: {
+                          type: "string",
+                          description: "JWT access token",
+                        },
+                        refreshToken: {
+                          type: "string",
+                          description: "JWT refresh token",
+                        },
+                      },
                     },
                   },
                 },
@@ -221,21 +234,35 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/auth/verify-email": {
-      get: {
+    "/auth/verify-email-otp": {
+      post: {
         tags: ["Authentication"],
-        summary: "Verify email address",
-        parameters: [
-          {
-            in: "query",
-            name: "token",
-            required: true,
-            schema: {
-              type: "string",
+        summary: "Verify email address using HOTP code",
+        description: "Verify user email using HMAC-based One-Time Password (HOTP) received via email",
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                required: ["email", "otp"],
+                properties: {
+                  email: {
+                    type: "string",
+                    format: "email",
+                    description: "User's email address",
+                  },
+                  otp: {
+                    type: "string",
+                    pattern: "^\\d{6}$",
+                    description: "6-digit HOTP code received via email",
+                    example: "123456",
+                  },
+                },
+              },
             },
-            description: "Email verification token",
           },
-        ],
+        },
         responses: {
           "200": {
             description: "Email verified successfully",
@@ -244,9 +271,13 @@ export const swaggerDoc: OpenAPIV3.Document = {
                 schema: {
                   type: "object",
                   properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
                     message: {
                       type: "string",
-                      example: "Email verified successfully",
+                      example: "Xác thực email thành công",
                     },
                   },
                 },
@@ -254,11 +285,21 @@ export const swaggerDoc: OpenAPIV3.Document = {
             },
           },
           "400": {
-            description: "Invalid verification token",
+            description: "Invalid OTP code or expired",
             content: {
               "application/json": {
                 schema: {
-                  $ref: "#/components/schemas/Error",
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: false,
+                    },
+                    error: {
+                      type: "string",
+                      example: "Invalid OTP code",
+                    },
+                  },
                 },
               },
             },
@@ -266,10 +307,11 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/auth/forgot-password": {
+    "/auth/resend-verification-otp": {
       post: {
         tags: ["Authentication"],
-        summary: "Request password reset",
+        summary: "Resend email verification HOTP",
+        description: "Request a new HOTP code for email verification",
         requestBody: {
           required: true,
           content: {
@@ -290,16 +332,86 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
         responses: {
           "200": {
-            description: "Reset instructions sent (if email exists)",
+            description: "New OTP sent successfully",
             content: {
               "application/json": {
                 schema: {
                   type: "object",
                   properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
                     message: {
                       type: "string",
-                      example:
-                        "If the email exists, password reset instructions have been sent",
+                      example: "Mã OTP mới đã được gửi đến email của bạn",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "400": {
+            description: "Invalid email or already verified",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: false,
+                    },
+                    error: {
+                      type: "string",
+                      example: "Email already verified",
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/auth/forgot-password": {
+      post: {
+        tags: ["Authentication"],
+        summary: "Request password reset HOTP",
+        description: "Send HMAC-based One-Time Password (HOTP) to user's email for password reset",
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                required: ["email"],
+                properties: {
+                  email: {
+                    type: "string",
+                    format: "email",
+                    description: "User's email address",
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "200": {
+            description: "Reset HOTP sent (if email exists)",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    message: {
+                      type: "string",
+                      example: "Nếu email tồn tại, mã OTP đã được gửi đến hộp thư của bạn",
                     },
                   },
                 },
@@ -311,7 +423,17 @@ export const swaggerDoc: OpenAPIV3.Document = {
             content: {
               "application/json": {
                 schema: {
-                  $ref: "#/components/schemas/Error",
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: false,
+                    },
+                    error: {
+                      type: "string",
+                      example: "Không thể xử lý yêu cầu",
+                    },
+                  },
                 },
               },
             },
@@ -400,21 +522,29 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/auth/reset-password": {
+    "/auth/reset-password-otp": {
       post: {
         tags: ["Authentication"],
-        summary: "Reset password using token",
+        summary: "Reset password using HOTP code",
+        description: "Reset user password using HMAC-based One-Time Password (HOTP) received via email",
         requestBody: {
           required: true,
           content: {
             "application/json": {
               schema: {
                 type: "object",
-                required: ["token", "newPassword"],
+                required: ["email", "otp", "newPassword"],
                 properties: {
-                  token: {
+                  email: {
                     type: "string",
-                    description: "Password reset token received via email",
+                    format: "email",
+                    description: "User's email address",
+                  },
+                  otp: {
+                    type: "string",
+                    pattern: "^\\d{6}$",
+                    description: "6-digit HOTP code received via email",
+                    example: "123456",
                   },
                   newPassword: {
                     type: "string",
@@ -437,9 +567,13 @@ export const swaggerDoc: OpenAPIV3.Document = {
                 schema: {
                   type: "object",
                   properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
                     message: {
                       type: "string",
-                      example: "Password reset successful",
+                      example: "Đặt lại mật khẩu thành công",
                     },
                   },
                 },
@@ -447,11 +581,21 @@ export const swaggerDoc: OpenAPIV3.Document = {
             },
           },
           "400": {
-            description: "Invalid input or token",
+            description: "Invalid OTP, expired, or invalid password",
             content: {
               "application/json": {
                 schema: {
-                  $ref: "#/components/schemas/Error",
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: false,
+                    },
+                    error: {
+                      type: "string",
+                      example: "Invalid OTP code",
+                    },
+                  },
                 },
               },
             },
@@ -4131,6 +4275,97 @@ export const swaggerDoc: OpenAPIV3.Document = {
           friendshipId: { type: "string", description: "Friendship ID" },
           friendsSince: { type: "string", format: "date-time" },
         },
+      },
+      EmailVerificationOTP: {
+        type: "object",
+        required: ["email", "otp"],
+        properties: {
+          email: {
+            type: "string",
+            format: "email",
+            description: "User's email address",
+            example: "user@example.com",
+          },
+          otp: {
+            type: "string",
+            pattern: "^\\d{6}$",
+            description: "6-digit HOTP code received via email",
+            example: "123456",
+          },
+        },
+        description: "Email verification using HMAC-based One-Time Password",
+      },
+      ResendOTP: {
+        type: "object",
+        required: ["email"],
+        properties: {
+          email: {
+            type: "string",
+            format: "email",
+            description: "User's email address to resend OTP",
+            example: "user@example.com",
+          },
+        },
+        description: "Request to resend HOTP code",
+      },
+      PasswordResetOTP: {
+        type: "object",
+        required: ["email", "otp", "newPassword"],
+        properties: {
+          email: {
+            type: "string",
+            format: "email",
+            description: "User's email address",
+            example: "user@example.com",
+          },
+          otp: {
+            type: "string",
+            pattern: "^\\d{6}$",
+            description: "6-digit HOTP code received via email",
+            example: "123456",
+          },
+          newPassword: {
+            type: "string",
+            format: "password",
+            minLength: 8,
+            pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)",
+            description: "New password (must contain uppercase, lowercase, and number)",
+            example: "NewSecurePass123",
+          },
+        },
+        description: "Password reset using HMAC-based One-Time Password",
+      },
+      HOTPResponse: {
+        type: "object",
+        properties: {
+          success: {
+            type: "boolean",
+            description: "Operation success status",
+            example: true,
+          },
+          message: {
+            type: "string",
+            description: "Success message in Vietnamese",
+            example: "Xác thực email thành công",
+          },
+        },
+        description: "Standard HOTP operation response",
+      },
+      HOTPError: {
+        type: "object",
+        properties: {
+          success: {
+            type: "boolean",
+            description: "Operation success status",
+            example: false,
+          },
+          error: {
+            type: "string",
+            description: "Error message in Vietnamese",
+            example: "Invalid OTP code",
+          },
+        },
+        description: "HOTP operation error response",
       },
     },
   },
