@@ -1,8 +1,8 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import UserModel, { User } from "../../database/models/user";
+import { IEmailService } from "../../shared/email.service";
 import { AuthTokens, LoginDTO, RegisterDTO } from "./auth.types";
-import { IEmailService } from "./email.service";
 
 import { Document } from "mongoose";
 
@@ -52,10 +52,20 @@ export class AuthService implements IAuthService {
 
   async register(data: RegisterDTO): Promise<Document & User> {
     // Check if user exists
-    const existingUser = await UserModel.findOne({ email: data.email }).exec();
+    const existingUser = await UserModel.findOne({ 
+      $or: [
+        { email: data.email },
+        { username: data.username }
+      ]
+    }).exec();
 
     if (existingUser) {
-      throw new Error("User already exists");
+      if (existingUser.email === data.email) {
+        throw new Error("Email already exists");
+      }
+      if (existingUser.username === data.username) {
+        throw new Error("Username already exists");
+      }
     }
 
     // Hash password
@@ -65,6 +75,7 @@ export class AuthService implements IAuthService {
     // Prepare user data
     const userData = {
       email: data.email,
+      username: data.username,
       password: hashedPassword,
       firstName: data.firstName,
       lastName: data.lastName,

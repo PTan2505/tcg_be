@@ -20,3 +20,15 @@ export const changePasswordSchema = z.object({
       "Password must contain at least one uppercase letter, one lowercase letter, and one number"
     ),
 });
+
+export const friendshipActionSchema = z.object({
+  action: z.enum(['accept', 'decline'])
+});
+
+export const sendFriendRequestSchema = z.object({
+  userId: z.string().min(1, "User ID is required")
+});
+
+export const blockUserSchema = z.object({
+  userId: z.string().min(1, "User ID is required")
+});
