@@ -1,0 +1,144 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extWeakness,extResistance,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extCardText,extAttack2
+97047,Team Magma's Numel,Team Magmas Numel,https://tcgplayer-cdn.tcgplayer.com/product/97047_200w.jpg,3,1525,https://cpt.tcgcsv.com/ZQN,2022-12-14T16:22:07.26,1,1/34,Common,Fire,70,Basic,"[1R] Ember (30)
+<br>Discard an Energy attached to this Pokemon.",Wx2,None,2,0.49,0.65,1.49,0.85,,Normal,,
+97047,Team Magma's Numel,Team Magmas Numel,https://tcgplayer-cdn.tcgplayer.com/product/97047_200w.jpg,3,1525,https://cpt.tcgcsv.com/ZQN,2022-12-14T16:22:07.26,1,1/34,Common,Fire,70,Basic,"[1R] Ember (30)
+<br>Discard an Energy attached to this Pokemon.",Wx2,None,2,3.0,3.11,3.29,3.29,,Reverse Holofoil,,
+97048,Team Magma's Camerupt,Team Magmas Camerupt,https://tcgplayer-cdn.tcgplayer.com/product/97048_200w.jpg,3,1525,https://cpt.tcgcsv.com/-QN,2022-12-14T16:22:14.043,1,2/34,Holo Rare,Fire,110,Basic,"[2R] Flame Ball (60)
+<br>Move a basic Energy from this Pokemon to 1 of your Benched Pokemon.",Wx2,None,3,0.55,1.0,4.99,1.13,,Holofoil,"<b>Ability</b> Burn Draft
+<br>Once during your turn <em>(before you attack)</em>, you may attach either a Fire or Fighting Energy from your discard pile to this Pokemon.",
+97048,Team Magma's Camerupt,Team Magmas Camerupt,https://tcgplayer-cdn.tcgplayer.com/product/97048_200w.jpg,3,1525,https://cpt.tcgcsv.com/-QN,2022-12-14T16:22:14.043,1,2/34,Holo Rare,Fire,110,Basic,"[2R] Flame Ball (60)
+<br>Move a basic Energy from this Pokemon to 1 of your Benched Pokemon.",Wx2,None,3,1.0,1.07,2.74,2.55,,Reverse Holofoil,"<b>Ability</b> Burn Draft
+<br>Once during your turn <em>(before you attack)</em>, you may attach either a Fire or Fighting Energy from your discard pile to this Pokemon.",
+97049,Team Aqua's Spheal,Team Aquas Spheal,https://tcgplayer-cdn.tcgplayer.com/product/97049_200w.jpg,3,1525,https://cpt.tcgcsv.com/_QN,2024-02-16T09:57:13.84,1,3/34,Common,Water,60,Basic,[W] Water Gun (10),Mx2,None,2,1.08,1.26,2.05,1.73,1.24,Normal,,
+97049,Team Aqua's Spheal,Team Aquas Spheal,https://tcgplayer-cdn.tcgplayer.com/product/97049_200w.jpg,3,1525,https://cpt.tcgcsv.com/_QN,2024-02-16T09:57:13.84,1,3/34,Common,Water,60,Basic,[W] Water Gun (10),Mx2,None,2,3.49,4.99,10.5,9.16,,Reverse Holofoil,,
+97050,Team Aqua's Sealeo,Team Aquas Sealeo,https://tcgplayer-cdn.tcgplayer.com/product/97050_200w.jpg,3,1525,https://cpt.tcgcsv.com/0RN,2022-12-14T16:22:25.38,1,4/34,Common,Water,90,Stage 1,"[1W] Splatter
+<br>This attack does 20 damage to 1 of your opponent's Pokemon. <i>(Don't apply Weakness and Resistance for Benched Pokemon.)</i>",Mx2,None,3,0.32,0.72,1.49,0.75,,Normal,,"[2W] Hail Wind (60+)
+<br>If your opponent's Active Pokemon has Team Magma in its name, this attack does 60 more damage."
+97050,Team Aqua's Sealeo,Team Aquas Sealeo,https://tcgplayer-cdn.tcgplayer.com/product/97050_200w.jpg,3,1525,https://cpt.tcgcsv.com/0RN,2022-12-14T16:22:25.38,1,4/34,Common,Water,90,Stage 1,"[1W] Splatter
+<br>This attack does 20 damage to 1 of your opponent's Pokemon. <i>(Don't apply Weakness and Resistance for Benched Pokemon.)</i>",Mx2,None,3,2.61,5.0,9.4,6.52,,Reverse Holofoil,,"[2W] Hail Wind (60+)
+<br>If your opponent's Active Pokemon has Team Magma in its name, this attack does 60 more damage."
+97051,Team Aqua's Walrein,Team Aquas Walrein,https://tcgplayer-cdn.tcgplayer.com/product/97051_200w.jpg,3,1525,https://cpt.tcgcsv.com/2RN,2022-12-14T16:22:30.957,1,5/34,Holo Rare,Water,140,Stage 2,"[1] Power Blow (30x)
+<br>This attack does 30 damage times the amount of Energy attached to this Pokemon.",Mx2,None,4,0.99,1.57,5.39,1.63,1.98,Holofoil,,"[1WWW] Dual Blizzard
+<br>Discard 2 Water energy attached to this Pokemon. This attack does 80 damage to 2 of your opponent's Pokemon. <i>(Don't apply Weakness and Resistance for Benched Pokemon.)</i>"
+97051,Team Aqua's Walrein,Team Aquas Walrein,https://tcgplayer-cdn.tcgplayer.com/product/97051_200w.jpg,3,1525,https://cpt.tcgcsv.com/2RN,2022-12-14T16:22:30.957,1,5/34,Holo Rare,Water,140,Stage 2,"[1] Power Blow (30x)
+<br>This attack does 30 damage times the amount of Energy attached to this Pokemon.",Mx2,None,4,2.0,2.62,5.99,4.54,,Reverse Holofoil,,"[1WWW] Dual Blizzard
+<br>Discard 2 Water energy attached to this Pokemon. This attack does 80 damage to 2 of your opponent's Pokemon. <i>(Don't apply Weakness and Resistance for Benched Pokemon.)</i>"
+97052,Team Aqua's Kyogre EX,Team Aquas Kyogre EX,https://tcgplayer-cdn.tcgplayer.com/product/97052_200w.jpg,3,1525,https://cpt.tcgcsv.com/3RN,2022-12-14T16:22:42.313,1,6/34,Ultra Rare,Water,190,Basic,"[1WWW] Aqua Impact (80+)
+<br>This attack does 20 more damage for each Colorless in your opponent's Active Pokemon Retreat Cost.",Gx2,None,4,160.0,290.38,467.88,416.63,190.0,Holofoil,"<b>Ability</b> Power Saver
+<br>As long as the number of Pokemon in play <em>(both yours and your opponent's)</em> that has Team Aqua in its name is less than 4, this Pokemon can't attack.",
+97053,Team Aqua's Grimer,Team Aquas Grimer,https://tcgplayer-cdn.tcgplayer.com/product/97053_200w.jpg,3,1525,https://cpt.tcgcsv.com/5RN,2022-12-14T16:22:48.143,1,7/34,Common,Psychic,70,Basic,[P] Pound (10),Px2,None,2,1.0,1.74,2.99,1.95,,Normal,,[2P] Mud-Slap (30)
+97053,Team Aqua's Grimer,Team Aquas Grimer,https://tcgplayer-cdn.tcgplayer.com/product/97053_200w.jpg,3,1525,https://cpt.tcgcsv.com/5RN,2022-12-14T16:22:48.143,1,7/34,Common,Psychic,70,Basic,[P] Pound (10),Px2,None,2,3.75,3.92,6.64,7.09,,Reverse Holofoil,,[2P] Mud-Slap (30)
+97054,Team Aqua's Muk,Team Aquas Muk,https://tcgplayer-cdn.tcgplayer.com/product/97054_200w.jpg,3,1525,https://cpt.tcgcsv.com/6RN,2022-12-14T16:22:54.42,1,8/34,Holo Rare,Psychic,110,Stage 1,"[2P] Pester (60+)
+<br>If your opponent's Active Pokemon is affected by a Special Condition, this attack does 60 more  damage.",Px2,None,3,0.75,1.5,3.0,2.03,,Holofoil,"<b>Ability</b> Sludge Festival
+<br>The Retreat Cost of each Pokemon in play without Team Aqua in their name is Colorless more.",
+97054,Team Aqua's Muk,Team Aquas Muk,https://tcgplayer-cdn.tcgplayer.com/product/97054_200w.jpg,3,1525,https://cpt.tcgcsv.com/6RN,2022-12-14T16:22:54.42,1,8/34,Holo Rare,Psychic,110,Stage 1,"[2P] Pester (60+)
+<br>If your opponent's Active Pokemon is affected by a Special Condition, this attack does 60 more  damage.",Px2,None,3,4.01,5.94,9.99,3.82,,Reverse Holofoil,"<b>Ability</b> Sludge Festival
+<br>The Retreat Cost of each Pokemon in play without Team Aqua in their name is Colorless more.",
+97055,Team Aqua's Seviper,Team Aquas Seviper,https://tcgplayer-cdn.tcgplayer.com/product/97055_200w.jpg,3,1525,https://cpt.tcgcsv.com/7RN,2022-12-14T16:23:00.473,1,9/34,Common,Psychic,90,Basic,"[P] Venomous Fang (10)
+<br>Flip a coin. If heads, your opponent's Active Pokemon is now Poisoned.",Px2,None,1,0.45,0.52,1.04,0.84,0.52,Normal,,"[2] Venom Tail (30)
+<br>If your opponent's Active Pokemon is affected by a Special Condition, discard an Energy attached to it."
+97055,Team Aqua's Seviper,Team Aquas Seviper,https://tcgplayer-cdn.tcgplayer.com/product/97055_200w.jpg,3,1525,https://cpt.tcgcsv.com/7RN,2022-12-14T16:23:00.473,1,9/34,Common,Psychic,90,Basic,"[P] Venomous Fang (10)
+<br>Flip a coin. If heads, your opponent's Active Pokemon is now Poisoned.",Px2,None,1,3.0,12.03,33.55,10.0,,Reverse Holofoil,,"[2] Venom Tail (30)
+<br>If your opponent's Active Pokemon is affected by a Special Condition, discard an Energy attached to it."
+97056,Team Magma's Baltoy,Team Magmas Baltoy,https://tcgplayer-cdn.tcgplayer.com/product/97056_200w.jpg,3,1525,https://cpt.tcgcsv.com/8RN,2022-12-14T16:23:09.587,1,10/34,Common,Psychic,50,Basic,"[1P] Telekinesis
+<br>This attack does 20 damage to 1 of your opponent's Pokemon. This attack's damage isn't affected by Weakness or Resistance.",Px2,None,1,0.15,0.5,1.95,0.8,0.25,Normal,,
+97056,Team Magma's Baltoy,Team Magmas Baltoy,https://tcgplayer-cdn.tcgplayer.com/product/97056_200w.jpg,3,1525,https://cpt.tcgcsv.com/8RN,2022-12-14T16:23:09.587,1,10/34,Common,Psychic,50,Basic,"[1P] Telekinesis
+<br>This attack does 20 damage to 1 of your opponent's Pokemon. This attack's damage isn't affected by Weakness or Resistance.",Px2,None,1,1.67,1.9,2.5,2.12,,Reverse Holofoil,,
+97057,Team Magma's Claydol,Team Magmas Claydol,https://tcgplayer-cdn.tcgplayer.com/product/97057_200w.jpg,3,1525,https://cpt.tcgcsv.com/9RN,2024-12-27T08:19:04.257,1,11/34,Holo Rare,Psychic,90,Stage 1,[2P] Power Beam (70),Px2,None,2,0.55,1.0,49.97,1.1,1.99,Holofoil,"<b>Ability</b> Magma Switch
+<br>Once during your turn <em>(before your attack)</em>, you may move 1 Energy attached to 1 of your Pokemon to 1 of your Pokemon with Team Magma in its name.",
+97057,Team Magma's Claydol,Team Magmas Claydol,https://tcgplayer-cdn.tcgplayer.com/product/97057_200w.jpg,3,1525,https://cpt.tcgcsv.com/9RN,2024-12-27T08:19:04.257,1,11/34,Holo Rare,Psychic,90,Stage 1,[2P] Power Beam (70),Px2,None,2,1.99,2.27,2.55,2.89,,Reverse Holofoil,"<b>Ability</b> Magma Switch
+<br>Once during your turn <em>(before your attack)</em>, you may move 1 Energy attached to 1 of your Pokemon to 1 of your Pokemon with Team Magma in its name.",
+97058,Team Magma's Aron,Team Magmas Aron,https://tcgplayer-cdn.tcgplayer.com/product/97058_200w.jpg,3,1525,https://cpt.tcgcsv.com/bRN,2024-07-26T17:27:08.327,1,12/34,Common,Fighting,60,Basic,[F] Gnaw (10),Gx2,None,2,0.78,1.27,2.0,1.3,,Normal,,
+97058,Team Magma's Aron,Team Magmas Aron,https://tcgplayer-cdn.tcgplayer.com/product/97058_200w.jpg,3,1525,https://cpt.tcgcsv.com/bRN,2024-07-26T17:27:08.327,1,12/34,Common,Fighting,60,Basic,[F] Gnaw (10),Gx2,None,2,3.05,3.09,5.0,4.18,,Reverse Holofoil,,
+97059,Team Magma's Lairon,Team Magmas Lairon,https://tcgplayer-cdn.tcgplayer.com/product/97059_200w.jpg,3,1525,https://cpt.tcgcsv.com/cRN,2023-11-03T04:58:24.817,1,13/34,Common,Fighting,90,Stage 1,[1F] Gnaw (30),Gx2,None,3,0.25,0.85,1.49,0.91,0.79,Normal,,"[2F] Take Down (60)
+<br>This Pokemon does 10 damage to itself."
+97059,Team Magma's Lairon,Team Magmas Lairon,https://tcgplayer-cdn.tcgplayer.com/product/97059_200w.jpg,3,1525,https://cpt.tcgcsv.com/cRN,2023-11-03T04:58:24.817,1,13/34,Common,Fighting,90,Stage 1,[1F] Gnaw (30),Gx2,None,3,2.7,3.03,3.51,4.3,,Reverse Holofoil,,"[2F] Take Down (60)
+<br>This Pokemon does 10 damage to itself."
+97060,Team Magma's Aggron,Team Magmas Aggron,https://tcgplayer-cdn.tcgplayer.com/product/97060_200w.jpg,3,1525,https://cpt.tcgcsv.com/dRN,2023-08-20T09:03:05.977,1,14/34,Holo Rare,Fighting,140,Stage 2,"[1F] Rock Stamp (40x)
+<br>Discard as many Fighting Energy attached to your Pokemon as you like. This attack does 40 times the number of Energy you discarded.",Gx2,None,4,1.42,2.24,5.0,2.57,,Holofoil,,"[1FFF] Rock Tempest (120)
+<br>This attack does 20 damage to each of your opponent's Benched Pokemon that has any damage counters on it. <i>(Don't apply Weakness and Resistance for Benched Pokemon.)</i>"
+97060,Team Magma's Aggron,Team Magmas Aggron,https://tcgplayer-cdn.tcgplayer.com/product/97060_200w.jpg,3,1525,https://cpt.tcgcsv.com/dRN,2023-08-20T09:03:05.977,1,14/34,Holo Rare,Fighting,140,Stage 2,"[1F] Rock Stamp (40x)
+<br>Discard as many Fighting Energy attached to your Pokemon as you like. This attack does 40 times the number of Energy you discarded.",Gx2,None,4,4.88,5.64,10.0,5.55,,Reverse Holofoil,,"[1FFF] Rock Tempest (120)
+<br>This attack does 20 damage to each of your opponent's Benched Pokemon that has any damage counters on it. <i>(Don't apply Weakness and Resistance for Benched Pokemon.)</i>"
+97061,Team Magma's Groudon EX,Team Magmas Groudon EX,https://tcgplayer-cdn.tcgplayer.com/product/97061_200w.jpg,3,1525,https://cpt.tcgcsv.com/fRN,2022-12-14T16:23:41.437,1,15/34,Ultra Rare,Fighting,190,Basic,"[1FFF] Magma Quake (80+)
+<br>If your opponent's Active Pokemon already has damage counters on it, this attack does 80 more damage.",Gx2,None,4,250.0,400.0,999.99,402.03,348.29,Holofoil,"<b>Ability</b> Power Saver
+<br>As long as the number of Pokemon in play <em>(both yours and your opponent's)</em> that has Team Magma in its name is less than 4, this Pokemon can't attack.",
+97062,Team Magma's Poochyena,Team Magmas Poochyena,https://tcgplayer-cdn.tcgplayer.com/product/97062_200w.jpg,3,1525,https://cpt.tcgcsv.com/gRN,2022-12-14T16:24:17.9,1,17/34,Common,Darkness,60,Basic,"[1] Infiltration
+<br>Your opponent reveals his or her hand.",Fx2,P-20,1,0.75,1.01,2.0,1.25,,Normal,,[1F] Bite (20)
+97062,Team Magma's Poochyena,Team Magmas Poochyena,https://tcgplayer-cdn.tcgplayer.com/product/97062_200w.jpg,3,1525,https://cpt.tcgcsv.com/gRN,2022-12-14T16:24:17.9,1,17/34,Common,Darkness,60,Basic,"[1] Infiltration
+<br>Your opponent reveals his or her hand.",Fx2,P-20,1,3.75,7.38,10.29,6.15,,Reverse Holofoil,,[1F] Bite (20)
+97063,Team Aqua's Poochyena,Team Aquas Poochyena,https://tcgplayer-cdn.tcgplayer.com/product/97063_200w.jpg,3,1525,https://cpt.tcgcsv.com/hRN,2023-03-13T08:03:52.22,1,16/34,Common,Darkness,60,Basic,"[1] Roar
+<br> Your opponent switches his or her Active Pokemon with 1 of his or her Benched Pokemon.",Fx2,P-20,1,0.29,0.7,3.24,0.8,0.52,Normal,,[1W] Bite (20)
+97063,Team Aqua's Poochyena,Team Aquas Poochyena,https://tcgplayer-cdn.tcgplayer.com/product/97063_200w.jpg,3,1525,https://cpt.tcgcsv.com/hRN,2023-03-13T08:03:52.22,1,16/34,Common,Darkness,60,Basic,"[1] Roar
+<br> Your opponent switches his or her Active Pokemon with 1 of his or her Benched Pokemon.",Fx2,P-20,1,2.23,2.7,4.0,3.5,,Reverse Holofoil,,[1W] Bite (20)
+97064,Team Aqua's Mightyena,Team Aquas Mightyena,https://tcgplayer-cdn.tcgplayer.com/product/97064_200w.jpg,3,1525,https://cpt.tcgcsv.com/jRN,2024-01-22T06:43:53.95,1,18/34,Common,Darkness,100,Stage 1,"[1W] Teampact (30x)
+<br>Flip a coin for each Pokemon you have in play that has Team Aqua in its name. This attack does 30 damage times the number of heads.",Fx2,P-20,1,0.74,1.26,99.0,1.38,1.0,Normal,,"[1WW] Crunch (80)
+<br>Flip a coin. If heads, discard an Energy attached to your opponent's Active Pokemon."
+97064,Team Aqua's Mightyena,Team Aquas Mightyena,https://tcgplayer-cdn.tcgplayer.com/product/97064_200w.jpg,3,1525,https://cpt.tcgcsv.com/jRN,2024-01-22T06:43:53.95,1,18/34,Common,Darkness,100,Stage 1,"[1W] Teampact (30x)
+<br>Flip a coin for each Pokemon you have in play that has Team Aqua in its name. This attack does 30 damage times the number of heads.",Fx2,P-20,1,3.44,11.37,19.3,6.42,,Reverse Holofoil,,"[1WW] Crunch (80)
+<br>Flip a coin. If heads, discard an Energy attached to your opponent's Active Pokemon."
+97065,Team Magma's Mightyena,Team Magmas Mightyena,https://tcgplayer-cdn.tcgplayer.com/product/97065_200w.jpg,3,1525,https://cpt.tcgcsv.com/kRN,2024-02-29T17:44:36.11,1,19/34,Common,Darkness,100,Stage 1,[1F] Bite (30),Fx2,P-20,1,0.69,0.86,10.43,1.05,,Normal,,"[1FF] Hostile Fang (80)
+<br>If your opponent's Active Pokemon has Team Aqua in its name, this attack does 40 more damage."
+97065,Team Magma's Mightyena,Team Magmas Mightyena,https://tcgplayer-cdn.tcgplayer.com/product/97065_200w.jpg,3,1525,https://cpt.tcgcsv.com/kRN,2024-02-29T17:44:36.11,1,19/34,Common,Darkness,100,Stage 1,[1F] Bite (30),Fx2,P-20,1,2.97,5.86,20.0,7.87,,Reverse Holofoil,,"[1FF] Hostile Fang (80)
+<br>If your opponent's Active Pokemon has Team Aqua in its name, this attack does 40 more damage."
+97066,Team Aqua's Carvanha,Team Aquas Carvanha,https://tcgplayer-cdn.tcgplayer.com/product/97066_200w.jpg,3,1525,https://cpt.tcgcsv.com/lRN,2022-12-14T16:24:43.087,1,20/34,Common,Darkness,50,Basic,"[D] Fin Smack (10x)
+<br>Flip 2 coins. This attack does 10 damage times the number of heads.",Lx2,None,1,0.32,0.51,1.49,0.7,,Normal,,
+97066,Team Aqua's Carvanha,Team Aquas Carvanha,https://tcgplayer-cdn.tcgplayer.com/product/97066_200w.jpg,3,1525,https://cpt.tcgcsv.com/lRN,2022-12-14T16:24:43.087,1,20/34,Common,Darkness,50,Basic,"[D] Fin Smack (10x)
+<br>Flip 2 coins. This attack does 10 damage times the number of heads.",Lx2,None,1,2.77,3.07,9.99,4.37,,Reverse Holofoil,,
+97067,Team Aqua's Sharpedo,Team Aquas Sharpedo,https://tcgplayer-cdn.tcgplayer.com/product/97067_200w.jpg,3,1525,https://cpt.tcgcsv.com/mRN,2022-12-14T16:28:25.91,1,21/34,Holo Rare,Darkness,90,Stage 1,[2D] Sharp Fang (70),Lx2,None,0,1.59,2.02,4.99,2.65,,Holofoil,"<b>Ability</b> Aqua Search
+<br>Once during your turn <em>(before your attack)</em>, you may search your deck for a Pokemon with Team Aqua in its name, reveal it, and put it into your hand. Shuffle your deck afterward.",
+97067,Team Aqua's Sharpedo,Team Aquas Sharpedo,https://tcgplayer-cdn.tcgplayer.com/product/97067_200w.jpg,3,1525,https://cpt.tcgcsv.com/mRN,2022-12-14T16:28:25.91,1,21/34,Holo Rare,Darkness,90,Stage 1,[2D] Sharp Fang (70),Lx2,None,0,3.99,4.44,4.88,6.4,,Reverse Holofoil,"<b>Ability</b> Aqua Search
+<br>Once during your turn <em>(before your attack)</em>, you may search your deck for a Pokemon with Team Aqua in its name, reveal it, and put it into your hand. Shuffle your deck afterward.",
+97068,Team Magma's Zangoose,Team Magmas Zangoose,https://tcgplayer-cdn.tcgplayer.com/product/97068_200w.jpg,3,1525,https://cpt.tcgcsv.com/nRN,2024-07-26T17:27:08.413,1,22/34,Common,Colorless,90,Basic,"[1] Call for Family
+<br>Search your deck for 2 Basic Pokemon that have Team Magma in their names and put them onto your Bench. Shuffle your deck afterward.",Fx2,None,1,0.4,0.63,1.0,0.84,,Normal,,"[3] Team Play (20x)
+<br>This attack does 20 damage times the number of Pokemon in play with Team Magma in its name."
+97068,Team Magma's Zangoose,Team Magmas Zangoose,https://tcgplayer-cdn.tcgplayer.com/product/97068_200w.jpg,3,1525,https://cpt.tcgcsv.com/nRN,2024-07-26T17:27:08.413,1,22/34,Common,Colorless,90,Basic,"[1] Call for Family
+<br>Search your deck for 2 Basic Pokemon that have Team Magma in their names and put them onto your Bench. Shuffle your deck afterward.",Fx2,None,1,1.89,4.19,31.35,6.15,,Reverse Holofoil,,"[3] Team Play (20x)
+<br>This attack does 20 damage times the number of Pokemon in play with Team Magma in its name."
+97069,Aqua Diffuser,Aqua Diffuser,https://tcgplayer-cdn.tcgplayer.com/product/97069_200w.jpg,3,1525,https://cpt.tcgcsv.com/pRN,2022-12-14T16:28:39.74,1,23/34,Uncommon,Tool,,,"[W] Aqua Diffuser
+<br>Your opponent's Active Pokemon is now Poisoned and Confused.",,,,0.25,0.6,1.07,0.68,,Normal,"Attach a Pokemon Tool to 1 of your Pokemon that doesn't already have a Pokemon Tool attached to it.
+
+<br>The Team Aqua Pokemon this card is attached to can also use the attack on this card. <em>(You still need the necessary Energy to use this attack.)",
+97069,Aqua Diffuser,Aqua Diffuser,https://tcgplayer-cdn.tcgplayer.com/product/97069_200w.jpg,3,1525,https://cpt.tcgcsv.com/pRN,2022-12-14T16:28:39.74,1,23/34,Uncommon,Tool,,,"[W] Aqua Diffuser
+<br>Your opponent's Active Pokemon is now Poisoned and Confused.",,,,0.5,1.01,4.54,1.42,,Reverse Holofoil,"Attach a Pokemon Tool to 1 of your Pokemon that doesn't already have a Pokemon Tool attached to it.
+
+<br>The Team Aqua Pokemon this card is attached to can also use the attack on this card. <em>(You still need the necessary Energy to use this attack.)",
+97070,Magma Pointer,Magma Pointer,https://tcgplayer-cdn.tcgplayer.com/product/97070_200w.jpg,3,1525,https://cpt.tcgcsv.com/qRN,2022-12-14T16:28:46.11,1,24/34,Uncommon,Tool,,,"[F] Magma Pointer
+<br>This attack does 20 damage to 1 of your opponent's Pokemon <i>(Don't apply Weakness and Resistance for Benched Pokemon.)</i>",,,,0.14,0.48,1.62,0.52,0.33,Normal,"Attach a Pokemon Tool to 1 of your Pokemon that doesn't already have a Pokemon Tool attached to it.
+
+<br>The Team Magma Pokemon this card is attached to can also use the attack on this card. <em>(You still need the necessary Energy to use this attack.)",
+97070,Magma Pointer,Magma Pointer,https://tcgplayer-cdn.tcgplayer.com/product/97070_200w.jpg,3,1525,https://cpt.tcgcsv.com/qRN,2022-12-14T16:28:46.11,1,24/34,Uncommon,Tool,,,"[F] Magma Pointer
+<br>This attack does 20 damage to 1 of your opponent's Pokemon <i>(Don't apply Weakness and Resistance for Benched Pokemon.)</i>",,,,0.45,0.8,2.23,0.91,,Reverse Holofoil,"Attach a Pokemon Tool to 1 of your Pokemon that doesn't already have a Pokemon Tool attached to it.
+
+<br>The Team Magma Pokemon this card is attached to can also use the attack on this card. <em>(You still need the necessary Energy to use this attack.)",
+97071,Team Aqua Admin,Team Aqua Admin,https://tcgplayer-cdn.tcgplayer.com/product/97071_200w.jpg,3,1525,https://cpt.tcgcsv.com/rRN,2022-12-14T16:28:52.033,1,25/34,Uncommon,Supporter,,,,,,,0.31,0.55,1.84,0.78,0.13,Normal,Attach a basic Energy card from your discard pile to 1 of your Pokemon with Team Aqua in its name.,
+97071,Team Aqua Admin,Team Aqua Admin,https://tcgplayer-cdn.tcgplayer.com/product/97071_200w.jpg,3,1525,https://cpt.tcgcsv.com/rRN,2022-12-14T16:28:52.033,1,25/34,Uncommon,Supporter,,,,,,,0.25,0.83,3.08,2.93,,Reverse Holofoil,Attach a basic Energy card from your discard pile to 1 of your Pokemon with Team Aqua in its name.,
+97072,Team Aqua Grunt,Team Aqua Grunt,https://tcgplayer-cdn.tcgplayer.com/product/97072_200w.jpg,3,1525,https://cpt.tcgcsv.com/sRN,2022-12-14T16:28:58.307,1,26/34,Uncommon,Supporter,,,,,,,0.25,0.51,1.2,0.55,,Normal,"Discard a card from your hand. Then, draw 3 cards. If you discarded a card with Team Aqua in its name, draw 4 cards instead.",
+97072,Team Aqua Grunt,Team Aqua Grunt,https://tcgplayer-cdn.tcgplayer.com/product/97072_200w.jpg,3,1525,https://cpt.tcgcsv.com/sRN,2022-12-14T16:28:58.307,1,26/34,Uncommon,Supporter,,,,,,,2.8,4.0,4.79,5.35,,Reverse Holofoil,"Discard a card from your hand. Then, draw 3 cards. If you discarded a card with Team Aqua in its name, draw 4 cards instead.",
+97073,Team Aqua's Great Ball,Team Aquas Great Ball,https://tcgplayer-cdn.tcgplayer.com/product/97073_200w.jpg,3,1525,https://cpt.tcgcsv.com/tRN,2022-12-14T16:29:05.59,1,27/34,Uncommon,Item,,,,,,,0.5,0.99,2.5,0.98,0.91,Normal,"Search your deck for a Basic Pokemon that has Team Aqua in its name and a basic Water Energy, reveal them, and put them into your hand. Shuffle your deck afterward.",
+97073,Team Aqua's Great Ball,Team Aquas Great Ball,https://tcgplayer-cdn.tcgplayer.com/product/97073_200w.jpg,3,1525,https://cpt.tcgcsv.com/tRN,2022-12-14T16:29:05.59,1,27/34,Uncommon,Item,,,,,,,3.0,4.6,6.6,4.55,,Reverse Holofoil,"Search your deck for a Basic Pokemon that has Team Aqua in its name and a basic Water Energy, reveal them, and put them into your hand. Shuffle your deck afterward.",
+97074,Team Aqua's Secret Base,Team Aquas Secret Base,https://tcgplayer-cdn.tcgplayer.com/product/97074_200w.jpg,3,1525,https://cpt.tcgcsv.com/vRN,2024-07-26T17:27:08.46,1,28/34,Uncommon,Stadium,,,,,,,0.31,0.75,2.02,0.85,,Normal,Each player's Pokemon that does not have Team Aqua in its name pays Colorless more to Retreat.,
+97074,Team Aqua's Secret Base,Team Aquas Secret Base,https://tcgplayer-cdn.tcgplayer.com/product/97074_200w.jpg,3,1525,https://cpt.tcgcsv.com/vRN,2024-07-26T17:27:08.46,1,28/34,Uncommon,Stadium,,,,,,,0.5,2.49,5.0,2.72,,Reverse Holofoil,Each player's Pokemon that does not have Team Aqua in its name pays Colorless more to Retreat.,
+97075,Team Magma Admin,Team Magma Admin,https://tcgplayer-cdn.tcgplayer.com/product/97075_200w.jpg,3,1525,https://cpt.tcgcsv.com/wRN,2022-12-14T16:29:19.58,1,29/34,Uncommon,Supporter,,,,,,,0.25,0.56,1.49,0.71,,Normal,Put 3 Pokemon with Team Magma in their names from your discard pile into your hand.,
+97075,Team Magma Admin,Team Magma Admin,https://tcgplayer-cdn.tcgplayer.com/product/97075_200w.jpg,3,1525,https://cpt.tcgcsv.com/wRN,2022-12-14T16:29:19.58,1,29/34,Uncommon,Supporter,,,,,,,1.45,2.2,5.98,2.62,,Reverse Holofoil,Put 3 Pokemon with Team Magma in their names from your discard pile into your hand.,
+97076,Team Magma Grunt,Team Magma Grunt,https://tcgplayer-cdn.tcgplayer.com/product/97076_200w.jpg,3,1525,https://cpt.tcgcsv.com/xRN,2022-12-14T16:29:25.82,1,30/34,Uncommon,Supporter,,,,,,,0.45,0.99,2.0,1.35,,Normal,"Discard a card from your hand. Then, draw 3 cards. If you discarded a card with Team Magma in its name, draw 4 cards instead.",
+97076,Team Magma Grunt,Team Magma Grunt,https://tcgplayer-cdn.tcgplayer.com/product/97076_200w.jpg,3,1525,https://cpt.tcgcsv.com/xRN,2022-12-14T16:29:25.82,1,30/34,Uncommon,Supporter,,,,,,,1.16,1.89,5.24,2.45,,Reverse Holofoil,"Discard a card from your hand. Then, draw 3 cards. If you discarded a card with Team Magma in its name, draw 4 cards instead.",
+97077,Team Magma's Great Ball,Team Magmas Great Ball,https://tcgplayer-cdn.tcgplayer.com/product/97077_200w.jpg,3,1525,https://cpt.tcgcsv.com/zRN,2024-07-26T17:27:08.523,1,31/34,Uncommon,Item,,,,,,,4.5,5.4,8.99,5.7,,Normal,"Search your deck for a Basic Pokemon that has Team Magma in its name and a basic Fighting Energy, reveal them, and put them into your hand. Shuffle your deck afterward.",
+97077,Team Magma's Great Ball,Team Magmas Great Ball,https://tcgplayer-cdn.tcgplayer.com/product/97077_200w.jpg,3,1525,https://cpt.tcgcsv.com/zRN,2024-07-26T17:27:08.523,1,31/34,Uncommon,Item,,,,,,,10.19,11.15,12.11,12.64,,Reverse Holofoil,"Search your deck for a Basic Pokemon that has Team Magma in its name and a basic Fighting Energy, reveal them, and put them into your hand. Shuffle your deck afterward.",
+97078,Team Magma's Secret Base,Team Magmas Secret Base,https://tcgplayer-cdn.tcgplayer.com/product/97078_200w.jpg,3,1525,https://cpt.tcgcsv.com/BRN,2022-12-14T16:29:37.117,1,32/34,Uncommon,Stadium,,,,,,,1.5,2.51,5.94,3.21,,Normal,"Whenever any player plays a Basic Pokemon from his or her hand to his or her Bench <em>(excluding Pokemon with Team Magma in their names)</em>, put 2 damage counters on that Pokemon.",
+97078,Team Magma's Secret Base,Team Magmas Secret Base,https://tcgplayer-cdn.tcgplayer.com/product/97078_200w.jpg,3,1525,https://cpt.tcgcsv.com/BRN,2022-12-14T16:29:37.117,1,32/34,Uncommon,Stadium,,,,,,,1.83,3.48,9.99,4.84,,Reverse Holofoil,"Whenever any player plays a Basic Pokemon from his or her hand to his or her Bench <em>(excluding Pokemon with Team Magma in their names)</em>, put 2 damage counters on that Pokemon.",
+97079,Double Aqua Energy,Double Aqua Energy,https://tcgplayer-cdn.tcgplayer.com/product/97079_200w.jpg,3,1525,https://cpt.tcgcsv.com/CRN,2022-12-14T16:29:43.007,1,33/34,Uncommon,Special Energy,,,,,,,0.3,0.68,2.79,0.84,,Normal,"This card can only be attached to Pokemon with Team Aqua in their names. At the end of your turn, discard this card.
+<br>While in play, this card provides WW Energy
+<br><em>(If this card is attached to anything other than a Team Aqua Pokemon, discard this card.)</em>",
+97079,Double Aqua Energy,Double Aqua Energy,https://tcgplayer-cdn.tcgplayer.com/product/97079_200w.jpg,3,1525,https://cpt.tcgcsv.com/CRN,2022-12-14T16:29:43.007,1,33/34,Uncommon,Special Energy,,,,,,,0.9,2.82,5.24,2.74,,Reverse Holofoil,"This card can only be attached to Pokemon with Team Aqua in their names. At the end of your turn, discard this card.
+<br>While in play, this card provides WW Energy
+<br><em>(If this card is attached to anything other than a Team Aqua Pokemon, discard this card.)</em>",
+97080,Double Magma Energy,Double Magma Energy,https://tcgplayer-cdn.tcgplayer.com/product/97080_200w.jpg,3,1525,https://cpt.tcgcsv.com/DRN,2024-07-26T17:27:08.57,1,34/34,Uncommon,Special Energy,,,,,,,0.24,0.58,2.4,0.67,,Normal,"This card can only be attached to Pokemon with Team Magma in their names. At the end of your turn, discard this card.
+<br>While in play, this card provides FF Energy
+<br><em>(If this card is attached to anything other than a Team Magma Pokemon, discard this card.)</em>",
+97080,Double Magma Energy,Double Magma Energy,https://tcgplayer-cdn.tcgplayer.com/product/97080_200w.jpg,3,1525,https://cpt.tcgcsv.com/DRN,2024-07-26T17:27:08.57,1,34/34,Uncommon,Special Energy,,,,,,,0.66,1.66,2.32,2.51,,Reverse Holofoil,"This card can only be attached to Pokemon with Team Magma in their names. At the end of your turn, discard this card.
+<br>While in play, this card provides FF Energy
+<br><em>(If this card is attached to anything other than a Team Magma Pokemon, discard this card.)</em>",
+97764,Double Crisis: Team Magma Blister,Double Crisis Team Magma Blister,https://tcgplayer-cdn.tcgplayer.com/product/97764_200w.jpg,3,1525,https://cpt.tcgcsv.com/j7P,2018-10-10T15:05:48.51,1,,,,,,,,,,,,,,,,,
+97765,Double Crisis: Team Aqua Blister,Team Aqua Blister,https://tcgplayer-cdn.tcgplayer.com/product/97765_200w.jpg,3,1525,https://cpt.tcgcsv.com/k7P,2018-10-10T15:05:39.483,1,,,,,,,,,,2300.0,2300.0,2300.0,,,Normal,,
+229226,Double Crisis Booster Pack,Double Crisis Booster Pack,https://tcgplayer-cdn.tcgplayer.com/product/229226_200w.jpg,3,1525,https://cpt.tcgcsv.com/xJR2,2020-12-16T18:37:41.813,1,,,,,,,,,,400.0,407.5,414.99,236.48,,Normal,Each booster pack contains 7 random cards.,

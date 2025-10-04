@@ -1,0 +1,19 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extAttribute,extCardType,extDescription,extMonsterType,extAttack,extDefense,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName
+162273,Gold Sarcophagus,Gold Sarcophagus,https://tcgplayer-cdn.tcgplayer.com/product/162273_200w.jpg,2,2215,https://cpt.tcgcsv.com/tWj2,2018-03-12T14:36:41.773,1,PT03-EN001,Ultra Rare,SPELL,Normal Spell,"Banish 1 card from your Deck, face-up. During your second Standby Phase after this card's activation, add that card to your hand.
+<br>
+<br><em>(This promotional card was handed out during the 2007 European Pharaoh Tour.)</em>",,,,,,,,,
+162274,Elemental HERO Stratos,Elemental HERO Stratos,https://tcgplayer-cdn.tcgplayer.com/product/162274_200w.jpg,2,2215,https://cpt.tcgcsv.com/vWj2,2022-03-21T12:52:37.817,1,PT03-EN002,Common,WIND,Effect Monster,"When this card is Normal or Special Summoned: You can activate 1 of these effects.
+<br>• You can destroy Spell/Trap Cards on the field, up to the number of ""HERO"" monsters you control, except this card.
+<br>• Add 1 ""HERO"" monster from your Deck to your hand.
+<br>
+<br><em>(This promotional card was handed out during the 2007 European Pharaoh Tour.)</em>",Warrior,1800,300,10.48,12.99,20.99,12.97,,Limited
+162275,Shrink,Shrink,https://tcgplayer-cdn.tcgplayer.com/product/162275_200w.jpg,2,2215,https://cpt.tcgcsv.com/wWj2,2018-03-12T14:44:46.01,1,PT02-EN001,Ultra Rare,SPELL,Quick-Play Spell,"Target 1 face-up monster on the field; its original ATK becomes halved until the end of this turn.
+<br>
+<br><em>(This promotional card was handed out during the 2006 European Pharaoh Tour.)</em>",,,,,,,,,
+162276,Toon Dark Magician Girl,Toon Dark Magician Girl,https://tcgplayer-cdn.tcgplayer.com/product/162276_200w.jpg,2,2215,https://cpt.tcgcsv.com/xWj2,2021-11-17T18:39:22.907,1,PT02-EN002,Common,DARK,Toon/Effect Monster,"Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by Tributing 1 monster, while you control ""Toon World"". If ""Toon World"" on the field is destroyed, destroy this card. Can attack your opponent directly, unless they control a Toon monster, in which case this card must target a Toon monster for its attacks. This card gains 300 ATK for every ""Dark Magician"" or ""Magician of Black Chaos"" in either player's Graveyard.
+<br>
+<br><em>(This promotional card was handed out during the 2006 European Pharaoh Tour.)</em>",Spellcaster,2000,1700,20.79,24.96,24.98,24.97,,Limited
+162277,Zoa,Zoa,https://tcgplayer-cdn.tcgplayer.com/product/162277_200w.jpg,2,2215,https://cpt.tcgcsv.com/zWj2,2019-02-21T22:35:33.14,1,PT1-EN001,Common,DARK,Normal Monster,"<em>A monster whose full potential can be achieved when outfitted with ""Metalmorph"".</em>
+<br>
+<br><em>(This promotional card was handed out during the 2005 European Pharaoh Tour.)</em>",Fiend,2600,1900,9.99,10.78,20.0,9.99,,Limited
+162278,Des Volstgalph,Des Volstgalph,https://tcgplayer-cdn.tcgplayer.com/product/162278_200w.jpg,2,2215,https://cpt.tcgcsv.com/BWj2,2018-03-12T14:48:14.59,1,PT1-EN002,Ultra Rare,EARTH,Effect Monster,"If this card destroys an opponent's monster by battle and sends it to the Graveyard: Inflict 500 damage to your opponent. Each time a Normal or Quick-Play Spell Card resolves, this card gains 200 ATK until the end of this turn.",Dragon,2200,1700,,,,,,

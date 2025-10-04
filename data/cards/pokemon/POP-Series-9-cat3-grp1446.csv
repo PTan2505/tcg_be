@@ -1,0 +1,72 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extAttack2,extWeakness,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extResistance,extCardText
+84020,Buizel,Buizel,https://tcgplayer-cdn.tcgplayer.com/product/84020_200w.jpg,3,1446,https://cpt.tcgcsv.com/qDH,2022-09-25T17:12:44.253,1,006/017,Uncommon,Water,60,Basic,"[W] Whirlpool
+<br>Flip a coin. If heads, discard an Energy attached to the Defending Pokémon.","[WW] Super Fast (30)
+<br>If you have Pachirisu in play, flip a coin. If heads, prevent all effects of an attack, including damage, done to Buizel during your opponent's next turn.",L+10,1,1.77,6.99,12.24,7.24,,Normal,,
+84042,Buneary,Buneary,https://tcgplayer-cdn.tcgplayer.com/product/84042_200w.jpg,3,1446,https://cpt.tcgcsv.com/SDH,2022-09-25T17:19:18.96,1,012/017,Common,Colorless,50,Basic,"[1] Dizzy Punch (10x)
+<br>Flip 2 coins. This attack does 10 damage times the number of heads.","[2] Defense Curl
+<br>Flip a coin. If heads, prevent all damage done to Buneary by attacks during your opponent's next turn.",F+10,1,0.1,0.46,1.99,0.5,,Normal,,
+84289,Chimchar,Chimchar,https://tcgplayer-cdn.tcgplayer.com/product/84289_200w.jpg,3,1446,https://cpt.tcgcsv.com/PKH,2022-09-25T17:21:31.233,1,013/017,Common,Fire,40,Basic,"[R] Serial Swipes (10x)
+<br>Flip 4 coins. This attack does 10 times the number of heads.","[2R] Sleepy (40+)
+<br>If you have Piplup in play, this attack does 40 damage plus 20 more damage and the Defending Pokémon is now Asleep.",W+10,1,0.23,0.56,10.47,0.65,,Normal,,
+84476,Croagunk,Croagunk,https://tcgplayer-cdn.tcgplayer.com/product/84476_200w.jpg,3,1446,https://cpt.tcgcsv.com/xPH,2022-09-25T17:13:51.893,1,007/017,Uncommon,Psychic,60,Basic,"[1] Knock Off
+<br>Flip a coin. If heads, choose 1 card from your opponent's hand without looking and discard it.","[PP] Nimble (30)
+<br>If you have Turtwig in play, remove from Croagunk the number of damage counters equal to the damage you did to the Defending Pokémon.",P+10,2,1.5,3.35,7.24,3.0,,Normal,,
+85598,Gabite,Gabite,https://tcgplayer-cdn.tcgplayer.com/product/85598_200w.jpg,3,1446,https://cpt.tcgcsv.com/-fJ,2022-09-25T17:14:50.393,1,008/017,Uncommon,Colorless,80,Stage 1,"[1] Burrow
+<br>Flip a coin. If heads, prevent all damage done to Gabite by attacks during your opponent's next turn.","[3] Distorted Wave (60)
+<br>Before doing damage, remove 2 damage counters from the Defending Pokémon.",C+20,1,1.18,2.57,5.99,2.49,,Normal,,
+85622,Garchomp,Garchomp,https://tcgplayer-cdn.tcgplayer.com/product/85622_200w.jpg,3,1446,https://cpt.tcgcsv.com/sgJ,2022-09-25T17:05:41.337,1,001/017,Rare,Colorless,130,Stage 2,"[1] Dragon Rage (80)
+<br>Flip 2 coins. If either of them is tails, this attack does nothing.","[3] Jet Sword (100)
+<br>Discard 2 Energy attached to Garchomp and this attack does 10 damage to each of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",C+30,,4.17,7.29,11.05,12.7,,Normal,,
+85700,Gible,Gible,https://tcgplayer-cdn.tcgplayer.com/product/85700_200w.jpg,3,1446,https://cpt.tcgcsv.com/0jJ,2022-09-25T17:22:20.6,1,014/017,Common,Colorless,50,Basic,"[1] Push Down (10)
+<br>Your opponent switches the Defending Pokémon with 1 of his or her Benched Pokémon.",,C+10,1,0.2,0.56,2.44,0.67,,Normal,,
+86825,Lopunny,Lopunny,https://tcgplayer-cdn.tcgplayer.com/product/86825_200w.jpg,3,1446,https://cpt.tcgcsv.com/wLJ,2022-09-25T17:15:55.46,1,009/017,Uncommon,Colorless,80,Stage 1,"[2] Jump Kick (20)
+<br>Does 20 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[3] Jazzed (50)
+<br>If Lopunny evolved from Buneary during this turn, remove all damage counters from Lopunny.",F+20,1,0.31,0.86,1.7,0.86,,Normal,,
+86825,Lopunny,Lopunny,https://tcgplayer-cdn.tcgplayer.com/product/86825_200w.jpg,3,1446,https://cpt.tcgcsv.com/wLJ,2022-09-25T17:15:55.46,1,009/017,Uncommon,Colorless,80,Stage 1,"[2] Jump Kick (20)
+<br>Does 20 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[3] Jazzed (50)
+<br>If Lopunny evolved from Buneary during this turn, remove all damage counters from Lopunny.",F+20,1,0.48,1.43,5.0,1.44,,Holofoil,,
+87147,Manaphy,Manaphy,https://tcgplayer-cdn.tcgplayer.com/product/87147_200w.jpg,3,1446,https://cpt.tcgcsv.com/ZSJ,2022-09-25T17:07:21.583,1,002/017,Rare,Water,70,Basic,"[W] Dive
+<br>Look at the top 7 cards of your deck, choose 1 of them, and put it into your hand. Put the other cards back on top of your deck. Shuffle your deck afterward.","[W] Water Glow
+<br>
+Choose 1 of your opponent's Pokémon. This attack does 20 damage to that Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em> Remove from Manaphy the number of damage counters equal to the damage you did to that Pokémon.",L+20,1,0.82,1.5,6.24,2.71,,Normal,,
+87147,Manaphy,Manaphy,https://tcgplayer-cdn.tcgplayer.com/product/87147_200w.jpg,3,1446,https://cpt.tcgcsv.com/ZSJ,2022-09-25T17:07:21.583,1,002/017,Rare,Water,70,Basic,"[W] Dive
+<br>Look at the top 7 cards of your deck, choose 1 of them, and put it into your hand. Put the other cards back on top of your deck. Shuffle your deck afterward.","[W] Water Glow
+<br>
+Choose 1 of your opponent's Pokémon. This attack does 20 damage to that Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em> Remove from Manaphy the number of damage counters equal to the damage you did to that Pokémon.",L+20,1,1.72,2.04,3.99,2.43,,Holofoil,,
+87902,Pachirisu,Pachirisu,https://tcgplayer-cdn.tcgplayer.com/product/87902_200w.jpg,3,1446,https://cpt.tcgcsv.com/3bK,2022-09-25T17:16:55.707,1,010/017,Uncommon,Lightning,70,Basic,"[L] Thunder Wave (10)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.","[1L] Poison Berry (20+)
+<br>If you have Croagunk in play, this attack does 20 damage plus 20 more damage and the Defending Pokémon is now Poisoned.",F+20,1,2.87,4.0,7.99,3.86,,Normal,M-20,
+88020,Pichu,Pichu,https://tcgplayer-cdn.tcgplayer.com/product/88020_200w.jpg,3,1446,https://cpt.tcgcsv.com/qdK,2022-09-25T17:18:28.017,1,011/017,Uncommon,Lightning,40,Basic,"[0] Find a Friend
+<br>Flip a coin. If heads, search your deck for a Pokémon, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",,F+10,1,7.19,13.0,349.99,12.65,,Normal,M-20,"<strong>Poké-POWER — Baby Evolution</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may put Pikachu from your hand onto Pichu (this counts as evolving Pichu) and remove all damage counters from Pichu."
+88092,Pikachu,Pikachu,https://tcgplayer-cdn.tcgplayer.com/product/88092_200w.jpg,3,1446,https://cpt.tcgcsv.com/SfK,2022-09-25T17:23:22.233,1,015/017,Common,Lightning,60,Basic,"[1] Growl
+<br>During your opponent's next turn, any damage done by attacks from the Defending Pokémon is reduced by 20 <em>(before applying Weakness and Resistance)</em>.","[2L] Numb (30)
+<br>If Pikachu evolved from Pichu during this turn, the Defending Pokémon is now Paralyzed.",F+10,1,6.0,10.05,25.99,8.95,,Normal,M-20,
+88150,Piplup,Piplup,https://tcgplayer-cdn.tcgplayer.com/product/88150_200w.jpg,3,1446,https://cpt.tcgcsv.com/0hK,2022-09-25T17:24:25,1,016/017,Common,Water,50,Basic,"[W] Water Sport (10+)
+<br>If Piplup has less Energy attached to it than the Defending Pokémon, this attack does 10 damage plus 10 more damage.","[2W] Wavelet (40)
+<br>If you have Buizel in play, this attack does 10 damage to each of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",L+10,1,0.59,1.0,3.0,1.43,1.65,Normal,,
+88514,Raichu,Raichu,https://tcgplayer-cdn.tcgplayer.com/product/88514_200w.jpg,3,1446,https://cpt.tcgcsv.com/jqK,2022-09-25T17:08:33.957,1,003/017,Rare,Lightning,90,Stage 1,"[2] Slam (30x)
+<br>Flip 2 coins. This attack does 30 damage times the number of heads.","[LLL] High Voltage (60)
+<br>If Raichu evolved from Pikachu this turn, this attack's base damage is 100 instead of 60.",F+20,1,3.95,5.27,8.97,8.46,,Normal,M-20,
+88514,Raichu,Raichu,https://tcgplayer-cdn.tcgplayer.com/product/88514_200w.jpg,3,1446,https://cpt.tcgcsv.com/jqK,2022-09-25T17:08:33.957,1,003/017,Rare,Lightning,90,Stage 1,"[2] Slam (30x)
+<br>Flip 2 coins. This attack does 30 damage times the number of heads.","[LLL] High Voltage (60)
+<br>If Raichu evolved from Pikachu this turn, this attack's base damage is 100 instead of 60.",F+20,1,5.0,9.99,15.79,10.72,,Reverse Holofoil,M-20,
+88664,Regigigas,Regigigas,https://tcgplayer-cdn.tcgplayer.com/product/88664_200w.jpg,3,1446,https://cpt.tcgcsv.com/jtK,2022-09-25T17:09:46.067,1,004/017,Rare,Colorless,100,Basic,"[3] Body Slam (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.","[4] Double Stomp (50+)
+<br>Flip 2 coins. This attack does 50 damage plus 20 more damage for each heads.",Fx2,4,1.39,2.04,5.0,2.06,,Normal,,
+88664,Regigigas,Regigigas,https://tcgplayer-cdn.tcgplayer.com/product/88664_200w.jpg,3,1446,https://cpt.tcgcsv.com/jtK,2022-09-25T17:09:46.067,1,004/017,Rare,Colorless,100,Basic,"[3] Body Slam (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.","[4] Double Stomp (50+)
+<br>Flip 2 coins. This attack does 50 damage plus 20 more damage for each heads.",Fx2,4,3.31,4.4,7.85,5.28,,Holofoil,,
+88837,Rotom,Rotom,https://tcgplayer-cdn.tcgplayer.com/product/88837_200w.jpg,3,1446,https://cpt.tcgcsv.com/MxK,2022-09-25T17:11:37.977,1,005/017,Rare,Lightning,70,Basic,"[1P] Poltergeist (30+)
+<br>Look at your opponent's hand. This attack does 30 damage plus 10 more damage for each Trainer, Supporter, and Stadium card in your opponent's hand.",,D+20,1,1.19,3.62,5.74,3.57,,Normal,C-20,"<strong>Poké-POWER — Type Shift</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may use this power. Rotom's type is Psychic until the end of your turn."
+88837,Rotom,Rotom,https://tcgplayer-cdn.tcgplayer.com/product/88837_200w.jpg,3,1446,https://cpt.tcgcsv.com/MxK,2022-09-25T17:11:37.977,1,005/017,Rare,Lightning,70,Basic,"[1P] Poltergeist (30+)
+<br>Look at your opponent's hand. This attack does 30 damage plus 10 more damage for each Trainer, Supporter, and Stadium card in your opponent's hand.",,D+20,1,2.0,6.62,17.99,6.94,,Holofoil,C-20,"<strong>Poké-POWER — Type Shift</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may use this power. Rotom's type is Psychic until the end of your turn."
+90078,Turtwig,Turtwig,https://tcgplayer-cdn.tcgplayer.com/product/90078_200w.jpg,3,1446,https://cpt.tcgcsv.com/B2L,2023-02-01T18:34:12.12,1,017/017,Common,Grass,60,Basic,"[G] Absorb (10)
+<br>Remove 1 damage counter from Turtwig.","[2G] Parboil (40+)
+<br>If you have Chimchar in play, this attack does 40 damage plus 20 more damage and the Defending Pokémon is now Burned.",R+10,2,0.35,0.75,5.0,0.86,,Normal,W-20,
+190537,POP Series 9 Pack,POP Series 9 Pack,https://tcgplayer-cdn.tcgplayer.com/product/190537_200w.jpg,3,1446,https://cpt.tcgcsv.com/Mdx2,2019-05-16T15:25:28.397,1,,,,,,,,,,14.98,19.98,27.25,18.45,,Normal,,Each POP Series 9 Pack contains 2 random cards for the Promotional POP Series 9.

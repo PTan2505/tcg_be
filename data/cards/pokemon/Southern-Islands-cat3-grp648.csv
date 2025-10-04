@@ -1,0 +1,54 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extWeakness,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extAttack2,extRetreatCost,extResistance,extCardText,extUPC
+46466,Mew,Mew,https://tcgplayer-cdn.tcgplayer.com/product/46466_200w.jpg,3,648,https://cpt.tcgcsv.com/lCn,2022-12-05T18:33:12.977,1,01/18,Promo,Psychic,30,Basic,"[P] Rainbow Wave
+<br>Choose a type of Energy other than Colorless attached to Mew. This attack does 20 damage to each of your opponent's Pokémon of that type <em>(including Benched Pokémon)</em>. Don't apply Weakness and Resistance.",P,277.69,345.5,499.99,216.75,,Reverse Holofoil,,,,,
+46467,Tentacruel,Tentacruel,https://tcgplayer-cdn.tcgplayer.com/product/46467_200w.jpg,3,648,https://cpt.tcgcsv.com/mCn,2024-10-14T18:19:04.307,1,10/18,Promo,Water,60,Stage 1,"[W] Tentacle Grip
+<br>Flip a number of coins equal to the number of Water Energy attached to Tentacruel. For each heads, draw 2 cards.",L,24.72,44.0,60.0,24.74,49.95,Normal,"[WW] Poison Sting (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",1,,,
+46468,Marill,Marill,https://tcgplayer-cdn.tcgplayer.com/product/46468_200w.jpg,3,648,https://cpt.tcgcsv.com/nCn,2022-12-05T18:31:23.403,1,11/18,Promo,Water,40,Basic,"[W] Squirt
+<br>Choose 1 of your opponent's Pokémon. This attack does 10 damage to that Pokémon. Don't apply Weakness and Resistance.",L,64.7,112.37,164.95,81.76,,Reverse Holofoil,[2] Rolling Tackle (20),1,,,
+46469,Lapras,Lapras,https://tcgplayer-cdn.tcgplayer.com/product/46469_200w.jpg,3,648,https://cpt.tcgcsv.com/pCn,2022-12-05T18:27:14.473,1,12/18,Promo,Water,70,Basic,"[1] Gentle Song
+<br>If Lapras has any damage counters on it, remove 2 of them from it. (1 if it only has 1). If the Defending Pokémon has any damage counters on it, remove 2 of them from it (1 if it only has 1). The Defending Pokémon is now Asleep.",L,33.0,64.95,79.99,36.03,,Normal,"[WW] Ice Beam (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",1,,,
+46470,Exeggutor,Exeggutor,https://tcgplayer-cdn.tcgplayer.com/product/46470_200w.jpg,3,648,https://cpt.tcgcsv.com/qCn,2022-12-05T18:23:11.707,1,13/18,Promo,Grass,70,Stage 1,"[G] Sharpshooter
+<br>Choose 1 of your opponent's Pokémon. Flip a number of coins equal to the number of Grass Energy attached to Exeggutor. This attack does 10 damage times the number of heads to that Pokémon. Don't apply Weakness and Resistance.",R,12.93,15.25,70.0,17.16,,Normal,,2,,,
+46471,Slowking,Slowking,https://tcgplayer-cdn.tcgplayer.com/product/46471_200w.jpg,3,648,https://cpt.tcgcsv.com/rCn,2022-12-05T18:42:09.59,1,14/18,Promo,Psychic,70,Stage 1,"[P] Revelation
+<br>Flip a coin. If heads, search your deck for a Trainer card, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",P,189.99,199.49,229.99,98.24,,Reverse Holofoil,"[1P] Psychic (10+)
+<br>Does 10 damage plus 10 more damage for each Energy card attached to the Defending Pokémon.",2,,,
+46472,Wartortle,Wartortle,https://tcgplayer-cdn.tcgplayer.com/product/46472_200w.jpg,3,648,https://cpt.tcgcsv.com/sCn,2022-12-05T18:49:48.873,1,15/18,Promo,Water,60,Stage 1,"[WW] Water Gun (20+)
+<br>Does 20 damage plus 10 more damage for each Water Energy attached to Wartortle but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.",L,29.23,40.0,69.99,37.06,,Normal,,1,,,
+46473,Lickitung,Lickitung,https://tcgplayer-cdn.tcgplayer.com/product/46473_200w.jpg,3,648,https://cpt.tcgcsv.com/tCn,2022-12-05T18:29:58.347,1,16/18,Rare,,70,Basic,"[1] Lick Wounds
+<br>Flip a coin. If heads, choose 1 Pokémon <em>(yours or your opponent's)</em> with damage counters on it and remove 2 damage counters from it (1 if it only has 1).",F,14.4,28.97,39.5,15.93,,Normal,"[2] Tongue Stretch
+<br>Flip a coin. If heads, choose 1 of your opponent's Pokémon. This attack does 20 damage to that Pokémon. Don't apply Weakness and Resistance.",2,P-30,,
+46474,Vileplume,Vileplume,https://tcgplayer-cdn.tcgplayer.com/product/46474_200w.jpg,3,648,https://cpt.tcgcsv.com/vCn,2022-12-05T18:48:40.517,1,17/18,Promo,Grass,70,Stage 2,"[G] Paradise Pollen
+<br>Flip a coin. If heads, remove 2 damage counters from Vileplume (1 if it only has 1). Then, if you have any Benched Pokémon with damage counters on them, choose 1 of them and remove 2 damage counters from it (1 if it only has 1).",R,27.91,100.0,150.0,39.06,,Reverse Holofoil,"[1GG] Horrid Pollen (30)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, the Defending Pokémon is now Confused.",2,,,
+46475,Primeape,Primeape,https://tcgplayer-cdn.tcgplayer.com/product/46475_200w.jpg,3,648,https://cpt.tcgcsv.com/wCn,2022-12-05T18:39:41.507,1,18/18,Promo,Fighting,60,Stage 1,[F] Low Kick (20),P,20.52,34.99,70.0,20.04,,Normal,"[FF] Rampage (20+)
+<br>Does 20 damage plus 10 more damage for each damage counter on Primeape. Flip a coin. If tails, Primeape is now Confused <em>(after doing damage)</em>.",1,,,
+46476,Pidgeot,Pidgeot,https://tcgplayer-cdn.tcgplayer.com/product/46476_200w.jpg,3,648,https://cpt.tcgcsv.com/xCn,2022-12-05T18:37:32.78,1,02/18,Promo,Colorless,70,Stage 2,"[2] Supersonic Flight (40)
+<br>Flip a coin. If tails, this attack does nothing.",L,17.8,39.97,70.0,25.75,,Normal,[4] Slicing Wind (50),,F-30,,
+46477,Onix,Onix,https://tcgplayer-cdn.tcgplayer.com/product/46477_200w.jpg,3,648,https://cpt.tcgcsv.com/zCn,2022-12-05T18:35:45.55,1,03/18,Promo,Fighting,90,Basic,"[2] Slam (20x)
+<br>Flip 2 coins. This attack does 20 damage times the number of heads.",G,19.25,39.5,70.0,25.87,,Normal,"[FFFF] Body Slam (40)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",3,,,
+46478,Togepi,Togepi,https://tcgplayer-cdn.tcgplayer.com/product/46478_200w.jpg,3,648,https://cpt.tcgcsv.com/BCn,2022-12-05T18:47:23.567,1,04/18,Promo,Colorless,40,Basic,"[1] Bawl (10)
+<br>Flip a coin. If heads, the Defending Pokémon is now Confused.",,85.99,249.99,251.29,93.76,,Reverse Holofoil,,1,P-30,,
+46479,Ivysaur,Ivysaur,https://tcgplayer-cdn.tcgplayer.com/product/46479_200w.jpg,3,648,https://cpt.tcgcsv.com/CCn,2022-12-05T18:24:13.27,1,05/18,Promo,Grass,60,Stage 1,"[G] Strange Scent
+<br>Each player flips a coin. Each player who gets heads chooses a total of 3 damage counters from among his or her Pokémon and removes them. <em>(If that player's Pokémon have fewer total damage counters than that, he or she removers all of them.)</em>",R,25.0,49.95,99.99,29.88,,Normal,[GG] Razor Leaf (30),1,,,
+46480,Raticate,Raticate,https://tcgplayer-cdn.tcgplayer.com/product/46480_200w.jpg,3,648,https://cpt.tcgcsv.com/DCn,2022-12-05T18:40:33.967,1,06/18,Promo,Colorless,60,Stage 1,"[2] Sharp Teeth (10+)
+<br>Flip a coin. If heads, this attack does 10 damage plus 10 more damage; if tails, this attack does 10 damage.",F,8.98,19.04,80.0,13.96,,Normal,,,P-30,,
+46481,Ledyba,Ledyba,https://tcgplayer-cdn.tcgplayer.com/product/46481_200w.jpg,3,648,https://cpt.tcgcsv.com/FCn,2022-12-05T18:28:40.793,1,07/18,Promo,Grass,40,Basic,[1] Gnaw (10),R,28.0,80.0,120.0,26.39,,Reverse Holofoil,"[GG] Agility (20)
+<br>Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Ledyba.",1,F-30,,
+46482,Jigglypuff,Jigglypuff,https://tcgplayer-cdn.tcgplayer.com/product/46482_200w.jpg,3,648,https://cpt.tcgcsv.com/GCn,2022-12-05T18:26:04.707,1,08/18,Promo,Colorless,50,Basic,"[1] Tempting Eyes
+<br>Choose 1 of your opponent's Benched Pokémon and switch it with the Defending Pokémon.",F,23.77,48.96,59.95,26.04,,Normal,"[1] Sing
+<br>Flip a coin. If heads, the Defending Pokémon is now Asleep.",1,P-30,,
+46483,Butterfree,Butterfree,https://tcgplayer-cdn.tcgplayer.com/product/46483_200w.jpg,3,648,https://cpt.tcgcsv.com/HCn,2022-12-05T18:22:17.473,1,09/18,Promo,Grass,80,Stage 2,"[3] Fly (30)
+<br>Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Butterfree. If tails, this attack does nothing <em>(not even damage)</em>.",R,23.11,44.0,60.0,21.46,,Normal,"[1GG] Rainbow Powder (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, the Defending Pokémon is now Poisoned.",1,F-30,,
+610709,Southern Islands Collection,Southern Islands Collection,https://tcgplayer-cdn.tcgplayer.com/product/610709_200w.jpg,3,648,https://cpt.tcgcsv.com/cjV6,2025-01-13T18:34:58.453,1,,,,,,,,5200.0,5200.0,5200.0,4999.99,,Normal,,,,"18 Exclusive Pokemon trading card game cards available for the first time!
+<br>
+Contains:
+<br>• 18 unique Southern Islands Collection cards
+<br>• 3 randomized booster packs
+<br>• 1 unique Southern Collection binder
+<br>• 1 card list
+<br>• 6 unique Pokemon postcards
+<br>• 9-pocket pages to hold all included cards",7 42818 06280 0

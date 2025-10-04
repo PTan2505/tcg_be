@@ -1,0 +1,16 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extCardText,extAttack1,extAttack2,extWeakness,extResistance,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName
+162268,Treecko - 1/5,Treecko 1 5,https://tcgplayer-cdn.tcgplayer.com/product/162268_200w.jpg,3,2214,https://cpt.tcgcsv.com/nWj2,2022-09-26T18:31:04.457,1,001/005,Promo,Grass,60,Basic,"<span style=""color:red""><strong>Not Tournament Legal.</strong></span>",[1] Tackle (10),"[2G] Poison Claws (30)
+<br>The Defending Pokémon is now Poisoned.",Rx2,W-30,1,400.0,425.0,499.99,,,Normal
+162269,Wurmple - 2/5,Wurmple 2 5,https://tcgplayer-cdn.tcgplayer.com/product/162269_200w.jpg,3,2214,https://cpt.tcgcsv.com/pWj2,2022-09-26T18:32:29.597,1,002/005,Promo,Grass,50,Basic,"<span style=""color:red""><strong>Not Tournament Legal.</strong></span>","[1] Gooey Thread (10)
+<br>The Defending Pokémon can't retreat until the end of your opponent's next turn.","[1G] Lunge (40)
+<br>Flip a coin. If tails, this attack does nothing.",Rx2,,1,499.93,499.99,650.0,,,Normal
+162270,Torchic - 3/5,Torchic 3 5,https://tcgplayer-cdn.tcgplayer.com/product/162270_200w.jpg,3,2214,https://cpt.tcgcsv.com/qWj2,2022-09-26T18:33:37.613,1,003/005,Promo,Fire,60,Basic,"<span style=""color:red""><strong>Not Tournament Legal.</strong></span>","[R] Super Singe (10)
+<br>The Defending Pokémon is now Burned.","[2R] Flamethrower (40)
+<br>Discard a Fire Energy card attached to Torchic.",Wx2,,1,499.99,499.99,499.99,,,Normal
+162271,Mudkip - 4/5,Mudkip 4 5,https://tcgplayer-cdn.tcgplayer.com/product/162271_200w.jpg,3,2214,https://cpt.tcgcsv.com/rWj2,2022-09-26T18:31:39.717,1,004/005,Promo,Water,60,Basic,"<span style=""color:red""><strong>Not Tournament Legal.</strong></span>","[1] Tail Rap (10x)
+<br>Flip 2 coins. This attack does 10 damage times the number of heads.","[2W] Hypno Slash (30)
+<br>The Defending Pokémon is now Asleep.",Lx2,,1,371.0,371.0,371.0,400.0,,Normal
+162272,Pikachu - 5/5,Pikachu 5 5,https://tcgplayer-cdn.tcgplayer.com/product/162272_200w.jpg,3,2214,https://cpt.tcgcsv.com/sWj2,2022-09-26T18:33:14.913,1,005/005,Promo,Lightning,60,Basic,"<span style=""color:red""><strong>Not Tournament Legal.</strong></span>","[1] Thundershock (10)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.","[1LL] Shock Bolt (60)
+<br>Discard all Lightning Energy cards attached to Pikachu or this attack does nothing.",Fx2,,1,,,,,,
+162279,Poke Card Creator Pack,Poke Card Creator Pack,https://tcgplayer-cdn.tcgplayer.com/product/162279_200w.jpg,3,2214,https://cpt.tcgcsv.com/CWj2,2021-07-02T21:19:23.89,1,,,,,,"This rare, promotional foil-booster pack contains 5 promotional cards with illustrations from the Kids' WB! Poke Card Creator Contest. Only a total of 5,250 packs were distributed in July 2004.",,,,,,,,,,,

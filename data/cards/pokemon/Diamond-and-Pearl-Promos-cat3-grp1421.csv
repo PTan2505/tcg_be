@@ -1,0 +1,260 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extCardText,extAttack1,extWeakness,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extAttack2,extResistance
+83601,Arceus - DP50,Arceus DP50,https://tcgplayer-cdn.tcgplayer.com/product/83601_200w.jpg,3,1421,https://cpt.tcgcsv.com/2sH,2022-08-11T19:52:02.937,1,DP50,Promo,Colorless,90,Basic,<em>You may have as many of this card in your deck as you like.</em>,"[4] Judgment (80) 
+<br>Discard all Energy cards attached to Arceus and this attack does 10 damage to each of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",Fx2,2,15.64,19.76,49.99,16.73,19.76,Holofoil,,
+83605,Arceus LV.X - DP53,Arceus LVX DP53,https://tcgplayer-cdn.tcgplayer.com/product/83605_200w.jpg,3,1421,https://cpt.tcgcsv.com/7sH,2022-08-11T19:56:06.557,1,DP53,Promo,Colorless,120,Level Up,"<em>You may have as many of this card in your deck as you like.</em>
+<br>
+<strong>Poké-BODY — Multitype</strong>
+<br>
+Arceus LV.X's type is the same type as its previous Level.
+<br>
+<strong>Poké-BODY — Omniscient</strong>
+<br>
+Arceus can use the attacks of all Arceus you have in play as its own. (You still need the necessary Energy to use each attack.)
+<br><br>
+<em>Put this card onto your Active Arceus. Arceus LV.X can use any attack, Poké-Power, or Poké-Body from its previous Level.</em>",,,1,23.71,47.49,140.4,27.14,,Holofoil,,
+83606,Arceus LV.X - DP56,Arceus LVX DP56,https://tcgplayer-cdn.tcgplayer.com/product/83606_200w.jpg,3,1421,https://cpt.tcgcsv.com/8sH,2022-08-11T19:59:48.68,1,DP56,Promo,Colorless,120,Level Up,"<em>You may have as many of this card in your deck as you like.</em>
+<br>
+<strong>Poké-BODY — Multitype</strong>
+<br>
+Arceus LV.X's type is the same as its previous Level.
+<br><br>
+<em>Put this card onto your Active Arceus. Arceus LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.</em>","[1GR] Meteor Blast (100) 
+<br>Flip a coin. If tails, this attack's base damage is 50 instead of 100.",,1,20.13,29.54,53.9,48.01,,Holofoil,,
+84019,Buizel - DP13,Buizel DP13,https://tcgplayer-cdn.tcgplayer.com/product/84019_200w.jpg,3,1421,https://cpt.tcgcsv.com/pDH,2022-08-11T20:18:13.287,1,DP13,Promo,Water,60,Basic,,"[W] Splash About (10+) 
+<br>If Buizel has less Energy attached to it than the Defending Pokémon, this attack does 10 damage plus 10 more damage.",L+10,1,4.84,6.1,14.99,9.39,,Holofoil,,
+84041,Buneary - DP06,Buneary DP06,https://tcgplayer-cdn.tcgplayer.com/product/84041_200w.jpg,3,1421,https://cpt.tcgcsv.com/RDH,2022-08-11T20:19:37.98,1,DP06,Promo,Colorless,50,Basic,,[1] Splash (10),F+10,1,0.99,3.07,4.75,4.29,,Holofoil,"[2] Jump Kick (10) 
+<br>Does 10 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",
+84108,Carnivine G - DP42,Carnivine G DP42,https://tcgplayer-cdn.tcgplayer.com/product/84108_200w.jpg,3,1421,https://cpt.tcgcsv.com/bGH,2023-09-19T16:39:58.75,1,DP42,Promo,Grass,80,Basic,,"[1] Power Whip 
+<br>Choose 1 of your opponent's Pokémon.  This attack does 10 damage for each Energy attached to Carnivine G to that Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",Rx2,1,1.6,3.99,19.99,4.24,,Holofoil,"[1G] Grass Knot (20+) 
+<br>Does 20 damage plus 10 more damage for each Colorless Energy in the Defending Pokémon's Retreat Cost (after applying effects to the Retreat Cost).",W-20
+84202,Charizard G LV.X - DP45,Charizard G LVX DP45,https://tcgplayer-cdn.tcgplayer.com/product/84202_200w.jpg,3,1421,https://cpt.tcgcsv.com/3JH,2022-08-11T20:24:53.473,1,DP45,Promo,Fire,120,Level Up,"<strong>Poké-POWER — Call for Power</strong>
+<br>
+As often as you like during your turn <em>(before your attack)</em>, you may move an Energy attached to 1 of your Pokémon to Charizard G. This power can’t be used if Charizard G is affected by a Special Condition.
+<br><br>
+<em>Put this card onto your Active Charizard G. Charizard G LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.</em>","[3RR] Malevolent Fire (150) 
+<br>Flip a coin. If tails, discard all Energy attached to Charizard G.",Wx2,3,48.26,87.05,125.0,107.7,,Holofoil,,F-20
+84241,Chatot - DP14,Chatot DP14,https://tcgplayer-cdn.tcgplayer.com/product/84241_200w.jpg,3,1421,https://cpt.tcgcsv.com/RJH,2022-08-11T20:26:44.213,1,DP14,Promo,Colorless,60,Basic,,"[1] Me First 
+<br>Draw a card.",L+10,1,6.44,12.25,14.75,13.5,,Holofoil,"[1] Tone-Deaf (10) 
+<br>Flip a coin. If heads, the Defending Pokémon is now Confused.",F-20
+84286,Chimchar - DP02,Chimchar DP02,https://tcgplayer-cdn.tcgplayer.com/product/84286_200w.jpg,3,1421,https://cpt.tcgcsv.com/LKH,2022-08-11T20:28:18.147,1,DP02,Promo,Fire,50,Basic,,[0] Scratch (10),W+10,1,10.21,10.96,11.7,10.17,,Holofoil,"[1R] Ember (30) 
+<br>Flip a coin. If tails, discard a Fire Energy attached to Chimchar.",
+84459,Cranidos - DP07,Cranidos DP07,https://tcgplayer-cdn.tcgplayer.com/product/84459_200w.jpg,3,1421,https://cpt.tcgcsv.com/cPH,2022-08-11T20:30:03.657,1,DP07,Promo,Fighting,70,Stage 1,,[1] Headbutt (20),G+20,1,2.95,4.95,8.37,6.58,,Holofoil,"[1F] Steamroll (30) 
+<br>Does 20 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",
+84469,Cresselia - DP51,Cresselia DP51,https://tcgplayer-cdn.tcgplayer.com/product/84469_200w.jpg,3,1421,https://cpt.tcgcsv.com/pPH,2022-08-11T20:34:09.68,1,DP51,Promo,Psychic,90,Basic,"<strong>Poké-BODY — Lunar Aura</strong>
+<br>If you have Darkrai in play, remove 1 damage counter from Cresselia between turns.","[1PP] Lunar Flight (80-) 
+<br>Does 80 damage minus 10 damage for each damage counter on Cresselia.",Px2,2,2.43,4.99,7.99,5.01,,Holofoil,,
+84701,Darkrai - DP24,Darkrai DP24,https://tcgplayer-cdn.tcgplayer.com/product/84701_200w.jpg,3,1421,https://cpt.tcgcsv.com/2VH,2022-08-11T20:38:37.083,1,DP24,Promo,Darkness,80,Basic,"<strong>Held Item — Enigma Berry</strong> <em>If Darkrai is damaged by an attack from your opponent's Fighting Pokémon, remove 4 damage counters at the end of that turn.</em>","[W] Spacial Rend (10) 
+<br>Search your deck for a Stadium card, show it to your opponent, and put it into your hand. Shuffle your deck afterward. If there is any Stadium card in play, discard it.",F+20,1,6.0,7.13,12.0,11.57,,Holofoil,"[MMM] Roar of Time (80) 
+<br>Search your discard pile for 3 Pokémon, show them to your opponent, and put them on top of your deck.  Shuffle your deck afterward. <em>(If you don't have 3 Pokémon in your discard pile, this attack does nothing.)</em>",P-20
+84702,Darkrai - DP52,Darkrai DP52,https://tcgplayer-cdn.tcgplayer.com/product/84702_200w.jpg,3,1421,https://cpt.tcgcsv.com/3VH,2024-10-17T21:24:49.333,1,DP52,Promo,Darkness,90,Basic,"<strong>Poké-BODY — Darkness Aura</strong>
+<br>
+If you have Cresselia in play, each of Darkrai's attacks does 20 more damage to the Defending Pokémon <em>(before applying Weakness and Resistance)</em>.","[1DD] Hypnoblast (60) 
+<br>Flip a coin. If heads, the Defending Pokémon is now Asleep.",Fx2,2,3.79,5.37,6.69,10.23,,Holofoil,,P-20
+84712,Darkrai LV.X - DP19,Darkrai LVX DP19,https://tcgplayer-cdn.tcgplayer.com/product/84712_200w.jpg,3,1421,https://cpt.tcgcsv.com/gVH,2022-08-11T20:44:28.26,1,DP19,Promo,Darkness,100,Level Up,"<strong>Poké-BODY — Dark Shadow</strong>
+<br>
+Each basic Darkness Energy card attached to your Darkness Pokémon now has the effect ""If the Pokémon Darkness Energy is attached to attacks, the attack does 10 more damage to the Active Pokémon <em>(before applying Weakness and Resistance)</em>."" You can't use more than 1 Dark Shadow Poké-Body each turn.
+<br><br>
+<em>Put this card onto your Active Darkrai. Darkrai LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.</em>","[1DD] Endless Darkness (40) 
+<br>The Defending Pokémon is now Asleep. Flip 2 coins instead of 1 between turns. If either of them are tails, the Defending Pokémon is still Asleep. If both of them are tails, the Defending Pokémon is Knocked Out.",Fx2,1,45.26,47.63,49.99,29.49,,Holofoil,,None
+84801,Dialga - DP26,Dialga DP26,https://tcgplayer-cdn.tcgplayer.com/product/84801_200w.jpg,3,1421,https://cpt.tcgcsv.com/2XH,2022-08-11T20:46:56.897,1,DP26,Promo,Metal,90,Basic,,"[M] Time Bellow (10) 
+<br>Draw a card.",R+20,2,3.48,5.59,8.23,6.56,,Holofoil,"[1MM] Flash Cannon (40) 
+<br>You may return all Energy cards attached to Dialga to your hand. If you do, remove the highest Stage Evolution card from the Defending Pokémon and shuffle that card into your opponent's deck.",P-20
+84805,Dialga - DP49,Dialga DP49,https://tcgplayer-cdn.tcgplayer.com/product/84805_200w.jpg,3,1421,https://cpt.tcgcsv.com/7XH,2022-08-11T20:48:58.897,1,DP49,Promo,Metal,100,Basic,,"[M] Time Call 
+<br>Search your deck for a card that evolves from 1 of your Pokémon and put it onto that Pokémon. (This counts as evolving that Pokemon.) Shuffle your deck afterward.",Rx2,2,5.0,10.0,33.99,8.66,,Holofoil,"[2M] Time Wager (100) 
+<br>Flip 2 coins. If either of them is tails, this attack's base damage is 50 instead of 100.",P-20
+84813,Dialga LV.X - DP17,Dialga LVX DP17,https://tcgplayer-cdn.tcgplayer.com/product/84813_200w.jpg,3,1421,https://cpt.tcgcsv.com/hXH,2022-08-11T20:50:44.527,1,DP17,Promo,Metal,110,Level Up,"<strong>Poké-POWER — Time Skip</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may have your opponent flip 2 coins. If both of them are heads, your turn ends. If both of them are tails, after your opponent draws a card at the beginning of his or her next turn, his or her turn ends. This power can’t be used if Dialga is affected by a Special Condition.
+<br><br>
+<em>Put this card onto your Active Dialga. Dialga LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.</em>","[2MM] Metal Flash (80) 
+<br>During your next turn, Dialga can't use Metal Flash.",Rx2,2,36.55,41.05,43.7,34.25,,Holofoil,,P-20
+84814,Dialga LV.X - DP37,Dialga LVX DP37,https://tcgplayer-cdn.tcgplayer.com/product/84814_200w.jpg,3,1421,https://cpt.tcgcsv.com/jXH,2022-08-11T20:51:30.57,1,DP37,Promo,Metal,110,Level Up,"<strong>Poké-POWER — Time Skip</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may have your opponent flip 2 coins. If both of them are heads, your turn ends. If both of them are tails, after your opponent draws a card at the beginning of his or her next turn, his or her turn ends. This power can’t be used if Dialga is affected by a Special Condition.
+<br><br>
+<em>Put this card onto your Active Dialga. Dialga LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.</em>","[2MM] Metal Flash (80) 
+<br>During your next turn, Dialga can't use Metal Flash.",Rx2,2,17.99,25.29,33.74,28.86,19.76,Holofoil,,P-20
+84946,Drifblim - DP34,Drifblim DP34,https://tcgplayer-cdn.tcgplayer.com/product/84946_200w.jpg,3,1421,https://cpt.tcgcsv.com/X-H,2022-08-11T20:53:48.547,1,DP34,Promo,Psychic,80,Stage 1,,"[1] Wind Wave 
+<br>Search your discard pile for up to 5 in any combination of Pokémon and Supporter cards. Show them to your opponent and shuffle them into your deck.",D+20,,3.56,7.5,12.59,11.72,,Holofoil,"[PPP] Explosive Smoke (60) 
+<br>Does 10 damage to each Benched Pokémon (both yours and your opponent's). <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",C-20
+85039,Dusknoir - DP33,Dusknoir DP33,https://tcgplayer-cdn.tcgplayer.com/product/85039_200w.jpg,3,1421,https://cpt.tcgcsv.com/P0J,2022-08-11T21:03:08.617,1,DP33,Promo,Psychic,130,Stage 2,"<strong>Poké-POWER — Dark Hide</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may flip a coin. If heads, look at your opponent’s hand, choose a Pokémon you find there, and put it on the bottom of his or her deck. This power can’t be used if Dusknoir is affected by a Special Condition.","[1PP] Reaper Pulse (70) 
+<br>Move up to 2 damage counters from Dusknoir to 1 of your opponent's Benched Pokémon.",D+30,2,1.95,3.43,7.1,3.14,4.2,Holofoil,,C-20
+85207,Empoleon LV.X - DP11,Empoleon LVX DP11,https://tcgplayer-cdn.tcgplayer.com/product/85207_200w.jpg,3,1421,https://cpt.tcgcsv.com/96J,2022-08-11T21:05:21.113,1,DP11,Promo,Water,140,Level Up,"<strong>Poké-POWER — Supreme Command</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may choose up to 2 cards from your opponent’s hand without looking and put them face down next to the Defending Pokémon. (These cards are not in play or in your opponent’s hand.) At the end of your opponent’s next turn, return those cards to your opponent’s hand. This power can’t be used if Empoleon is affected by a Special Condition.
+<br><br>
+<em>Put this card onto your Active Empoleon. Empoleon LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.</em>","[WWW] Hydro Impact 
+<br>Choose 1 of your opponent's Pokémon. This attack does 80 damage to that Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em> Empoleon can't attack during your next turn.",L+30,2,11.51,18.36,67.21,24.29,,Holofoil,,
+85630,Garchomp C LV.X - DP46,Garchomp C LVX DP46,https://tcgplayer-cdn.tcgplayer.com/product/85630_200w.jpg,3,1421,https://cpt.tcgcsv.com/DgJ,2022-08-11T21:10:56.437,1,DP46,Promo,Colorless,110,Level Up,"<strong>Poké-POWER — Healing Breath</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, when you put Garchomp C LV.X from your hand onto your Active Garchomp C, you may remove all damage counters from each of your Pokémon SP.
+<br><br>
+<em>Put this card onto your Active Garchomp C. Garchomp C LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.</em>","[3] Dragon Rush 
+<br>Discard 2 Energy attached to Garchomp C. Choose 1 of your opponent's Pokémon. This attack does 80 damage to that Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em> Garchomp C can't use Dragon Rush during your next turn.",Cx2,,38.9,50.0,89.99,25.18,,Holofoil,,
+85743,Giratina LV.X - DP38,Giratina LVX DP38,https://tcgplayer-cdn.tcgplayer.com/product/85743_200w.jpg,3,1421,https://cpt.tcgcsv.com/TjJ,2022-08-11T21:13:52.063,1,DP38,Promo,Psychic,130,Level Up,"<strong>Poké-BODY — Invisible Tentacles</strong>
+<br>
+Whenever your opponent’s Pokémon tries to attack, your opponent discards 1 card from his or her hand. (If your opponent can’t discard 1 card, your opponent’s Pokémon can’t attack.) You can’t use more than 1 Invisible Tentacles Poké-Body each turn.
+<br><br>
+<em>Put this card onto your Active Giratina. Giratina LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.</em>","[2PP] Darkness Lost 
+<br>This attack does 30 damage to each of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em> If any of your opponent's Pokémon would be Knocked Out by damage from this attack, put that Pokémon and all cards attached to it in the Lost Zone instead of discarding it.",Dx2,3,41.5,70.15,149.99,63.47,,Holofoil,,C-20
+85761,Glameow - DP23,Glameow DP23,https://tcgplayer-cdn.tcgplayer.com/product/85761_200w.jpg,3,1421,https://cpt.tcgcsv.com/fkJ,2022-08-11T21:15:35.66,1,DP23,Promo,Colorless,50,Basic,,"[1] Charm 
+<br>During your opponent's next turn, any damage done to attacks from the Defending Pokémon is reduced by 20 <em>(before applying Weakness and Resistance).</em>",F+10,1,2.49,3.78,6.97,3.73,4.04,Holofoil,"[2] Pose (30) 
+<br>Flip a coin. If tails, this attack does nothing.",
+85773,Gliscor - DP36,Gliscor DP36,https://tcgplayer-cdn.tcgplayer.com/product/85773_200w.jpg,3,1421,https://cpt.tcgcsv.com/tkJ,2022-08-11T21:17:17.24,1,DP36,Promo,Fighting,90,Stage 1,"<strong>Poké-BODY — Bind Eye</strong>
+<br>
+As long as Gliscor is your Active Pokémon, your opponent can’t remove any Special Conditions by evolving or devolving his or her Pokémon. (This also includes putting a Pokémon Level-Up card onto that Pokémon.)","[1] Cutting Turn
+<br>Flip a coin. If heads, put damage counters on the Defending Pokémon until it is 10HP away from being Knocked Out. If you do, shuffle Gliscor and all cards attached to it back into your deck.",W+20,,2.2,3.19,5.09,3.59,,Holofoil,"[F] Friction Heat (20) 
+<br>The Defending Pokémon is now Burned.",F-20
+86055,Heatran LV.X - DP31,Heatran LVX DP31,https://tcgplayer-cdn.tcgplayer.com/product/86055_200w.jpg,3,1421,https://cpt.tcgcsv.com/7rJ,2022-08-11T21:19:22.557,1,DP31,Promo,Fire,120,Level Up,"<strong>Poké-BODY — Heat Metal</strong>
+<br>
+Your opponent can’t remove the Special Condition Burned by evolving or devolving his or her Burned Pokémon. (This also includes putting a Pokémon Level-Up card onto the Burned Pokémon.) Whenever your opponent flips a coin for the Special Condition Burned between turns, treat it as tails.
+<br>
+<strong>Poké-POWER — Heat Wave</strong>
+<br>
+Once at the end of your turn, if Heatran is on your Bench, you may use this power. If you discarded basic Energy cards attached to your Fire or Metal Active Pokémon by using that Pokémon’s attack this turn, attach up to 2 of those Energy cards to that Pokémon.
+<br><br>
+<em>Put this card onto your Active Heatran. Heatran LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.</em>",,Wx2,4,15.0,19.77,30.24,25.52,,Holofoil,,
+86282,Infernape LV.X - DP10,Infernape LVX DP10,https://tcgplayer-cdn.tcgplayer.com/product/86282_200w.jpg,3,1421,https://cpt.tcgcsv.com/GwJ,2022-08-11T21:22:05.9,1,DP10,Promo,Fire,120,Level Up,"<strong>Poké-POWER — Burning Head</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may look at the top 3 cards of your deck, choose 1 of them, and put it into your hand. Discard the other 2 cards. This power can’t be used if Infernape is affected by a Special Condition.
+<br><br>
+<em>Put this card onto your Active Infernape. Infernape LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.</em>","[RR] Flare Up (150) 
+<br>Search your discard pile for 8 Fire Energy cards, show them to your opponent, and shuffle them into your deck. (This attack does nothing if you don't have 8 Fire Energy cards in your discard pile.)",W+30,,45.0,50.0,123.55,42.76,,Holofoil,,
+86890,Lucario LV.X - DP12,Lucario LVX DP12,https://tcgplayer-cdn.tcgplayer.com/product/86890_200w.jpg,3,1421,https://cpt.tcgcsv.com/QMJ,2022-08-11T21:29:11.573,1,DP12,Promo,Fighting,110,Level Up,"<strong>Poké-POWER — Stance</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, when you put Lucario LV.X from your hand onto your Active Lucario, you may use this power. Prevent all effects of an attack, including damage, done to Lucario during your opponent’s next turn. (If Lucario is no longer your Active Pokémon, this effect ends.)
+<br><br>
+<em>Put this card onto your Active Lucario. Lucario LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.</em>","[1FF] Close Combat (80) 
+<br>During your opponent's next turn, any damage done to Lucario by attacks is increased by 30 <em>(after applying Weakness and Resistance)</em>.",Px2,1,24.99,33.73,84.97,63.27,,Holofoil,,
+87057,Magmortar - DP20,Magmortar DP20,https://tcgplayer-cdn.tcgplayer.com/product/87057_200w.jpg,3,1421,https://cpt.tcgcsv.com/9RJ,2022-08-11T21:30:53.99,1,DP20,Promo,Fire,100,Stage 1,,"[1R] Smoke Bomb (30) 
+<br>If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",W+30,3,1.35,2.99,6.61,5.05,,Holofoil,"[1RR] Flame Drum (80) 
+<br>If Magby isn't anywhere under Magmortar, discard 2 Energy cards from your hand. (If you can't discard 2 Energy cards from your hand, this attack does nothing.)",
+87116,Magnezone - DP32,Magnezone DP32,https://tcgplayer-cdn.tcgplayer.com/product/87116_200w.jpg,3,1421,https://cpt.tcgcsv.com/lSJ,2022-08-11T21:32:29.05,1,DP32,Promo,Metal,130,Stage 2,,"[1M] Mirror Shot (40) 
+<br>If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",R+30,2,1.11,2.59,3.89,2.64,,Holofoil,"[2LM] Magnet Slash (100)
+<br>
+Discard all Lightning Energy attached to Magnezone.",P-20
+87117,Magnezone - DP44,Magnezone DP44,https://tcgplayer-cdn.tcgplayer.com/product/87117_200w.jpg,3,1421,https://cpt.tcgcsv.com/mSJ,2022-08-11T21:34:40.99,1,DP44,Promo,Lightning,130,Stage 2,,"[L] Charge Beam (30) 
+<br>Search your discard pile for an Energy card and attach it to Magnezone.",F+30,2,1.56,2.84,5.47,3.12,,Holofoil,"[2LM] Metallic Bolt (60) 
+<br>You may discard a Lightning Energy and a Metal Energy attached to Magnezone. If you do, this attack's base damage is 120 instead of 60.",M-20
+87434,Mewtwo LV.X - DP28,Mewtwo LVX DP28,https://tcgplayer-cdn.tcgplayer.com/product/87434_200w.jpg,3,1421,https://cpt.tcgcsv.com/J-J,2024-10-01T13:27:02.827,1,DP28,Promo,Psychic,120,Level Up,"<strong>Poké-BODY — Psybarrier</strong>
+<br>
+Prevent all effects of attacks, including damage, done to Mewtwo by your opponent’s Pokémon that isn’t an Evolved Pokémon.
+<br><br>
+<em>Put this card onto your Active Mewtwo. Mewtwo LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.</em>","[1PP] Giga Burn (120) 
+<br>Discard all Energy attached to Mewtwo.",Px2,2,28.0,39.99,194.0,44.88,,Holofoil,,
+87470,Mime Jr. - DP22,Mime Jr DP22,https://tcgplayer-cdn.tcgplayer.com/product/87470_200w.jpg,3,1421,https://cpt.tcgcsv.com/q_J,2022-08-11T21:39:13.08,1,DP22,Promo,Psychic,40,Basic,"<strong>Poké-POWER — Baby Evolution</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may put Mr. Mime from your hand onto Mime Jr. (this counts as evolving Mime Jr.) and remove all damage counters from Mime Jr.","[P] Mime 
+<br>Shuffle your hand into your deck. Then, draw a number of cards equal to the number of cards in your opponent's hand.",P+10,1,3.0,7.47,10.47,7.47,,Holofoil,,
+87901,Pachirisu - DP04,Pachirisu DP04,https://tcgplayer-cdn.tcgplayer.com/product/87901_200w.jpg,3,1421,https://cpt.tcgcsv.com/2bK,2022-08-11T21:42:31.1,1,DP04,Promo,Lightning,70,Basic,,"[1] Minor Errand-Running
+<br>Search your deck for a basic Energy card, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",F+20,1,4.36,21.72,23.08,5.05,,Holofoil,"[L] Thunder Jolt (20) 
+<br>Flip a coin. If tails, Pachirisu does 10 damage to itself.",M-20
+87909,Palkia - DP27,Palkia DP27,https://tcgplayer-cdn.tcgplayer.com/product/87909_200w.jpg,3,1421,https://cpt.tcgcsv.com/cbK,2022-08-11T21:44:04.547,1,DP27,Promo,Water,90,Basic,,"[W] Spacial Rend (10) 
+<br>Search your deck for a Stadium card, show it to your opponent, and put it into your hand. Shuffle your deck afterward. If there is any Stadium card in play, discard it.",L+20,2,1.75,5.0,8.0,6.5,,Holofoil,"[1WW] Transback (40) 
+<br>You may flip a coin. If heads, discard all Energy attached to Palkia and put the Defending Pokémon and all cards attached to it on top of your opponent's deck. Your opponent shuffles his or her deck afterward.",
+87920,Palkia LV.X - DP18,Palkia LVX DP18,https://tcgplayer-cdn.tcgplayer.com/product/87920_200w.jpg,3,1421,https://cpt.tcgcsv.com/qbK,2022-08-11T21:45:37.273,1,DP18,Promo,Water,120,Level Up,"<strong>Poké-POWER — Restructure</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may have your opponent switch 1 of your Active Pokémon with 1 of your Benched Pokémon. Then, you switch 1 of the Defending Pokémon with 1 of your opponent’s Benched Pokémon. This power can’t be used if Palkia is affected by a Special Condition.
+<br><br>
+<em>Put this card onto your Active Palkia. Palkia LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.</em>","[WWW] Hydro Reflect (60) 
+<br>You may move all Energy cards attached to Palkia to your Benched Pokémon in any way you like. <em>(Ignore this effect if you don't have any Benched Pokémon.)</em>",Lx2,3,24.0,24.67,25.33,24.91,,Holofoil,,
+88089,Pikachu - DP16,Pikachu DP16,https://tcgplayer-cdn.tcgplayer.com/product/88089_200w.jpg,3,1421,https://cpt.tcgcsv.com/PfK,2022-08-11T21:50:09.95,1,DP16,Promo,Lightning,60,Basic,"<strong>Poké-POWER — Electro Recycle</strong>
+<br>
+Once during your turn (before your attack), if Pichu is anywhere under Pikachu, you may search your discard pile for a {L} Energy card, show it to your opponent, and put it into your hand. This power can’t be used if Pikachu is affected by a Special Condition.","[1L] BikaBika (20+) 
+<br>Flip a coin. If heads, this attack does 20 damage plus 10 more damage.",F+10,1,18.93,22.57,32.0,40.89,,Holofoil,,M-20
+88147,Piplup - DP03,Piplup DP03,https://tcgplayer-cdn.tcgplayer.com/product/88147_200w.jpg,3,1421,https://cpt.tcgcsv.com/ZgK,2022-08-11T21:51:21.357,1,DP03,Promo,Water,60,Basic,,[0] Peck (10),L+10,1,5.0,9.98,12.7,10.06,,Holofoil,"[1W] Water Splash (20+) 
+<br>Flip a coin. If heads, this attack does 20 damage plus 10 more damage.",
+88316,Porygon-Z - DP35,Porygon Z DP35,https://tcgplayer-cdn.tcgplayer.com/product/88316_200w.jpg,3,1421,https://cpt.tcgcsv.com/llK,2022-08-11T21:52:55.11,1,DP35,Promo,Colorless,120,Stage 2,"<Poké-POWER — Install</strong>
+<br>As often as you like during your turn <em>(before your attack)</em>, move a Technical Machine card attached to 1 of your Pokémon to another of your Pokémon. This power can’t be used if Porygon-Z is affected by a Special Condition.","[0] Learning 
+<br>Search your deck for a Pokémon LV.X that levels up from 1 of your Pokémon and put it onto that Pokemon. (This counts as leveling up that Pokemon.) Shuffle your deck afterward.",F+30,2,2.99,4.99,6.2,4.3,,Holofoil,"[2] Overload (40+) 
+<br>Does 40 damage plus 20 more damage for each Technical Machine card attached to Porygon-Z.",
+88380,Probopass G - DP43,Probopass G DP43,https://tcgplayer-cdn.tcgplayer.com/product/88380_200w.jpg,3,1421,https://cpt.tcgcsv.com/DmK,2023-09-19T16:40:40.38,1,DP43,Promo,Fighting,90,Basic,,"[1M] Nose Unit 
+<br>This attack does 20 damage to each of your opponent's Pokémon that has any Poke-Bodies. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>",Wx2,3,0.5,3.21,8.43,3.61,,Holofoil,"[3M] Loud Snort (70) 
+<br>Probopass G's Retreat Cost is 0 until the end of your next turn.",
+88512,Raichu - DP21,Raichu DP21,https://tcgplayer-cdn.tcgplayer.com/product/88512_200w.jpg,3,1421,https://cpt.tcgcsv.com/gqK,2022-08-11T22:00:38.61,1,DP21,Promo,Lightning,90,Stage 1,,"[0] Electromagnetic Induction 
+<br>Search your deck for up to 2 Lightning Energy cards and attach them to 1 of your Pokémon. Shuffle your deck afterward.",F+20,1,7.99,9.3,49.99,12.88,12.88,Holofoil,"[1L] Explosive Thunder (30x) 
+<br>Discard all basic Lightning Energy cards attached to Raichu. This attack does 30 damage times the number of Lightning Energy cards you discarded.",M-20
+88641,Rayquaza C LV.X - DP47,Rayquaza C LVX DP47,https://tcgplayer-cdn.tcgplayer.com/product/88641_200w.jpg,3,1421,https://cpt.tcgcsv.com/RsK,2022-08-11T22:02:11.933,1,DP47,Promo,Colorless,120,Level Up,"<strong>Poké-BODY — Dragon Spirit</strong>
+<br>
+If Rayquaza C is your Active Pokémon and is damaged but not Knocked Out by an opponent’s attack, you may search your discard pile for an Energy card and attach it to Rayquaza C.
+<br><br>
+<em>Put this card onto your Active Rayquaza C. Rayquaza C LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.
+</em>","[1WPF] Final Blowup (200) 
+<br>Discard all Energy attached to Rayquaza C. Ignore this effect if you have no cards in your hand.",Cx2,3,199.99,299.99,399.99,115.44,199.99,Holofoil,,F-20
+88665,Regigigas - DP40,Regigigas DP40,https://tcgplayer-cdn.tcgplayer.com/product/88665_200w.jpg,3,1421,https://cpt.tcgcsv.com/ktK,2022-08-11T22:03:26.607,1,DP40,Promo,Colorless,100,Basic,,"[3] Drag Off (30) 
+<br>Before doing damage, you may choose 1 of your opponent's Benched Pokémon and switch it with the Defending Pokémon.",Fx2,4,10.51,15.27,21.84,16.62,,Holofoil,"[4] Giga Hammer (80) 
+<br>Regigigas can't use Giga Hammer during your next turn.",
+88670,Regigigas LV.X - DP30,Regigigas LVX DP30,https://tcgplayer-cdn.tcgplayer.com/product/88670_200w.jpg,3,1421,https://cpt.tcgcsv.com/qtK,2022-08-11T22:04:49.95,1,DP30,Promo,Colorless,150,Level Up,"<strong>Poké-POWER — Sacrifice</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may choose 1 of your Pokémon in play and that Pokémon is Knocked Out. Then, search your discard pile for up to 2 basic Energy cards, attach them to Regigigas, and remove 8 damage counters from Regigigas. This power can’t be used if Regigigas is affected by a Special Condition.
+<br><br>
+<em>Put this card onto your Active Regigigas. Regigigas LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.</em>","[1FMW] Giga Blaster (100) 
+<br>Discard the top card from your opponent's deck. Then choose 1 card from your opponent's hand without looking and discard it. Regigigas can't use Giga Blaster during your next turn.",Fx2,4,19.99,39.98,69.95,32.44,,Holofoil,,
+88750,Rhyperior LV.X - DP29,Rhyperior LVX DP29,https://tcgplayer-cdn.tcgplayer.com/product/88750_200w.jpg,3,1421,https://cpt.tcgcsv.com/0wK,2022-08-11T22:05:46.04,1,DP29,Promo,Fighting,170,Level Up,"<em>Put this card onto your Active Rhyperior. Rhyperior LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.</em>","[0] Hard Crush (50x) 
+<br>Discard the top 5 cards from your deck. This attack does 50 damage for each Energy card you discarded.",Wx2,4,7.97,9.95,9999.0,13.44,,Holofoil,"[1FF] Upthrow (60) 
+<br>Search your discard pile for all Fighting Energy cards, show them to your opponent, and shuffle them into your deck.",L-20
+89116,Shaymin LV.X - DP39,Shaymin LVX DP39,https://tcgplayer-cdn.tcgplayer.com/product/89116_200w.jpg,3,1421,https://cpt.tcgcsv.com/lGK,2023-06-04T09:21:53.43,1,DP39,Promo,Grass,110,Level Up,"<strong>Poké-BODY — Revenge Seed</strong>
+<br>
+If any of your Grass Pokémon were Knocked Out by damage from an opponent’s attack during his or her last turn, each of Shaymin’s attacks does 60 more damage to the Active Pokémon <em>(before applying Weakness and Resistance)</em>.
+<br><br>
+<em>Put this card onto your Active Shaymin. Shaymin LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.</em>","[1G] Energy Flare (50) 
+<br>You may move any number of Energy cards attached to your Pokémon to your other Pokémon in any way you like.",Rx2,,19.99,24.99,60.55,17.48,,Holofoil,,F-20
+89150,Shieldon - DP08,Shieldon DP08,https://tcgplayer-cdn.tcgplayer.com/product/89150_200w.jpg,3,1421,https://cpt.tcgcsv.com/0HK,2022-08-11T22:09:25.157,1,DP08,Promo,Metal,80,Stage 1,,"[1M] Hard Face (20) 
+<br>During your opponent's next turn, any damage done to Shieldon by attacks is reduced by 20 <em>(after applying Weakness and Resistance)</em>.",R+20,2,1.88,4.23,6.97,4.11,,Holofoil,"[2M] Shield Attack (40+) 
+<br>Flip a coin. If heads, this attack does 40 damage plus 20 more damage.",P-20
+89175,Shinx - DP15,Shinx DP15,https://tcgplayer-cdn.tcgplayer.com/product/89175_200w.jpg,3,1421,https://cpt.tcgcsv.com/wHK,2022-08-11T22:10:54.263,1,DP15,Promo,Lightning,60,Basic,,"[L] Spark (10) 
+<br>Does 10 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>",F+10,1,7.99,11.85,25.01,22.99,,Holofoil,,M-20
+89990,Torterra LV.X - DP09,Torterra LVX DP09,https://tcgplayer-cdn.tcgplayer.com/product/89990_200w.jpg,3,1421,https://cpt.tcgcsv.com/Q_K,2022-08-11T22:12:26.35,1,DP09,Promo,Grass,160,Level Up,"<strong>Poké-POWER — Forest Murmurs</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, if you have more Prize cards left than your opponent, you may choose 1 of your opponent’s Benched Pokémon and switch it with 1 of the Defending Pokémon. This power can’t be used if Torterra is affected by a Special Condition.
+<br><br>
+<em>Put this card onto your Active Torterra. Torterra LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.</em>","[1GGG] Vigorous Dash (100) 
+<br>Does 30 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em> Torterra does 30 damage to itself.",R+30,4,15.55,26.93,46.68,32.1,,Holofoil,,
+90013,Toxicroak G - DP41,Toxicroak G DP41,https://tcgplayer-cdn.tcgplayer.com/product/90013_200w.jpg,3,1421,https://cpt.tcgcsv.com/h0L,2022-08-11T22:13:59.627,1,DP41,Promo,Fighting,90,Basic,"<strong>Poké-POWER — Leap Away</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, if Toxicroak G is your Active Pokémon, you may flip a coin. If heads, return Toxicroak G and all cards attached to it to your hand. This power can’t be used if Toxicroak G is affected by a Special Condition.","[1P] Poison Revenge (20+) 
+<br>If any of your Pokémon were Knocked Out by damage from an opponent's attack during his or her last turn, this attack does 20 damage plus 40 more damage and the Defending Pokémon is now Poisoned.",Px2,2,53.59,63.49,70.02,64.99,,Holofoil,,
+90054,Tropical Wind - DP05 (Worlds 07),Tropical Wind DP05 Worlds 07,https://tcgplayer-cdn.tcgplayer.com/product/90054_200w.jpg,3,1421,https://cpt.tcgcsv.com/62L,2022-08-11T22:16:32.583,1,DP05,Promo,Item,,,"Flip a coin. If heads, remove 2 damage counters from each Active Pokémon (remove 1 damage counter if a Pokemon has only 1). If tails, each Active Pokémon is now Asleep.",,,,,,,,,,,
+90055,Tropical Wind - DP25 (Worlds 08),Tropical Wind DP25 Worlds 08,https://tcgplayer-cdn.tcgplayer.com/product/90055_200w.jpg,3,1421,https://cpt.tcgcsv.com/72L,2022-08-11T22:17:02.153,1,DP25,Promo,Item,,,"Flip a coin. If heads, remove 2 damage counters from each Active Pokemon (remove 1 damage counter if a Pokemon has only 1). If tails, each Active Pokémon is now Asleep.",,,,,,,,,,,
+90056,Tropical Wind - DP48 (Worlds 09),Tropical Wind DP48 Worlds 09,https://tcgplayer-cdn.tcgplayer.com/product/90056_200w.jpg,3,1421,https://cpt.tcgcsv.com/82L,2022-08-11T22:18:40,1,DP48,Promo,Trainer,,,"Flip a coin. If heads, remove 2 damage counters from each Active Pokemon (remove 1 damage counter if a Pokemon has only 1). If tails, each Active Pokemon is now Asleep.",,,,249.0,249.0,249.0,,,Normal,,
+90075,Turtwig - DP01,Turtwig DP01,https://tcgplayer-cdn.tcgplayer.com/product/90075_200w.jpg,3,1421,https://cpt.tcgcsv.com/w2L,2022-08-11T22:19:29.24,1,DP01,Promo,Grass,60,Basic,,[0] Tackle (10),R+10,2,5.6,10.0,39.99,21.35,,Holofoil,[G] Razor Leaf (20),W-20
+97810,Tropical Winds - DP05 (Worlds 07) [Staff],Tropical Winds DP05 Worlds 07 Staff,https://tcgplayer-cdn.tcgplayer.com/product/97810_200w.jpg,3,1421,https://cpt.tcgcsv.com/d8P,2022-08-11T22:14:53.337,1,DP05,Promo,Item,,,"Flip a coin. If heads, remove 2 damage counters from each Active Pokémon (remove 1 damage counter if a Pokemon has only 1). If tails, each Active Pokémon is now Asleep.",,,,,,,,,,,
+97811,Tropical Wind - DP25 (Worlds 08) [Staff],Tropical Wind DP25 Worlds 08 Staff,https://tcgplayer-cdn.tcgplayer.com/product/97811_200w.jpg,3,1421,https://cpt.tcgcsv.com/f8P,2022-08-11T22:16:00.117,1,DP25,Promo,Item,,,"Flip a coin. If heads, remove 2 damage counters from each Active Pokémon (remove 1 damage counter if a Pokemon has only 1). If tails, each Active Pokémon is now Asleep.",,,,,,,,,,,
+97812,Tropical Wind - DP48 (Worlds 09) [Staff],Tropical Wind DP48 Worlds 09 Staff,https://tcgplayer-cdn.tcgplayer.com/product/97812_200w.jpg,3,1421,https://cpt.tcgcsv.com/g8P,2022-08-11T22:18:12.753,1,DP48,Promo,Trainer,,,"Flip a coin. If heads, remove 2 damage counters from each Active Pokémon (remove 1 damage counter if a Pokemon has only 1). If tails, each Active Pokémon is now Asleep.",,,,699.95,699.95,699.95,,,Normal,,
+164204,Gabite - 48/124 (Prerelease),Gabite 48 124 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/164204_200w.jpg,3,1421,https://cpt.tcgcsv.com/6Jk2,2022-08-11T21:07:35.483,1,48/124,Promo,Colorless,80,Stage 1,,"[1] Gather Up
+<br>Search your discard pile for up to 2 Energy cards, show them to your opponent, and put them into your hand.",C+20,1,16.46,19.95,20.93,10.79,,Normal,"[2] Marvelous Shine
+<br>Flip a coin. If heads, put 4 damage counters on 1 of your opponent's Pokémon. If tails, remove 4 damage counters from 1 of your Pokémon.",
+164205,Gabite - 48/123 (Prerelease) [Staff],Gabite 48 123 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/164205_200w.jpg,3,1421,https://cpt.tcgcsv.com/7Jk2,2024-09-23T18:10:15.767,1,48/123,Promo,Colorless,80,Stage 1,,"[1] Gather Up
+<br>Search your discard pile for up to 2 Energy cards, show them to your opponent, and put them into your hand.",C+20,1,71.48,89.55,107.62,36.0,,Normal,"[2] Marvelous Shine
+<br>Flip a coin. If heads, put 4 damage counters on 1 of your opponent's Pokémon. If tails, remove 4 damage counters from 1 of your Pokémon.",
+187215,Lucario - 53/127 (Prerelease),Lucario 53 127 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/187215_200w.jpg,3,1421,https://cpt.tcgcsv.com/kVv2,2025-03-28T00:42:11.3,1,53/127,Promo,Metal,90,Stage 1,,"[M] Aura Sphere (30) 
+<br>Does 10 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",R+20,,43.8,48.0,49.99,48.5,,Normal,"[1M] Do the Wave (20+)
+<br>Does 20 damage plus 10 more damage for each of your Benched Pokémon.",
+187216,Lucario - 53/127 (Prerelease) [Staff],Lucario 53 127 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/187216_200w.jpg,3,1421,https://cpt.tcgcsv.com/lVv2,2022-08-11T21:27:38.047,1,53/127,Promo,Metal,90,Stage 1,,"[M] Aura Sphere (30) 
+<br>Does 10 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",R+20,,,,,,,,"[1M] Do the Wave (20+)
+<br>Does 20 damage plus 10 more damage for each of your Benched Pokémon.",
+232870,Porygon2 - 49/106 (Prerelease),Porygon2 49 106 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/232870_200w.jpg,3,1421,https://cpt.tcgcsv.com/q9T2,2022-08-11T21:56:50.37,0,49/106,Promo,Colorless,70,Stage 1,"<strong>Poké-POWER — Dowload</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may discard a Supporter card from your hand and use the effect of that card as the effect of this power.  This power can't be used if Porygon2 is affected by a Special Condition.",[2] Speed Attack (30),F+20,2,4.89,9.95,11.44,13.06,9.95,Normal,,
+232871,Porygon2 - 49/106 (Prerelease) [Staff],Porygon2 49 106 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/232871_200w.jpg,3,1421,https://cpt.tcgcsv.com/r9T2,2024-04-08T16:16:09.657,1,49/106,Promo,Colorless,70,Stage 1,"<strong>Poké-POWER — Dowload</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may discard a Supporter card from your hand and use the effect of that card as the effect of this power.  This power can't be used if Porygon2 is affected by a Special Condition.",[2] Speed Attack (30),F+20,2,84.99,167.64,252.5,77.42,,Normal,,
+232881,Mothim - 42/100 (Prerelease),Mothim 42 100 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/232881_200w.jpg,3,1421,https://cpt.tcgcsv.com/F9T2,2022-08-11T21:41:15.33,0,42/100,Promo,Grass,80,Stage 1,"<strong>Poké-BODY — Disturbance Scales</strong>
+<br>
+Any damage done by attacks from your Pokémon to the Defending Pokémon isn't affected by Resistance.","[G] Get Help (30x)
+<br>
+Does 30 damage times the number of different types of Wormadam on your Bench.",R+20,,3.4,5.77,10.0,5.17,,Normal,"[1G] Quick Touch (40)
+<br>
+You may switch Mothim with 1 of your Benched Pokémon. If you do, move as many Energy cards attached to Mothim as you like to the new Active Pokémon.",F-20
+233308,Kirlia - 53/132 (Prerelease),Kirlia 53 132 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/233308_200w.jpg,3,1421,https://cpt.tcgcsv.com/blT2,2022-08-11T21:24:27.967,0,53/132,Promo,Psychic,80,Stage 1,,"[P] Psychic Research
+<br>Search your discard pile for a Supporter card and use the effect of that card as the effect of this attack. <em>(The Supporter card remains in your discard pile.)</em>",P+20,1,8.37,15.25,50.0,16.16,,Normal,"[2P] Telekinesis
+<br>Choose 1 of your opponent's Pokémon. This attack does 40 damage to that Pokémon. This attack's damage isn't affected by Weakness or Resistance.",
+532629,Mothim - 42/100 (Prerelease) [Staff],Mothim 42 100 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/532629_200w.jpg,3,1421,https://cpt.tcgcsv.com/C3h6,2024-01-10T20:41:01.447,0,42/100,Promo,Grass,80,Stage 1,"<strong>Poké-BODY — Disturbance Scales</strong>
+<br>
+Any damage done by attacks from your Pokémon to the Defending Pokémon isn't affected by Resistance.","[G] Get Help (30x)
+<br>
+Does 30 damage times the number of different types of Wormadam on your Bench.",R+20,,,,,,,,"[1G] Quick Touch (40)
+<br>
+You may switch Mothim with 1 of your Benched Pokémon. If you do, move as many Energy cards attached to Mothim as you like to the new Active Pokémon.",F-20

@@ -1,0 +1,76 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extWeakness,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extAttack2,extResistance,extCardText
+232316,Bulbasaur - 1/25,Bulbasaur 1 25,https://tcgplayer-cdn.tcgplayer.com/product/232316_200w.jpg,3,2782,https://cpt.tcgcsv.com/lXS2,2024-02-08T14:40:45.467,1,001/025,Promo,Grass,70,Basic,[1G] Razor Leaf (30),Rx2,2,0.06,0.58,213402.06,0.58,,Normal,,,
+232316,Bulbasaur - 1/25,Bulbasaur 1 25,https://tcgplayer-cdn.tcgplayer.com/product/232316_200w.jpg,3,2782,https://cpt.tcgcsv.com/lXS2,2024-02-08T14:40:45.467,1,001/025,Promo,Grass,70,Basic,[1G] Razor Leaf (30),Rx2,2,1.62,4.48,20.0,4.47,,Holofoil,,,
+232317,Chikorita - 2/25,Chikorita 2 25,https://tcgplayer-cdn.tcgplayer.com/product/232317_200w.jpg,3,2782,https://cpt.tcgcsv.com/mXS2,2023-08-14T07:27:29.477,1,002/025,Promo,Grass,70,Basic,"[G] Mini Drain (10)
+<br>Heal 10 damage from this Pokémon.",Rx2,1,0.8,1.65,5.99,1.54,,Holofoil,,,
+232317,Chikorita - 2/25,Chikorita 2 25,https://tcgplayer-cdn.tcgplayer.com/product/232317_200w.jpg,3,2782,https://cpt.tcgcsv.com/mXS2,2023-08-14T07:27:29.477,1,002/025,Promo,Grass,70,Basic,"[G] Mini Drain (10)
+<br>Heal 10 damage from this Pokémon.",Rx2,1,0.1,0.38,3.0,0.38,,Normal,,,
+232318,Treecko - 3/25,Treecko 3 25,https://tcgplayer-cdn.tcgplayer.com/product/232318_200w.jpg,3,2782,https://cpt.tcgcsv.com/nXS2,2022-09-23T16:48:41.923,1,003/025,Promo,Grass,60,Basic,"[G] Quick Attack (10+)
+<br>Flip a coin. If heads, this attack does 10 more damage.",Rx2,1,0.1,0.32,3.35,0.3,,Normal,,,
+232318,Treecko - 3/25,Treecko 3 25,https://tcgplayer-cdn.tcgplayer.com/product/232318_200w.jpg,3,2782,https://cpt.tcgcsv.com/nXS2,2022-09-23T16:48:41.923,1,003/025,Promo,Grass,60,Basic,"[G] Quick Attack (10+)
+<br>Flip a coin. If heads, this attack does 10 more damage.",Rx2,1,1.25,2.43,19.99,2.43,,Holofoil,,,
+232319,Turtwig - 4/25,Turtwig 4 25,https://tcgplayer-cdn.tcgplayer.com/product/232319_200w.jpg,3,2782,https://cpt.tcgcsv.com/pXS2,2022-09-23T16:49:37.31,1,004/025,Promo,Grass,80,Basic,[2] Tackle (20),Rx2,2,0.1,0.39,2.0,0.38,,Normal,[1GG] Razor Leaf (50),,
+232319,Turtwig - 4/25,Turtwig 4 25,https://tcgplayer-cdn.tcgplayer.com/product/232319_200w.jpg,3,2782,https://cpt.tcgcsv.com/pXS2,2022-09-23T16:49:37.31,1,004/025,Promo,Grass,80,Basic,[2] Tackle (20),Rx2,2,0.69,1.7,5.24,1.69,,Holofoil,[1GG] Razor Leaf (50),,
+232320,Snivy - 5/25,Snivy 5 25,https://tcgplayer-cdn.tcgplayer.com/product/232320_200w.jpg,3,2782,https://cpt.tcgcsv.com/qXS2,2022-09-23T16:41:30.897,1,005/025,Promo,Grass,60,Basic,"[1G] Slam (20x)
+<br>Flip 2 coins. This attack does 20 damage times the number of heads.",Rx2,1,0.1,0.36,190637.15,0.36,,Normal,,W-20,
+232320,Snivy - 5/25,Snivy 5 25,https://tcgplayer-cdn.tcgplayer.com/product/232320_200w.jpg,3,2782,https://cpt.tcgcsv.com/qXS2,2022-09-23T16:41:30.897,1,005/025,Promo,Grass,60,Basic,"[1G] Slam (20x)
+<br>Flip 2 coins. This attack does 20 damage times the number of heads.",Rx2,1,0.41,1.35,5.0,1.33,,Holofoil,,W-20,
+232321,Chespin - 6/25,Chespin 6 25,https://tcgplayer-cdn.tcgplayer.com/product/232321_200w.jpg,3,2782,https://cpt.tcgcsv.com/rXS2,2022-09-23T16:23:25.187,1,006/025,Promo,Grass,60,Basic,[G] Vine Whip (10),Rx2,1,0.05,0.33,213397.8,0.33,,Normal,[1G] Seed Bomb (20),,
+232321,Chespin - 6/25,Chespin 6 25,https://tcgplayer-cdn.tcgplayer.com/product/232321_200w.jpg,3,2782,https://cpt.tcgcsv.com/rXS2,2022-09-23T16:23:25.187,1,006/025,Promo,Grass,60,Basic,[G] Vine Whip (10),Rx2,1,0.35,0.99,5.0,0.96,,Holofoil,[1G] Seed Bomb (20),,
+232322,Rowlet - 7/25,Rowlet 7 25,https://tcgplayer-cdn.tcgplayer.com/product/232322_200w.jpg,3,2782,https://cpt.tcgcsv.com/sXS2,2022-09-23T16:38:41.907,1,007/025,Promo,Grass,60,Basic,[1] Tackle (10),Rx2,1,0.6,1.14,5.0,1.13,,Holofoil,[1G] Leafage (20),,
+232322,Rowlet - 7/25,Rowlet 7 25,https://tcgplayer-cdn.tcgplayer.com/product/232322_200w.jpg,3,2782,https://cpt.tcgcsv.com/sXS2,2022-09-23T16:38:41.907,1,007/025,Promo,Grass,60,Basic,[1] Tackle (10),Rx2,1,0.15,0.33,191166.59,0.3,,Normal,[1G] Leafage (20),,
+232323,Grookey - 8/25,Grookey 8 25,https://tcgplayer-cdn.tcgplayer.com/product/232323_200w.jpg,3,2782,https://cpt.tcgcsv.com/tXS2,2022-09-23T16:29:54.56,1,008/025,Promo,Grass,60,Basic,[1G] Branch Poke (30),Rx2,1,0.18,0.99,5.99,0.76,0.68,Holofoil,,,
+232323,Grookey - 8/25,Grookey 8 25,https://tcgplayer-cdn.tcgplayer.com/product/232323_200w.jpg,3,2782,https://cpt.tcgcsv.com/tXS2,2022-09-23T16:29:54.56,1,008/025,Promo,Grass,60,Basic,[1G] Branch Poke (30),Rx2,1,0.09,0.26,190635.31,0.25,0.2,Normal,,,
+232324,Charmander - 9/25,Charmander 9 25,https://tcgplayer-cdn.tcgplayer.com/product/232324_200w.jpg,3,2782,https://cpt.tcgcsv.com/vXS2,2022-09-23T16:20:23.007,1,009/025,Promo,Fire,70,Basic,[1] Scratch (10),Wx2,1,0.73,3.2,32.0,3.22,5.95,Holofoil,[1R] Flame Tail (20),,
+232324,Charmander - 9/25,Charmander 9 25,https://tcgplayer-cdn.tcgplayer.com/product/232324_200w.jpg,3,2782,https://cpt.tcgcsv.com/vXS2,2022-09-23T16:20:23.007,1,009/025,Promo,Fire,70,Basic,[1] Scratch (10),Wx2,1,0.2,0.69,172581.03,0.6,,Normal,[1R] Flame Tail (20),,
+232325,Cyndaquil - 10/25,Cyndaquil 10 25,https://tcgplayer-cdn.tcgplayer.com/product/232325_200w.jpg,3,2782,https://cpt.tcgcsv.com/wXS2,2022-11-15T16:46:58.257,1,010/025,Promo,Fire,70,Basic,[2] Hammer In (30),Wx2,1,0.55,1.64,6.99,1.62,,Holofoil,,,
+232325,Cyndaquil - 10/25,Cyndaquil 10 25,https://tcgplayer-cdn.tcgplayer.com/product/232325_200w.jpg,3,2782,https://cpt.tcgcsv.com/wXS2,2022-11-15T16:46:58.257,1,010/025,Promo,Fire,70,Basic,[2] Hammer In (30),Wx2,1,0.02,0.37,208583.6,0.36,,Normal,,,
+232326,Torchic - 11/25,Torchic 11 25,https://tcgplayer-cdn.tcgplayer.com/product/232326_200w.jpg,3,2782,https://cpt.tcgcsv.com/xXS2,2024-08-12T20:08:05.177,1,011/025,Promo,Fire,60,Basic,"[R] Ember (20)
+<br> Flip a coin. If tails, discard a Fire Energy attached to this Pokémon.",Wx2,1,0.36,1.25,5.0,1.18,,Holofoil,,,
+232326,Torchic - 11/25,Torchic 11 25,https://tcgplayer-cdn.tcgplayer.com/product/232326_200w.jpg,3,2782,https://cpt.tcgcsv.com/xXS2,2024-08-12T20:08:05.177,1,011/025,Promo,Fire,60,Basic,"[R] Ember (20)
+<br> Flip a coin. If tails, discard a Fire Energy attached to this Pokémon.",Wx2,1,0.1,0.4,179932.39,0.38,0.33,Normal,,,
+232327,Chimchar - 12/25,Chimchar 12 25,https://tcgplayer-cdn.tcgplayer.com/product/232327_200w.jpg,3,2782,https://cpt.tcgcsv.com/zXS2,2024-09-03T21:42:02.563,1,012/025,Promo,Fire,60,Basic,"[1] Fury Swipes (10x)
+<br>Flip 3 coins. This attack does 10 damage for each heads.",Wx2,1,0.31,1.17,5.0,1.17,,Holofoil,,,
+232327,Chimchar - 12/25,Chimchar 12 25,https://tcgplayer-cdn.tcgplayer.com/product/232327_200w.jpg,3,2782,https://cpt.tcgcsv.com/zXS2,2024-09-03T21:42:02.563,1,012/025,Promo,Fire,60,Basic,"[1] Fury Swipes (10x)
+<br>Flip 3 coins. This attack does 10 damage for each heads.",Wx2,1,0.2,0.35,5.0,0.32,,Normal,,,
+232328,Tepig - 13/25,Tepig 13 25,https://tcgplayer-cdn.tcgplayer.com/product/232328_200w.jpg,3,2782,https://cpt.tcgcsv.com/BXS2,2023-06-01T19:40:21.103,1,013/025,Promo,Fire,70,Basic,"[1R] Ember (30)
+<br>Discard an Energy attached to this Pokémon.",Wx2,2,0.09,0.3,5.0,0.26,0.24,Normal,,,
+232328,Tepig - 13/25,Tepig 13 25,https://tcgplayer-cdn.tcgplayer.com/product/232328_200w.jpg,3,2782,https://cpt.tcgcsv.com/BXS2,2023-06-01T19:40:21.103,1,013/025,Promo,Fire,70,Basic,"[1R] Ember (30)
+<br>Discard an Energy attached to this Pokémon.",Wx2,2,0.5,1.16,7.5,1.15,,Holofoil,,,
+232329,Fennekin - 14/25,Fennekin 14 25,https://tcgplayer-cdn.tcgplayer.com/product/232329_200w.jpg,3,2782,https://cpt.tcgcsv.com/CXS2,2022-09-23T16:27:16.287,1,014/025,Promo,Fire,60,Basic,[R] Scratch (10),Wx2,1,0.26,0.99,53.0,0.84,,Holofoil,[1R] Live Coal (20),,
+232329,Fennekin - 14/25,Fennekin 14 25,https://tcgplayer-cdn.tcgplayer.com/product/232329_200w.jpg,3,2782,https://cpt.tcgcsv.com/CXS2,2022-09-23T16:27:16.287,1,014/025,Promo,Fire,60,Basic,[R] Scratch (10),Wx2,1,0.15,0.29,3.31,0.26,,Normal,[1R] Live Coal (20),,
+232330,Scorbunny - 16/25,Scorbunny 16 25,https://tcgplayer-cdn.tcgplayer.com/product/232330_200w.jpg,3,2782,https://cpt.tcgcsv.com/DXS2,2025-06-07T04:11:03.34,1,016/025,Promo,Fire,60,Basic,"[R] Super Singe (10)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Burned.",Wx2,1,0.1,0.3,192787.69,0.33,,Normal,,,
+232330,Scorbunny - 16/25,Scorbunny 16 25,https://tcgplayer-cdn.tcgplayer.com/product/232330_200w.jpg,3,2782,https://cpt.tcgcsv.com/DXS2,2025-06-07T04:11:03.34,1,016/025,Promo,Fire,60,Basic,"[R] Super Singe (10)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Burned.",Wx2,1,0.25,1.09,8.0,0.95,,Holofoil,,,
+232331,Squirtle - 17/25,Squirtle 17 25,https://tcgplayer-cdn.tcgplayer.com/product/232331_200w.jpg,3,2782,https://cpt.tcgcsv.com/FXS2,2022-09-23T16:43:22.447,1,017/025,Promo,Water,60,Basic,"[W] Bubble (10)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",Gx2,1,1.8,3.29,10.0,3.18,2.56,Holofoil,,,
+232331,Squirtle - 17/25,Squirtle 17 25,https://tcgplayer-cdn.tcgplayer.com/product/232331_200w.jpg,3,2782,https://cpt.tcgcsv.com/FXS2,2022-09-23T16:43:22.447,1,017/025,Promo,Water,60,Basic,"[W] Bubble (10)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",Gx2,1,0.47,0.88,20.0,0.93,,Normal,,,
+232332,Totodile - 18/25,Totodile 18 25,https://tcgplayer-cdn.tcgplayer.com/product/232332_200w.jpg,3,2782,https://cpt.tcgcsv.com/GXS2,2024-10-18T12:21:09.813,1,018/025,Promo,Water,60,Basic,"[W] Fury Strikes (10x)
+<br>Flip 3 coins. This attack does 10 damage times the number of heads.",Gx2,1,0.06,0.47,19.0,0.46,,Normal,,,
+232332,Totodile - 18/25,Totodile 18 25,https://tcgplayer-cdn.tcgplayer.com/product/232332_200w.jpg,3,2782,https://cpt.tcgcsv.com/GXS2,2024-10-18T12:21:09.813,1,018/025,Promo,Water,60,Basic,"[W] Fury Strikes (10x)
+<br>Flip 3 coins. This attack does 10 damage times the number of heads.",Gx2,1,1.25,2.12,3.4,2.32,,Holofoil,,,
+232333,Mudkip - 19/25,Mudkip 19 25,https://tcgplayer-cdn.tcgplayer.com/product/232333_200w.jpg,3,2782,https://cpt.tcgcsv.com/HXS2,2023-10-20T21:09:19.14,1,019/025,Promo,Water,60,Basic,[W] Tackle (10),Gx2,1,0.75,1.9,5.0,1.93,2.99,Holofoil,[1W] Mud Slap (20),,
+232333,Mudkip - 19/25,Mudkip 19 25,https://tcgplayer-cdn.tcgplayer.com/product/232333_200w.jpg,3,2782,https://cpt.tcgcsv.com/HXS2,2023-10-20T21:09:19.14,1,019/025,Promo,Water,60,Basic,[W] Tackle (10),Gx2,1,0.19,0.45,4.39,0.47,,Normal,[1W] Mud Slap (20),,
+232334,Piplup - 20/25,Piplup 20 25,https://tcgplayer-cdn.tcgplayer.com/product/232334_200w.jpg,3,2782,https://cpt.tcgcsv.com/JXS2,2025-05-21T10:41:18.067,1,020/025,Promo,Water,70,Basic,[1] Peck (10),Lx2,1,0.07,0.46,2.0,0.44,,Normal,[1W] Wave Splash (20),,
+232334,Piplup - 20/25,Piplup 20 25,https://tcgplayer-cdn.tcgplayer.com/product/232334_200w.jpg,3,2782,https://cpt.tcgcsv.com/JXS2,2025-05-21T10:41:18.067,1,020/025,Promo,Water,70,Basic,[1] Peck (10),Lx2,1,1.0,2.22,10.0,2.08,2.99,Holofoil,[1W] Wave Splash (20),,
+232335,Oshawott - 21/25,Oshawott 21 25,https://tcgplayer-cdn.tcgplayer.com/product/232335_200w.jpg,3,2782,https://cpt.tcgcsv.com/KXS2,2022-09-23T16:33:51.813,1,021/025,Promo,Water,60,Basic,"[1W] Water Pulse (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Asleep.",Lx2,1,0.1,0.35,2835.19,0.34,0.25,Normal,,,
+232335,Oshawott - 21/25,Oshawott 21 25,https://tcgplayer-cdn.tcgplayer.com/product/232335_200w.jpg,3,2782,https://cpt.tcgcsv.com/KXS2,2022-09-23T16:33:51.813,1,021/025,Promo,Water,60,Basic,"[1W] Water Pulse (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Asleep.",Lx2,1,0.37,1.15,3.0,1.15,,Holofoil,,,
+232336,Froakie - 22/25,Froakie 22 25,https://tcgplayer-cdn.tcgplayer.com/product/232336_200w.jpg,3,2782,https://cpt.tcgcsv.com/LXS2,2024-05-26T12:05:01.497,1,022/025,Promo,Water,60,Basic,[W] Pound (10),Gx2,1,0.1,0.29,173839.15,0.27,0.25,Normal,[1W] Water Drip (20),,
+232336,Froakie - 22/25,Froakie 22 25,https://tcgplayer-cdn.tcgplayer.com/product/232336_200w.jpg,3,2782,https://cpt.tcgcsv.com/LXS2,2024-05-26T12:05:01.497,1,022/025,Promo,Water,60,Basic,[W] Pound (10),Gx2,1,0.56,1.47,5.0,1.45,2.49,Holofoil,[1W] Water Drip (20),,
+232337,Popplio - 23/25,Popplio 23 25,https://tcgplayer-cdn.tcgplayer.com/product/232337_200w.jpg,3,2782,https://cpt.tcgcsv.com/MXS2,2022-09-23T16:37:30.89,1,023/025,Promo,Water,70,Basic,[W] Pound (10),Gx2,1,0.05,0.32,5.0,0.29,,Normal,[1W] Water Gun (20),,
+232337,Popplio - 23/25,Popplio 23 25,https://tcgplayer-cdn.tcgplayer.com/product/232337_200w.jpg,3,2782,https://cpt.tcgcsv.com/MXS2,2022-09-23T16:37:30.89,1,023/025,Promo,Water,70,Basic,[W] Pound (10),Gx2,1,1.0,2.25,7.99,2.07,,Holofoil,[1W] Water Gun (20),,
+232338,Sobble - 24/25,Sobble 24 25,https://tcgplayer-cdn.tcgplayer.com/product/232338_200w.jpg,3,2782,https://cpt.tcgcsv.com/NXS2,2022-12-17T21:28:41.037,1,024/025,Promo,Water,60,Basic,"[1W] Bind (20)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",Lx2,1,1.95,3.74,7.99,3.74,,Holofoil,,,
+232338,Sobble - 24/25,Sobble 24 25,https://tcgplayer-cdn.tcgplayer.com/product/232338_200w.jpg,3,2782,https://cpt.tcgcsv.com/NXS2,2022-12-17T21:28:41.037,1,024/025,Promo,Water,60,Basic,"[1W] Bind (20)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",Lx2,1,0.05,0.34,174334.92,0.31,0.36,Normal,,,
+232339,Pikachu - 25/25,Pikachu 25 25,https://tcgplayer-cdn.tcgplayer.com/product/232339_200w.jpg,3,2782,https://cpt.tcgcsv.com/PXS2,2025-03-10T05:51:05.377,1,025/025,Promo,Lightning,60,Basic,"[L] Meal Time
+<br>Flip a coin until you get tails. For each heads, draw a card.",Fx2,1,1.0,2.72,179361.54,2.97,66.2,Normal,[1L] Gnaw (20),M-20,
+232339,Pikachu - 25/25,Pikachu 25 25,https://tcgplayer-cdn.tcgplayer.com/product/232339_200w.jpg,3,2782,https://cpt.tcgcsv.com/PXS2,2025-03-10T05:51:05.377,1,025/025,Promo,Lightning,60,Basic,"[L] Meal Time
+<br>Flip a coin until you get tails. For each heads, draw a card.",Fx2,1,17.27,23.82,69.0,20.86,17.27,Holofoil,[1L] Gnaw (20),M-20,
+232341,Litten - 15/25,Litten 15 25,https://tcgplayer-cdn.tcgplayer.com/product/232341_200w.jpg,3,2782,https://cpt.tcgcsv.com/RXS2,2023-12-15T11:44:14.4,1,015/025,Promo,Fire,70,Basic,[R] Bite (10),Wx2,1,0.45,1.21,7.29,1.2,2.49,Holofoil,[1R] Flare (20),,
+232341,Litten - 15/25,Litten 15 25,https://tcgplayer-cdn.tcgplayer.com/product/232341_200w.jpg,3,2782,https://cpt.tcgcsv.com/RXS2,2023-12-15T11:44:14.4,1,015/025,Promo,Fire,70,Basic,[R] Bite (10),Wx2,1,0.06,0.37,201139.2,0.36,,Normal,[1R] Flare (20),,
+232748,McDonald's 25th Anniversary Booster Pack,McDonalds 25th Anniversary Booster Pack,https://tcgplayer-cdn.tcgplayer.com/product/232748_200w.jpg,3,2782,https://cpt.tcgcsv.com/-6T2,2021-02-16T13:40:43.563,1,,,,,,,,,3.0,4.97,35.0,4.39,,Normal,,,Each McDonald's 25th Anniversary booster pack contains 4 promo cards.

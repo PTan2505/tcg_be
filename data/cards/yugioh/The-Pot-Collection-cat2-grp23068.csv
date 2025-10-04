@@ -1,0 +1,54 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extAttribute,extCardType,extDescription,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extMonsterType,extAttack,extDefense
+488161,Pot of Greed,Pot of Greed,https://tcgplayer-cdn.tcgplayer.com/product/488161_200w.jpg,2,23068,https://cpt.tcgcsv.com/fhW5,2023-12-11T15:43:25.463,1,TBC1-EN001,Ultra Rare,SPELL,Normal Spell,Draw 2 cards.,43.0,44.91,54.99,38.31,,Limited,,,
+488162,Pot of Greed (Quarter Century Secret Rare),Pot of Greed Quarter Century Secret Rare,https://tcgplayer-cdn.tcgplayer.com/product/488162_200w.jpg,2,23068,https://cpt.tcgcsv.com/ghW5,2023-12-11T15:41:49.893,1,TBC1-ENS01,Quarter Century Secret Rare,SPELL,Normal Spell,Draw 2 cards from your Deck.,161.58,244.3,299.99,159.19,,Limited,,,
+488163,Pot of Generosity,Pot of Generosity,https://tcgplayer-cdn.tcgplayer.com/product/488163_200w.jpg,2,23068,https://cpt.tcgcsv.com/hhW5,2023-12-11T15:44:59.17,1,TBC1-EN002,Ultra Rare,SPELL,Normal Spell,Shuffle 2 cards from your hand into the Deck.,1.9,2.88,15.0,1.81,,Limited,,,
+488164,Pot of Avarice,Pot of Avarice,https://tcgplayer-cdn.tcgplayer.com/product/488164_200w.jpg,2,23068,https://cpt.tcgcsv.com/jhW5,2023-12-11T15:45:47.647,1,TBC1-EN003,Ultra Rare,SPELL,Normal Spell,"Target 5 monsters in your GY; shuffle all 5 into the Deck, then draw 2 cards.",15.24,16.74,30.0,16.57,,Limited,,,
+488165,Pot of Benevolence,Pot of Benevolence,https://tcgplayer-cdn.tcgplayer.com/product/488165_200w.jpg,2,23068,https://cpt.tcgcsv.com/khW5,2023-12-11T15:46:53.477,1,TBC1-EN004,Ultra Rare,SPELL,Normal Spell,"Target 2 cards in the GY(s); shuffle them into the Deck(s). After activation, banish this card instead of sending it to the GY. You can only activate 1 ""Pot of Benevolence"" per turn.",4.32,5.5,8.95,3.81,,Limited,,,
+488166,Pot of Riches,Pot of Riches,https://tcgplayer-cdn.tcgplayer.com/product/488166_200w.jpg,2,23068,https://cpt.tcgcsv.com/lhW5,2023-12-11T15:47:28.037,1,TBC1-EN005,Ultra Rare,SPELL,Normal Spell,"Shuffle 3 Pendulum Monsters into the Deck, from your GY and/or face-up from your Extra Deck, then draw 2 cards. You can only activate 1 ""Pot of Riches"" per turn. You cannot Special Summon the turn you activate this card, except by Pendulum Summon.",1.99,3.4,9.99,1.3,,Limited,,,
+488167,Pot of Acquisitiveness,Pot of Acquisitiveness,https://tcgplayer-cdn.tcgplayer.com/product/488167_200w.jpg,2,23068,https://cpt.tcgcsv.com/mhW5,2023-12-11T15:48:53.78,1,TBC1-EN006,Ultra Rare,SPELL,Quick-Play Spell,"Target 3 banished monsters; shuffle all 3 into the Deck, then draw 1 card. You can only activate 1 ""Pot of Acquisitiveness"" per turn.",11.5,13.28,13.99,13.41,,Limited,,,
+488169,Pot of Duality,Pot of Duality,https://tcgplayer-cdn.tcgplayer.com/product/488169_200w.jpg,2,23068,https://cpt.tcgcsv.com/phW5,2023-12-11T15:49:16.88,1,TBC1-EN007,Ultra Rare,SPELL,Normal Spell,"Excavate the top 3 cards of your Deck, add 1 of them to your hand, also, after that, shuffle the rest back into your Deck. You can only activate 1 ""Pot of Duality"" per turn. You cannot Special Summon during the turn you activate this card.",11.15,16.7,27.35,11.86,,Limited,,,
+488170,Pot of Dichotomy,Pot of Dichotomy,https://tcgplayer-cdn.tcgplayer.com/product/488170_200w.jpg,2,23068,https://cpt.tcgcsv.com/qhW5,2023-12-11T15:50:01.18,1,TBC1-EN008,Ultra Rare,SPELL,Normal Spell,"At the start of your Main Phase 1: Target 3 monsters with different Types in your GY; Shuffle all 3 into the Deck, then draw 2 cards. You cannot conduct your Battle Phase the turn you activate this card.",3.95,4.9,7.0,4.33,,Limited,,,
+488172,Pot of Desires,Pot of Desires,https://tcgplayer-cdn.tcgplayer.com/product/488172_200w.jpg,2,23068,https://cpt.tcgcsv.com/shW5,2023-12-11T15:51:14.94,1,TBC1-EN009,Ultra Rare,SPELL,Normal Spell,"Banish 10 cards from the top of your Deck, face-down; draw 2 cards. You can only activate 1 ""Pot of Desires"" per turn.",9.69,11.0,56.78,11.74,,Limited,,,
+488173,Pot of Extravagance,Pot of Extravagance,https://tcgplayer-cdn.tcgplayer.com/product/488173_200w.jpg,2,23068,https://cpt.tcgcsv.com/thW5,2023-12-11T15:51:36.257,1,TBC1-EN010,Ultra Rare,SPELL,Normal Spell,"At the start of your Main Phase 1: Banish 3 or 6 random face-down cards from your Extra Deck, face-down; draw 1 card for every 3 cards banished. For the rest of this turn after this card resolves, you cannot draw any cards by card effects.",15.39,18.07,29.99,17.48,,Limited,,,
+488174,Pot of Prosperity,Pot of Prosperity,https://tcgplayer-cdn.tcgplayer.com/product/488174_200w.jpg,2,23068,https://cpt.tcgcsv.com/vhW5,2023-12-11T15:52:50.537,1,TBC1-EN011,Ultra Rare,SPELL,Normal Spell,"Banish 3 or 6 cards of your choice from your Extra Deck, face-down; for the rest of this turn after this card resolves, any damage your opponent takes is halved, also excavate cards from the top of your Deck equal to the number of cards banished, add 1 excavated card to your hand, place the rest on the bottom of your Deck in any order. You can only activate 1 ""Pot of Prosperity"" per turn. You cannot draw cards by card effects the turn you activate this card.",13.95,14.86,39.99,14.86,,Limited,,,
+488175,Spirit of the Pot of Greed,Spirit of the Pot of Greed,https://tcgplayer-cdn.tcgplayer.com/product/488175_200w.jpg,2,23068,https://cpt.tcgcsv.com/whW5,2023-12-11T15:53:43.513,1,TBC1-EN012,Ultra Rare,LIGHT,Effect Monster,"If a player activates ""Pot of Greed"": Activate this effect; they can draw 1 card. This card must be in face-up Attack Position to activate and to resolve this effect.",9.95,9.95,9.95,4.07,,Limited,Fairy,100,100
+488176,Moray of Greed,Moray of Greed,https://tcgplayer-cdn.tcgplayer.com/product/488176_200w.jpg,2,23068,https://cpt.tcgcsv.com/xhW5,2023-12-11T15:54:35.99,1,TBC1-EN013,Ultra Rare,SPELL,Normal Spell,"Shuffle 2 WATER monsters from your hand into the Deck, then draw 3 cards.",30.69,38.14,40.31,39.71,,Limited,,,
+488177,Shard of Greed,Shard of Greed,https://tcgplayer-cdn.tcgplayer.com/product/488177_200w.jpg,2,23068,https://cpt.tcgcsv.com/zhW5,2023-12-11T15:55:14.37,1,TBC1-EN014,Ultra Rare,SPELL,Continuous Spell,"Each time you draw a card(s) for your normal draw in your Draw Phase, place 1 Greed Counter on this card. You can send this card with 2 or more Greed Counters to the GY; draw 2 cards.",2.32,2.36,9.95,2.05,,Limited,,,
+510953,The Pot Collection Box Set,The Pot Collection Box Set,https://tcgplayer-cdn.tcgplayer.com/product/510953_200w.jpg,2,23068,https://cpt.tcgcsv.com/5p66,2023-11-21T05:03:08.31,1,,,,,"The Pot Collection set contains:
+<br>
+<br>• 11 “Pot” figures (with bases to put figures on):
+<br>• Pot of Greed
+<br>• Pot of Generosity
+<br>• Pot of Avarice
+<br>• Pot of Benevolence
+<br>• Pot of Riches
+<br>• Pot of Acquisitiveness
+<br>• Pot of Duality
+<br>• Pot of Dichotomy
+<br>• Pot of Desires
+<br>• Pot of Extravagance
+<br>• Pot of Prosperity
+<br>
+<br>3 Extra figures (without bases):
+<br>• Spirit of the Pot of Greed
+<br>• Moray of Greed
+<br>• Shard of Greed
+<br>
+<br>• 14 unique Bonus Cards (Printed in English, these unique cards will be manufactured in Japan using the same production techniques as the upcoming Japanese version. They’re Ultra Rare cards, but also have a thatched horizontal/vertical patterned coating over the entire card surface, making them appear somewhat similar – but still very different – to Starlight Rares. Prepare to witness a card design like no other!):
+<br>• Pot of Greed
+<br>• Pot of Generosity
+<br>• Pot of Avarice
+<br>• Pot of Benevolence
+<br>• Pot of Riches
+<br>• Pot of Acquisitiveness
+<br>• Pot of Duality
+<br>• Pot of Dichotomy
+<br>• Pot of Desires
+<br>• Pot of Extravagance
+<br>• Pot of Prosperity
+<br>• Spirit of the Pot of Greed
+<br>• Moray of Greed
+<br>• Shard of Greed
+<br>
+<br>• 1 Quarter Century Secret Rare Card
+<br>• Pot of Greed",319.5,387.47,500.0,283.39,,Normal,,,

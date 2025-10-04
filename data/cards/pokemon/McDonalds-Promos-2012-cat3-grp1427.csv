@@ -1,0 +1,26 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extAttack2,extWeakness,extResistance
+83673,Axew - 12/12,Axew 12 12,https://tcgplayer-cdn.tcgplayer.com/product/83673_200w.jpg,3,1427,https://cpt.tcgcsv.com/ttH,2022-09-21T20:58:52.32,1,012/012,Promo,Colorless,60,Basic,"[1] Dual Chop (10x)
+<br>Flip 2 coins. This attack does 10 damage times the number of heads.",1,2.25,5.83,14.99,5.12,,Holofoil,,,
+84797,Dewott - 5/12,Dewott 5 12,https://tcgplayer-cdn.tcgplayer.com/product/84797_200w.jpg,3,1427,https://cpt.tcgcsv.com/ZWH,2022-09-21T21:00:23.773,1,005/012,Promo,Water,90,Stage 1,[2] Water Gun (30),1,2.86,4.32,9.99,5.05,,Holofoil,"[1WW] Razor Shell (40+)
+<br>Flip a coin. If heads, this attack does 20 more damage.",Lx2,
+84967,Drilbur - 8/12,Drilbur 8 12,https://tcgplayer-cdn.tcgplayer.com/product/84967_200w.jpg,3,1427,https://cpt.tcgcsv.com/m_H,2022-09-22T14:23:25.587,1,008/012,Promo,Fighting,70,Basic,"[1] Hone Claws
+<br>During your next turn, each of this Pokémon's attacks does 30 more damage <em>(before applying Weakness and Resistance)</em>.",2,1.75,2.97,9.99,3.8,,Holofoil,[F] Scratch (10),Wx2,L-20
+85065,Dwebble - 3/12,Dwebble 3 12,https://tcgplayer-cdn.tcgplayer.com/product/85065_200w.jpg,3,1427,https://cpt.tcgcsv.com/k2J,2022-09-22T14:25:07.463,1,003/012,Promo,Grass,60,Basic,"[1] Withdraw
+<br>Flip a coin. If heads, prevent all damage done to this Pokémon by attacks during your opponent's next turn.",2,3.06,6.32,9.99,6.45,,Holofoil,[1G] Slash (20),Rx2,
+85193,Emolga - 6/12,Emolga 6 12,https://tcgplayer-cdn.tcgplayer.com/product/85193_200w.jpg,3,1427,https://cpt.tcgcsv.com/T5J,2022-09-22T14:26:14.737,1,006/012,Promo,Lightning,70,Basic,"[L] Thundershock (10)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",,5.59,8.2,17.99,7.81,,Holofoil,"[2] Acrobatics (10+)
+<br>Flip 2 coins. This attack does 20 more damage for each heads.",Fx2,
+86478,Klang - 11/12,Klang 11 12,https://tcgplayer-cdn.tcgplayer.com/product/86478_200w.jpg,3,1427,https://cpt.tcgcsv.com/BCJ,2022-09-22T14:27:29.033,1,011/012,Promo,Metal,80,Stage 1,"[1] Metal Sound
+<br>The Defending Pokémon is now Confused.",1,1.57,2.64,14.99,4.77,,Holofoil,"[1MM] Guard Press (60)
+<br>During your opponent's next turn, any damage done to this Pokémon by attacks is reduced by 20 <em>(after applying Weakness and Resistance)</em>.",Rx2,P-20
+87937,Pansage - 2/12,Pansage 2 12,https://tcgplayer-cdn.tcgplayer.com/product/87937_200w.jpg,3,1427,https://cpt.tcgcsv.com/MbK,2022-09-22T14:28:26.433,1,002/012,Promo,Grass,70,Basic,"[1] Collect
+<br>Draw a card.",1,2.3,3.85,5.99,3.77,,Holofoil,[2] Scratch (20),Rx2,W-20
+88064,Pignite - 4/12,Pignite 4 12,https://tcgplayer-cdn.tcgplayer.com/product/88064_200w.jpg,3,1427,https://cpt.tcgcsv.com/jfK,2022-09-22T14:29:32.307,1,004/012,Promo,Fire,100,Stage 1,"[1] Flame Charge
+<br>Search your deck for a Fire Energy card and attach it to this Pokémon. Shuffle your deck afterward.",3,2.63,6.64,9.99,6.61,,Holofoil,[1RR] Heat Crash (50),Wx2,
+88463,Purrloin - 9/12,Purrloin 9 12,https://tcgplayer-cdn.tcgplayer.com/product/88463_200w.jpg,3,1427,https://cpt.tcgcsv.com/hpK,2022-09-22T14:30:39.113,1,009/012,Promo,Darkness,60,Basic,"[1D] Knock Off (20)
+<br>Flip a coin. If heads, discard a random card from your opponent's hand.",1,3.75,12.52,15.18,12.78,,Holofoil,,Fx2,P-20
+88986,Scraggy - 10/12,Scraggy 10 12,https://tcgplayer-cdn.tcgplayer.com/product/88986_200w.jpg,3,1427,https://cpt.tcgcsv.com/LCK,2022-09-22T14:31:40.847,1,010/012,Promo,Darkness,60,Basic,[1] Headbutt (10),1,4.46,8.68,12.8,8.86,,Holofoil,,Fx2,P-20
+89081,Servine - 1/12,Servine 1 12,https://tcgplayer-cdn.tcgplayer.com/product/89081_200w.jpg,3,1427,https://cpt.tcgcsv.com/FFK,2022-09-22T14:33:12.197,1,001/012,Promo,Grass,80,Stage 1,"[1] Wrap (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",1,3.99,5.99,7.28,4.41,,Holofoil,[1G] Tackle (30),Rx2,W-20
+90629,Woobat - 7/12,Woobat 7 12,https://tcgplayer-cdn.tcgplayer.com/product/90629_200w.jpg,3,1427,https://cpt.tcgcsv.com/CgL,2022-09-22T13:58:59.197,1,007/012,Promo,Psychic,60,Basic,"[1P] Psy Bolt (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",1,2.8,5.55,10.08,6.12,,Holofoil,,Px2,

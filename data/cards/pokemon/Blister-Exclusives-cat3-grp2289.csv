@@ -1,0 +1,423 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extAttack2,extWeakness,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extCardText,extResistance,extAttack4,extAttack3
+91396,Beheeyem - 62/99 (Cosmos Holo),Beheeyem 62 99 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/91396_200w.jpg,3,2289,https://cpt.tcgcsv.com/XzL,2022-09-15T18:39:54.82,1,062/099,Promo,Psychic,80,Stage 1,"[P] Brain Control
+<br>Your opponent reveals his or her hand. Choose a card from there and put it on the bottom of your opponent's deck.","[2P] Psybeam (40)
+<br>The Defending Pokémon is now Confused.",Px2,1,0.75,0.97,7.7,1.0,,Holofoil,,,,
+91400,Wigglytuff - 79/99 (Cosmos Holo),Wigglytuff 79 99 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/91400_200w.jpg,3,2289,https://cpt.tcgcsv.com/0BL,2022-09-26T18:12:22.503,1,079/099,Promo,Colorless,90,Stage 1,"[2] Round (20x)
+<br>
+Does 20 damage times the number of your Pokémon that have the Round attack.","[3] Hypnoblast (60)
+<br>
+Flip a coin. If heads, the Defending Pokémon is now Asleep.",Fx2,2,1.82,2.8,3.97,2.88,,Holofoil,,,,
+133823,Dartrix - 10/149 (Cosmos Holo),Dartrix 10 149 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/133823_200w.jpg,3,2289,https://cpt.tcgcsv.com/tx52,2022-12-07T19:29:42.807,1,010/149,Promo,Grass,80,Stage 1,"[1] Sharp Blade Quill
+<br>This attack does 20 damage to 1 of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[2G] Leaf Blade (50+)
+<br>Flip a coin. If heads, this attack does 20 more damage.",Rx2,1,0.25,0.86,2.99,0.97,,Holofoil,,,,
+141245,Chesnaught - 14/146 (Cosmos Holo),Chesnaught 14 146 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/141245_200w.jpg,3,2289,https://cpt.tcgcsv.com/Wv82,2022-09-15T18:57:39.81,1,014/146,Promo,Grass,160,Stage 2,"[2GG] Touchdown (90)
+<br>Heal 20 damage from this Pokémon.",,Rx2,4,0.89,2.0,4.0,1.32,,Holofoil,"<strong>Ability — Spiky Shield</strong>
+<br>If this Pokémon is your Active Pokémon and is damaged by an opponent's attack <em>(even if this Pokémon is Knocked Out)</em>, put 3 damage counters on the Attacking Pokémon.",,,
+141246,Delphox - 26/146 (Cosmos Holo),Delphox 26 146 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/141246_200w.jpg,3,2289,https://cpt.tcgcsv.com/Xv82,2022-09-15T19:08:36.103,1,026/146,Promo,Fire,140,Stage 2,"[3] Blaze Ball (50+)
+<br>
+This attack does 20 more damage for each Fire Energy attached to this Pokémon.",,Wx2,2,0.63,1.34,2.66,1.11,,Holofoil,"<strong>Ability — Mystical Fire</strong>
+<br>Once during your turn <em>(before your attack)</em>, you may draw cards until you have 6 cards in your hand.",,,
+141247,Feraligatr - 17/119 (Cosmos Holo),Feraligatr 17 119 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/141247_200w.jpg,3,2289,https://cpt.tcgcsv.com/Zv82,2024-07-02T12:37:11.063,1,017/119,Promo,Water,150,Stage 2,"[2W] Hyper Whirlpool (60)
+<br>Flip a coin until you get tails. For each heads, discard an Energy attached to your opponent's Active Pokémon.","[2WW] Second Strike (80+)
+<br>If your opponent's Active Pokémon already has any damage counters on it, this attack does 80 more damage.",Gx2,3,1.41,1.99,15.0,2.8,,Holofoil,,,,
+141248,Greninja - 41/146 (Cosmos Holo),Greninja 41 146 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/141248_200w.jpg,3,2289,https://cpt.tcgcsv.com/-v82,2022-09-15T20:11:32.253,1,041/146,Promo,Water,130,Stage 2,"[W] Mist Slash (50)
+<br>This attack's damage isn't affected by Weakness, Resistance, or any other effects on your opponent's Active Pokémon.",,Gx2,1,2.5,2.8,5.0,5.24,,Holofoil,"<strongAbility — Water Shuriken</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may discard a Water Energy card from your hand. If you do, put 3 damage counters on 1 of your opponent's Pokémon.",,,
+141251,Hawlucha - 63/111 (Cosmos Holo),Hawlucha 63 111 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/141251_200w.jpg,3,2289,https://cpt.tcgcsv.com/2w82,2022-09-26T15:09:16.117,1,063/111,Promo,Fighting,70,Basic,"[F] Flying Press (60)
+<br>If your opponent's Active Pokémon isn't a Pokémon-EX, this attack does nothing.",,Lx2,0,0.54,1.02,5.99,1.08,,Holofoil,"<strong>Ability — Shining Spirit</strong>
+<br>Damage from this Pokémon's attacks isn't affected by Weakness or Resistance.",F-20,,
+141252,Haxorus - 69/101 (Cosmos Holo),Haxorus 69 101 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/141252_200w.jpg,3,2289,https://cpt.tcgcsv.com/3w82,2022-09-26T15:11:11.98,1,069/101,Promo,Dragon,140,Stage 2,"[M] Dragonaxe (40x)
+<br>Does 40 times the amount of Metal Energy attached to this Pokémon.","[FM] Strike of the Champion
+<br>If the Defending Pokémon is a Team Plasma Pokémon, it is Knocked Out. (If the Defending Pokémon is not a Team Plasma Pokémon, this attack does nothing.)",Ox2,2,0.69,1.93,3.99,1.93,,Holofoil,,,,
+141253,Machamp - 46/111 (Cosmos Holo),Machamp 46 111 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/141253_200w.jpg,3,2289,https://cpt.tcgcsv.com/5w82,2022-09-26T15:38:11.753,1,046/111,Promo,Fighting,150,Stage 2,"[FFF] Machamp Crush (80)
+<br>During your opponent's next turn, any damage done by attacks from the Defending Pokémon is reduced by 40<em> (before applying Weakness and Resistance)</em>.",,Px2,2,0.39,1.5,1.75,1.63,,Holofoil,"<strong>Ability -— Fighting Fury</strong>
+<br>Each of your Fighting Pokémon's attacks do 20 more damage to your opponent's Active Pokémon <em>(before applying Weakness and Resistance).</em>",,,
+141254,Meganium - 3/122 (Cosmos Holo),Meganium 3 122 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/141254_200w.jpg,3,2289,https://cpt.tcgcsv.com/6w82,2022-09-26T15:43:30.003,1,003/122,Promo,Grass,150,Stage 2,"[1GG] Green Force (50)
+<br>Heal from this Pokémon the same amount of damage you did to your opponent's Active Pokémon.",,Rx2,3,2.0,5.0,5.97,3.14,,Holofoil,"<strong>Ability — Overgrow</strong>
+<br>If this Pokémon's HP is 50 or less, its attacks do 70 more damage to your opponent's Active Pokémon <em>(before applying Weakness and Resistance)</em>.",,,
+141255,Typhlosion - 20/162 (Cosmos Holo),Typhlosion 20 162 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/141255_200w.jpg,3,2289,https://cpt.tcgcsv.com/7w82,2022-09-26T17:56:17.85,1,020/162,Promo,Fire,150,Stage 2,"[R] Massive Eruption (80x)
+<br>Discard the top 5 cards of your deck. This attack does 80 damage times the number of Energy cards you discarded.","[1RR] Flare Destroy (130)
+<br>Discard an Energy card attached to this Pokémon and discard an Energy card attached to your opponent's Active Pokémon.",Wx2,3,3.0,3.78,15.0,3.33,,Holofoil,,,,
+141256,Yveltal - 94/162 (Cosmos Holo),Yveltal 94 162 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/141256_200w.jpg,3,2289,https://cpt.tcgcsv.com/8w82,2022-09-26T18:17:07.99,1,094/162,Promo,Darkness,130,Basic,"[2D] Pitch-Black Spear (60)
+<br>This attack does 60 damage to 1 of your opponent's Benched Pokémon-EX. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",,Lx2,2,0.63,0.79,2.44,1.48,,Holofoil,"<strong>Ability — Fright Night</strong>
+<br>As long as this Pokémon is your Active Pokémon, each Pokémon Tool card in play has no effect.",F-20,,
+144668,Gallade - 61/135 (Cosmos Holo),Gallade 61 135 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/144668_200w.jpg,3,2289,https://cpt.tcgcsv.com/nT92,2022-09-15T19:45:19.997,1,061/135,Promo,Psychic,140,Stage 2,"[2] Powerful Storm (20x)
+<br>
+Does 20 damage times the amount of Energy attached to all of your Pokémon.","[2P] Swift Lunge (80)
+<br>
+Your opponent switches the Defending Pokémon with 1 of his or her Benched Pokémon.",Px2,2,1.75,2.03,3.57,2.59,,Holofoil,,,,
+145864,Latias - 9/20 (Dragon Vault),Latias 9 20 Dragon Vault,https://tcgplayer-cdn.tcgplayer.com/product/145864_200w.jpg,3,2289,https://cpt.tcgcsv.com/jmb2,2022-09-26T15:30:49.1,1,009/020,Promo,Dragon,100,Basic,"[1] Energy Assist
+<br>
+Attach a basic Energy card from your discard pile to 1 of your Benched Pokémon.","[RP] Sky Heal (40)
+<br>
+If Latios is on your Bench, heal 20 damage from this Pokémon.",Ox2,1,7.28,19.99,44.1,15.2,,Holofoil,,,,
+145865,Latios - 10/20 (Dragon Vault),Latios 10 20 Dragon Vault,https://tcgplayer-cdn.tcgplayer.com/product/145865_200w.jpg,3,2289,https://cpt.tcgcsv.com/kmb2,2022-09-26T15:32:01.663,1,010/020,Promo,Dragon,100,Basic,"[1W] Sky Blade (20+)
+<br>If Latias is on your Bench, this attack does 20 more damage.",[2P] Speed Wing (60),Ox2,1,9.89,42.5,50.0,18.51,,Holofoil,,,,
+145866,Rayquaza - 11/20 (Dragon Vault),Rayquaza 11 20 Dragon Vault,https://tcgplayer-cdn.tcgplayer.com/product/145866_200w.jpg,3,2289,https://cpt.tcgcsv.com/lmb2,2022-09-26T16:07:37.08,1,011/020,Promo,Dragon,120,Basic,"[L] Dragon Pulse (40)
+<br>Discard the top 2 cards of your deck.","[1RL] Shred (90)
+<br>This attack's damage isn't affected by any effects on the Defending Pokémon.",Ox2,3,12.22,15.77,80.0,37.47,,Holofoil,,,,
+145867,Haxorus - 16/20 (Dragon Vault),Haxorus 16 20 Dragon Vault,https://tcgplayer-cdn.tcgplayer.com/product/145867_200w.jpg,3,2289,https://cpt.tcgcsv.com/mmb2,2022-09-26T15:12:26.013,1,016/020,Promo,Dragon,140,Stage 2,"[2] Axe Slugger (60+)
+<br>If the Defending Pokémon is a Colorless Pokémon, this attack does 60 more damage.","[2FM] Dragon Pulse (100)
+<br>Discard the top card of your deck.",Ox2,2,4.99,11.02,29.95,10.76,,Holofoil,,,,
+145868,Druddigon - 17/20 (Dragon Vault),Druddigon 17 20 Dragon Vault,https://tcgplayer-cdn.tcgplayer.com/product/145868_200w.jpg,3,2289,https://cpt.tcgcsv.com/nmb2,2022-09-15T19:16:41.06,1,017/020,Promo,Dragon,110,Basic,"[2] Tight Jaw (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.","[1RW] Dragon Tail (80x)
+<br>Flip 2 coins. This attack does 80 damage times the number of heads.",Ox2,2,2.28,5.87,9.95,7.41,,Holofoil,,,,
+146704,Klink - 74/114 (Cracked Ice Holo),Klink 74 114 Cracked Ice Holo,https://tcgplayer-cdn.tcgplayer.com/product/146704_200w.jpg,3,2289,https://cpt.tcgcsv.com/6Jb2,2022-09-26T15:19:25.667,1,074/114,Promo,Metal,60,Basic,"[M] Bind (10)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",,Rx2,2,0.4,0.99,5.99,0.93,,Holofoil,,P-20,,
+147237,Articuno - 27/99 (Next Destinies),Articuno 27 99 Next Destinies,https://tcgplayer-cdn.tcgplayer.com/product/147237_200w.jpg,3,2289,https://cpt.tcgcsv.com/MVb2,2022-09-15T18:33:12.77,1,027/099,Promo,Water,120,Basic,"[2W] Ice Beam (50)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",[3W] Ice Wing (80),Mx2,2,1.12,2.42,4.0,3.57,,Holofoil,,F-20,,
+147238,Moltres - 14/99 (Next Destinies),Moltres 14 99 Next Destinies,https://tcgplayer-cdn.tcgplayer.com/product/147238_200w.jpg,3,2289,https://cpt.tcgcsv.com/NVb2,2022-09-26T15:50:32.427,1,014/099,Promo,Fire,120,Basic,"[2R] Searing Flame (50)
+<br>The Defending Pokémon is now Burned.","[3R] Fire Blast (90)
+<br>Discard a Fire Energy attached to this Pokémon.",Wx2,2,1.81,3.3,10.0,4.23,,Holofoil,,F-20,,
+147239,Zapdos - 41/99 (Next Destinies),Zapdos 41 99 Next Destinies,https://tcgplayer-cdn.tcgplayer.com/product/147239_200w.jpg,3,2289,https://cpt.tcgcsv.com/PVb2,2022-09-26T18:19:14.233,1,041/099,Promo,Lightning,120,Basic,"[2L] Random Spark
+<br>This attack does 50 damage to 1 of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[3L] Thundering Hurricane (50x)
+<br>Flip 4 coins. This attack does 50 damage times the number of heads.",Lx2,2,0.79,1.72,3.8,2.04,,Holofoil,,F-20,,
+153069,Zoroark - 71/114 (Cracked Ice Holo),Zoroark 71 114 Cracked Ice Holo,https://tcgplayer-cdn.tcgplayer.com/product/153069_200w.jpg,3,2289,https://cpt.tcgcsv.com/pff2,2022-09-26T18:20:22.393,1,071/114,Promo,Darkness,100,Stage 1,"[D] Nasty Plot
+<br>Search your deck for a card and put it into your hand.  Shuffle your deck afterward.","[2] Foul Play
+<br>Choose 1 of the Defending Pokémon's attacks and use it as this attack.",Fx2,1,4.0,6.05,7.3,5.79,,Holofoil,,P-20,,
+153240,Metagross - 7/147 (Cracked Ice Holo),Metagross 7 147 Cracked Ice Holo,https://tcgplayer-cdn.tcgplayer.com/product/153240_200w.jpg,3,2289,https://cpt.tcgcsv.com/Qjf2,2022-09-26T15:47:28.507,1,007/147,Promo,Metal,130,Stage 2,"[1MM] Geo Impact (60)
+<br>If you have a Stadium card in play, this attack does 20 damage to each of your opponent's Benched Pokémon that is the same type as the Defending Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",,R+30,3,0.49,1.93,4.48,3.79,,Holofoil,"<strong>Poké-BODY — Gravitation </strong>
+<br>Each Pokémon in play <em>(both yours and your opponent's)</em> gets -20 HP.  No more than 20 HP can be reduced by all Gravitation Poké-Bodies.",P-20,,
+153309,Pyroar - 12/119 (Cosmos Holo),Pyroar 12 119 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/153309_200w.jpg,3,2289,https://cpt.tcgcsv.com/clf2,2022-09-26T15:58:29.04,1,012/119,Promo,Fire,110,Stage 1,"[1RRR] Inferno Onrush (110)
+<br>
+This Pokémon does 30 damage to itself.",,Wx2,2,0.9,1.14,2.99,1.26,,Holofoil,"<Strong>Ability — Flare Command</strong>
+<br>Once during your turn <em>(before your attack)</em>, you may discard a Fire Energy attached to this Pokémon. If you do, switch 1 of your opponent's Benched Pokémon with his or her Active Pokémon.",,,
+153310,Zoroark - 73/146 (Cosmos Holo),Zoroark 73 146 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/153310_200w.jpg,3,2289,https://cpt.tcgcsv.com/dlf2,2022-09-26T18:21:34.023,1,073/146,Promo,Darkness,100,Stage 1,"[D] Corner (30)
+<br>The Defending Pokémon can't retreat during your opponent's next turn.","[2D] Night Claw (100)
+<br>Flip a coin. If tails, discard 2 Energy attached to this Pokémon.",Fx2,1,0.7,0.99,4.99,1.53,,Holofoil,,P-20,,
+153312,Dragonite - 83/116 (Cosmos Holo),Dragonite 83 116 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/153312_200w.jpg,3,2289,https://cpt.tcgcsv.com/glf2,2025-01-20T04:26:34.73,1,083/116,Promo,Dragon,150,Stage 2,"[3] Deafen (60)
+<br>Your opponent can't play any Item cards from his or her hand during his or her next turn.","[2GL] Healwing (90)
+<br>Heal 30 damage from this Pokémon.",Ox2,3,4.0,9.99,17.2,11.9,,Holofoil,,,,
+164178,Furfrou - 114/146 (Cosmos Holo),Furfrou 114 146 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/164178_200w.jpg,3,2289,https://cpt.tcgcsv.com/BHk2,2022-09-15T19:42:07.767,1,114/116,Promo,Colorless,90,Basic,"[3] Energy Cutoff (80)
+<br>Flip a coin. If heads, discard an Energy attached to your opponent's Active Pokémon.",,Fx2,1,0.35,1.15,2.99,1.1,,Holofoil,"<strong>Ability — Fur Coat</strong>
+<br>
+Any damage done to this Pokémon by attacks is reduced by 20 <em>(after applying Weakness and Resistance)</em>.",,,
+164208,Garchomp - 91/124 (Cosmos Holo),Garchomp 91 124 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/164208_200w.jpg,3,2289,https://cpt.tcgcsv.com/bJk2,2022-09-15T19:48:21.817,1,091/124,Promo,Dragon,140,Stage 2,[1] Jet Headbutt (40),"[1WF] Sand Tomb (80)
+<br>The Defending Pokémon can't retreat during your opponent's next turn.",Ox2,0,3.44,6.0,6.0,3.27,,Holofoil,,,,
+165633,Dusknoir - 63/149 (Cosmos Holo),Dusknoir 63 149 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/165633_200w.jpg,3,2289,https://cpt.tcgcsv.com/Hgl2,2022-09-15T19:18:31.953,1,063/149,Promo,Psychic,130,Stage 2,"[3P] Shadow Punch (60)
+<br>This attack's damage isn't affected by Resistance.",,Dx2,3,1.55,2.5,5.47,2.38,,Holofoil,"<strong>Ability — Sinister Hand</strong>
+<br>
+As often as you like during your turn <em>(before your attack)</em>, you may move 1 damage counter from 1 of your opponent's Pokémon to another of your opponent's Pokémon.",,,
+165634,Blastoise - 16/101 (Cosmos Holo),Blastoise 16 101 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/165634_200w.jpg,3,2289,https://cpt.tcgcsv.com/Jgl2,2022-10-11T17:38:04.523,1,016/101,Promo,Water,140,Stage 2,"[4] Hydro Pump (60+)
+<br>Does 10 more damage for each Water Energy attached to this Pokémon.",,Gx2,4,3.57,4.28,20.0,5.54,,Holofoil,"<strong>Ability — Deluge</strong>
+<br>
+As often as you like during your turn <em>(before your attack)</em>, you may attach a Water Energy card from your hand to 1 of your Pokémon.",,,
+170833,Entei - 14/98 (Cosmos Holo),Entei 14 98 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/170833_200w.jpg,3,2289,https://cpt.tcgcsv.com/Hln2,2022-09-15T19:31:36.913,1,014/098,Promo,Fire,120,Basic,"[1] Burning Roar
+<br>Discard the top 4 cards of your deck. If any of those cards are Fire Energy cards, attach them to your Pokémon in any way you like.","[RR] Combat Blaze (20+)
+<br>This attack does 20 more damage for each of your opponent's Benched Pokémon.",Wx2,2,1.65,5.82,9.99,2.02,,Holofoil,,,,
+173090,Beartic - 30/98 (Cosmos Holo),Beartic 30 98 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/173090_200w.jpg,3,2289,https://cpt.tcgcsv.com/Qfp2,2022-09-15T18:36:15.123,1,030/098,Promo,Water,130,Stage 1,"[2W] Sheer Cold (50)
+<br>The Defending Pokémon can't attack during your opponent's next turn.","[2WW] Icicle Crash (80)
+<br>This attack's damage isn't affected by Resistance.",Mx2,3,0.48,1.52,8.0,1.35,,Holofoil,,,,
+173091,Beartic - 30/98 (Cracked Ice Holo),Beartic 30 98 Cracked Ice Holo,https://tcgplayer-cdn.tcgplayer.com/product/173091_200w.jpg,3,2289,https://cpt.tcgcsv.com/Rfp2,2022-09-15T18:37:28.967,1,030/098,Promo,Water,130,Stage 1,"[2W] Sheer Cold (50)
+<br>The Defending Pokémon can't attack during your opponent's next turn.","[2WW] Icicle Crash (80)
+<br>This attack's damage isn't affected by Resistance.",Mx2,3,0.75,1.5,5.24,1.52,,Holofoil,,,,
+173092,Roggenrola - 49/98 (Cracked Ice Holo),Roggenrola 49 98 Cracked Ice Holo,https://tcgplayer-cdn.tcgplayer.com/product/173092_200w.jpg,3,2289,https://cpt.tcgcsv.com/Sfp2,2022-09-26T16:11:29.36,1,049/098,Promo,Fighting,60,Basic,"[1] Harden
+<br>
+During your opponent's next turn, if this Pokémon would be damaged by an attack, prevent that attack's damage done to this Pokémon if that damage is 40 or less.",[2F] Headbutt (40),Gx2,2,6.64,8.82,15.0,6.95,,Holofoil,,,,
+173093,Boldore - 51/98 (Cracked Ice Holo),Boldore 51 98 Cracked Ice Holo,https://tcgplayer-cdn.tcgplayer.com/product/173093_200w.jpg,3,2289,https://cpt.tcgcsv.com/Tfp2,2022-09-15T18:44:59.64,1,051/098,Promo,Fighting,90,Stage 1,"[1F] Smack Down (20+)
+<br>If the Defending Pokémon has Fighting Resistance, this attack does 60 more damage.",[2FF] Power Gem (80),Gx2,3,2.11,3.99,11.0,1.8,,Holofoil,,,,
+173094,Gigalith - 53/98 (Cracked Ice Holo),Gigalith 53 98 Cracked Ice Holo,https://tcgplayer-cdn.tcgplayer.com/product/173094_200w.jpg,3,2289,https://cpt.tcgcsv.com/Vfp2,2022-09-15T19:57:00.113,1,053/098,Promo,Fighting,140,Stage 2,"[F] Shear
+<br>
+Discard the top 5 cards of your deck. If any of those cards are Fighting Energy cards, attach them to this Pokémon.","[4] Rock Bullet (40+)
+<br>
+Does 20 more damage for each Fighting Energy attached to this Pokémon.",Gx2,4,2.95,5.84,22.0,2.86,,Holofoil,,,,
+173097,Excadrill - 56/98 (Cosmos Holo),Excadrill 56 98 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/173097_200w.jpg,3,2289,https://cpt.tcgcsv.com/Zfp2,2022-09-15T19:37:12.593,1,056/098,Promo,Fighting,110,Stage 1,[1] Metal Claw (30),"[FFF] Drill Run (80)
+<br>Discard an Energy attached to the Defending Pokémon.",Wx2,2,0.95,1.19,1.31,3.24,,Holofoil,,L-20,,
+173100,Alolan Golem - 42/145 (Cosmos Holo),Alolan Golem 42 145 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/173100_200w.jpg,3,2289,https://cpt.tcgcsv.com/0gp2,2022-09-15T18:17:55.37,1,042/145,Promo,Lightning,160,Stage 2,"[2L] Electromagnetic Rock Wrecker (80x)
+<br>Flip a coin for each Lightning Energy attached to this Pokémon. This attack does 80 damage for each heads.","[3L] Heavy Slam (200-)
+<br>This attack does 30 less damage for each Colorless in your opponent's Active Pokémon's Retreat Cost.",Fx2,4,1.44,1.85,2.01,1.85,,Holofoil,,M-20,,
+173101,Crobat - 56/149 (Cosmos Holo),Crobat 56 149 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/173101_200w.jpg,3,2289,https://cpt.tcgcsv.com/2gp2,2022-09-15T19:04:10.983,1,056/149,Promo,Psychic,130,Stage 2,"[P] Triple Poison
+<br>Your opponent's Active Pokémon is now Poisoned. Put 3 damage counters instead of 1 on that Pokémon between turns.","[3] Surprise Strike (60+)
+<br>If this Pokémon was on the Bench and became your Active Pokémon this turn, this attack does 60 more damage.",Lx2,,2.21,2.27,6.49,3.85,,Holofoil,,F-20,,
+173102,Alolan Persian - 79/149 (Cosmos Holo),Alolan Persian 79 149 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/173102_200w.jpg,3,2289,https://cpt.tcgcsv.com/3gp2,2022-09-21T19:18:22.237,1,079/149,Promo,Darkness,90,Stage 1,"[0] Taunt
+<br>
+Switch 1 of your opponent's Benched Pokémon with their Active Pokémon.","[D] Claw Rend (30+)
+<br>
+If your opponent's Active Pokémon already has any damage counters on it, this attack does 30 more damage.",Fx2,1,0.98,1.41,3.0,1.72,,Holofoil,,P-20,,
+173103,Gigalith - 71/149 (Cosmos Holo),Gigalith 71 149 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/173103_200w.jpg,3,2289,https://cpt.tcgcsv.com/5gp2,2022-09-15T19:54:37.023,1,071/149,Promo,Fighting,160,Stage 2,"[1F] Rock Artillery (50x)
+<br>
+Discard any amount of Fighting Energy from your Pokémon. This attack does 50 damage for each card you discarded in this way.","[2FF] Rock Tumble (120)
+<br>
+This attack's damage isn't affected by Resistance.",Gx2,4,0.59,0.8,2.28,0.88,,Holofoil,,,,
+173104,Alolan Muk - 58/149 (Cosmos Holo),Alolan Muk 58 149 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/173104_200w.jpg,3,2289,https://cpt.tcgcsv.com/6gp2,2022-09-15T18:20:52.267,1,058/149,Promo,Psychic,120,Stage 1,"[2PP] Crunch (90)
+<br>Flip a coin. If heads, discard an Energy attached to your opponent's Active Pokémon.",,Px2,4,3.18,4.13,4.53,4.12,,Holofoil,"<strong>Ability — Power of Alchemy</strong>
+<br>
+Each Basic Pokémon in play, in each player's hand, and in each player's discard pile has no Abilities.",,,
+173105,Sharpedo - 82/149 (Cosmos Holo),Sharpedo 82 149 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/173105_200w.jpg,3,2289,https://cpt.tcgcsv.com/7gp2,2022-09-26T16:26:12.417,1,082/149,Promo,Darkness,110,Stage 1,"[2D] Aqua Impact (60+)
+<br>
+This attack does 20 more damage for each Colorless in your opponent's Active Pokémon's Retreat Cost.",,Fx2,,0.57,0.85,2.0,0.9,,Holofoil,"<strong>Ability — Rough Skin</strong>
+<br>
+If this Pokémon is your Active Pokémon and is damaged by an opponent's attack <em>(even if this Pokémon is Knocked Out)</em>, put 3 damage counters on the attacking Pokémon.",P-20,,
+173106,Alolan Dugtrio - 87/149 (Cosmos Holo),Alolan Dugtrio 87 149 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/173106_200w.jpg,3,2289,https://cpt.tcgcsv.com/8gp2,2025-02-13T03:49:46.747,1,087/149,Promo,Metal,100,Stage 1,"[3] Dig Under
+<br>This attack does 50 damage to 1 of your opponent's Pokémon. This attack's damage isn't affected by Weakness or Resistance.",,Rx2,2,2.1,2.3,7.0,2.36,,Holofoil,"<strong>Ability — Tangling Hair</strong>
+<br>
+Your opponent's Active Pokémon's Retreat Cost is 1 Colorless more.",P-20,,
+173107,Suicune - 30/122 (Cosmos Holo),Suicune 30 122 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/173107_200w.jpg,3,2289,https://cpt.tcgcsv.com/9gp2,2022-09-26T16:51:03.847,1,030/122,Promo,Water,120,Basic,[WWW] Aurora Beam (110),,Gx2,1,4.0,4.39,5.49,4.9,,Holofoil,"<strong>Ability — Wind Charm</strong>
+<br>
+As long as this Pokémon is your Active Pokémon, prevent all effects of your opponent's attacks, except damage, done to each of your Pokémon. (Existing effects are not removed.)",,"NO. 245 Aurora Pokémon HT: 6'07"" WT: 412.3 lbs.
+<br>
+<em>Said to be the embodiment of north winds, it can instantly purify filthy, murky water.</em>",
+173108,Raikou - 55/162 (Cosmos Holo),Raikou 55 162 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/173108_200w.jpg,3,2289,https://cpt.tcgcsv.com/bgp2,2022-09-26T16:05:53.357,1,055/162,Promo,Lightning,120,Basic,"[3] Thunder Lance (50+)
+<br>This attack does 20 more damage for each Lightning Energy attached to this Pokémon.",,Fx2,1,1.25,3.33,7.57,3.41,,Holofoil,"<strong>Ability — Shining Body</strong>
+<br>
+If this Pokémon has any Lightning Energy attached to it, any damage done to this Pokémon by attacks is reduced by 20 <em>(after applying Weakness and Resistance)</em>.",M-20,,
+173109,Xerneas - 107/162 (Cosmos Holo),Xerneas 107 162 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/173109_200w.jpg,3,2289,https://cpt.tcgcsv.com/cgp2,2022-09-26T18:15:12.767,1,107/162,Promo,Fairy,120,Basic,"[2Y] Rainbow Force (10+)
+<br>This attack does 30 more damage for each different type of Pokémon on your Bench.","[2YY] Power Creation (80+)
+<br>If this Pokémon healed damage this turn, this attack does 80 more damage.",Mx2,2,1.15,1.41,1.99,2.43,,Holofoil,,D-20,,
+173111,Eelektross - 65/160 (Cosmos Holo),Eelektross 65 160 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/173111_200w.jpg,3,2289,https://cpt.tcgcsv.com/fgp2,2022-09-15T19:20:50.493,1,065/160,Promo,Lightning,140,Stage 2,"[2LL] Electricannon (80+)
+<br>You may discard all Lightning Energy attached to this Pokémon. If you do, this attack does 50 more damage.",,Fx2,3,0.86,1.87,4.99,1.97,,Holofoil,"<strong>Ability — Energy Connect</strong>
+<br>
+<em>They crawl out of the ocean using their arms. They will attack prey on shore and immediately drag it into the ocean.</em>",M-20,,
+173112,Flygon - 110/160 (Cosmos Holo),Flygon 110 160 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/173112_200w.jpg,3,2289,https://cpt.tcgcsv.com/ggp2,2023-02-26T05:56:05.25,1,110/160,Promo,Dragon,140,Stage 2,"[1GF] Sand Tomb (80)
+<br>The Defending Pokémon can't retreat during your opponent's next turn.",,Yx2,1,2.84,3.75,8.79,11.71,,Holofoil,"<strong>Ability — Sand Flap</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may choose either player. That player shuffles his or her hand into his or her deck and draws 4 cards.",,,
+173113,Hydreigon - 074/119 (Cosmos Holo),Hydreigon 074 119 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/173113_200w.jpg,3,2289,https://cpt.tcgcsv.com/hgp2,2022-09-26T15:14:28.01,1,074/119,Promo,Dragon,140,Stage 2,"[2PD] Crazy Headbutt (130)
+<br>Discard an Energy attached to this Pokémon.",,Yx2,3,0.6,0.91,4.99,1.13,,Holofoil,"<strong>Ability — Dark Impulse</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may attach a Darkness Energy card from your discard pile to your Active Pokémon.",,,
+173114,Goodra - 77/119 (Cosmos Holo),Goodra 77 119 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/173114_200w.jpg,3,2289,https://cpt.tcgcsv.com/jgp2,2022-09-15T20:09:12.217,1,077/119,Promo,Dragon,140,Stage 2,"[2WY] Dragon Pulse (130)
+<br>Discard the top card of your deck.",,Yx2,3,0.86,1.65,4.99,2.98,,Holofoil,"<strong>Abillity — Slip Trip</strong>
+<br>Each player can't attach any Pokémon Tool cards from his or her hand to any of his or her Pokémon.",,,
+173115,Rhyperior - 62/146 (Cosmos Holo),Rhyperior 62 146 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/173115_200w.jpg,3,2289,https://cpt.tcgcsv.com/kgp2,2022-09-26T16:10:00.81,1,062/146,Promo,Fighting,160,Stage 2,"[F] Rock Blast (50x)
+<br>Flip a coin for each Fighting Energy attached to this Pokémon. This attack does 50 damage times the number of heads.","[2FF] Rock Wrecker (130)
+<br>This attack's damage isn't affected by Weakness or Resistance. This Pokémon can't attack during your next turn.",Gx2,4,0.5,1.25,2.5,1.73,,Holofoil,,,,
+173116,Talonflame - 28/146 (Cosmos Holo),Talonflame 28 146 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/173116_200w.jpg,3,2289,https://cpt.tcgcsv.com/lgp2,2022-09-26T16:52:23.117,1,028/146,Promo,Fire,130,Stage 2,"[1] Devastating Wind
+<br>Your opponent shuffles his or her hand into his or her deck and draws 4 cards.","[RR] Flare Blitz (100)
+<br>Discard all Fire Energy attached to this Pokémon.",Lx2,,0.56,0.81,10.0,1.29,,Holofoil,,F-20,,
+177866,Zoroark - 90/113 (Cosmos Holo),Zoroark 90 113 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/177866_200w.jpg,3,2289,https://cpt.tcgcsv.com/l9r2,2025-08-07T16:06:28.43,1,090/113,Promo,Darkness,100,Stage 1,"[2] Brutal Bash (20x)
+<br>Does 20 damage times the number of Darkness Pokémon you have in play.","[DD] Dark Rush (20x)
+<br>Does 20 damage times the number of damage counters on this card.",Fx2,2,2.09,2.73,4.99,2.83,,Holofoil,,P-20,,
+179081,Noivern - 77/111 (Cosmos Holo),Noivern 77 111 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/179081_200w.jpg,3,2289,https://cpt.tcgcsv.com/FFr2,2022-09-26T15:54:32.027,1,077/111,Promo,Dragon,100,Stage 1,"[1PD] Boomburst
+<br>
+This attack does 30 damage to each of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",,Fx2,1,0.98,1.45,2.0,1.51,,Holofoil,"<strong>Ability — Echolocation</strong>
+<br>If any damage is done to this Pokémon by attacks, flip a coin. If heads, prevent that damage.",,,
+179082,Druddigon - 70/106(Cosmos Holo),Druddigon 70 106Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/179082_200w.jpg,3,2289,https://cpt.tcgcsv.com/GFr2,2022-09-15T19:14:52.163,1,070/106,Promo,Dragon,110,Basic,"[2] Revenge (20+)
+<br>
+If any of your Pokémon were Knocked Out by damage from an opponent's attack during his or her last turn, this attack does 70 more damage.",[2RW] Dragon Claw (80),Yx2,2,0.88,1.67,2.48,1.74,,Holofoil,,,,
+180722,Gyarados - 24/124 (Cosmos Holo),Gyarados 24 124 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/180722_200w.jpg,3,2289,https://cpt.tcgcsv.com/sjs2,2022-09-15T20:15:49.437,1,024/124,Promo,Water,130,Stage 1,[2W] Sharp Fang (60),"[3W] Swing Around (60+)
+<br>Flip 2 coins. This attack does 30 more damage for each heads.",Lx2,3,4.8,5.34,8.08,9.73,,Holofoil,,,,
+193275,Squirtle - 33/214 (Premium Collection Promo),Squirtle 33 214 Premium Collection Promo,https://tcgplayer-cdn.tcgplayer.com/product/193275_200w.jpg,3,2289,https://cpt.tcgcsv.com/wkz2,2022-09-26T16:47:29.857,1,033/214,Promo,Water,60,Basic,"[W] Bubble (10)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",,Gx2,1,0.82,2.1,5.0,2.63,,Holofoil,,,,
+212045,Raichu - 43/146 (Cosmos Holo),Raichu 43 146 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/212045_200w.jpg,3,2289,https://cpt.tcgcsv.com/WQJ2,2022-09-26T16:03:56.597,1,043/146,Promo,Lightning,90,Stage 1,"[2] Circle Circuit (20x)
+<br>This attack does 20 damage times the number of your Benched Pokémon.","[1LL] Thunderbolt (100)
+<br>Discard all Energy attached to this Pokémon.",Fx2,,3.5,3.56,3.62,3.18,,Holofoil,,M-20,,
+212994,Grookey - 010/202 (Cosmos Holo),Grookey 010 202 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/212994_200w.jpg,3,2289,https://cpt.tcgcsv.com/VcK2,2025-08-07T15:59:09.307,1,010/202,Promo,Grass,60,Basic,"[1] Fury Swipes (10x)
+<br>Flip 3 coins. This attack does 10 damage for each heads.",,Rx2,1,0.2,0.4,5.0,0.38,,Holofoil,,,,
+212995,Scorbunny - 030/202 (Cosmos Holo),Scorbunny 030 202 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/212995_200w.jpg,3,2289,https://cpt.tcgcsv.com/WcK2,2022-09-26T16:20:44.5,1,030/202,Promo,Fire,60,Basic,"[R] Ember (30)
+<br>Discard an Energy from this Pokémon.",,Wx2,1,0.14,0.41,5.0,0.39,,Holofoil,,None,,
+212996,Sobble - 54/202 (Cosmos Holo),Sobble 54 202 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/212996_200w.jpg,3,2289,https://cpt.tcgcsv.com/XcK2,2022-09-26T16:45:35.42,1,054/202,Promo,Water,60,Basic,[W] Water Gun (20),,Lx2,1,0.15,0.45,5.0,0.44,,Holofoil,,,,
+213005,Klang - 75/114 (Cracked Ice Holo),Klang 75 114 Cracked Ice Holo,https://tcgplayer-cdn.tcgplayer.com/product/213005_200w.jpg,3,2289,https://cpt.tcgcsv.com/7dK2,2022-09-26T15:18:08.843,1,075/114,Promo,Metal,80,Stage 1,"[M] Bind (10)
+<br>
+Flip a coin. If heads, the Defending Pokémon is now Paralyzed.","[2M] Gear Grind (60x)
+<br>
+Flip 2 coins. This attack does 60 damage times the number of heads.",Rx2,2,0.98,1.63,5.0,1.56,,Reverse Holofoil,,P-20,,
+213006,Klinklang - 76/114 (Cracked Ice Holo),Klinklang 76 114 Cracked Ice Holo,https://tcgplayer-cdn.tcgplayer.com/product/213006_200w.jpg,3,2289,https://cpt.tcgcsv.com/8dK2,2022-09-26T15:21:22.247,1,076/114,Promo,Metal,140,Stage 2,"[2M] Gear Grind (80x)
+<br>
+Flip 2 coins. This attack does 80 damage times the number of heads.",,Rx2,3,1.65,4.49,14.99,1.92,,Reverse Holofoil,"<strong>Ability — Shift Gear</strong>
+<br>As often as you like during your turn <em>(before your attack)</em>, You may move a Metal Energy attached to 1 of your Pokémon to another of your Pokémon.",P-20,,
+216741,Golisopod - 51/236 (Cosmos Holo),Golisopod 51 236 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/216741_200w.jpg,3,2289,https://cpt.tcgcsv.com/RJL2,2022-09-15T20:07:43.847,0,051/236,Promo,Water,140,Stage 1,"[3W] First Impression (120+)
+<br>If this Pokémon was on the Bench and became your Active Pokémon this turn, this attack does 60 more damage.",,Gx2,4,0.35,0.68,3.99,0.67,,Holofoil,"<strong>Ability — Emergency Exit</strong>
+<br>If this Pokémon has 2 or fewer Energy attached to it, it has no Retreat Cost.",,,
+216742,Silvally - 184/236 (Cosmos Holo),Silvally 184 236 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/216742_200w.jpg,3,2289,https://cpt.tcgcsv.com/SJL2,2025-08-07T16:01:24.48,0,184/236,Promo,Colorless,130,Stage 1,"[2] Avenging Heart (30+)
+<br>This attack does 50 more damage for each Prize card your opponent took on their last turn.","[3] Air Slash (120)
+<br>Discard an Energy from this Pokémon.",Fx2,2,0.75,1.36,3.99,0.85,,Holofoil,,,,
+216754,Gallade - 84/162 (Cosmos Holo),Gallade 84 162 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/216754_200w.jpg,3,2289,https://cpt.tcgcsv.com/6KL2,2022-09-15T19:46:48.75,1,084/162,Promo,Fighting,150,Stage 2,"[2] Sensitive Blade (60+)
+<br>If you played any Supporter card from your hand during your turn, this attack does an additional 70 damage.",,Px2,2,0.39,0.98,4.0,0.85,,Holofoil,"<strong>Ability — Premonition</strong>
+<br>Once during your turn <em>(before your attack)</em>, you may look at the top 5 cards in your deck and put them back on top of your deck in any order.",,,
+216886,Ampharos - 40/124 (Cosmos Holo),Ampharos 40 124 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/216886_200w.jpg,3,2289,https://cpt.tcgcsv.com/LML2,2022-09-15T18:26:09.913,1,040/124,Promo,Lightning,140,Stage 2,"[2L] Electrobullet (70)
+<br>
+Does 20 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",,Fx2,2,6.99,15.5,19.99,12.67,,Holofoil,"<strong>Ability — Electromagnetic Wall
+<br>
+As long as this Pokémon is your Active Pokémon, whenever your opponent attaches an Energy from his or her hand to 1 of his or her Pokémon, put 3 damage counters on that Pokémon.",,,
+220118,Raichu - 40/99 (Cosmos Holo),Raichu 40 99 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/220118_200w.jpg,3,2289,https://cpt.tcgcsv.com/n3N2,2022-09-26T16:00:58.607,1,040/099,Promo,Lightning,90,Stage 1,"[L] Thundershock (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.","[2L] Slam (80x)
+<br>Flip 2 coins. This attack does 80 damage times the number of heads.",Fx2,1,19.06,28.84,39.2,48.92,,Holofoil,,,,
+220119,Charizard - 20/149 (Cosmos Holo),Charizard 20 149 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/220119_200w.jpg,3,2289,https://cpt.tcgcsv.com/p3N2,2022-09-15T18:55:12.023,1,020/149,Promo,Fire,160,Stage 2,"[2R] Split Bomb
+<br>This attack does 40 damage to 2 of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[4R] Scorching Fire (150)
+<br>Discard a Fire Energy attached to this Pokémon.",Wx2,3,24.93,30.17,54.99,29.67,,Holofoil,,,,
+220120,Lucario - 64/99 (Cosmos Holo),Lucario 64 99 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/220120_200w.jpg,3,2289,https://cpt.tcgcsv.com/q3N2,2024-11-13T20:33:05.01,1,064/099,Promo,Fighting,100,Stage 1,"[FF] Aura Sphere (50)
+<br>Does 20 damage to 1 of your opponent's Benched Pokémon. <em> (Don't apply Weakness and Resistance for Benched Pokemon.)</em>",,Px2,1,1.5,5.2,15.0,10.88,,Holofoil,"<strong>Ability — Reflexive Retaliation</strong>
+<br>If this Pokémon is your Active Pokémon and is damaged by an opponent's attack <em>(even if this Pokémon is Knocked Out)</em>, put 2 damage counters on the Attacking Pokémon.",,,
+220124,Terrakion - 73/101 (Cosmos Holo),Terrakion 73 101 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/220124_200w.jpg,3,2289,https://cpt.tcgcsv.com/v3N2,2025-08-07T16:02:10.99,1,073/101,Promo,Fighting,130,Basic,"[1F] Retaliate (30+)
+<br>If any of your Pokémon were Knocked Out by damage from an opponent's attack during his or her last turn, this attack does 60 more damage.",[1FF] Land Crush (90),Gx2,4,1.27,2.74,3.7,2.11,,Holofoil,,,,
+220179,Krookodile - 66/108 (Cosmos Holo),Krookodile 66 108 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/220179_200w.jpg,3,2289,https://cpt.tcgcsv.com/C5N2,2022-09-26T15:25:47.433,1,066/108,Promo,Darkness,150,Stage 2,"[2D] Dark Clamp (60)
+<br>The Defending Pokémon can't retreat during your opponent's next turn.","[2DD] Bombast (40x)
+<br>Does 40 damage times the number of Prize cards you have taken.",Fx2,3,2.99,3.22,18.92,6.04,,Holofoil,,P-20,,
+220180,Virizion - 13/101 (Cosmos Holo),Virizion 13 101 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/220180_200w.jpg,3,2289,https://cpt.tcgcsv.com/D5N2,2022-09-26T18:05:36.613,1,013/101,Promo,Grass,110,Basic,"[1] Double Draw
+<br>Draw 2 cards.","[1G] Leaf Wallop (40)
+<br>During your next turn, this Pokémon's Leaf Wallop attack does 40 more damage <em>(before applying Weakness and Resistance)</em>.",Rx2,1,3.0,3.59,9.17,2.24,,Holofoil,,W-20,,
+220183,Luxray - 46/99 (Cracked Ice Holo),Luxray 46 99 Cracked Ice Holo,https://tcgplayer-cdn.tcgplayer.com/product/220183_200w.jpg,3,2289,https://cpt.tcgcsv.com/H5N2,2022-09-26T15:36:40.73,1,046/099,Promo,Lightning,140,Stage 2,"[L] Flash Impact (60
+<br>
+Does 20 damage to 1 of your Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[1LL] Crunch (80)
+<br>
+Flip a coin. If heads, discard an Energy attached to the Defending Pokémon.",Fx2,1,8.5,10.82,11.64,10.36,,Holofoil,,,,
+220184,Luxray - 46/99 (Cosmos Holo),Luxray 46 99 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/220184_200w.jpg,3,2289,https://cpt.tcgcsv.com/J5N2,2022-09-26T15:35:39.443,1,046/099,Promo,Lightning,140,Stage 2,"[L] Flash Impact (60
+<br>
+Does 20 damage to 1 of your Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[1LL] Crunch (80)
+<br>
+Flip a coin. If heads, discard an Energy attached to the Defending Pokémon.",Fx2,1,0.99,1.94,4.0,1.93,,Holofoil,,,,
+221300,Electivire - 54/149 (Cosmos Holo),Electivire 54 149 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/221300_200w.jpg,3,2289,https://cpt.tcgcsv.com/0xN2,2022-09-15T19:23:44.033,1,054/149,Promo,Lightning,120,Stage 1,"[2L] Electriwave
+<br>
+This attack does 30 damage to each of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[3L] Shock Wave (80)
+<br>
+This attack's damage isn't affected by Resistance.",Fx2,3,3.0,5.99,7.88,6.13,,Holofoil,,,,
+221301,Gardevoir - 54/98 (Cosmos Holo),Gardevoir 54 98 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/221301_200w.jpg,3,2289,https://cpt.tcgcsv.com/2xN2,2022-09-15T19:50:15.577,1,054/098,Promo,Fairy,130,Stage 2,"[3] Telekinesis
+<br>This attack does 50 damage to 1 of your opponent's Pokémon. This attack's damage isn't affected by Weakness or Resistance.",,Mx2,2,2.6,3.7,7.0,4.31,,Holofoil,"<strong>Ability — Bright Heal</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may heal 20 damage from each of your Pokémon.",D-20,,
+222223,Copperajah - 137/202 (Non-Holo Gamestop Exclusive),Copperajah 137 202 Non Holo Gamestop Exclusive,https://tcgplayer-cdn.tcgplayer.com/product/222223_200w.jpg,3,2289,https://cpt.tcgcsv.com/tVN2,2023-09-15T23:08:58.247,1,137/202,Promo,Metal,190,Stage 1,"[MM] Dig Drain (60)
+<br>Heal 30 damage from this Pokémon.","[MMM] Muscular Nose (220)
+<br>If this Pokémon has 8 or more damage counters on it, this attack does nothing.",Rx2,4,0.24,0.77,2.21,0.58,,Normal,,G-30,,
+224858,Salamence - 57/108 (Cosmos Holo),Salamence 57 108 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/224858_200w.jpg,3,2289,https://cpt.tcgcsv.com/bZP2,2022-09-26T16:13:49.697,1,057/108,Promo,Dragon,160,Stage 2,"[R] Shatter (60)
+<br>Discard any Stadium card in play.","[2W] Power Howl (20x)
+<br>This attack does 20 damage times the number of cards in your opponent's hand.",Yx2,4,3.0,4.0,9.45,7.3,,Holofoil,,,,"[1RRW] Steam Blast (170)
+<br>Discard 3 Energy attached to this Pokémon."
+227085,Emboar - 26/149 (Cosmos Holo),Emboar 26 149 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/227085_200w.jpg,3,2289,https://cpt.tcgcsv.com/KRQ2,2022-09-15T19:25:21.82,1,026/149,Promo,Fire,150,Stage 2,"[2R] Firebreathing (40+)
+<br>
+Flip a coin. If heads, this attack does 30 more damage.","[2RR] Fire Blast (120)
+<br>
+Discard an Energy attached to this Pokémon.",Wx2,4,4.5,4.5,20.0,4.33,,Holofoil,,,,
+227086,Samurott - 41/149 (Cosmos Holo),Samurott 41 149 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/227086_200w.jpg,3,2289,https://cpt.tcgcsv.com/LRQ2,2022-09-26T16:16:58.593,1,041/149,Promo,Water,140,Stage 2,[1W] Waterfall (50),"[2WW] Destructive Whirlpool (80)
+<br>Discard an Energy attached to the Defending Pokémon.",Gx2,3,4.95,5.68,10.6,5.65,,Holofoil,,,,
+227087,Serperior - 13/149 (Cosmos Holo),Serperior 13 149 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/227087_200w.jpg,3,2289,https://cpt.tcgcsv.com/MRQ2,2022-09-26T16:22:17.48,1,013/149,Promo,Grass,140,Stage 2,"[1G] Double Slash (50x)
+<br>Flip 2 coins. This attack does 50 damage times the number of heads.","[2G] Mega Drain (70)
+<br>Heal 30 damage from this Pokémon.",Rx2,1,4.09,4.34,5.99,6.76,,Holofoil,,,,
+227088,Venusaur - 3/108 (Cosmos Holo),Venusaur 3 108 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/227088_200w.jpg,3,2289,https://cpt.tcgcsv.com/NRQ2,2022-09-26T18:02:58.157,1,003/108,Promo,Grass,140,Stage 2,"[2GG] Poison Powder (70)
+<br>The Defending Pokémon is now Poisoned.",,Rx2,4,3.25,9.0,15.01,11.15,,Holofoil,"<strong>Ability — Floral Scent</strong>
+<br>Once during your turn <em>(before your attack)</em>, you may search your deck for a Pokémon, reveal it, and put it into your hand. Shuffle your deck afterward.",W-20,,
+227089,Hydreigon - 98/124 (Cosmos Holo),Hydreigon 98 124 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/227089_200w.jpg,3,2289,https://cpt.tcgcsv.com/PRQ2,2022-09-26T15:16:14.097,1,098/124,Promo,Dragon,150,Stage 2,"[2D] Consume (40)
+<br>
+Heal from this Pokémon the same amount of damage you did to the Defending Pokémon.","[2PD] Destructor Beam (90)
+<br>
+Flip a coin. If heads, discard an Energy attached to the Defending Pokémon.",Ox2,3,0.7,1.09,2.36,1.22,,Holofoil,,,,
+227090,Salamence - 8/20 (Cosmos Holo),Salamence 8 20 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/227090_200w.jpg,3,2289,https://cpt.tcgcsv.com/QRQ2,2022-09-26T16:15:35.69,1,008/020,Promo,Dragon,140,Stage 2,"[2RW] Shred (90)
+<br>This attack's damage isn't affected by any effects on the Defending Pokémon.",,Ox2,2,3.15,9.99,29.99,7.41,,Holofoil,"<strong>Ability — Scornful Storm</strong>
+<br>Once during your turn <em>(before your attack)</em>, you may have your opponent discard cards from his or her hand until he or she has 4 cards left in his or her hand.",,,
+227093,Scizor - 94/149 (Cosmos Holo),Scizor 94 149 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/227093_200w.jpg,3,2289,https://cpt.tcgcsv.com/TRQ2,2022-09-26T16:18:20.723,1,094/149,Promo,Metal,120,Stage 1,"[2] Steel Slash (40)
+<br>During your opponent's next turn, prevent all damage done to this Pokémon by attacks from Pokémon-EX.","[2M] Slashing Strike (100)
+<br>This Pokémon can't use Slashing Strike during your next turn.",Rx2,2,12.57,13.0,13.97,14.13,,Holofoil,,P-20,,
+227474,Cobalion - 84/101 (Cosmos Holo),Cobalion 84 101 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/227474_200w.jpg,3,2289,https://cpt.tcgcsv.com/v_Q2,2022-09-15T18:59:26.52,1,084/101,Promo,Metal,120,Basic,"[1M] Energy Press (20+)
+<br>Does 20 more damage for each Energy attached to the Defending Pokémon.","[1MM] Iron Breaker (80)
+<br>The Defending Pokémon can't attack during your opponent's next turn.",Rx2,2,0.98,1.01,5.0,1.5,,Holofoil,,P-20,,
+228537,Giratina - 97/214 (Cosmos Holo),Giratina 97 214 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/228537_200w.jpg,3,2289,https://cpt.tcgcsv.com/MqR2,2022-09-15T19:58:54.84,1,097/214,Promo,Psychic,130,Basic,"[1PP] Shadow Impact (130)
+<br>Put 4 damage counters on 1 of your Pokémon.",,Dx2,3,5.1,5.1,5.1,3.92,,Holofoil,"<strong>Ability — Distortion Door</strong>
+<br>Once during your turn <em>(before your attack)</em>, if this Pokémon is in your discard pile, you may put it onto your Bench. If you do, put 1 damage counter on 2 of your opponent's Benched Pokémon.",F-20,,
+229577,Espeon - 89/214 (Cosmos Holo),Espeon 89 214 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/229577_200w.jpg,3,2289,https://cpt.tcgcsv.com/zRR2,2022-09-15T19:35:31.753,1,089/214,Promo,Psychic,90,Stage 1,"[1] Allure
+<br>Draw 3 cards.","[P] Energy Crush (20+)
+<br>This attack does 20 more damage times the amount of Energy attached to all of your opponent’s Pokémon.",Px2,1,5.45,11.99,16.0,9.98,,Holofoil,,,,
+229578,Umbreon - 120/214 (Cosmos Holo),Umbreon 120 214 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/229578_200w.jpg,3,2289,https://cpt.tcgcsv.com/BRR2,2024-10-01T13:34:52.64,1,120/214,Promo,Darkness,110,Stage 1,"[D] Retaliate (30+)
+<br>If any of your Pokémon were Knocked Out by damage from an opponent's attack during their last turn, this attack does 90 more damage.",[1D] Dark Cutter (60),Fx2,1,14.99,23.5,125.89,25.35,,Holofoil,,P-20,,
+233835,Dragonite - 5/20 (Dragon Vault),Dragonite 5 20 Dragon Vault,https://tcgplayer-cdn.tcgplayer.com/product/233835_200w.jpg,3,2289,https://cpt.tcgcsv.com/KxT2,2022-09-15T19:12:17.313,1,005/020,Promo,Dragon,150,Stage 2,"[2L] Hyper Beam (50)
+<br>
+Flip a coin. If heads, discard an Energy attached to the Defending Pokémon.","[3G] Hurricane Tail (60x)
+<br>
+Flip 4 coins. This attack does 60 damage times the number of heads.",Ox2,3,4.54,8.49,12.58,8.14,,Holofoil,,,,
+234309,Shinx - 43/99 (Cracked Ice Holo),Shinx 43 99 Cracked Ice Holo,https://tcgplayer-cdn.tcgplayer.com/product/234309_200w.jpg,3,2289,https://cpt.tcgcsv.com/cLT2,2022-09-26T16:30:57.497,1,043/099,Promo,Lightning,60,Basic,"[1] Reckless Charge (20)
+<br>
+This Pokémon does 10 damage to itself.",,Fx2,1,5.0,14.98,26.52,7.14,,Holofoil,,,,
+234310,Gliscor - 4/90 (Cracked Ice Holo),Gliscor 4 90 Cracked Ice Holo,https://tcgplayer-cdn.tcgplayer.com/product/234310_200w.jpg,3,2289,https://cpt.tcgcsv.com/dLT2,2022-09-15T20:01:58.89,1,004/090,Promo,Fighting,90,Stage 1,"[F] Ninja Fang (30)
+<br>
+If, before Gliscor does damage, the Defending Pokémon has no damage counters on it and is then damaged by this attack <em>(after applying Weakness and Resistance)</em>, the Defending Pokémon is now Paralyzed.","[2F] Poison Jab (50)
+<br>
+The Defending Pokémon is now Poisoned.",Wx2,1,12.5,12.99,13.99,13.15,,Holofoil,,L-20,,
+234366,Sigilyph - 52/124 (Cosmos Holo),Sigilyph 52 124 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/234366_200w.jpg,3,2289,https://cpt.tcgcsv.com/lMT2,2022-09-26T16:33:04.123,1,052/124,Promo,Psychic,90,Basic,"[2P] Psychic (50+)
+<br>Does 10 more damage for each Energy attached to the Defending Pokémon.",,Px2,1,0.5,1.0,8.0,0.94,,Holofoil,"<strong>Ability — Safeguard</strong>
+<br>Prevent all effects of attacks, including damage, done to this Pokémon by Pokémon-EX.",,,
+237574,Persian - 81/99 (Cosmos Holo),Persian 81 99 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/237574_200w.jpg,3,2289,https://cpt.tcgcsv.com/v2W2,2022-09-26T15:56:34.377,1,081/099,Promo,Colorless,90,Stage 1,"[1] Nasty Plot
+<br>
+Search your deck for a card and put it into your hand. Shuffle your deck afterward.","[2] Shadow Claw (30)
+<br>
+Flip a coin. If heads, discard a random card from your opponent's hand.",Fx2,1,3.0,6.5,10.0,3.03,,Holofoil,,,,
+238635,Machamp - 65/145 (Cosmos Holo),Machamp 65 145 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/238635_200w.jpg,3,2289,https://cpt.tcgcsv.com/KsW2,2022-09-26T15:41:28.097,1,065/145,Promo,Fighting,160,Stage 2,"[FF] Settle the Score (20+)
+<br>This attack does 80 more damage for each Prize card your opponent took on their last turn.","[FFF] Submission (150)
+<br>This Pokémon does 30 damage to itself.",Px2,3,0.16,0.5,9.0,0.5,,Holofoil,,,,
+243855,Arcanine - 22/214 (Cosmos Holo),Arcanine 22 214 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/243855_200w.jpg,3,2289,https://cpt.tcgcsv.com/7zZ2,2022-09-15T18:30:51.27,0,022/214,Promo,Fire,140,Stage 1,"[FFF] Grand Flame (120)
+<br>Attach 2 Fire Energy cards from your discard pile to 1 of your Benched Pokémon.","[FFFF] Heat Tackle (190)
+<br>This Pokémon does 50 damage to itself.",Wx2,4,6.91,13.81,24.99,9.25,,Holofoil,,,,
+244725,Milotic - 28/124 (Cosmos Holo),Milotic 28 124 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/244725_200w.jpg,3,2289,https://cpt.tcgcsv.com/wVZ2,2022-09-26T15:49:20.767,1,028/124,Promo,Water,110,Stage 1,"[W] Clear Search
+<br>Search your deck for any 3 cards and put them into your hand. Shuffle your deck afterward.","[2W] Water Pulse (60)
+<br>
+The Defending Pokémon is now Asleep.",Lx2,1,1.48,2.39,7.0,2.79,,Holofoil,,,,
+245145,Snorlax - 140/202 (Cosmos Holo),Snorlax 140 202 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/245145_200w.jpg,3,2289,https://cpt.tcgcsv.com/W3-2,2022-09-26T16:38:55.75,1,140/202,Promo,Colorless,150,Basic,[3] Rolling Tackle (80),[4] Heavy Impact (130),Fx2,4,0.15,0.64,5.0,0.72,,Holofoil,,,,
+245146,Applin - 020/192 (Cosmos Holo),Applin 020 192 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/245146_200w.jpg,3,2289,https://cpt.tcgcsv.com/X3-2,2022-09-21T19:18:30.04,1,020/192,Promo,Grass,40,Basic,"[1G] Continuous Tumble (10+)
+<br>Flip a coin until you get tails. This attack does 30 more damage for each heads.",,Rx2,1,0.03,0.21,5.0,0.17,,Holofoil,,,,
+245918,Steelix - 125/214 (Cosmos Holo),Steelix 125 214 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/245918_200w.jpg,3,2289,https://cpt.tcgcsv.com/nn-2,2022-09-26T16:48:47.377,1,125/214,Promo,Metal,180,Stage 1,[2M] Hammer In (90),"[3M] Iron Tackle (170)
+<br>This Pokémon does 50 damage to itself.",Rx2,4,1.79,2.0,10.0,2.44,,Holofoil,,P-20,,
+247288,Krookodile - 65/114 (Cracked Ice Holo),Krookodile 65 114 Cracked Ice Holo,https://tcgplayer-cdn.tcgplayer.com/product/247288_200w.jpg,3,2289,https://cpt.tcgcsv.com/NW-2,2022-09-26T15:24:32.743,1,065/114,Promo,Fighting,140,Stage 2,"[2] Torment (30)
+<br>Choose 1 of the Defending Pokémon's attacks. That Pokémon can't use that attack during your opponent's next turn.","[2FF] Krookoroll (60+)
+<br>If the Defending Pokémon already has any damage counters on it, this attack does 40 more damage.",Wx2,3,1.0,1.66,2.31,1.47,,Holofoil,,L-20,,
+250572,Raichu - 41/147 (Cosmos Holo),Raichu 41 147 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/250572_200w.jpg,3,2289,https://cpt.tcgcsv.com/sf03,2022-09-26T16:02:40.163,1,041/147,Promo,Lightning,110,Stage 1,"[1LL] Volt Tackle (130)
+<br>This Pokémon does 30 damage to itself.",,Fx2,1,,,,,,,"<strong>Ability — Evoshock</strong>
+<br>When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may leave your opponent's Active Pokémon Paralyzed.",M-20,,
+250573,Gyarados - 33/147 (Cosmos Holo),Gyarados 33 147 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/250573_200w.jpg,3,2289,https://cpt.tcgcsv.com/tf03,2022-09-26T15:06:59.623,1,033/147,Promo,Water,150,Stage 1,"[2] Venting Anger (50x)
+<br>This attack does 50 damage for each Magikarp in your discard pile.","[2WW] Splash Burn (160)
+<br>This attack does 30 damage to each of your Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",Lx2,4,5.92,19.0,19.96,12.28,,Holofoil,,,,
+251183,Aggron - 80/124 (Cosmos Holo),Aggron 80 124 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/251183_200w.jpg,3,2289,https://cpt.tcgcsv.com/Ht03,2022-09-15T18:10:28.22,1,080/124,Promo,Metal,140,Stage 2,"[1MM] Giga Horn (90)
+<br>Flip 2 coins. If both of them are tails, this attack does nothing.",,Rx2,4,18.0,24.95,29.99,12.01,,Holofoil,"<strong>Ability — Toppling Wind</strong>
+<br>When you play this Pokémon from your hand to evolve 1 of your Pokémon, you may discard the top 3 cards of your opponent's deck.",P-20,,
+253847,Chandelure - 43/119 (Cosmos Holo),Chandelure 43 119 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/253847_200w.jpg,3,2289,https://cpt.tcgcsv.com/Zx23,2022-09-15T18:50:56.437,1,043/119,Promo,Psychic,130,Stage 2,"[2P] Cursed Drop
+<br>Put 6 damage counters on your opponent's Pokémon in any way you like.",,Mx2,2,5.95,8.0,10.88,8.03,,Holofoil,"<strong>Ability — Fainting Spell</strong>
+<br>
+If this Pokémon is Knocked Out by damage from an opponent's attack, flip a coin. If heads, the Attacking Pokémon is Knocked Out.",F-20,,
+256834,Machamp - 49/101 (Cosmos Holo),Machamp 49 101 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/256834_200w.jpg,3,2289,https://cpt.tcgcsv.com/JL33,2022-09-26T15:40:01.037,1,049/101,Promo,Fighting,150,Stage 2,"[3F] Close Combat (120)
+<br>Flip a coin. If tails, during your opponent's next turn, any damage done to this Pokémon by attacks is increased by 30 <em>(after applying Weakness and Resistance)</em>.",,Px2,3,0.94,1.17,5.52,4.4,,Holofoil,"<strong>Ability — Badge of Discipline</strong>
+<br>
+The damage of each of your Fighting Pokémon's attacks isn't affected by Resistance.",,,
+257484,Vivillon - 17/146 (Cosmos Holo),Vivillon 17 146 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/257484_200w.jpg,3,2289,https://cpt.tcgcsv.com/J_33,2022-09-26T18:07:47.137,1,017/146,Promo,Grass,130,Stage 2,"[G] Conversion Powder
+<br>Choose either Asleep or Poisoned.  Your opponent's Active Pokémon is now affected by the Special Condition.","[3] Colorful Wind (30+)
+<br>This attack does 30 more damage for each different type of basic Energy attached to this Pokémon.",Rx2,1,0.59,1.53,4.95,2.22,,Holofoil,,,,
+257485,Gogoat - 19/146 (Cosmos Holo),Gogoat 19 146 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/257485_200w.jpg,3,2289,https://cpt.tcgcsv.com/K_33,2025-01-20T04:27:53.943,1,019/146,Promo,Grass,110,Stage 1,"[1] Lead
+<br>
+Search your deck for up to 2 Supporter cards, reveal them, and put them into your hand. Shuffle your deck afterward.","[2G] Charge Dash (70+)
+<br>
+You may do 20 more damage. If you do, this Pokémon does 20 damage to itself.",Rx2,2,0.5,1.0,5.48,0.9,,Holofoil,,,,
+264434,Melmetal - 129/214 (Cosmos Holo),Melmetal 129 214 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/264434_200w.jpg,3,2289,https://cpt.tcgcsv.com/JN73,2022-09-26T15:45:21.633,1,129/214,Promo,Metal,150,Stage 1,[3M] Heavy Impact (130),,Rx2,4,0.85,1.25,5.0,0.96,,Holofoil,"<strong>Ability — Metal Eater</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may discard a Metal Pokémon from your hand. If you do, heal 100 damage from this Pokémon.",P-20,,
+264837,Ninetales - 7/123 (Cracked Ice),Ninetales 7 123 Cracked Ice,https://tcgplayer-cdn.tcgplayer.com/product/264837_200w.jpg,3,2289,https://cpt.tcgcsv.com/MX73,2022-09-26T15:52:52.19,1,007/123,Promo,Fire,90,Stage 1,[1RR] Will-o'-the-wisp (60),,Wx2,1,11.05,11.75,23.1,33.73,,Holofoil,"<em>(All copies of this card were misprinted with the Undaunted set symbol.)</em>
+<br><br>
+<strong>Ability — Roast Reveal</strong>
+<br>
+Once during your turn <em>(before your attack), you may discard a Fire Energy card from your hand. If you do, draw 3 cards. This power can't be used if Ninetales is affected by a Special Condition.",,,
+266913,Thundurus - 052/198 (Cosmos Holo),Thundurus 052 198 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/266913_200w.jpg,3,2289,https://cpt.tcgcsv.com/hN83,2025-02-27T08:12:01.43,1,052/198,Promo,Lightning,120,Basic,"[L] Assisting Spark (30)
+<br>You may attach a Lightning Energy card from your hand to 1 of your Benched Pokémon.","[1LL] Thunder (130)
+<br>This Pokémon also does 30 damage to itself.",Fx2,1,0.09,0.3,1.51,0.31,,Holofoil,,,,
+266914,Landorus - 148/264 (Cosmos Holo),Landorus 148 264 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/266914_200w.jpg,3,2289,https://cpt.tcgcsv.com/jN83,2024-07-12T19:58:23.663,1,148/264,Promo,Fighting,120,Basic,"[1] Strafe (20)
+<br>You may switch this Pokémon with 1 of your Benched Pokémon.","[1FF] Earthen Boom (120)
+<br>Move all Energy from this Pokémon to your Benched Pokémon in any way you like.",Gx2,1,0.09,0.34,5.0,0.36,,Holofoil,,,,
+266915,Tornadus - 142/185 (Cosmos Holo),Tornadus 142 185 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/266915_200w.jpg,3,2289,https://cpt.tcgcsv.com/kN83,2022-09-26T17:49:00.453,1,142/185,Promo,Colorless,120,Basic,"[1] Jet Draft (30)
+<br>Discard a Special Energy from your opponent's Active Pokémon.","[3] Air Slash (120)
+<br>Discard an Energy from this Pokémon.",Lx2,1,0.08,0.34,1.49,0.34,,Holofoil,,F-30,,
+267016,Wailord - 40/168 (Cosmos Holo),Wailord 40 168 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/267016_200w.jpg,3,2289,https://cpt.tcgcsv.com/lQ83,2022-09-26T18:09:41.573,1,040/168,Promo,Water,220,Stage 1,"[WWWW] Dwindling Wave (200-)
+<br>This attack does 40 less damage for each damage counter on this Pokémon.",,Gx2,4,1.99,2.75,5.07,3.9,,Holofoil,,,,
+282145,Chandelure - 20/99 (Cracked Ice Holo),Chandelure 20 99 Cracked Ice Holo,https://tcgplayer-cdn.tcgplayer.com/product/282145_200w.jpg,3,2289,https://cpt.tcgcsv.com/WSg3,2022-09-15T18:47:54.04,1,020/099,Promo,Fire,120,Stage 2,"[R] Flame Burst (30)
+<br>Does 30 damage to 2 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[1R] Inferno (80)
+<br>Discard all Energy attached to this Pokémon. The Defending Pokémon is now Burned.",Wx2,2,75.0,75.0,75.0,76.66,,Holofoil,,,,
+532125,Scolipede - 54/114 (Cracked Ice Holo),Scolipede 54 114 Cracked Ice Holo,https://tcgplayer-cdn.tcgplayer.com/product/532125_200w.jpg,3,2289,https://cpt.tcgcsv.com/wSg6,2024-01-10T14:21:14.64,1,54/114,Holo Rare,Psychic,150,Stage 2,[3] Steamroller (60) This attack's damage isn't affected by Resistance.,[2PP] Poison Claws (80) The Defending Pokemon is now Poisoned.,Px2,3,,,,,,,,,,
+535897,Houndstone - 042 (Cosmos Holo),Houndstone 042 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/535897_200w.jpg,3,2289,https://cpt.tcgcsv.com/Zmj6,2024-01-25T13:37:29.407,1,042,Promo,Psychic,130,Stage 1,(2P) Spooky Shot (100),,Mx2,3,0.01,0.31,1.5,0.32,,Holofoil,"(2) Delve <br>
+Put up to 2 Item cards from your discard pile into your hand,",F-30,,
+552783,Togekiss - 085/197 (Cosmos Holo),Togekiss 085 197 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/552783_200w.jpg,3,2289,https://cpt.tcgcsv.com/H7r6,2024-06-07T14:51:23.527,1,085/197,Promo,Psychic,150,Stage 2,"[2] Power Cyclone (110)
+<br> Move an Energy from this Pokémon to 1 of your Benched Pokémon.",,Mx2,0,3.75,5.0,9.99,4.3,,Holofoil,"<strong>Ability — Precious Gift</strong>
+<br>Once during your turn (after your attack), you may draw cards until you have 8 cards in your hand.",,,
+555880,Baxcalibur - 060/193 (Cosmos Holo),Baxcalibur 060 193 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/555880_200w.jpg,3,2289,https://cpt.tcgcsv.com/Dms6,2024-06-20T12:48:56.137,1,060/193,Promo,Water,160,Stage 2,[1WW] Buster Tail (130),,Mx2,2,0.18,0.4,1.99,0.37,,Holofoil,"<strong>Ability — Super Cold</strong>
+<br>As often as you like during your turn, you may attach a Basic W Energy card from your hand to 1 of your Pokemon.",None,,
+556978,Hydreigon (Cosmos Holo),Hydreigon Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/556978_200w.jpg,3,2289,https://cpt.tcgcsv.com/BPs6,2024-11-08T19:50:56.19,1,140/193,Rare,Dark,180,Stage 2,[1DD] Dark Cutter (160),,Gx2,3,12.69,14.96,20.0,13.63,,Holofoil,"<strong>Ability — Tri Howl</strong>                                          
+<br>Once during your turn, you may look at the top 3 cards of your deck. Attach any number of Energy cards you find there to your Pokémon in any way you like. Discard the other cards.",None,,
+556981,Garganacl (Cosmos Holo),Garganacl Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/556981_200w.jpg,3,2289,https://cpt.tcgcsv.com/FPs6,2024-11-08T19:47:57.297,1,123/193,Rare,Fighting,180,Stage 2,"[FF] Knocking Hammer (130)
+<br>Discard the top card of your opponent's deck.",,Gx2,3,0.03,0.25,1.49,0.24,,Holofoil,"<strong>Ability — Blessed Salt</strong>                                          
+<br>During Pokémon Check Up, heal 20 damage from each of your Pokémon.",None,,
+565598,Xatu - 11/95 (Cracked Ice Holo),Xatu 11 95 Cracked Ice Holo,https://tcgplayer-cdn.tcgplayer.com/product/565598_200w.jpg,3,2289,https://cpt.tcgcsv.com/-fx6,2024-08-28T11:44:07.427,1,11/95,Holo Rare,Psychic,90,Stage 1,[P] Psywave (20x) Does 20 damage times the amount of Energy attached to the Defending Pokemon.,"[2G] Confuse Ray (50) Flip a coin.  If heads, the Defending Pokemon is now Confused.",Lx2,1,6.71,18.85,31.58,19.25,,Holofoil,,F-20,,
+610743,Tinkaton - 105/193 (Cosmos Holo),Tinkaton 105 193 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/610743_200w.jpg,3,2289,https://cpt.tcgcsv.com/TjV6,2025-01-16T13:03:53.537,1,105/193,Rare,Psychic,140,Stage 2,"[1P] Special Hammer (90+)
+<br>If this Pokémon has any Special Energy attached, this attack does 90 more damage.",,Mx2,2,38.49,40.99,69.69,7.29,,Holofoil,"<strong>Ability — Gather Materials</strong>
+<br>You must discard a card from your hand in order to use this Ability. Once during your turn, you may draw 3 cards.",None,,
+616142,Hisuian Arcanine - 100/167 (Cosmos Holo),Hisuian Arcanine 100 167 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/616142_200w.jpg,3,2289,https://cpt.tcgcsv.com/SsX6,2025-01-31T21:31:50.38,1,100/167,Rare,Fighting,130,Stage 1,"[0] Proud Fangs (30+)
+If your Benched Pokémon have any damage counters on them, this attack does 90 more damage.","[FFC] Searing Flame (90)
+Your opponent's Active Pokémon is now Burned.",Gx2,2,1.03,1.75,3.48,1.74,,Holofoil,,None,,
+616155,Sinistcha - 022/167 (Cosmos Holo),Sinistcha 022 167 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/616155_200w.jpg,3,2289,https://cpt.tcgcsv.com/7tX6,2025-01-31T21:32:12.067,1,022/167,Rare,Grass,70,Stage 1,"[G] Cursed Drop
+Put 4 damage counters on your opponent's Pokémon in any way you like.","[G] Spi[LL] the Tea (70x)
+Discard up to 3 G Energy cards from your Pokémon. This attack does 70 damage for each card you discarded this way.",Rx2,1,0.15,0.45,5.26,0.35,,Holofoil,,None,,
+620227,Alakazam - 082/167 (Cosmos Holo),Alakazam 082 167 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/620227_200w.jpg,3,2289,https://cpt.tcgcsv.com/z6-6,2025-02-26T20:36:00.787,1,082/167,Rare,Psychic,140,Stage 2,"[P] Strange Hacking
+Your opponent's Active Pokémon is now Confused. You may move any number of damage counters from your opponent's Pokémon to their other Pokémon in any way you like.","[P] Psychic (10+)
+This attack does 50 more damage for each Energy attached to your opponent's Active Pokémon.",Dx2,1,1.29,2.49,13.97,1.78,,Holofoil,,F-30,,

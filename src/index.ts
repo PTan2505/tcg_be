@@ -1,38 +1,44 @@
 import { swaggerUI } from "@hono/swagger-ui";
 import "dotenv/config";
 import { Hono } from "hono";
+import { cors } from "hono/cors";
 import { connectDB } from "./database/db/db";
+import "./database/models/card"; // Import unified Card model
+import "./database/models/cardSet"; // Import CardSet model
 import "./database/models/comment"; // Import Comment model
 import "./database/models/commentReaction"; // Import CommentReaction model
 import "./database/models/deck"; // Import Deck model
 import "./database/models/friendship"; // Import Friendship model
 import "./database/models/notification"; // Import Notification model
-import "./database/models/pokemon/pokemonCard"; // Import PokemonCard model
-import "./database/models/pokemon/pokemonDeck"; // Import PokemonDeck model
-import "./database/models/pokemon/pokemonSet"; // Import PokemonSet model
 import "./database/models/post"; // Import Post model
 import "./database/models/postReaction"; // Import PostReaction model
 import "./database/models/user"; // Import User model to ensure it's registered
 import "./database/models/userCard"; // Import UserCard model
-import "./database/models/yugioh"; // Import YugiohCard and YugiohSet models
 import authRoutes from "./features/auth/auth.routes";
 import cardRoutes from "./features/cards/card.routes";
 import userCardRoutes from "./features/collections/userCard.routes";
-import allDeckRoutes from "./features/decks";
+import deckRoutes from "./features/decks/deck.routes";
 import postRoutes from "./features/posts/post.routes";
 import setRoutes from "./features/sets/set.routes";
 import userRoutes from "./features/users/user.routes";
 import { initializeSuperuser } from "./scripts/initSuperuser";
-import { swaggerDoc } from "./shared/config/swagger";
+// import { swaggerDoc } from "./shared/config/swagger";
 import { getCacheStats } from "./shared/middlewares/cache.middleware";
 
 // Create Hono app
 const app = new Hono();
 
+// Configure CORS for React Native Expo - Allow all origins
+app.use("/*", cors({
+  origin: "*", // Allow all origins
+  allowHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
+  allowMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
+  credentials: false // Must be false when origin is "*"
+}));
+
 // Extract host and port from APP_URL
-const appUrl = new URL(process.env.APP_URL || "http://localhost:3000");
-const port = Number(appUrl.port) || 3000;
-const host = appUrl.hostname;
+const port = Number(process.env.PORT) || 3000;
+const host = "0.0.0.0";
 
 // Connect to database
 await connectDB();
@@ -41,7 +47,7 @@ await connectDB();
 await initializeSuperuser();
 
 // Swagger documentation
-app.get("/swagger.json", (c) => c.json(swaggerDoc));
+// app.get("/swagger.json", (c) => c.json(swaggerDoc));
 app.use("/docs", swaggerUI({ url: "/swagger.json" }));
 
 // Base route
@@ -60,28 +66,25 @@ app.get("/health", (c) => {
   });
 });
 
-// Mount routes
+// Mount routes - API versions
+app.route("/api/auth", authRoutes);
+app.route("/api/users", userRoutes);
+app.route("/api/user-cards", userCardRoutes);
+app.route("/api/collections", userCardRoutes);
+app.route("/api/cards", cardRoutes);
+app.route("/api/sets", setRoutes);
+app.route("/api/decks", deckRoutes);
+app.route("/api/posts", postRoutes);
+
+// Mount legacy routes (for backward compatibility and tests)
 app.route("/auth", authRoutes);
 app.route("/users", userRoutes);
 app.route("/user-cards", userCardRoutes);
-app.route("/collections", userCardRoutes); // Alias for collections
-app.route("/decks", allDeckRoutes);
+app.route("/collections", userCardRoutes); // Legacy collections route
 app.route("/cards", cardRoutes);
 app.route("/sets", setRoutes);
+app.route("/decks", deckRoutes);
 app.route("/posts", postRoutes);
-
-// Start the server if not in production
-if (process.env.NODE_ENV !== "production") {
-  console.log(`Server is starting on ${process.env.APP_URL}`);
-
-  Bun.serve({
-    port: port,
-    hostname: host,
-    fetch: app.fetch.bind(app),
-  });
-
-  console.log(`🚀 Server is running on http://${host}:${port}`);
-}
 
 // Export the app for production environments
 export default app;

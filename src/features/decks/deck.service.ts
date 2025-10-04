@@ -1,21 +1,9 @@
+import mongoose, { Schema } from 'mongoose';
+import { Card } from '../../database/models/card';
 import { Deck, DeckFormat, IDeck } from '../../database/models/deck';
-import { CardCategory, UserCard } from '../../database/models/userCard';
-import { UserCardService } from '../collections/userCard.service';
+import { CardCategory } from '../../database/models/userCard';
 
-export interface IDeckService {
-  createDeck(userId: string, deckData: CreateDeckData): Promise<IDeck>;
-  updateDeck(deckId: string, userId: string, updateData: UpdateDeckData): Promise<IDeck>;
-  deleteDeck(deckId: string, userId: string): Promise<void>;
-  getUserDecks(userId: string): Promise<IDeck[]>;
-  getDeckById(deckId: string, userId?: string): Promise<IDeck>;
-  addCardToDeck(deckId: string, userId: string, cardData: AddCardToDeckData): Promise<IDeck>;
-  removeCardFromDeck(deckId: string, userId: string, cardId: string): Promise<IDeck>;
-  updateCardQuantity(deckId: string, userId: string, cardId: string, quantity: number): Promise<IDeck>;
-  validateDeck(deckId: string): Promise<DeckValidationResult>;
-  duplicateDeck(deckId: string, userId: string, newName: string): Promise<IDeck>;
-}
-
-export interface CreateDeckData {
+export interface CreateDeckOptions {
   name: string;
   description?: string;
   category: CardCategory;
@@ -24,234 +12,370 @@ export interface CreateDeckData {
   tags?: string[];
 }
 
-export interface UpdateDeckData {
+export interface UpdateDeckOptions {
   name?: string;
   description?: string;
+  category?: CardCategory;
   format?: DeckFormat;
   isPublic?: boolean;
   tags?: string[];
 }
 
-export interface AddCardToDeckData {
+export interface GetDecksOptions {
+  page?: number;
+  limit?: number;
+  category?: CardCategory;
+  format?: DeckFormat;
+  search?: string;
+  sortBy?: 'name' | 'createdAt' | 'updatedAt' | 'cardCount';
+  sortOrder?: 'asc' | 'desc';
+}
+
+export interface DecksResult {
+  decks: IDeck[];
+  total: number;
+  page: number;
+  limit: number;
+  hasMore: boolean;
+}
+
+export interface AddCardToDeckOptions {
   cardId: string;
-  category: CardCategory;
   quantity: number;
 }
 
-export interface DeckValidationResult {
-  isValid: boolean;
-  errors: string[];
-  warnings: string[];
-  cardCount: {
-    total: number;
-    unique: number;
-    minRequired?: number;
-    maxAllowed?: number;
-  };
-}
+export class DeckService {
+  async getUserDecks(userId: string, options: GetDecksOptions = {}): Promise<DecksResult> {
+    const {
+      page = 1,
+      limit = 20,
+      category,
+      format,
+      search,
+      sortBy = 'updatedAt',
+      sortOrder = 'desc'
+    } = options;
 
-export class DeckService implements IDeckService {
-  constructor(private userCardService: UserCardService) {}
+    const filter: any = { userId: new mongoose.Types.ObjectId(userId) };
 
-  async createDeck(userId: string, deckData: CreateDeckData): Promise<IDeck> {
+    if (category) {
+      filter.category = category;
+    }
+
+    if (format) {
+      filter.format = format;
+    }
+
+    if (search) {
+      filter.$or = [
+        { name: { $regex: search, $options: 'i' } },
+        { description: { $regex: search, $options: 'i' } },
+        { tags: { $in: [new RegExp(search, 'i')] } }
+      ];
+    }
+
+    const sort: any = {};
+    sort[sortBy] = sortOrder === 'asc' ? 1 : -1;
+
+    const skip = (page - 1) * limit;
+
+    const [decks, total] = await Promise.all([
+      Deck.find(filter)
+        .sort(sort)
+        .skip(skip)
+        .limit(limit)
+        .populate('cards.cardId', 'name imageUrl gameType'),
+      Deck.countDocuments(filter)
+    ]);
+
+    return {
+      decks,
+      total,
+      page,
+      limit,
+      hasMore: total > page * limit
+    };
+  }
+
+  async getPublicDecks(options: GetDecksOptions = {}): Promise<DecksResult> {
+    const {
+      page = 1,
+      limit = 20,
+      category,
+      format,
+      search,
+      sortBy = 'updatedAt',
+      sortOrder = 'desc'
+    } = options;
+
+    const filter: any = { isPublic: true };
+
+    if (category) {
+      filter.category = category;
+    }
+
+    if (format) {
+      filter.format = format;
+    }
+
+    if (search) {
+      filter.$or = [
+        { name: { $regex: search, $options: 'i' } },
+        { description: { $regex: search, $options: 'i' } },
+        { tags: { $in: [new RegExp(search, 'i')] } }
+      ];
+    }
+
+    const sort: any = {};
+    sort[sortBy] = sortOrder === 'asc' ? 1 : -1;
+
+    const skip = (page - 1) * limit;
+
+    const [decks, total] = await Promise.all([
+      Deck.find(filter)
+        .sort(sort)
+        .skip(skip)
+        .limit(limit)
+        .populate('cards.cardId', 'name imageUrl gameType')
+        .populate('userId', 'username'),
+      Deck.countDocuments(filter)
+    ]);
+
+    return {
+      decks,
+      total,
+      page,
+      limit,
+      hasMore: total > page * limit
+    };
+  }
+
+  async createDeck(userId: string, options: CreateDeckOptions): Promise<IDeck> {
     const deck = new Deck({
-      ...deckData,
-      userId,
+      ...options,
+      userId: new Schema.Types.ObjectId(userId),
       cards: []
     });
 
     return await deck.save();
   }
 
-  async updateDeck(deckId: string, userId: string, updateData: UpdateDeckData): Promise<IDeck> {
-    const deck = await Deck.findOne({ _id: deckId, userId });
+  async updateDeck(deckId: string, userId: string, options: UpdateDeckOptions): Promise<IDeck> {
+    const deck = await Deck.findOne({
+      _id: deckId,
+      userId: new Schema.Types.ObjectId(userId)
+    });
+
     if (!deck) {
-      throw new Error('Deck not found');
+      throw new Error('Deck not found or access denied');
     }
 
-    Object.assign(deck, updateData);
+    Object.assign(deck, options);
     return await deck.save();
   }
 
   async deleteDeck(deckId: string, userId: string): Promise<void> {
-    const result = await Deck.findOneAndDelete({ _id: deckId, userId });
-    if (!result) {
-      throw new Error('Deck not found');
+    const result = await Deck.deleteOne({
+      _id: deckId,
+      userId: new Schema.Types.ObjectId(userId)
+    });
+
+    if (result.deletedCount === 0) {
+      throw new Error('Deck not found or access denied');
     }
   }
 
-  async getUserDecks(userId: string): Promise<IDeck[]> {
-    return await Deck.find({ userId }).sort({ updatedAt: -1 });
-  }
+  async getDeckById(deckId: string, userId?: string): Promise<IDeck | null> {
+    const filter: any = { _id: deckId };
 
-  async getDeckById(deckId: string, userId?: string): Promise<IDeck> {
-    const query: any = { _id: deckId };
-    
-    // If userId is provided, ensure it's either the owner or the deck is public
+    // If userId is provided, check ownership or public status
     if (userId) {
-      query.$or = [
-        { userId },
+      filter.$or = [
+        { userId: new Schema.Types.ObjectId(userId) },
         { isPublic: true }
       ];
     } else {
-      query.isPublic = true;
+      // If no userId provided, only return public decks
+      filter.isPublic = true;
     }
 
-    const deck = await Deck.findOne(query).populate('userId', 'firstName lastName');
-    if (!deck) {
-      throw new Error('Deck not found');
-    }
-
-    return deck;
+    return await Deck.findOne(filter)
+      .populate('cards.cardId', 'name imageUrl gameType pricing')
+      .populate('userId', 'username');
   }
 
-  async addCardToDeck(deckId: string, userId: string, cardData: AddCardToDeckData): Promise<IDeck> {
-    const deck = await Deck.findOne({ _id: deckId, userId });
+  async getDeckStats(deckId: string, userId?: string): Promise<any> {
+    const deck = await this.getDeckById(deckId, userId);
+
     if (!deck) {
-      throw new Error('Deck not found');
+      throw new Error('Deck not found or access denied');
     }
 
-    // Verify user owns the card
-    const userOwnsCard = await UserCard.findOne({
-      userId,
-      cardId: cardData.cardId,
-      category: cardData.category
+    const totalCards = deck.cards.reduce((sum, card) => sum + card.quantity, 0);
+    const uniqueCards = deck.cards.length;
+
+    // Calculate deck value if cards have pricing
+    let totalValue = 0;
+    deck.cards.forEach(deckCard => {
+      if (deckCard.cardId && typeof deckCard.cardId === 'object' && 'pricing' in deckCard.cardId) {
+        const card = deckCard.cardId as any;
+        if (card.pricing?.market) {
+          totalValue += card.pricing.market * deckCard.quantity;
+        }
+      }
     });
 
-    if (!userOwnsCard) {
-      throw new Error('You do not own this card');
+    // Get card type distribution
+    const cardTypeDistribution: { [key: string]: number } = {};
+    deck.cards.forEach(deckCard => {
+      if (deckCard.cardId && typeof deckCard.cardId === 'object' && 'cardType' in deckCard.cardId) {
+        const card = deckCard.cardId as any;
+        const type = card.cardType || 'Unknown';
+        cardTypeDistribution[type] = (cardTypeDistribution[type] || 0) + deckCard.quantity;
+      }
+    });
+
+    return {
+      totalCards,
+      uniqueCards,
+      totalValue: totalValue > 0 ? totalValue : null,
+      cardTypeDistribution,
+      format: deck.format,
+      category: deck.category,
+      isLegal: this.validateDeckFormat(deck)
+    };
+  }
+
+  async addCardToDeck(deckId: string, userId: string, options: AddCardToDeckOptions): Promise<IDeck> {
+    const { cardId, quantity } = options;
+
+    const deck = await Deck.findOne({
+      _id: deckId,
+      userId: new Schema.Types.ObjectId(userId)
+    });
+
+    if (!deck) {
+      throw new Error('Deck not found or access denied');
+    }
+
+    // Check if card exists
+    const card = await Card.findById(cardId);
+    if (!card) {
+      throw new Error('Card not found');
     }
 
     // Check if card is already in deck
     const existingCardIndex = deck.cards.findIndex(
-      card => card.cardId.toString() === cardData.cardId && card.category === cardData.category
+      deckCard => deckCard.cardId.toString() === cardId
     );
 
     if (existingCardIndex >= 0) {
       // Update quantity
-      deck.cards[existingCardIndex].quantity = Math.min(
-        deck.cards[existingCardIndex].quantity + cardData.quantity,
-        4 // Maximum cards per deck
-      );
+      deck.cards[existingCardIndex].quantity += quantity;
     } else {
       // Add new card
       deck.cards.push({
-        cardId: cardData.cardId as any,
-        category: cardData.category,
-        quantity: Math.min(cardData.quantity, 4)
+        cardId: new Schema.Types.ObjectId(cardId),
+        category: card.gameType as CardCategory, // Map gameType to category
+        quantity
       });
     }
 
     return await deck.save();
   }
 
-  async removeCardFromDeck(deckId: string, userId: string, cardId: string): Promise<IDeck> {
-    const deck = await Deck.findOne({ _id: deckId, userId });
+  async removeCardFromDeck(deckId: string, userId: string, cardId: string, quantity: number = 1): Promise<IDeck> {
+    const deck = await Deck.findOne({
+      _id: deckId,
+      userId: new Schema.Types.ObjectId(userId)
+    });
+
     if (!deck) {
-      throw new Error('Deck not found');
+      throw new Error('Deck not found or access denied');
     }
 
-    deck.cards = deck.cards.filter(card => card.cardId.toString() !== cardId);
-    return await deck.save();
-  }
+    const cardIndex = deck.cards.findIndex(
+      deckCard => deckCard.cardId.toString() === cardId
+    );
 
-  async updateCardQuantity(deckId: string, userId: string, cardId: string, quantity: number): Promise<IDeck> {
-    if (quantity < 1 || quantity > 4) {
-      throw new Error('Quantity must be between 1 and 4');
-    }
-
-    const deck = await Deck.findOne({ _id: deckId, userId });
-    if (!deck) {
-      throw new Error('Deck not found');
-    }
-
-    const cardIndex = deck.cards.findIndex(card => card.cardId.toString() === cardId);
     if (cardIndex === -1) {
       throw new Error('Card not found in deck');
     }
 
-    deck.cards[cardIndex].quantity = quantity;
+    const currentQuantity = deck.cards[cardIndex].quantity;
+
+    if (quantity >= currentQuantity) {
+      // Remove card completely
+      deck.cards.splice(cardIndex, 1);
+    } else {
+      // Reduce quantity
+      deck.cards[cardIndex].quantity -= quantity;
+    }
+
     return await deck.save();
   }
 
-  async validateDeck(deckId: string): Promise<DeckValidationResult> {
-    const deck = await Deck.findById(deckId);
-    if (!deck) {
-      throw new Error('Deck not found');
-    }
-
-    const errors: string[] = [];
-    const warnings: string[] = [];
-
-    const totalCards = deck.cards.reduce((sum, card) => sum + card.quantity, 0);
-    const uniqueCards = deck.cards.length;
-
-    // Basic validation rules (can be customized per game format)
-    const minCards = this.getMinCardsForFormat(deck.format, deck.category);
-    const maxCards = this.getMaxCardsForFormat(deck.format, deck.category);
-
-    if (totalCards < minCards) {
-      errors.push(`Deck must have at least ${minCards} cards (currently ${totalCards})`);
-    }
-
-    if (maxCards && totalCards > maxCards) {
-      errors.push(`Deck cannot have more than ${maxCards} cards (currently ${totalCards})`);
-    }
-
-    // Check individual card limits
-    deck.cards.forEach(card => {
-      if (card.quantity > 4) {
-        errors.push(`Cannot have more than 4 copies of the same card`);
-      }
+  async duplicateDeck(deckId: string, userId: string, newName?: string): Promise<IDeck> {
+    const originalDeck = await Deck.findOne({
+      $or: [
+        { _id: deckId, userId: new Schema.Types.ObjectId(userId) },
+        { _id: deckId, isPublic: true }
+      ]
     });
 
-    return {
-      isValid: errors.length === 0,
-      errors,
-      warnings,
-      cardCount: {
-        total: totalCards,
-        unique: uniqueCards,
-        minRequired: minCards,
-        maxAllowed: maxCards
-      }
-    };
-  }
+    if (!originalDeck) {
+      throw new Error('Deck not found or access denied');
+    }
 
-  async duplicateDeck(deckId: string, userId: string, newName: string): Promise<IDeck> {
-    const originalDeck = await this.getDeckById(deckId, userId);
-    
-    const newDeck = new Deck({
-      name: newName,
+    const duplicatedDeck = new Deck({
+      name: newName || `${originalDeck.name} (Copy)`,
       description: originalDeck.description,
-      userId,
       category: originalDeck.category,
       format: originalDeck.format,
+      userId: new Schema.Types.ObjectId(userId),
       cards: [...originalDeck.cards],
-      isPublic: false,
-      tags: [...originalDeck.tags]
+      tags: [...(originalDeck.tags || [])],
+      isPublic: false // Duplicated decks are private by default
     });
 
-    return await newDeck.save();
+    return await duplicatedDeck.save();
   }
 
-  private getMinCardsForFormat(format: DeckFormat, category: CardCategory): number {
-    // Customize based on game rules
-    if (category === CardCategory.YUGIOH) {
-      return 40;
+  private validateDeckFormat(deck: IDeck): boolean {
+    const totalCards = deck.cards.reduce((sum, card) => sum + card.quantity, 0);
+
+    switch (deck.format) {
+      case DeckFormat.STANDARD:
+        return totalCards >= 40 && totalCards <= 60;
+      case DeckFormat.EXPANDED:
+        return totalCards >= 40;
+      case DeckFormat.UNLIMITED:
+        return totalCards >= 1;
+      case DeckFormat.CUSTOM:
+        return totalCards >= 1;
+      default:
+        return true;
     }
-    if (category === CardCategory.POKEMON) {
-      return 60;
-    }
-    return 40; // Default
   }
 
-  private getMaxCardsForFormat(format: DeckFormat, category: CardCategory): number | undefined {
-    // Customize based on game rules
-    if (category === CardCategory.YUGIOH) {
-      return 60;
-    }
-    // Pokemon typically has no max limit for constructed formats
-    return undefined;
+  async searchDecks(query: string, options: GetDecksOptions = {}): Promise<DecksResult> {
+    return await this.getPublicDecks({
+      ...options,
+      search: query
+    });
+  }
+
+  async getDecksByUser(userId: string, options: GetDecksOptions = {}): Promise<DecksResult> {
+    return await this.getUserDecks(userId, options);
+  }
+
+  async getPopularDecks(options: GetDecksOptions = {}): Promise<DecksResult> {
+    return await this.getPublicDecks({
+      ...options,
+      sortBy: 'updatedAt',
+      sortOrder: 'desc'
+    });
   }
 }
+
+export const deckService = new DeckService();

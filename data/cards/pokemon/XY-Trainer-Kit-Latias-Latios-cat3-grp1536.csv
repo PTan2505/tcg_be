@@ -1,0 +1,95 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extHP,extStage,extAttack1,extAttack2,extWeakness,extResistance,extRetreatCost,extCardText
+98317,XY Trainer Kit: Latias & Latios,XY Trainer Kit Latias and Latios,https://tcgplayer-cdn.tcgplayer.com/product/98317_200w.jpg,3,1536,https://cpt.tcgcsv.com/mlP,2021-07-02T21:34:01.427,1,,,,,,,,,,,,,,,,,
+98318,Grass Energy (#1),Grass Energy 1,https://tcgplayer-cdn.tcgplayer.com/product/98318_200w.jpg,3,1536,https://cpt.tcgcsv.com/nlP,2022-12-16T16:46:24.043,0,1/30,Common,Basic Energy,0.15,0.2,0.25,0.25,,Normal,,,,,,,,
+98319,Grass Energy (#2),Grass Energy 2,https://tcgplayer-cdn.tcgplayer.com/product/98319_200w.jpg,3,1536,https://cpt.tcgcsv.com/plP,2022-12-16T16:48:02.27,0,2/30,Common,Basic Energy,0.04,0.17,0.44,0.2,,Normal,,,,,,,,
+98320,Grass Energy (#3),Grass Energy 3,https://tcgplayer-cdn.tcgplayer.com/product/98320_200w.jpg,3,1536,https://cpt.tcgcsv.com/qlP,2022-12-16T16:48:34.62,0,3/30,Common,Basic Energy,0.15,0.15,0.25,0.22,,Normal,,,,,,,,
+98321,Grass Energy (#5),Grass Energy 5,https://tcgplayer-cdn.tcgplayer.com/product/98321_200w.jpg,3,1536,https://cpt.tcgcsv.com/rlP,2022-12-16T16:49:29.417,0,5/30,Common,Basic Energy,0.15,0.16,0.25,0.15,,Normal,,,,,,,,
+98322,Grass Energy (#19),Grass Energy 19,https://tcgplayer-cdn.tcgplayer.com/product/98322_200w.jpg,3,1536,https://cpt.tcgcsv.com/slP,2022-12-16T16:55:53.26,0,19/30,Common,Basic Energy,0.09,0.2,0.39,0.25,,Normal,,,,,,,,
+98323,Psychic Energy (#8 - Latias),Psychic Energy 8 Latias,https://tcgplayer-cdn.tcgplayer.com/product/98323_200w.jpg,3,1536,https://cpt.tcgcsv.com/tlP,2022-12-16T16:50:33.067,0,8/30,Common,Basic Energy,0.15,0.2,0.69,0.15,,Normal,,,,,,,,
+98324,Psychic Energy (#9 - Latias),Psychic Energy 9 Latias,https://tcgplayer-cdn.tcgplayer.com/product/98324_200w.jpg,3,1536,https://cpt.tcgcsv.com/vlP,2022-12-16T16:50:57.957,0,9/30,Common,Basic Energy,0.1,0.21,0.73,0.15,,Normal,,,,,,,,
+98325,Psychic Energy (#10 - Latias),Psychic Energy 10 Latias,https://tcgplayer-cdn.tcgplayer.com/product/98325_200w.jpg,3,1536,https://cpt.tcgcsv.com/wlP,2022-12-16T16:51:15.183,0,10/30,Common,Basic Energy,0.05,0.19,0.25,0.1,,Normal,,,,,,,,
+98326,Psychic Energy (#17 - Latias),Psychic Energy 17 Latias,https://tcgplayer-cdn.tcgplayer.com/product/98326_200w.jpg,3,1536,https://cpt.tcgcsv.com/xlP,2022-12-16T16:55:13.367,0,17/30,Common,Basic Energy,0.15,0.21,0.5,0.15,,Normal,,,,,,,,
+98327,Psychic Energy (#22 - Latias),Psychic Energy 22 Latias,https://tcgplayer-cdn.tcgplayer.com/product/98327_200w.jpg,3,1536,https://cpt.tcgcsv.com/zlP,2022-12-16T16:57:43.68,0,22/30,Common,Basic Energy,0.19,0.25,0.45,0.25,,Normal,,,,,,,,
+98328,Psychic Energy (#28 - Latias),Psychic Energy 28 Latias,https://tcgplayer-cdn.tcgplayer.com/product/98328_200w.jpg,3,1536,https://cpt.tcgcsv.com/BlP,2022-12-16T16:59:55.13,0,28/30,Common,Basic Energy,0.1,0.18,0.55,0.1,,Normal,,,,,,,,
+98329,Fletchling,Fletchling,https://tcgplayer-cdn.tcgplayer.com/product/98329_200w.jpg,3,1536,https://cpt.tcgcsv.com/ClP,2022-12-16T16:48:48.347,0,4/30,Common,Colorless,0.1,0.16,1.0,0.14,,Normal,50,Basic,[1] Peck (10),"[2] Quick Attack (10+)
+<br>Flip a coin. If heads, this attack does 20 more damage.",Lx2,F-20,1,
+98330,Lombre (#6),Lombre 6,https://tcgplayer-cdn.tcgplayer.com/product/98330_200w.jpg,3,1536,https://cpt.tcgcsv.com/DlP,2022-12-16T16:49:50.56,0,6/30,Common,Grass,0.06,0.25,1.0,0.1,,Normal,80,Stage 1,[G] Hook (20),[2] Beat (30),Rx2,None,2,
+98331,Treecko (#7),Treecko 7,https://tcgplayer-cdn.tcgplayer.com/product/98331_200w.jpg,3,1536,https://cpt.tcgcsv.com/FlP,2022-12-16T16:50:12.077,0,7/30,Common,Grass,0.13,0.28,1.0,0.15,,Normal,60,Basic,"[G] Quick Attack (10+)
+<br>Flip a coin. If heads, this attack does 10 more damage.",,Rx2,None,1,
+98332,Lotad (#11),Lotad 11,https://tcgplayer-cdn.tcgplayer.com/product/98332_200w.jpg,3,1536,https://cpt.tcgcsv.com/GlP,2022-12-16T16:52:36.12,0,11/30,Common,Grass,0.15,0.25,1.0,0.23,,Normal,60,Basic,[2] Beat (20),,Rx2,None,1,
+98333,Tangrowth (#12),Tangrowth 12,https://tcgplayer-cdn.tcgplayer.com/product/98333_200w.jpg,3,1536,https://cpt.tcgcsv.com/HlP,2022-12-16T16:53:09.523,0,12/30,Common,Grass,0.07,0.24,1.0,0.19,0.19,Normal,130,Stage 1,"[2G] Mega Drain (50)
+<br>Heal 20 damage from this Pokemon.","[2GG] Grass Knot (80+)
+<br>This attack does 10 more damage for each Colorless in your opponent's Active Pokemon's Retreat Cost.",Rx2,None,4,
+98334,Tangela (#13),Tangela 13,https://tcgplayer-cdn.tcgplayer.com/product/98334_200w.jpg,3,1536,https://cpt.tcgcsv.com/JlP,2022-12-16T16:53:32.82,0,13/30,Common,Grass,0.06,0.2,1.0,0.13,,Normal,80,Basic,"[1G] Absorb (20)
+<br>Heal 20 damage from this Pokemon.",[1GG] Vine Whip (30),Rx2,None,2,
+98335,Latias (#14 Non-Holo),Latias 14 Non Holo,https://tcgplayer-cdn.tcgplayer.com/product/98335_200w.jpg,3,1536,https://cpt.tcgcsv.com/KlP,2022-12-16T16:53:44.153,0,14/30,Common,Psychic,0.13,0.35,1.0,0.36,,Normal,100,Basic,[P] Psychic Sphere (20),"[2P] Psychic Prism (60+)
+<br>Flip a coin. If heads, this attack does 20 more damage.",Px2,None,1,
+98336,Surskit,Surskit,https://tcgplayer-cdn.tcgplayer.com/product/98336_200w.jpg,3,1536,https://cpt.tcgcsv.com/LlP,2022-12-16T16:54:50.927,0,16/30,Common,Grass,0.1,0.25,1.0,0.23,,Normal,50,Basic,[1] Stampede (10),,Rx2,None,1,
+98337,Grovyle (#18),Grovyle 18,https://tcgplayer-cdn.tcgplayer.com/product/98337_200w.jpg,3,1536,https://cpt.tcgcsv.com/MlP,2022-12-16T16:55:23.747,0,18/30,Common,Grass,0.15,0.45,1.0,0.41,,Normal,80,Stage 1,[G] Pound (20),"[2G] Agility (40)
+<br>Flip a coin. If heads, prevent all effects of attacks, including damage, done to this Pokemon during your opponent's next turn.",Rx2,None,1,
+98338,Acro Bike (#20 Latias),Acro Bike 20 Latias,https://tcgplayer-cdn.tcgplayer.com/product/98338_200w.jpg,3,1536,https://cpt.tcgcsv.com/NlP,2022-12-16T16:56:07.013,1,20/30,Uncommon,Item,0.18,0.37,1.74,0.37,,Normal,,,,,,None,0,"Look at the top 2 cards of your deck and put 1 of them into your hand. Discard the other card.
+<br><em>You may play as many Item cards as you like during your turn (before your attack).</em>"
+98339,Lombre (#21),Lombre 21,https://tcgplayer-cdn.tcgplayer.com/product/98339_200w.jpg,3,1536,https://cpt.tcgcsv.com/PlP,2022-12-16T16:57:10.953,0,21/30,Common,Grass,0.05,0.15,1.0,0.1,,Normal,80,Stage 1,[G] Hook (20),[2] Beat (30),Rx2,None,2,
+98340,Lotad (#23),Lotad 23,https://tcgplayer-cdn.tcgplayer.com/product/98340_200w.jpg,3,1536,https://cpt.tcgcsv.com/QlP,2022-12-16T16:57:53.357,0,23/30,Common,Grass,0.1,0.25,1.49,0.69,,Normal,60,Basic,[2] Beat (20),,Rx2,None,1,
+98341,Treecko (#24),Treecko 24,https://tcgplayer-cdn.tcgplayer.com/product/98341_200w.jpg,3,1536,https://cpt.tcgcsv.com/RlP,2022-12-16T16:58:25.733,0,24/30,Common,Grass,0.1,0.21,1.49,0.16,,Normal,60,Basic,"[G] Quick Attack (10+)
+<br>Flip a coin. If heads, this attack does 10 more damage.",,Rx2,None,1,
+98342,Tangrowth (#25),Tangrowth 25,https://tcgplayer-cdn.tcgplayer.com/product/98342_200w.jpg,3,1536,https://cpt.tcgcsv.com/SlP,2022-12-16T16:58:47.033,0,25/30,Common,Grass,0.06,0.24,1.0,0.07,,Normal,130,Stage 1,"[2G] Mega Drain (50)
+<br>Heal 20 damage from this Pokemon.","[2GG] Grass Knot (80+)
+<br>This attack does 10 more damage for each Colorless in your opponent's Active Pokemon's Retreat Cost.",Rx2,None,4,
+98343,Tangela (#26),Tangela 26,https://tcgplayer-cdn.tcgplayer.com/product/98343_200w.jpg,3,1536,https://cpt.tcgcsv.com/TlP,2022-12-16T16:59:06.797,0,26/30,Common,Grass,0.05,0.25,1.0,0.14,,Normal,80,Basic,"[1G] Absorb (20)
+<br>Heal 20 damage from this Pokemon.",[1GG] Vine Whip (30),Rx2,None,2,
+98344,Grovyle (#27),Grovyle 27,https://tcgplayer-cdn.tcgplayer.com/product/98344_200w.jpg,3,1536,https://cpt.tcgcsv.com/VlP,2022-12-16T16:59:15.393,0,27/30,Common,Grass,0.13,0.24,0.75,0.21,,Normal,80,Stage 1,[G] Pound (20),"[2G] Agility (40)
+<br>Flip a coin. If heads, prevent all effects of attacks, including damage, done to this Pokemon during your opponent's next turn.",Rx2,None,1,
+98345,Acro Bike (#29 Latias),Acro Bike 29 Latias,https://tcgplayer-cdn.tcgplayer.com/product/98345_200w.jpg,3,1536,https://cpt.tcgcsv.com/WlP,2022-12-16T17:00:07.297,1,29/30,Uncommon,Item,0.16,0.31,2.66,0.28,,Normal,,,,,,None,0,"Look at the top 2 cards of your deck and put 1 of them into your hand. Discard the other card.
+<br><em>You may play as many Item cards as you like during your turn (before your attack).</em>"
+98346,Latias (#30 Holo),Latias 30 Holo,https://tcgplayer-cdn.tcgplayer.com/product/98346_200w.jpg,3,1536,https://cpt.tcgcsv.com/XlP,2023-07-20T18:09:45.777,1,30/30,Common,Psychic,1.0,2.0,3.49,1.77,,Holofoil,100,Basic,[P] Psychic Sphere (20),"[2P] Psychic Prism (60+)
+<br>Flip a coin. If heads, this attack does 20 more damage.",Px2,None,1,
+98347,Skitty (#1),Skitty 1,https://tcgplayer-cdn.tcgplayer.com/product/98347_200w.jpg,3,1536,https://cpt.tcgcsv.com/ZlP,2023-03-29T12:43:31.397,0,1/30,Common,Colorless,0.2,0.3,0.5,0.7,,Normal,50,Basic,"[1] Charm
+<br>During your opponent's next turn, any damage done by attacks from the Defending Pokemon is reduced by 20 <i>(before applying Weakness and Resistance).</i>",[2] Tail Smack (20),Fx2,None,1,
+98348,Skitty (#27),Skitty 27,https://tcgplayer-cdn.tcgplayer.com/product/98348_200w.jpg,3,1536,https://cpt.tcgcsv.com/-lP,2022-12-16T16:59:29.773,0,27/30,Common,Colorless,0.25,0.32,1.63,0.38,,Normal,50,Basic,"[1] Charm
+<br>During your opponent's next turn, any damage done by attacks from the Defending Pokemon is reduced by 20 <i>(before applying Weakness and Resistance).</i>",[2] Tail Smack (20),Fx2,None,1,
+98349,Rhydon (#4),Rhydon 4,https://tcgplayer-cdn.tcgplayer.com/product/98349_200w.jpg,3,1536,https://cpt.tcgcsv.com/_lP,2022-12-16T16:49:00.083,0,4/30,Common,Fighting,0.06,0.2,2.5,0.1,,Normal,100,Stage 1,"[2F] Take Down (50)
+<br>This Pokemon does 10 damage to itself.",[2FF] Horn Drill (70),Gx2,None,4,
+98350,Rhydon (#25),Rhydon 25,https://tcgplayer-cdn.tcgplayer.com/product/98350_200w.jpg,3,1536,https://cpt.tcgcsv.com/0mP,2024-10-25T17:06:18,0,25/30,Common,Fighting,0.49,1.0,1.98,1.8,,Normal,100,Stage 1,"[2F] Take Down (50)
+<br>This Pokemon does 10 damage to itself.",[2FF] Horn Drill (70),Gx2,None,4,
+98351,Fighting Energy (#2),Fighting Energy 2,https://tcgplayer-cdn.tcgplayer.com/product/98351_200w.jpg,3,1536,https://cpt.tcgcsv.com/2mP,2022-12-16T16:47:48.89,0,2/30,Common,Basic Energy,0.15,0.25,3.84,0.25,,Normal,,,,,,,,
+98352,Fighting Energy (#3),Fighting Energy 3,https://tcgplayer-cdn.tcgplayer.com/product/98352_200w.jpg,3,1536,https://cpt.tcgcsv.com/3mP,2022-12-16T16:48:13.86,0,3/30,Common,Basic Energy,0.17,0.23,0.25,0.15,,Normal,,,,,,,,
+98353,Fighting Energy (#5),Fighting Energy 5,https://tcgplayer-cdn.tcgplayer.com/product/98353_200w.jpg,3,1536,https://cpt.tcgcsv.com/5mP,2022-12-16T16:49:14.117,0,5/30,Common,Basic Energy,0.15,0.24,0.66,0.25,,Normal,,,,,,,,
+98354,Fighting Energy (#6),Fighting Energy 6,https://tcgplayer-cdn.tcgplayer.com/product/98354_200w.jpg,3,1536,https://cpt.tcgcsv.com/6mP,2022-12-16T16:49:42.457,0,6/30,Common,Basic Energy,0.15,0.25,0.58,0.25,,Normal,,,,,,,,
+98355,Fighting Energy (#7),Fighting Energy 7,https://tcgplayer-cdn.tcgplayer.com/product/98355_200w.jpg,3,1536,https://cpt.tcgcsv.com/7mP,2022-12-16T16:50:00.28,0,7/30,Common,Basic Energy,0.15,0.25,0.58,0.25,,Normal,,,,,,,,
+98356,Fighting Energy (#8),Fighting Energy 8,https://tcgplayer-cdn.tcgplayer.com/product/98356_200w.jpg,3,1536,https://cpt.tcgcsv.com/8mP,2022-12-16T16:50:22.637,0,8/30,Common,Basic Energy,0.15,0.23,0.5,0.25,,Normal,,,,,,,,
+98357,Fighting Energy (#9),Fighting Energy 9,https://tcgplayer-cdn.tcgplayer.com/product/98357_200w.jpg,3,1536,https://cpt.tcgcsv.com/9mP,2022-12-16T16:50:45.65,0,9/30,Common,Basic Energy,0.15,0.25,0.5,0.25,,Normal,,,,,,,,
+98358,Fighting Energy (#10),Fighting Energy 10,https://tcgplayer-cdn.tcgplayer.com/product/98358_200w.jpg,3,1536,https://cpt.tcgcsv.com/bmP,2022-12-16T16:51:06.533,0,10/30,Common,Basic Energy,0.15,0.24,0.5,0.25,,Normal,,,,,,,,
+98359,Fighting Energy (#17),Fighting Energy 17,https://tcgplayer-cdn.tcgplayer.com/product/98359_200w.jpg,3,1536,https://cpt.tcgcsv.com/cmP,2022-12-16T16:55:01.913,0,17/30,Common,Basic Energy,0.15,0.61,0.83,0.15,,Normal,,,,,,,,
+98360,Psychic Energy (#16 - Latios),Psychic Energy 16 Latios,https://tcgplayer-cdn.tcgplayer.com/product/98360_200w.jpg,3,1536,https://cpt.tcgcsv.com/dmP,2022-12-16T16:54:39.873,0,16/30,Common,Basic Energy,0.25,0.3,0.33,0.3,,Normal,,,,,,,,
+98361,Psychic Energy (#18 - Latios),Psychic Energy 18 Latios,https://tcgplayer-cdn.tcgplayer.com/product/98361_200w.jpg,3,1536,https://cpt.tcgcsv.com/fmP,2022-12-16T16:55:32.88,0,18/30,Common,Basic Energy,0.15,0.21,0.83,0.17,,Normal,,,,,,,,
+98362,Psychic Energy (#29 - Latios),Psychic Energy 29 Latios,https://tcgplayer-cdn.tcgplayer.com/product/98362_200w.jpg,3,1536,https://cpt.tcgcsv.com/gmP,2022-12-16T17:00:22.377,0,29/30,Common,Basic Energy,0.15,0.25,0.83,0.15,,Normal,,,,,,,,
+98363,Machop (#11),Machop 11,https://tcgplayer-cdn.tcgplayer.com/product/98363_200w.jpg,3,1536,https://cpt.tcgcsv.com/hmP,2022-12-16T16:52:48.143,0,11/30,Common,Fighting,0.09,0.25,1.0,0.47,,Normal,70,Basic,[F] Knuckle Punch (10),,Px2,None,2,
+98364,Machop (#28),Machop 28,https://tcgplayer-cdn.tcgplayer.com/product/98364_200w.jpg,3,1536,https://cpt.tcgcsv.com/jmP,2022-12-16T16:59:42.71,0,28/30,Common,Fighting,0.1,0.25,1.0,0.2,,Normal,70,Basic,[F] Knuckle Punch (10),,Px2,None,2,
+98365,Solrock (#12),Solrock 12,https://tcgplayer-cdn.tcgplayer.com/product/98365_200w.jpg,3,1536,https://cpt.tcgcsv.com/kmP,2022-12-16T16:52:58.477,0,12/30,Common,Fighting,0.09,0.19,1.0,0.1,,Normal,80,Basic,"[1] Solar Generator
+<br>Search your deck for up to 2 Special Energy cards, reveal them, and put them into your hand. Shuffle your deck afterward.","[1F] Knock Away (20+)
+<br>Flip a coin. If heads, this attack does 20 more damage.",Gx2,None,1,
+98366,Solrock (#26),Solrock 26,https://tcgplayer-cdn.tcgplayer.com/product/98366_200w.jpg,3,1536,https://cpt.tcgcsv.com/lmP,2022-12-16T16:58:56.503,0,26/30,Common,Fighting,0.05,0.18,1.0,0.06,,Normal,80,Basic,"[1] Solar Generator
+<br>Search your deck for up to 2 Special Energy cards, reveal them, and put them into your hand. Shuffle your deck afterward.","[1F] Knock Away (20+)
+<br>Flip a coin. If heads, this attack does 20 more damage.",Gx2,None,1,
+98367,Latios (#13 Non-Holo),Latios 13 Non Holo,https://tcgplayer-cdn.tcgplayer.com/product/98367_200w.jpg,3,1536,https://cpt.tcgcsv.com/mmP,2022-12-16T16:53:21.74,0,13/30,Common,Psychic,0.15,0.45,1.49,0.49,,Normal,110,Basic,"[2] Supersonic Flight (40)
+<br>Flip a coin. If tails, this attack does nothing.",[1PP] Psyburn (70),Px2,None,1,
+98368,Latios (#30 Holo),Latios 30 Holo,https://tcgplayer-cdn.tcgplayer.com/product/98368_200w.jpg,3,1536,https://cpt.tcgcsv.com/nmP,2022-12-16T17:00:38.047,1,30/30,Common,Psychic,0.22,0.83,2.39,1.13,,Holofoil,110,Basic,"[2] Supersonic Flight (40)
+<br>Flip a coin. If tails, this attack does nothing.",[1PP] Psyburn (70),Px2,None,1,
+98369,Machoke (#14),Machoke 14,https://tcgplayer-cdn.tcgplayer.com/product/98369_200w.jpg,3,1536,https://cpt.tcgcsv.com/pmP,2022-12-16T16:54:07.4,0,14/30,Common,Fighting,0.22,0.4,1.15,0.41,,Normal,90,Stage 1,[FF] Beatdown (40),,Px2,None,2,
+98370,Machoke (#22),Machoke 22,https://tcgplayer-cdn.tcgplayer.com/product/98370_200w.jpg,3,1536,https://cpt.tcgcsv.com/qmP,2022-12-16T16:57:33.58,0,22/30,Common,Fighting,0.15,0.4,1.75,1.04,,Normal,90,Stage 1,[FF] Beatdown (40),,Px2,None,2,
+98371,Rhyhorn (#15),Rhyhorn 15,https://tcgplayer-cdn.tcgplayer.com/product/98371_200w.jpg,3,1536,https://cpt.tcgcsv.com/rmP,2022-12-16T16:54:28.05,0,15/30,Common,Fighting,0.03,0.18,1.0,0.16,,Normal,80,Basic,"[FF] Take Down (40)
+<br>This Pokemon does 10 damage to itself.",,Gx2,None,3,
+98372,Rhyhorn (#23),Rhyhorn 23,https://tcgplayer-cdn.tcgplayer.com/product/98372_200w.jpg,3,1536,https://cpt.tcgcsv.com/smP,2022-12-16T16:58:03.417,0,23/30,Common,Fighting,0.06,0.37,1.0,0.42,,Normal,80,Basic,"[FF] Take Down (40)
+<br>This Pokemon does 10 damage to itself.",,Gx2,None,3,
+98373,Delcatty (#19),Delcatty 19,https://tcgplayer-cdn.tcgplayer.com/product/98373_200w.jpg,3,1536,https://cpt.tcgcsv.com/tmP,2022-12-16T16:55:41.15,0,19/30,Common,Colorless,0.15,0.23,1.15,0.15,,Normal,80,Stage 1,"[1] Replace 
+<br>Move as many Energy attached to your Pokemon to your other Pokemon in any way you like.","[2] Play Rough (30+)
+<br>Flip a coin. If heads, this attack does 30 more damage.",Fx2,None,1,
+98374,Delcatty (#24),Delcatty 24,https://tcgplayer-cdn.tcgplayer.com/product/98374_200w.jpg,3,1536,https://cpt.tcgcsv.com/vmP,2022-12-16T16:58:14.963,0,24/30,Common,Colorless,0.14,0.25,1.49,0.39,,Normal,80,Stage 1,"[1] Replace 
+<br>Move as many Energy attached to your Pokemon to your other Pokemon in any way you like.","[2] Play Rough (30+)
+<br>Flip a coin. If heads, this attack does 30 more damage.",Fx2,None,1,
+98375,Acro Bike (#20 Latios),Acro Bike 20 Latios,https://tcgplayer-cdn.tcgplayer.com/product/98375_200w.jpg,3,1536,https://cpt.tcgcsv.com/wmP,2022-12-16T16:56:23.91,1,20/30,Uncommon,Item,0.2,0.5,1.89,0.34,,Normal,,,,,,None,0,"Look at the top 2 cards of your deck and put 1 of them into your hand. Discard the other card.
+<br><em>You may play as many Item cards as you like during your turn (before your attack).</em>"
+98376,Potion (Latios),Potion Latios,https://tcgplayer-cdn.tcgplayer.com/product/98376_200w.jpg,3,1536,https://cpt.tcgcsv.com/xmP,2022-12-16T16:57:22.907,0,21/30,Common,Item,0.03,0.18,0.5,0.15,,Normal,,,,,,,,Heal 30 damage from 1 of your Pokemon.
+98400,Potion (Latias),Potion Latias,https://tcgplayer-cdn.tcgplayer.com/product/98400_200w.jpg,3,1536,https://cpt.tcgcsv.com/0nP,2022-12-16T16:54:16.367,0,15/30,Common,Item,0.1,0.25,1.0,0.1,,Normal,,,,,,,,Heal 30 damage from 1 of your Pokemon.
+283259,Code Card - XY Trainer Kit: Latias & Latios,Code Card XY Trainer Kit Latias and Latios,https://tcgplayer-cdn.tcgplayer.com/product/283259_200w.jpg,3,1536,https://cpt.tcgcsv.com/ckh3,2023-03-31T16:31:33.283,1,,Code Card,,0.24,0.31,0.67,0.08,,Normal,,,,,,,,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product."

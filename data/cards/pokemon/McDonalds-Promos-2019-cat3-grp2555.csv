@@ -1,0 +1,28 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extWeakness,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extAttack2,extResistance
+200960,Caterpie - 1/12,Caterpie 1 12,https://tcgplayer-cdn.tcgplayer.com/product/200960_200w.jpg,3,2555,https://cpt.tcgcsv.com/dpD2,2022-09-23T16:09:08.987,1,001/012,Promo,Grass,50,Basic,"[G] Surprise Attack (20)
+<br>Flip a coin. If tails, this attack does nothing.",Rx2,1,2.5,8.0,15.0,10.37,,Holofoil,,
+200961,Alolan Exeggutor - 2/12,Alolan Exeggutor 2 12,https://tcgplayer-cdn.tcgplayer.com/product/200961_200w.jpg,3,2555,https://cpt.tcgcsv.com/fpD2,2024-10-01T13:31:52.48,1,002/012,Promo,Grass,160,Stage 1,"[G] Tropical Shake (20+)
+<br>This attack does 20 more damage for each type of basic Energy card in your discard pile. You can't add more than 100 damage in this way.",Rx2,3,2.65,3.59,9.4,6.52,2.65,Holofoil,,
+200963,Magmar - 3/12,Magmar 3 12,https://tcgplayer-cdn.tcgplayer.com/product/200963_200w.jpg,3,2555,https://cpt.tcgcsv.com/hpD2,2022-09-23T16:13:14.13,1,003/012,Promo,Fire,80,Basic,"[R] Controlled Burn
+<br>Discard the top card of your opponent's deck.",Wx2,2,4.5,11.33,12.85,10.79,,Holofoil,"[1RR] Flamethrower (80)
+<br>Discard an Energy from this Pokémon.",
+200964,Alolan Sandshrew - 4/12,Alolan Sandshrew 4 12,https://tcgplayer-cdn.tcgplayer.com/product/200964_200w.jpg,3,2555,https://cpt.tcgcsv.com/jpD2,2022-09-23T16:06:41.03,1,004/012,Promo,Water,60,Basic,"[0] Fury Swipes (10x)
+<br>Flip 3 coins. This attack does 10 damage for each heads.",Mx2,1,2.99,3.7,5.0,4.33,,Holofoil,,
+200966,Lapras - 5/12,Lapras 5 12,https://tcgplayer-cdn.tcgplayer.com/product/200966_200w.jpg,3,2555,https://cpt.tcgcsv.com/lpD2,2022-09-23T16:11:57.683,1,005/012,Promo,Water,120,Basic,"[W] Water Bullet (20)
+<br>This attack does 20 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",Gx2,2,8.42,14.7,22.0,13.74,,Holofoil,"[3] Hydro Pump (70+)
+<br>This attack does 10 more damage times the amount of Water Energy attached to this Pokémon.",
+200967,Pikachu - 6/12,Pikachu 6 12,https://tcgplayer-cdn.tcgplayer.com/product/200967_200w.jpg,3,2555,https://cpt.tcgcsv.com/mpD2,2022-09-23T16:17:06.99,1,006/012,Promo,Lightning,60,Basic,"[L] Iron Tail (20x)
+<br>Flip a coin until you get tails. This attack does 20 damage for each heads.",Fx2,1,14.99,19.85,22.14,19.7,,Holofoil,,M-20
+200969,Gastly - 7/12,Gastly 7 12,https://tcgplayer-cdn.tcgplayer.com/product/200969_200w.jpg,3,2555,https://cpt.tcgcsv.com/ppD2,2022-09-23T16:11:00.39,1,007/012,Promo,Psychic,50,Basic,"[P] Ominous Eyes
+<br>Put 1 damage counter on 1 of your opponent's Pokémon.",Dx2,1,6.64,8.99,9.99,9.0,,Holofoil,,F-20
+200971,Mankey - 8/12,Mankey 8 12,https://tcgplayer-cdn.tcgplayer.com/product/200971_200w.jpg,3,2555,https://cpt.tcgcsv.com/rpD2,2022-09-23T16:14:56.823,1,008/012,Promo,Fighting,60,Basic,"[F] Three-Step Strike (10x)
+<br>
+Flip 3 coins. This attack does 10 damage for each heads.",Px2,1,2.0,4.99,7.03,5.98,,Holofoil,,
+200973,Onix - 9/12,Onix 9 12,https://tcgplayer-cdn.tcgplayer.com/product/200973_200w.jpg,3,2555,https://cpt.tcgcsv.com/tpD2,2022-09-23T16:16:20.17,0,009/012,Promo,Fighting,100,Basic,"[1] Screech
+<br>During your next turn, the Defending Pokémon takes 20 more damage from attacks <em>(after applying Weakness and Resistance)</em>.",Gx2,2,4.0,5.13,6.67,6.23,,Holofoil,"[FF] Rage (10+)
+<br>This attack does 10 more damage for each damage counter on this Pokémon.",
+200975,Alolan Meowth - 10/12,Alolan Meowth 10 12,https://tcgplayer-cdn.tcgplayer.com/product/200975_200w.jpg,3,2555,https://cpt.tcgcsv.com/wpD2,2022-09-23T16:05:48.093,1,010/012,Promo,Darkness,60,Basic,"[0] Spoil the Fun (10+)
+<br>If you go second, this attack does 60 more damage during your first turn.",Fx2,1,4.98,9.85,15.7,10.88,,Holofoil,,P-20
+200976,Alolan Dugtrio - 11/12,Alolan Dugtrio 11 12,https://tcgplayer-cdn.tcgplayer.com/product/200976_200w.jpg,3,2555,https://cpt.tcgcsv.com/xpD2,2022-09-23T16:03:48.773,1,011/012,Promo,Metal,60,Stage 1,"[0] Gold Rush (30x)
+<br>Discard any number of Metal Energy cards from your hand. This attack does 30 damage for each card you discarded in this way.",Rx2,1,2.49,5.86,22.0,5.01,,Holofoil,,P-20
+200977,Eevee - 12/12,Eevee 12 12,https://tcgplayer-cdn.tcgplayer.com/product/200977_200w.jpg,3,2555,https://cpt.tcgcsv.com/zpD2,2022-09-23T16:10:04.63,1,012/012,Promo,Colorless,60,Basic,[1] Gnaw (20),Fx2,1,14.75,18.57,20.29,17.9,,Holofoil,,
