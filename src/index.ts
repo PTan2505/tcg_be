@@ -22,7 +22,7 @@ import postRoutes from "./features/posts/post.routes";
 import setRoutes from "./features/sets/set.routes";
 import userRoutes from "./features/users/user.routes";
 import { initializeSuperuser } from "./scripts/initSuperuser";
-// import { swaggerDoc } from "./shared/config/swagger";
+import { swaggerDoc } from "./shared/config/swagger";
 import { getCacheStats } from "./shared/middlewares/cache.middleware";
 
 // Create Hono app
@@ -47,7 +47,7 @@ await connectDB();
 await initializeSuperuser();
 
 // Swagger documentation
-// app.get("/swagger.json", (c) => c.json(swaggerDoc));
+app.get("/swagger.json", (c) => c.json(swaggerDoc));
 app.use("/docs", swaggerUI({ url: "/swagger.json" }));
 
 // Base route

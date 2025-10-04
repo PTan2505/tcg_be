@@ -9,6 +9,14 @@ deck.get('/pokemon', (c) => {
   const page = parseInt(c.req.query('page') || '1');
   const limit = parseInt(c.req.query('limit') || '20');
   
+  // Validate pagination parameters
+  if (page < 1 || limit < 1 || limit > 100) {
+    return c.json({ 
+      success: false, 
+      error: { name: 'ValidationError', field: 'pagination', message: 'Invalid pagination parameters' }
+    }, 400);
+  }
+  
   return c.json({ 
     success: true,
     data: {

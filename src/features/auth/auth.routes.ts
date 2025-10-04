@@ -33,15 +33,6 @@ authRoutes.post(
   authController.verifyEmailWithOTP
 );
 
-// Add GET route for email verification with token (used by tests)
-authRoutes.get("/verify-email", (c) => {
-  const token = c.req.query('token');
-  return c.json({ 
-    success: false, 
-    error: token ? "Invalid or expired verification token" : "Token parameter required" 
-  }, 400);
-});
-
 authRoutes.post(
   "/resend-verification-otp",
   validateRequest(resendOTPSchema),

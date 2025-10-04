@@ -1,5 +1,5 @@
 import { Context } from 'hono';
-import { deckService, CreateDeckOptions, UpdateDeckOptions, GetDecksOptions, AddCardToDeckOptions } from './deck.service';
+import { AddCardToDeckOptions, CreateDeckOptions, deckService, GetDecksOptions, UpdateDeckOptions } from './deck.service';
 
 export class DeckController {
   // Get user's decks
@@ -22,7 +22,16 @@ export class DeckController {
       };
 
       const result = await deckService.getUserDecks(userId, options);
-      return c.json(result);
+      return c.json({
+        success: true,
+        data: result.decks,
+        pagination: {
+          total: result.total,
+          page: result.page,
+          limit: result.limit,
+          hasMore: result.hasMore
+        }
+      });
     } catch (error) {
       console.error('Error getting user decks:', error);
       return c.json({ error: 'Failed to get decks' }, 500);
@@ -62,7 +71,10 @@ export class DeckController {
       const options: CreateDeckOptions = await c.req.json();
 
       const deck = await deckService.createDeck(userId, options);
-      return c.json(deck, 201);
+      return c.json({
+        success: true,
+        data: deck
+      }, 201);
     } catch (error) {
       console.error('Error creating deck:', error);
       return c.json({ error: 'Failed to create deck' }, 500);

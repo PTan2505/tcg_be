@@ -630,7 +630,7 @@ async function testCollectionManagement() {
     method: 'POST',
     headers: { Authorization: `Bearer ${authToken}` },
     body: JSON.stringify({
-      // Missing required fields
+      cardId: 'invalid-card-id',
       quantity: 'invalid'
     })
   });
@@ -734,7 +734,7 @@ async function testCollectionManagement() {
 
   // Test 3.8: Update Non-existent Collection Item
   console.log('📋 Test 3.8: Update Non-existent Collection Item');
-  const { data: updateNonExistentData } = await makeAuthenticatedRequest(`${BASE_URL}/collections/nonexistent-id`, {
+  const { data: updateNonExistentData, response: updateNonExistentResponse } = await makeAuthenticatedRequest(`${BASE_URL}/collections/nonexistent-id`, {
     method: 'PUT',
     headers: { Authorization: `Bearer ${authToken}` },
     body: JSON.stringify({
@@ -850,7 +850,7 @@ async function testUserDeckManagement() {
     method: 'POST',
     headers: { Authorization: `Bearer ${authToken}` },
     body: JSON.stringify({
-      // Missing required fields
+      name: '', // Empty name should be invalid
       description: 'Test deck without name'
     })
   });
@@ -1098,10 +1098,10 @@ async function testPokemonDeckManagement() {
   const { data: paginatedData } = await makeRequest(`${BASE_URL}/decks/pokemon?page=1&limit=3`);
   
   assert(
-    paginatedData.success && paginatedData.data.pagination,
+    paginatedData.success && paginatedData.pagination,
     'Pokemon decks pagination should work',
     'pagination data',
-    paginatedData.success ? `page ${paginatedData.data.pagination?.page}` : 'failure'
+    paginatedData.success ? `page ${paginatedData.pagination?.currentPage}` : 'failure'
   );
 
   // Test 5.3: Get Pokemon Decks with Type Filter
@@ -2325,7 +2325,7 @@ async function testSocialMediaPosts() {
   const { data: invalidPostData } = await makeAuthenticatedRequest(`${BASE_URL}/posts`, {
     method: 'POST',
     body: JSON.stringify({
-      // Missing required content field
+      content: '', // Empty content should be invalid
       privacy: 'public'
     })
   });
