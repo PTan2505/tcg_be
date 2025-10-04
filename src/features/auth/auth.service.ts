@@ -1,7 +1,6 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import UserModel, { User } from "../../database/models/user";
-import { IEmailService } from "../../shared/email.service";
 import { AuthTokens, LoginDTO, RegisterDTO } from "./auth.types";
 
 import { Document } from "mongoose";
