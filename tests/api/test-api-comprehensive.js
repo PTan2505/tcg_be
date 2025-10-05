@@ -13,7 +13,7 @@
 // • Collection Management (/collections/*, /user-cards/*)
 // • User Deck Management (/decks/user/*) - Full CRUD operations
 // • Social Media Posts (/posts/*) - Create, read, update, delete posts
-// • Post Reactions & Comments (/posts/*) - Like/dislike and commenting system
+// • Post Reactions & Comments (/posts/*) - Like and commenting system
 // • Friend Management (/posts/friends/*) - Friend requests and management
 // • Notifications (/posts/notifications/*) - Real-time notifications
 // • Error Handling & Security
@@ -195,7 +195,7 @@ console.log('   • Unified set management & filtering');
 console.log('   • Collection management (basic & advanced)');
 console.log('   • User deck building & management (full CRUD)');
 console.log('   • Social media posts (create, read, update, delete)');
-console.log('   • Post reactions & comments (like/dislike system)');
+console.log('   • Post reactions & comments (like system)');
 console.log('   • Friend management (requests, accept, decline)');
 console.log('   • Notifications (real-time social interactions)');
 console.log('   • Positive test cases');
@@ -2404,24 +2404,24 @@ async function testSocialMediaPosts() {
     skip('Test 7.7: React to Post (Like)', 'No post ID available');
   }
 
-  // Test 7.8: React to Post (Toggle to Dislike)
+  // Test 7.8: Unlike Post (Remove Like)
   if (postId) {
-    console.log('📋 Test 7.8: React to Post (Toggle to Dislike)');
-    const { data: dislikeData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/${postId}/reactions`, {
+    console.log('📋 Test 7.8: Unlike Post (Remove Like)');
+    const { data: unlikeData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/${postId}/reactions`, {
       method: 'POST',
       body: JSON.stringify({
-        type: 'dislike'
+        type: 'like'
       })
     });
     
     assert(
-      dislikeData.success && dislikeData.data,
-      'Post dislike should succeed',
+      unlikeData.success && unlikeData.data,
+      'Post unlike should succeed',
       'success',
-      dislikeData.success ? 'success' : 'failure'
+      unlikeData.success ? 'success' : 'failure'
     );
   } else {
-    skip('Test 7.8: React to Post (Toggle to Dislike)', 'No post ID available');
+    skip('Test 7.8: Unlike Post (Remove Like)', 'No post ID available');
   }
 }
 

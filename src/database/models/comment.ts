@@ -8,7 +8,6 @@ export interface Comment extends Document {
   content: string;
   tags: Types.ObjectId[]; // Tagged users
   likesCount: number;
-  dislikesCount: number;
   repliesCount: number;
   createdAt: Date;
   updatedAt: Date;
@@ -42,10 +41,6 @@ const commentSchema = new Schema<Comment>(
       ref: "User",
     }],
     likesCount: {
-      type: Number,
-      default: 0,
-    },
-    dislikesCount: {
       type: Number,
       default: 0,
     },
