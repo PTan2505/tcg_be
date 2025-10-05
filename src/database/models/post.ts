@@ -13,7 +13,6 @@ export interface Post extends Document {
   privacy: 'public' | 'friends' | 'private';
   tags: Types.ObjectId[]; // Tagged users
   likesCount: number;
-  dislikesCount: number;
   commentsCount: number;
   createdAt: Date;
   updatedAt: Date;
@@ -60,10 +59,6 @@ const postSchema = new Schema<Post>(
       ref: "User",
     }],
     likesCount: {
-      type: Number,
-      default: 0,
-    },
-    dislikesCount: {
       type: Number,
       default: 0,
     },

@@ -52,7 +52,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
     },
     {
       name: "Reactions",
-      description: "Like and dislike reactions",
+      description: "Like reactions",
     },
     {
       name: "Friendship",
@@ -2346,7 +2346,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
     "/posts/{id}/reactions": {
       post: {
         tags: ["Reactions"],
-        summary: "Toggle post reaction (like/dislike)",
+        summary: "Toggle post reaction (like/unlike)",
         security: [{ bearerAuth: [] }],
         parameters: [
           {
@@ -2367,7 +2367,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
                 properties: {
                   type: {
                     type: "string",
-                    enum: ["like", "dislike"],
+                    enum: ["like"],
                     description: "Reaction type",
                   },
                 },
@@ -2389,10 +2389,9 @@ export const swaggerDoc: OpenAPIV3.Document = {
                       properties: {
                         action: {
                           type: "string",
-                          enum: ["added", "removed", "changed"],
+                          enum: ["added", "removed"],
                         },
                         likesCount: { type: "integer" },
-                        dislikesCount: { type: "integer" },
                       },
                     },
                   },
@@ -4190,7 +4189,6 @@ export const swaggerDoc: OpenAPIV3.Document = {
             description: "Tagged users",
           },
           likesCount: { type: "integer", description: "Number of likes" },
-          dislikesCount: { type: "integer", description: "Number of dislikes" },
           commentsCount: { type: "integer", description: "Number of comments" },
           createdAt: { type: "string", format: "date-time" },
           updatedAt: { type: "string", format: "date-time" },
@@ -4210,7 +4208,6 @@ export const swaggerDoc: OpenAPIV3.Document = {
             description: "Tagged users",
           },
           likesCount: { type: "integer", description: "Number of likes" },
-          dislikesCount: { type: "integer", description: "Number of dislikes" },
           repliesCount: { type: "integer", description: "Number of replies" },
           createdAt: { type: "string", format: "date-time" },
           updatedAt: { type: "string", format: "date-time" },
@@ -4226,10 +4223,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             type: "string",
             enum: [
               "post_like",
-              "post_dislike",
               "post_comment",
               "comment_like",
-              "comment_dislike",
               "comment_reply",
               "post_tag",
               "comment_tag",
