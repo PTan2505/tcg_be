@@ -4,11 +4,15 @@ import { cacheMiddleware } from '../../shared/middlewares/cache.middleware';
 import { rateLimitMiddleware, validateParamsMiddleware } from '../../shared/middlewares/security.middleware';
 import { CardController } from './card.controller';
 import { CardService } from './card.service';
+import cardScanRoutes from './cardScan.routes';
 
 const cardService = new CardService();
 const cardController = new CardController(cardService);
 
 export const cardRoutes = new Hono();
+
+// Mount card scanning routes (must be before other routes to avoid conflicts)
+cardRoutes.route('/scan', cardScanRoutes);
 
 // Public routes for testing (no auth required)
 cardRoutes.get('/public/stats', cardController.getCardStats);

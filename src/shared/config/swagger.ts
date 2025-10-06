@@ -62,6 +62,10 @@ export const swaggerDoc: OpenAPIV3.Document = {
       name: "Notifications",
       description: "Real-time notifications",
     },
+    {
+      name: "Card Scanning",
+      description: "AI-powered card scanning with OCR and recognition",
+    },
   ],
   paths: {
     "/auth/register": {
@@ -2971,7 +2975,1048 @@ export const swaggerDoc: OpenAPIV3.Document = {
       },
     },
     // =============================================================================
-    // UNIFIED API ENDPOINTS - New unified card and set management
+    // CARD SCANNING ROUTES - AI-powered OCR and recognition
+    // =============================================================================
+    "/cards/scan/scan": {
+      post: {
+        tags: ["Card Scanning"],
+        summary: "Scan a card image with AI OCR",
+        description: "Upload a card image for OCR processing and automatic recognition using Google Vision API and Tesseract.js fallback",
+        security: [{ bearerAuth: [] }],
+        requestBody: {
+          required: true,
+          content: {
+            "multipart/form-data": {
+              schema: {
+                type: "object",
+                required: ["image", "gameType"],
+                properties: {
+                  image: {
+                    type: "string",
+                    format: "binary",
+                    description: "Card image file (JPEG, PNG, WebP - max 10MB)",
+                  },
+                  gameType: {
+                    type: "string",
+                    enum: ["onepiece", "pokemon", "yugioh"],
+                    description: "Type of trading card game",
+                  },
+                  userPreferences: {
+                    type: "string",
+                    description: "JSON string of user preferences for better matching",
+                    example: '{"preferredSets": ["OP01"], "priceRange": {"min": 0, "max": 50}}',
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "200": {
+            description: "Card scanned successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "object",
+                      properties: {
+                        scanId: { type: "string", description: "Unique scan ID for tracking" },
+                        confidence: { type: "number", description: "Overall confidence score (0-1)" },
+                        requiresSetSelection: { type: "boolean", description: "Whether user needs to select from multiple sets" },
+                        matches: {
+                          type: "array",
+                          items: {
+                            type: "object",
+                            properties: {
+                              cardId: { type: "string" },
+                              name: { type: "string" },
+                              setInfo: {
+                                type: "object",
+                                properties: {
+                                  setName: { type: "string" },
+                                  setCode: { type: "string" },
+                                },
+                              },
+                              confidence: { type: "number" },
+                              estimatedValue: { type: "number" },
+                              imageUrl: { type: "string" },
+                            },
+                          },
+                        },
+                        ocrResult: {
+                          type: "object",
+                          properties: {
+                            extractedText: { type: "array", items: { type: "string" } },
+                            confidence: { type: "number" },
+                          },
+                        },
+                        recognitionData: {
+                          type: "object",
+                          properties: {
+                            recognizedName: { type: "string" },
+                            recognizedSetCode: { type: "string" },
+                            recognizedRarity: { type: "string" },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "400": {
+            description: "Invalid image or scanning error",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean", example: false },
+                    error: { type: "string", example: "Invalid image format" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/cards/scan/confirm": {
+      post: {
+        tags: ["Card Scanning"],
+        summary: "Confirm scanned card and add to collection",
+        description: "Confirm the selected card from scan results and add it to user's collection",
+        security: [{ bearerAuth: [] }],
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                required: ["scanId", "selectedCardId"],
+                properties: {
+                  scanId: {
+                    type: "string",
+                    description: "Scan ID from the scan result",
+                  },
+                  selectedCardId: {
+                    type: "string",
+                    description: "Selected card ID from the matches",
+                  },
+                  quantity: {
+                    type: "integer",
+                    minimum: 1,
+                    maximum: 10,
+                    default: 1,
+                    description: "Number of cards to add",
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "200": {
+            description: "Card added to collection successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "object",
+                      properties: {
+                        message: { type: "string" },
+                        cardAdded: {
+                          type: "object",
+                          properties: {
+                            cardId: { type: "string" },
+                            name: { type: "string" },
+                            quantity: { type: "integer" },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/cards/scan/search": {
+      get: {
+        tags: ["Card Scanning"],
+        summary: "Manual card search with fuzzy matching",
+        description: "Search for cards when automatic scanning fails or for manual lookup",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "query",
+            name: "query",
+            required: true,
+            schema: { type: "string" },
+            description: "Search query (card name, set code, etc.)",
+          },
+          {
+            in: "query",
+            name: "gameType",
+            required: true,
+            schema: {
+              type: "string",
+              enum: ["onepiece", "pokemon", "yugioh"],
+            },
+            description: "Type of trading card game",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: { type: "integer", minimum: 1, maximum: 50, default: 20 },
+            description: "Maximum number of results",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Search results retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "object",
+                      properties: {
+                        matches: {
+                          type: "array",
+                          items: {
+                            type: "object",
+                            properties: {
+                              cardId: { type: "string" },
+                              name: { type: "string" },
+                              setInfo: {
+                                type: "object",
+                                properties: {
+                                  setName: { type: "string" },
+                                  setCode: { type: "string" },
+                                },
+                              },
+                              confidence: { type: "number" },
+                              estimatedValue: { type: "number" },
+                              imageUrl: { type: "string" },
+                            },
+                          },
+                        },
+                        total: { type: "integer" },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/cards/scan/history": {
+      get: {
+        tags: ["Card Scanning"],
+        summary: "Get user's scanning history",
+        description: "Retrieve the user's card scanning history with pagination",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "query",
+            name: "page",
+            schema: { type: "integer", minimum: 1, default: 1 },
+            description: "Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: { type: "integer", minimum: 1, maximum: 100, default: 20 },
+            description: "Number of records per page",
+          },
+          {
+            in: "query",
+            name: "gameType",
+            schema: {
+              type: "string",
+              enum: ["onepiece", "pokemon", "yugioh"],
+            },
+            description: "Filter by game type",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Scanning history retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "object",
+                      properties: {
+                        scans: {
+                          type: "array",
+                          items: {
+                            type: "object",
+                            properties: {
+                              scanId: { type: "string" },
+                              gameType: { type: "string" },
+                              confidence: { type: "number" },
+                              selectedCard: {
+                                type: "object",
+                                properties: {
+                                  name: { type: "string" },
+                                  setName: { type: "string" },
+                                },
+                              },
+                              scannedAt: { type: "string", format: "date-time" },
+                              processingTime: { type: "number" },
+                            },
+                          },
+                        },
+                        total: { type: "integer" },
+                        pagination: {
+                          type: "object",
+                          properties: {
+                            page: { type: "integer" },
+                            limit: { type: "integer" },
+                            totalPages: { type: "integer" },
+                            hasNext: { type: "boolean" },
+                            hasPrev: { type: "boolean" },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/cards/scan/stats": {
+      get: {
+        tags: ["Card Scanning"],
+        summary: "Get user's scanning statistics",
+        description: "Retrieve scanning performance and usage statistics",
+        security: [{ bearerAuth: [] }],
+        responses: {
+          "200": {
+            description: "Scanning statistics retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "object",
+                      properties: {
+                        totalScans: { type: "integer" },
+                        successfulScans: { type: "integer" },
+                        averageConfidence: { type: "number" },
+                        averageProcessingTime: { type: "number" },
+                        gameTypeBreakdown: {
+                          type: "object",
+                          properties: {
+                            onepiece: { type: "integer" },
+                            pokemon: { type: "integer" },
+                            yugioh: { type: "integer" },
+                          },
+                        },
+                        recentActivity: {
+                          type: "array",
+                          items: {
+                            type: "object",
+                            properties: {
+                              date: { type: "string", format: "date" },
+                              scanCount: { type: "integer" },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/cards/scan/batch": {
+      post: {
+        tags: ["Card Scanning"],
+        summary: "Batch scan multiple cards",
+        description: "Upload and scan multiple card images in a single request",
+        security: [{ bearerAuth: [] }],
+        requestBody: {
+          required: true,
+          content: {
+            "multipart/form-data": {
+              schema: {
+                type: "object",
+                required: ["images", "gameType"],
+                properties: {
+                  images: {
+                    type: "array",
+                    items: {
+                      type: "string",
+                      format: "binary",
+                    },
+                    description: "Array of card image files (max 10 images)",
+                  },
+                  gameType: {
+                    type: "string",
+                    enum: ["onepiece", "pokemon", "yugioh"],
+                    description: "Type of trading card game",
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "200": {
+            description: "Batch scan completed successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "object",
+                      properties: {
+                        batchId: { type: "string" },
+                        results: {
+                          type: "array",
+                          items: {
+                            type: "object",
+                            properties: {
+                              scanId: { type: "string" },
+                              imageIndex: { type: "integer" },
+                              confidence: { type: "number" },
+                              matches: {
+                                type: "array",
+                                items: {
+                                  type: "object",
+                                  properties: {
+                                    cardId: { type: "string" },
+                                    name: { type: "string" },
+                                    confidence: { type: "number" },
+                                  },
+                                },
+                              },
+                              status: {
+                                type: "string",
+                                enum: ["success", "failed", "needs_selection"],
+                              },
+                            },
+                          },
+                        },
+                        summary: {
+                          type: "object",
+                          properties: {
+                            total: { type: "integer" },
+                            successful: { type: "integer" },
+                            failed: { type: "integer" },
+                            needsSelection: { type: "integer" },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    // =============================================================================
+    // ENHANCED CARD SCANNING - 4-Step AI Pipeline
+    // =============================================================================
+    "/cards/scan/enhanced": {
+      post: {
+        tags: ["Card Scanning"],
+        summary: "Enhanced 4-step card scanning pipeline",
+        description: "Advanced card scanning using 4-step AI pipeline: 1) Game Type Classification, 2) Enhanced OCR, 3) Smart Search, 4) Intelligent Results",
+        security: [{ bearerAuth: [] }],
+        requestBody: {
+          required: true,
+          content: {
+            "multipart/form-data": {
+              schema: {
+                type: "object",
+                required: ["image"],
+                properties: {
+                  image: {
+                    type: "string",
+                    format: "binary",
+                    description: "Card image file (JPEG, PNG, WebP - max 10MB)",
+                  },
+                  gameType: {
+                    type: "string",
+                    enum: ["pokemon", "yugioh", "onepiece"],
+                    description: "Game type (optional - will auto-detect if not provided)",
+                  },
+                  location: {
+                    type: "string",
+                    description: "JSON string with user location data",
+                    example: '{"latitude": 37.7749, "longitude": -122.4194, "city": "San Francisco"}',
+                  },
+                  userPreferences: {
+                    type: "string",
+                    description: "JSON string with user scanning preferences",
+                    example: '{"preferredLanguage": "en", "confidenceThreshold": 0.8}',
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          200: {
+            description: "Card scanned successfully using 4-step pipeline",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean", example: true },
+                    data: {
+                      type: "object",
+                      properties: {
+                        pipeline: {
+                          type: "object",
+                          description: "Detailed information about each pipeline step",
+                          properties: {
+                            step1_gameType: {
+                              type: "object",
+                              properties: {
+                                detected: { type: "string", example: "yugioh" },
+                                confidence: { type: "number", example: 92 },
+                                provided: { type: "boolean", example: false }
+                              }
+                            },
+                            step2_ocr: {
+                              type: "object",
+                              properties: {
+                                cardName: { type: "string", example: "Dark Magician" },
+                                primaryStats: { 
+                                  type: "object",
+                                  example: { "ATK": "2500", "DEF": "2100", "Level": "7" }
+                                },
+                                confidence: { type: "number", example: 85 },
+                                extractedWords: { type: "number", example: 15 }
+                              }
+                            },
+                            step3_search: {
+                              type: "object",
+                              properties: {
+                                strategy: { type: "string", example: "fuzzy_name_match" },
+                                candidatesFound: { type: "number", example: 3 },
+                                totalCardsSearched: { type: "number", example: 45000 },
+                                searchTime: { type: "number", example: 45 }
+                              }
+                            },
+                            step4_results: {
+                              type: "object",
+                              properties: {
+                                allCandidates: { type: "number", example: 3 },
+                                topMatch: {
+                                  type: "object",
+                                  description: "Best matching card"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        candidates: {
+                          type: "array",
+                          description: "Ranked list of matching cards",
+                          items: {
+                            type: "object",
+                            properties: {
+                              cardId: { type: "string", example: "60a1b2c3d4e5f6789012345" },
+                              name: { type: "string", example: "Dark Magician" },
+                              setName: { type: "string", example: "Legend of Blue Eyes White Dragon" },
+                              rarity: { type: "string", example: "Ultra Rare" },
+                              confidence: { type: "string", example: "92%" },
+                              matchReason: { type: "string", example: "Fuzzy name match (92% similarity)" },
+                              matchedFields: { 
+                                type: "array", 
+                                items: { type: "string" },
+                                example: ["name", "stats"]
+                              },
+                              imageUrl: { type: "string" }
+                            }
+                          }
+                        },
+                        topMatch: {
+                          type: "object",
+                          description: "The highest confidence match",
+                          nullable: true
+                        },
+                        scanTime: { type: "number", example: 1850, description: "Total processing time in milliseconds" },
+                        method: { type: "string", example: "enhanced_4_step_pipeline" },
+                        gameType: { type: "string", example: "yugioh" },
+                        confidence: { type: "string", example: "92%" },
+                        requiresSetSelection: { type: "boolean", example: false }
+                      },
+                    },
+                    message: { type: "string", example: "Card identified successfully using 4-step pipeline" },
+                  },
+                },
+              },
+            },
+          },
+          400: {
+            description: "Invalid request parameters",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean", example: false },
+                    error: { type: "string", example: "Image file is required" },
+                    method: { type: "string", example: "enhanced_4_step_pipeline" }
+                  },
+                },
+              },
+            },
+          },
+          401: {
+            description: "Unauthorized - Invalid or missing token",
+            content: {
+              "application/json": {
+                schema: { $ref: "#/components/schemas/Error" },
+              },
+            },
+          },
+          429: {
+            description: "Rate limit exceeded (15 enhanced scans per minute)",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean", example: false },
+                    error: { type: "string", example: "Rate limit exceeded. Try again later." },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/cards/scan/pipeline-demo": {
+      get: {
+        tags: ["Card Scanning"],
+        summary: "Enhanced pipeline demonstration",
+        description: "Get detailed information about the 4-step enhanced scanning pipeline architecture and capabilities",
+        security: [{ bearerAuth: [] }],
+        responses: {
+          200: {
+            description: "Pipeline information retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean", example: true },
+                    data: {
+                      type: "object",
+                      properties: {
+                        concept: { type: "string", example: "Enhanced 4-Step Card Scanning Pipeline" },
+                        steps: {
+                          type: "object",
+                          properties: {
+                            step1: {
+                              type: "object",
+                              properties: {
+                                name: { type: "string", example: "🎯 Game Type Classification" },
+                                description: { type: "string" },
+                                features: { 
+                                  type: "array", 
+                                  items: { type: "string" } 
+                                }
+                              }
+                            },
+                            step2: {
+                              type: "object",
+                              properties: {
+                                name: { type: "string", example: "🔤 Enhanced OCR Text Extraction" },
+                                description: { type: "string" },
+                                features: { 
+                                  type: "array", 
+                                  items: { type: "string" } 
+                                }
+                              }
+                            },
+                            step3: {
+                              type: "object",
+                              properties: {
+                                name: { type: "string", example: "🔍 Smart Multi-Strategy Search" },
+                                description: { type: "string" },
+                                strategies: { 
+                                  type: "array", 
+                                  items: { type: "string" } 
+                                }
+                              }
+                            },
+                            step4: {
+                              type: "object",
+                              properties: {
+                                name: { type: "string", example: "📦 Intelligent Result Processing" },
+                                description: { type: "string" },
+                                features: { 
+                                  type: "array", 
+                                  items: { type: "string" } 
+                                }
+                              }
+                            }
+                          }
+                        },
+                        benefits: { 
+                          type: "array", 
+                          items: { type: "string" },
+                          example: [
+                            "⚡ Ultra-fast scanning (typically <2 seconds)",
+                            "🎯 High accuracy across all 3 card games",
+                            "🤖 Automatic game type detection"
+                          ]
+                        },
+                        usage: {
+                          type: "object",
+                          properties: {
+                            endpoint: { type: "string", example: "POST /cards/scan/enhanced" },
+                            required: { 
+                              type: "array", 
+                              items: { type: "string" },
+                              example: ["image (file)"] 
+                            },
+                            optional: { 
+                              type: "array", 
+                              items: { type: "string" },
+                              example: ["gameType", "location", "userPreferences"] 
+                            },
+                            response: { type: "string", example: "Ranked card candidates with pipeline details" }
+                          }
+                        }
+                      }
+                    },
+                    message: { type: "string", example: "Enhanced 4-step pipeline ready for testing" }
+                  }
+                }
+              }
+            }
+          },
+          401: {
+            description: "Unauthorized - Invalid or missing token",
+            content: {
+              "application/json": {
+                schema: { $ref: "#/components/schemas/Error" },
+              },
+            },
+          },
+        },
+      },
+    },
+    // =============================================================================
+    // PUBLIC CARD ROUTES - No authentication required
+    // =============================================================================
+    "/cards/public/{type}": {
+      get: {
+        tags: ["Cards - Public"],
+        summary: "Get cards by game type (public endpoint - no auth required)",
+        parameters: [
+          {
+            in: "path",
+            name: "type",
+            required: true,
+            schema: {
+              type: "string",
+              enum: ["pokemon", "yugioh", "onepiece"],
+            },
+            description: "Game type (pokemon, yugioh, or onepiece)",
+          },
+          {
+            in: "query",
+            name: "page",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              default: 1,
+            },
+            description: "Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              maximum: 100,
+              default: 20,
+            },
+            description: "Number of cards per page",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Cards retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      type: "array",
+                      items: {
+                        $ref: "#/components/schemas/UnifiedCard",
+                      },
+                    },
+                    pagination: {
+                      $ref: "#/components/schemas/Pagination",
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/cards/public/{type}/search": {
+      get: {
+        tags: ["Cards - Public"],
+        summary: "Search cards by game type (public endpoint - no auth required)",
+        parameters: [
+          {
+            in: "path",
+            name: "type",
+            required: true,
+            schema: {
+              type: "string",
+              enum: ["pokemon", "yugioh", "onepiece"],
+            },
+            description: "Game type (pokemon, yugioh, or onepiece)",
+          },
+          {
+            in: "query",
+            name: "q",
+            required: true,
+            schema: {
+              type: "string",
+              minLength: 1,
+            },
+            description: "Search query",
+          },
+          {
+            in: "query",
+            name: "page",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              default: 1,
+            },
+            description: "Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              maximum: 100,
+              default: 20,
+            },
+            description: "Number of cards per page",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Search results retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      type: "array",
+                      items: {
+                        $ref: "#/components/schemas/UnifiedCard",
+                      },
+                    },
+                    pagination: {
+                      $ref: "#/components/schemas/Pagination",
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/cards/public/{type}/stats": {
+      get: {
+        tags: ["Cards - Public"],
+        summary: "Get card statistics for a specific game type (public endpoint - no auth required)",
+        parameters: [
+          {
+            in: "path",
+            name: "type",
+            required: true,
+            schema: {
+              type: "string",
+              enum: ["pokemon", "yugioh", "onepiece"],
+            },
+            description: "Game type to get statistics for",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Card statistics retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      type: "object",
+                      properties: {
+                        totalCards: {
+                          type: "integer",
+                        },
+                        lastUpdated: {
+                          type: "string",
+                          format: "date-time",
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/cards/public/stats": {
+      get: {
+        tags: ["Cards - Public"],
+        summary: "Get general card statistics (public endpoint - no auth required)",
+        responses: {
+          "200": {
+            description: "Card statistics retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      type: "object",
+                      properties: {
+                        totalCards: {
+                          type: "integer",
+                        },
+                        cardsByGameType: {
+                          type: "object",
+                          properties: {
+                            pokemon: { type: "integer" },
+                            yugioh: { type: "integer" },
+                            onepiece: { type: "integer" },
+                          },
+                        },
+                        lastUpdated: {
+                          type: "string",
+                          format: "date-time",
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/cards/public/product/{productId}": {
+      get: {
+        tags: ["Cards - Public"],
+        summary: "Get card by TCGPlayer Product ID (public endpoint - no auth required)",
+        parameters: [
+          {
+            in: "path",
+            name: "productId",
+            required: true,
+            schema: {
+              type: "integer",
+            },
+            description: "TCGPlayer Product ID",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Card retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      $ref: "#/components/schemas/UnifiedCard",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "404": {
+            description: "Card not found",
+          },
+        },
+      },
+    },
+    // =============================================================================
+    // AUTHENTICATED CARD ROUTES - Authentication required
     // =============================================================================
     "/cards": {
       get: {
@@ -4455,6 +5500,162 @@ export const swaggerDoc: OpenAPIV3.Document = {
           },
         },
         description: "Pagination information",
+      },
+      ScanHistory: {
+        type: "object",
+        properties: {
+          scanId: {
+            type: "string",
+            description: "Unique scan identifier",
+          },
+          userId: {
+            type: "string",
+            description: "User who performed the scan",
+          },
+          gameType: {
+            type: "string",
+            enum: ["onepiece", "pokemon", "yugioh"],
+            description: "Type of trading card game",
+          },
+          ocrResults: {
+            type: "object",
+            properties: {
+              extractedText: {
+                type: "array",
+                items: { type: "string" },
+                description: "Text extracted from OCR",
+              },
+              confidence: {
+                type: "number",
+                description: "OCR confidence score",
+              },
+              boundingBoxes: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    text: { type: "string" },
+                    box: {
+                      type: "object",
+                      properties: {
+                        x: { type: "number" },
+                        y: { type: "number" },
+                        width: { type: "number" },
+                        height: { type: "number" },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          recognitionData: {
+            type: "object",
+            properties: {
+              recognizedName: { type: "string" },
+              recognizedSetCode: { type: "string" },
+              recognizedRarity: { type: "string" },
+              confidence: { type: "number" },
+            },
+          },
+          matches: {
+            type: "array",
+            items: {
+              type: "object",
+              properties: {
+                cardId: { type: "string" },
+                name: { type: "string" },
+                setInfo: {
+                  type: "object",
+                  properties: {
+                    setName: { type: "string" },
+                    setCode: { type: "string" },
+                  },
+                },
+                confidence: { type: "number" },
+                estimatedValue: { type: "number" },
+              },
+            },
+          },
+          selectedCard: {
+            type: "object",
+            properties: {
+              cardId: { type: "string" },
+              name: { type: "string" },
+              setName: { type: "string" },
+            },
+          },
+          confidence: {
+            type: "number",
+            description: "Overall scan confidence",
+          },
+          processingTime: {
+            type: "number",
+            description: "Processing time in milliseconds",
+          },
+          scannedAt: {
+            type: "string",
+            format: "date-time",
+            description: "When the scan was performed",
+          },
+        },
+        description: "Card scanning history record",
+      },
+      CardScanResult: {
+        type: "object",
+        properties: {
+          scanId: {
+            type: "string",
+            description: "Unique scan identifier",
+          },
+          confidence: {
+            type: "number",
+            description: "Overall confidence score (0-1)",
+          },
+          requiresSetSelection: {
+            type: "boolean",
+            description: "Whether user needs to select from multiple sets",
+          },
+          matches: {
+            type: "array",
+            items: {
+              type: "object",
+              properties: {
+                cardId: { type: "string" },
+                name: { type: "string" },
+                setInfo: {
+                  type: "object",
+                  properties: {
+                    setName: { type: "string" },
+                    setCode: { type: "string" },
+                  },
+                },
+                confidence: { type: "number" },
+                estimatedValue: { type: "number" },
+                imageUrl: { type: "string" },
+              },
+            },
+          },
+          ocrResult: {
+            type: "object",
+            properties: {
+              extractedText: {
+                type: "array",
+                items: { type: "string" },
+              },
+              confidence: { type: "number" },
+            },
+          },
+          recognitionData: {
+            type: "object",
+            properties: {
+              recognizedName: { type: "string" },
+              recognizedSetCode: { type: "string" },
+              recognizedRarity: { type: "string" },
+            },
+          },
+        },
+        description: "Result from card scanning operation",
       },
     },
   },

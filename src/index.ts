@@ -12,10 +12,13 @@ import "./database/models/friendship"; // Import Friendship model
 import "./database/models/notification"; // Import Notification model
 import "./database/models/post"; // Import Post model
 import "./database/models/postReaction"; // Import PostReaction model
+import "./database/models/scanHistory"; // Import ScanHistory model
 import "./database/models/user"; // Import User model to ensure it's registered
 import "./database/models/userCard"; // Import UserCard model
 import authRoutes from "./features/auth/auth.routes";
 import cardRoutes from "./features/cards/card.routes";
+import enhancedScanRoutes from "./features/cards/enhancedCardScan.routes";
+import testRoutes from "./features/cards/test.routes";
 import userCardRoutes from "./features/collections/userCard.routes";
 import deckRoutes from "./features/decks/deck.routes";
 import postRoutes from "./features/posts/post.routes";
@@ -72,9 +75,13 @@ app.route("/api/users", userRoutes);
 app.route("/api/user-cards", userCardRoutes);
 app.route("/api/collections", userCardRoutes);
 app.route("/api/cards", cardRoutes);
+app.route("/api/cards/scan", enhancedScanRoutes);
 app.route("/api/sets", setRoutes);
 app.route("/api/decks", deckRoutes);
 app.route("/api/posts", postRoutes);
+
+// Mount test routes (no authentication required)
+app.route("/test", testRoutes);
 
 // Mount legacy routes (for backward compatibility and tests)
 app.route("/auth", authRoutes);
@@ -82,6 +89,7 @@ app.route("/users", userRoutes);
 app.route("/user-cards", userCardRoutes);
 app.route("/collections", userCardRoutes); // Legacy collections route
 app.route("/cards", cardRoutes);
+app.route("/cards/scan", enhancedScanRoutes);
 app.route("/sets", setRoutes);
 app.route("/decks", deckRoutes);
 app.route("/posts", postRoutes);
