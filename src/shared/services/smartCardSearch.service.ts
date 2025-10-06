@@ -63,7 +63,7 @@ export class SmartCardSearchService {
       // Try multiple search strategies
       const strategies = [
         () => this.exactNameMatch(allCards, extractedText.cardName),
-        () => this.fuzzyNameMatch(allCards, extractedText.cardName, gameType),
+        () => this.fuzzyNameMatchWithCache(allCards, extractedText.cardName, gameType),
         () => this.statBasedMatch(allCards, extractedText.primaryStats, gameType),
         () => this.combinedTextMatch(allCards, extractedText.allText, gameType),
         () => this.partialNameMatch(allCards, extractedText.cardName)
@@ -112,6 +112,121 @@ export class SmartCardSearchService {
   }
 
   /**
+   * Find best matches within a specific set
+   * Used when set detection has high confidence
+   */
+  async findBestMatchesInSet(
+    gameType: 'pokemon' | 'yugioh' | 'onepiece',
+    extractedText: any,
+    setCode: string,
+    limit: number = 15
+  ): Promise<SearchResult> {
+    const startTime = Date.now();
+    
+    try {
+      logger.info(`🎯 Searching for ${gameType} card: "${extractedText.cardName}" in set: ${setCode}`);
+
+      // First, find the CardSet by abbreviation and gameType
+      const { CardSet } = await import('../../database/models/cardSet');
+      const cardSet = await CardSet.findOne({ 
+        abbreviation: setCode,
+        gameType: gameType
+      }).lean();
+      
+      if (!cardSet) {
+        logger.info(`🎯 CardSet not found for abbreviation: ${setCode} and gameType: ${gameType}`);
+        return {
+          matches: [],
+          searchStrategy: 'set_not_found',
+          totalCandidates: 0,
+          processingTime: Date.now() - startTime
+        };
+      }
+      
+      logger.info(`🎯 Found CardSet: ${cardSet.name} (ID: ${cardSet._id})`);
+
+      // Then find cards in that set
+      const setCards = await Card.find({ 
+        cardSet: cardSet._id,
+        gameType: gameType
+      }).lean();
+      
+      logger.info(`🎯 Found ${setCards.length} cards in set ${setCode} (${cardSet.name})`);
+      
+      if (setCards.length === 0) {
+        return {
+          matches: [],
+          searchStrategy: 'set_specific_no_cards',
+          totalCandidates: 0,
+          processingTime: Date.now() - startTime
+        };
+      }
+
+      // Use same strategies but only on set-specific cards
+      logger.info(`🎯 Running search strategies on ${setCards.length} cards from set ${setCode}`);
+      const strategies = [
+        () => this.exactNameMatch(setCards, extractedText.cardName),
+        () => this.fuzzyNameMatch(setCards, extractedText.cardName, gameType),
+        () => this.statBasedMatch(setCards, extractedText.primaryStats, gameType),
+        () => this.combinedTextMatch(setCards, extractedText.allText, gameType),
+        () => this.partialNameMatch(setCards, extractedText.cardName)
+      ];
+
+      let bestMatches: CardMatch[] = [];
+      let usedStrategy = '';
+
+      // Try each strategy
+      for (const [index, strategy] of strategies.entries()) {
+        const matches = strategy();
+        
+        if (matches.length > 0 && matches[0].confidence > 60) { // Lower threshold for set-specific
+          bestMatches = matches.slice(0, limit);
+          usedStrategy = `set_specific_${this.getStrategyName(index)}`;
+          logger.info(`🎯 Strategy ${index + 1} (${this.getStrategyName(index)}) found ${matches.length} matches`);
+          if (matches.length > 0) {
+            logger.info(`   Top result: ${matches[0].card.name} [ID: ${matches[0].card._id}] (${matches[0].confidence}%)`);
+          }
+          break;
+        }
+        
+        if (matches.length > 0 && bestMatches.length === 0) {
+          bestMatches = matches.slice(0, limit);
+          usedStrategy = `set_specific_${this.getStrategyName(index)}`;
+        }
+      }
+
+      // If still no matches, try broader search within the set
+      if (bestMatches.length === 0) {
+        bestMatches = this.broadTextSearch(setCards, extractedText.allText).slice(0, limit);
+        usedStrategy = 'set_specific_broad_search';
+        logger.info(`🎯 Broad search in set found ${bestMatches.length} matches`);
+      }
+
+      const processingTime = Date.now() - startTime;
+      logger.info(`🎯 Set-specific search complete: ${bestMatches.length} matches found in ${processingTime}ms`);
+
+      // Log top matches for debugging
+      if (bestMatches.length > 0) {
+        logger.info(`🎯 Top matches in ${setCode}:`);
+        bestMatches.slice(0, 3).forEach((match, index) => {
+          logger.info(`   ${index + 1}. ${match.card.name} [ID: ${match.card._id}] (${match.confidence}% - ${match.matchReason})`);
+        });
+      }
+
+      return {
+        matches: bestMatches,
+        searchStrategy: usedStrategy,
+        totalCandidates: setCards.length,
+        processingTime
+      };
+
+    } catch (error) {
+      logger.error('Error in set-specific card search:', error);
+      throw error;
+    }
+  }
+
+  /**
    * Strategy 1: Exact name matching
    */
   private exactNameMatch(cards: any[], cardName: string): CardMatch[] {
@@ -131,11 +246,36 @@ export class SmartCardSearchService {
   }
 
   /**
-   * Strategy 2: Fuzzy name matching using Fuse.js
+   * Strategy 2: Fuzzy name matching using Fuse.js (for set-specific search)
    */
   private fuzzyNameMatch(cards: any[], cardName: string, gameType: string): CardMatch[] {
     if (!cardName || cardName === 'Unknown Card') return [];
 
+    logger.info(`🔍 Fuzzy search for "${cardName}" in ${cards.length} set-specific cards`);
+    
+    // For set-specific search, create new Fuse instance with only set cards
+    const fuse = this.createFuseInstance(cards);
+    const results = fuse.search(cardName, { limit: 10 });
+
+    const matches = results.map((result: any) => ({
+      card: result.item,
+      confidence: Math.round((1 - result.score!) * 100),
+      matchReason: `Fuzzy name match (${Math.round((1 - result.score!) * 100)}% similarity)`,
+      score: Math.round((1 - result.score!) * 100),
+      matchedFields: ['name']
+    })).filter((match: any) => match.confidence > 60);
+
+    logger.info(`🔍 Set-specific fuzzy search found ${matches.length} matches`);
+    return matches;
+  }
+
+  /**
+   * Strategy 2: Fuzzy name matching using cached Fuse.js (for full database search)
+   */
+  private fuzzyNameMatchWithCache(cards: any[], cardName: string, gameType: string): CardMatch[] {
+    if (!cardName || cardName === 'Unknown Card') return [];
+
+    // For full database search, use cached Fuse instance
     const fuse = this.getFuseInstance(gameType, cards);
     const results = fuse.search(cardName, { limit: 10 });
 
@@ -358,7 +498,7 @@ export class SmartCardSearchService {
   }
 
   /**
-   * Get or create Fuse.js instance for game type
+   * Get or create Fuse.js instance for game type (for full database search)
    */
   private getFuseInstance(gameType: string, cards: any[]): Fuse<any> {
     let fuse = this.fuseInstances.get(gameType);
@@ -380,7 +520,21 @@ export class SmartCardSearchService {
   }
 
   /**
-   * Get all card variants with the same name for visual matching
+   * Create new Fuse.js instance for specific card set (for set-specific search)
+   */
+  private createFuseInstance(cards: any[]): Fuse<any> {
+    return new Fuse(cards, {
+      keys: [
+        { name: 'name', weight: 0.8 },
+        { name: 'setName', weight: 0.2 }
+      ],
+      threshold: 0.4,
+      includeScore: true
+    });
+  }
+
+  /**
+   * Get all card variants with the same name for visual matching (Enhanced)
    */
   async getAllCardVariants(
     gameType: 'pokemon' | 'yugioh' | 'onepiece',
@@ -388,37 +542,168 @@ export class SmartCardSearchService {
     maxVariants: number = 50
   ): Promise<Array<{ cardId: string; imageUrl: string; name: string; setCode?: string; rarity?: string }>> {
     try {
-      logger.info(`🔍 Getting all variants of "${cardName}" for ${gameType}`);
+      logger.info(`🔍 Getting enhanced variants of "${cardName}" for ${gameType}`);
 
-      // Get all cards with exact or similar names
-      const cards = await Card.find({
-        gameType,
-        $or: [
-          { name: { $regex: new RegExp(`^${cardName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'i') } },
-          { name: { $regex: new RegExp(cardName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i') } }
-        ]
-      })
-      .select('_id name imageUrl setCode rarity gameType')
-      .lean()
-      .limit(maxVariants);
+      // Enhanced search strategy with multiple approaches
+      const searchStrategies = [
+        // 1. Exact name match (highest priority)
+        () => Card.find({
+          gameType,
+          name: { $regex: new RegExp(`^${cardName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'i') }
+        }),
+        
+        // 2. Name contains all major words
+        () => {
+          const majorWords = cardName.split(/\s+/).filter(word => word.length > 2);
+          if (majorWords.length > 0) {
+            const wordRegexes = majorWords.map(word => 
+              new RegExp(word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i')
+            );
+            return Card.find({
+              gameType,
+              name: { $all: wordRegexes }
+            });
+          }
+          return Card.find({ _id: { $exists: false } }); // Empty result
+        },
 
-      const variants = cards
-        .filter(card => card.imageUrl && card.imageUrl.trim() !== '')
+        // 3. Fuzzy matching with different name variations
+        () => {
+          const variations = this.generateNameVariations(cardName);
+          const orConditions = variations.map(variation => ({
+            name: { $regex: new RegExp(variation.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i') }
+          }));
+          
+          return Card.find({
+            gameType,
+            $or: orConditions
+          });
+        },
+
+        // 4. Partial name matching (broader search)
+        () => Card.find({
+          gameType,
+          name: { $regex: new RegExp(cardName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i') }
+        })
+      ];
+
+      let allVariants: any[] = [];
+      const seenCardIds = new Set<string>();
+
+      // Execute search strategies in order of priority
+      for (const [index, strategy] of searchStrategies.entries()) {
+        try {
+          const strategyResults = await strategy()
+            .select('_id name imageUrl setCode rarity gameType setName')
+            .lean()
+            .limit(maxVariants);
+
+          logger.info(`Strategy ${index + 1}: Found ${strategyResults.length} potential variants`);
+
+          // Add unique variants
+          for (const card of strategyResults) {
+            if (!seenCardIds.has(card._id.toString()) && card.imageUrl && card.imageUrl.trim() !== '') {
+              seenCardIds.add(card._id.toString());
+              allVariants.push(card);
+            }
+          }
+
+          // Stop if we have enough variants from high-priority strategies
+          if (allVariants.length >= maxVariants * 0.7 && index < 2) {
+            logger.info(`Got sufficient variants (${allVariants.length}) from high-priority strategy ${index + 1}`);
+            break;
+          }
+        } catch (error) {
+          logger.warn(`Search strategy ${index + 1} failed:`, error);
+        }
+      }
+
+      // Sort variants by relevance (exact matches first, then by set name, etc.)
+      allVariants.sort((a, b) => {
+        // Exact name matches first
+        const aExact = a.name.toLowerCase() === cardName.toLowerCase() ? 1 : 0;
+        const bExact = b.name.toLowerCase() === cardName.toLowerCase() ? 1 : 0;
+        if (aExact !== bExact) return bExact - aExact;
+
+        // Then by name length (shorter names are often base cards)
+        const lengthDiff = a.name.length - b.name.length;
+        if (Math.abs(lengthDiff) > 0) return lengthDiff;
+
+        // Finally alphabetically by set name
+        return (a.setName || '').localeCompare(b.setName || '');
+      });
+
+      const finalVariants = allVariants
+        .slice(0, maxVariants)
         .map(card => ({
           cardId: card._id.toString(),
-          imageUrl: card.imageUrl!, // We filtered for non-empty imageUrls above
+          imageUrl: card.imageUrl!,
           name: card.name,
           setCode: card.setCode,
           rarity: card.rarity
         }));
 
-      logger.info(`🔍 Found ${variants.length} variants with images`);
-      return variants;
+      logger.info(`🔍 Enhanced search found ${finalVariants.length} unique variants with images`);
+      
+      // Log some examples for debugging
+      if (finalVariants.length > 0) {
+        logger.info('Sample variants:');
+        finalVariants.slice(0, 3).forEach((variant, index) => {
+          logger.info(`  ${index + 1}. ${variant.name} (${variant.setCode || 'Unknown set'})`);
+        });
+      }
+
+      return finalVariants;
 
     } catch (error) {
-      logger.error('Error getting card variants:', error);
+      logger.error('Error getting enhanced card variants:', error);
       return [];
     }
+  }
+
+  /**
+   * Generate name variations for better matching
+   */
+  private generateNameVariations(cardName: string): string[] {
+    const variations = [cardName];
+    
+    // Remove common suffixes/prefixes
+    const commonSuffixes = ['EX', 'GX', 'V', 'VMAX', 'ex', 'gx', 'v', 'vmax'];
+    const commonPrefixes = ['Team', 'Dark', 'Light', 'Shining'];
+    
+    let baseName = cardName;
+    
+    // Try removing suffixes
+    for (const suffix of commonSuffixes) {
+      const pattern = new RegExp(`\\s+${suffix}\\s*$`, 'i');
+      if (pattern.test(baseName)) {
+        const withoutSuffix = baseName.replace(pattern, '').trim();
+        if (withoutSuffix.length > 0) {
+          variations.push(withoutSuffix);
+          baseName = withoutSuffix; // Use this for further processing
+        }
+      }
+    }
+    
+    // Try removing prefixes
+    for (const prefix of commonPrefixes) {
+      const pattern = new RegExp(`^${prefix}\\s+`, 'i');
+      if (pattern.test(baseName)) {
+        const withoutPrefix = baseName.replace(pattern, '').trim();
+        if (withoutPrefix.length > 0) {
+          variations.push(withoutPrefix);
+        }
+      }
+    }
+
+    // Add variations with common card type words
+    const cardTypes = ['Pokémon', 'Pokemon', 'Card'];
+    for (const type of cardTypes) {
+      variations.push(`${baseName} ${type}`);
+    }
+
+    // Remove duplicates and return
+    return [...new Set(variations)].filter(v => v.length > 0);
   }
 
   private getStrategyName(index: number): string {

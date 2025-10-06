@@ -408,37 +408,68 @@ export class EnhancedOCRService {
   }
 
   /**
-   * Improved One Piece name extraction
+   * Improved One Piece name extraction with role-based detection
    */
   private findOnePieceNameImproved(lines: string[], fullText: string): string {
-    // Common One Piece character names
+    // Strategy 0: Look for character name after ROLE keywords (HIGHEST PRIORITY)
+    const roleBasedName = this.extractNameAfterRole(fullText);
+    if (roleBasedName) {
+      logger.info(`🎯 Found role-based name: "${roleBasedName}"`);
+      return roleBasedName;
+    }
+
+    // Common One Piece character names with variations
     const commonCharacters = [
-      'Trafalgar Law', 'Monkey D. Luffy', 'Roronoa Zoro', 'Nami', 'Usopp',
-      'Sanji', 'Tony Tony Chopper', 'Nico Robin', 'Franky', 'Brook'
+      'Trafalgar Law', 'Monkey D. Luffy', 'Monkey.D.Luffy', 'Monkey D Luffy',
+      'Roronoa Zoro', 'Nami', 'Usopp', 'Sanji', 'Tony Tony Chopper', 
+      'Nico Robin', 'Franky', 'Brook', 'Jinbe', 'Portgas D. Ace',
+      'Portgas.D.Ace', 'Edward Newgate', 'Whitebeard', 'Shanks',
+      'Marshall D. Teach', 'Kaido', 'Big Mom', 'Charlotte Linlin',
+      'Charlotte Flampe', 'Charlotte Katakuri', 'Charlotte Cracker'
     ];
 
-    // Strategy 1: Look for common character names
+    // Strategy 1: Look for exact character name matches (case insensitive)
     for (const character of commonCharacters) {
-      if (fullText.toLowerCase().includes(character.toLowerCase())) {
+      const regex = new RegExp(character.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
+      if (regex.test(fullText)) {
+        logger.info(`🎯 Found exact character match: "${character}"`);
         return character;
       }
     }
 
-    // Strategy 2: Find in top lines, avoiding stats
-    for (const line of lines.slice(0, 3)) {
+    // Strategy 2: Look for character names in text using word boundaries
+    const characterNamePattern = /\b([A-Z][a-z]+(?:[\s\.]D[\s\.][A-Z][a-z]+|[\s\.][A-Z][a-z]+){0,2})\b/g;
+    const matches = fullText.match(characterNamePattern);
+    if (matches) {
+      for (const match of matches) {
+        const cleanMatch = match.trim();
+        if (this.isValidOnePieceName(cleanMatch) && cleanMatch.length > 5) {
+          logger.info(`🎯 Found pattern match: "${cleanMatch}"`);
+          return cleanMatch;
+        }
+      }
+    }
+
+    // Strategy 3: Find in top lines, avoiding stats
+    for (const line of lines.slice(0, 5)) {
       const cleanLine = line.trim();
-      if (this.isValidOnePieceName(cleanLine)) {
+      if (this.isValidOnePieceName(cleanLine) && cleanLine.length > 4) {
+        logger.info(`🎯 Found in top lines: "${cleanLine}"`);
         return cleanLine;
       }
     }
 
-    // Strategy 3: Find longest valid name
+    // Strategy 4: Find longest valid name from all lines
     let bestCandidate = '';
     for (const line of lines) {
       const cleanLine = line.trim();
       if (this.isValidOnePieceName(cleanLine) && cleanLine.length > bestCandidate.length) {
         bestCandidate = cleanLine;
       }
+    }
+
+    if (bestCandidate) {
+      logger.info(`🎯 Found best candidate: "${bestCandidate}"`);
     }
 
     return bestCandidate;
@@ -448,15 +479,98 @@ export class EnhancedOCRService {
    * Check if a line is a valid One Piece character name
    */
   private isValidOnePieceName(line: string): boolean {
-    if (!line || line.length < 3 || line.length > 40) return false;
+    if (!line || line.length < 3 || line.length > 50) return false;
     
-    // Exclude stats and game terms
-    if (line.match(/Power|Cost|Life|DON!|\d+\/\d+|ATK|DEF|HP\s*\d+/i)) {
+    // Exclude obvious stats and game terms
+    if (line.match(/Power|Cost|Life|DON!|\d+\/\d+|ATK|DEF|HP\s*\d+|LEADER|Character|Event|Stage/i)) {
       return false;
     }
 
-    // Must contain letters
-    return /[A-Za-z]/.test(line) && /^[A-Za-z\s\-'\.]+$/.test(line);
+    // Exclude lines with too many numbers
+    if ((line.match(/\d/g) || []).length > 2) {
+      return false;
+    }
+
+    // Exclude set codes and card codes
+    if (line.match(/ST\d+-\d+|OP\d+-\d+|[A-Z]{2,}\d+/)) {
+      return false;
+    }
+
+    // Must contain letters and valid characters (including dots for D. names)
+    if (!/[A-Za-z]/.test(line)) return false;
+    
+    // Allow letters, spaces, dots, hyphens, apostrophes
+    if (!/^[A-Za-z\s\-'\.]+$/.test(line)) return false;
+
+    // Valid One Piece name patterns
+    const validPatterns = [
+      /^[A-Z][a-z]+([\s\.][A-Z]\.?[\s\.][A-Z][a-z]+)?$/, // "Monkey.D.Luffy" or "Monkey D. Luffy"
+      /^[A-Z][a-z]+[\s][A-Z][a-z]+$/, // "Trafalgar Law"
+      /^[A-Z][a-z]+$/, // "Nami"
+      /^[A-Z][a-z]+[\s][A-Z][a-z]+[\s][A-Z][a-z]+$/ // "Tony Tony Chopper"
+    ];
+
+    return validPatterns.some(pattern => pattern.test(line));
+  }
+
+  /**
+   * Extract character name that appears immediately after role keywords
+   * Pattern: "LEADER Monkey.D.Luffy" or "CHARACTER Charlotte Flampe"
+   */
+  private extractNameAfterRole(fullText: string): string {
+    // One Piece card roles
+    const roleKeywords = ['LEADER', 'CHARACTER', 'Event', 'Stage'];
+    
+    for (const role of roleKeywords) {
+      // Simple approach: ROLE followed by 1-3 words, stop at common affiliations
+      const pattern = new RegExp(
+        `${role}\\s+([A-Z][a-zA-Z\\.\\s]{2,40}?)(?:\\s+(?:Pirates|Crew|Navy|Marines|Kingdom|Army|World|Government|Straw Hat|Big Mom|Whitebeard|Red Hair|Beast|Heart|Beautiful|Revolutionary|Animal|Drake|Hawkins|Apoo|Capone|Kid|Bonney|Urouge|Killer|FILM|Grantesoro|Mountain Bandits|The Vinsmoke Family|GERMA|The Four Emperors|Thriller Bark|ODYSSEY|Muggy|Giant|SMILE|Special|Slash|Strike|Ranged|Wisdom|(?:[A-Z]{2,}\\d+)|(?:ST\\d+)|(?:OP\\d+)|(?:EB\\d+)))`,
+        'i'
+      );
+      
+      const match = fullText.match(pattern);
+      if (match) {
+        let candidateName = match[1].trim();
+        
+        // Additional cleanup: remove trailing words that are definitely affiliations
+        const stopWords = [
+          'Pirates', 'Crew', 'Navy', 'Marines', 'Kingdom', 'Army', 'World', 'Government',
+          'Straw', 'Hat', 'Big', 'Mom', 'Whitebeard', 'Red', 'Hair', 'Beast', 'Heart',
+          'Beautiful', 'Revolutionary', 'Animal', 'Drake', 'Hawkins', 'Apoo', 'Capone',
+          'Kid', 'Bonney', 'Urouge', 'Killer', 'FILM', 'Grantesoro', 'Mountain', 'Bandits',
+          'Vinsmoke', 'Family', 'GERMA', 'Four', 'Emperors', 'Thriller', 'Bark', 'ODYSSEY',
+          'Muggy', 'Giant', 'SMILE', 'Goa'
+        ];
+        
+        // Split into words and remove stop words from the end
+        const words = candidateName.split(/\s+/);
+        let cleanWords = [];
+        
+        for (const word of words) {
+          // Stop if we hit a stop word or set code
+          if (stopWords.some(stop => word.toLowerCase().includes(stop.toLowerCase())) ||
+              word.match(/^[A-Z]{2,}\d+/) || 
+              word.match(/^(ST|OP|EB)\d+/)) {
+            break;
+          }
+          cleanWords.push(word);
+        }
+        
+        candidateName = cleanWords.join(' ').trim();
+        
+        // Validate the extracted name
+        if (candidateName && candidateName.length >= 3 && candidateName.length <= 25) {
+          // Additional validation: should look like a character name
+          if (/^[A-Z][a-zA-Z\.\s]+$/.test(candidateName) && 
+              !stopWords.some(stop => candidateName.toLowerCase().includes(stop.toLowerCase()))) {
+            logger.info(`🎯 Role-based extraction: ${role} → "${candidateName}"`);
+            return candidateName;
+          }
+        }
+      }
+    }
+    
+    return '';
   }
 
   /**

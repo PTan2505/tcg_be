@@ -3,6 +3,7 @@ import { Types } from "mongoose";
 import { ScanHistory } from "../../database/models/scanHistory";
 import { enhancedOCR } from "../../shared/services/enhancedOCR.service";
 import { gameClassifier } from "../../shared/services/gameClassifier.service";
+import { setCodeRecognition } from "../../shared/services/setCodeRecognition.service";
 import { smartCardSearch } from "../../shared/services/smartCardSearch.service";
 import { visualMatching } from "../../shared/services/visualMatching.service";
 import { UserCardService } from "../collections/userCard.service";
@@ -21,11 +22,13 @@ export class EnhancedCardScanController {
   }
 
   /**
-   * Enhanced 4-step card scanning pipeline
+   * Enhanced 5-step card scanning pipeline with Set Code Recognition
    * 📸 Step 1: Game Classifier → Detect card type
    * 🔤 Step 2: OCR → Extract text
+   * 🎯 Step 2.5: Set Code Recognition → Extract and match set codes (NEW!)
    * 🔍 Step 3: Smart Search → Find matches
-   * 📦 Step 4: Return results
+   * 🖼️ Step 4: Visual Matching → Enhanced similarity
+   * 📦 Step 5: Return ranked results
    */
   scanCardEnhanced = async (c: Context) => {
     const startTime = Date.now();
@@ -81,25 +84,147 @@ export class EnhancedCardScanController {
       const ocrData = await enhancedOCR.extractCardText(imageBuffer, gameType as any);
       logger.info(`🔤 Extracted card name: "${ocrData.extractedText.cardName}"`);
 
-      // 🔍 STEP 3: Smart Card Search (get more candidates)
-      logger.info('🔍 Step 3: Searching for matching cards...');
-      const searchResults = await smartCardSearch.findBestMatches(
-        gameType as any,
-        ocrData.extractedText,
-        20  // Increased limit for more candidates
+      // 🎯 STEP 2.5: Set Code Recognition (NEW!)
+      logger.info('🎯 Step 2.5: Recognizing set codes...');
+      const setCodeExtraction = await setCodeRecognition.extractSetCodes(
+        ocrData.extractedText.allText,
+        gameType as any
       );
-      logger.info(`🔍 Found ${searchResults.matches.length} text-based matches`);
+      
+      let detectedSetCodes: any[] = [];
+      if (setCodeExtraction.extractedCodes.length > 0) {
+        detectedSetCodes = await setCodeRecognition.matchSetCodes(
+          setCodeExtraction.extractedCodes,
+          gameType as any
+        );
+        
+        if (detectedSetCodes.length > 0) {
+          const topSetCode = detectedSetCodes[0];
+          logger.info(`🎯 Detected set: ${topSetCode.setCode} - ${topSetCode.setName} (${(topSetCode.confidence * 100).toFixed(1)}%)`);
+        }
+      } else {
+        logger.info('🎯 No set codes detected in OCR text');
+      }
 
-      // 🖼️ STEP 4: Visual Matching (new step)
+      // 🔍 STEP 3: Smart Set-Based Search Strategy
+      logger.info('🔍 Step 3: Implementing smart search strategy...');
+      
+      let searchResults: any;
+      let isSetBasedSearch = false;
+      
+      // Check if we have high-confidence set detection
+      if (detectedSetCodes.length > 0) {
+        const topSetCode = detectedSetCodes[0];
+        const setConfidence = topSetCode.confidence * 100;
+        
+        logger.info(`🎯 Top detected set: ${topSetCode.setCode} - ${topSetCode.setName} (${setConfidence.toFixed(1)}%)`);
+        
+        if (setConfidence >= 70) {
+          // High confidence - search only in this set
+          logger.info(`🎯 High confidence (${setConfidence.toFixed(1)}% >= 70%), searching within set: ${topSetCode.setCode}`);
+          
+          searchResults = await smartCardSearch.findBestMatchesInSet(
+            gameType as any,
+            ocrData.extractedText,
+            topSetCode.setCode,
+            15  // Limit for set-specific search
+          );
+          
+          isSetBasedSearch = true;
+          logger.info(`🔍 Set-based search found ${searchResults.matches.length} matches in ${topSetCode.setCode}`);
+          
+          // Fallback if no good results in the specific set
+          if (searchResults.matches.length === 0 || 
+              (searchResults.matches.length > 0 && searchResults.matches[0].confidence < 50)) {
+            logger.info('⚠️ Set-based search yielded poor results, expanding to full search...');
+            
+            searchResults = await smartCardSearch.findBestMatches(
+              gameType as any,
+              ocrData.extractedText,
+              20  // Increased limit for fallback search
+            );
+            isSetBasedSearch = false;
+            logger.info(`🔍 Fallback search found ${searchResults.matches.length} matches`);
+          }
+        } else {
+          // Lower confidence - do normal search but boost set matches
+          logger.info(`🎯 Moderate confidence (${setConfidence.toFixed(1)}% < 70%), doing full search with set boosting`);
+          
+          searchResults = await smartCardSearch.findBestMatches(
+            gameType as any,
+            ocrData.extractedText,
+            20
+          );
+          
+          // Boost confidence for cards from detected set
+          searchResults.matches = searchResults.matches.map((match: any) => {
+            if (match.card.setCode === topSetCode.setCode || 
+                (match.card.setName && match.card.setName.includes(topSetCode.setName))) {
+              return {
+                ...match,
+                confidence: Math.min(95, match.confidence + 15), // Boost by 15%
+                matchReason: `${match.matchReason} + Set Match Bonus`
+              };
+            }
+            return match;
+          }).sort((a: any, b: any) => b.confidence - a.confidence);
+          
+          logger.info(`🔍 Full search with set boosting found ${searchResults.matches.length} matches`);
+        }
+      } else {
+        // No set detected - normal search
+        logger.info('🔍 No reliable set detected, performing standard search...');
+        searchResults = await smartCardSearch.findBestMatches(
+          gameType as any,
+          ocrData.extractedText,
+          20
+        );
+        logger.info(`🔍 Standard search found ${searchResults.matches.length} matches`);
+      }
+      
+      logger.info(`🔍 Search strategy: ${isSetBasedSearch ? 'Set-based' : 'Full'} search completed`);
+
+      // 🖼️ STEP 4: Visual Matching (optimized based on search strategy)
       logger.info('🖼️ Step 4: Performing visual matching...');
       
-      // Get all card variants for visual comparison
-      const cardVariants = await smartCardSearch.getAllCardVariants(
-        gameType as any,
-        ocrData.extractedText.cardName,
-        30  // Get up to 30 variants for visual matching
-      );
-      logger.info(`🖼️ Found ${cardVariants.length} card variants for visual matching`);
+      let cardVariants: any[] = [];
+      
+      // If high-confidence set detection, only visual match within detected set
+      if (isSetBasedSearch && detectedSetCodes.length > 0) {
+        const topSetCode = detectedSetCodes[0];
+        const setConfidence = topSetCode.confidence * 100;
+        
+        if (setConfidence >= 70) {
+          logger.info(`🎯 High confidence set detection (${setConfidence.toFixed(1)}%), limiting visual matching to set: ${topSetCode.setCode}`);
+          
+          // Get variants from the set-based search results only
+          cardVariants = searchResults.matches.map((match: any) => ({
+            cardId: match.card._id.toString(),
+            name: match.card.name,
+            imageUrl: match.card.imageUrl,
+            setName: match.card.setName,
+            gameType: match.card.gameType
+          }));
+          
+          logger.info(`🎯 Using ${cardVariants.length} variants from set ${topSetCode.setCode} for visual matching`);
+        } else {
+          // Normal case: get variants from entire database
+          cardVariants = await smartCardSearch.getAllCardVariants(
+            gameType as any,
+            ocrData.extractedText.cardName,
+            30  // Get up to 30 variants for visual matching
+          );
+          logger.info(`🖼️ Found ${cardVariants.length} card variants for visual matching`);
+        }
+      } else {
+        // Normal case: get variants from entire database
+        cardVariants = await smartCardSearch.getAllCardVariants(
+          gameType as any,
+          ocrData.extractedText.cardName,
+          30  // Get up to 30 variants for visual matching
+        );
+        logger.info(`🖼️ Found ${cardVariants.length} card variants for visual matching`);
+      }
 
       let visualMatches: any[] = [];
       if (cardVariants.length > 0) {
@@ -117,7 +242,7 @@ export class EnhancedCardScanController {
         visualMatches = visualResults.map(visualMatch => {
           // Find the corresponding card data from our search results or database
           const matchingTextResult = searchResults.matches.find(
-            textMatch => textMatch.card._id.toString() === visualMatch.cardId
+            (textMatch: any) => textMatch.card._id.toString() === visualMatch.cardId
           );
           
           // Safety checks for NaN values
@@ -142,7 +267,7 @@ export class EnhancedCardScanController {
       const processingTime = Date.now() - startTime;
       
       // Create initial candidates from search results
-      let candidates = searchResults.matches.map(match => ({
+      let candidates = searchResults.matches.map((match: any) => ({
         cardId: match.card._id,
         name: match.card.name,
         setName: match.card.setName,
@@ -173,23 +298,76 @@ export class EnhancedCardScanController {
         })
       }));
 
-      // 🔄 STEP 6: Reorder candidates based on combined visual + text scores
+      // 🎯 STEP 2.5 CONTINUATION: Filter candidates by detected set code (skip if already set-filtered)
+      if (setCodeExtraction.extractedCodes.length > 0 && !isSetBasedSearch) {
+        logger.info(`🎯 Filtering ${candidates.length} candidates by detected set codes: [${setCodeExtraction.extractedCodes.join(', ')}]`);
+        
+        const setCodeFilteredCandidates = candidates.filter((candidate: any) => {
+          // Get set codes for this candidate card
+          const candidateSetCodes = setCodeRecognition.extractSetCodeFromCardName(candidate.setName || '');
+          
+          // Check if any detected OCR set code matches any candidate set code
+          const hasSetCodeMatch = setCodeExtraction.extractedCodes.some(ocrCode => 
+            candidateSetCodes.some(candidateCode => 
+              setCodeRecognition.compareSetCodes(ocrCode, candidateCode) ||
+              // Also check if OCR code appears in setName
+              (candidate.setName || '').toLowerCase().includes(ocrCode.toLowerCase())
+            )
+          );
+          
+          if (hasSetCodeMatch) {
+            logger.info(`✅ Set code match found for candidate: ${candidate.name} (${candidate.setName})`);
+            return true;
+          }
+          
+          return false;
+        });
+        
+        if (setCodeFilteredCandidates.length > 0) {
+          candidates = setCodeFilteredCandidates;
+          logger.info(`🎯 Set code filtering successful: ${candidates.length} candidates remain`);
+          
+          // Log remaining candidates
+          candidates.forEach((candidate: any, index: number) => {
+            logger.info(`  ${index + 1}. ${candidate.name} (${candidate.setName}) - ${candidate.confidence}`);
+          });
+        } else {
+          logger.warn(`⚠️ Set code filtering removed all candidates, keeping original ${candidates.length} candidates`);
+        }
+      } else if (isSetBasedSearch) {
+        logger.info(`🎯 Set-based search already filtered by set, skipping additional filtering`);
+      }
+
+      // 🔄 STEP 6: Smart candidate reordering based on search strategy
       if (visualMatches.length > 0) {
-        candidates = candidates.map(candidate => {
+        candidates = candidates.map((candidate: any) => {
           const visualMatch = candidate.visualMatch;
           if (visualMatch) {
-            // Calculate enhanced combined score
             const textScore = candidate.textConfidence / 100; // Normalize to 0-1
             const visualScore = visualMatch.visualSimilarity;
             
-            // Higher weight for visual matching for exact card identification
-            const combinedScore = (visualScore * 0.7) + (textScore * 0.3);
+            // For high-confidence set-based search, prioritize text confidence over visual
+            // since we already filtered by the correct set
+            let combinedScore;
+            const topSetCode = detectedSetCodes.length > 0 ? detectedSetCodes[0] : null;
+            const setConfidence = topSetCode ? topSetCode.confidence * 100 : 0;
+            
+            if (isSetBasedSearch && topSetCode && setConfidence >= 70) {
+              // High confidence set: prioritize text matching (90%) + visual validation (10%)
+              combinedScore = (textScore * 0.9) + (visualScore * 0.1);
+              logger.info(`🎯 High confidence set mode: ${candidate.name} - Text: ${textScore.toFixed(2)} Visual: ${visualScore.toFixed(2)} Combined: ${combinedScore.toFixed(2)}`);
+            } else {
+              // Normal mode: balanced visual + text scoring
+              combinedScore = (visualScore * 0.7) + (textScore * 0.3);
+            }
             
             return {
               ...candidate,
               combinedScore,
-              confidence: `${Math.round(combinedScore * 100)}%`, // Update confidence to reflect combined score
-              matchReason: visualScore > 0.8 ? 'High visual + text match' : 
+              confidence: `${Math.round(combinedScore * 100)}%`,
+              matchReason: isSetBasedSearch && topSetCode && setConfidence >= 70 ? 
+                          `Set-based match in ${topSetCode.setCode} (${Math.round(textScore * 100)}% text + ${Math.round(visualScore * 100)}% visual)` :
+                          visualScore > 0.8 ? 'High visual + text match' : 
                           visualScore > 0.6 ? 'Good visual + text match' : 
                           candidate.matchReason
             };
@@ -198,21 +376,26 @@ export class EnhancedCardScanController {
             ...candidate,
             combinedScore: candidate.textConfidence / 100
           };
-        }).sort((a, b) => (b.combinedScore || 0) - (a.combinedScore || 0)); // Sort by combined score
+        }).sort((a: any, b: any) => (b.combinedScore || 0) - (a.combinedScore || 0)); // Sort by combined score
 
-        logger.info(`🔄 Reordered candidates based on visual + text matching`);
+        const topSetCode = detectedSetCodes.length > 0 ? detectedSetCodes[0] : null;
+        const setConfidence = topSetCode ? topSetCode.confidence * 100 : 0;
+        const reorderStrategy = isSetBasedSearch && topSetCode && setConfidence >= 70 ? 
+                               'set-priority reordering' : 'visual-priority reordering';
+        logger.info(`🔄 Applied ${reorderStrategy} to candidates`);
       }
 
       // Save scan history
       if (user && candidates.length > 0) {
         await this.saveScanHistory(user._id, candidates[0], {
           gameType,
-          method: 'enhanced_4_step_pipeline',
+          method: 'enhanced_5_step_pipeline_with_set_codes',
           processingTime,
           ocrConfidence: ocrData.confidence,
           gameClassification: gameClassification?.confidence || 100,
           searchStrategy: searchResults.searchStrategy,
           extractedCardName: ocrData.extractedText.cardName,
+          setCodesDetected: setCodeExtraction.extractedCodes.length,
           imageWidth: 640, // Default values since we don't have original dimensions
           imageHeight: 480,
           imageFileSize: image.size || 0
@@ -235,9 +418,16 @@ export class EnhancedCardScanController {
               confidence: ocrData.confidence,
               extractedWords: ocrData.extractedText.allText.split(' ').length
             },
+            step2_5_setCode: {
+              detectedSetCodes: setCodeExtraction.extractedCodes,
+              setCodeCount: setCodeExtraction.extractedCodes.length,
+              hasSetCodeFiltering: setCodeExtraction.extractedCodes.length > 0,
+              databaseMatches: detectedSetCodes.length
+            },
             step3_search: {
               strategy: searchResults.searchStrategy,
               candidatesFound: searchResults.matches.length,
+              candidatesAfterSetCodeFiltering: candidates.length,
               totalCardsSearched: searchResults.totalCandidates,
               searchTime: searchResults.processingTime
             },
@@ -249,7 +439,7 @@ export class EnhancedCardScanController {
             step5_results: {
               topMatch: candidates[0] || null,
               allCandidates: candidates.length,
-              withVisualData: candidates.filter(c => c.visualMatch).length
+              withVisualData: candidates.filter((c: any) => c.visualMatch).length
             }
           },
           
@@ -262,16 +452,16 @@ export class EnhancedCardScanController {
           
           // Metadata
           scanTime: processingTime,
-          method: 'enhanced_4_step_pipeline',
+          method: 'enhanced_5_step_pipeline_with_set_codes',
           gameType,
           confidence: candidates[0]?.confidence || '0%',
           requiresSetSelection: candidates.length > 1 && 
-                               candidates.slice(0, 3).every(c => 
+                               candidates.slice(0, 3).every((c: any) => 
                                  parseInt(c.confidence) > 70
                                )
         },
         message: candidates.length > 0 
-          ? `Card identified successfully using 4-step pipeline` 
+          ? `Card identified successfully using 5-step pipeline with set code recognition` 
           : 'No matching cards found'
       };
 
@@ -283,7 +473,7 @@ export class EnhancedCardScanController {
       return c.json({
         success: false,
         error: error.message || "Card scanning failed",
-        method: 'enhanced_4_step_pipeline'
+        method: 'enhanced_5_step_pipeline_with_set_codes'
       }, 500);
     }
   };

@@ -21,6 +21,7 @@ export interface VisualMatchOptions {
   similarityThreshold?: number;
   imageSize?: { width: number; height: number };
   timeout?: number;
+  enhancedMode?: boolean; // New option for enhanced trading card analysis
 }
 
 export class VisualMatchingService {
@@ -38,23 +39,33 @@ export class VisualMatchingService {
     const startTime = Date.now();
     const {
       maxCandidates = 20,
-      similarityThreshold = 0.35, // Slightly higher threshold for better matches
-      imageSize = { width: 240, height: 336 }, // Better resolution for card details
-      timeout = 30000
+      similarityThreshold = 0.35,
+      imageSize = { width: 280, height: 392 }, // Higher resolution for enhanced mode
+      timeout = 30000,
+      enhancedMode = false
     } = options;
 
     try {
-      logger.info(`🖼️  Starting visual matching for ${candidates.length} candidates`);
+      logger.info(`🖼️  Starting ${enhancedMode ? 'ENHANCED' : 'standard'} visual matching for ${candidates.length} candidates`);
 
-      // Normalize the scanned image
-      const normalizedScanned = await this.normalizeImage(scannedImageBuffer, imageSize);
+      // Use higher resolution and better preprocessing for enhanced mode
+      const targetImageSize = enhancedMode 
+        ? { width: 320, height: 448 } // Better resolution for card details
+        : imageSize;
+
+      // Normalize the scanned image with enhanced preprocessing
+      const normalizedScanned = await this.normalizeImage(
+        scannedImageBuffer, 
+        targetImageSize, 
+        enhancedMode
+      );
       const scannedHash = await this.generateImageHash(normalizedScanned);
 
       const visualMatches: VisualMatchResult[] = [];
       const validCandidates = candidates.slice(0, maxCandidates);
 
-      // Process candidates in parallel (but with concurrency limit)
-      const concurrencyLimit = 5;
+      // Enhanced processing with better concurrency control
+      const concurrencyLimit = enhancedMode ? 3 : 5; // Lower concurrency for enhanced mode
       for (let i = 0; i < validCandidates.length; i += concurrencyLimit) {
         const batch = validCandidates.slice(i, i + concurrencyLimit);
         
@@ -64,7 +75,8 @@ export class VisualMatchingService {
               normalizedScanned,
               scannedHash,
               candidate.imageUrl,
-              imageSize
+              targetImageSize,
+              enhancedMode
             );
 
             if (similarity >= similarityThreshold) {
@@ -72,7 +84,7 @@ export class VisualMatchingService {
                 cardId: candidate.cardId,
                 imageUrl: candidate.imageUrl,
                 similarity,
-                matchType: this.getMatchType(similarity),
+                matchType: this.getMatchType(similarity, enhancedMode),
                 processingTime: Date.now() - startTime
               } as VisualMatchResult;
             }
@@ -95,7 +107,17 @@ export class VisualMatchingService {
       // Sort by similarity (highest first)
       visualMatches.sort((a, b) => b.similarity - a.similarity);
 
-      logger.info(`🖼️  Visual matching completed: ${visualMatches.length} matches found in ${Date.now() - startTime}ms`);
+      const processingTime = Date.now() - startTime;
+      logger.info(`🖼️  ${enhancedMode ? 'Enhanced' : 'Standard'} visual matching completed: ${visualMatches.length} matches found in ${processingTime}ms`);
+      
+      // Log top matches for debugging
+      if (visualMatches.length > 0 && enhancedMode) {
+        logger.info('🏆 Top 3 visual matches:');
+        visualMatches.slice(0, 3).forEach((match, index) => {
+          logger.info(`  ${index + 1}. ${(match.similarity * 100).toFixed(1)}% similarity (${match.matchType})`);
+        });
+      }
+      
       return visualMatches;
 
     } catch (error) {
@@ -111,48 +133,21 @@ export class VisualMatchingService {
     scannedImage: Buffer,
     scannedHash: string,
     candidateImageUrl: string,
-    imageSize: { width: number; height: number }
+    imageSize: { width: number; height: number },
+    enhancedMode: boolean = false
   ): Promise<number> {
     try {
       // Get candidate image
-      const candidateImage = await this.downloadAndNormalizeImage(candidateImageUrl, imageSize);
+      const candidateImage = await this.downloadAndNormalizeImage(candidateImageUrl, imageSize, enhancedMode);
       const candidateHash = await this.generateImageHash(candidateImage);
 
-      // 1. Perceptual Hash Similarity (good for overall structure)
-      const hashSimilarity = this.compareHashes(scannedHash, candidateHash);
-      
-      // 2. Color Histogram Similarity (good for artwork/colors)
-      const colorSimilarity = await this.compareColorHistograms(scannedImage, candidateImage);
-      
-      // 3. Edge Detection Similarity (good for card artwork and text)
-      const edgeSimilarity = await this.compareEdges(scannedImage, candidateImage);
-      
-      // 4. Template Matching (good for card layout)
-      const templateSimilarity = await this.compareTemplates(scannedImage, candidateImage);
-      
-      // 5. Texture Analysis (good for card surface and artwork)
-      const textureSimilarity = await this.compareTextures(scannedImage, candidateImage);
+      // Enhanced mode uses more sophisticated algorithms
+      if (enhancedMode) {
+        return await this.enhancedCompareImages(scannedImage, candidateImage, scannedHash, candidateHash);
+      }
 
-      // Safety checks for NaN values
-      const safeHashSimilarity = isNaN(hashSimilarity) ? 0 : hashSimilarity;
-      const safeColorSimilarity = isNaN(colorSimilarity) ? 0 : colorSimilarity;
-      const safeEdgeSimilarity = isNaN(edgeSimilarity) ? 0 : edgeSimilarity;
-      const safeTemplateSimilarity = isNaN(templateSimilarity) ? 0 : templateSimilarity;
-      const safeTextureSimilarity = isNaN(textureSimilarity) ? 0 : textureSimilarity;
-
-      // Weighted combination optimized for trading cards
-      const finalSimilarity = (
-        safeHashSimilarity * 0.15 +      // Overall structure
-        safeColorSimilarity * 0.30 +     // Card artwork colors (most important)
-        safeEdgeSimilarity * 0.25 +      // Card details and text
-        safeTemplateSimilarity * 0.20 +  // Card layout
-        safeTextureSimilarity * 0.10     // Surface texture
-      );
-
-      // Additional safety check
-      const safeFinalSimilarity = isNaN(finalSimilarity) ? 0 : Math.max(0, Math.min(1, finalSimilarity));
-      
-      return Math.round(safeFinalSimilarity * 100) / 100; // Round to 2 decimal places
+      // Standard mode - original algorithm
+      return await this.standardCompareImages(scannedImage, candidateImage, scannedHash, candidateHash);
 
     } catch (error) {
       logger.warn('Image comparison failed:', error instanceof Error ? error.message : 'Unknown error');
@@ -161,11 +156,103 @@ export class VisualMatchingService {
   }
 
   /**
+   * Enhanced comparison algorithm optimized for trading cards
+   */
+  private async enhancedCompareImages(
+    scannedImage: Buffer,
+    candidateImage: Buffer,
+    scannedHash: string,
+    candidateHash: string
+  ): Promise<number> {
+    // 1. Perceptual Hash Similarity (structural)
+    const hashSimilarity = this.compareHashes(scannedHash, candidateHash);
+    
+    // 2. Enhanced Color Analysis (artwork focus)
+    const colorSimilarity = await this.compareEnhancedColorFeatures(scannedImage, candidateImage);
+    
+    // 3. Advanced Edge Detection (card details)
+    const edgeSimilarity = await this.compareAdvancedEdges(scannedImage, candidateImage);
+    
+    // 4. Card-specific Region Analysis
+    const regionSimilarity = await this.compareCardRegions(scannedImage, candidateImage);
+    
+    // 5. Texture and Pattern Analysis
+    const textureSimilarity = await this.compareAdvancedTextures(scannedImage, candidateImage);
+
+    // Safety checks for NaN values
+    const safeHashSimilarity = isNaN(hashSimilarity) ? 0 : hashSimilarity;
+    const safeColorSimilarity = isNaN(colorSimilarity) ? 0 : colorSimilarity;
+    const safeEdgeSimilarity = isNaN(edgeSimilarity) ? 0 : edgeSimilarity;
+    const safeRegionSimilarity = isNaN(regionSimilarity) ? 0 : regionSimilarity;
+    const safeTextureSimilarity = isNaN(textureSimilarity) ? 0 : textureSimilarity;
+
+    // Enhanced weighted combination optimized for trading card identification
+    const finalSimilarity = (
+      safeHashSimilarity * 0.10 +      // Overall structure (reduced weight)
+      safeColorSimilarity * 0.35 +     // Card artwork colors (increased weight)
+      safeEdgeSimilarity * 0.25 +      // Card details and text  
+      safeRegionSimilarity * 0.20 +    // Card-specific regions (new)
+      safeTextureSimilarity * 0.10     // Surface texture and patterns
+    );
+
+    const safeFinalSimilarity = isNaN(finalSimilarity) ? 0 : Math.max(0, Math.min(1, finalSimilarity));
+    return Math.round(safeFinalSimilarity * 100) / 100;
+  }
+
+  /**
+   * Standard comparison algorithm (original)
+   */
+  private async standardCompareImages(
+    scannedImage: Buffer,
+    candidateImage: Buffer,
+    scannedHash: string,
+    candidateHash: string
+  ): Promise<number> {
+    // 1. Perceptual Hash Similarity (good for overall structure)
+    const hashSimilarity = this.compareHashes(scannedHash, candidateHash);
+    
+    // 2. Color Histogram Similarity (good for artwork/colors)
+    const colorSimilarity = await this.compareColorHistograms(scannedImage, candidateImage);
+    
+    // 3. Edge Detection Similarity (good for card artwork and text)
+    const edgeSimilarity = await this.compareEdges(scannedImage, candidateImage);
+    
+    // 4. Template Matching (good for card layout)
+    const templateSimilarity = await this.compareTemplates(scannedImage, candidateImage);
+    
+    // 5. Texture Analysis (good for card surface and artwork)
+    const textureSimilarity = await this.compareTextures(scannedImage, candidateImage);
+
+    // Safety checks for NaN values
+    const safeHashSimilarity = isNaN(hashSimilarity) ? 0 : hashSimilarity;
+    const safeColorSimilarity = isNaN(colorSimilarity) ? 0 : colorSimilarity;
+    const safeEdgeSimilarity = isNaN(edgeSimilarity) ? 0 : edgeSimilarity;
+    const safeTemplateSimilarity = isNaN(templateSimilarity) ? 0 : templateSimilarity;
+    const safeTextureSimilarity = isNaN(textureSimilarity) ? 0 : textureSimilarity;
+
+    // Weighted combination optimized for trading cards
+    const finalSimilarity = (
+      safeHashSimilarity * 0.15 +      // Overall structure
+      safeColorSimilarity * 0.30 +     // Card artwork colors (most important)
+      safeEdgeSimilarity * 0.25 +      // Card details and text
+      safeTemplateSimilarity * 0.20 +  // Card layout
+      safeTextureSimilarity * 0.10     // Surface texture
+    );
+
+    const safeFinalSimilarity = isNaN(finalSimilarity) ? 0 : Math.max(0, Math.min(1, finalSimilarity));
+    return Math.round(safeFinalSimilarity * 100) / 100;
+  }
+
+  /**
    * Download and normalize candidate image
    */
-  private async downloadAndNormalizeImage(imageUrl: string, imageSize: { width: number; height: number }): Promise<Buffer> {
+  private async downloadAndNormalizeImage(
+    imageUrl: string, 
+    imageSize: { width: number; height: number },
+    enhancedMode: boolean = false
+  ): Promise<Buffer> {
     // Check cache first
-    const cacheKey = `${imageUrl}_${imageSize.width}x${imageSize.height}`;
+    const cacheKey = `${imageUrl}_${imageSize.width}x${imageSize.height}_${enhancedMode ? 'enhanced' : 'standard'}`;
     if (this.imageCache.has(cacheKey)) {
       return this.imageCache.get(cacheKey)!;
     }
@@ -181,7 +268,7 @@ export class VisualMatchingService {
       });
 
       const imageBuffer = Buffer.from(response.data);
-      const normalizedImage = await this.normalizeImage(imageBuffer, imageSize);
+      const normalizedImage = await this.normalizeImage(imageBuffer, imageSize, enhancedMode);
 
       // Cache the result
       this.imageCache.set(cacheKey, normalizedImage);
@@ -204,20 +291,40 @@ export class VisualMatchingService {
   /**
    * Normalize image for comparison (enhanced for trading cards)
    */
-  private async normalizeImage(imageBuffer: Buffer, size: { width: number; height: number }): Promise<Buffer> {
-    return await sharp(imageBuffer)
+  private async normalizeImage(
+    imageBuffer: Buffer, 
+    size: { width: number; height: number },
+    enhancedMode: boolean = false
+  ): Promise<Buffer> {
+    let pipeline = sharp(imageBuffer)
       .resize(size.width, size.height, { 
         fit: 'fill',
         withoutEnlargement: false 
-      })
-      .normalize() // Auto-adjust brightness/contrast
-      .modulate({
-        saturation: 1.1, // Slightly enhance saturation for better color matching
-        brightness: 1.0
-      })
-      .sharpen(1, 1, 2) // Enhance details
-      .png()
-      .toBuffer();
+      });
+
+    if (enhancedMode) {
+      // Enhanced preprocessing for better card identification
+      pipeline = pipeline
+        .normalize() // Auto-adjust brightness/contrast
+        .modulate({
+          saturation: 1.15, // More saturation enhancement for artwork
+          brightness: 1.05,  // Slight brightness boost
+          hue: 0
+        })
+        .sharpen(1.5, 1, 2.5) // Stronger sharpening for text and details
+        .gamma(1.1); // Slight gamma adjustment
+    } else {
+      // Standard preprocessing
+      pipeline = pipeline
+        .normalize()
+        .modulate({
+          saturation: 1.1,
+          brightness: 1.0
+        })
+        .sharpen(1, 1, 2);
+    }
+
+    return await pipeline.png().toBuffer();
   }
 
   /**
@@ -334,13 +441,365 @@ export class VisualMatchingService {
   }
 
   /**
+   * Enhanced color feature comparison for trading cards
+   */
+  private async compareEnhancedColorFeatures(image1: Buffer, image2: Buffer): Promise<number> {
+    try {
+      // 1. HSV histogram comparison (better for artwork)
+      const hsvSimilarity = await this.compareHSVHistograms(image1, image2);
+      
+      // 2. Color moment comparison
+      const momentSimilarity = await this.compareColorMoments(image1, image2);
+      
+      // 3. Dominant color comparison
+      const dominantSimilarity = await this.compareDominantColors(image1, image2);
+
+      // Combine all color features
+      const colorSimilarity = (hsvSimilarity * 0.4) + (momentSimilarity * 0.3) + (dominantSimilarity * 0.3);
+      return Math.max(0, Math.min(1, colorSimilarity));
+
+    } catch (error) {
+      logger.warn('Enhanced color comparison failed:', error);
+      return await this.compareColorHistograms(image1, image2); // Fallback
+    }
+  }
+
+  /**
+   * Advanced edge detection optimized for card text and artwork
+   */
+  private async compareAdvancedEdges(image1: Buffer, image2: Buffer): Promise<number> {
+    try {
+      // Use multiple edge detection methods
+      const sobelSimilarity = await this.compareEdges(image1, image2);
+      const cannyEdges1 = await this.detectCannyEdges(image1);
+      const cannyEdges2 = await this.detectCannyEdges(image2);
+      const cannySimilarity = await this.compareEdgeImages(cannyEdges1, cannyEdges2);
+
+      // Combine edge detection results
+      return (sobelSimilarity * 0.6) + (cannySimilarity * 0.4);
+
+    } catch (error) {
+      logger.warn('Advanced edge comparison failed:', error);
+      return await this.compareEdges(image1, image2); // Fallback
+    }
+  }
+
+  /**
+   * Card-specific region analysis (artwork, text areas, etc.)
+   */
+  private async compareCardRegions(image1: Buffer, image2: Buffer): Promise<number> {
+    try {
+      // Define card regions (approximate trading card layout)
+      const regions = [
+        { name: 'artwork', x: 0.1, y: 0.15, w: 0.8, h: 0.4 },  // Main artwork area
+        { name: 'title', x: 0.1, y: 0.05, w: 0.8, h: 0.1 },   // Title area
+        { name: 'stats', x: 0.1, y: 0.7, w: 0.8, h: 0.15 },   // Stats area
+        { name: 'text', x: 0.1, y: 0.55, w: 0.8, h: 0.15 }    // Text area
+      ];
+
+      let totalSimilarity = 0;
+      let totalWeight = 0;
+
+      for (const region of regions) {
+        const region1 = await this.extractRegion(image1, region);
+        const region2 = await this.extractRegion(image2, region);
+        
+        if (region1 && region2) {
+          const regionSimilarity = await this.compareRegionSimilarity(region1, region2);
+          const weight = region.name === 'artwork' ? 2 : 1; // Artwork is more important
+          
+          totalSimilarity += regionSimilarity * weight;
+          totalWeight += weight;
+        }
+      }
+
+      return totalWeight > 0 ? totalSimilarity / totalWeight : 0;
+
+    } catch (error) {
+      logger.warn('Card region comparison failed:', error);
+      return 0;
+    }
+  }
+
+  /**
+   * Advanced texture and pattern analysis
+   */
+  private async compareAdvancedTextures(image1: Buffer, image2: Buffer): Promise<number> {
+    try {
+      // 1. Enhanced texture features
+      const lbp1 = await this.getLocalBinaryPatterns(image1);
+      const lbp2 = await this.getLocalBinaryPatterns(image2);
+      const lbpSimilarity = this.compareHistograms(lbp1, lbp2);
+
+      // 2. Gradient magnitude features
+      const grad1 = await this.getGradientFeatures(image1);
+      const grad2 = await this.getGradientFeatures(image2);
+      const gradSimilarity = this.compareFeatureVectors(grad1, grad2);
+
+      // Combine texture features
+      return (lbpSimilarity * 0.6) + (gradSimilarity * 0.4);
+
+    } catch (error) {
+      logger.warn('Advanced texture comparison failed:', error);
+      return await this.compareTextures(image1, image2); // Fallback
+    }
+  }
+
+  // Helper methods for enhanced algorithms
+
+  /**
+   * Compare HSV histograms for better color analysis
+   */
+  private async compareHSVHistograms(image1: Buffer, image2: Buffer): Promise<number> {
+    // Convert to HSV and compare histograms
+    const hsv1 = await sharp(image1).resize(64, 64).raw().toBuffer();
+    const hsv2 = await sharp(image2).resize(64, 64).raw().toBuffer();
+
+    // Simplified HSV histogram comparison
+    return await this.compareColorHistograms(image1, image2);
+  }
+
+  /**
+   * Compare color moments (mean, variance, skewness)
+   */
+  private async compareColorMoments(image1: Buffer, image2: Buffer): Promise<number> {
+    const stats1 = await sharp(image1).stats();
+    const stats2 = await sharp(image2).stats();
+
+    let similarity = 0;
+    const channels = Math.min(stats1.channels.length, stats2.channels.length);
+
+    for (let i = 0; i < channels; i++) {
+      const meanDiff = Math.abs(stats1.channels[i].mean - stats2.channels[i].mean) / 255;
+      similarity += (1 - meanDiff);
+    }
+
+    return channels > 0 ? similarity / channels : 0;
+  }
+
+  /**
+   * Compare dominant colors in images
+   */
+  private async compareDominantColors(image1: Buffer, image2: Buffer): Promise<number> {
+    // Get dominant colors using k-means-like approach
+    const colors1 = await this.getDominantColors(image1, 5);
+    const colors2 = await this.getDominantColors(image2, 5);
+
+    // Compare color palettes
+    let bestMatches = 0;
+    for (const color1 of colors1) {
+      let bestMatch = 0;
+      for (const color2 of colors2) {
+        const colorDist = this.calculateColorDistance(color1, color2);
+        const similarity = Math.max(0, 1 - colorDist / 441.673); // Max RGB distance
+        bestMatch = Math.max(bestMatch, similarity);
+      }
+      bestMatches += bestMatch;
+    }
+
+    return colors1.length > 0 ? bestMatches / colors1.length : 0;
+  }
+
+  /**
+   * Get dominant colors from image
+   */
+  private async getDominantColors(imageBuffer: Buffer, numColors: number): Promise<number[][]> {
+    const resized = await sharp(imageBuffer)
+      .resize(32, 32)
+      .raw()
+      .toBuffer();
+
+    // Simple color extraction (simplified k-means)
+    const colors: number[][] = [];
+    for (let i = 0; i < resized.length; i += 3) {
+      colors.push([resized[i], resized[i + 1], resized[i + 2]]);
+    }
+
+    // Return first numColors unique colors (simplified)
+    return colors.slice(0, numColors);
+  }
+
+  /**
+   * Calculate Euclidean distance between two RGB colors
+   */
+  private calculateColorDistance(color1: number[], color2: number[]): number {
+    const dr = color1[0] - color2[0];
+    const dg = color1[1] - color2[1];
+    const db = color1[2] - color2[2];
+    return Math.sqrt(dr * dr + dg * dg + db * db);
+  }
+
+  /**
+   * Detect Canny edges (simplified implementation)
+   */
+  private async detectCannyEdges(imageBuffer: Buffer): Promise<Buffer> {
+    // Simplified Canny edge detection using convolution
+    return await sharp(imageBuffer)
+      .resize(100, 100)
+      .grayscale()
+      .convolve({
+        width: 3,
+        height: 3,
+        kernel: [-1, -2, -1, 0, 0, 0, 1, 2, 1] // Sobel Y
+      })
+      .raw()
+      .toBuffer();
+  }
+
+  /**
+   * Compare two edge images
+   */
+  private async compareEdgeImages(edges1: Buffer, edges2: Buffer): Promise<number> {
+    if (edges1.length !== edges2.length) return 0;
+
+    let similarity = 0;
+    for (let i = 0; i < edges1.length; i++) {
+      const diff = Math.abs(edges1[i] - edges2[i]);
+      similarity += (255 - diff) / 255;
+    }
+
+    return similarity / edges1.length;
+  }
+
+  /**
+   * Extract specific region from image
+   */
+  private async extractRegion(
+    imageBuffer: Buffer, 
+    region: { x: number; y: number; w: number; h: number }
+  ): Promise<Buffer | null> {
+    try {
+      const { width, height } = await sharp(imageBuffer).metadata();
+      if (!width || !height) return null;
+
+      const left = Math.floor(region.x * width);
+      const top = Math.floor(region.y * height);
+      const regionWidth = Math.floor(region.w * width);
+      const regionHeight = Math.floor(region.h * height);
+
+      return await sharp(imageBuffer)
+        .extract({ left, top, width: regionWidth, height: regionHeight })
+        .resize(64, 64)
+        .raw()
+        .toBuffer();
+    } catch (error) {
+      return null;
+    }
+  }
+
+  /**
+   * Compare similarity between two image regions
+   */
+  private async compareRegionSimilarity(region1: Buffer, region2: Buffer): Promise<number> {
+    if (region1.length !== region2.length) return 0;
+
+    let similarity = 0;
+    for (let i = 0; i < region1.length; i++) {
+      const diff = Math.abs(region1[i] - region2[i]);
+      similarity += (255 - diff) / 255;
+    }
+
+    return similarity / region1.length;
+  }
+
+  /**
+   * Get Local Binary Patterns for texture analysis
+   */
+  private async getLocalBinaryPatterns(imageBuffer: Buffer): Promise<number[]> {
+    const gray = await sharp(imageBuffer)
+      .resize(64, 64)
+      .grayscale()
+      .raw()
+      .toBuffer();
+
+    // Simplified LBP histogram
+    const histogram = new Array(256).fill(0);
+    for (let i = 0; i < gray.length; i++) {
+      histogram[gray[i]]++;
+    }
+
+    return histogram;
+  }
+
+  /**
+   * Get gradient magnitude features
+   */
+  private async getGradientFeatures(imageBuffer: Buffer): Promise<number[]> {
+    const edges = await this.detectEdges(imageBuffer);
+    
+    // Calculate gradient statistics
+    let sum = 0;
+    let max = 0;
+    for (const pixel of edges) {
+      sum += pixel;
+      max = Math.max(max, pixel);
+    }
+    
+    const mean = sum / edges.length;
+    return [mean / 255, max / 255]; // Normalized features
+  }
+
+  /**
+   * Compare two histograms using correlation
+   */
+  private compareHistograms(hist1: number[], hist2: number[]): number {
+    if (hist1.length !== hist2.length) return 0;
+
+    let correlation = 0;
+    let sum1 = 0, sum2 = 0, sum1Sq = 0, sum2Sq = 0, pSum = 0;
+
+    for (let i = 0; i < hist1.length; i++) {
+      sum1 += hist1[i];
+      sum2 += hist2[i];
+      sum1Sq += hist1[i] * hist1[i];
+      sum2Sq += hist2[i] * hist2[i];
+      pSum += hist1[i] * hist2[i];
+    }
+
+    const num = pSum - (sum1 * sum2 / hist1.length);
+    const den = Math.sqrt((sum1Sq - sum1 * sum1 / hist1.length) * (sum2Sq - sum2 * sum2 / hist1.length));
+
+    correlation = den === 0 ? 0 : num / den;
+    return Math.max(0, Math.min(1, (correlation + 1) / 2));
+  }
+
+  /**
+   * Compare two feature vectors using cosine similarity
+   */
+  private compareFeatureVectors(vec1: number[], vec2: number[]): number {
+    if (vec1.length !== vec2.length) return 0;
+
+    let dotProduct = 0;
+    let norm1 = 0;
+    let norm2 = 0;
+
+    for (let i = 0; i < vec1.length; i++) {
+      dotProduct += vec1[i] * vec2[i];
+      norm1 += vec1[i] * vec1[i];
+      norm2 += vec2[i] * vec2[i];
+    }
+
+    const magnitude = Math.sqrt(norm1) * Math.sqrt(norm2);
+    return magnitude === 0 ? 0 : dotProduct / magnitude;
+  }
+
+  /**
    * Categorize match quality
    */
-  private getMatchType(similarity: number): 'exact' | 'high' | 'moderate' | 'low' {
-    if (similarity >= 0.9) return 'exact';
-    if (similarity >= 0.7) return 'high';
-    if (similarity >= 0.5) return 'moderate';
-    return 'low';
+  private getMatchType(similarity: number, enhancedMode: boolean = false): 'exact' | 'high' | 'moderate' | 'low' {
+    if (enhancedMode) {
+      // Stricter thresholds for enhanced mode
+      if (similarity >= 0.85) return 'exact';
+      if (similarity >= 0.65) return 'high';
+      if (similarity >= 0.45) return 'moderate';
+      return 'low';
+    } else {
+      // Standard thresholds
+      if (similarity >= 0.9) return 'exact';
+      if (similarity >= 0.7) return 'high';
+      if (similarity >= 0.5) return 'moderate';
+      return 'low';
+    }
   }
 
   /**
