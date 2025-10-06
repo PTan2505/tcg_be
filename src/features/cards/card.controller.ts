@@ -1,5 +1,5 @@
 import { Context } from 'hono';
-import { GetCardsOptions, ICardService, GameType } from './card.service';
+import { GameType, GetCardsOptions, ICardService } from './card.service';
 
 export class CardController {
   constructor(private cardService: ICardService) {}
@@ -233,7 +233,16 @@ export class CardController {
   searchCards = async (c: Context) => {
     try {
       const { type } = c.req.param();
-      const { q: query, page, limit, sortBy, sortOrder } = c.req.query();
+      const {
+        q: query,
+        page,
+        limit,
+        sortBy,
+        sortOrder,
+        rarity,
+        minPrice,
+        maxPrice,
+      } = c.req.query();
 
       // Validate game type
       if (!['pokemon', 'yugioh', 'onepiece'].includes(type)) {
@@ -263,7 +272,10 @@ export class CardController {
         page: page ? parseInt(page) : undefined,
         limit: limit ? parseInt(limit) : undefined,
         sortBy,
-        sortOrder: sortOrder as 'asc' | 'desc'
+        sortOrder: sortOrder as "asc" | "desc",
+        rarity,
+        minPrice: minPrice ? parseFloat(minPrice) : undefined,
+        maxPrice: maxPrice ? parseFloat(maxPrice) : undefined,
       };
 
       const result = await this.cardService.searchCards(type as GameType, query, options);

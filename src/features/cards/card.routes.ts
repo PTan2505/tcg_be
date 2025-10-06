@@ -14,7 +14,6 @@ export const cardRoutes = new Hono();
 cardRoutes.get('/public/stats', cardController.getCardStats);
 cardRoutes.get('/public/:type/stats', cardController.getCardStats);
 cardRoutes.get('/public/:type', cacheMiddleware(15 * 60 * 1000), cardController.getCardsByGameType);
-cardRoutes.get('/public/:type/search', cacheMiddleware(10 * 60 * 1000), cardController.searchCards);
 cardRoutes.get('/public/product/:productId', cardController.getCardByProductId);
 
 // All authenticated routes require authentication and rate limiting
@@ -34,13 +33,6 @@ cardRoutes.get(
   validateParamsMiddleware(['type']),
   cacheMiddleware(10 * 60 * 1000), // Cache for 10 minutes
   cardController.getCardsByGameType
-);
-
-// Search cards by game type (must come before /:type/:cardId)
-cardRoutes.get(
-  '/:type/search',
-  validateParamsMiddleware(['type']),
-  cardController.searchCards
 );
 
 // Get cards by set (must come before /:cardId)
