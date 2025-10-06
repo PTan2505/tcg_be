@@ -1,339 +1,300 @@
 import { Context } from 'hono';
-import { AddCardToDeckData, CreateDeckData, IDeckService, UpdateDeckData } from './deck.service';
+import { AddCardToDeckOptions, CreateDeckOptions, deckService, GetDecksOptions, UpdateDeckOptions } from './deck.service';
 
 export class DeckController {
-  constructor(private deckService: IDeckService) {}
-
-  createDeck = async (c: Context) => {
-    try {
-      const user = c.get('user');
-      const deckData = c.get('validatedData') as CreateDeckData;
-
-      const deck = await this.deckService.createDeck(user.id, deckData);
-
-      return c.json({
-        success: true,
-        message: 'Deck created successfully',
-        data: deck
-      }, 201);
-    } catch (error: any) {
-      return c.json({
-        success: false,
-        error: {
-          name: 'Error',
-          field: 'general',
-          message: error.message || 'Failed to create deck'
-        }
-      }, 400);
-    }
-  };
-
-  updateDeck = async (c: Context) => {
-    try {
-      const user = c.get('user');
-      const { deckId } = c.req.param();
-      const updateData = c.get('validatedData') as UpdateDeckData;
-
-      const deck = await this.deckService.updateDeck(deckId, user.id, updateData);
-
-      return c.json({
-        success: true,
-        message: 'Deck updated successfully',
-        data: deck
-      });
-    } catch (error: any) {
-      if (error.message === 'Deck not found') {
-        return c.json({
-          success: false,
-          error: {
-            name: 'NotFoundError',
-            field: 'deckId',
-            message: 'Deck not found or you do not have permission to access it'
-          }
-        }, 404);
-      }
-      return c.json({
-        success: false,
-        error: {
-          name: 'Error',
-          field: 'general',
-          message: error.message || 'Failed to update deck'
-        }
-      }, 400);
-    }
-  };
-
-  deleteDeck = async (c: Context) => {
-    try {
-      const user = c.get('user');
-      const { deckId } = c.req.param();
-
-      await this.deckService.deleteDeck(deckId, user.id);
-
-      return c.json({
-        success: true,
-        message: 'Deck deleted successfully'
-      });
-    } catch (error: any) {
-      if (error.message === 'Deck not found') {
-        return c.json({
-          success: false,
-          error: {
-            name: 'NotFoundError',
-            field: 'deckId',
-            message: 'Deck not found or you do not have permission to delete it'
-          }
-        }, 404);
-      }
-      return c.json({
-        success: false,
-        error: {
-          name: 'Error',
-          field: 'general',
-          message: error.message || 'Failed to delete deck'
-        }
-      }, 400);
-    }
-  };
-
+  // Get user's decks
   getUserDecks = async (c: Context) => {
     try {
       const user = c.get('user');
-      const decks = await this.deckService.getUserDecks(user.id);
+      if (!user) {
+        return c.json({ error: 'User not authenticated' }, 401);
+      }
 
+      const userId = user._id.toString();
+      const options: GetDecksOptions = {
+        page: parseInt(c.req.query('page') || '1'),
+        limit: parseInt(c.req.query('limit') || '20'),
+        category: c.req.query('category') as any,
+        format: c.req.query('format') as any,
+        search: c.req.query('search') as string,
+        sortBy: c.req.query('sortBy') as any || 'updatedAt',
+        sortOrder: c.req.query('sortOrder') as any || 'desc'
+      };
+
+      const result = await deckService.getUserDecks(userId, options);
       return c.json({
         success: true,
-        data: decks,
-        total: decks.length
-      });
-    } catch (error: any) {
-      return c.json({
-        success: false,
-        error: {
-          name: 'Error',
-          field: 'general',
-          message: error.message || 'Failed to fetch user decks'
+        data: result.decks,
+        pagination: {
+          total: result.total,
+          page: result.page,
+          limit: result.limit,
+          hasMore: result.hasMore
         }
-      }, 500);
+      });
+    } catch (error) {
+      console.error('Error getting user decks:', error);
+      return c.json({ error: 'Failed to get decks' }, 500);
     }
   };
 
-  getDeckById = async (c: Context) => {
+  // Get public decks
+  getPublicDecks = async (c: Context) => {
+    try {
+      const options: GetDecksOptions = {
+        page: parseInt(c.req.query('page') || '1'),
+        limit: parseInt(c.req.query('limit') || '20'),
+        category: c.req.query('category') as any,
+        format: c.req.query('format') as any,
+        search: c.req.query('search') as string,
+        sortBy: c.req.query('sortBy') as any || 'updatedAt',
+        sortOrder: c.req.query('sortOrder') as any || 'desc'
+      };
+
+      const result = await deckService.getPublicDecks(options);
+      return c.json(result);
+    } catch (error) {
+      console.error('Error getting public decks:', error);
+      return c.json({ error: 'Failed to get public decks' }, 500);
+    }
+  };
+
+  // Create a new deck
+  createDeck = async (c: Context) => {
     try {
       const user = c.get('user');
-      const { deckId } = c.req.param();
+      if (!user) {
+        return c.json({ error: 'User not authenticated' }, 401);
+      }
 
-      // Pass user ID to check ownership or public status
-      const deck = await this.deckService.getDeckById(deckId, user?.id);
+      const userId = user._id.toString();
+      const options: CreateDeckOptions = await c.req.json();
 
+      const deck = await deckService.createDeck(userId, options);
       return c.json({
         success: true,
         data: deck
-      });
-    } catch (error: any) {
-      if (error.message === 'Deck not found') {
-        return c.json({
-          success: false,
-          error: {
-            name: 'NotFoundError',
-            field: 'deckId',
-            message: 'Deck not found or is private'
-          }
-        }, 404);
-      }
-      return c.json({
-        success: false,
-        error: {
-          name: 'Error',
-          field: 'general',
-          message: error.message || 'Failed to fetch deck'
-        }
-      }, 500);
+      }, 201);
+    } catch (error) {
+      console.error('Error creating deck:', error);
+      return c.json({ error: 'Failed to create deck' }, 500);
     }
   };
 
+  // Update a deck
+  updateDeck = async (c: Context) => {
+    try {
+      const user = c.get('user');
+      if (!user) {
+        return c.json({ error: 'User not authenticated' }, 401);
+      }
+
+      const userId = user._id.toString();
+      const deckId = c.req.param('id');
+      const options: UpdateDeckOptions = await c.req.json();
+
+      const deck = await deckService.updateDeck(deckId, userId, options);
+      return c.json(deck);
+    } catch (error) {
+      console.error('Error updating deck:', error);
+      if (error instanceof Error && error.message === 'Deck not found or access denied') {
+        return c.json({ error: error.message }, 404);
+      } else {
+        return c.json({ error: 'Failed to update deck' }, 500);
+      }
+    }
+  };
+
+  // Delete a deck
+  deleteDeck = async (c: Context) => {
+    try {
+      const user = c.get('user');
+      if (!user) {
+        return c.json({ error: 'User not authenticated' }, 401);
+      }
+
+      const userId = user._id.toString();
+      const deckId = c.req.param('id');
+
+      await deckService.deleteDeck(deckId, userId);
+      return c.body(null, 204);
+    } catch (error) {
+      console.error('Error deleting deck:', error);
+      if (error instanceof Error && error.message === 'Deck not found or access denied') {
+        return c.json({ error: error.message }, 404);
+      } else {
+        return c.json({ error: 'Failed to delete deck' }, 500);
+      }
+    }
+  };
+
+  // Get deck by ID
+  getDeckById = async (c: Context) => {
+    try {
+      const deckId = c.req.param('id');
+      const user = c.get('user');
+      const userId = user?._id?.toString(); // Optional authentication
+
+      const deck = await deckService.getDeckById(deckId, userId);
+      
+      if (!deck) {
+        return c.json({ error: 'Deck not found' }, 404);
+      }
+
+      return c.json(deck);
+    } catch (error) {
+      console.error('Error getting deck:', error);
+      return c.json({ error: 'Failed to get deck' }, 500);
+    }
+  };
+
+  // Get deck statistics
+  getDeckStats = async (c: Context) => {
+    try {
+      const deckId = c.req.param('id');
+      const user = c.get('user');
+      const userId = user?._id?.toString(); // Optional authentication
+
+      const stats = await deckService.getDeckStats(deckId, userId);
+      return c.json(stats);
+    } catch (error) {
+      console.error('Error getting deck stats:', error);
+      if (error instanceof Error && error.message === 'Deck not found or access denied') {
+        return c.json({ error: error.message }, 404);
+      } else {
+        return c.json({ error: 'Failed to get deck stats' }, 500);
+      }
+    }
+  };
+
+  // Add card to deck
   addCardToDeck = async (c: Context) => {
     try {
       const user = c.get('user');
-      const { deckId } = c.req.param();
-      const cardData = c.get('validatedData') as AddCardToDeckData;
-
-      const deck = await this.deckService.addCardToDeck(deckId, user.id, cardData);
-
-      return c.json({
-        success: true,
-        message: 'Card added to deck successfully',
-        data: deck
-      });
-    } catch (error: any) {
-      if (error.message === 'Deck not found') {
-        return c.json({
-          success: false,
-          error: {
-            name: 'NotFoundError',
-            field: 'deckId',
-            message: 'Deck not found or you do not have permission to modify it'
-          }
-        }, 404);
+      if (!user) {
+        return c.json({ error: 'User not authenticated' }, 401);
       }
-      if (error.message === 'You do not own this card') {
-        return c.json({
-          success: false,
-          error: {
-            name: 'ValidationError',
-            field: 'cardId',
-            message: 'You do not own this card'
-          }
-        }, 403);
-      }
-      return c.json({
-        success: false,
-        error: {
-          name: 'Error',
-          field: 'general',
-          message: error.message || 'Failed to add card to deck'
+
+      const userId = user._id.toString();
+      const deckId = c.req.param('id');
+      const options: AddCardToDeckOptions = await c.req.json();
+
+      const deck = await deckService.addCardToDeck(deckId, userId, options);
+      return c.json(deck);
+    } catch (error) {
+      console.error('Error adding card to deck:', error);
+      if (error instanceof Error) {
+        if (error.message === 'Deck not found or access denied' || error.message === 'Card not found') {
+          return c.json({ error: error.message }, 404);
+        } else {
+          return c.json({ error: error.message }, 400);
         }
-      }, 400);
+      } else {
+        return c.json({ error: 'Failed to add card to deck' }, 500);
+      }
     }
   };
 
+  // Remove card from deck
   removeCardFromDeck = async (c: Context) => {
     try {
       const user = c.get('user');
-      const { deckId, cardId } = c.req.param();
-
-      const deck = await this.deckService.removeCardFromDeck(deckId, user.id, cardId);
-
-      return c.json({
-        success: true,
-        message: 'Card removed from deck successfully',
-        data: deck
-      });
-    } catch (error: any) {
-      if (error.message === 'Deck not found') {
-        return c.json({
-          success: false,
-          error: {
-            name: 'NotFoundError',
-            field: 'deckId',
-            message: 'Deck not found or you do not have permission to modify it'
-          }
-        }, 404);
+      if (!user) {
+        return c.json({ error: 'User not authenticated' }, 401);
       }
-      return c.json({
-        success: false,
-        error: {
-          name: 'Error',
-          field: 'general',
-          message: error.message || 'Failed to remove card from deck'
+
+      const userId = user._id.toString();
+      const deckId = c.req.param('id');
+      const cardId = c.req.param('cardId');
+      const body = await c.req.json();
+      const quantity = parseInt(body.quantity) || 1;
+
+      const deck = await deckService.removeCardFromDeck(deckId, userId, cardId, quantity);
+      return c.json(deck);
+    } catch (error) {
+      console.error('Error removing card from deck:', error);
+      if (error instanceof Error) {
+        if (error.message === 'Deck not found or access denied' || error.message === 'Card not found in deck') {
+          return c.json({ error: error.message }, 404);
+        } else {
+          return c.json({ error: error.message }, 400);
         }
-      }, 400);
+      } else {
+        return c.json({ error: 'Failed to remove card from deck' }, 500);
+      }
     }
   };
 
-  updateCardQuantity = async (c: Context) => {
-    try {
-      const user = c.get('user');
-      const { deckId, cardId } = c.req.param();
-      const { quantity } = c.get('validatedData');
-
-      const deck = await this.deckService.updateCardQuantity(deckId, user.id, cardId, quantity);
-
-      return c.json({
-        success: true,
-        message: 'Card quantity updated successfully',
-        data: deck
-      });
-    } catch (error: any) {
-      if (error.message === 'Deck not found') {
-        return c.json({
-          success: false,
-          error: {
-            name: 'NotFoundError',
-            field: 'deckId',
-            message: 'Deck not found or you do not have permission to modify it'
-          }
-        }, 404);
-      }
-      return c.json({
-        success: false,
-        error: {
-          name: 'Error',
-          field: 'general',
-          message: error.message || 'Failed to update card quantity'
-        }
-      }, 400);
-    }
-  };
-
-  validateDeck = async (c: Context) => {
-    try {
-      const user = c.get('user');
-      const { deckId } = c.req.param();
-
-      // First check if user owns the deck
-      await this.deckService.getDeckById(deckId, user.id);
-      
-      const validation = await this.deckService.validateDeck(deckId);
-
-      return c.json({
-        success: true,
-        data: validation
-      });
-    } catch (error: any) {
-      if (error.message === 'Deck not found') {
-        return c.json({
-          success: false,
-          error: {
-            name: 'NotFoundError',
-            field: 'deckId',
-            message: 'Deck not found or you do not have permission to access it'
-          }
-        }, 404);
-      }
-      return c.json({
-        success: false,
-        error: {
-          name: 'Error',
-          field: 'general',
-          message: error.message || 'Failed to validate deck'
-        }
-      }, 500);
-    }
-  };
-
+  // Duplicate a deck
   duplicateDeck = async (c: Context) => {
     try {
       const user = c.get('user');
-      const { deckId } = c.req.param();
-      const { name } = c.get('validatedData');
-
-      const newDeck = await this.deckService.duplicateDeck(deckId, user.id, name);
-
-      return c.json({
-        success: true,
-        message: 'Deck duplicated successfully',
-        data: newDeck
-      }, 201);
-    } catch (error: any) {
-      if (error.message === 'Deck not found') {
-        return c.json({
-          success: false,
-          error: {
-            name: 'NotFoundError',
-            field: 'deckId',
-            message: 'Deck not found or is private'
-          }
-        }, 404);
+      if (!user) {
+        return c.json({ error: 'User not authenticated' }, 401);
       }
-      return c.json({
-        success: false,
-        error: {
-          name: 'Error',
-          field: 'general',
-          message: error.message || 'Failed to duplicate deck'
-        }
-      }, 400);
+
+      const userId = user._id.toString();
+      const deckId = c.req.param('id');
+      const body = await c.req.json();
+      const newName = body.name;
+
+      const deck = await deckService.duplicateDeck(deckId, userId, newName);
+      return c.json(deck, 201);
+    } catch (error) {
+      console.error('Error duplicating deck:', error);
+      if (error instanceof Error && error.message === 'Deck not found or access denied') {
+        return c.json({ error: error.message }, 404);
+      } else {
+        return c.json({ error: 'Failed to duplicate deck' }, 500);
+      }
+    }
+  };
+
+  // Search decks
+  searchDecks = async (c: Context) => {
+    try {
+      const query = c.req.query('q');
+      
+      if (!query) {
+        return c.json({ error: 'Search query is required' }, 400);
+      }
+
+      const options: GetDecksOptions = {
+        page: parseInt(c.req.query('page') || '1'),
+        limit: parseInt(c.req.query('limit') || '20'),
+        category: c.req.query('category') as any,
+        format: c.req.query('format') as any,
+        sortBy: c.req.query('sortBy') as any || 'updatedAt',
+        sortOrder: c.req.query('sortOrder') as any || 'desc'
+      };
+
+      const result = await deckService.searchDecks(query, options);
+      return c.json(result);
+    } catch (error) {
+      console.error('Error searching decks:', error);
+      return c.json({ error: 'Failed to search decks' }, 500);
+    }
+  };
+
+  // Get popular decks
+  getPopularDecks = async (c: Context) => {
+    try {
+      const options: GetDecksOptions = {
+        page: parseInt(c.req.query('page') || '1'),
+        limit: parseInt(c.req.query('limit') || '20'),
+        category: c.req.query('category') as any,
+        format: c.req.query('format') as any,
+        sortBy: 'updatedAt',
+        sortOrder: 'desc'
+      };
+
+      const result = await deckService.getPopularDecks(options);
+      return c.json(result);
+    } catch (error) {
+      console.error('Error getting popular decks:', error);
+      return c.json({ error: 'Failed to get popular decks' }, 500);
     }
   };
 }
+
+export const deckController = new DeckController();

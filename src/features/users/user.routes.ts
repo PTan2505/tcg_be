@@ -1,11 +1,15 @@
 import { Hono } from "hono";
 import { authMiddleware } from "../../shared/middlewares/auth.middleware";
 import { validateRequest } from "../../shared/middlewares/validation.middleware";
+import { FriendshipController } from "../posts/friendship.controller";
 import { UserController } from "./user.controller";
 import { UserService } from "./user.service";
 import {
-  changePasswordSchema,
-  updateUserSchema,
+    blockUserSchema,
+    changePasswordSchema,
+    friendshipActionSchema,
+    sendFriendRequestSchema,
+    updateUserSchema,
 } from "./user.validator";
 
 const userRoutes = new Hono();
@@ -13,6 +17,7 @@ const userRoutes = new Hono();
 // Initialize dependencies
 const userService = new UserService();
 const userController = new UserController(userService);
+const friendshipController = new FriendshipController();
 
 // All routes require authentication
 userRoutes.use('/*', authMiddleware);
@@ -25,7 +30,17 @@ userRoutes.post(
   userController.changePassword
 );
 
-// User management routes
+// Friendship routes (must come before generic /:id routes)
+userRoutes.post("/friends/request", validateRequest(sendFriendRequestSchema), friendshipController.sendFriendRequest);
+userRoutes.put("/friends/:id/respond", validateRequest(friendshipActionSchema), friendshipController.respondToFriendRequest);
+userRoutes.delete("/friends/:id", friendshipController.unfriend);
+userRoutes.post("/friends/block", validateRequest(blockUserSchema), friendshipController.blockUser);
+userRoutes.delete("/friends/block/:id", friendshipController.unblockUser);
+userRoutes.get("/friends", friendshipController.getFriends);
+userRoutes.get("/friends/pending", friendshipController.getPendingRequests);
+userRoutes.get("/friends/status/:userId", friendshipController.getFriendshipStatus);
+
+// User management routes (must come after specific routes)
 userRoutes.get("/", userController.getUsers);
 userRoutes.get("/:id", userController.getUserById);
 userRoutes.patch(

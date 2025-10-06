@@ -1,0 +1,48 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extWeakness,extResistance,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extCardText,extAttack2
+84017,Buizel,Buizel,https://tcgplayer-cdn.tcgplayer.com/product/84017_200w.jpg,3,1541,https://cpt.tcgcsv.com/mDH,2023-12-21T20:26:36.09,1,1/12,Common,Water,60,Basic,"[W] Splash About (10+) 
+<br>If Buizel has less Energy attached to it than the Defending Pokemon, this attack does 10 damage plus 10 more damage.",L+10,None,1,0.1,0.25,1.48,0.43,,Normal,,
+85034,Dusk Ball,Dusk Ball,https://tcgplayer-cdn.tcgplayer.com/product/85034_200w.jpg,3,1541,https://cpt.tcgcsv.com/J0J,2023-12-21T20:29:23.097,1,9/12,Common,Item,,,,,,,0.17,0.48,5.24,0.66,,Normal,"Look at the 7 cards from the bottom of your deck.  Choose 1 Pokemon you find there, show it to your opponent, and put it into your hand.  Put the remaining cards back on top of your deck.  Shuffle your deck afterward.",
+85246,Energy Search (Manaphy),Energy Search Manaphy,https://tcgplayer-cdn.tcgplayer.com/product/85246_200w.jpg,3,1541,https://cpt.tcgcsv.com/X6J,2023-12-21T20:29:50.75,1,10/12,Common,Item,,,,,,,0.13,0.25,5.24,0.24,,Normal,"Search your deck for a basic Energy card, show it to your opponent, and put it into your hand.  Shuffle your deck afterward.",
+85247,Energy Search (Lucario),Energy Search Lucario,https://tcgplayer-cdn.tcgplayer.com/product/85247_200w.jpg,3,1541,https://cpt.tcgcsv.com/Z6J,2023-12-29T13:33:25.58,1,8/11,Common,Item,,,,,,,0.08,0.25,50.0,0.12,,Normal,"Search your deck for a basic Energy card, show it to your opponent, and put it into your hand.  Shuffle your deck afterward.",
+85443,Fighting Energy (Lucario),Fighting Energy Lucario,https://tcgplayer-cdn.tcgplayer.com/product/85443_200w.jpg,3,1541,https://cpt.tcgcsv.com/TbJ,2024-03-27T12:44:39.067,1,11/11,Common,Basic Fighting Energy,,,,,,,0.06,0.31,1.53,0.24,,Normal,,
+85512,Floatzel,Floatzel,https://tcgplayer-cdn.tcgplayer.com/product/85512_200w.jpg,3,1541,https://cpt.tcgcsv.com/gdJ,2023-12-21T20:26:59.1,1,2/12,Common,Water,90,Stage 1,"[1W] Screw Tail (30) 
+<br>Flip a coin.  If heads, discard an Energy attached to the Defending Pokemon.",L+20,None,1,0.15,0.45,1.98,0.52,,Normal,,"[WW] Water Gun (40+) 
+<br>Does 40 damage plus 20 more damage for each W Energy attached to Floatzel but not used to pay for this attack's Energy cost.  You can't add more than 40 damage in this way."
+85691,Geodude,Geodude,https://tcgplayer-cdn.tcgplayer.com/product/85691_200w.jpg,3,1541,https://cpt.tcgcsv.com/RhJ,2024-07-29T11:27:32.52,1,1/11,Common,Fighting,60,Basic,"[F] Stone Throw 
+<br>Choose 2 of your opponent's Benched Pokemon.  This attack does 10 damage to each of them.  <i>(Don't apply Weakness and Resistance for Benched Pokemon.)</i>",G+10,L-20,2,0.05,0.25,1.49,0.16,,Normal,,
+85808,Goldeen,Goldeen,https://tcgplayer-cdn.tcgplayer.com/product/85808_200w.jpg,3,1541,https://cpt.tcgcsv.com/blJ,2023-12-21T20:27:37.723,1,3/12,Common,Water,60,Basic,[1] Horn Attack (10),L+10,None,1,0.05,0.25,1.5,0.22,,Normal,,"[1W] Take Down (30) 
+<br>Goldeen does 10 damage to itself."
+85893,Graveler,Graveler,https://tcgplayer-cdn.tcgplayer.com/product/85893_200w.jpg,3,1541,https://cpt.tcgcsv.com/TmJ,2024-10-02T11:24:01.737,1,2/11,Common,Fighting,90,Stage 1,"[1F] Rock Cannon (30x) 
+<br>Flip a coin until you get tails.  This attack does 30 damage times the number of heads.",G+20,L-20,3,0.2,0.41,1.98,0.41,,Normal,,"[2F] Rock Slide (40) 
+<br>Does 10 damage to 2 of your opponent's Benched Pokemon.<i>  (Don't apply Weakness and Resistance for Benched Pokemon.)</i>"
+86875,Lucario,Lucario,https://tcgplayer-cdn.tcgplayer.com/product/86875_200w.jpg,3,1541,https://cpt.tcgcsv.com/wMJ,2024-10-14T11:32:25.06,1,3/11,Common,Fighting,90,Stage 1,"[1] Feint (30) 
+<br>This attack's damage isn't affected by Resistance.",P+20,None,1,1.32,4.07,9.99,3.81,,Holofoil,,"[FF] Aura Sphere (40)
+<br>Does 20 damage to 1 of your opponent's Benched Pokemon. <i> (Don't apply Weakness and Resistance for Benched Pokemon.)</i>"
+86982,Machoke,Machoke,https://tcgplayer-cdn.tcgplayer.com/product/86982_200w.jpg,3,1541,https://cpt.tcgcsv.com/GPJ,2024-10-02T11:20:44.933,1,4/11,Common,Fighting,80,Stage 1,"[1F] Karate Chop (40-) 
+<br>Does 40 minus 10 damage for each damage counter on Machoke.",P+20,None,2,0.15,0.45,1.98,0.47,,Normal,,[1FF] Seismic Toss (60)
+86996,Machop,Machop,https://tcgplayer-cdn.tcgplayer.com/product/86996_200w.jpg,3,1541,https://cpt.tcgcsv.com/XPJ,2024-07-29T12:08:32.467,1,5/11,Common,Fighting,60,Basic,[F] Low Kick (20),P+10,None,2,0.1,0.25,1.54,0.26,,Normal,,
+87145,Manaphy,Manaphy,https://tcgplayer-cdn.tcgplayer.com/product/87145_200w.jpg,3,1541,https://cpt.tcgcsv.com/WSJ,2023-12-21T20:27:57.743,1,4/12,Common,Water,70,Basic,"[1] Call for Family 
+<br>Search your deck for a Basic Pokemon and put it onto your Bench.  Shuffle your deck afterward.",L+20,None,1,0.59,1.66,4.99,1.66,,Holofoil,,"[WW] Aqua Ring (30) 
+<br>Switch Manaphy with 1 of your Benched Pokemon."
+88144,Piplup,Piplup,https://tcgplayer-cdn.tcgplayer.com/product/88144_200w.jpg,3,1541,https://cpt.tcgcsv.com/VgK,2023-12-21T20:28:11.227,1,5/12,Common,Water,60,Basic,[0] Peck (10),L+10,None,1,0.17,0.38,1.7,0.4,,Normal,,"[1W] Water Splash (20+) 
+<br>Flip a coin.  If heads, this attack does 20 damage plus 10 more damage."
+88344,Potion (Manaphy),Potion Manaphy,https://tcgplayer-cdn.tcgplayer.com/product/88344_200w.jpg,3,1541,https://cpt.tcgcsv.com/VlK,2023-12-21T20:30:09.153,1,11/12,Common,Item,,,,,,,0.03,0.25,5.24,0.28,,Normal,"<em>Remove 2 damage counters from 1 of your Pokemon (remove 1 damage counter if that Pokemon has only 1).
+<br>
+<br><b>(Outdated Text, reference latest Printing)",
+88345,Potion (Lucario),Potion Lucario,https://tcgplayer-cdn.tcgplayer.com/product/88345_200w.jpg,3,1541,https://cpt.tcgcsv.com/WlK,2023-12-21T20:29:29.237,1,9/12,Common,Item,,,,,,,0.01,0.22,4.54,0.21,,Normal,"<em>Remove 2 damage counters from 1 of your Pokemon (remove 1 damage counter if that Pokemon has only 1).
+<br>
+<br><b>(Outdated text, reference latest Printing.)</em></b>",
+88369,Prinplup,Prinplup,https://tcgplayer-cdn.tcgplayer.com/product/88369_200w.jpg,3,1541,https://cpt.tcgcsv.com/pmK,2023-12-21T20:28:18.033,1,6/12,Common,Water,80,Stage 1,"[W] Aqua Shower 
+<br>Does 10 damage to each of your opponent's Pokemon. <i> (Don't apply Weakness and Resistance for Benched Pokemon.)</i>",L+20,None,1,0.24,0.37,6.24,0.53,,Normal,,"[WW] Brine 
+<Br>Choose 1 of your opponent's Pokemon that has any damage counters on it.  This attack does 40 damage to that Pokemon.  <i>(Don't apply Weakness and Resistance for Benched Pokemon.)</i>"
+88478,Quick Ball,Quick Ball,https://tcgplayer-cdn.tcgplayer.com/product/88478_200w.jpg,3,1541,https://cpt.tcgcsv.com/BpK,2024-06-18T11:14:55.253,1,10/11,Common,Item,,,,,,,0.25,0.65,2.49,0.8,,Normal,"Reveal cards from your deck until you reveal a Pokemon.  Show that Pokemon to your opponent and put it into your hand.  Shuffle the other revealed cards back into your deck.  (If you don't reveal a Pokemon, shuffle all the revealed cards back into your deck.)",
+88753,Riolu,Riolu,https://tcgplayer-cdn.tcgplayer.com/product/88753_200w.jpg,3,1541,https://cpt.tcgcsv.com/5wK,2023-12-21T20:28:35.167,1,6/12,Common,Fighting,60,Basic,"[F] Wild Kick (30) 
+<br>Flip a coin.  If tails, this attack does nothing.",P+10,None,1,0.18,0.36,2.62,0.94,,Normal,,
+89027,Seaking,Seaking,https://tcgplayer-cdn.tcgplayer.com/product/89027_200w.jpg,3,1541,https://cpt.tcgcsv.com/zDK,2023-12-21T20:28:57.893,1,7/12,Common,Water,80,Stage 1,"[2] Flail (10x) 
+<br>Does 10 damage times the number of damage counters on Seaking.",L+20,None,1,0.17,0.3,2.3,0.26,,Normal,,[WW] Horn Drill (50)
+89522,Starly,Starly,https://tcgplayer-cdn.tcgplayer.com/product/89522_200w.jpg,3,1541,https://cpt.tcgcsv.com/sQK,2024-07-22T11:30:08.807,1,7/11,Common,Colorless,50,Basic,[1] Gust (10),L+10,F-20,1,0.09,0.25,4.54,0.24,,Normal,,"[2] Quick Attack (10+) 
+<br>Flip a coin.  If heads, this attack does 10 damage plus 20 more damage."
+89999,Totodile,Totodile,https://tcgplayer-cdn.tcgplayer.com/product/89999_200w.jpg,3,1541,https://cpt.tcgcsv.com/__K,2023-12-21T20:29:17.517,1,8/12,Common,Water,50,Basic,[0] Bite (10),L+10,None,1,0.3,0.92,4.54,1.27,,Normal,,"[W] Shining Fang (10+) 
+<br>If the Defending Pokemon already has any damage counters on it, this attack does 10 damage plus 10 more damage."
+90511,Water Energy,Water Energy,https://tcgplayer-cdn.tcgplayer.com/product/90511_200w.jpg,3,1541,https://cpt.tcgcsv.com/fdL,2023-12-21T20:30:27.807,1,12/12,Common,Basic Water Energy,,,,,,,0.05,0.38,1.98,0.58,,Normal,,
+98949,DP Trainer Kit [Manaphy & Lucario],DP Trainer Kit Manaphy and Lucario,https://tcgplayer-cdn.tcgplayer.com/product/98949_200w.jpg,3,1541,https://cpt.tcgcsv.com/_BP,2015-05-20T18:36:46.47,1,,,,,,,,,,,,,,,,,

@@ -4,11 +4,13 @@ import { validateRequest } from "../../shared/middlewares/validation.middleware"
 import { AuthController } from "./auth.controller";
 import { AuthService } from "./auth.service";
 import {
-    forgotPasswordSchema,
-    loginSchema,
-    refreshTokenSchema,
-    registerSchema,
-    resetPasswordSchema,
+  emailOTPSchema,
+  forgotPasswordSchema,
+  loginSchema,
+  refreshTokenSchema,
+  registerSchema,
+  resendOTPSchema,
+  resetPasswordWithOTPSchema
 } from "./auth.validator";
 
 const authRoutes = new Hono();
@@ -25,16 +27,27 @@ authRoutes.post(
   authController.register
 );
 authRoutes.post("/login", validateRequest(loginSchema), authController.login);
-authRoutes.get("/verify-email", authController.verifyEmail);
+authRoutes.post(
+  "/verify-email-otp",
+  validateRequest(emailOTPSchema),
+  authController.verifyEmailWithOTP
+);
+
+authRoutes.post(
+  "/resend-verification-otp",
+  validateRequest(resendOTPSchema),
+  authController.resendEmailVerificationOTP
+);
 authRoutes.post(
   "/forgot-password",
   validateRequest(forgotPasswordSchema),
   authController.forgotPassword
 );
+
 authRoutes.post(
-  "/reset-password",
-  validateRequest(resetPasswordSchema),
-  authController.resetPassword
+  "/reset-password-otp",
+  validateRequest(resetPasswordWithOTPSchema),
+  authController.resetPasswordWithOTP
 );
 
 authRoutes.post(

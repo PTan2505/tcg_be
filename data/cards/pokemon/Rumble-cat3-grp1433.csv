@@ -1,0 +1,23 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extWeakness,extResistance,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extAttack2
+83737,Bastiodon,Bastiodon,https://tcgplayer-cdn.tcgplayer.com/product/83737_200w.jpg,3,1433,https://cpt.tcgcsv.com/MvH,2020-12-16T22:30:11.75,1,14,Promo,Metal,120,Stage 2,[2M] Strength (40),Rx2,P-20,4,73.33,87.45,99.95,39.68,,Normal,
+83820,Bibarel,Bibarel,https://tcgplayer-cdn.tcgplayer.com/product/83820_200w.jpg,3,1433,https://cpt.tcgcsv.com/qxH,2020-12-16T22:29:10.267,1,16,Promo,Colorless,90,Stage 1,[4] Rollout (50),Fx2,None,3,66.66,74.95,99.95,28.95,,Normal,
+84256,Cherrim,Cherrim,https://tcgplayer-cdn.tcgplayer.com/product/84256_200w.jpg,3,1433,https://cpt.tcgcsv.com/8KH,2020-12-16T22:35:43.987,1,2,Promo,Grass,80,Stage 1,[2G] Solarbeam (60),Rx2,W-20,1,60.0,74.95,99.95,40.22,,Normal,
+84825,Diglett,Diglett,https://tcgplayer-cdn.tcgplayer.com/product/84825_200w.jpg,3,1433,https://cpt.tcgcsv.com/wXH,2020-12-16T22:31:31.107,1,11,Promo,Fighting,30,Basic,[2] Dig (20),Gx2,L-20,1,54.0,74.95,99.95,39.54,,Normal,
+85996,Gyarados,Gyarados,https://tcgplayer-cdn.tcgplayer.com/product/85996_200w.jpg,3,1433,https://cpt.tcgcsv.com/XpJ,2020-12-16T22:33:47.073,1,6,Promo,Water,130,Stage 1,"[3W] Thrash Tackle (80) 
+<br>Gyarados does 20 damage to itself.",Lx2,F-20,3,174.95,224.95,274.95,129.11,,Normal,
+86051,Heatran,Heatran,https://tcgplayer-cdn.tcgplayer.com/product/86051_200w.jpg,3,1433,https://cpt.tcgcsv.com/2rJ,2020-12-16T22:34:45.133,1,4,Promo,Fire,110,Basic,"[3R] Heat Boiler (60+) 
+<br>If the Defending Pokemon is a W Pokemon, this attack does 60 damage plus 40 more damage.",Wx2,None,4,32.6,93.78,199.95,47.88,,Normal,
+86879,Lucario,Lucario,https://tcgplayer-cdn.tcgplayer.com/product/86879_200w.jpg,3,1433,https://cpt.tcgcsv.com/CMJ,2020-12-16T22:31:17.073,1,12,Promo,Fighting,90,Stage 1,[2F] Metal Claw (40),Px2,None,1,190.0,220.0,399.95,207.43,,Normal,[2FM] Pulse Blast (80)
+87404,Mew,Mew,https://tcgplayer-cdn.tcgplayer.com/product/87404_200w.jpg,3,1433,https://cpt.tcgcsv.com/6-J,2020-12-16T22:32:50.823,1,10,Promo,Psychic,60,Basic,[2] Cut (30),Px2,None,0,200.0,229.5,500.0,249.99,,Normal,[2P] Will-o'-the-wisp (60)
+87423,Mewtwo,Mewtwo,https://tcgplayer-cdn.tcgplayer.com/product/87423_200w.jpg,3,1433,https://cpt.tcgcsv.com/t-J,2015-12-03T20:43:39.79,1,9,Promo,Psychic,100,Basic,[1PP] Super Psy Bolt (70),Px2,None,2,149.99,224.97,299.95,64.24,,Holofoil,
+87775,Ninetales,Ninetales,https://tcgplayer-cdn.tcgplayer.com/product/87775_200w.jpg,3,1433,https://cpt.tcgcsv.com/w7K,2020-12-16T22:35:08.44,1,3,Promo,Fire,90,Stage 1,[2R] Flame Tail (60),Wx2,None,1,99.98,104.98,120.0,59.99,,Normal,
+88096,Pikachu,Pikachu,https://tcgplayer-cdn.tcgplayer.com/product/88096_200w.jpg,3,1433,https://cpt.tcgcsv.com/XfK,2015-12-03T20:43:07.47,1,7,Promo,Lightning,60,Basic,"[2L] Volt Tackle (60) 
+<br>Pikachu does 10 damage to itself.",Fx2,M-20,1,474.95,487.48,500.0,325.0,,Holofoil,
+88620,Rattata,Rattata,https://tcgplayer-cdn.tcgplayer.com/product/88620_200w.jpg,3,1433,https://cpt.tcgcsv.com/qsK,2020-12-16T22:29:49.653,1,15,Promo,Colorless,30,Basic,[2] Bite (20),Fx2,None,1,59.95,59.95,59.95,40.32,,Normal,
+89281,Skuntank,Skuntank,https://tcgplayer-cdn.tcgplayer.com/product/89281_200w.jpg,3,1433,https://cpt.tcgcsv.com/FKK,2020-12-16T22:30:39.223,1,13,Promo,Darkness,90,Stage 1,"[2D] Rage (20+) 
+<br>Does 20 damage plus 10 more damage for each damage counter on Skuntank.",Fx2,P-20,2,54.95,64.95,74.95,30.14,,Normal,
+89537,Starmie,Starmie,https://tcgplayer-cdn.tcgplayer.com/product/89537_200w.jpg,3,1433,https://cpt.tcgcsv.com/MQK,2020-12-16T22:34:14.467,1,5,Promo,Water,80,Stage 1,"[2W] Spiral Drain (50) 
+<br>Remove 1 damage counter from Starmie.",Lx2,None,1,58.13,75.97,150.0,52.1,,Normal,
+90320,Venusaur,Venusaur,https://tcgplayer-cdn.tcgplayer.com/product/90320_200w.jpg,3,1433,https://cpt.tcgcsv.com/q8L,2020-11-09T21:39:59.89,1,1,Promo,Grass,140,Stage 2,"[2GG] Giga Drain (50) 
+<br>Remove from Venusaur the number of damage counters equal to the damage you did to the Defending Pokemon.",Rx2,None,4,198.66,199.95,249.95,126.99,,Holofoil,
+90720,Zapdos,Zapdos,https://tcgplayer-cdn.tcgplayer.com/product/90720_200w.jpg,3,1433,https://cpt.tcgcsv.com/qjL,2020-12-16T22:33:13.273,1,8,Promo,Lightning,100,Basic,[3L] Drill Peck (70),Lx2,F-20,2,134.94,134.95,199.95,109.49,,Normal,

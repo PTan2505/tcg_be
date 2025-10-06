@@ -2,16 +2,17 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import UserModel, { User } from "../../database/models/user";
 import { AuthTokens, LoginDTO, RegisterDTO } from "./auth.types";
-import { IEmailService } from "./email.service";
 
 import { Document } from "mongoose";
+import { IEmailService } from "../../shared/email.service";
 
 export interface IAuthService {
   register(data: RegisterDTO): Promise<Document & User>;
   login(data: LoginDTO): Promise<AuthTokens>;
-  verifyEmail(token: string): Promise<void>;
+  verifyEmailWithOTP(email: string, otp: string): Promise<void>;
+  resendEmailVerificationOTP(email: string): Promise<void>;
   forgotPassword(email: string): Promise<void>;
-  resetPassword(token: string, newPassword: string): Promise<void>;
+  resetPasswordWithOTP(email: string, otp: string, newPassword: string): Promise<void>;
   refreshToken(refreshToken: string): Promise<{ accessToken: string }>;
   getProfile(token: string): Promise<Document & User>;
   changePassword(
@@ -42,20 +43,22 @@ export class AuthService implements IAuthService {
     });
   }
 
-  private generateVerificationToken(userId: string): string {
-    return jwt.sign(
-      { userId, purpose: "email-verification" },
-      process.env.JWT_EMAIL_SECRET!,
-      { expiresIn: "24h" }
-    );
-  }
-
   async register(data: RegisterDTO): Promise<Document & User> {
     // Check if user exists
-    const existingUser = await UserModel.findOne({ email: data.email }).exec();
+    const existingUser = await UserModel.findOne({ 
+      $or: [
+        { email: data.email },
+        { username: data.username }
+      ]
+    }).exec();
 
     if (existingUser) {
-      throw new Error("User already exists");
+      if (existingUser.email === data.email) {
+        throw new Error("Email already exists");
+      }
+      if (existingUser.username === data.username) {
+        throw new Error("Username already exists");
+      }
     }
 
     // Hash password
@@ -65,6 +68,7 @@ export class AuthService implements IAuthService {
     // Prepare user data
     const userData = {
       email: data.email,
+      username: data.username,
       password: hashedPassword,
       firstName: data.firstName,
       lastName: data.lastName,
@@ -72,15 +76,21 @@ export class AuthService implements IAuthService {
       isEmailVerified: false,
     };
 
-    // Create and save user
-    const user = await UserModel.create(userData);
+    // Generate and send verification OTP using timestamp-based HOTP
+    const verificationSecret = this.emailService.generateHOTPSecret();
+    const currentTimestamp = Date.now(); // Current timestamp in milliseconds
+    const verificationOTP = this.emailService.generateHOTPWithTimestamp(verificationSecret, currentTimestamp);
+    const otpExpires = new Date(Date.now() + 15 * 60 * 1000); // 15 minutes
 
-    // Generate and send verification token
-    const verificationToken = this.generateVerificationToken(user.id);
-    await this.emailService.sendVerificationEmail(
-      user.email,
-      verificationToken
-    );
+    // Create and save user with HOTP secret (no counter stored)
+    const user = await UserModel.create({
+      ...userData,
+      emailVerificationSecret: verificationSecret,
+      emailVerificationOTPExpires: otpExpires,
+    });
+
+    // Send OTP via email
+    await this.emailService.sendVerificationOTP(user.email, verificationOTP);
     return user;
   }
 
@@ -109,22 +119,62 @@ export class AuthService implements IAuthService {
     return this.generateTokens(user.id);
   }
 
-  async verifyEmail(token: string): Promise<void> {
-    try {
-      const decoded = jwt.verify(token, process.env.JWT_EMAIL_SECRET!) as {
-        userId: string;
-      };
-
-      const user = await UserModel.findById(decoded.userId);
-      if (!user) {
-        throw new Error("User not found");
-      }
-
-      user.set("isEmailVerified", true);
-      await user.save();
-    } catch (error) {
-      throw new Error("Invalid or expired verification token");
+  async verifyEmailWithOTP(email: string, otp: string): Promise<void> {
+    const user = await UserModel.findOne({ email });
+    if (!user) {
+      throw new Error("User not found");
     }
+
+    // Get HOTP secret
+    const secret = user.get("emailVerificationSecret") as string;
+
+    if (!secret) {
+      throw new Error("Invalid verification setup");
+    }
+
+    // Check if OTP has expired
+    const otpExpires = user.get("emailVerificationOTPExpires") as Date;
+    if (!otpExpires || new Date() > otpExpires) {
+      throw new Error("OTP has expired");
+    }
+
+    // Verify HOTP using the stored timestamp from otpExpires
+    const timestampWhenGenerated = otpExpires.getTime() - (15 * 60 * 1000); // Subtract 15 minutes to get generation time
+    const isValidOTP = this.emailService.verifyHOTPWithTimestamp(otp, secret, timestampWhenGenerated, 15);
+    if (!isValidOTP) {
+      throw new Error("Invalid OTP code");
+    }
+
+    // Verify email and clear HOTP data
+    user.set("isEmailVerified", true);
+    user.set("emailVerificationSecret", undefined);
+    user.set("emailVerificationOTPExpires", undefined);
+    await user.save();
+  }
+
+  async resendEmailVerificationOTP(email: string): Promise<void> {
+    const user = await UserModel.findOne({ email });
+    if (!user) {
+      throw new Error("User not found");
+    }
+
+    if (user.get("isEmailVerified")) {
+      throw new Error("Email already verified");
+    }
+
+    // Always generate a new secret for each OTP request
+    const verificationSecret = this.emailService.generateHOTPSecret();
+    const currentTimestamp = Date.now();
+    const verificationOTP = this.emailService.generateHOTPWithTimestamp(verificationSecret, currentTimestamp);
+    const otpExpires = new Date(Date.now() + 15 * 60 * 1000); // 15 minutes
+
+    // Save new HOTP data to user
+    user.set("emailVerificationSecret", verificationSecret);
+    user.set("emailVerificationOTPExpires", otpExpires);
+    await user.save();
+
+    // Send new OTP via email
+    await this.emailService.sendVerificationOTP(email, verificationOTP);
   }
 
   async forgotPassword(email: string): Promise<void> {
@@ -134,39 +184,56 @@ export class AuthService implements IAuthService {
       return;
     }
 
-    const resetToken = jwt.sign(
-      { userId: user.id, purpose: "password-reset" },
-      process.env.JWT_EMAIL_SECRET!,
-      { expiresIn: "1h" }
-    );
+    // Generate new HOTP secret and code for password reset
+    const resetSecret = this.emailService.generateHOTPSecret();
+    const currentTimestamp = Date.now();
+    const otpCode = this.emailService.generateHOTPWithTimestamp(resetSecret, currentTimestamp);
+    const otpExpires = new Date(Date.now() + 10 * 60 * 1000); // 10 minutes
 
-    await this.emailService.sendPasswordResetEmail(email, resetToken);
+    // Save HOTP data to user
+    user.set("passwordResetSecret", resetSecret);
+    user.set("passwordResetOTPExpires", otpExpires);
+    await user.save();
+
+    // Send OTP via email
+    await this.emailService.sendPasswordResetOTP(email, otpCode);
   }
 
-  async resetPassword(token: string, newPassword: string): Promise<void> {
-    try {
-      const decoded = jwt.verify(token, process.env.JWT_EMAIL_SECRET!) as {
-        userId: string;
-        purpose: string;
-      };
-
-      if (decoded.purpose !== "password-reset") {
-        throw new Error("Invalid token type");
-      }
-
-      const user = await UserModel.findById(decoded.userId);
-      if (!user) {
-        throw new Error("User not found");
-      }
-
-      const salt = await bcrypt.genSalt(10);
-      const hashedPassword = await bcrypt.hash(newPassword, salt);
-
-      user.set("password", hashedPassword);
-      await user.save();
-    } catch (error) {
-      throw new Error("Invalid or expired reset token");
+  async resetPasswordWithOTP(email: string, otp: string, newPassword: string): Promise<void> {
+    const user = await UserModel.findOne({ email });
+    if (!user) {
+      throw new Error("User not found");
     }
+
+    // Get HOTP secret
+    const secret = user.get("passwordResetSecret") as string;
+
+    if (!secret) {
+      throw new Error("No password reset request found");
+    }
+
+    // Check if OTP has expired
+    const otpExpires = user.get("passwordResetOTPExpires") as Date;
+    if (!otpExpires || new Date() > otpExpires) {
+      throw new Error("OTP has expired");
+    }
+
+    // Verify HOTP using the stored timestamp from otpExpires
+    const timestampWhenGenerated = otpExpires.getTime() - (10 * 60 * 1000); // Subtract 10 minutes to get generation time
+    const isValidOTP = this.emailService.verifyHOTPWithTimestamp(otp, secret, timestampWhenGenerated, 10);
+    if (!isValidOTP) {
+      throw new Error("Invalid OTP code");
+    }
+
+    // Hash new password
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(newPassword, salt);
+
+    // Update password and clear HOTP data
+    user.set("password", hashedPassword);
+    user.set("passwordResetSecret", undefined);
+    user.set("passwordResetOTPExpires", undefined);
+    await user.save();
   }
 
   async refreshToken(refreshToken: string): Promise<{ accessToken: string }> {

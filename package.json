@@ -1,27 +1,32 @@
 {
   "name": "tcg_be",
   "scripts": {
-    "dev": "bun run --hot src/index.ts",
-    "import-pokemon-data": "bun run scripts/importPokemonData.ts",
-    "import-yugioh-data": "bun run scripts/yugioh/importData.ts",
-    "migrate-yugioh-data": "bun run scripts/yugioh/migrateData.ts",
-    "reset-yugioh-collections": "bun run scripts/yugioh/resetAndImport.ts",
-    "fresh-yugioh-import": "bun run scripts/yugioh/resetAndImport.ts && bun run scripts/yugioh/importData.ts",
-    "test-yugioh-models": "bun -e \"import('./src/database/db/db').then(async ({connectDB}) => { await connectDB(); const {YugiohCard, YugiohSet} = await import('./src/database/models/yugioh/index'); const cardCount = await YugiohCard.countDocuments(); const setCount = await YugiohSet.countDocuments(); console.log('✅ Cards:', cardCount, 'Sets:', setCount); process.exit(0); })\"",
-    "check-yugioh-data": "bun -e \"import('./src/database/db/db').then(async ({connectDB}) => { await connectDB(); const mongoose = await import('mongoose'); const oldCount = await mongoose.default.connection.db.collection('yugiohcards').countDocuments(); console.log('📊 Current Yugioh cards:', oldCount); process.exit(0); })\"",
-    "check-all-collections": "bun -e \"import('./src/database/db/db').then(async ({connectDB}) => { await connectDB(); const mongoose = await import('mongoose'); const collections = await mongoose.default.connection.db.listCollections().toArray(); console.log('📋 Collections:'); collections.forEach(c => console.log('  -', c.name)); const cards = await mongoose.default.connection.db.collection('yugiohcards').countDocuments(); const sets = await mongoose.default.connection.db.collection('yugiohsets').countDocuments(); console.log('📊 yugiohcards:', cards, 'yugiohsets:', sets); process.exit(0); })\""
+    "dev": "bun run server.js",
+    "dev-hot": "bun run --hot src/index.ts",
+    "test": "node tests/api/test-api-comprehensive.js",
+    "import-card-sets": "bun run scripts/importCardSets.ts",
+    "import-card-data": "bun run scripts/importCards.ts"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.899.0",
+    "@aws-sdk/s3-request-presigner": "^3.899.0",
     "@hono/node-server": "^1.19.4",
     "@hono/swagger-ui": "^0.5.2",
     "@hono/zod-validator": "^0.7.3",
+    "@types/multer": "^2.0.0",
+    "@types/uuid": "^11.0.0",
     "axios": "^1.11.0",
     "bcryptjs": "^3.0.2",
+    "csv-parse": "^6.1.0",
     "dotenv": "^17.2.1",
     "hono": "^4.8.12",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.17.0",
+    "multer": "^2.0.2",
     "nodemailer": "^7.0.6",
+    "otplib": "^12.0.1",
+    "thirty-two": "^1.0.2",
+    "uuid": "^13.0.0",
     "zod": "^4.1.11"
   },
   "devDependencies": {

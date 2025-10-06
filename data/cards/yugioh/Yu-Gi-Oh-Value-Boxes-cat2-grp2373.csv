@@ -1,0 +1,27 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extDescription,extUPC,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extNumber,extRarity,extAttribute,extMonsterType,extCardType,extAttack,extDefense
+71185,Silver Dragon Value Box,Silver Dragon Value Box,https://tcgplayer-cdn.tcgplayer.com/product/71185_200w.jpg,2,2373,https://cpt.tcgcsv.com/KtB,2018-11-23T20:52:17.847,1,"The legendary Blue-Eyes white Dragon is now yours to command! The Silver Dragon Value Box hands you all the tools you need to get started or evolve your current Deck to epic levels. Use the included booster packs to further enhance your Deck and create your own legends while wielding the most invincible dragon. This box even has a giant-sized “Azure-Eyes Silver Dragon” Synchro Card to intimidate your foes! Can you master the overwhelming power contained in this box?
+<br>
+<br>Each Silver Dragon Value Box contains: 
+<br>• 1 Saga of Blue-Eyes White Dragon Structure Deck
+<br>• 4 Duelist Pack: Kaiba packs
+<br>• 2 Lord of Tachyon Galaxy packs
+<br>• 1 Oversized “Azure-Eyes Silver Dragon” card",083717895855,149.95,149.95,149.95,149.95,,Normal,,,,,,,
+180999,Machine Madness Value Box,Machine Madness Value Box,https://tcgplayer-cdn.tcgplayer.com/product/180999_200w.jpg,2,2373,https://cpt.tcgcsv.com/_ps2,2018-11-23T20:44:58.33,1,"The Machine Madness Value Box contains 3 complete, ready-to-play Structure Decks! Construct great giants like Machina Mayhem’s enormous Machina Fortress and Machine Re-Volt’s powerful Ancient Gear Gadjiltron Dragon and decimate your foes or harness the might of the Cyber Dragon in Cyber Dragon Revolution to summon the Cyber Twin Dragon or the new Xyz Monster Cyber Nova Dragon! Play them separately with friends or mix and match your favorite cards to create your ultimate custom-built Machine Deck!
+<br>
+<br>Each Machine Madness Value Box contains: 
+<br>• 1 Cyber Dragon Revolution Structure Deck
+<br>• 1 Machina Mayhem Structure Deck
+<br>• 1 Machine Re-Volt Structure Deck
+<br>• 3 Deluxe Paper Game Mats
+<br>• 3 Oversized Cards
+<br>• 1 Dueling Guide
+<br>• 1 Rulebook",083717898191,,,,,,,,,,,,,
+181001,Ancient Gear Gadjiltron Dragon (Oversized) (Machine Madness),Ancient Gear Gadjiltron Dragon Oversized Machine Madness,https://tcgplayer-cdn.tcgplayer.com/product/181001_200w.jpg,2,2373,https://cpt.tcgcsv.com/2qs2,2018-11-23T17:53:04.823,1,"If this card attacks, your opponent cannot activate any Spell/Trap Cards until the end of the Damage Step. This card gains the appropriate effects if you Normal Summon it by Tributing these monsters. 
+<br>• Green Gadget: If this card attacks a Defense Position monster, inflict piercing battle damage to your opponent. 
+<br>• Red Gadget: If this card inflicts battle damage to your opponent: Inflict 400 damage to your opponent. 
+<br>• Yellow Gadget: If this card destroys an opponent's monster by battle: Inflict 600 damage to your opponent.",,6.61,7.94,8.34,7.94,,Limited,SD10-EN001,Promo,EARTH,Machine,Effect Monster,3000,2000
+181002,Machina Fortress (Oversized) (Machine Madness),Machina Fortress Oversized Machine Madness,https://tcgplayer-cdn.tcgplayer.com/product/181002_200w.jpg,2,2373,https://cpt.tcgcsv.com/3qs2,2018-11-23T17:58:12.03,1,"You can discard Machine-Type monster(s) whose total Levels equal 8 or more, then Special Summon this card (from your hand or Graveyard). When this card is destroyed by battle and sent to the Graveyard: Target 1 card your opponent controls; destroy that target. Before resolving an opponent's monster effect that targets this face-up card, look at your opponent's hand and discard 1 card from their hand.",,8.4,9.45,10.0,8.0,,Limited,SDMM-EN001,Promo,EARTH,Machine,Effect Monster,2500,1600
+181003,Cyber Dragon Nova (Oversized) (Machine Madness),Cyber Dragon Nova Oversized Machine Madness,https://tcgplayer-cdn.tcgplayer.com/product/181003_200w.jpg,2,2373,https://cpt.tcgcsv.com/5qs2,2021-04-16T20:46:41.637,1,"2 Level 5 Machine-Type monsters
+<br>Once per turn: You can detach 1 Xyz Material from this card, then target 1 ""Cyber Dragon"" in your Graveyard; Special Summon that target. Once per turn, during either player's turn: You can banish 1 ""Cyber Dragon"" from your hand or face-up from your Monster Card Zone; this card gains 2100 ATK until the End Phase. If this card in your possession is sent to your Graveyard by your opponent's card effect: You can Special Summon 1 Machine-Type Fusion Monster from your Extra Deck.",,8.9,10.02,23.0,9.85,,Limited,SDCR-EN038,Promo,LIGHT,Machine,Xyz/Effect Monster,2100,1600
+181019,Azure-Eyes Silver Dragon (Oversized) (Silver Dragon),Azure Eyes Silver Dragon Oversized Silver Dragon,https://tcgplayer-cdn.tcgplayer.com/product/181019_200w.jpg,2,2373,https://cpt.tcgcsv.com/pqs2,2021-04-16T20:46:35.66,1,"1 Tuner + 1 or more non-Tuner Normal Monsters
+<br>When this card is Special Summoned: Dragon-Type monsters you currently control cannot be targeted or destroyed by card effects until the end of the next turn. Once per turn, during your Standby Phase: You can target 1 Normal Monster in your Graveyard; Special Summon that target.",,18.05,20.0,50.0,,,Limited,SDBE-EN040,Promo,LIGHT,Dragon,Synchro/Effect Monster,2500,3000

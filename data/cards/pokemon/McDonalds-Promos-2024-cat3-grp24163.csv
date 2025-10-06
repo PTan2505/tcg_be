@@ -1,0 +1,35 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extCardText,extAttack1,extWeakness,extResistance,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extAttack2
+614370,Charizard,Charizard,https://tcgplayer-cdn.tcgplayer.com/product/614370_200w.jpg,3,24163,https://cpt.tcgcsv.com/qMW6,2025-04-07T13:21:52.553,1,001/015,Promo,Fire,170,Stage 2,"<strong>Ability — Battle Sense</strong>
+<br>Once during your turn, you may look at the top 3 cards of your deck and put 1 of them into your hand. Discard the other cards.","[RR] Royal Blaze (100+)
+<br>This attack does 50 more damage for each Leon card in your discard pile.",Wx2,None,3,0.4,1.98,6452.64,1.85,,Normal,
+614371,Pikachu,Pikachu,https://tcgplayer-cdn.tcgplayer.com/product/614371_200w.jpg,3,24163,https://cpt.tcgcsv.com/rMW6,2025-01-31T17:25:56.693,1,002/015,Promo,Lightning,60,Basic,,"[L] Charge
+<br>Search your deck for a Basic L Energy card and attach it to this Pokemon. Then, shuffle your deck.",Fx2,None,1,1.0,2.7,19.95,2.8,,Holofoil,[1LL] Pika Punch (50)
+614372,Miraidon,Miraidon,https://tcgplayer-cdn.tcgplayer.com/product/614372_200w.jpg,3,24163,https://cpt.tcgcsv.com/sMW6,2025-01-31T17:30:07.51,1,003/015,Promo,Lightning,120,Basic,,[2] Sharp Fang (30),Fx2,None,1,0.08,0.54,19.95,0.45,,Holofoil,"[1LL] Lightning Laser (90)
+<br>This attack also does 30 damage to 1 of your opponent's Benched Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>"
+614373,Jigglypuff,Jigglypuff,https://tcgplayer-cdn.tcgplayer.com/product/614373_200w.jpg,3,24163,https://cpt.tcgcsv.com/tMW6,2025-02-03T13:54:44.127,1,004/015,Promo,Psychic,60,Basic,,[P] Pound (20),Mx2,None,1,0.01,0.15,19.95,0.12,,Normal,"[2] Let's All Rollout (20x)
+<br>This attack does 20 damage for each of your Benched Pokemon that has the Let's All Rollout attack."
+614374,Hatenna,Hatenna,https://tcgplayer-cdn.tcgplayer.com/product/614374_200w.jpg,3,24163,https://cpt.tcgcsv.com/vMW6,2025-01-31T16:28:39.393,1,005/015,Promo,Psychic,60,Basic,,[P] Stampede (10),Dx2,F-30,1,0.01,0.1,19.95,0.08,,Normal,[1P] Magical Shot (30)
+614375,Dragapult,Dragapult,https://tcgplayer-cdn.tcgplayer.com/product/614375_200w.jpg,3,24163,https://cpt.tcgcsv.com/wMW6,2025-01-31T16:35:19.273,1,006/015,Promo,Psychic,150,Stage 2,,"[P] Dragon Launcher
+<br>Discard a number of Benched Dreepy up to the number f your opponent's pokemon in play. Then, for each Dreepy you discarded in this way, choose 1 of your opponent's Pokemon and do 100 damage to it. You can't choose the same Pokemon more than once. This damage isn't affected by Weakness and Resistance.",Dx2,F-30,1,0.01,0.15,19.95,0.11,,Normal,[1P] Spooky Shot (120)
+614376,Quagsire,Quagsire,https://tcgplayer-cdn.tcgplayer.com/product/614376_200w.jpg,3,24163,https://cpt.tcgcsv.com/xMW6,2025-01-31T16:43:48.343,1,007/015,Promo,Fighting,120,Stage 1,,[2] Beat (30),Gx2,None,2,0.01,0.14,19.95,0.1,,Normal,"[2F] Flickle Impact (180)
+<br>If you have exactly 2, 4, or 6 Prize cards remaining, this attack does nothing."
+614377,Koraidon,Koraidon,https://tcgplayer-cdn.tcgplayer.com/product/614377_200w.jpg,3,24163,https://cpt.tcgcsv.com/zMW6,2025-01-31T17:27:38.013,1,008/015,Promo,Fighting,130,Basic,,[3] Claw Slash (70),Px2,None,2,0.1,0.49,19.95,0.34,,Holofoil,"[1FFF] Rampaging Fang (190)
+<br>Discard 3 Energy from this Pokemon."
+614378,Umbreon,Umbreon,https://tcgplayer-cdn.tcgplayer.com/product/614378_200w.jpg,3,24163,https://cpt.tcgcsv.com/BMW6,2025-01-31T16:50:45.03,1,009/015,Promo,Darkness,110,Stage 1,,"[D] Blindside
+<br>The attack does 60 damage to 1 of your opponent's Pokemon that has any damage counters on it. <em>(Don't apply Weakness and Resistance for Benched Pokemon)</em>",Gx2,None,1,0.12,0.5,3421.86,0.55,,Normal,"[2D] Moon Mirage (80)
+<br>Your opponent's Active Pokemon is now Confused."
+614379,Hydreigon,Hydreigon,https://tcgplayer-cdn.tcgplayer.com/product/614379_200w.jpg,3,24163,https://cpt.tcgcsv.com/CMW6,2025-01-31T17:12:31.46,1,010/015,Promo,Darkness,180,Stage 2,"<strong>Ability — Tri Howl</strong>
+<br>Once during your turn, you may look at the top 3 cards of your deck and attach any number of Energy cards you find there to your Pokemon in any way you like. Discard the other cards.",[1DD] Dark Cutter (160),Gx2,None,3,0.1,0.67,19.95,0.51,,Holofoil,
+614380,Roaring Moon,Roaring Moon,https://tcgplayer-cdn.tcgplayer.com/product/614380_200w.jpg,3,24163,https://cpt.tcgcsv.com/DMW6,2025-01-31T15:50:57.53,1,011/015,Promo,Darkness,140,Basic,,"[DD] Vengeance Fletching (70+)
+<br>This attack does 10 more damage for each Ancient card in your discard pile.",Gx2,None,2,0.3,0.77,19.95,0.52,,Holofoil,[3D] Speed Wing (120)
+614381,Dragonite,Dragonite,https://tcgplayer-cdn.tcgplayer.com/product/614381_200w.jpg,3,24163,https://cpt.tcgcsv.com/FMW6,2025-01-31T17:23:54.483,1,012/015,Promo,Dragon,180,Stage 2,"<strong>Ability — Jet Cruise</strong>
+<br>Your Pokemon in play have no Retreat Cost.","[WL] Dragon Pulse (180)
+<br>Discard the top 2 cards of your deck.",,None,3,1.5,2.58,19.99,2.53,,Holofoil,
+614382,Eevee,Eevee,https://tcgplayer-cdn.tcgplayer.com/product/614382_200w.jpg,3,24163,https://cpt.tcgcsv.com/GMW6,2025-01-31T16:32:29.147,1,013/015,Promo,Colorless,50,Basic,,"[1] Continuous Steps (30x)
+<br>Flip a coin until you get tails. This attack does 30 damage for each heads.",Fx2,None,1,0.01,0.23,19.95,0.23,,Normal,
+614383,Rayquaza,Rayquaza,https://tcgplayer-cdn.tcgplayer.com/product/614383_200w.jpg,3,24163,https://cpt.tcgcsv.com/HMW6,2025-01-31T16:40:04.473,1,014/015,Promo,Colorless,130,Basic,,"[2] Jaw Lock (30)
+<br>During your opponent's next turn, the Defending Pokemon can't retreat.",Lx2,F-30,2,0.07,0.32,176525.28,0.34,,Normal,"[3] Power Blast (120)
+<br>Discard an Energy from this Pokemon."
+614384,Drampa,Drampa,https://tcgplayer-cdn.tcgplayer.com/product/614384_200w.jpg,3,24163,https://cpt.tcgcsv.com/JMW6,2025-02-03T13:58:19.933,1,015/015,Promo,Colorless,120,Basic,,[1] Gentle Slap (20),Fx2,None,2,0.3,0.85,19.95,0.77,,Holofoil,"[3] Raging Cannon (100+)
+<br>If all of your Benched Pokemon have at least 1 damage counter on them, this attack does 120 more damage."
+615609,McDonald's 2024 Match & Battle Pack,McDonalds 2024 Match and Battle Pack,https://tcgplayer-cdn.tcgplayer.com/product/615609_200w.jpg,3,24163,https://cpt.tcgcsv.com/cgX6,2025-03-06T13:58:46.953,1,,,,,,Each promotional paper booster pack contains 4 random promotional cards <em>(1 holofoil & 3 non-holofoil)</em>.,,,,,3.69,4.59,6.97,3.93,,Normal,

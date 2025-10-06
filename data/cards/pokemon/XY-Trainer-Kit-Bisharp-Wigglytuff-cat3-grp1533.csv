@@ -1,0 +1,94 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extAttack2,extWeakness,extResistance,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extCardText
+97792,XY Trainer Kit: Bisharp & Wigglytuff,XY Trainer Kit Bisharp and Wigglytuff,https://tcgplayer-cdn.tcgplayer.com/product/97792_200w.jpg,3,1533,https://cpt.tcgcsv.com/S7P,2021-07-02T21:31:47.07,1,,,,,,,,,,,,,,,,,
+98147,Fletchling,Fletchling,https://tcgplayer-cdn.tcgplayer.com/product/98147_200w.jpg,3,1533,https://cpt.tcgcsv.com/ZgP,2022-12-16T15:56:51.053,0,1/30,Common,Colorless,50,Basic,"[1] Me First
+<br>Draw a card.",[2] Peck (20),Lx2,F-20,1,1.56,2.85,4.89,1.56,,Normal,
+98148,Metal Energy (#2),Metal Energy 2,https://tcgplayer-cdn.tcgplayer.com/product/98148_200w.jpg,3,1533,https://cpt.tcgcsv.com/-gP,2022-12-16T15:57:04.213,0,2/30,Common,Basic Energy,,,,,,,,1.0,1.0,1.0,,,Normal,
+98149,Metal Energy (#3),Metal Energy 3,https://tcgplayer-cdn.tcgplayer.com/product/98149_200w.jpg,3,1533,https://cpt.tcgcsv.com/_gP,2022-12-16T15:57:25.953,0,3/30,Common,Basic Energy,,,,,,,,1.0,1.0,1.0,,,Normal,
+98150,Metal Energy (#5),Metal Energy 5,https://tcgplayer-cdn.tcgplayer.com/product/98150_200w.jpg,3,1533,https://cpt.tcgcsv.com/0hP,2022-12-16T15:58:34.837,0,5/30,Common,Basic Energy,,,,,,,,0.2,0.48,0.75,1.75,,Normal,
+98151,Metal Energy (#6),Metal Energy 6,https://tcgplayer-cdn.tcgplayer.com/product/98151_200w.jpg,3,1533,https://cpt.tcgcsv.com/2hP,2022-12-16T15:58:46.827,0,6/30,Common,Basic Energy,,,,,,,,0.2,0.2,0.2,0.2,,Normal,
+98152,Metal Energy (#7),Metal Energy 7,https://tcgplayer-cdn.tcgplayer.com/product/98152_200w.jpg,3,1533,https://cpt.tcgcsv.com/3hP,2022-12-16T15:58:59.057,0,7/30,Common,Basic Energy,,,,,,,,0.2,0.2,0.2,0.2,,Normal,
+98153,Metal Energy (#8),Metal Energy 8,https://tcgplayer-cdn.tcgplayer.com/product/98153_200w.jpg,3,1533,https://cpt.tcgcsv.com/5hP,2022-12-16T15:59:19.39,0,8/30,Common,Basic Energy,,,,,,,,0.2,0.2,0.2,0.2,,Normal,
+98154,Metal Energy (#9),Metal Energy 9,https://tcgplayer-cdn.tcgplayer.com/product/98154_200w.jpg,3,1533,https://cpt.tcgcsv.com/6hP,2022-12-16T15:59:29.627,0,9/30,Common,Basic Energy,,,,,,,,0.2,0.2,0.2,0.2,,Normal,
+98155,Metal Energy (#10),Metal Energy 10,https://tcgplayer-cdn.tcgplayer.com/product/98155_200w.jpg,3,1533,https://cpt.tcgcsv.com/7hP,2022-12-16T15:59:40.343,0,10/30,Common,Basic Energy,,,,,,,,0.2,0.2,0.2,0.2,,Normal,
+98156,Metal Energy (#18),Metal Energy 18,https://tcgplayer-cdn.tcgplayer.com/product/98156_200w.jpg,3,1533,https://cpt.tcgcsv.com/8hP,2022-12-16T16:11:08.347,0,18/30,Common,Basic Energy,,,,,,,,0.2,0.2,0.2,0.2,,Normal,
+98157,Metal Energy (#22),Metal Energy 22,https://tcgplayer-cdn.tcgplayer.com/product/98157_200w.jpg,3,1533,https://cpt.tcgcsv.com/9hP,2022-12-16T16:13:02.827,0,22/30,Common,Basic Energy,,,,,,,,0.2,0.2,0.2,0.2,,Normal,
+98158,Metal Energy (#24),Metal Energy 24,https://tcgplayer-cdn.tcgplayer.com/product/98158_200w.jpg,3,1533,https://cpt.tcgcsv.com/bhP,2022-12-16T16:13:26.41,0,24/30,Common,Basic Energy,,,,,,,,0.2,0.2,0.2,0.2,,Normal,
+98159,Vigoroth (#4),Vigoroth 4,https://tcgplayer-cdn.tcgplayer.com/product/98159_200w.jpg,3,1533,https://cpt.tcgcsv.com/chP,2022-12-16T15:58:00.947,0,4/30,Common,Colorless,90,Stage 1,[1] Scratch (20),"[2] Reckless Charge (70)
+<br>Flip a coin. If tails, this Pokemon does 20 damage to itself.",Fx2,None,0,0.37,0.99,3.0,1.9,,Normal,
+98160,Honedge (#11),Honedge 11,https://tcgplayer-cdn.tcgplayer.com/product/98160_200w.jpg,3,1533,https://cpt.tcgcsv.com/dhP,2022-12-16T16:00:30.36,0,11/30,Common,Metal,60,Basic,[M] Pierce (10),,Rx2,P-20,2,0.25,0.33,0.36,0.4,,Normal,
+98161,Bidoof,Bidoof,https://tcgplayer-cdn.tcgplayer.com/product/98161_200w.jpg,3,1533,https://cpt.tcgcsv.com/fhP,2022-12-16T16:01:01.1,0,12/30,Common,Colorless,60,Basic,"[2] Hyper Fang (40)
+<br>Flip a coin. If tails, this attack does nothing.",,Fx2,None,3,,,,,,,
+98162,Pawniard (#13),Pawniard 13,https://tcgplayer-cdn.tcgplayer.com/product/98162_200w.jpg,3,1533,https://cpt.tcgcsv.com/ghP,2022-12-16T16:01:28.387,0,13/30,Common,Metal,60,Basic,[M] Pierce (10),[2] Cut (20),Rx2,P-20,1,0.2,0.5,3.98,0.5,,Normal,
+98163,Doublade (#14),Doublade 14,https://tcgplayer-cdn.tcgplayer.com/product/98163_200w.jpg,3,1533,https://cpt.tcgcsv.com/hhP,2022-12-16T16:09:59.62,0,14/30,Common,Metal,80,Stage 1,"[1M] Dual Blades (30x)
+<br>Flip 2 coins. This attack does 30 damage times the number of heads.",,Rx2,P-20,2,1.0,2.06,4.0,2.0,,Normal,
+98164,Slakoth (#15),Slakoth 15,https://tcgplayer-cdn.tcgplayer.com/product/98164_200w.jpg,3,1533,https://cpt.tcgcsv.com/jhP,2022-12-16T16:10:29.42,0,15/30,Common,Colorless,60,Basic,"[2] Big Yawn
+<br>Both Active Pokemon are now Asleep.",,Fx2,None,3,0.4,1.0,6.0,1.66,,Normal,
+98165,Bisharp (#16 Non-Holo),Bisharp 16 Non Holo,https://tcgplayer-cdn.tcgplayer.com/product/98165_200w.jpg,3,1533,https://cpt.tcgcsv.com/khP,2022-12-16T16:10:36.56,0,16/30,Common,Metal,90,Stage 1,"[M] Wicked Jab (20)
+<br>Flip a coin. If heads, your opponent's Active Pokemon is now Paralyzed.",[2M] Metal Claw (70),Rx2,P-20,1,0.75,0.91,1.14,1.08,,Normal,
+98166,Patrat,Patrat,https://tcgplayer-cdn.tcgplayer.com/product/98166_200w.jpg,3,1533,https://cpt.tcgcsv.com/lhP,2022-12-16T16:10:58.56,0,17/30,Common,Colorless,60,Basic,"[1] Safety Check
+<br>Look at 1 of your face-down Prize cards.",,Fx2,None,1,0.18,2.37,999.0,0.1,,Normal,
+98167,Tierno (Bisharp),Tierno Bisharp,https://tcgplayer-cdn.tcgplayer.com/product/98167_200w.jpg,3,1533,https://cpt.tcgcsv.com/mhP,2022-12-16T16:11:34.333,0,19/30,Common,Supporter,,,,,,,,0.25,0.4,1.49,0.3,,Normal,Draw 3 cards.
+98168,Trevor (Bisharp),Trevor Bisharp,https://tcgplayer-cdn.tcgplayer.com/product/98168_200w.jpg,3,1533,https://cpt.tcgcsv.com/nhP,2022-12-16T16:11:48.53,1,20/30,Common,Supporter,,,,,,,,0.92,1.25,10.0,1.25,,Normal,"Search your deck for a Pokemon, reveal it, and put it into your hand. Shuffle your deck afterward."
+98169,Pawniard (#21),Pawniard 21,https://tcgplayer-cdn.tcgplayer.com/product/98169_200w.jpg,3,1533,https://cpt.tcgcsv.com/phP,2022-12-16T16:12:47.76,0,21/30,Common,Metal,60,Basic,[M] Pierce (10),[2] Cut (20),Rx2,P-20,1,0.5,0.5,999.0,0.53,,Normal,
+98170,Doublade (#23),Doublade 23,https://tcgplayer-cdn.tcgplayer.com/product/98170_200w.jpg,3,1533,https://cpt.tcgcsv.com/qhP,2022-12-16T16:13:10.383,0,23/30,Common,Metal,80,Stage 1,"[1M] Dual Blades (30x)
+<br>Flip 2 coins. This attack does 30 damage times the number of heads.",,Rx2,P-20,2,1.68,2.0,4.0,1.67,,Normal,
+98171,Potion (#25 - Bisharp),Potion 25 Bisharp,https://tcgplayer-cdn.tcgplayer.com/product/98171_200w.jpg,3,1533,https://cpt.tcgcsv.com/rhP,2022-12-16T16:13:48.367,0,25/30,Common,Item,,,,,,,,0.2,0.21,1.99,,,Normal,Heal 30 damage from 1 of your Pokemon.
+98172,Potion (#29 - Bisharp),Potion 29 Bisharp,https://tcgplayer-cdn.tcgplayer.com/product/98172_200w.jpg,3,1533,https://cpt.tcgcsv.com/shP,2022-12-16T16:14:49.95,0,29/30,Common,Item,,,,,,,,0.2,0.5,0.8,,,Normal,Heal 30 damage from 1 of your Pokemon.
+98173,Slakoth (#26),Slakoth 26,https://tcgplayer-cdn.tcgplayer.com/product/98173_200w.jpg,3,1533,https://cpt.tcgcsv.com/thP,2022-12-16T16:13:55.763,0,26/30,Common,Colorless,60,Basic,"[2] Big Yawn
+<br>Both Active Pokemon are now Asleep.",,Fx2,None,3,0.89,5.64,6.0,0.93,,Normal,
+98174,Honedge (#27),Honedge 27,https://tcgplayer-cdn.tcgplayer.com/product/98174_200w.jpg,3,1533,https://cpt.tcgcsv.com/vhP,2022-12-16T16:14:19.323,0,27/30,Common,Metal,60,Basic,[M] Pierce (10),,Rx2,P-20,2,0.75,0.99,2.75,,,Normal,
+98175,Vigoroth (#28),Vigoroth 28,https://tcgplayer-cdn.tcgplayer.com/product/98175_200w.jpg,3,1533,https://cpt.tcgcsv.com/whP,2022-12-16T16:14:35.597,0,28/30,Common,Colorless,90,Stage 1,[1] Scratch (20),"[2] Reckless Charge (70)
+<br>Flip a coin. If tails, this Pokemon does 20 damage to itself.",Fx2,None,0,0.97,1.0,1.5,0.98,,Normal,
+98176,Bisharp (#30 Holo),Bisharp 30 Holo,https://tcgplayer-cdn.tcgplayer.com/product/98176_200w.jpg,3,1533,https://cpt.tcgcsv.com/xhP,2022-12-16T16:14:57.13,0,30/30,Common,Metal,90,Stage 1,"[M] Wicked Jab (20)
+<br>Flip a coin. If heads, your opponent's Active Pokemon is now Paralyzed.",[2M] Metal Claw (70),Rx2,P-20,1,0.4,0.9,5.0,0.9,,Holofoil,
+98177,Swirlix (#1),Swirlix 1,https://tcgplayer-cdn.tcgplayer.com/product/98177_200w.jpg,3,1533,https://cpt.tcgcsv.com/zhP,2022-12-16T15:56:56.873,0,1/30,Common,Fairy,60,Basic,"[Y] Draining Kiss (10)
+<br>Heal 10 damage from this Pokemon.",,Mx2,D-20,1,0.15,2.49,4.83,5.0,,Normal,
+98178,Pidgeotto (#2),Pidgeotto 2,https://tcgplayer-cdn.tcgplayer.com/product/98178_200w.jpg,3,1533,https://cpt.tcgcsv.com/BhP,2022-12-16T15:57:10.423,0,2/30,Common,Colorless,80,Stage 1,"[1] Sand Attack 
+<br>If the Defending Pokemon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.","[2] Ambush (20+)
+<br>Flip a coin. If heads, this attack does 20 more damage.",Lx2,F-20,1,1.07,2.71,4.5,4.0,,Normal,
+98179,Fairy Energy (#3),Fairy Energy 3,https://tcgplayer-cdn.tcgplayer.com/product/98179_200w.jpg,3,1533,https://cpt.tcgcsv.com/ChP,2022-12-16T15:57:19.117,0,3/30,Common,Basic Energy,,,,,,,,,,,,,,
+98180,Fairy Energy (#5),Fairy Energy 5,https://tcgplayer-cdn.tcgplayer.com/product/98180_200w.jpg,3,1533,https://cpt.tcgcsv.com/DhP,2022-12-16T15:58:26.417,0,5/30,Common,Basic Energy,,,,,,,,,,,,,,
+98181,Fairy Energy (#6),Fairy Energy 6,https://tcgplayer-cdn.tcgplayer.com/product/98181_200w.jpg,3,1533,https://cpt.tcgcsv.com/FhP,2022-12-16T15:58:41.333,0,6/30,Common,Basic Energy,,,,,,,,,,,,,,
+98182,Fairy Energy (#7),Fairy Energy 7,https://tcgplayer-cdn.tcgplayer.com/product/98182_200w.jpg,3,1533,https://cpt.tcgcsv.com/GhP,2022-12-16T15:58:53.013,0,7/30,Common,Basic Energy,,,,,,,,,,,,,,
+98183,Fairy Energy (#8),Fairy Energy 8,https://tcgplayer-cdn.tcgplayer.com/product/98183_200w.jpg,3,1533,https://cpt.tcgcsv.com/HhP,2022-12-16T15:59:13.707,0,8/30,Common,Basic Energy,,,,,,,,,,,,,,
+98184,Fairy Energy (#9),Fairy Energy 9,https://tcgplayer-cdn.tcgplayer.com/product/98184_200w.jpg,3,1533,https://cpt.tcgcsv.com/JhP,2022-12-16T15:59:24.603,0,9/30,Common,Basic Energy,,,,,,,,1.35,2.06,2.76,3.0,,Normal,
+98185,Fairy Energy (#10),Fairy Energy 10,https://tcgplayer-cdn.tcgplayer.com/product/98185_200w.jpg,3,1533,https://cpt.tcgcsv.com/KhP,2022-12-16T15:59:34.967,0,10/30,Common,Basic Energy,,,,,,,,,,,,,,
+98186,Fairy Energy (#17),Fairy Energy 17,https://tcgplayer-cdn.tcgplayer.com/product/98186_200w.jpg,3,1533,https://cpt.tcgcsv.com/LhP,2022-12-16T16:10:51.187,0,17/30,Common,Basic Energy,,,,,,,,1.35,2.06,2.76,3.0,,Normal,
+98187,Fairy Energy (#21),Fairy Energy 21,https://tcgplayer-cdn.tcgplayer.com/product/98187_200w.jpg,3,1533,https://cpt.tcgcsv.com/MhP,2022-12-16T16:12:38.607,0,21/30,Common,Basic Energy,,,,,,,,,,,,,,
+98188,Fairy Energy (#22),Fairy Energy 22,https://tcgplayer-cdn.tcgplayer.com/product/98188_200w.jpg,3,1533,https://cpt.tcgcsv.com/NhP,2022-12-16T16:12:54.963,0,22/30,Common,Basic Energy,,,,,,,,1.35,1.35,1.35,2.78,,Normal,
+98189,Fairy Energy (#27),Fairy Energy 27,https://tcgplayer-cdn.tcgplayer.com/product/98189_200w.jpg,3,1533,https://cpt.tcgcsv.com/PhP,2022-12-16T16:14:12.307,0,27/30,Common,Basic Energy,,,,,,,,1.35,1.35,1.35,3.0,,Normal,
+98190,Sentret,Sentret,https://tcgplayer-cdn.tcgplayer.com/product/98190_200w.jpg,3,1533,https://cpt.tcgcsv.com/QhP,2022-12-16T15:57:32.79,0,4/30,Common,Colorless,50,Basic,[1] Scratch (10),[2] Tail Smack (20),Fx2,None,1,1.15,2.75,5.0,,,Normal,
+98191,Pidgey (#11),Pidgey 11,https://tcgplayer-cdn.tcgplayer.com/product/98191_200w.jpg,3,1533,https://cpt.tcgcsv.com/RhP,2022-12-16T16:00:48.683,0,11/30,Common,Colorless,60,Basic,"[1] Peck Off (10)
+<br>Before doing damage, discard all Pokemon Tool cards attached to your opponent's Active Pokemon.",,Lx2,F-20,1,7.64,9.81,50.0,10.5,,Normal,
+98192,Jigglypuff (#12),Jigglypuff 12,https://tcgplayer-cdn.tcgplayer.com/product/98192_200w.jpg,3,1533,https://cpt.tcgcsv.com/ShP,2022-12-16T16:01:15.237,0,12/30,Common,Fairy,60,Basic,[1] Rollout (10),"[Y] Heartfelt Song
+<br>Discard a Darkness Energy attached to your opponent's Active Pokemon.",Mx2,D-20,1,,,,,,,
+98193,Clefairy (#13),Clefairy 13,https://tcgplayer-cdn.tcgplayer.com/product/98193_200w.jpg,3,1533,https://cpt.tcgcsv.com/ThP,2022-12-16T16:12:31.107,0,13/30,Common,Fairy,60,Basic,"[1] Moonlight
+<br>Heal 30 damage from this Pokemon.",[1Y] Pound (20),Mx2,D-20,1,4.99,5.63,10.96,4.95,,Normal,
+98194,Wigglytuff (#14 Non-Holo),Wigglytuff 14 Non Holo,https://tcgplayer-cdn.tcgplayer.com/product/98194_200w.jpg,3,1533,https://cpt.tcgcsv.com/VhP,2022-12-16T16:10:09.883,0,14/30,Common,Fairy,100,Stage 1,"[1] Balloon Barrage (20x)
+<br>This attack does 20 damage times the amount of Energy attached to this Pokemon.","[1YY] Double-Edge (90)
+<br>This Pokemon does 10 damage to itself.",Mx2,D-20,2,,,,,,,
+98195,Clefable (#16),Clefable 16,https://tcgplayer-cdn.tcgplayer.com/product/98195_200w.jpg,3,1533,https://cpt.tcgcsv.com/WhP,2022-12-16T16:10:43.717,0,16/30,Common,Fairy,90,Stage 1,"[1] Follow Me
+<br>Switch 1 of your opponent's Benched Pokemon with your opponent's Active Pokemon.","[1Y] Moonblast (30)
+<br>During your opponent's next turn, any damage done by attacks from the Defending Pokemon is reduced by 30 <i>(before applying Weakness and Resistance).</i>",Mx2,D-20,1,0.75,2.19,3.62,0.95,,Normal,
+98196,Potion (#15 - Wigglytuff),Potion 15 Wigglytuff,https://tcgplayer-cdn.tcgplayer.com/product/98196_200w.jpg,3,1533,https://cpt.tcgcsv.com/XhP,2022-12-16T16:10:20.667,0,15/30,Common,Item,,,,,,,,0.2,0.35,1.0,0.25,,Normal,Heal 30 damage from 1 of your Pokemon.
+98197,Potion (#20 - Wigglytuff),Potion 20 Wigglytuff,https://tcgplayer-cdn.tcgplayer.com/product/98197_200w.jpg,3,1533,https://cpt.tcgcsv.com/ZhP,2022-12-16T16:11:41.393,0,20/30,Common,Item,,,,,,,,0.25,0.5,1.0,,,Normal,Heal 30 damage from 1 of your Pokemon.
+98198,Swirlix (#18),Swirlix 18,https://tcgplayer-cdn.tcgplayer.com/product/98198_200w.jpg,3,1533,https://cpt.tcgcsv.com/-hP,2022-12-16T16:11:17.603,0,18/30,Common,Fairy,60,Basic,"[Y] Draining Kiss (10)
+<br>Heal 10 damage from this Pokemon.",,Mx2,D-20,1,2.66,4.14,6.0,5.38,,Normal,
+98199,Clefairy (#19),Clefairy 19,https://tcgplayer-cdn.tcgplayer.com/product/98199_200w.jpg,3,1533,https://cpt.tcgcsv.com/_hP,2022-12-16T16:11:26.493,0,19/30,Common,Fairy,60,Basic,"[1] Moonlight
+<br>Heal 30 damage from this Pokemon.",[1Y] Pound (20),Mx2,D-20,1,7.36,7.36,7.36,4.5,,Normal,
+98200,Pidgeotto (#23),Pidgeotto 23,https://tcgplayer-cdn.tcgplayer.com/product/98200_200w.jpg,3,1533,https://cpt.tcgcsv.com/0jP,2022-12-16T16:13:18.1,0,23/30,Common,Colorless,80,Stage 1,"[1] Sand Attack 
+<br>If the Defending Pokemon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.","[2] Ambush (20+)
+<br>Flip a coin. If heads, this attack does 20 more damage.",Lx2,F-20,1,1.69,3.5,6.2,5.49,,Normal,
+98201,Trevor (Wigglytuff),Trevor Wigglytuff,https://tcgplayer-cdn.tcgplayer.com/product/98201_200w.jpg,3,1533,https://cpt.tcgcsv.com/2jP,2022-12-16T16:13:33.627,1,24/30,Common,Supporter,,,,,,,,0.92,1.0,7.0,2.0,,Normal,"Search your deck for a Pokemon, reveal it, and put it into your hand. Shuffle your deck afterward."
+98202,Jigglypuff (#25),Jigglypuff 25,https://tcgplayer-cdn.tcgplayer.com/product/98202_200w.jpg,3,1533,https://cpt.tcgcsv.com/3jP,2022-12-16T16:13:41.153,0,25/30,Common,Fairy,60,Basic,[1] Rollout (10),"[Y] Heartfelt Song
+<br>Discard a Darkness Energy attached to your opponent's Active Pokemon.",Mx2,D-20,1,999.0,999.0,999.0,2.25,,Normal,
+98203,Tierno (Wigglytuff),Tierno Wigglytuff,https://tcgplayer-cdn.tcgplayer.com/product/98203_200w.jpg,3,1533,https://cpt.tcgcsv.com/5jP,2022-12-16T16:14:04.93,0,26/30,Common,Supporter,,,,,,,,0.25,0.3,0.4,0.4,,Normal,Draw 3 cards.
+98204,Clefable (#28),Clefable 28,https://tcgplayer-cdn.tcgplayer.com/product/98204_200w.jpg,3,1533,https://cpt.tcgcsv.com/6jP,2022-12-16T16:14:28.097,0,28/30,Common,Fairy,90,Stage 1,"[1] Follow Me
+<br>Switch 1 of your opponent's Benched Pokemon with your opponent's Active Pokemon.","[1Y] Moonblast (30)
+<br>During your opponent's next turn, any damage done by attacks from the Defending Pokemon is reduced by 30 <i>(before applying Weakness and Resistance).</i>",Mx2,D-20,1,0.8,0.88,7.99,0.99,,Normal,
+98205,Pidgey (#29),Pidgey 29,https://tcgplayer-cdn.tcgplayer.com/product/98205_200w.jpg,3,1533,https://cpt.tcgcsv.com/7jP,2022-12-16T16:14:42.723,0,29/30,Common,Colorless,60,Basic,"[1] Peck Off (10)
+<br>Before doing damage, discard all Pokemon Tool cards attached to your opponent's Active Pokemon.",,Lx2,F-20,1,6.5,6.9,8.06,4.2,,Normal,
+98206,Wigglytuff (#30 Holo),Wigglytuff 30 Holo,https://tcgplayer-cdn.tcgplayer.com/product/98206_200w.jpg,3,1533,https://cpt.tcgcsv.com/8jP,2022-12-16T16:15:05.23,0,30/30,Common,Fairy,100,Stage 1,"[1] Balloon Barrage (20x)
+<br>This attack does 20 damage times the amount of Energy attached to this Pokemon.","[1YY] Double-Edge (90)
+<br>This Pokemon does 10 damage to itself.",Mx2,D-20,2,0.99,2.0,4.98,1.74,,Holofoil,
+283260,Code Card - XY Trainer Kit: Bisharp & Wigglytuff,Code Card XY Trainer Kit Bisharp and Wigglytuff,https://tcgplayer-cdn.tcgplayer.com/product/283260_200w.jpg,3,1533,https://cpt.tcgcsv.com/dkh3,2023-03-31T16:31:12.98,1,,Code Card,,,,,,,,,,,,,,,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product."

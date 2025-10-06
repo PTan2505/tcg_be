@@ -1,0 +1,199 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extCardText,extAttack1,extWeakness,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extResistance,extAttack2,extAttack3
+131695,M Lucario EX - 55a/111,M Lucario EX 55a 111,https://tcgplayer-cdn.tcgplayer.com/product/131695_200w.jpg,3,1938,https://cpt.tcgcsv.com/WH32,2022-09-16T20:23:53.527,1,055a/111,Promo,Fighting,220,Mega,"<em>Mega Evolution rule — When 1 of your Pokémon becomes a Mega Evolution Pokémon, your turn ends.</em>
+<br><br>
+<em>Pokémon-EX rule — When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.</em>","[FFF] Rising Fist (140)
+<br>Discard an Energy attached to your opponent's Active Pokémon.",Px2,2,73.18,97.92,337.49,97.12,128.99,Holofoil,,,
+131696,M Manectric EX - 24a/119,M Manectric EX 24a 119,https://tcgplayer-cdn.tcgplayer.com/product/131696_200w.jpg,3,1938,https://cpt.tcgcsv.com/XH32,2022-11-04T09:12:18.11,1,024a/119,Promo,Lightning,210,Mega,"<em>Mega Evolution rule — When 1 of your Pokémon becomes a Mega Evolution Pokémon, your turn ends.</em>
+<br>
+<em>Pokémon-EX rule — When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.</em>","[1L] Turbo Bolt (110)
+Attach 2 basic Energy cards from your discard pile to 1 of your Benched Pokémon.",Fx2,,13.6,21.53,42.69,20.71,27.95,Holofoil,M-20,,
+131697,Jolteon EX - 28a/83,Jolteon EX 28a 83,https://tcgplayer-cdn.tcgplayer.com/product/131697_200w.jpg,3,1938,https://cpt.tcgcsv.com/ZH32,2022-09-16T20:18:40.517,1,028a/083,Promo,Lightning,160,Basic,"<em>Pokémon-EX rule — When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.</em>","[L] Swift (30)
+<br>This attack's damage isn't affected by Weakness, Resistance, or any other effects on your opponent's Active Pokémon.",Fx2,,15.03,35.84,89.69,28.89,23.0,Holofoil,M-20,"[2L] Flash Ray (70)
+<br>During your opponent's next turn, prevent all damage done to this Pokémon by attacks from Basic Pokémon.",
+131698,Zygarde EX - 54a/124,Zygarde EX 54a 124,https://tcgplayer-cdn.tcgplayer.com/product/131698_200w.jpg,3,1938,https://cpt.tcgcsv.com/-H32,2023-08-22T13:43:42.517,1,054a/124,Promo,Fighting,190,Basic,"<em>Pokémon-EX rule — When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.</em>","[F] Land's Pulse (20+)
+<br>If there is any Stadium card in play, this attack does 20 more damage.",Gx2,3,59.47,175.0,299.95,56.73,,Holofoil,,"[1F] Cell Storm (60)
+<br>Heal 30 damage from this Pokémon.",[1FF] Land's Wrath (100)
+133813,Professor Sycamore - 107a/122 (Holofoil),Professor Sycamore 107a 122 Holofoil,https://tcgplayer-cdn.tcgplayer.com/product/133813_200w.jpg,3,1938,https://cpt.tcgcsv.com/hx52,2024-07-26T15:59:55.527,1,107a/122,Promo,Supporter,,,"Discard your hand and draw 7 cards.
+<br><br>
+You may play only 1 Supporter card during your turn <em>(before your attack)</em>.",,,,0.25,0.74,10.75,0.73,0.5,Holofoil,,,
+133814,Professor Sycamore - 107a/122 (Non-Holo),Professor Sycamore 107a 122 Non Holo,https://tcgplayer-cdn.tcgplayer.com/product/133814_200w.jpg,3,1938,https://cpt.tcgcsv.com/jx52,2022-09-16T16:20:55.613,1,107a/122,Promo,Supporter,,,"Discard your hand and draw 7 cards.
+<br><br> You may play only 1 Supporter card during your turn <em>(before your attack)</em>.",,,,0.23,0.46,7.0,0.33,0.49,Normal,,,
+133815,Trainers' Mail - 92a/108 (Non-Holo),Trainers Mail 92a 108 Non Holo,https://tcgplayer-cdn.tcgplayer.com/product/133815_200w.jpg,3,1938,https://cpt.tcgcsv.com/kx52,2022-09-16T20:49:45.707,1,092a/108,Promo,Item,,,"Look at the top 4 cards of your deck. You may reveal a Trainer card you find there (except for Trainers' Mail) and put it into your hand. Shuffle the other cards back into your deck.
+<br><br>
+You may play as many Item cards as you like during your turn <em>(before your attack)</em>.",,,,0.75,1.91,7.0,1.99,2.95,Normal,,,
+133816,Trainers' Mail - 92a/108 (Holo),Trainers Mail 92a 108 Holo,https://tcgplayer-cdn.tcgplayer.com/product/133816_200w.jpg,3,1938,https://cpt.tcgcsv.com/lx52,2022-09-16T20:48:57.473,1,092a/108,Promo,Item,,,"Look at the top 4 cards of your deck. You may reveal a Trainer card you find there (except for Trainers' Mail) and put it into your hand. Shuffle the other cards back into your deck.
+<br><br>
+You may play as many Item cards as you like during your turn <em>(before your attack)</em>.",,,,1.5,2.25,7.75,2.35,2.0,Holofoil,,,
+148226,Premium Trainer's XY Collection,Premium Trainers XY Collection,https://tcgplayer-cdn.tcgplayer.com/product/148226_200w.jpg,3,1938,https://cpt.tcgcsv.com/xjc2,2018-03-30T17:58:24.163,1,,,,,,"The Pokemon TCG: Premium Trainer's XY Collection includes the following:
+<br>• Full-art foil promo cards featuring Shaymin EX and Yveltal EX, with special art treatments!
+<br>• 12 more full-art foil promo cards including Aegislash EX, Jirachi, N (Supporter), and more!
+<br>• 2 Pokemon TCG booster packs from the XY Series
+<br>• A metal coin featuring a Pikachu head and tail
+<br>• 2 sets of 65 card sleeves featuring Xerneas and Yveltal
+<br>• A double deck box featuring Xerneas and Yveltal
+<br>• 2 sets of tournament-ready dice
+<br>• A code card for the Pokemon Trading Card Game Online
+<br>• A large, kickstand-style box to hold it all",,,,2204.98,2750.0,2999.99,1064.0,,Normal,,,
+148339,Blacksmith - 88a/106,Blacksmith 88a 106,https://tcgplayer-cdn.tcgplayer.com/product/148339_200w.jpg,3,1938,https://cpt.tcgcsv.com/Plc2,2022-09-16T19:52:18.9,1,088a/106,Promo,Supporter,,,"Attach 2 Fire Energy cards from your discard pile to 1 of your Fire Pokémon.
+<br><br>
+You may play only 1 Supporter card during your turn <em>(before your attack)</em>.",,,,18.09,28.68,75.0,22.15,,Holofoil,,,
+148340,Aegislash EX - 65a/119,Aegislash EX 65a 119,https://tcgplayer-cdn.tcgplayer.com/product/148340_200w.jpg,3,1938,https://cpt.tcgcsv.com/Qlc2,2022-11-01T16:35:23.177,1,065a/119,Promo,Metal,170,Basic,"<strong>Ability — Mighty Shield</strong>
+<br>
+Prevent all damage done to this Pokémon by attacks from each of your opponent's Pokémon that has Special Energy attached to it.","[3] Slash Blast (40+)
+<br>
+This attack does 20 more damage for each Metal Energy attached to this Pokemon.",Rx2,3,9.82,19.27,49.99,9.8,,Holofoil,P-20,,
+148341,Delinquent - 98b/122 (Full Art),Delinquent 98b 122 Full Art,https://tcgplayer-cdn.tcgplayer.com/product/148341_200w.jpg,3,1938,https://cpt.tcgcsv.com/Rlc2,2023-09-02T05:35:01.03,1,098b/122,Promo,Supporter,,,"Discard any Stadium card in play. If you do, your opponent discards 3 cards from his or her hand.
+<br><br>
+You may play only 1 Supporter card during your turn <em>(before your attack)</em>",,,,37.49,51.29,69.99,51.29,,Holofoil,,,
+148342,Hex Maniac - 75a/98,Hex Maniac 75a 98,https://tcgplayer-cdn.tcgplayer.com/product/148342_200w.jpg,3,1938,https://cpt.tcgcsv.com/Slc2,2022-11-23T15:30:41.53,1,075a/098,Promo,Supporter,,,"Until the end of your opponent's next turn, each Pokémon in play, in each player's hand, and in each player's discard pile has no Abilities. (This includes cards that come into play on that turn.)
+<br><br> You may play only 1 Supporter card during your turn <em>(before your attack)</em>.",,,,98.87,116.99,399.96,115.29,118.99,Holofoil,,,
+148343,Jirachi - XY67a,Jirachi XY67a,https://tcgplayer-cdn.tcgplayer.com/product/148343_200w.jpg,3,1938,https://cpt.tcgcsv.com/Tlc2,2024-05-07T12:09:30.843,1,XY67a,Promo,Metal,60,Basic,,"[1] Stardust (10)
+<br>Discard a Special Energy attached to your opponent's Active Pokémon. If you do, prevent all effects of attacks, including damage, done to this Pokémon during your opponent's next turn.",Rx2,1,125.0,177.99,350.0,124.9,299.99,Holofoil,P-20,"[1M] Dream Dance (20)
+<br>Both Active Pokémon are now Asleep.",
+148344,Karen - XY177a,Karen XY177a,https://tcgplayer-cdn.tcgplayer.com/product/148344_200w.jpg,3,1938,https://cpt.tcgcsv.com/Vlc2,2022-09-16T20:19:47.71,1,XY177a,Promo,Supporter,,,"Each player shuffles all Pokémon in his or her discard pile into his or her deck.
+<br><br> You may play only 1 Supporter card during your turn <em>(before your attack)</em>.",,,,44.99,57.08,254.6,56.15,59.99,Holofoil,,,
+148345,M Camerupt EX - XY198a,M Camerupt EX XY198a,https://tcgplayer-cdn.tcgplayer.com/product/148345_200w.jpg,3,1938,https://cpt.tcgcsv.com/Wlc2,2022-09-16T20:22:30.747,1,XY198a,Promo,Fire,230,Mega Evolution,"<em>Mega Evolution rule — When 1 of your Pokémon becomes a Mega Evolution Pokémon, your turn ends.</em>
+<br><br>
+<em>Pokémon-EX rule — When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.</em>","[2RR] Magma Eruption (120+)
+<br>You may discard the top 3 cards of each player's deck. If you do, this attack does 40 more damage for each Energy card you discarded this way.",Wx2,4,22.0,31.89,43.5,28.11,,Holofoil,,,
+148346,M Sharpedo EX - XY200a,M Sharpedo EX XY200a,https://tcgplayer-cdn.tcgplayer.com/product/148346_200w.jpg,3,1938,https://cpt.tcgcsv.com/Xlc2,2023-02-20T06:12:48.123,1,XY200a,Promo,Darkness,210,Mega Evolution,"<em>Mega Evolution rule — When 1 of your Pokémon becomes a Mega Evolution Pokémon, your turn ends.</em>
+<br><br>
+<em>Pokémon-EX rule — When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.</em>","[1DD] Torpedo Strike (120)
+<br>This attack does 10 damage to each of your opponent's Benched Pokémon for each Colorless in that Pokémon's Retreat Cost. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",Lx2,,63.0,69.99,99.94,59.47,69.98,Holofoil,,,
+148347,N (Supporter) - 105a/124,N Supporter 105a 124,https://tcgplayer-cdn.tcgplayer.com/product/148347_200w.jpg,3,1938,https://cpt.tcgcsv.com/Zlc2,2022-09-16T15:26:43.937,1,105a/124,Promo,Supporter,,,"Each player shuffles his or her hand into his or her deck. Then, each player draws a card for each of his or her remaining Prize cards.
+<br><br>
+You may play only 1 Supporter card during your turn <em>(before your attack)</em>.",,,,104.99,153.06,280.0,150.54,,Holofoil,,,
+148348,Regirock EX - 43a/124,Regirock EX 43a 124,https://tcgplayer-cdn.tcgplayer.com/product/148348_200w.jpg,3,1938,https://cpt.tcgcsv.com/-lc2,2023-10-27T14:10:08.42,1,043a/124,Promo,Fighting,180,Basic,"<strong>Ability — Regi Power</strong>
+<br>
+The attacks of your Fighting Pokémon (excluding Regirock-EX) do 10 more damage to your opponent's Active Pokémon <em>(before applying Weakness and Resistance)</em>.
+<br><br>
+<em>Pokémon-EX rule — When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.</em>","[FFF] Bedrock Press (100)
+<br>During your opponent's next turn, any damage done to this Pokémon by attacks is reduced by 20 <em>(after applying Weakness and Resistance.)</em>.",Gx2,3,13.83,22.27,48.98,21.91,17.99,Holofoil,,,
+148349,Shauna - 111a/124,Shauna 111a 124,https://tcgplayer-cdn.tcgplayer.com/product/148349_200w.jpg,3,1938,https://cpt.tcgcsv.com/_lc2,2022-09-16T20:33:48.39,1,111a/124,Promo,Supporter,,,"Shuffle your hand into your deck. Then, draw 5 cards.
+<br><br> You may play only 1 Supporter card during your turn <em>(before your attack)</em>.",,,,35.5,46.97,120.0,46.1,39.04,Holofoil,,,
+148350,Shaymin EX - 77a/108,Shaymin EX 77a 108,https://tcgplayer-cdn.tcgplayer.com/product/148350_200w.jpg,3,1938,https://cpt.tcgcsv.com/0mc2,2022-09-16T20:35:15.367,1,077a/108,Promo,Colorless,110,Basic,"<strong>Ability — Set Up</strong>
+When you play this Pokémon from your hand onto your Bench, you may draw cards until you have 6 cards in your hand.
+<br><br>
+<em>Pokémon-EX rule — When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.</em>","[2] Sky Return (30)
+<br>Return this Pokémon and all cards attached to it to your hand.",Lx2,1,189.0,210.0,1000.0,180.34,249.99,Holofoil,F-20,,
+148351,Team Flare Grunt - 73a/83,Team Flare Grunt 73a 83,https://tcgplayer-cdn.tcgplayer.com/product/148351_200w.jpg,3,1938,https://cpt.tcgcsv.com/2mc2,2022-09-16T20:47:12.397,1,073a/083,Promo,Supporter,,,"Discard an Energy attached to your opponent's Active Pokémon.
+<br><br>
+You may play only 1 Supporter card during your turn <em>(before your attack)</em>.",,,,11.99,16.45,80.0,15.17,15.27,Holofoil,,,
+148352,Yveltal EX - XY150a,Yveltal EX XY150a,https://tcgplayer-cdn.tcgplayer.com/product/148352_200w.jpg,3,1938,https://cpt.tcgcsv.com/3mc2,2022-09-16T20:51:17.163,1,XY150a,Promo,Darkness,170,Basic,"<em>Pokémon-EX rule — When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.</em>","[1D] Evil Ball (20+)
+<br>This attack does 20 more damage times the amount of Energy attached to both Active Pokémon.",Lx2,2,143.45,179.99,220.0,144.08,178.56,Holofoil,F-20,"[2D] Y Cyclone (90)
+<br>Move an Energy from this Pokémon to 1 of your Benched Pokémon.",
+148388,Slowking - 21/122 (Cosmos Holo),Slowking 21 122 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/148388_200w.jpg,3,1938,https://cpt.tcgcsv.com/Nmc2,2023-09-01T08:16:10.813,1,021/122,Promo,Water,100,Stage 1,"<strong>Ability — Royal Flash</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may flip a coin. If heads, move an Energy from your opponent's Active Pokémon to 1 of his or her Benched Pokémon.","[1W] Psych Up (40)
+<br>During your next turn, this Pokémon's Psych Up attack does 40 more damage <em>(before applying Weakness and Resistance)</em>.",Gx2,2,0.67,1.28,2.99,2.05,,Holofoil,,,
+155599,Guzzlord GX - 63a/111,Guzzlord GX 63a 111,https://tcgplayer-cdn.tcgplayer.com/product/155599_200w.jpg,3,1938,https://cpt.tcgcsv.com/_fg2,2022-09-16T20:03:44.1,1,063a/111,Promo,Darkness,210,Basic,"<em>Pokémon-GX rule — When your Pokémon-GX is Knocked Out, your opponent takes 2 Prize cards.</em>","[D] Eat Sloppily
+<br>Discard the top 5 cards of your deck. If any of those cards are Energy cards, attach them to this Pokémon.",Fx2,4,18.88,26.45,60.0,14.17,,Holofoil,P-20,[2DDD] Tyrannical Hole (180),"<span style=""color:DarkRed""><strong>[DDDDD] Glutton GX (100)</strong>
+<br>If your opponent's Pokémon is Knocked Out by damage from this attack, take 2 more Prize cards.
+<em> (You can't use more than 1 GX attack in a game.)</em></span>"
+161362,Porygon-Z - 105a/147,Porygon Z 105a 147,https://tcgplayer-cdn.tcgplayer.com/product/161362_200w.jpg,3,1938,https://cpt.tcgcsv.com/gzj2,2022-09-16T16:15:40.76,1,105a/147,Promo,Colorless,130,Stage 2,"<strong>Ability — Initialize</strong>
+<br>When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may devolve each of your opponent's evolved Pokémon by putting the highest Stage Evolution card on it into your opponent's hand.","[3] Zap Cannon (80)
+<br>This Pokémon can't use Zap Cannon during your next turn.",Fx2,2,0.44,0.94,25.0,0.79,,Holofoil,None,,
+162041,Darkrai GX - 88a/147,Darkrai GX 88a 147,https://tcgplayer-cdn.tcgplayer.com/product/162041_200w.jpg,3,1938,https://cpt.tcgcsv.com/RQj2,2025-05-05T14:44:41.377,1,088a/147,Promo,Darkness,180,Basic,"<strong>Ability — Restoration</strong>
+<br> Once during your turn <em>(before your attack)</em>, if this Pokémon is in your discard pile, you may put it onto your Bench. Then, attach a Darkness Energy card from your discard pile to this Pokémon.
+<br><br>
+<em>Pokémon-GX rule — When your Pokémon-GX is Knocked Out, your opponent takes 2 Prize cards.</em>","[1DD] Dark Cleave (130)
+<br>This attack's damage isn't affected by Resistance.",Fx2,2,4.24,10.28,29.99,10.28,29.98,Holofoil,P-20,"<span style=""color:Teal""><strong>[1DD] Dead End GX</strong>
+<br>If your opponent's Active Pokémon is affected by a Special Condition, that Pokémon is Knocked Out. <em>(You can't use more than 1 GX attack in a game.)</em></span>",
+164234,Entei GX - 10a/73,Entei GX 10a 73,https://tcgplayer-cdn.tcgplayer.com/product/164234_200w.jpg,3,1938,https://cpt.tcgcsv.com/JJk2,2024-01-16T16:08:17.83,1,010a/073,Promo,Fire,180,Basic,,[1R] Combustion (50),Wx2,1,2.6,4.35,8.0,4.21,4.6,Holofoil,,"[1RR] Fire Fang (100)
+<br>Your opponent's Active Pokémon is now Burned.","<span style=""color:Teal""><strong>[1RR] Brave Burn GX</strong>
+<br>This attack does 150 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.) (You can't use more than 1 GX attack in a game.)</em></span>"
+171033,Kirlia - 92a/147,Kirlia 92a 147,https://tcgplayer-cdn.tcgplayer.com/product/171033_200w.jpg,3,1938,https://cpt.tcgcsv.com/Hqn2,2022-09-16T20:21:12.58,1,092a/147,Promo,Fairy,80,Stage 1,,[1] Smack (20),Mx2,1,1.0,5.57,10.0,1.71,,Holofoil,D-20,[1Y] Magical Shot (30),
+173381,Tapu Koko - SM30a,Tapu Koko SM30a,https://tcgplayer-cdn.tcgplayer.com/product/173381_200w.jpg,3,1938,https://cpt.tcgcsv.com/Fmp2,2022-10-15T11:00:09.977,1,SM30a,Promo,Lightning,110,Basic,,"[2] Flying Flip
+<br>This attack does 20 damage to each of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",Fx2,,3.35,5.22,9.99,5.29,,Holofoil,M-20,[1LL] Electric Ball (100),
+174488,Alolan Vulpix - 21a/145,Alolan Vulpix 21a 145,https://tcgplayer-cdn.tcgplayer.com/product/174488_200w.jpg,3,1938,https://cpt.tcgcsv.com/NPp2,2025-01-13T21:00:15.943,1,021a/145,Promo,Water,60,Basic,,"[0] Beacon
+<br>Search your deck for up to 2 Pokémon, reveal them, and put them into your hand. Then, shuffle your deck.",Mx2,1,3.36,4.5,8.2,5.66,,Holofoil,,[2] Icy Snow (20),
+177113,Sylveon GX - 92a/145,Sylveon GX 92a 145,https://tcgplayer-cdn.tcgplayer.com/product/177113_200w.jpg,3,1938,https://cpt.tcgcsv.com/hSq2,2022-09-16T20:39:49.317,1,092a/145,Promo,Fairy,200,Stage 1,"<em>Pokémon-GX rule — When your Pokémon-GX is Knocked Out, your opponent takes 2 Prize cards.</em>","[Y] Magical Ribbon
+<br>Search your deck for up to 3 cards and put them into your hand. Then shuffle your deck.",Mx2,2,15.12,23.0,50.0,23.72,23.97,Holofoil,D-20,[2Y] Fairy Wind (110),"<span style=""color:Teal""><strong>[2Y] Plea GX</strong>
+<br>Put 2 of your opponent's Benched Pokémon and all cards attached to them into your opponent's hand. <em>(You can't use more than 1 GX attack in a game.)</em></span>"
+177166,Professor's Letter - 146a/162,Professors Letter 146a 162,https://tcgplayer-cdn.tcgplayer.com/product/177166_200w.jpg,3,1938,https://cpt.tcgcsv.com/lTq2,2022-09-16T16:33:16.833,1,146a/162,Promo,Item,,,"Search your deck for up to 2 basic Energy cards, reveal them, and put them into your hand. Shuffle your deck afterward.
+<br><br>
+You may play as many Item cards as you like during your turn <em>(before your attack)</em>.",,,,14.95,14.95,14.95,6.53,,Normal,,,
+177167,Delinquent - 98a/122,Delinquent 98a 122,https://tcgplayer-cdn.tcgplayer.com/product/177167_200w.jpg,3,1938,https://cpt.tcgcsv.com/mTq2,2022-09-16T19:58:15.187,1,098a/122,Promo,Supporter,,,"Discard any Stadium card in play. If you do, your opponent discards 3 cards from his or her hand.
+<br><br>
+You may play only 1 Supporter card during your turn <em>(before your attack)</em>.",,,,5.47,10.0,14.52,11.59,,Holofoil,,,
+177167,Delinquent - 98a/122,Delinquent 98a 122,https://tcgplayer-cdn.tcgplayer.com/product/177167_200w.jpg,3,1938,https://cpt.tcgcsv.com/mTq2,2022-09-16T19:58:15.187,1,098a/122,Promo,Supporter,,,"Discard any Stadium card in play. If you do, your opponent discards 3 cards from his or her hand.
+<br><br>
+You may play only 1 Supporter card during your turn <em>(before your attack)</em>.",,,,7.29,14.99,22.49,7.07,,Normal,,,
+179367,Tapu Lele GX - 60a/145,Tapu Lele GX 60a 145,https://tcgplayer-cdn.tcgplayer.com/product/179367_200w.jpg,3,1938,https://cpt.tcgcsv.com/mMr2,2024-03-15T13:42:43.64,1,060a/145,Promo,Psychic,170,Basic,"<strong>Ability — Wonder Tag</strong>
+<br>
+When you play this Pokémon from your hand onto your Bench during your turn, you may search your deck for a Supporter card, reveal it, and put it into your hand. Then, shuffle your deck.
+<br><br>
+<em>Pokémon-GX rule — When your Pokémon-GX is Knocked Out, your opponent takes 2 Prize cards.</em>","[2] Energy Drive (20x)
+<br>This attack does 20 damage times the amount of Energy attached to both Active Pokémon. This damage isn't affect by Weakness or Resistance.",,1,4.56,6.08,25.0,4.82,,Holofoil,,"<span style=""color:Teal""><strong>[P] Tapu Cure GX</strong>
+<br>Heal all damage from 2 of your Benched Pokémon. <em>(You can't use more than 1 GX attack in a game.)</em></span>",
+179371,Tapu Fini GX - 39a/147,Tapu Fini GX 39a 147,https://tcgplayer-cdn.tcgplayer.com/product/179371_200w.jpg,3,1938,https://cpt.tcgcsv.com/rMr2,2022-09-16T20:41:41.787,1,039a/147,Promo,Water,170,Basic,"<em>Pokémon-GX rule — When your Pokémon-GX is Knocked Out, your opponent takes 2 Prize cards.</em>","[1] Aqua Ring (20)
+<br>You may switch this Pokémon with 1 of your Benched Pokémon.",,1,2.33,3.28,10.0,3.07,,Holofoil,,"[1WW] Hydro Shot
+<br>Discard 2 Water Energy from this Pokémon. This attack does 120 damage to 1 of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","<span style=""color:Teal""><strong>[W] Tapu Storm GX</strong>
+<br>Shuffle your opponent's Active Pokémon and all cards attached to it into their deck. If your opponent has no Benched Pokémon, this attack does nothing. <em>(You can't use more than 1 GX attack in a game.)</em></span>"
+179380,Eevee - 101a/149,Eevee 101a 149,https://tcgplayer-cdn.tcgplayer.com/product/179380_200w.jpg,3,1938,https://cpt.tcgcsv.com/DMr2,2022-09-16T15:25:23.42,1,101a/149,Promo,Colorless,60,Basic,"<strong>Ability — Energy Evolution</strong>
+<br>When you attach a basic Energy card from your hand to this Pokémon during your turn, you may search your deck for a card that evolves from this Pokémon that is the same type as that Energy card and put it onto this Pokémon to evolve it. Then, shuffle your deck.","[1] Quick Draw
+<br>Flip a coin. If heads, draw a card.",Fx2,2,10.0,18.03,39.75,18.03,12.45,Holofoil,,,
+180514,Alolan Exeggutor - 2a/131,Alolan Exeggutor 2a 131,https://tcgplayer-cdn.tcgplayer.com/product/180514_200w.jpg,3,1938,https://cpt.tcgcsv.com/jds2,2024-03-15T13:05:00.253,1,002a/131,Promo,Grass,160,Stage 1,,"[G] Tropical Shake (20+)
+<br>This attack does 20 more damage for each type of basic Energy card in your discard pile. You can't add more than 100 damage in this way.",Rx2,3,0.8,0.99,7.0,1.02,0.87,Holofoil,,,
+184219,Altaria - 40a/70,Altaria 40a 70,https://tcgplayer-cdn.tcgplayer.com/product/184219_200w.jpg,3,1938,https://cpt.tcgcsv.com/pJt2,2023-11-10T16:11:17.453,1,040a/070,Promo,Dragon,80,Stage 1,"<strong>Ability — Fight Song</strong>
+<br>Your Dragon Pokémon's attacks do 20 more damage to your opponent’s Active Pokémon </em>(before applying Weakness and Resistance)</em>.",[2] Pierce (20),Yx2,1,0.48,0.89,5.99,0.89,,Holofoil,,,
+184331,Regigigas - 84a/111,Regigigas 84a 111,https://tcgplayer-cdn.tcgplayer.com/product/184331_200w.jpg,3,1938,https://cpt.tcgcsv.com/FLt2,2022-09-16T20:30:23.513,1,084a/111,Promo,Colorless,180,Basic,"<strong>Ability — Seal of Antiquity</strong>
+<br>This Pokémon can't attack unless Regirock, Regice, and Registeel are on your Bench.","[5] Giant Stomp (160)
+<br>Discard any Stadium card in play.",Fx2,4,2.11,4.46,5.39,4.25,,Holofoil,,,
+186106,Charmander - 18a/147,Charmander 18a 147,https://tcgplayer-cdn.tcgplayer.com/product/186106_200w.jpg,3,1938,https://cpt.tcgcsv.com/8sv2,2023-03-02T13:54:26.313,1,018a/147,Promo,Fire,70,Basic,,[1] Scratch (10),Wx2,1,1.25,2.76,50.0,2.88,3.47,Holofoil,,[1R] Flame Tail (20),
+189786,Sceptile - 10a/168,Sceptile 10a 168,https://tcgplayer-cdn.tcgplayer.com/product/189786_200w.jpg,3,1938,https://cpt.tcgcsv.com/LWw2,2024-07-26T15:59:55.56,1,010a/168,Promo,Grass,140,Stage 2,"<strong>Ability — Power of Nature</strong>
+<br>Prevent all damage done to your Pokémon that have any Grass Energy attached to them by attacks from your opponent's Ultra Beasts.","[G] Powerful Storm (20x)
+<br>This attack does 20 damage times the amount of Energy attached to all of your Pokémon.",Rx2,1,0.61,1.29,7.0,1.41,4.99,Holofoil,,,
+191907,Garbodor - 51a/145 (Cosmos Holo),Garbodor 51a 145 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/191907_200w.jpg,3,1938,https://cpt.tcgcsv.com/9Nx2,2022-09-16T20:02:30.68,1,051a/145,Promo,Psychic,120,Stage 1,,"[P] Trashalance (20x)
+<br>This attack does 20 damage for each Item card in your opponent's discard pile.",Px2,3,0.84,2.18,2.65,2.59,,Holofoil,,"[2P] Acid Spray (70)
+<br>Flip a coin. If heads, discard an Energy from your opponent's Active Pokémon.",
+197853,Alolan Sandshrew - 19a/145,Alolan Sandshrew 19a 145,https://tcgplayer-cdn.tcgplayer.com/product/197853_200w.jpg,3,1938,https://cpt.tcgcsv.com/59C2,2022-09-16T16:48:51.147,1,019a/145,Promo,Water,60,Basic,,"[0] Defense Curl
+<br>Flip a coin. If heads, prevent all damage done to this Pokémon by attacks during your opponent's next turn.",Mx2,1,0.75,1.0,7.0,1.57,,Holofoil,,[2W] Ice Ball (30),
+198529,Zoroark GX - 77a/73,Zoroark GX 77a 73,https://tcgplayer-cdn.tcgplayer.com/product/198529_200w.jpg,3,1938,https://cpt.tcgcsv.com/CqC2,2022-09-16T20:52:23.333,1,077a/073,Promo,Darkness,210,Stage 1,"<strong>Ability — Trade</strong>
+<br>Once during your turn <em>(before your attack)</em>, you may discard a card from your hand. If you do, draw 2 cards.
+<br><br>
+<em>Pokémon-GX rule — When your Pokémon-GX is Knocked Out, your opponent takes 2 Prize cards.</em>","[2] Riotous Beating (20x)
+<br>This attack does 20 damage for each of your Pokémon in play.",Fx2,2,12.0,17.18,44.95,14.38,14.83,Holofoil,P-20,"<span style=""color:Teal""><strong>[DD] Trickster GX</strong>
+<br>Choose 1 of your opponent's Pokémon's attacks and use it as this attack. <em>(You can't use more than 1 GX attack in a game.)</em></span>",
+198530,Metagross GX - 157a/145,Metagross GX 157a 145,https://tcgplayer-cdn.tcgplayer.com/product/198530_200w.jpg,3,1938,https://cpt.tcgcsv.com/DqC2,2022-09-16T20:25:03.62,1,157a/145,Promo,Metal,250,Stage 2,"<strong>Ability — Geotech System</strong>
+<br>Once during your turn <em>(before your attack)</em>, you may attach a Psychic or Metal Energy card from your discard pile to your Active Pokémon.
+<br><br>
+<em>Pokémon-GX rule — When your Pokémon-GX is Knocked Out, your opponent takes 2 Prize cards.</em>","[1MM] Giga Hammer (150)
+<br>This Pokémon can't use Giga Hammer during your next turn.",Rx2,3,18.06,45.53,75.0,18.01,68.69,Holofoil,P-20,"<span style=""color:Teal""><strong>[1] Algorithm GX</strong>
+<br>Search your deck for up to 5 cards and put them into your hand. Then, shuffle your deck. <em>(You can't use more than 1 GX attack in a game.)</em></span>",
+200203,Tate & Liza - 148a/168,Tate and Liza 148a 168,https://tcgplayer-cdn.tcgplayer.com/product/200203_200w.jpg,3,1938,https://cpt.tcgcsv.com/56D2,2022-09-16T16:34:33.983,1,148a/168,Promo,Supporter,,,"Choose one: 
+<br>• Shuffle your hand into your deck, then draw 5 cards.
+<br>• Switch your Active Pokémon with 1 of your Benched Pokémon
+<br><br> You may play only 1 Supporter card during your turn <em>(before your attack)</em>.",,,,5.4,8.99,14.95,8.73,,Normal,,,
+200204,Sightseer - 189a/214,Sightseer 189a 214,https://tcgplayer-cdn.tcgplayer.com/product/200204_200w.jpg,3,1938,https://cpt.tcgcsv.com/66D2,2022-09-16T16:41:18.847,1,189a/214,Promo,Supporter,,,"You may discard any number of cards from your hand. Then, draw cards until you have 5 cards in your hand. If you can't draw any cards this way, you can't play this card.
+<br><br> You may play only 1 Supporter card during your turn <em>(before your attack)</em>.",,,,4.99,6.96,22.99,8.42,14.99,Normal,,,
+202638,Rayquaza GX - 177a/168,Rayquaza GX 177a 168,https://tcgplayer-cdn.tcgplayer.com/product/202638_200w.jpg,3,1938,https://cpt.tcgcsv.com/N3F2,2023-11-17T16:21:11.577,1,177a/168,Promo,Dragon,180,Basic,"<strong>Ability — Stormy Winds</strong>
+<br>When you play this Pokemon from your hand onto your Bench during your turn, you may discard the top 3 cards of your deck. If you do, attach a basic Energy card from your discard pile to this Pokémon.
+<br><br>
+<em>Pokémon-GX rule — When your Pokémon-GX is Knocked Out, your opponent takes 2 Prize cards.</em>","[1GL] Dragon Break (30x)
+<br>This attack does 30 damage times the amount of basic Grass and basic Lightning Energy attached to your Pokémon.",Yx2,3,131.73,162.5,199.69,128.35,132.0,Holofoil,,"<span style=""color:Teal""><strong>[G] Tempest GX</strong>
+<br>Discard your hand and draw 10 cards. <em>(You can't use more than 1 GX attack in a game.)</em></span>",
+211603,Oshawott - 27/114 (Cosmos Holo),Oshawott 27 114 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/211603_200w.jpg,3,1938,https://cpt.tcgcsv.com/5GJ2,2022-09-16T20:26:58.567,1,027/114,Promo,Water,60,Basic,,[W] Tackle (10),L x2,1,14.0,14.0,14.0,10.31,,Holofoil,,[1W] Water Gun (20),
+212993,Heatran - 88/156 (Prerelease),Heatran 88 156 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/212993_200w.jpg,3,1938,https://cpt.tcgcsv.com/TcK2,2024-10-18T12:29:50.227,1,088/156,Promo,Metal,130,Basic,,"[1M] Guard Press (30)
+<br>
+During your opponent's next turn, this Pokémon takes 30 less damage from attacks <em>(after applying Weakness and Resistance)</em>.",Rx2,3,1.25,1.79,2.99,1.7,,Holofoil,P-20,"[1MM] Boiling Impact (130)
+<br>
+Discard 2 Energy from this Pokémon.",
+216699,Dedenne GX - 195a/214,Dedenne GX 195a 214,https://tcgplayer-cdn.tcgplayer.com/product/216699_200w.jpg,3,1938,https://cpt.tcgcsv.com/_HL2,2023-07-17T19:19:13.613,1,195a/214,Promo,Lightning,160,Basic,"<strong>Ability — Dedechange</strong>
+<br>When you play this Pokémon from your hand onto your Bench during your turn, you may discard your hand and draw 6 cards. You can't use more than 1 Dedechange Ability each turn.",[1L] Static Shock (50),Fx2,1,23.84,29.99,100.0,24.08,24.08,Holofoil,M-20,"<span style=""color:Teal""><strong>[1L] Tingly Return GX (50)</strong>
+<br>Your opponent's Active Pokémon is now Paralyzed. Put this Pokémon and all cards attached to it into your hand. <em>(You can't use more than 1 GX attack in a game.)</em></span>",
+216702,Pokemon Communication - 152b/181,Pokemon Communication 152b 181,https://tcgplayer-cdn.tcgplayer.com/product/216702_200w.jpg,3,1938,https://cpt.tcgcsv.com/3JL2,2024-07-26T15:59:55.607,1,152b/181,Promo,Item,,,"Reveal a Pokémon from your hand and put it into your deck. if you do, search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck.
+<br><br> You may play as many Item cards as you like during your turn <em>(before your attack)</em>.",,,,0.1,0.3,4.99,0.24,0.23,Normal,,,
+216705,Pokegear 3.0 - 182b/214,Pokegear 30 182b 214,https://tcgplayer-cdn.tcgplayer.com/product/216705_200w.jpg,3,1938,https://cpt.tcgcsv.com/7JL2,2024-07-26T15:59:55.637,1,182b/214,Promo,Item,,,"Look at the top 7 cards of your deck. You may reveal a Supporter card you find there and put it into your hand. Shuffle the other cards back into your deck.
+<br><br> You may play as many Item cards as you like during your turn <em>(before your attack)</em>.",,,,1.45,2.22,181871.52,2.21,2.0,Normal,,,
+216707,Reset Stamp - 206a/236,Reset Stamp 206a 236,https://tcgplayer-cdn.tcgplayer.com/product/216707_200w.jpg,3,1938,https://cpt.tcgcsv.com/9JL2,2022-09-16T16:51:44.53,1,206a/236,Promo,Item,,,"Your opponent shuffles their hand into their deck and draws a card for each of their remaining Prize cards.
+<br><br> You may play as many Item cards as you like during your turn <em>(before your attack)</em>.",,,,0.07,0.25,2.0,0.21,0.11,Normal,,,
+226129,Togepi & Cleffa & Igglybuff GX - 143a/236,Togepi and Cleffa and Igglybuff GX 143a 236,https://tcgplayer-cdn.tcgplayer.com/product/226129_200w.jpg,3,1938,https://cpt.tcgcsv.com/CsQ2,2022-09-16T16:31:47.897,1,143a/236,Promo,Fairy,240,Basic,"<em>TAG TEAM rule — When your TAG TEAM is Knocked Out, your opponent takes 3 Prize cards.</em>","[1YY] Rolling Panic (120+)
+<br>Flip a coin until you get tails. This attack does 30 more damage for each heads.",Mx2,2,215.0,277.55,700.0,239.62,239.99,Holofoil,D-20,"<span style=""color:Teal""><strong>[YY+] Supreme Puff GX</strong>
+<br>Take another turn after this one. <em>(Skip the between-turns step.)</em> If this Pokémon has at least 14 extra Fairy Energy attached to it <em>(in addition to this attack’s cost)</em>, your opponent shuffles all of their Benched Pokémon and all cards attached to them into their deck.<em> (You can't use more than 1 GX attack in a game.)</em></span>",
+226132,Jirachi GX - 79a/236,Jirachi GX 79a 236,https://tcgplayer-cdn.tcgplayer.com/product/226132_200w.jpg,3,1938,https://cpt.tcgcsv.com/GsQ2,2023-10-25T19:02:38.423,1,079a/236,Promo,Psychic,160,Basic,"<strong>Ability — Psychic Zone</strong>
+<br>Don't apply Psychic Weakness when Pokémon <em>(both yours and your opponent's)</em> take damage from attacks.
+<br><br>
+<em>Pokémon-GX rule — When your Pokémon-GX is Knocked Out, your opponent takes 2 Prize cards.</em>","[P] Star Search
+<br>Search your deck for an Energy card and attach it to 1 of your Psychic Pokémon. Then, shuffle your deck.",Px2,1,7.8,15.0,29.99,11.58,14.95,Holofoil,,"<span style=""color:Teal""><strong>[PPP] Star Shield GX (100)</strong>
+<br>Prevent all effects of attacks, including damage, done to this Pokémon during your opponent's next turn. <em>(You can't use more than 1 GX attack in a game.)</em></span>",

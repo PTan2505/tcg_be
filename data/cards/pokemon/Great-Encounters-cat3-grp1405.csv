@@ -1,0 +1,887 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extAttack2,extWeakness,extResistance,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extCardText
+83516,Altaria,Altaria,https://tcgplayer-cdn.tcgplayer.com/product/83516_200w.jpg,3,1405,https://cpt.tcgcsv.com/lqH,2023-09-25T18:52:44.287,1,12/106,Rare,Colorless,80,Stage 1,"[1] Dragonbreath (40)
+<br>
+Flip a coin. If tails, this attack does nothing. If heads, the Defending Pokémon is now Paralyzed.","[3] Cotton Cloud (60)
+<br>
+During your opponent's next turn, any damage done to Altaria by attacks from your opponent's Evolved Pokémon is reduced by 30 <em>(after applying Weakness and Resistance)</em>.",C+20,F-20,1,0.71,1.37,8.98,2.08,,Normal,
+83516,Altaria,Altaria,https://tcgplayer-cdn.tcgplayer.com/product/83516_200w.jpg,3,1405,https://cpt.tcgcsv.com/lqH,2023-09-25T18:52:44.287,1,12/106,Rare,Colorless,80,Stage 1,"[1] Dragonbreath (40)
+<br>
+Flip a coin. If tails, this attack does nothing. If heads, the Defending Pokémon is now Paralyzed.","[3] Cotton Cloud (60)
+<br>
+During your opponent's next turn, any damage done to Altaria by attacks from your opponent's Evolved Pokémon is reduced by 30 <em>(after applying Weakness and Resistance)</em>.",C+20,F-20,1,3.55,4.27,7.99,5.23,,Reverse Holofoil,
+83551,Amulet Coin,Amulet Coin,https://tcgplayer-cdn.tcgplayer.com/product/83551_200w.jpg,3,1405,https://cpt.tcgcsv.com/2rH,2023-09-25T19:02:26.847,1,97/106,Uncommon,Tool,,,,,,,,0.09,0.28,2.24,0.25,0.2,Normal,"Attach Amulet Coin to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. If that Pokémon is Knocked Out, discard this card.
+<br>
+If the Pokémon Amulet Coin is attached to is your Active Pokémon at the end of your turn, draw a card."
+83551,Amulet Coin,Amulet Coin,https://tcgplayer-cdn.tcgplayer.com/product/83551_200w.jpg,3,1405,https://cpt.tcgcsv.com/2rH,2023-09-25T19:02:26.847,1,97/106,Uncommon,Tool,,,,,,,,0.65,1.48,3.49,2.85,,Reverse Holofoil,"Attach Amulet Coin to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. If that Pokémon is Knocked Out, discard this card.
+<br>
+If the Pokémon Amulet Coin is attached to is your Active Pokémon at the end of your turn, draw a card."
+83570,Arbok,Arbok,https://tcgplayer-cdn.tcgplayer.com/product/83570_200w.jpg,3,1405,https://cpt.tcgcsv.com/qrH,2024-12-20T19:13:40.35,1,33/106,Uncommon,Psychic,80,Stage 1,"[P] Deadly Poison (10+)
+<br>
+If the Defending Pokémon is Poisoned, this attack does 10 damage plus 40 more damage. If the Defending Pokémon is not Poisoned, that Pokémon is now Poisoned.","[3] Wrap (50)
+<br>
+Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",P+20,,2,0.25,0.45,1.51,0.53,,Normal,
+83570,Arbok,Arbok,https://tcgplayer-cdn.tcgplayer.com/product/83570_200w.jpg,3,1405,https://cpt.tcgcsv.com/qrH,2024-12-20T19:13:40.35,1,33/106,Uncommon,Psychic,80,Stage 1,"[P] Deadly Poison (10+)
+<br>
+If the Defending Pokémon is Poisoned, this attack does 10 damage plus 40 more damage. If the Defending Pokémon is not Poisoned, that Pokémon is now Poisoned.","[3] Wrap (50)
+<br>
+Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",P+20,,2,1.75,3.74,5.4,5.45,,Reverse Holofoil,
+83716,Baltoy,Baltoy,https://tcgplayer-cdn.tcgplayer.com/product/83716_200w.jpg,3,1405,https://cpt.tcgcsv.com/lvH,2023-09-25T18:55:46.24,1,60/106,Common,Fighting,50,Basic,"[1] Psychic Balance
+<br>
+If you have less cards in your hand than your opponent, draw cards until you have the same number of cards as your opponent. (If you have more or the same number of cards in your hand as your opponent, this attack does nothing.)","[1F] Spin Turn (20)
+<br>
+Switch Baltoy with 1 of your Benched Pokémon.",G+10,,1,2.26,3.4,5.49,3.71,,Normal,
+83716,Baltoy,Baltoy,https://tcgplayer-cdn.tcgplayer.com/product/83716_200w.jpg,3,1405,https://cpt.tcgcsv.com/lvH,2023-09-25T18:55:46.24,1,60/106,Common,Fighting,50,Basic,"[1] Psychic Balance
+<br>
+If you have less cards in your hand than your opponent, draw cards until you have the same number of cards as your opponent. (If you have more or the same number of cards in your hand as your opponent, this attack does nothing.)","[1F] Spin Turn (20)
+<br>
+Switch Baltoy with 1 of your Benched Pokémon.",G+10,,1,10.4,10.52,11.69,9.39,,Reverse Holofoil,
+83770,Beedrill,Beedrill,https://tcgplayer-cdn.tcgplayer.com/product/83770_200w.jpg,3,1405,https://cpt.tcgcsv.com/qwH,2023-09-25T18:52:47.453,1,13/106,Rare,Grass,110,Stage 2,"[G] Band Attack (30x)
+<br>
+Does 30 damage times the number of Beedrill you have in play.","[3] Twineedle (50x)
+<br>
+Flip 2 coins. This attack does 50 damage times the number of heads.",R+30,,,0.83,1.06,2.69,1.09,,Normal,
+83770,Beedrill,Beedrill,https://tcgplayer-cdn.tcgplayer.com/product/83770_200w.jpg,3,1405,https://cpt.tcgcsv.com/qwH,2023-09-25T18:52:47.453,1,13/106,Rare,Grass,110,Stage 2,"[G] Band Attack (30x)
+<br>
+Does 30 damage times the number of Beedrill you have in play.","[3] Twineedle (50x)
+<br>
+Flip 2 coins. This attack does 50 damage times the number of heads.",R+30,,,2.89,4.95,6.96,6.18,,Reverse Holofoil,
+83909,Blaziken,Blaziken,https://tcgplayer-cdn.tcgplayer.com/product/83909_200w.jpg,3,1405,https://cpt.tcgcsv.com/cBH,2023-09-25T18:52:07.55,1,1/106,Holo Rare,Fire,130,Stage 2,"[1] Fire Dance (30)
+<br>
+Search your discard pile for a Fire Energy card and attach it to 1 of your Pokémon.","[1RR] Flame Kick
+<br>
+Discard 2 Fire Energy attached to Blaziken. This attack does 80 damage to 1 of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",W+30,,1,14.0,16.05,29.99,14.74,,Holofoil,
+83909,Blaziken,Blaziken,https://tcgplayer-cdn.tcgplayer.com/product/83909_200w.jpg,3,1405,https://cpt.tcgcsv.com/cBH,2023-09-25T18:52:07.55,1,1/106,Holo Rare,Fire,130,Stage 2,"[1] Fire Dance (30)
+<br>
+Search your discard pile for a Fire Energy card and attach it to 1 of your Pokémon.","[1RR] Flame Kick
+<br>
+Discard 2 Fire Energy attached to Blaziken. This attack does 80 damage to 1 of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",W+30,,1,9.75,12.22,14.69,11.0,,Reverse Holofoil,
+84018,Buizel,Buizel,https://tcgplayer-cdn.tcgplayer.com/product/84018_200w.jpg,3,1405,https://cpt.tcgcsv.com/nDH,2023-09-25T18:55:48.963,1,61/106,Common,Water,60,Basic,[0] Headbutt (10),[WW] Surf (30),L+10,,1,0.05,0.27,1.99,0.27,,Normal,
+84018,Buizel,Buizel,https://tcgplayer-cdn.tcgplayer.com/product/84018_200w.jpg,3,1405,https://cpt.tcgcsv.com/nDH,2023-09-25T18:55:48.963,1,61/106,Common,Water,60,Basic,[0] Headbutt (10),[WW] Surf (30),L+10,,1,2.5,3.12,6.04,3.46,,Reverse Holofoil,
+84066,Butterfree,Butterfree,https://tcgplayer-cdn.tcgplayer.com/product/84066_200w.jpg,3,1405,https://cpt.tcgcsv.com/lFH,2023-09-25T18:52:50.093,1,14/106,Rare,Grass,120,Stage 2,"[G] Parallel Drain (30)
+<br>
+After your attack, remove from 1 of your Pokémon the number of damage counters equal to the damage you did to the Defending Pokémon.","[1GG] Dozing Scales (60)
+<br>
+Flip a coin. If heads, the Defending Pokémon is now Asleep. If tails, the Defending Pokémon is now Poisoned.",R+30,,,1.87,2.55,4.45,2.71,,Normal,
+84066,Butterfree,Butterfree,https://tcgplayer-cdn.tcgplayer.com/product/84066_200w.jpg,3,1405,https://cpt.tcgcsv.com/lFH,2023-09-25T18:52:50.093,1,14/106,Rare,Grass,120,Stage 2,"[G] Parallel Drain (30)
+<br>
+After your attack, remove from 1 of your Pokémon the number of damage counters equal to the damage you did to the Defending Pokémon.","[1GG] Dozing Scales (60)
+<br>
+Flip a coin. If heads, the Defending Pokémon is now Asleep. If tails, the Defending Pokémon is now Poisoned.",R+30,,,4.08,6.45,12.79,6.3,,Reverse Holofoil,
+84075,Cacnea,Cacnea,https://tcgplayer-cdn.tcgplayer.com/product/84075_200w.jpg,3,1405,https://cpt.tcgcsv.com/wFH,2023-09-25T18:55:52.22,1,62/106,Common,Grass,50,Basic,"[1] Sand Attack
+<br>
+If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.","[1G] Poison Sting (20)
+<br>
+The Defending Pokémon is now Poisoned.",R+10,W-20,1,0.03,0.25,1.49,0.27,,Normal,
+84075,Cacnea,Cacnea,https://tcgplayer-cdn.tcgplayer.com/product/84075_200w.jpg,3,1405,https://cpt.tcgcsv.com/wFH,2023-09-25T18:55:52.22,1,62/106,Common,Grass,50,Basic,"[1] Sand Attack
+<br>
+If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.","[1G] Poison Sting (20)
+<br>
+The Defending Pokémon is now Poisoned.",R+10,W-20,1,0.55,0.99,2.0,1.2,,Reverse Holofoil,
+84080,Cacturne,Cacturne,https://tcgplayer-cdn.tcgplayer.com/product/84080_200w.jpg,3,1405,https://cpt.tcgcsv.com/DFH,2023-09-25T18:54:05.707,1,34/106,Uncommon,Darkness,80,Stage 1,"[2] Pin Missile (20x)
+<br>
+Flip 3 coins. This attack does 20 damage times the number of heads.","[2D] Needle Arm (50+)
+<br>
+If the Defending Pokémon already has any damage counters on it, this attack does 50 damage plus 20 more damage.",R+20,P-20,1,0.15,0.4,1.44,0.55,,Normal,
+84080,Cacturne,Cacturne,https://tcgplayer-cdn.tcgplayer.com/product/84080_200w.jpg,3,1405,https://cpt.tcgcsv.com/DFH,2023-09-25T18:54:05.707,1,34/106,Uncommon,Darkness,80,Stage 1,"[2] Pin Missile (20x)
+<br>
+Flip 3 coins. This attack does 20 damage times the number of heads.","[2D] Needle Arm (50+)
+<br>
+If the Defending Pokémon already has any damage counters on it, this attack does 50 damage plus 20 more damage.",R+20,P-20,1,1.19,2.5,4.99,1.63,,Reverse Holofoil,
+84137,Caterpie,Caterpie,https://tcgplayer-cdn.tcgplayer.com/product/84137_200w.jpg,3,1405,https://cpt.tcgcsv.com/MGH,2023-09-25T18:55:56.977,1,63/106,Common,Grass,40,Basic,[G] Tackle (20),,R+10,,1,0.24,0.4,4.78,0.41,,Normal,"<strong>Poké-POWER — Pupate</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, if Caterpie is your Active Pokémon, you may flip a coin. If heads, search your deck for a card that evolves from Caterpie and put it onto Caterpie. (This counts as evolving Caterpie.) Shuffle your deck afterward. This power can't be used if Caterpie is affected by a Special Condition."
+84137,Caterpie,Caterpie,https://tcgplayer-cdn.tcgplayer.com/product/84137_200w.jpg,3,1405,https://cpt.tcgcsv.com/MGH,2023-09-25T18:55:56.977,1,63/106,Common,Grass,40,Basic,[G] Tackle (20),,R+10,,1,4.16,4.16,4.5,5.74,,Reverse Holofoil,"<strong>Poké-POWER — Pupate</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, if Caterpie is your Active Pokémon, you may flip a coin. If heads, search your deck for a card that evolves from Caterpie and put it onto Caterpie. (This counts as evolving Caterpie.) Shuffle your deck afterward. This power can't be used if Caterpie is affected by a Special Condition."
+84325,Clamperl,Clamperl,https://tcgplayer-cdn.tcgplayer.com/product/84325_200w.jpg,3,1405,https://cpt.tcgcsv.com/wLH,2023-09-25T19:17:07.85,1,64/106,Common,Water,40,Basic,"[1] Clamp (10)
+<br>
+Flip a coin. If tails, this attack does nothing. If heads, the Defending Pokémon is now Paralyzed.",[1W] Sparkling Pearl (20),L+10,,1,0.19,0.31,2.62,0.28,0.2,Normal,
+84325,Clamperl,Clamperl,https://tcgplayer-cdn.tcgplayer.com/product/84325_200w.jpg,3,1405,https://cpt.tcgcsv.com/wLH,2023-09-25T19:17:07.85,1,64/106,Common,Water,40,Basic,"[1] Clamp (10)
+<br>
+Flip a coin. If tails, this attack does nothing. If heads, the Defending Pokémon is now Paralyzed.",[1W] Sparkling Pearl (20),L+10,,1,1.05,5.0,5.89,5.86,,Reverse Holofoil,
+84337,Claydol,Claydol,https://tcgplayer-cdn.tcgplayer.com/product/84337_200w.jpg,3,1405,https://cpt.tcgcsv.com/MLH,2023-09-25T19:16:56.647,1,15/106,Rare,Fighting,80,Stage 1,[1F] Spinning Attack (40),,G+20,,2,2.26,4.84,6.97,4.18,,Normal,"<strong>Poké-POWER — Cosmic Power</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may choose up to 2 cards from your hand and put them on the bottom of your deck in any order. If you do, draw cards until you have 6 cards in your hand. This power can't be used if Claydol is affected by a Special Condition."
+84337,Claydol,Claydol,https://tcgplayer-cdn.tcgplayer.com/product/84337_200w.jpg,3,1405,https://cpt.tcgcsv.com/MLH,2023-09-25T19:16:56.647,1,15/106,Rare,Fighting,80,Stage 1,[1F] Spinning Attack (40),,G+20,,2,5.8,8.63,19.99,8.63,,Reverse Holofoil,"<strong>Poké-POWER — Cosmic Power</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may choose up to 2 cards from your hand and put them on the bottom of your deck in any order. If you do, draw cards until you have 6 cards in your hand. This power can't be used if Claydol is affected by a Special Condition."
+84411,Combusken,Combusken,https://tcgplayer-cdn.tcgplayer.com/product/84411_200w.jpg,3,1405,https://cpt.tcgcsv.com/fNH,2023-09-25T18:54:09.03,1,35/106,Uncommon,Fire,80,Stage 1,"[R] Bulk Up (30)
+<br>
+During your next turn, each of Combusken's attacks does 30 more damage to the Defending Pokémon <em>(before applying Weakness and Resistance)</em>.","[2R] Double Kick (50x)
+<br>
+Flip 2 coins. This attack does 50 damage times the number of heads.",W+20,,1,0.27,0.61,2.67,0.71,,Normal,
+84411,Combusken,Combusken,https://tcgplayer-cdn.tcgplayer.com/product/84411_200w.jpg,3,1405,https://cpt.tcgcsv.com/fNH,2023-09-25T18:54:09.03,1,35/106,Uncommon,Fire,80,Stage 1,"[R] Bulk Up (30)
+<br>
+During your next turn, each of Combusken's attacks does 30 more damage to the Defending Pokémon <em>(before applying Weakness and Resistance)</em>.","[2R] Double Kick (50x)
+<br>
+Flip 2 coins. This attack does 50 damage times the number of heads.",W+20,,1,0.89,2.72,4.49,1.95,,Reverse Holofoil,
+84467,Cresselia,Cresselia,https://tcgplayer-cdn.tcgplayer.com/product/84467_200w.jpg,3,1405,https://cpt.tcgcsv.com/mPH,2023-09-25T18:52:09.933,1,2/106,Holo Rare,Psychic,80,Basic,"[1] Moon Twinkle (10)
+<br>
+If there is any Stadium card in play, remove 2 damage counters from Cresselia.","[1PP] Lunar Dance (50)
+<br>
+You may discard 2 Energy attached to Cresselia. If you do, remove all damage counters from 1 of your Benched Pokémon.",P+20,,1,7.35,9.82,16.99,8.63,,Holofoil,
+84467,Cresselia,Cresselia,https://tcgplayer-cdn.tcgplayer.com/product/84467_200w.jpg,3,1405,https://cpt.tcgcsv.com/mPH,2023-09-25T18:52:09.933,1,2/106,Holo Rare,Psychic,80,Basic,"[1] Moon Twinkle (10)
+<br>
+If there is any Stadium card in play, remove 2 damage counters from Cresselia.","[1PP] Lunar Dance (50)
+<br>
+You may discard 2 Energy attached to Cresselia. If you do, remove all damage counters from 1 of your Benched Pokémon.",P+20,,1,7.5,7.6,7.7,10.0,,Reverse Holofoil,
+84472,Cresselia LV.X,Cresselia LVX,https://tcgplayer-cdn.tcgplayer.com/product/84472_200w.jpg,3,1405,https://cpt.tcgcsv.com/sPH,2024-04-11T21:02:28.03,1,103/106,Ultra Rare,Psychic,100,Level-Up,"[1PP] Moon Skip (40)
+<br>
+If the Defending Pokémon is Knocked Out by this attack, take 1 more Prize card.",,Px2,,1,17.97,31.8,59.99,31.7,,Holofoil,"<strong>Poké-POWER — Full Moon Dance</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may move 1 damage counter from either player's Pokémon to another Pokémon <em>(yours or your opponent's)</em>. This power can't be used if Cresselia is affected by a Special Condition.
+<br>
+[Put this card onto your Active Cresselia. Cresselia LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.]"
+84698,Darkrai (3),Darkrai 3,https://tcgplayer-cdn.tcgplayer.com/product/84698_200w.jpg,3,1405,https://cpt.tcgcsv.com/-TH,2023-09-25T18:52:12.99,1,3/106,Holo Rare,Darkness,70,Basic,"[0] Reach Over
+<br>
+Search your deck for an Energy card, show it to your opponent, and put it into your hand. Shuffle your deck afterward.","[DDD] Darkness Pursuit (50)
+<br>
+If the Defending Pokémon is Cresselia, this attack's base damage is 100.",F+20,P-20,1,10.0,20.92,49.99,18.49,49.99,Holofoil,
+84698,Darkrai (3),Darkrai 3,https://tcgplayer-cdn.tcgplayer.com/product/84698_200w.jpg,3,1405,https://cpt.tcgcsv.com/-TH,2023-09-25T18:52:12.99,1,3/106,Holo Rare,Darkness,70,Basic,"[0] Reach Over
+<br>
+Search your deck for an Energy card, show it to your opponent, and put it into your hand. Shuffle your deck afterward.","[DDD] Darkness Pursuit (50)
+<br>
+If the Defending Pokémon is Cresselia, this attack's base damage is 100.",F+20,P-20,1,18.0,34.0,49.99,19.91,,Reverse Holofoil,
+84699,Darkrai (4),Darkrai 4,https://tcgplayer-cdn.tcgplayer.com/product/84699_200w.jpg,3,1405,https://cpt.tcgcsv.com/_TH,2023-09-25T18:52:16.407,1,4/106,Holo Rare,Darkness,80,Basic,"[1] Darkness Roar (10)
+<br>
+You may have your opponent switch the Defending Pokémon with 1 of his or her Benched Pokémon.","[1DD] Sleep Hole (40+)
+<br>
+If the Defending Pokémon is Asleep, this attack does 40 damage plus 40 more damage. If the Defending Pokémon is not Asleep, that Pokémon is now Asleep.",F+20,P-20,1,9.15,10.19,39.95,14.46,5.87,Holofoil,
+84699,Darkrai (4),Darkrai 4,https://tcgplayer-cdn.tcgplayer.com/product/84699_200w.jpg,3,1405,https://cpt.tcgcsv.com/_TH,2023-09-25T18:52:16.407,1,4/106,Holo Rare,Darkness,80,Basic,"[1] Darkness Roar (10)
+<br>
+You may have your opponent switch the Defending Pokémon with 1 of his or her Benched Pokémon.","[1DD] Sleep Hole (40+)
+<br>
+If the Defending Pokémon is Asleep, this attack does 40 damage plus 40 more damage. If the Defending Pokémon is not Asleep, that Pokémon is now Asleep.",F+20,P-20,1,9.5,14.75,19.99,19.0,,Reverse Holofoil,
+84711,Darkrai LV.X,Darkrai LVX,https://tcgplayer-cdn.tcgplayer.com/product/84711_200w.jpg,3,1405,https://cpt.tcgcsv.com/fVH,2024-04-11T21:02:33.31,1,104/106,Ultra Rare,Darkness,100,Level-Up,"[1DD] Endless Darkness (40)
+<br>
+The Defending Pokémon is now Asleep. Flip 2 coins instead of 1 between turns. If either of them are tails, the Defending Pokémon is still Asleep. If both of them are tails, the Defending Pokémon is Knocked Out.",,Fx2,P-20,1,61.0,103.26,249.99,63.05,199.99,Holofoil,"<strong>Poké-BODY — Dark Shadow</strong>
+<br>
+Each basic Darkness Energy card attached to your Darkness Pokémon now has the effect ""If the Pokémon Darkness Energy is attached to attacks, the attack does 10 more damage to the Active Pokémon <em>(before applying Weakness and Resistance)</em>."" You can't use more than 1 Dark Shadow Poké-Body each turn.
+<br>
+[Put this card onto your Active Darkrai. Darkrai LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.]"
+84748,Delibird,Delibird,https://tcgplayer-cdn.tcgplayer.com/product/84748_200w.jpg,3,1405,https://cpt.tcgcsv.com/-VH,2023-09-25T18:54:12.413,1,36/106,Uncommon,Water,70,Basic,"[0] Present
+<br>
+Flip a coin. If heads, search your deck for any 1 card and put it into your hand. Shuffle your deck afterward.",[W] Ice Ball (20),M+20,,1,0.2,0.56,1.25,0.65,,Normal,
+84748,Delibird,Delibird,https://tcgplayer-cdn.tcgplayer.com/product/84748_200w.jpg,3,1405,https://cpt.tcgcsv.com/-VH,2023-09-25T18:54:12.413,1,36/106,Uncommon,Water,70,Basic,"[0] Present
+<br>
+Flip a coin. If heads, search your deck for any 1 card and put it into your hand. Shuffle your deck afterward.",[W] Ice Ball (20),M+20,,1,1.15,1.63,2.5,2.46,,Reverse Holofoil,
+84799,Dialga,Dialga,https://tcgplayer-cdn.tcgplayer.com/product/84799_200w.jpg,3,1405,https://cpt.tcgcsv.com/_WH,2023-09-25T18:52:56.497,1,16/106,Rare,Metal,90,Basic,"[M] Time Bellow (10)
+<br>
+Draw a card.","[1MM] Flash Cannon (40)
+<br>
+You may return all Energy cards attached to Dialga to your hand. If you do, remove the highest Stage Evolution card from the Defending Pokémon and shuffle that card into your opponent's deck.",R+20,P-20,2,0.6,1.5,9.99,1.44,,Normal,
+84799,Dialga,Dialga,https://tcgplayer-cdn.tcgplayer.com/product/84799_200w.jpg,3,1405,https://cpt.tcgcsv.com/_WH,2023-09-25T18:52:56.497,1,16/106,Rare,Metal,90,Basic,"[M] Time Bellow (10)
+<br>
+Draw a card.","[1MM] Flash Cannon (40)
+<br>
+You may return all Energy cards attached to Dialga to your hand. If you do, remove the highest Stage Evolution card from the Defending Pokémon and shuffle that card into your opponent's deck.",R+20,P-20,2,2.04,2.24,3.97,3.04,,Reverse Holofoil,
+84812,Dialga LV.X,Dialga LVX,https://tcgplayer-cdn.tcgplayer.com/product/84812_200w.jpg,3,1405,https://cpt.tcgcsv.com/gXH,2024-04-11T21:02:36.967,1,105/106,Ultra Rare,Metal,110,Level-Up,"[2MM] Metal Flash (80)
+<br>
+During your next turn, Dialga can't use Metal Flash.",,Rx2,P-20,2,80.0,139.75,150.0,85.84,,Holofoil,"<strong>Poké-POWER — Time Skip</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may have your opponent flip 2 coins. If both of them are heads, your turn ends. If both of them are tails, after your opponent draws a card at the beginning of his or her next turn, his or her turn ends. This power can't be used if Dialga is affected by a Special Condition.
+<br>
+[Put this card onto your Active Dialga. Dialga LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.]"
+84976,Drowzee,Drowzee,https://tcgplayer-cdn.tcgplayer.com/product/84976_200w.jpg,3,1405,https://cpt.tcgcsv.com/x_H,2023-09-25T18:56:10.167,1,65/106,Common,Psychic,60,Basic,"[1] Hypnosis
+<br>
+The Defending Pokémon is now Asleep.",[1P] Headbutt (20),P+10,,1,0.15,0.25,1.69,0.31,0.23,Normal,
+84976,Drowzee,Drowzee,https://tcgplayer-cdn.tcgplayer.com/product/84976_200w.jpg,3,1405,https://cpt.tcgcsv.com/x_H,2023-09-25T18:56:10.167,1,65/106,Common,Psychic,60,Basic,"[1] Hypnosis
+<br>
+The Defending Pokémon is now Asleep.",[1P] Headbutt (20),P+10,,1,0.62,0.7,1.99,1.67,,Reverse Holofoil,
+85103,Ekans,Ekans,https://tcgplayer-cdn.tcgplayer.com/product/85103_200w.jpg,3,1405,https://cpt.tcgcsv.com/53J,2023-09-25T18:56:13.043,1,66/106,Common,Psychic,60,Basic,"[1] Shed Skin
+<br>
+Remove 2 damage counters from Ekans.","[P] Poison Fang (10)
+<br>
+Flip a coin. If heads, the Defending Pokémon is now Poisoned.",P+10,,2,0.12,0.29,4.31,0.29,,Normal,
+85103,Ekans,Ekans,https://tcgplayer-cdn.tcgplayer.com/product/85103_200w.jpg,3,1405,https://cpt.tcgcsv.com/53J,2023-09-25T18:56:13.043,1,66/106,Common,Psychic,60,Basic,"[1] Shed Skin
+<br>
+Remove 2 damage counters from Ekans.","[P] Poison Fang (10)
+<br>
+Flip a coin. If heads, the Defending Pokémon is now Poisoned.",P+10,,2,0.75,2.58,2.99,2.25,,Reverse Holofoil,
+85372,Exploud,Exploud,https://tcgplayer-cdn.tcgplayer.com/product/85372_200w.jpg,3,1405,https://cpt.tcgcsv.com/s9J,2023-09-25T18:52:59.673,1,17/106,Rare,Colorless,130,Stage 2,"[2] Ambient Noise
+<br>
+Flip 2 coins. If the first coin is heads, this attack does 50 damage to the Defending Pokémon. If the first coin is tails, this attack does 20 damage to each of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em> If the second coin is heads, the Defending Pokémon is now Confused. If the second coin is tails, your opponent can't play any Trainer, Supporter, or Stadium cards from his or her hand during your opponent's next turn.",[4] Hyper Voice (70),F+30,,3,0.35,0.63,1.5,0.75,,Normal,
+85372,Exploud,Exploud,https://tcgplayer-cdn.tcgplayer.com/product/85372_200w.jpg,3,1405,https://cpt.tcgcsv.com/s9J,2023-09-25T18:52:59.673,1,17/106,Rare,Colorless,130,Stage 2,"[2] Ambient Noise
+<br>
+Flip 2 coins. If the first coin is heads, this attack does 50 damage to the Defending Pokémon. If the first coin is tails, this attack does 20 damage to each of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em> If the second coin is heads, the Defending Pokémon is now Confused. If the second coin is tails, your opponent can't play any Trainer, Supporter, or Stadium cards from his or her hand during your opponent's next turn.",[4] Hyper Voice (70),F+30,,3,0.75,1.48,2.85,1.48,,Reverse Holofoil,
+85404,Feebas,Feebas,https://tcgplayer-cdn.tcgplayer.com/product/85404_200w.jpg,3,1405,https://cpt.tcgcsv.com/6bJ,2023-09-25T18:56:15.763,1,67/106,Common,Water,30,Basic,[1] Splash (10),"[W] Fast Evolution
+<br>
+Search your deck for an Evolution card, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",L+10,,1,0.15,0.44,0.9,0.39,,Normal,
+85404,Feebas,Feebas,https://tcgplayer-cdn.tcgplayer.com/product/85404_200w.jpg,3,1405,https://cpt.tcgcsv.com/6bJ,2023-09-25T18:56:15.763,1,67/106,Common,Water,30,Basic,[1] Splash (10),"[W] Fast Evolution
+<br>
+Search your deck for an Evolution card, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",L+10,,1,0.7,2.47,4.95,2.58,,Reverse Holofoil,
+85408,Felicity's Drawing,Felicitys Drawing,https://tcgplayer-cdn.tcgplayer.com/product/85408_200w.jpg,3,1405,https://cpt.tcgcsv.com/bbJ,2023-09-25T19:02:29.97,1,98/106,Uncommon,Supporter,,,,,,,,0.2,0.59,10.74,0.68,0.51,Normal,"You can play only one Supporter each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card.
+<br>
+Discard up to 2 cards from your hand. If you discard 1 card, draw 3 cards. If you discard 2 cards, draw 4 cards."
+85408,Felicity's Drawing,Felicitys Drawing,https://tcgplayer-cdn.tcgplayer.com/product/85408_200w.jpg,3,1405,https://cpt.tcgcsv.com/bbJ,2023-09-25T19:02:29.97,1,98/106,Uncommon,Supporter,,,,,,,,1.94,2.72,4.0,5.0,,Reverse Holofoil,"You can play only one Supporter each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card.
+<br>
+Discard up to 2 cards from your hand. If you discard 1 card, draw 3 cards. If you discard 2 cards, draw 4 cards."
+85513,Floatzel,Floatzel,https://tcgplayer-cdn.tcgplayer.com/product/85513_200w.jpg,3,1405,https://cpt.tcgcsv.com/hdJ,2023-09-25T18:54:18.227,1,37/106,Uncommon,Water,80,Stage 1,"[2] Agility (20)
+<br>
+Flip a coin. If heads, prevent all effects of an attack, including damage, done to Floatzel during your opponent's next turn.","[1WW] Aqua Jet (60)
+<br>
+Flip a coin. If heads, this attack does 10 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",L+20,,1,0.14,0.4,1.0,0.38,,Normal,
+85513,Floatzel,Floatzel,https://tcgplayer-cdn.tcgplayer.com/product/85513_200w.jpg,3,1405,https://cpt.tcgcsv.com/hdJ,2023-09-25T18:54:18.227,1,37/106,Uncommon,Water,80,Stage 1,"[2] Agility (20)
+<br>
+Flip a coin. If heads, prevent all effects of an attack, including damage, done to Floatzel during your opponent's next turn.","[1WW] Aqua Jet (60)
+<br>
+Flip a coin. If heads, this attack does 10 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",L+20,,1,1.24,1.57,9.99,1.43,,Reverse Holofoil,
+85759,Glameow,Glameow,https://tcgplayer-cdn.tcgplayer.com/product/85759_200w.jpg,3,1405,https://cpt.tcgcsv.com/ckJ,2023-09-25T18:56:18.99,1,68/106,Common,Colorless,50,Basic,"[1] Captivate
+<br>
+Switch 1 of your opponent's Benched Pokémon with 1 of the Defending Pokémon.",[2] Slash (20),F+10,,1,0.07,0.25,4.96,0.26,,Normal,
+85759,Glameow,Glameow,https://tcgplayer-cdn.tcgplayer.com/product/85759_200w.jpg,3,1405,https://cpt.tcgcsv.com/ckJ,2023-09-25T18:56:18.99,1,68/106,Common,Colorless,50,Basic,"[1] Captivate
+<br>
+Switch 1 of your opponent's Benched Pokémon with 1 of the Defending Pokémon.",[2] Slash (20),F+10,,1,0.5,3.79,6.35,0.97,,Reverse Holofoil,
+85844,Gorebyss,Gorebyss,https://tcgplayer-cdn.tcgplayer.com/product/85844_200w.jpg,3,1405,https://cpt.tcgcsv.com/VlJ,2023-09-25T18:54:28.6,1,38/106,Uncommon,Water,80,Stage 1,"[0] Sweet Temptation
+<br>
+Switch 1 of your opponent's Benched Pokémon with 1 of the Defending Pokémon. This attack does 10 damage to the new Defending Pokémon.","[1W] Psychic Snap (30+)
+<br>
+If Gorebyss has any Psychic Energy attached to it, this attack does 30 damage plus 20 more damage and the Defending Pokémon is now Confused.",L+20,,,0.19,0.38,8.15,0.38,0.2,Normal,
+85844,Gorebyss,Gorebyss,https://tcgplayer-cdn.tcgplayer.com/product/85844_200w.jpg,3,1405,https://cpt.tcgcsv.com/VlJ,2023-09-25T18:54:28.6,1,38/106,Uncommon,Water,80,Stage 1,"[0] Sweet Temptation
+<br>
+Switch 1 of your opponent's Benched Pokémon with 1 of the Defending Pokémon. This attack does 10 damage to the new Defending Pokémon.","[1W] Psychic Snap (30+)
+<br>
+If Gorebyss has any Psychic Energy attached to it, this attack does 30 damage plus 20 more damage and the Defending Pokémon is now Confused.",L+20,,,0.97,1.58,4.99,2.13,,Reverse Holofoil,
+85864,Granbull,Granbull,https://tcgplayer-cdn.tcgplayer.com/product/85864_200w.jpg,3,1405,https://cpt.tcgcsv.com/jmJ,2023-09-25T19:16:59.367,1,39/106,Uncommon,Colorless,90,Stage 1,"[2] Daunt (30)
+<br>
+During your opponent's next turn, any damage done by attacks from the Defending Pokémon is reduced by 20 <em>(before applying Weakness and Resistance)</em>.","[4] Rage (40+)
+<br>
+Does 40 damage plus 10 more damage for each damage counter on Granbull.",F+20,,2,0.11,0.35,1.53,0.34,,Normal,
+85864,Granbull,Granbull,https://tcgplayer-cdn.tcgplayer.com/product/85864_200w.jpg,3,1405,https://cpt.tcgcsv.com/jmJ,2023-09-25T19:16:59.367,1,39/106,Uncommon,Colorless,90,Stage 1,"[2] Daunt (30)
+<br>
+During your opponent's next turn, any damage done by attacks from the Defending Pokémon is reduced by 20 <em>(before applying Weakness and Resistance)</em>.","[4] Rage (40+)
+<br>
+Does 40 damage plus 10 more damage for each damage counter on Granbull.",F+20,,2,0.64,2.26,3.05,2.99,,Reverse Holofoil,
+85941,Grovyle,Grovyle,https://tcgplayer-cdn.tcgplayer.com/product/85941_200w.jpg,3,1405,https://cpt.tcgcsv.com/RnJ,2023-09-25T18:54:34.963,1,40/106,Uncommon,Grass,80,Stage 1,"[0] Greenness
+<br>
+Search your deck for up to 2 Grass Energy cards, show them to your opponent, and put them into your hand. Shuffle your deck afterward.","[GG] Poison Breath (30)
+<br>
+The Defending Pokémon is now Poisoned.",R+20,W-20,1,0.3,0.54,4.96,0.64,,Normal,
+85941,Grovyle,Grovyle,https://tcgplayer-cdn.tcgplayer.com/product/85941_200w.jpg,3,1405,https://cpt.tcgcsv.com/RnJ,2023-09-25T18:54:34.963,1,40/106,Uncommon,Grass,80,Stage 1,"[0] Greenness
+<br>
+Search your deck for up to 2 Grass Energy cards, show them to your opponent, and put them into your hand. Shuffle your deck afterward.","[GG] Poison Breath (30)
+<br>
+The Defending Pokémon is now Poisoned.",R+20,W-20,1,2.27,3.5,5.09,2.42,,Reverse Holofoil,
+86014,Hariyama,Hariyama,https://tcgplayer-cdn.tcgplayer.com/product/86014_200w.jpg,3,1405,https://cpt.tcgcsv.com/jqJ,2023-09-25T18:54:38.47,1,41/106,Uncommon,Fighting,100,Stage 1,"[1F] Palm Strike (20+)
+<br>
+Flip a coin. If heads, this attack does 20 damage plus 40 more damage.","[1FF] Spirited Throw (50)
+<br>
+If Hariyama has fewer remaining HP than the Defending Pokémon, this attack's base damage is 80.",P+30,,3,0.22,0.36,0.99,0.27,,Normal,
+86014,Hariyama,Hariyama,https://tcgplayer-cdn.tcgplayer.com/product/86014_200w.jpg,3,1405,https://cpt.tcgcsv.com/jqJ,2023-09-25T18:54:38.47,1,41/106,Uncommon,Fighting,100,Stage 1,"[1F] Palm Strike (20+)
+<br>
+Flip a coin. If heads, this attack does 20 damage plus 40 more damage.","[1FF] Spirited Throw (50)
+<br>
+If Hariyama has fewer remaining HP than the Defending Pokémon, this attack's base damage is 80.",P+30,,3,0.5,0.98,2.99,1.15,,Reverse Holofoil,
+86207,Houndoom,Houndoom,https://tcgplayer-cdn.tcgplayer.com/product/86207_200w.jpg,3,1405,https://cpt.tcgcsv.com/9vJ,2023-09-25T18:53:03.877,1,18/106,Rare,Darkness,90,Stage 1,"[D] Dark Fang (20)
+<br>
+Choose 1 card from your opponent's hand without looking and discard it.","[1R] Black Fire (40+)
+<br>
+You may discard a Fire or Darkness Energy attached to Houndoom. If you discard a Fire Energy, the Defending Pokémon is now Burned. If you discard a Darkness Energy, this attack does 40 damage plus 30 more damage.",W+20,P-20,1,0.82,1.13,2.99,1.84,,Normal,
+86207,Houndoom,Houndoom,https://tcgplayer-cdn.tcgplayer.com/product/86207_200w.jpg,3,1405,https://cpt.tcgcsv.com/9vJ,2023-09-25T18:53:03.877,1,18/106,Rare,Darkness,90,Stage 1,"[D] Dark Fang (20)
+<br>
+Choose 1 card from your opponent's hand without looking and discard it.","[1R] Black Fire (40+)
+<br>
+You may discard a Fire or Darkness Energy attached to Houndoom. If you discard a Fire Energy, the Defending Pokémon is now Burned. If you discard a Darkness Energy, this attack does 40 damage plus 30 more damage.",W+20,P-20,1,5.48,6.2,43.4,7.55,,Reverse Holofoil,
+86228,Houndour,Houndour,https://tcgplayer-cdn.tcgplayer.com/product/86228_200w.jpg,3,1405,https://cpt.tcgcsv.com/BvJ,2024-08-30T16:28:22.673,1,69/106,Common,Fire,50,Basic,"[R] Ember (20)
+<br>
+Flip a coin. If tails, discard a Fire Energy attached to Houndour.",[2] Smash Kick (20),W+10,,1,0.1,0.25,5.24,0.33,,Normal,
+86228,Houndour,Houndour,https://tcgplayer-cdn.tcgplayer.com/product/86228_200w.jpg,3,1405,https://cpt.tcgcsv.com/BvJ,2024-08-30T16:28:22.673,1,69/106,Common,Fire,50,Basic,"[R] Ember (20)
+<br>
+Flip a coin. If tails, discard a Fire Energy attached to Houndour.",[2] Smash Kick (20),W+10,,1,0.75,2.4,4.99,2.84,,Reverse Holofoil,
+86238,Huntail,Huntail,https://tcgplayer-cdn.tcgplayer.com/product/86238_200w.jpg,3,1405,https://cpt.tcgcsv.com/NvJ,2023-09-25T18:54:42.05,1,42/106,Uncommon,Water,90,Stage 1,"[0] Scary Face
+<br>
+Flip a coin. If heads, the Defending Pokémon can't attack or retreat during your opponent's next turn.","[1W] Threaten and Drop (30+)
+<br>
+If Huntail has any Darkness Energy attached to it, this attack does 30 damage plus 20 more damage and discard a Special Energy card, if any, attached to the Defending Pokémon.",L+20,,1,0.21,0.57,3.89,0.57,,Normal,
+86238,Huntail,Huntail,https://tcgplayer-cdn.tcgplayer.com/product/86238_200w.jpg,3,1405,https://cpt.tcgcsv.com/NvJ,2023-09-25T18:54:42.05,1,42/106,Uncommon,Water,90,Stage 1,"[0] Scary Face
+<br>
+Flip a coin. If heads, the Defending Pokémon can't attack or retreat during your opponent's next turn.","[1W] Threaten and Drop (30+)
+<br>
+If Huntail has any Darkness Energy attached to it, this attack does 30 damage plus 20 more damage and discard a Special Energy card, if any, attached to the Defending Pokémon.",L+20,,1,2.0,2.14,3.89,2.45,,Reverse Holofoil,
+86254,Hypno,Hypno,https://tcgplayer-cdn.tcgplayer.com/product/86254_200w.jpg,3,1405,https://cpt.tcgcsv.com/6wJ,2023-09-25T18:53:06.067,1,19/106,Rare,Psychic,80,Stage 1,"[2] Dream Catcher
+<br>
+If the Defending Pokémon is Asleep, move all damage counters from Hypno to the Defending Pokémon.","[1PP] Hypnoblast (60)
+<br>
+The Defending Pokémon is now Asleep.",P+20,,2,0.84,0.95,1.69,1.43,,Normal,
+86254,Hypno,Hypno,https://tcgplayer-cdn.tcgplayer.com/product/86254_200w.jpg,3,1405,https://cpt.tcgcsv.com/6wJ,2023-09-25T18:53:06.067,1,19/106,Rare,Psychic,80,Stage 1,"[2] Dream Catcher
+<br>
+If the Defending Pokémon is Asleep, move all damage counters from Hypno to the Defending Pokémon.","[1PP] Hypnoblast (60)
+<br>
+The Defending Pokémon is now Asleep.",P+20,,2,1.4,3.44,4.56,5.66,,Reverse Holofoil,
+86262,Igglybuff,Igglybuff,https://tcgplayer-cdn.tcgplayer.com/product/86262_200w.jpg,3,1405,https://cpt.tcgcsv.com/gwJ,2023-09-25T18:56:24.72,1,70/106,Common,Colorless,50,Basic,"[0] Inquire
+<br>
+Draw a card. If you didn't play any Supporter card from your hand during this turn, draw 2 more cards.",,F+10,,1,1.19,2.25,6.49,2.71,4.19,Normal,"<strong>Poké-POWER — Baby Evolution</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may put Jigglypuff from your hand onto Igglybuff (this counts as evolving Igglybuff) and remove all damage counters from Igglybuff."
+86262,Igglybuff,Igglybuff,https://tcgplayer-cdn.tcgplayer.com/product/86262_200w.jpg,3,1405,https://cpt.tcgcsv.com/gwJ,2023-09-25T18:56:24.72,1,70/106,Common,Colorless,50,Basic,"[0] Inquire
+<br>
+Draw a card. If you didn't play any Supporter card from your hand during this turn, draw 2 more cards.",,F+10,,1,1.99,11.98,17.19,4.9,,Reverse Holofoil,"<strong>Poké-POWER — Baby Evolution</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may put Jigglypuff from your hand onto Igglybuff (this counts as evolving Igglybuff) and remove all damage counters from Igglybuff."
+86267,Illumise,Illumise,https://tcgplayer-cdn.tcgplayer.com/product/86267_200w.jpg,3,1405,https://cpt.tcgcsv.com/mwJ,2023-09-25T18:56:27.953,1,71/106,Common,Grass,70,Basic,"[1G] Firefly Scent (30)
+<br>
+If the Defending Pokémon has any Poké-Bodies, that Pokémon is now Asleep.",,R+20,,1,0.1,0.3,8.15,0.28,,Normal,"<strong>Poké-POWER — Scent Conduct</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may flip a coin. If heads, search your deck for a Grass Basic Pokémon and put it onto your Bench. Shuffle your deck afterward. This power can't be used if Illumise is affected by a Special Condition."
+86267,Illumise,Illumise,https://tcgplayer-cdn.tcgplayer.com/product/86267_200w.jpg,3,1405,https://cpt.tcgcsv.com/mwJ,2023-09-25T18:56:27.953,1,71/106,Common,Grass,70,Basic,"[1G] Firefly Scent (30)
+<br>
+If the Defending Pokémon has any Poké-Bodies, that Pokémon is now Asleep.",,R+20,,1,0.44,0.99,9.97,3.99,,Reverse Holofoil,"<strong>Poké-POWER — Scent Conduct</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may flip a coin. If heads, search your deck for a Grass Basic Pokémon and put it onto your Bench. Shuffle your deck afterward. This power can't be used if Illumise is affected by a Special Condition."
+86318,Jigglypuff,Jigglypuff,https://tcgplayer-cdn.tcgplayer.com/product/86318_200w.jpg,3,1405,https://cpt.tcgcsv.com/nxJ,2023-09-25T18:56:31.33,1,72/106,Common,Colorless,60,Basic,"[1] Hypnotic Gaze
+<br>
+The Defending Pokémon is now Asleep.","[2] Expand (20)
+<br>
+During your opponent's next turn, any damage done to Jigglypuff by attacks is reduced by 20 <em>(after applying Weakness and Resistance)</em>.",F+10,,1,2.26,4.19,5.99,4.33,5.99,Normal,
+86318,Jigglypuff,Jigglypuff,https://tcgplayer-cdn.tcgplayer.com/product/86318_200w.jpg,3,1405,https://cpt.tcgcsv.com/nxJ,2023-09-25T18:56:31.33,1,72/106,Common,Colorless,60,Basic,"[1] Hypnotic Gaze
+<br>
+The Defending Pokémon is now Asleep.","[2] Expand (20)
+<br>
+During your opponent's next turn, any damage done to Jigglypuff by attacks is reduced by 20 <em>(after applying Weakness and Resistance)</em>.",F+10,,1,4.88,4.99,14.99,7.74,,Reverse Holofoil,
+86413,Kakuna,Kakuna,https://tcgplayer-cdn.tcgplayer.com/product/86413_200w.jpg,3,1405,https://cpt.tcgcsv.com/hBJ,2023-09-25T19:17:10.407,1,73/106,Common,Grass,80,Stage 1,"[0] Stiffen
+<br>
+During your opponent's next turn, any damage done to Kakuna by attacks is reduced by 30 <em>(after applying Weakness and Resistance)</em>.","[G] Spit Poison (10)
+<br>
+The Defending Pokémon is Poisoned.",R+20,,2,0.05,0.25,3.25,0.24,,Normal,
+86413,Kakuna,Kakuna,https://tcgplayer-cdn.tcgplayer.com/product/86413_200w.jpg,3,1405,https://cpt.tcgcsv.com/hBJ,2023-09-25T19:17:10.407,1,73/106,Common,Grass,80,Stage 1,"[0] Stiffen
+<br>
+During your opponent's next turn, any damage done to Kakuna by attacks is reduced by 30 <em>(after applying Weakness and Resistance)</em>.","[G] Spit Poison (10)
+<br>
+The Defending Pokémon is Poisoned.",R+20,,2,0.8,1.19,1.94,1.31,,Reverse Holofoil,
+86457,Kingler,Kingler,https://tcgplayer-cdn.tcgplayer.com/product/86457_200w.jpg,3,1405,https://cpt.tcgcsv.com/9CJ,2023-09-25T18:53:09.783,1,20/106,Rare,Water,90,Stage 1,[2] Crabhammer (30),"[1WW] Scissor Blow (80)
+<br>
+If the Defending Pokémon would be Knocked Out by this attack, Kingler does 30 damage to itself.",L+20,,3,0.85,1.82,3.99,1.3,,Normal,
+86457,Kingler,Kingler,https://tcgplayer-cdn.tcgplayer.com/product/86457_200w.jpg,3,1405,https://cpt.tcgcsv.com/9CJ,2023-09-25T18:53:09.783,1,20/106,Rare,Water,90,Stage 1,[2] Crabhammer (30),"[1WW] Scissor Blow (80)
+<br>
+If the Defending Pokémon would be Knocked Out by this attack, Kingler does 30 damage to itself.",L+20,,3,3.74,5.24,7.49,5.24,,Reverse Holofoil,
+86496,Koffing,Koffing,https://tcgplayer-cdn.tcgplayer.com/product/86496_200w.jpg,3,1405,https://cpt.tcgcsv.com/XCJ,2023-09-25T18:56:37.837,1,74/106,Common,Psychic,60,Basic,[1] Tackle (10),"[1P] Smogscreen (10)
+<br>
+The Defending Pokémon is now Poisoned. If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",P+10,,2,0.2,0.39,20.0,0.34,,Normal,
+86496,Koffing,Koffing,https://tcgplayer-cdn.tcgplayer.com/product/86496_200w.jpg,3,1405,https://cpt.tcgcsv.com/XCJ,2023-09-25T18:56:37.837,1,74/106,Common,Psychic,60,Basic,[1] Tackle (10),"[1P] Smogscreen (10)
+<br>
+The Defending Pokémon is now Poisoned. If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",P+10,,2,1.55,10.77,19.99,4.62,,Reverse Holofoil,
+86526,Krabby,Krabby,https://tcgplayer-cdn.tcgplayer.com/product/86526_200w.jpg,3,1405,https://cpt.tcgcsv.com/xDJ,2023-09-25T18:56:40.383,1,75/106,Common,Water,60,Basic,[1] Irongrip (10),[1W] Guillotine (30),L+10,,2,0.09,0.28,1.69,0.28,,Normal,
+86526,Krabby,Krabby,https://tcgplayer-cdn.tcgplayer.com/product/86526_200w.jpg,3,1405,https://cpt.tcgcsv.com/xDJ,2023-09-25T18:56:40.383,1,75/106,Common,Water,60,Basic,[1] Irongrip (10),[1W] Guillotine (30),L+10,,2,0.7,2.5,2.99,2.5,,Reverse Holofoil,
+86618,Lapras,Lapras,https://tcgplayer-cdn.tcgplayer.com/product/86618_200w.jpg,3,1405,https://cpt.tcgcsv.com/nGJ,2023-09-25T18:53:22.767,1,21/106,Rare,Water,80,Basic,"[W] Carry In
+<br>
+Search your deck for a Pokémon Tool card, a Supporter card, and a basic Energy card, show them to your opponent, and put them into your hand. Shuffle your deck afterward.",[1W] Wave Splash (20),L+20,,1,4.0,5.7,7.39,5.74,,Normal,
+86618,Lapras,Lapras,https://tcgplayer-cdn.tcgplayer.com/product/86618_200w.jpg,3,1405,https://cpt.tcgcsv.com/nGJ,2023-09-25T18:53:22.767,1,21/106,Rare,Water,80,Basic,"[W] Carry In
+<br>
+Search your deck for a Pokémon Tool card, a Supporter card, and a basic Energy card, show them to your opponent, and put them into your hand. Shuffle your deck afterward.",[1W] Wave Splash (20),L+20,,1,6.09,18.04,29.99,14.32,,Reverse Holofoil,
+86651,Latias,Latias,https://tcgplayer-cdn.tcgplayer.com/product/86651_200w.jpg,3,1405,https://cpt.tcgcsv.com/2HJ,2023-09-25T18:53:25.55,1,22/106,Rare,Colorless,80,Basic,"[1] Miraculous Light (10)
+<br>
+Remove 1 damage counter and all Special Conditions from Latias.","[1RW] Mist Ball (80)
+<br>
+Discard a Fire Energy and a Water Energy attached to Latias.",C+20,F-20,1,1.1,2.84,4.29,2.7,,Normal,
+86651,Latias,Latias,https://tcgplayer-cdn.tcgplayer.com/product/86651_200w.jpg,3,1405,https://cpt.tcgcsv.com/2HJ,2023-09-25T18:53:25.55,1,22/106,Rare,Colorless,80,Basic,"[1] Miraculous Light (10)
+<br>
+Remove 1 damage counter and all Special Conditions from Latias.","[1RW] Mist Ball (80)
+<br>
+Discard a Fire Energy and a Water Energy attached to Latias.",C+20,F-20,1,2.0,4.51,8.4,7.88,,Reverse Holofoil,
+86665,Latios,Latios,https://tcgplayer-cdn.tcgplayer.com/product/86665_200w.jpg,3,1405,https://cpt.tcgcsv.com/kHJ,2023-09-25T18:53:29.087,1,23/106,Rare,Colorless,90,Basic,"[1] Energy Draw (10)
+<br>
+Flip a coin. If heads, search your deck for a basic Energy card and attach it to Latios. Shuffle your deck afterward.","[2GL] Luster Purge (120)
+<br>
+Discard 3 Energy attached to Latios.",C+20,F-20,2,1.9,3.85,4.4,3.78,,Normal,
+86665,Latios,Latios,https://tcgplayer-cdn.tcgplayer.com/product/86665_200w.jpg,3,1405,https://cpt.tcgcsv.com/kHJ,2023-09-25T18:53:29.087,1,23/106,Rare,Colorless,90,Basic,"[1] Energy Draw (10)
+<br>
+Flip a coin. If heads, search your deck for a basic Energy card and attach it to Latios. Shuffle your deck afterward.","[2GL] Luster Purge (120)
+<br>
+Discard 3 Energy attached to Latios.",C+20,F-20,2,10.98,12.69,26.86,19.84,,Reverse Holofoil,
+86708,Leftovers,Leftovers,https://tcgplayer-cdn.tcgplayer.com/product/86708_200w.jpg,3,1405,https://cpt.tcgcsv.com/bJJ,2023-09-25T19:02:34.08,1,99/106,Uncommon,Tool,,,,,,,,0.12,0.33,1.54,0.35,,Normal,"Attach Leftovers to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. If that Pokémon is Knocked Out, discard this card.
+<br>
+If the Pokémon Leftovers is attached to is your Active Pokémon at the end of your turn, remove 1 damage counter from that Pokémon."
+86708,Leftovers,Leftovers,https://tcgplayer-cdn.tcgplayer.com/product/86708_200w.jpg,3,1405,https://cpt.tcgcsv.com/bJJ,2023-09-25T19:02:34.08,1,99/106,Uncommon,Tool,,,,,,,,1.59,1.9,4.99,3.6,,Reverse Holofoil,"Attach Leftovers to 1 of your Pokémon that doesn't already have a Pokémon Tool attached to it. If that Pokémon is Knocked Out, discard this card.
+<br>
+If the Pokémon Leftovers is attached to is your Active Pokémon at the end of your turn, remove 1 damage counter from that Pokémon."
+86807,Linoone,Linoone,https://tcgplayer-cdn.tcgplayer.com/product/86807_200w.jpg,3,1405,https://cpt.tcgcsv.com/9LJ,2023-09-25T18:54:46.863,1,43/106,Uncommon,Colorless,80,Stage 1,"[0] Switcheroo
+<br>
+Move a Pokémon Tool card attached to 1 of your opponent's Pokémon to another of your opponent's Pokémon <em>(excluding Pokémon that already has a Pokémon Tool attached to it)</em>. (If an effect of this attack is prevented, this attack does nothing.)","[3] Overrun (30)
+<br>
+Does 30 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",F+20,,,0.32,0.52,1.74,0.61,,Normal,
+86807,Linoone,Linoone,https://tcgplayer-cdn.tcgplayer.com/product/86807_200w.jpg,3,1405,https://cpt.tcgcsv.com/9LJ,2023-09-25T18:54:46.863,1,43/106,Uncommon,Colorless,80,Stage 1,"[0] Switcheroo
+<br>
+Move a Pokémon Tool card attached to 1 of your opponent's Pokémon to another of your opponent's Pokémon <em>(excluding Pokémon that already has a Pokémon Tool attached to it)</em>. (If an effect of this attack is prevented, this attack does nothing.)","[3] Overrun (30)
+<br>
+Does 30 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",F+20,,,2.65,3.47,7.07,2.99,,Reverse Holofoil,
+86843,Loudred,Loudred,https://tcgplayer-cdn.tcgplayer.com/product/86843_200w.jpg,3,1405,https://cpt.tcgcsv.com/TLJ,2023-09-25T18:54:49.097,1,44/106,Uncommon,Colorless,80,Stage 1,"[2] Bass Control
+<br>
+Choose 1 of your opponent's Pokémon. This attack does 20 damage to that Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[3] Stomp (40+)
+<br>
+Flip a coin. If heads, this attack does 40 damage plus 20 more damage.",F+20,,2,0.13,0.28,0.99,0.37,,Normal,
+86843,Loudred,Loudred,https://tcgplayer-cdn.tcgplayer.com/product/86843_200w.jpg,3,1405,https://cpt.tcgcsv.com/TLJ,2023-09-25T18:54:49.097,1,44/106,Uncommon,Colorless,80,Stage 1,"[2] Bass Control
+<br>
+Choose 1 of your opponent's Pokémon. This attack does 20 damage to that Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[3] Stomp (40+)
+<br>
+Flip a coin. If heads, this attack does 40 damage plus 20 more damage.",F+20,,2,1.0,2.42,2.99,2.71,,Reverse Holofoil,
+86926,Lunatone,Lunatone,https://tcgplayer-cdn.tcgplayer.com/product/86926_200w.jpg,3,1405,https://cpt.tcgcsv.com/xNJ,2023-09-25T18:56:43.497,1,76/106,Common,Fighting,60,Basic,"[1] Knock Over (20)
+<br>
+You may discard any Stadium card in play.",,P+20,,1,0.15,0.27,1.69,0.27,,Normal,"<strong>Poké-POWER — Gravity Change</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may discard a card from your hand. Then, if you have Solrock in play, draw a card. This power can't be used if Lunatone is affected by a Special Condition."
+86926,Lunatone,Lunatone,https://tcgplayer-cdn.tcgplayer.com/product/86926_200w.jpg,3,1405,https://cpt.tcgcsv.com/xNJ,2023-09-25T18:56:43.497,1,76/106,Common,Fighting,60,Basic,"[1] Knock Over (20)
+<br>
+You may discard any Stadium card in play.",,P+20,,1,0.63,1.0,2.5,0.94,,Reverse Holofoil,"<strong>Poké-POWER — Gravity Change</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may discard a card from your hand. Then, if you have Solrock in play, draw a card. This power can't be used if Lunatone is affected by a Special Condition."
+86936,Luvdisc,Luvdisc,https://tcgplayer-cdn.tcgplayer.com/product/86936_200w.jpg,3,1405,https://cpt.tcgcsv.com/LNJ,2023-09-25T18:56:47.167,1,77/106,Common,Water,60,Basic,"[1] Rendezvous
+<br>
+Reveal the top card of your deck and put it into your hand. If that card is a Pokémon, draw 2 cards.","[W] Synchro Dance (10+)
+<br>
+If Luvdisc and the Defending Pokémon have the same amount of Energy attached to them, this attack does 10 damage plus 20 more damage.",L+10,,1,0.21,0.45,1.52,0.43,,Normal,
+86936,Luvdisc,Luvdisc,https://tcgplayer-cdn.tcgplayer.com/product/86936_200w.jpg,3,1405,https://cpt.tcgcsv.com/LNJ,2023-09-25T18:56:47.167,1,77/106,Common,Water,60,Basic,"[1] Rendezvous
+<br>
+Reveal the top card of your deck and put it into your hand. If that card is a Pokémon, draw 2 cards.","[W] Synchro Dance (10+)
+<br>
+If Luvdisc and the Defending Pokémon have the same amount of Energy attached to them, this attack does 10 damage plus 20 more damage.",L+10,,1,0.37,2.21,4.74,2.38,,Reverse Holofoil,
+87016,Magcargo,Magcargo,https://tcgplayer-cdn.tcgplayer.com/product/87016_200w.jpg,3,1405,https://cpt.tcgcsv.com/lQJ,2024-10-21T11:32:49.973,1,45/106,Uncommon,Fire,90,Stage 1,"[1RR] Lava Plume (60)
+<br>
+You may discard the top card of your deck. If you do, the Defending Pokémon is now Burned.",,W+20,,3,0.1,0.33,0.99,0.31,0.2,Normal,"<strong>Poké-BODY — Magma Armor</strong>
+<br>
+Magcargo can't be Asleep or Paralyzed."
+87016,Magcargo,Magcargo,https://tcgplayer-cdn.tcgplayer.com/product/87016_200w.jpg,3,1405,https://cpt.tcgcsv.com/lQJ,2024-10-21T11:32:49.973,1,45/106,Uncommon,Fire,90,Stage 1,"[1RR] Lava Plume (60)
+<br>
+You may discard the top card of your deck. If you do, the Defending Pokémon is now Burned.",,W+20,,3,0.29,0.84,1.99,0.97,,Reverse Holofoil,"<strong>Poké-BODY — Magma Armor</strong>
+<br>
+Magcargo can't be Asleep or Paralyzed."
+87131,Makuhita,Makuhita,https://tcgplayer-cdn.tcgplayer.com/product/87131_200w.jpg,3,1405,https://cpt.tcgcsv.com/FSJ,2023-09-25T18:56:56.54,1,78/106,Common,Fighting,60,Basic,[1] Punch (10),"[1F] Arm Thrust (40)
+<br>
+Flip a coin. If tails, this attack does nothing. If heads, discard an Energy card attached to the Defending Pokémon.",P+10,,2,0.05,0.25,1.69,0.27,0.2,Normal,
+87131,Makuhita,Makuhita,https://tcgplayer-cdn.tcgplayer.com/product/87131_200w.jpg,3,1405,https://cpt.tcgcsv.com/FSJ,2023-09-25T18:56:56.54,1,78/106,Common,Fighting,60,Basic,[1] Punch (10),"[1F] Arm Thrust (40)
+<br>
+Flip a coin. If tails, this attack does nothing. If heads, discard an Energy card attached to the Defending Pokémon.",P+10,,2,1.0,1.49,2.25,1.25,0.84,Reverse Holofoil,
+87174,Mankey,Mankey,https://tcgplayer-cdn.tcgplayer.com/product/87174_200w.jpg,3,1405,https://cpt.tcgcsv.com/vTJ,2023-09-25T18:56:59.107,1,79/106,Common,Fighting,50,Basic,[F] Light Punch (10),"[2] Rage (10+)
+<br>
+Does 10 damage plus 10 more damage for each damage counter on Mankey.",P+10,,1,0.08,0.29,1.69,0.33,,Normal,
+87174,Mankey,Mankey,https://tcgplayer-cdn.tcgplayer.com/product/87174_200w.jpg,3,1405,https://cpt.tcgcsv.com/vTJ,2023-09-25T18:56:59.107,1,79/106,Common,Fighting,50,Basic,[F] Light Punch (10),"[2] Rage (10+)
+<br>
+Does 10 damage plus 10 more damage for each damage counter on Mankey.",P+10,,1,1.16,1.99,4.74,1.99,,Reverse Holofoil,
+87239,Marshtomp,Marshtomp,https://tcgplayer-cdn.tcgplayer.com/product/87239_200w.jpg,3,1405,https://cpt.tcgcsv.com/PVJ,2023-09-25T18:54:57.15,1,46/106,Uncommon,Water,90,Stage 1,[2] Pound (20),"[2F] Muddy Bomb
+<br>
+Choose 1 of your opponent's Pokémon. This attack does 30 damage to that Pokémon and 10 damage to each of your opponent's other Pokémon. <em>(Don't apply Weakness and resistance for Benched Pokémon.)</em>",G+20,,2,0.45,1.0,1.99,1.16,,Normal,
+87239,Marshtomp,Marshtomp,https://tcgplayer-cdn.tcgplayer.com/product/87239_200w.jpg,3,1405,https://cpt.tcgcsv.com/PVJ,2023-09-25T18:54:57.15,1,46/106,Uncommon,Water,90,Stage 1,[2] Pound (20),"[2F] Muddy Bomb
+<br>
+Choose 1 of your opponent's Pokémon. This attack does 30 damage to that Pokémon and 10 damage to each of your opponent's other Pokémon. <em>(Don't apply Weakness and resistance for Benched Pokémon.)</em>",G+20,,2,2.99,3.49,3.99,3.4,,Reverse Holofoil,
+87261,Mawile,Mawile,https://tcgplayer-cdn.tcgplayer.com/product/87261_200w.jpg,3,1405,https://cpt.tcgcsv.com/fWJ,2023-09-25T18:53:31.587,1,24/106,Rare,Metal,70,Basic,"[0] Pick Out
+<br>
+Choose 1 face-down Prize card <em>(yours or your opponent's)</em> and put it face up. If that card is a Supporter card, use the effect of that card as the effect of this attack. (That card remains face up for the rest of the game.)","[1M] Jaw Bite (20)
+<br>
+During your next turn, if an attack does damage to the Defending Pokémon <em>(after applying Weakness and Resistance)</em>, that attack does 20 more damage.",R+10,P-20,1,0.97,1.49,2.2,1.49,,Normal,
+87261,Mawile,Mawile,https://tcgplayer-cdn.tcgplayer.com/product/87261_200w.jpg,3,1405,https://cpt.tcgcsv.com/fWJ,2023-09-25T18:53:31.587,1,24/106,Rare,Metal,70,Basic,"[0] Pick Out
+<br>
+Choose 1 face-down Prize card <em>(yours or your opponent's)</em> and put it face up. If that card is a Supporter card, use the effect of that card as the effect of this attack. (That card remains face up for the rest of the game.)","[1M] Jaw Bite (20)
+<br>
+During your next turn, if an attack does damage to the Defending Pokémon <em>(after applying Weakness and Resistance)</em>, that attack does 20 more damage.",R+10,P-20,1,10.66,13.04,13.86,8.36,,Reverse Holofoil,
+87390,Metapod,Metapod,https://tcgplayer-cdn.tcgplayer.com/product/87390_200w.jpg,3,1405,https://cpt.tcgcsv.com/QZJ,2023-09-25T18:55:00.933,1,47/106,Uncommon,Grass,70,Stage 1,[1G] Ram (30),,R+10,,2,0.1,0.51,0.99,0.55,,Normal,"<strong>Poké-POWER — Emerge</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, if Metapod is your Active Pokémon, you may flip a coin. If heads, search your deck for a card that evolves from Metapod and put it onto Metapod. (This counts as evolving Metapod.) Shuffle your deck afterward. This power can't be used if Metapod is affected by a Special Condition."
+87390,Metapod,Metapod,https://tcgplayer-cdn.tcgplayer.com/product/87390_200w.jpg,3,1405,https://cpt.tcgcsv.com/QZJ,2023-09-25T18:55:00.933,1,47/106,Uncommon,Grass,70,Stage 1,[1G] Ram (30),,R+10,,2,0.87,2.52,3.99,2.45,,Reverse Holofoil,"<strong>Poké-POWER — Emerge</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, if Metapod is your Active Pokémon, you may flip a coin. If heads, search your deck for a card that evolves from Metapod and put it onto Metapod. (This counts as evolving Metapod.) Shuffle your deck afterward. This power can't be used if Metapod is affected by a Special Condition."
+87454,Milotic,Milotic,https://tcgplayer-cdn.tcgplayer.com/product/87454_200w.jpg,3,1405,https://cpt.tcgcsv.com/6_J,2023-09-25T18:53:34.823,1,25/106,Rare,Water,90,Stage 1,"[2W] Twister (50)
+<br>
+Flip 2 coins. If both are tails, this attack does nothing. For each heads, discard an Energy attached to the Defending Pokémon.",,L+20,,2,1.94,4.2,9.99,4.73,,Normal,"<strong>Poké-BODY — Marvel Scale</strong>
+<br>
+Prevent all effects of attacks, including damage, done to Milotic by your opponent's Pokémon LV.X."
+87454,Milotic,Milotic,https://tcgplayer-cdn.tcgplayer.com/product/87454_200w.jpg,3,1405,https://cpt.tcgcsv.com/6_J,2023-09-25T18:53:34.823,1,25/106,Rare,Water,90,Stage 1,"[2W] Twister (50)
+<br>
+Flip 2 coins. If both are tails, this attack does nothing. For each heads, discard an Energy attached to the Defending Pokémon.",,L+20,,2,0.99,3.53,6.07,10.12,,Reverse Holofoil,"<strong>Poké-BODY — Marvel Scale</strong>
+<br>
+Prevent all effects of attacks, including damage, done to Milotic by your opponent's Pokémon LV.X."
+87579,Moonlight Stadium,Moonlight Stadium,https://tcgplayer-cdn.tcgplayer.com/product/87579_200w.jpg,3,1405,https://cpt.tcgcsv.com/C2K,2022-12-14T20:22:09.11,1,100/106,Uncommon,Stadium,,,,,,,,2.15,3.33,6.49,3.13,,Normal,"This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.
+<br>
+The Retreat Cost for each Psychic and Darkness Pokémon <em>(both yours and your opponent's)</em> is 0."
+87579,Moonlight Stadium,Moonlight Stadium,https://tcgplayer-cdn.tcgplayer.com/product/87579_200w.jpg,3,1405,https://cpt.tcgcsv.com/C2K,2022-12-14T20:22:09.11,1,100/106,Uncommon,Stadium,,,,,,,,15.08,22.53,29.97,9.5,,Reverse Holofoil,"This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.
+<br>
+The Retreat Cost for each Psychic and Darkness Pokémon <em>(both yours and your opponent's)</em> is 0."
+87614,Mudkip,Mudkip,https://tcgplayer-cdn.tcgplayer.com/product/87614_200w.jpg,3,1405,https://cpt.tcgcsv.com/j3K,2023-09-25T18:57:01.63,1,80/106,Common,Water,60,Basic,[1] Mud Spatter (10),"[3] Endeavor (30+)
+<br>
+Flip 2 coins. This attack does 30 damage plus 20 more damage for each heads.",G+10,,1,1.5,2.65,9.0,2.59,,Normal,
+87614,Mudkip,Mudkip,https://tcgplayer-cdn.tcgplayer.com/product/87614_200w.jpg,3,1405,https://cpt.tcgcsv.com/j3K,2023-09-25T18:57:01.63,1,80/106,Common,Water,60,Basic,[1] Mud Spatter (10),"[3] Endeavor (30+)
+<br>
+Flip 2 coins. This attack does 30 damage plus 20 more damage for each heads.",G+10,,1,22.0,32.0,37.75,39.5,,Reverse Holofoil,
+87899,Pachirisu,Pachirisu,https://tcgplayer-cdn.tcgplayer.com/product/87899_200w.jpg,3,1405,https://cpt.tcgcsv.com/_9K,2023-09-25T18:52:20.007,1,5/106,Holo Rare,Lightning,70,Basic,"[1] Call for Family
+<br>
+Search your deck for up to 3 Basic Pokémon and put them onto your Bench. Shuffle your deck afterward.","[1] Smash Short (10+)
+<br>
+If the Defending Pokémon has a Pokémon Tool card attached to it, this attack does 10 damage plus 30 more damage. Discard that Pokémon Tool card, look at your opponent's hand, and discard any Pokémon Tool cards of the same name you find there.",F+20,M-20,1,6.0,7.9,9.35,8.21,,Holofoil,
+87899,Pachirisu,Pachirisu,https://tcgplayer-cdn.tcgplayer.com/product/87899_200w.jpg,3,1405,https://cpt.tcgcsv.com/_9K,2023-09-25T18:52:20.007,1,5/106,Holo Rare,Lightning,70,Basic,"[1] Call for Family
+<br>
+Search your deck for up to 3 Basic Pokémon and put them onto your Bench. Shuffle your deck afterward.","[1] Smash Short (10+)
+<br>
+If the Defending Pokémon has a Pokémon Tool card attached to it, this attack does 10 damage plus 30 more damage. Discard that Pokémon Tool card, look at your opponent's hand, and discard any Pokémon Tool cards of the same name you find there.",F+20,M-20,1,4.09,5.0,6.89,6.79,,Reverse Holofoil,
+87907,Palkia,Palkia,https://tcgplayer-cdn.tcgplayer.com/product/87907_200w.jpg,3,1405,https://cpt.tcgcsv.com/9bK,2023-09-25T18:53:38.3,1,26/106,Rare,Water,90,Basic,"[W] Spacial Rend (10)
+<br>
+Search your deck for a Stadium card, show it to your opponent, and put it into your hand. Shuffle your deck afterward. If there is any Stadium card in play, discard it.","[1WW] Transback (40)
+<br>
+You may flip a coin. If heads, discard all Energy attached to Palkia and put the Defending Pokémon and all cards attached to it on top of your opponent's deck. Your opponent shuffles his or her deck afterward.",L+20,,2,0.5,1.09,6.99,2.37,,Normal,
+87907,Palkia,Palkia,https://tcgplayer-cdn.tcgplayer.com/product/87907_200w.jpg,3,1405,https://cpt.tcgcsv.com/9bK,2023-09-25T18:53:38.3,1,26/106,Rare,Water,90,Basic,"[W] Spacial Rend (10)
+<br>
+Search your deck for a Stadium card, show it to your opponent, and put it into your hand. Shuffle your deck afterward. If there is any Stadium card in play, discard it.","[1WW] Transback (40)
+<br>
+You may flip a coin. If heads, discard all Energy attached to Palkia and put the Defending Pokémon and all cards attached to it on top of your opponent's deck. Your opponent shuffles his or her deck afterward.",L+20,,2,2.48,9.0,10.69,6.25,,Reverse Holofoil,
+87919,Palkia LV.X,Palkia LVX,https://tcgplayer-cdn.tcgplayer.com/product/87919_200w.jpg,3,1405,https://cpt.tcgcsv.com/pbK,2022-12-14T20:32:16.037,1,106/106,Ultra Rare,Water,120,Level Up,"[WWW] Hydro Reflect (60)
+<br>
+You may move all Energy cards attached to Palkia to your Benched Pokémon in any way you like. (Ignore this effect if you don't have any Benched Pokémon.)",,Lx2,,3,87.0,124.49,200.0,87.0,,Holofoil,"<strong>Poké-POWER — Restructure</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may have your opponent switch 1 of your Active Pokémon with 1 of your Benched Pokémon. Then, you switch 1 of the Defending Pokémon with 1 of your opponent's Benched Pokémon. This power can't be used if Palkia is affected by a Special Condition.
+<br>
+[Put this card onto your Active Palkia. Palkia LV.X can use any attack, Poké-Power, or Poké-Body from its previous level.]"
+87977,Pelipper,Pelipper,https://tcgplayer-cdn.tcgplayer.com/product/87977_200w.jpg,3,1405,https://cpt.tcgcsv.com/zcK,2023-09-25T18:55:09.687,1,48/106,Uncommon,Water,80,Stage 1,"[0] Guzzle
+<br>
+Choose up to 2 basic Water Energy cards from your hand and attach them to Pelipper. Remove 2 damage counters for each Energy card attached in this way.","[2W] Jet Return (30x)
+<br>
+Does 30 damage times the number of Energy cards attached to Pelipper. Then, put all Energy cards attached to Pelipper on top of your deck. Shuffle your deck afterward.",L+20,F-20,1,0.19,0.29,1.0,0.29,,Normal,
+87977,Pelipper,Pelipper,https://tcgplayer-cdn.tcgplayer.com/product/87977_200w.jpg,3,1405,https://cpt.tcgcsv.com/zcK,2023-09-25T18:55:09.687,1,48/106,Uncommon,Water,80,Stage 1,"[0] Guzzle
+<br>
+Choose up to 2 basic Water Energy cards from your hand and attach them to Pelipper. Remove 2 damage counters for each Energy card attached in this way.","[2W] Jet Return (30x)
+<br>
+Does 30 damage times the number of Energy cards attached to Pelipper. Then, put all Energy cards attached to Pelipper on top of your deck. Shuffle your deck afterward.",L+20,F-20,1,0.29,0.81,1.85,0.72,,Reverse Holofoil,
+88311,Porygon,Porygon,https://tcgplayer-cdn.tcgplayer.com/product/88311_200w.jpg,3,1405,https://cpt.tcgcsv.com/flK,2024-08-10T04:51:00.183,1,81/106,Common,Colorless,50,Basic,"[1] Calculate
+<br>
+Look at the top 3 cards of your deck and put them back on top of your deck in any order.",[2] Sharpen (20),F+10,,1,0.11,0.3,1.69,0.5,,Normal,
+88311,Porygon,Porygon,https://tcgplayer-cdn.tcgplayer.com/product/88311_200w.jpg,3,1405,https://cpt.tcgcsv.com/flK,2024-08-10T04:51:00.183,1,81/106,Common,Colorless,50,Basic,"[1] Calculate
+<br>
+Look at the top 3 cards of your deck and put them back on top of your deck in any order.",[2] Sharpen (20),F+10,,1,2.37,3.23,3.95,3.24,,Reverse Holofoil,
+88315,Porygon-Z,Porygon Z,https://tcgplayer-cdn.tcgplayer.com/product/88315_200w.jpg,3,1405,https://cpt.tcgcsv.com/klK,2024-08-01T21:35:22.383,1,6/106,Holo Rare,Colorless,110,Stage 2,"[2] Tri Attack (40x)
+<br>
+Flip 3 coins. This attack does 40 damage times the number of heads.",,F+30,,2,5.0,5.77,7.99,6.36,,Holofoil,"<strong>Poké-POWER — Conversion</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may discard a basic Energy card from your hand. Porygon-Z is the same type as that Energy card until the end of your turn. This power can't be used if Porygon-Z is affected by a Special Condition."
+88315,Porygon-Z,Porygon Z,https://tcgplayer-cdn.tcgplayer.com/product/88315_200w.jpg,3,1405,https://cpt.tcgcsv.com/klK,2024-08-01T21:35:22.383,1,6/106,Holo Rare,Colorless,110,Stage 2,"[2] Tri Attack (40x)
+<br>
+Flip 3 coins. This attack does 40 damage times the number of heads.",,F+30,,2,2.85,4.36,8.45,10.87,,Reverse Holofoil,"<strong>Poké-POWER — Conversion</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may discard a basic Energy card from your hand. Porygon-Z is the same type as that Energy card until the end of your turn. This power can't be used if Porygon-Z is affected by a Special Condition."
+88326,Porygon2,Porygon2,https://tcgplayer-cdn.tcgplayer.com/product/88326_200w.jpg,3,1405,https://cpt.tcgcsv.com/xlK,2023-09-25T18:55:12.133,1,49/106,Uncommon,Colorless,70,Stage 1,[2] Speed Attack (30),,F+20,,2,0.49,1.01,5.89,1.36,0.71,Normal,"<strong>Poké-POWER — Download</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may discard a Supporter card from your hand and use the effect of that card as the effect of this power. This power can't be sed if Porygon2 is affected by a Special Condition."
+88326,Porygon2,Porygon2,https://tcgplayer-cdn.tcgplayer.com/product/88326_200w.jpg,3,1405,https://cpt.tcgcsv.com/xlK,2023-09-25T18:55:12.133,1,49/106,Uncommon,Colorless,70,Stage 1,[2] Speed Attack (30),,F+20,,2,7.24,8.7,14.12,9.16,,Reverse Holofoil,"<strong>Poké-POWER — Download</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may discard a Supporter card from your hand and use the effect of that card as the effect of this power. This power can't be sed if Porygon2 is affected by a Special Condition."
+88356,Premier Ball,Premier Ball,https://tcgplayer-cdn.tcgplayer.com/product/88356_200w.jpg,3,1405,https://cpt.tcgcsv.com/8mK,2023-08-10T15:21:11.643,1,101/106,Uncommon,Trainer,,,,,,,,0.48,0.72,4.74,0.72,,Normal,"Search your deck or your discard pile for a Pokémon LV.X show it to your opponent, and put it into your hand. If you search your deck, shuffle your deck afterward."
+88356,Premier Ball,Premier Ball,https://tcgplayer-cdn.tcgplayer.com/product/88356_200w.jpg,3,1405,https://cpt.tcgcsv.com/8mK,2023-08-10T15:21:11.643,1,101/106,Uncommon,Trainer,,,,,,,,1.4,2.0,4.96,4.72,,Reverse Holofoil,"Search your deck or your discard pile for a Pokémon LV.X show it to your opponent, and put it into your hand. If you search your deck, shuffle your deck afterward."
+88363,Primeape,Primeape,https://tcgplayer-cdn.tcgplayer.com/product/88363_200w.jpg,3,1405,https://cpt.tcgcsv.com/hmK,2023-09-25T18:53:41.623,1,27/106,Rare,Fighting,90,Stage 1,"[2F] Whump (50)
+<br>
+Primeape is now Confused. Flip a coin. If heads, the Defending Pokémon can't attack during your opponent's next turn.",,P+20,,1,0.4,0.73,1.54,0.85,0.25,Normal,"<strong>Poké-POWER — Anger Point</strong>
+<br>
+If Primeape has any damage counters on it, Primeape's attacks do 40 more damage to the Active Pokémon <em>(before applying Weakness and Resistance)</em>."
+88363,Primeape,Primeape,https://tcgplayer-cdn.tcgplayer.com/product/88363_200w.jpg,3,1405,https://cpt.tcgcsv.com/hmK,2023-09-25T18:53:41.623,1,27/106,Rare,Fighting,90,Stage 1,"[2F] Whump (50)
+<br>
+Primeape is now Confused. Flip a coin. If heads, the Defending Pokémon can't attack during your opponent's next turn.",,P+20,,1,0.99,1.99,7.49,3.04,,Reverse Holofoil,"<strong>Poké-POWER — Anger Point</strong>
+<br>
+If Primeape has any damage counters on it, Primeape's attacks do 40 more damage to the Active Pokémon <em>(before applying Weakness and Resistance)</em>."
+88465,Purugly,Purugly,https://tcgplayer-cdn.tcgplayer.com/product/88465_200w.jpg,3,1405,https://cpt.tcgcsv.com/kpK,2023-09-25T18:55:14.75,1,50/106,Uncommon,Colorless,90,Stage 1,"[2] Swagger (20)
+<br>
+Flip a coin. If heads, discard an Energy attached to the Defending Pokémon.","[3] Fury Swipes (40x)
+<br>
+Flip 3 coins. This attack does 40 damage times the number of heads.",F+20,,2,0.22,0.36,0.99,0.32,,Normal,
+88465,Purugly,Purugly,https://tcgplayer-cdn.tcgplayer.com/product/88465_200w.jpg,3,1405,https://cpt.tcgcsv.com/kpK,2023-09-25T18:55:14.75,1,50/106,Uncommon,Colorless,90,Stage 1,"[2] Swagger (20)
+<br>
+Flip a coin. If heads, discard an Energy attached to the Defending Pokémon.","[3] Fury Swipes (40x)
+<br>
+Flip 3 coins. This attack does 40 damage times the number of heads.",F+20,,2,0.74,4.17,6.97,3.88,,Reverse Holofoil,
+88593,Rare Candy,Rare Candy,https://tcgplayer-cdn.tcgplayer.com/product/88593_200w.jpg,3,1405,https://cpt.tcgcsv.com/TrK,2023-11-06T14:48:43.093,1,102/106,Uncommon,Trainer,,,,,,,,4.45,4.99,6.09,4.13,,Normal,"Choose 1 of your Basic Pokémon in play. If you have a Stage 1 or Stage 2 card that evolves from that Pokémon in your hand, put that card on the Basic Pokémon. (This counts as evolving that Pokémon.)"
+88593,Rare Candy,Rare Candy,https://tcgplayer-cdn.tcgplayer.com/product/88593_200w.jpg,3,1405,https://cpt.tcgcsv.com/TrK,2023-11-06T14:48:43.093,1,102/106,Uncommon,Trainer,,,,,,,,16.5,23.25,29.99,15.29,,Reverse Holofoil,"Choose 1 of your Basic Pokémon in play. If you have a Stage 1 or Stage 2 card that evolves from that Pokémon in your hand, put that card on the Basic Pokémon. (This counts as evolving that Pokémon.)"
+88687,Relicanth,Relicanth,https://tcgplayer-cdn.tcgplayer.com/product/88687_200w.jpg,3,1405,https://cpt.tcgcsv.com/MtK,2023-09-25T18:55:18.08,1,51/106,Uncommon,Water,70,Basic,"[0] Primal Calling
+<br>
+Search your deck for up to 3 Trainer cards that have Fossil in their name, show them to your opponent, and put them into your hand. Shuffle your deck afterward.","[2] Sleep Swirl (30)
+<br>
+Both Relicanth and the Defending Pokémon are now Asleep.",L+20,,1,0.2,0.41,0.99,0.38,0.5,Normal,
+88687,Relicanth,Relicanth,https://tcgplayer-cdn.tcgplayer.com/product/88687_200w.jpg,3,1405,https://cpt.tcgcsv.com/MtK,2023-09-25T18:55:18.08,1,51/106,Uncommon,Water,70,Basic,"[0] Primal Calling
+<br>
+Search your deck for up to 3 Trainer cards that have Fossil in their name, show them to your opponent, and put them into your hand. Shuffle your deck afterward.","[2] Sleep Swirl (30)
+<br>
+Both Relicanth and the Defending Pokémon are now Asleep.",L+20,,1,0.9,2.14,5.99,3.44,,Reverse Holofoil,
+88835,Rotom,Rotom,https://tcgplayer-cdn.tcgplayer.com/product/88835_200w.jpg,3,1405,https://cpt.tcgcsv.com/KxK,2023-09-25T18:52:27.663,1,7/106,Holo Rare,Lightning,70,Basic,"[2] Astonish (20)
+<br>
+Choose 1 card from your opponent's hand without looking. Look at that card you chose, then have your opponent shuffle that card into his or her deck.","[LL] Telebeam (30+)
+<br>
+Flip a coin. If heads, this attack does 30 damage plus 30 more damage and the Defending Pokémon is Paralyzed.",D+20,C-20,1,3.22,5.46,9.99,5.27,,Holofoil,
+88835,Rotom,Rotom,https://tcgplayer-cdn.tcgplayer.com/product/88835_200w.jpg,3,1405,https://cpt.tcgcsv.com/KxK,2023-09-25T18:52:27.663,1,7/106,Holo Rare,Lightning,70,Basic,"[2] Astonish (20)
+<br>
+Choose 1 card from your opponent's hand without looking. Look at that card you chose, then have your opponent shuffle that card into his or her deck.","[LL] Telebeam (30+)
+<br>
+Flip a coin. If heads, this attack does 30 damage plus 30 more damage and the Defending Pokémon is Paralyzed.",D+20,C-20,1,2.75,4.49,8.0,6.99,,Reverse Holofoil,
+88949,Sceptile,Sceptile,https://tcgplayer-cdn.tcgplayer.com/product/88949_200w.jpg,3,1405,https://cpt.tcgcsv.com/_BK,2023-09-25T18:52:31.377,1,8/106,Holo Rare,Grass,100,Stage 2,"[2GG] Leaf Blade (50+)
+<br>
+Flip a coin. If heads, this attack does 50 damage plus 20 more damage.",,R+30,W-20,3,5.72,9.5,29.99,13.47,,Holofoil,"<strong>Poké-BODY — Wild Growth</strong>
+<br>
+Each basic Grass Energy card attached to your Grass Pokémon provides 2 Grass Energy instead. You can't use more than 1 Wild Growth Poké-Body each turn."
+88949,Sceptile,Sceptile,https://tcgplayer-cdn.tcgplayer.com/product/88949_200w.jpg,3,1405,https://cpt.tcgcsv.com/_BK,2023-09-25T18:52:31.377,1,8/106,Holo Rare,Grass,100,Stage 2,"[2GG] Leaf Blade (50+)
+<br>
+Flip a coin. If heads, this attack does 50 damage plus 20 more damage.",,R+30,W-20,3,4.4,5.46,8.0,9.56,,Reverse Holofoil,"<strong>Poké-BODY — Wild Growth</strong>
+<br>
+Each basic Grass Energy card attached to your Grass Pokémon provides 2 Grass Energy instead. You can't use more than 1 Wild Growth Poké-Body each turn."
+89086,Seviper,Seviper,https://tcgplayer-cdn.tcgplayer.com/product/89086_200w.jpg,3,1405,https://cpt.tcgcsv.com/LFK,2023-09-25T18:55:21.523,1,52/106,Uncommon,Psychic,80,Basic,"[P] Tail Blade (20)
+<br>
+Flip a coin. If heads, your opponent can't play any Trainer cards from his or her hand during your opponent's next turn.","[2P] Poison Tail (30+)
+<br>
+Flip a coin. If heads, this attack does 30 damage plus 30 more damage and the Defending Pokémon is now Poisoned.",P+20,,2,0.2,0.49,1.64,0.45,,Normal,
+89086,Seviper,Seviper,https://tcgplayer-cdn.tcgplayer.com/product/89086_200w.jpg,3,1405,https://cpt.tcgcsv.com/LFK,2023-09-25T18:55:21.523,1,52/106,Uncommon,Psychic,80,Basic,"[P] Tail Blade (20)
+<br>
+Flip a coin. If heads, your opponent can't play any Trainer cards from his or her hand during your opponent's next turn.","[2P] Poison Tail (30+)
+<br>
+Flip a coin. If heads, this attack does 30 damage plus 30 more damage and the Defending Pokémon is now Poisoned.",P+20,,2,1.79,2.99,12.0,1.71,,Reverse Holofoil,
+89240,Skarmory,Skarmory,https://tcgplayer-cdn.tcgplayer.com/product/89240_200w.jpg,3,1405,https://cpt.tcgcsv.com/QJK,2023-09-25T18:55:24.09,1,53/106,Uncommon,Metal,70,Basic,"[M] Air Crash (20)
+<br>
+Flip a coin. If heads, discard an Energy attached to the Defending Pokémon.","[2M] Steel Wing (40)
+<br>
+During your opponent's next turn, any damage done to Skarmory by attacks is reduced by 20 <em>(after applying Weakness and Resistance)</em>.",R+20,P-20,1,0.2,0.33,1.54,0.34,,Normal,
+89240,Skarmory,Skarmory,https://tcgplayer-cdn.tcgplayer.com/product/89240_200w.jpg,3,1405,https://cpt.tcgcsv.com/QJK,2023-09-25T18:55:24.09,1,53/106,Uncommon,Metal,70,Basic,"[M] Air Crash (20)
+<br>
+Flip a coin. If heads, discard an Energy attached to the Defending Pokémon.","[2M] Steel Wing (40)
+<br>
+During your opponent's next turn, any damage done to Skarmory by attacks is reduced by 20 <em>(after applying Weakness and Resistance)</em>.",R+20,P-20,1,0.5,1.49,2.99,1.58,,Reverse Holofoil,
+89306,Slowbro,Slowbro,https://tcgplayer-cdn.tcgplayer.com/product/89306_200w.jpg,3,1405,https://cpt.tcgcsv.com/8LK,2023-09-25T18:55:27.64,1,54/106,Uncommon,Water,80,Stage 1,"[2] Amnesia (20)
+<br>
+Choose 1 of the Defending Pokémon's attacks. That Pokémon can't use that attack during your opponent's next turn.",[2P] Zen Headbutt (60),L+20,,2,0.35,0.55,1.5,0.79,,Normal,
+89306,Slowbro,Slowbro,https://tcgplayer-cdn.tcgplayer.com/product/89306_200w.jpg,3,1405,https://cpt.tcgcsv.com/8LK,2023-09-25T18:55:27.64,1,54/106,Uncommon,Water,80,Stage 1,"[2] Amnesia (20)
+<br>
+Choose 1 of the Defending Pokémon's attacks. That Pokémon can't use that attack during your opponent's next turn.",[2P] Zen Headbutt (60),L+20,,2,4.48,7.24,9.02,5.47,,Reverse Holofoil,
+89316,Slowking,Slowking,https://tcgplayer-cdn.tcgplayer.com/product/89316_200w.jpg,3,1405,https://cpt.tcgcsv.com/lLK,2023-09-25T18:53:45.123,1,28/106,Rare,Psychic,80,Stage 1,"[1P] Psych Up (30)
+<br>
+During your next turn, Slowking's Psych Up attack's base damage is 60.",,P+20,,2,0.76,0.91,2.29,1.36,,Normal,"<strong>Poké-POWER — Trump Card</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, if any of your Pokémon were Knocked Out during your opponent's last turn, search your deck for any 1 card and put it into your hand. Shuffle your deck afterward. This power can't be used if Slowking is affected by a Special Condition."
+89316,Slowking,Slowking,https://tcgplayer-cdn.tcgplayer.com/product/89316_200w.jpg,3,1405,https://cpt.tcgcsv.com/lLK,2023-09-25T18:53:45.123,1,28/106,Rare,Psychic,80,Stage 1,"[1P] Psych Up (30)
+<br>
+During your next turn, Slowking's Psych Up attack's base damage is 60.",,P+20,,2,2.63,4.09,4.99,4.33,,Reverse Holofoil,"<strong>Poké-POWER — Trump Card</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, if any of your Pokémon were Knocked Out during your opponent's last turn, search your deck for any 1 card and put it into your hand. Shuffle your deck afterward. This power can't be used if Slowking is affected by a Special Condition."
+89331,Slowpoke,Slowpoke,https://tcgplayer-cdn.tcgplayer.com/product/89331_200w.jpg,3,1405,https://cpt.tcgcsv.com/FLK,2023-09-25T18:57:09.12,1,82/106,Common,Water,60,Basic,"[1] Rest
+<br>
+Remove all Special Conditions and 3 damage counters from Slowpoke. Slowpoke is now Asleep.","[W] Tumble Over (20)
+<br>
+Slowpoke can't attack during your next turn.",L+10,,2,0.92,1.86,7.99,2.99,,Normal,
+89331,Slowpoke,Slowpoke,https://tcgplayer-cdn.tcgplayer.com/product/89331_200w.jpg,3,1405,https://cpt.tcgcsv.com/FLK,2023-09-25T18:57:09.12,1,82/106,Common,Water,60,Basic,"[1] Rest
+<br>
+Remove all Special Conditions and 3 damage counters from Slowpoke. Slowpoke is now Asleep.","[W] Tumble Over (20)
+<br>
+Slowpoke can't attack during your next turn.",L+10,,2,3.0,3.0,3.0,11.66,,Reverse Holofoil,
+89345,Slugma,Slugma,https://tcgplayer-cdn.tcgplayer.com/product/89345_200w.jpg,3,1405,https://cpt.tcgcsv.com/WLK,2023-09-25T18:57:14.503,1,83/106,Common,Fire,60,Basic,[R] Steady Firebreathing (10),"[2] Body Slam (20)
+<br>
+Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",W+10,,2,0.09,0.28,1.52,0.33,0.1,Normal,
+89345,Slugma,Slugma,https://tcgplayer-cdn.tcgplayer.com/product/89345_200w.jpg,3,1405,https://cpt.tcgcsv.com/WLK,2023-09-25T18:57:14.503,1,83/106,Common,Fire,60,Basic,[R] Steady Firebreathing (10),"[2] Body Slam (20)
+<br>
+Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",W+10,,2,0.25,0.71,2.5,0.86,0.5,Reverse Holofoil,
+89415,Snubbull,Snubbull,https://tcgplayer-cdn.tcgplayer.com/product/89415_200w.jpg,3,1405,https://cpt.tcgcsv.com/kNK,2023-09-25T18:57:16.253,1,84/106,Common,Colorless,60,Basic,"[1] Roar
+<br>
+Your opponent switches the Defending Pokémon with 1 of his or her Benched Pokémon.",[3] Bite (30),F+10,,1,0.1,0.3,1.56,0.32,0.2,Normal,
+89415,Snubbull,Snubbull,https://tcgplayer-cdn.tcgplayer.com/product/89415_200w.jpg,3,1405,https://cpt.tcgcsv.com/kNK,2023-09-25T18:57:16.253,1,84/106,Common,Colorless,60,Basic,"[1] Roar
+<br>
+Your opponent switches the Defending Pokémon with 1 of his or her Benched Pokémon.",[3] Bite (30),F+10,,1,0.55,1.08,2.09,1.43,,Reverse Holofoil,
+89428,Solrock,Solrock,https://tcgplayer-cdn.tcgplayer.com/product/89428_200w.jpg,3,1405,https://cpt.tcgcsv.com/BNK,2023-09-25T18:57:19.163,1,85/106,Common,Fighting,70,Basic,"[F] Sol Charge (20)
+<br>
+Search your discard pile for a basic Energy card and attach it to 1 of your Benched Pokémon.",,G+20,,1,0.1,0.25,1.0,0.29,0.17,Normal,"<strong>Poké-BODY — Sunlight</strong>
+<br>
+If you have Lunatone in play, damage done to your opponent's Pokémon by your Psychic or Fighting Pokémon isn't affected by Resistance."
+89428,Solrock,Solrock,https://tcgplayer-cdn.tcgplayer.com/product/89428_200w.jpg,3,1405,https://cpt.tcgcsv.com/BNK,2023-09-25T18:57:19.163,1,85/106,Common,Fighting,70,Basic,"[F] Sol Charge (20)
+<br>
+Search your discard pile for a basic Energy card and attach it to 1 of your Benched Pokémon.",,G+20,,1,0.4,0.79,2.99,1.47,,Reverse Holofoil,"<strong>Poké-BODY — Sunlight</strong>
+<br>
+If you have Lunatone in play, damage done to your opponent's Pokémon by your Psychic or Fighting Pokémon isn't affected by Resistance."
+89657,Swablu,Swablu,https://tcgplayer-cdn.tcgplayer.com/product/89657_200w.jpg,3,1405,https://cpt.tcgcsv.com/9TK,2023-09-25T18:57:46.907,1,86/106,Common,Colorless,40,Basic,"[1] Super Speed
+<br>
+Flip a coin. If heads, prevent all effects of an attack, including damage, done to Swablu during your opponent's next turn.","[2] Shoot Through (10)
+<br>
+Does 10 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",L+10,F-20,1,0.21,0.4,0.99,0.53,,Normal,
+89657,Swablu,Swablu,https://tcgplayer-cdn.tcgplayer.com/product/89657_200w.jpg,3,1405,https://cpt.tcgcsv.com/9TK,2023-09-25T18:57:46.907,1,86/106,Common,Colorless,40,Basic,"[1] Super Speed
+<br>
+Flip a coin. If heads, prevent all effects of an attack, including damage, done to Swablu during your opponent's next turn.","[2] Shoot Through (10)
+<br>
+Does 10 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",L+10,F-20,1,0.19,1.04,6.62,2.22,,Reverse Holofoil,
+89680,Swampert,Swampert,https://tcgplayer-cdn.tcgplayer.com/product/89680_200w.jpg,3,1405,https://cpt.tcgcsv.com/DTK,2023-09-25T18:52:34.643,1,9/106,Holo Rare,Water,130,Stage 2,"[2WW] Hammer Arm (80)
+<br>
+Discard the top card from your opponent's deck.",,G+30,,2,15.0,19.01,21.0,17.46,,Holofoil,"<strong>Poké-POWER — Wash Out</strong>
+<br>
+As often as you like during your turn <em>(before your attack)</em>, you may move a Water or Fighting Energy attached to 1 of your Benched Pokémon to your Active Pokémon. This power can't be used if Swampert is affected by a Special Condition."
+89680,Swampert,Swampert,https://tcgplayer-cdn.tcgplayer.com/product/89680_200w.jpg,3,1405,https://cpt.tcgcsv.com/DTK,2023-09-25T18:52:34.643,1,9/106,Holo Rare,Water,130,Stage 2,"[2WW] Hammer Arm (80)
+<br>
+Discard the top card from your opponent's deck.",,G+30,,2,10.49,27.74,44.99,11.53,,Reverse Holofoil,"<strong>Poké-POWER — Wash Out</strong>
+<br>
+As often as you like during your turn <em>(before your attack)</em>, you may move a Water or Fighting Energy attached to 1 of your Benched Pokémon to your Active Pokémon. This power can't be used if Swampert is affected by a Special Condition."
+89744,Tangela,Tangela,https://tcgplayer-cdn.tcgplayer.com/product/89744_200w.jpg,3,1405,https://cpt.tcgcsv.com/VVK,2023-09-25T18:57:49.85,1,87/106,Common,Grass,70,Basic,"[1] Vine Invite
+<br>
+Switch 1 of your opponent's Benched Pokémon with 1 of the Defending Pokémon.","[1G] Grass Knot (20+)
+<br>
+Does 20 damage plus 10 more damage for each Energy in the Defending Pokémon's Retreat Cost (after applying effects to the Retreat Cost).",R+10,,2,0.18,0.4,0.99,0.44,,Normal,
+89744,Tangela,Tangela,https://tcgplayer-cdn.tcgplayer.com/product/89744_200w.jpg,3,1405,https://cpt.tcgcsv.com/VVK,2023-09-25T18:57:49.85,1,87/106,Common,Grass,70,Basic,"[1] Vine Invite
+<br>
+Switch 1 of your opponent's Benched Pokémon with 1 of the Defending Pokémon.","[1G] Grass Knot (20+)
+<br>
+Does 20 damage plus 10 more damage for each Energy in the Defending Pokémon's Retreat Cost (after applying effects to the Retreat Cost).",R+10,,2,0.83,4.63,5.99,4.63,,Reverse Holofoil,
+89751,Tangrowth,Tangrowth,https://tcgplayer-cdn.tcgplayer.com/product/89751_200w.jpg,3,1405,https://cpt.tcgcsv.com/2WK,2023-09-25T18:52:38.267,1,10/106,Holo Rare,Grass,110,Stage 1,"[G] Power Whip
+<br>
+Choose 1 of your opponent's Pokémon. This attack does 10 damage for each basic Energy card attached to Tangrowth to that Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[2GG] Stick and Absorb (60)
+<br>
+Remove 3 damage counters from Tangrowth. The Defending Pokémon can't retreat during your opponent's next turn.",R+30,W-20,2,2.49,3.33,5.69,3.7,,Holofoil,
+89751,Tangrowth,Tangrowth,https://tcgplayer-cdn.tcgplayer.com/product/89751_200w.jpg,3,1405,https://cpt.tcgcsv.com/2WK,2023-09-25T18:52:38.267,1,10/106,Holo Rare,Grass,110,Stage 1,"[G] Power Whip
+<br>
+Choose 1 of your opponent's Pokémon. This attack does 10 damage for each basic Energy card attached to Tangrowth to that Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[2GG] Stick and Absorb (60)
+<br>
+Remove 3 damage counters from Tangrowth. The Defending Pokémon can't retreat during your opponent's next turn.",R+30,W-20,2,2.0,4.95,7.2,2.83,,Reverse Holofoil,
+89923,Togekiss,Togekiss,https://tcgplayer-cdn.tcgplayer.com/product/89923_200w.jpg,3,1405,https://cpt.tcgcsv.com/t-K,2023-09-25T18:52:41.55,1,11/106,Holo Rare,Colorless,120,Stage 2,"[3] Air Scroll (40+)
+<br>
+Flip a coin. If heads, this attack does 40 damage plus 30 more damage. If tails, remove 3 damage counters from Togekiss.",,L+30,F-20,1,3.5,12.44,19.99,15.65,,Holofoil,"<strong>Poké-POWER — Serene Grace</strong>
+<br>
+Once during your turn, when you play Togekiss from your hand to evolve 1 of your Pokémon, you may look at the top 10 cards of your deck, choose as many basic Energy cards as you like, and attach them to your Pokémon in any way you like. Put the other cards back on top of your deck. Shuffle your deck afterward."
+89923,Togekiss,Togekiss,https://tcgplayer-cdn.tcgplayer.com/product/89923_200w.jpg,3,1405,https://cpt.tcgcsv.com/t-K,2023-09-25T18:52:41.55,1,11/106,Holo Rare,Colorless,120,Stage 2,"[3] Air Scroll (40+)
+<br>
+Flip a coin. If heads, this attack does 40 damage plus 30 more damage. If tails, remove 3 damage counters from Togekiss.",,L+30,F-20,1,5.0,8.99,13.6,16.57,,Reverse Holofoil,"<strong>Poké-POWER — Serene Grace</strong>
+<br>
+Once during your turn, when you play Togekiss from your hand to evolve 1 of your Pokémon, you may look at the top 10 cards of your deck, choose as many basic Energy cards as you like, and attach them to your Pokémon in any way you like. Put the other cards back on top of your deck. Shuffle your deck afterward."
+89934,Togepi,Togepi,https://tcgplayer-cdn.tcgplayer.com/product/89934_200w.jpg,3,1405,https://cpt.tcgcsv.com/J-K,2023-09-25T18:58:00.73,1,88/106,Common,Colorless,50,Basic,"[1] Yawn
+<br>
+The Defending Pokémon is now Asleep.","[1] Find a Friend 
+<br>
+Flip a coin. If heads, search your deck for a Pokémon, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",F+10,,1,0.17,0.49,1.69,0.46,,Normal,
+89934,Togepi,Togepi,https://tcgplayer-cdn.tcgplayer.com/product/89934_200w.jpg,3,1405,https://cpt.tcgcsv.com/J-K,2023-09-25T18:58:00.73,1,88/106,Common,Colorless,50,Basic,"[1] Yawn
+<br>
+The Defending Pokémon is now Asleep.","[1] Find a Friend 
+<br>
+Flip a coin. If heads, search your deck for a Pokémon, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",F+10,,1,1.99,2.49,2.99,2.01,,Reverse Holofoil,
+89943,Togetic,Togetic,https://tcgplayer-cdn.tcgplayer.com/product/89943_200w.jpg,3,1405,https://cpt.tcgcsv.com/T-K,2023-09-25T18:55:30.203,1,55/106,Uncommon,Colorless,70,Stage 1,[2] Speed Dive (20),"[3] Sweet Kiss (50)
+<br
+Your opponent may draw a card.",L+20,F-20,1,0.35,0.73,2.49,0.99,,Normal,
+89943,Togetic,Togetic,https://tcgplayer-cdn.tcgplayer.com/product/89943_200w.jpg,3,1405,https://cpt.tcgcsv.com/T-K,2023-09-25T18:55:30.203,1,55/106,Uncommon,Colorless,70,Stage 1,[2] Speed Dive (20),"[3] Sweet Kiss (50)
+<br
+Your opponent may draw a card.",L+20,F-20,1,2.18,3.49,5.99,4.86,,Reverse Holofoil,
+89960,Torchic,Torchic,https://tcgplayer-cdn.tcgplayer.com/product/89960_200w.jpg,3,1405,https://cpt.tcgcsv.com/d_K,2023-09-25T18:58:41.02,1,89/106,Common,Fire,50,Basic,[0] Peck (10),"[R] Singe
+<br>
+The Defending Pokémon is now Burned.",W+10,,1,0.19,0.4,1.25,0.49,,Normal,
+89960,Torchic,Torchic,https://tcgplayer-cdn.tcgplayer.com/product/89960_200w.jpg,3,1405,https://cpt.tcgcsv.com/d_K,2023-09-25T18:58:41.02,1,89/106,Common,Fire,50,Basic,[0] Peck (10),"[R] Singe
+<br>
+The Defending Pokémon is now Burned.",W+10,,1,4.56,5.81,7.69,9.49,,Reverse Holofoil,
+90039,Treecko,Treecko,https://tcgplayer-cdn.tcgplayer.com/product/90039_200w.jpg,3,1405,https://cpt.tcgcsv.com/P0L,2023-09-25T18:58:44.017,1,90/106,Common,Grass,50,Basic,"[1] Energy Ball (10+)
+<br>
+Does 10 damage plus 10 more damage for each Energy attached to Treecko but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.","[1G] Absorb (20)
+<br>
+Remove 1 damage counter from Treecko.",R+10,W-20,1,0.14,0.5,1.49,0.7,,Normal,
+90039,Treecko,Treecko,https://tcgplayer-cdn.tcgplayer.com/product/90039_200w.jpg,3,1405,https://cpt.tcgcsv.com/P0L,2023-09-25T18:58:44.017,1,90/106,Common,Grass,50,Basic,"[1] Energy Ball (10+)
+<br>
+Does 10 damage plus 10 more damage for each Energy attached to Treecko but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.","[1G] Absorb (20)
+<br>
+Remove 1 damage counter from Treecko.",R+10,W-20,1,2.29,3.65,4.5,8.87,,Reverse Holofoil,
+90208,Unown [F],Unown F,https://tcgplayer-cdn.tcgplayer.com/product/90208_200w.jpg,3,1405,https://cpt.tcgcsv.com/b6L,2023-09-25T18:55:32.897,1,56/106,Uncommon,Psychic,50,Basic,"[P] Hidden Power (10)
+<br>
+You may flip a coin. If tails, this attack does nothing. If heads, this attack's base damage is 30.",,P+10,,1,0.25,0.65,2.99,1.16,,Normal,"<strong>Poké-POWER — FAKE</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, if Unown F is on your Bench, you may use this power. Put a coin next to your Active Pokémon without showing your opponent and cover it with your hand. Your opponent guesses if the coin is heads or tails. If he or she is wrong, draw a card."
+90208,Unown [F],Unown F,https://tcgplayer-cdn.tcgplayer.com/product/90208_200w.jpg,3,1405,https://cpt.tcgcsv.com/b6L,2023-09-25T18:55:32.897,1,56/106,Uncommon,Psychic,50,Basic,"[P] Hidden Power (10)
+<br>
+You may flip a coin. If tails, this attack does nothing. If heads, this attack's base damage is 30.",,P+10,,1,1.82,4.37,7.99,3.87,,Reverse Holofoil,"<strong>Poké-POWER — FAKE</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, if Unown F is on your Bench, you may use this power. Put a coin next to your Active Pokémon without showing your opponent and cover it with your hand. Your opponent guesses if the coin is heads or tails. If he or she is wrong, draw a card."
+90210,Unown [G],Unown G,https://tcgplayer-cdn.tcgplayer.com/product/90210_200w.jpg,3,1405,https://cpt.tcgcsv.com/d6L,2023-09-25T18:55:36.58,1,57/106,Uncommon,Psychic,50,Basic,"[1P] Hidden Power (50)
+<br>
+If Unown G has any damage counters on it, this attack's base damage is 10.",,P+10,,1,4.0,5.49,7.29,4.94,,Normal,"<strong>Poké-POWER — GUARD</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, if Unown G is on your Bench, you may discard all cards attached to Unown G and attach Unown G to 1 of your Pokémon as a Pokémon Tool card. As long as Unown G is attached to a Pokémon, prevent all effects of attacks, excluding damage, done to that Pokémon."
+90210,Unown [G],Unown G,https://tcgplayer-cdn.tcgplayer.com/product/90210_200w.jpg,3,1405,https://cpt.tcgcsv.com/d6L,2023-09-25T18:55:36.58,1,57/106,Uncommon,Psychic,50,Basic,"[1P] Hidden Power (50)
+<br>
+If Unown G has any damage counters on it, this attack's base damage is 10.",,P+10,,1,7.2,12.49,17.99,9.79,,Reverse Holofoil,"<strong>Poké-POWER — GUARD</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, if Unown G is on your Bench, you may discard all cards attached to Unown G and attach Unown G to 1 of your Pokémon as a Pokémon Tool card. As long as Unown G is attached to a Pokémon, prevent all effects of attacks, excluding damage, done to that Pokémon."
+90212,Unown [H],Unown H,https://tcgplayer-cdn.tcgplayer.com/product/90212_200w.jpg,3,1405,https://cpt.tcgcsv.com/g6L,2023-09-25T18:53:48.083,1,29/106,Rare,Psychic,60,Basic,"[P] Hidden Power (30)
+<br>
+Discard a card from your hand. (If you can't discard a card from your hand, this attack does nothing.)",,P+10,,1,3.52,5.72,8.29,5.66,,Normal,"<strong>Poké-POWER — HEAL</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, if you have Unown H, Unown E, Unown A, and Unown L on your Bench, you may remove all Special Conditions from 1 of your Active Pokémon."
+90212,Unown [H],Unown H,https://tcgplayer-cdn.tcgplayer.com/product/90212_200w.jpg,3,1405,https://cpt.tcgcsv.com/g6L,2023-09-25T18:53:48.083,1,29/106,Rare,Psychic,60,Basic,"[P] Hidden Power (30)
+<br>
+Discard a card from your hand. (If you can't discard a card from your hand, this attack does nothing.)",,P+10,,1,5.75,6.92,15.0,11.84,,Reverse Holofoil,"<strong>Poké-POWER — HEAL</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, if you have Unown H, Unown E, Unown A, and Unown L on your Bench, you may remove all Special Conditions from 1 of your Active Pokémon."
+90220,Unown [L],Unown L,https://tcgplayer-cdn.tcgplayer.com/product/90220_200w.jpg,3,1405,https://cpt.tcgcsv.com/q6L,2024-02-13T16:41:56.243,1,91/106,Common,Psychic,50,Basic,"[1P] Hidden Power
+<br>
+Search either player's discard pile for up to any 2 cards, show them to your opponent, and put them on top of that player's deck in any order you like.",,P+10,,1,0.3,0.65,1.99,1.1,,Normal,"<strong>Poké-BODY — LINK</strong>
+<br>
+Unown L can use any attack from any Unown in play <em>(both yours and your opponent's)</em>. You still have to pay for that attack's Energy cost.)"
+90220,Unown [L],Unown L,https://tcgplayer-cdn.tcgplayer.com/product/90220_200w.jpg,3,1405,https://cpt.tcgcsv.com/q6L,2024-02-13T16:41:56.243,1,91/106,Common,Psychic,50,Basic,"[1P] Hidden Power
+<br>
+Search either player's discard pile for up to any 2 cards, show them to your opponent, and put them on top of that player's deck in any order you like.",,P+10,,1,0.7,0.7,2.9,2.99,,Reverse Holofoil,"<strong>Poké-BODY — LINK</strong>
+<br>
+Unown L can use any attack from any Unown in play <em>(both yours and your opponent's)</em>. You still have to pay for that attack's Energy cost.)"
+90399,Volbeat,Volbeat,https://tcgplayer-cdn.tcgplayer.com/product/90399_200w.jpg,3,1405,https://cpt.tcgcsv.com/_9L,2023-09-25T19:02:10.293,1,92/106,Common,Grass,70,Basic,"[GG] Firefly Light (20)
+<br>
+Flip a coin. If heads, the Defending Pokémon is now Confused.",,R+20,,1,0.21,0.31,1.69,0.37,0.2,Normal,"<strong>Poké-POWER — Light Conduct</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, if you have Illumise in play, you may search your discard pile for a Supporter card, show it to your opponent, and put it on top of your deck. This power can't be used if Volbeat is affected by a Special Condition."
+90399,Volbeat,Volbeat,https://tcgplayer-cdn.tcgplayer.com/product/90399_200w.jpg,3,1405,https://cpt.tcgcsv.com/_9L,2023-09-25T19:02:10.293,1,92/106,Common,Grass,70,Basic,"[GG] Firefly Light (20)
+<br>
+Flip a coin. If heads, the Defending Pokémon is now Confused.",,R+20,,1,0.44,0.92,2.5,2.2,0.6,Reverse Holofoil,"<strong>Poké-POWER — Light Conduct</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, if you have Illumise in play, you may search your discard pile for a Supporter card, show it to your opponent, and put it on top of your deck. This power can't be used if Volbeat is affected by a Special Condition."
+90453,Wailmer,Wailmer,https://tcgplayer-cdn.tcgplayer.com/product/90453_200w.jpg,3,1405,https://cpt.tcgcsv.com/5cL,2023-09-25T19:17:03.557,1,58/106,Uncommon,Water,90,Basic,"[1W] Tsunami (10)
+<br>
+Flip a coin. If heads, this attack does 10 damage to each of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",[3] Ram (30),L+20,,3,0.15,0.37,9.07,0.38,0.23,Normal,
+90453,Wailmer,Wailmer,https://tcgplayer-cdn.tcgplayer.com/product/90453_200w.jpg,3,1405,https://cpt.tcgcsv.com/5cL,2023-09-25T19:17:03.557,1,58/106,Uncommon,Water,90,Basic,"[1W] Tsunami (10)
+<br>
+Flip a coin. If heads, this attack does 10 damage to each of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",[3] Ram (30),L+20,,3,0.88,1.43,3.28,2.83,,Reverse Holofoil,
+90459,Wailord,Wailord,https://tcgplayer-cdn.tcgplayer.com/product/90459_200w.jpg,3,1405,https://cpt.tcgcsv.com/ccL,2023-09-25T18:53:52.28,1,30/106,Rare,Water,200,Stage 1,"[1WWW] Sink Deep (60)
+<br>
+If Wailord has any damage counters on it, Wailord is now Asleep.",,Lx2,,4,3.4,5.46,9.83,5.36,,Normal,"<strong>Poké-BODY — Sleeping Pulse</strong>
+<br>
+As long as Wailord remains Asleep between turns, remove 1 damage counter from Wailord."
+90459,Wailord,Wailord,https://tcgplayer-cdn.tcgplayer.com/product/90459_200w.jpg,3,1405,https://cpt.tcgcsv.com/ccL,2023-09-25T18:53:52.28,1,30/106,Rare,Water,200,Stage 1,"[1WWW] Sink Deep (60)
+<br>
+If Wailord has any damage counters on it, Wailord is now Asleep.",,Lx2,,4,14.73,15.0,15.0,19.62,,Reverse Holofoil,"<strong>Poké-BODY — Sleeping Pulse</strong>
+<br>
+As long as Wailord remains Asleep between turns, remove 1 damage counter from Wailord."
+90544,Weedle,Weedle,https://tcgplayer-cdn.tcgplayer.com/product/90544_200w.jpg,3,1405,https://cpt.tcgcsv.com/VdL,2024-07-26T19:18:52.89,1,93/106,Common,Grass,50,Basic,"[1] Call for Family
+<br>
+Search your deck for a Basic Pokémon and put it onto your Bench. Shuffle your deck afterward.","[G] String Shot
+<br>
+Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",R+10,,1,0.01,0.25,4.96,0.25,0.2,Normal,
+90544,Weedle,Weedle,https://tcgplayer-cdn.tcgplayer.com/product/90544_200w.jpg,3,1405,https://cpt.tcgcsv.com/VdL,2024-07-26T19:18:52.89,1,93/106,Common,Grass,50,Basic,"[1] Call for Family
+<br>
+Search your deck for a Basic Pokémon and put it onto your Bench. Shuffle your deck afterward.","[G] String Shot
+<br>
+Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",R+10,,1,1.5,2.57,4.74,2.6,2.47,Reverse Holofoil,
+90562,Weezing,Weezing,https://tcgplayer-cdn.tcgplayer.com/product/90562_200w.jpg,3,1405,https://cpt.tcgcsv.com/gfL,2023-09-25T18:53:55.373,1,31/106,Rare,Psychic,80,Stage 1,"[1P] Offensive Gas (30)
+<br>
+Flip a coin. If heads, the Defending Pokémon is now Confused and Poisoned.",,P+20,,2,0.75,1.4,2.5,1.4,,Normal,"<strong>Poké-BODY — Toxic Virus</strong>
+<br>
+At any time between turns, each player puts 1 more damage counter on his or her Poisoned Pokémon."
+90562,Weezing,Weezing,https://tcgplayer-cdn.tcgplayer.com/product/90562_200w.jpg,3,1405,https://cpt.tcgcsv.com/gfL,2023-09-25T18:53:55.373,1,31/106,Rare,Psychic,80,Stage 1,"[1P] Offensive Gas (30)
+<br>
+Flip a coin. If heads, the Defending Pokémon is now Confused and Poisoned.",,P+20,,2,2.04,4.09,5.99,4.26,,Reverse Holofoil,"<strong>Poké-BODY — Toxic Virus</strong>
+<br>
+At any time between turns, each player puts 1 more damage counter on his or her Poisoned Pokémon."
+90583,Whismur,Whismur,https://tcgplayer-cdn.tcgplayer.com/product/90583_200w.jpg,3,1405,https://cpt.tcgcsv.com/HfL,2023-09-25T19:02:17.25,1,94/106,Common,Colorless,50,Basic,[0] Mumble (10),"[1] Uproar
+<br>
+Flip a coin. If heads, this attack does 10 damage to each of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",F+10,,1,0.09,0.25,1.69,0.23,,Normal,
+90583,Whismur,Whismur,https://tcgplayer-cdn.tcgplayer.com/product/90583_200w.jpg,3,1405,https://cpt.tcgcsv.com/HfL,2023-09-25T19:02:17.25,1,94/106,Common,Colorless,50,Basic,[0] Mumble (10),"[1] Uproar
+<br>
+Flip a coin. If heads, this attack does 10 damage to each of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",F+10,,1,0.75,2.92,4.74,0.65,,Reverse Holofoil,
+90598,Wigglytuff,Wigglytuff,https://tcgplayer-cdn.tcgplayer.com/product/90598_200w.jpg,3,1405,https://cpt.tcgcsv.com/-fL,2023-09-25T18:53:59.343,1,32/106,Rare,Colorless,90,Stage 1,"[2] Balloon Attack (40+)
+<br>
+If Igglybuff is anywhere under Wigglytuff, this attack does 40 damage plus 20 more damage.",,F+20,,1,0.85,1.75,2.89,1.68,,Normal,"<strong>Poké-POWER — Good Night Melody</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may use this power. Each Active Pokémon <em>(both yours and your opponent's)</em> is now Asleep. This power can't be used if Wigglytuff is affected by a Special Condition."
+90598,Wigglytuff,Wigglytuff,https://tcgplayer-cdn.tcgplayer.com/product/90598_200w.jpg,3,1405,https://cpt.tcgcsv.com/-fL,2023-09-25T18:53:59.343,1,32/106,Rare,Colorless,90,Stage 1,"[2] Balloon Attack (40+)
+<br>
+If Igglybuff is anywhere under Wigglytuff, this attack does 40 damage plus 20 more damage.",,F+20,,1,1.88,4.72,6.97,4.98,,Reverse Holofoil,"<strong>Poké-POWER — Good Night Melody</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may use this power. Each Active Pokémon <em>(both yours and your opponent's)</em> is now Asleep. This power can't be used if Wigglytuff is affected by a Special Condition."
+90609,Wingull,Wingull,https://tcgplayer-cdn.tcgplayer.com/product/90609_200w.jpg,3,1405,https://cpt.tcgcsv.com/cgL,2023-09-25T19:02:20.26,1,95/106,Common,Water,50,Basic,[W] Water Drip (10),[2] Wing Attack (20),L+10,F-20,1,0.11,0.25,1.52,0.23,,Normal,
+90609,Wingull,Wingull,https://tcgplayer-cdn.tcgplayer.com/product/90609_200w.jpg,3,1405,https://cpt.tcgcsv.com/cgL,2023-09-25T19:02:20.26,1,95/106,Common,Water,50,Basic,[W] Water Drip (10),[2] Wing Attack (20),L+10,F-20,1,0.39,0.97,2.74,0.85,,Reverse Holofoil,
+90706,Zangoose,Zangoose,https://tcgplayer-cdn.tcgplayer.com/product/90706_200w.jpg,3,1405,https://cpt.tcgcsv.com/8jL,2023-09-25T18:55:43.193,1,59/106,Uncommon,Colorless,70,Basic,[1] Slash (20),"[3] Cutting Claw (40+)
+<br>
+If your opponent has Seviper in play, this attack does 40 damage plus 50 more damage.",F+20,,1,0.1,0.35,4.96,0.31,0.26,Normal,
+90706,Zangoose,Zangoose,https://tcgplayer-cdn.tcgplayer.com/product/90706_200w.jpg,3,1405,https://cpt.tcgcsv.com/8jL,2023-09-25T18:55:43.193,1,59/106,Uncommon,Colorless,70,Basic,[1] Slash (20),"[3] Cutting Claw (40+)
+<br>
+If your opponent has Seviper in play, this attack does 40 damage plus 50 more damage.",F+20,,1,1.81,2.48,3.15,2.31,,Reverse Holofoil,
+90748,Zigzagoon,Zigzagoon,https://tcgplayer-cdn.tcgplayer.com/product/90748_200w.jpg,3,1405,https://cpt.tcgcsv.com/-jL,2023-09-25T19:02:23.887,1,96/106,Common,Colorless,50,Basic,"[1] Pull Out
+<br>
+Search your discard pile for any 1 card, show it to your opponent, and put it on top of your deck.","[1] Double Stab (10x)
+<br>
+Flip 2 coins. This attack does 10 damage times the number of heads.",F+10,,1,0.14,0.42,1.0,0.46,0.25,Normal,
+90748,Zigzagoon,Zigzagoon,https://tcgplayer-cdn.tcgplayer.com/product/90748_200w.jpg,3,1405,https://cpt.tcgcsv.com/-jL,2023-09-25T19:02:23.887,1,96/106,Common,Colorless,50,Basic,"[1] Pull Out
+<br>
+Search your discard pile for any 1 card, show it to your opponent, and put it on top of your deck.","[1] Double Stab (10x)
+<br>
+Flip 2 coins. This attack does 10 damage times the number of heads.",F+10,,1,0.62,0.71,2.99,2.37,,Reverse Holofoil,
+98544,Great Encounters Booster Box,Great Encounters Booster Box,https://tcgplayer-cdn.tcgplayer.com/product/98544_200w.jpg,3,1405,https://cpt.tcgcsv.com/VqP,2015-05-06T13:52:33.457,1,,,,,,,,,,,,,,,,,
+98545,Great Encounters Booster Pack,Great Encounters Booster Pack,https://tcgplayer-cdn.tcgplayer.com/product/98545_200w.jpg,3,1405,https://cpt.tcgcsv.com/WqP,2017-07-22T17:04:25.053,1,,,,,,,,,,,185.0,211.99,275.0,,,Normal,

@@ -3,11 +3,16 @@ import { Schema, model } from "mongoose";
 export interface User {
   email: string;
   password: string;
+  username: string;
   firstName: string;
   lastName: string;
   avatarUrl?: string;
   dateOfBirth: Date;
   isEmailVerified: boolean;
+  emailVerificationSecret?: string;
+  emailVerificationOTPExpires?: Date;
+  passwordResetSecret?: string;
+  passwordResetOTPExpires?: Date;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -24,6 +29,15 @@ const userSchema = new Schema<User>(
     password: {
       type: String,
       required: true,
+    },
+    username: {
+      type: String,
+      required: true,
+      unique: true,
+      trim: true,
+      minlength: 3,
+      maxlength: 30,
+      match: /^[a-zA-Z0-9_]+$/,
     },
     firstName: {
       type: String,
@@ -45,6 +59,18 @@ const userSchema = new Schema<User>(
     isEmailVerified: {
       type: Boolean,
       default: false,
+    },
+    emailVerificationSecret: {
+      type: String,
+    },
+    emailVerificationOTPExpires: {
+      type: Date,
+    },
+    passwordResetSecret: {
+      type: String,
+    },
+    passwordResetOTPExpires: {
+      type: Date,
     },
   },
   {

@@ -1,0 +1,57 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extAttribute,extMonsterType,extCardType,extAttack,extDefense,extDescription,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extUPC
+26358,Destiny HERO - Plasma,Destiny HERO Plasma,https://tcgplayer-cdn.tcgplayer.com/product/26358_200w.jpg,2,130,https://cpt.tcgcsv.com/bzd,2025-06-18T15:51:29.313,1,CT04-EN003,Secret Rare,DARK,Warrior,Effect monster,1900,600,"This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except by Tributing 3 monsters you control. Once per turn, select your opponent's monster and equip it to this card (you can only equip 1 monster at a time to this card). This card gains equal to half of the ATK of the equipped monster. While this card is face-up on the field, negate all the effects of face-up effect monsters your opponent controls.",8.47,15.23,7000.0,12.73,,Limited,
+26455,Elemental HERO Grand Neos,Elemental HERO Grand Neos,https://tcgplayer-cdn.tcgplayer.com/product/26455_200w.jpg,2,130,https://cpt.tcgcsv.com/7Cd,2025-06-18T15:53:04.71,1,CT04-EN001,Secret Rare,EARTH,Warrior,Fusion/Effect Monster,2500,2000,"""Elemental Hero Neos"" + ""Neo-Spacian Grand Mole""<br>This card can only be Special Summoned from your Fusion Deck by returning the above cards you control to the Deck. (You do not use ""Polymerization"".) Once per turn, you can return 1 monster your opponent controls to its owner's hand. This card returns to the Fusion Deck during the End Phase.",1.98,3.08,44.97,3.08,,Limited,
+26456,Crystal Beast Sapphire Pegasus,Crystal Beast Sapphire Pegasus,https://tcgplayer-cdn.tcgplayer.com/product/26456_200w.jpg,2,130,https://cpt.tcgcsv.com/8Cd,2025-06-18T16:12:31.76,1,CT04-EN002,Secret Rare,WIND,Beast,Effect Monster,1800,1200,"When this card is Normal Summoned, Flip Summoned, or Special Summoned, you can place 1 ""Crystal Beast"" monster from your hand, Deck, or Graveyard face-up in your Spell & Trap Card Zone; It is treated as a Continuous Spell Card. If this card is destroyed while it is in a Monster Card Zone, you can place it face-up in your Spell & Trap Card Zone as a Continuous Spell Card, instead of sending it to the Graveyard.",0.75,1.54,12.78,1.51,,Limited,
+26457,Volcanic Doomfire,Volcanic Doomfire,https://tcgplayer-cdn.tcgplayer.com/product/26457_200w.jpg,2,130,https://cpt.tcgcsv.com/9Cd,2024-03-28T15:39:22.737,1,CT04-EN004,Secret Rare,FIRE,Pyro,Effect Monster,3000,1800,"This card cannot be Normal Summoned or Set. This card can only be Special Summoned by sending 1 face-up ""Tri-Blaze Accelerator"" you control to the Graveyard. During your opponent's Battle Phase, your opponent must attack this monster with any Attack Position monsters they control. When this card destroys a monster and sends it to the Graveyard, destroy all monsters your opponent controls and inflict 500 damage to your opponent for each monster destroyed by this effect.",0.99,1.99,19.99,1.94,,Limited,
+26458,Rainbow Dragon,Rainbow Dragon,https://tcgplayer-cdn.tcgplayer.com/product/26458_200w.jpg,2,130,https://cpt.tcgcsv.com/bCd,2025-06-18T15:47:22.37,1,CT04-EN005,Secret Rare,LIGHT,Dragon,Effect Monster,4000,0,"This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except when there are at least 7 different ""Crystal Beast"" cards with different names on the field or in your Graveyard. This card cannot activate its effects the turn it is Special Summoned.
+<br>•Send all ""Crystal Beast"" monsters you control to the Graveyard; this card gains 1000 ATK for each card sent. You can activate this effect during either player's turn.
+<br>•You can remove from play all ""Crystal Beast"" Monster Cards in your Graveyard to return all cards on the field to their owners' Decks.",1.55,3.85,28.47,3.78,,Limited,
+26459,Elemental HERO Plasma Vice,Elemental HERO Plasma Vice,https://tcgplayer-cdn.tcgplayer.com/product/26459_200w.jpg,2,130,https://cpt.tcgcsv.com/cCd,2025-06-18T16:14:49.117,1,CT04-EN006,Secret Rare,EARTH,Warrior,Fusion/Effect Monster,2600,2300,"""Elemental Hero Sparkman"" + ""Elemental Hero Bladedge""<br>This monster cannot be Special Summoned except by Fusion Summon.  During battle between this attacking card and a Defense Position monster whose DEF is lower than the ATK of this card, inflict the difference as Battle Damage to your opponent.  By discarding 1 card from your hand, destroy 1 monster in Attack Position your opponent controls.",4.22,8.75,117.0,7.24,,Limited,
+206903,2007 Collectors Tin: Elemental HERO Grand Neos,2007 Collectors Tin Elemental HERO Grand Neos,https://tcgplayer-cdn.tcgplayer.com/product/206903_200w.jpg,2,130,https://cpt.tcgcsv.com/5NG2,2020-01-07T15:08:44.103,1,,,,,,,,"Each Collectible Tin 2007 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Elemental Energy
+<br><span style=""color:white"">____</span> • 1 Power of the Duelist
+<br><span style=""color:white"">____</span> • 1 Cyberdark Impact
+<br><span style=""color:white"">____</span> • 1 Strike of Neos
+<br><span style=""color:white"">____</span> • 1 Force of the Breaker
+<br>• 1 Secret Rare promotional card",,,,,,,
+206904,2007 Collectors Tin: Crystal Beast Sapphire Pegasus,2007 Collectors Tin Crystal Beast Sapphire Pegasus,https://tcgplayer-cdn.tcgplayer.com/product/206904_200w.jpg,2,130,https://cpt.tcgcsv.com/6NG2,2020-01-07T15:16:46.623,1,,,,,,,,"Each Collectible Tin 2007 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Elemental Energy
+<br><span style=""color:white"">____</span> • 1 Power of the Duelist
+<br><span style=""color:white"">____</span> • 1 Cyberdark Impact
+<br><span style=""color:white"">____</span> • 1 Strike of Neos
+<br><span style=""color:white"">____</span> • 1 Force of the Breaker
+<br>• 1 Secret Rare promotional card",239.99,240.62,250.0,,,Normal,843852006987
+206905,2007 Collectors Tin: Destiny HERO - Plasma,2007 Collectors Tin Destiny HERO Plasma,https://tcgplayer-cdn.tcgplayer.com/product/206905_200w.jpg,2,130,https://cpt.tcgcsv.com/7NG2,2020-01-07T15:09:57.643,1,,,,,,,,"Each Collectible Tin 2007 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Elemental Energy
+<br><span style=""color:white"">____</span> • 1 Power of the Duelist
+<br><span style=""color:white"">____</span> • 1 Cyberdark Impact
+<br><span style=""color:white"">____</span> • 1 Strike of Neos
+<br><span style=""color:white"">____</span> • 1 Force of the Breaker
+<br>• 1 Secret Rare promotional card",,,,,,,
+206906,2007 Collectors Tin: Volcanic Doomfire,2007 Collectors Tin Volcanic Doomfire,https://tcgplayer-cdn.tcgplayer.com/product/206906_200w.jpg,2,130,https://cpt.tcgcsv.com/8NG2,2020-01-07T15:20:30.247,1,,,,,,,,"Each Collectible Tin 2007 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Elemental Energy
+<br><span style=""color:white"">____</span> • 1 Power of the Duelist
+<br><span style=""color:white"">____</span> • 1 Cyberdark Impact
+<br><span style=""color:white"">____</span> • 1 Strike of Neos
+<br><span style=""color:white"">____</span> • 1 Force of the Breaker
+<br>• 1 Secret Rare promotional card",699.99,699.99,699.99,,,Normal,843852008165
+206907,2007 Collectors Tin: Rainbow Dragon,2007 Collectors Tin Rainbow Dragon,https://tcgplayer-cdn.tcgplayer.com/product/206907_200w.jpg,2,130,https://cpt.tcgcsv.com/9NG2,2020-01-07T15:20:32.293,1,,,,,,,,"Each Collectible Tin 2007 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Elemental Energy
+<br><span style=""color:white"">____</span> • 1 Power of the Duelist
+<br><span style=""color:white"">____</span> • 1 Cyberdark Impact
+<br><span style=""color:white"">____</span> • 1 Strike of Neos
+<br><span style=""color:white"">____</span> • 1 Force of the Breaker
+<br>• 1 Secret Rare promotional card",,,,,,,843852008158
+206908,2007 Collectors Tin: Elemental HERO Plasma Vice,2007 Collectors Tin Elemental HERO Plasma Vice,https://tcgplayer-cdn.tcgplayer.com/product/206908_200w.jpg,2,130,https://cpt.tcgcsv.com/bNG2,2020-01-07T15:17:15.37,1,,,,,,,,"Each Collectible Tin 2007 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Elemental Energy
+<br><span style=""color:white"">____</span> • 1 Power of the Duelist
+<br><span style=""color:white"">____</span> • 1 Cyberdark Impact
+<br><span style=""color:white"">____</span> • 1 Strike of Neos
+<br><span style=""color:white"">____</span> • 1 Force of the Breaker
+<br>• 1 Secret Rare promotional card",,,,,,,843852008172

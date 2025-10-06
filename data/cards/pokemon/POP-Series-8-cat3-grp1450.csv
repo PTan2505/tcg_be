@@ -1,0 +1,88 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extAttack2,extWeakness,extResistance,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extCardText
+84100,Carnivine,Carnivine,https://tcgplayer-cdn.tcgplayer.com/product/84100_200w.jpg,3,1450,https://cpt.tcgcsv.com/0GH,2023-08-21T17:23:45.673,1,007/017,Uncommon,Grass,70,Basic,"[1G] Swallow Up (30)
+<br>Before doing damage, count the remaining HP of the Defending Pokémon and Carnivine. If the Defending Pokémon has fewer remaining HP than Carnivine's, this attack does 60 damage instead.","[GG] Wring Out (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed and discard an Energy card attached to the Defending Pokémon.",R+20,W-20,1,1.7,2.99,5.79,4.69,,Normal,
+84100,Carnivine,Carnivine,https://tcgplayer-cdn.tcgplayer.com/product/84100_200w.jpg,3,1450,https://cpt.tcgcsv.com/0GH,2023-08-21T17:23:45.673,1,007/017,Uncommon,Grass,70,Basic,"[1G] Swallow Up (30)
+<br>Before doing damage, count the remaining HP of the Defending Pokémon and Carnivine. If the Defending Pokémon has fewer remaining HP than Carnivine's, this attack does 60 damage instead.","[GG] Wring Out (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed and discard an Energy card attached to the Defending Pokémon.",R+20,W-20,1,2.49,2.58,3.06,2.44,,Reverse Holofoil,
+84253,Cherrim,Cherrim,https://tcgplayer-cdn.tcgplayer.com/product/84253_200w.jpg,3,1450,https://cpt.tcgcsv.com/5KH,2024-03-14T19:11:32.82,1,006/017,Uncommon,Grass,80,Stage 1,"[G] Worry Seed (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Confused.","[GG] Magical Leaf (20+)
+<br>Flip a coin. If heads, this attack does 20 damage plus 20 more damage and remove 3 damage counters from Cherrim.",R+20,W-20,2,1.36,1.36,1.69,2.16,,Normal,
+84253,Cherrim,Cherrim,https://tcgplayer-cdn.tcgplayer.com/product/84253_200w.jpg,3,1450,https://cpt.tcgcsv.com/5KH,2024-03-14T19:11:32.82,1,006/017,Uncommon,Grass,80,Stage 1,"[G] Worry Seed (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Confused.","[GG] Magical Leaf (20+)
+<br>Flip a coin. If heads, this attack does 20 damage plus 20 more damage and remove 3 damage counters from Cherrim.",R+20,W-20,2,3.0,3.5,4.99,4.42,,Reverse Holofoil,
+84287,Chimchar,Chimchar,https://tcgplayer-cdn.tcgplayer.com/product/84287_200w.jpg,3,1450,https://cpt.tcgcsv.com/MKH,2025-02-05T21:09:27.577,1,012/017,Common,Fire,50,Basic,[0] Scratch (10),"[1R] Ember (30)
+<br>Flip a coin. If tails, discard a Fire Energy attached to Chimchar.",W+10,,1,0.39,0.7,4.24,0.74,,Normal,
+84287,Chimchar,Chimchar,https://tcgplayer-cdn.tcgplayer.com/product/84287_200w.jpg,3,1450,https://cpt.tcgcsv.com/MKH,2025-02-05T21:09:27.577,1,012/017,Common,Fire,50,Basic,[0] Scratch (10),"[1R] Ember (30)
+<br>Flip a coin. If tails, discard a Fire Energy attached to Chimchar.",W+10,,1,12.7,28.99,39.99,10.98,,Reverse Holofoil,
+84475,Croagunk,Croagunk,https://tcgplayer-cdn.tcgplayer.com/product/84475_200w.jpg,3,1450,https://cpt.tcgcsv.com/wPH,2025-02-25T12:13:14.7,1,13/17,Common,Psychic,60,Basic,"[1] Ghastly Sound 
+<br>Flip a coin. If heads, your opponent can't play any Supporter cards from his or her hand during his or her next turn.","[PP] Finger Poke (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Poisoned.",P+10,,1,0.25,0.47,1.0,0.45,,Normal,
+84475,Croagunk,Croagunk,https://tcgplayer-cdn.tcgplayer.com/product/84475_200w.jpg,3,1450,https://cpt.tcgcsv.com/wPH,2025-02-25T12:13:14.7,1,13/17,Common,Psychic,60,Basic,"[1] Ghastly Sound 
+<br>Flip a coin. If heads, your opponent can't play any Supporter cards from his or her hand during his or her next turn.","[PP] Finger Poke (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Poisoned.",P+10,,1,3.33,7.54,11.75,9.99,2.09,Holofoil,
+86007,Happiny,Happiny,https://tcgplayer-cdn.tcgplayer.com/product/86007_200w.jpg,3,1450,https://cpt.tcgcsv.com/9qJ,2023-02-12T15:48:16.787,1,014/017,Common,Colorless,60,Basic,"[0] Lively
+<br>Remove 2 damage counters from 1 of your Pokémon.",,F+10,,1,1.55,2.6,4.25,3.27,,Normal,"<strong>Poké-POWER — Baby Evolution</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may put Chansey from your hand onto Happiny (this counts as evolving Happiny) and remove all damage counters from Happiny."
+86007,Happiny,Happiny,https://tcgplayer-cdn.tcgplayer.com/product/86007_200w.jpg,3,1450,https://cpt.tcgcsv.com/9qJ,2023-02-12T15:48:16.787,1,014/017,Common,Colorless,60,Basic,"[0] Lively
+<br>Remove 2 damage counters from 1 of your Pokémon.",,F+10,,1,2.89,3.51,4.0,3.54,,Holofoil,"<strong>Poké-POWER — Baby Evolution</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may put Chansey from your hand onto Happiny (this counts as evolving Happiny) and remove all damage counters from Happiny."
+86049,Heatran,Heatran,https://tcgplayer-cdn.tcgplayer.com/product/86049_200w.jpg,3,1450,https://cpt.tcgcsv.com/_qJ,2022-09-25T16:43:22.383,1,001/017,Rare,Fire,100,Basic,"[2] Body Slam (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.","[1RRR] Fire Spin (90)
+<br>Discard 2 basic Energy cards attached to Heatran. (If you can't discard cards, this attack does nothing.)",W+30,,3,0.5,1.29,4.49,1.8,,Normal,
+86049,Heatran,Heatran,https://tcgplayer-cdn.tcgplayer.com/product/86049_200w.jpg,3,1450,https://cpt.tcgcsv.com/_qJ,2022-09-25T16:43:22.383,1,001/017,Rare,Fire,100,Basic,"[2] Body Slam (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.","[1RRR] Fire Spin (90)
+<br>Discard 2 basic Energy cards attached to Heatran. (If you can't discard cards, this attack does nothing.)",W+30,,3,0.79,3.59,5.69,4.87,3.19,Holofoil,
+86877,Lucario,Lucario,https://tcgplayer-cdn.tcgplayer.com/product/86877_200w.jpg,3,1450,https://cpt.tcgcsv.com/zMJ,2022-09-25T16:44:44.077,1,002/017,Rare,Fighting,90,Stage 1,"[1M] Blocking Punch (40)
+<br>During your opponent's next turn, any damage done to Lucario by attacks is reduced by 20 <em>(after applying Weakness and Resistance)</em>.","[2F] Striking Kick (60)
+<br>This attack's damage isn't affected by Resistance, Poké-Powers, Poké-Bodies, or any other effects on the Defending Pokémon.",P+20,,1,2.1,3.25,3.75,4.83,,Normal,
+86877,Lucario,Lucario,https://tcgplayer-cdn.tcgplayer.com/product/86877_200w.jpg,3,1450,https://cpt.tcgcsv.com/zMJ,2022-09-25T16:44:44.077,1,002/017,Rare,Fighting,90,Stage 1,"[1M] Blocking Punch (40)
+<br>During your opponent's next turn, any damage done to Lucario by attacks is reduced by 20 <em>(after applying Weakness and Resistance)</em>.","[2F] Striking Kick (60)
+<br>This attack's damage isn't affected by Resistance, Poké-Powers, Poké-Bodies, or any other effects on the Defending Pokémon.",P+20,,1,4.01,6.49,28.0,8.85,,Holofoil,
+86941,Luxio,Luxio,https://tcgplayer-cdn.tcgplayer.com/product/86941_200w.jpg,3,1450,https://cpt.tcgcsv.com/RNJ,2022-09-25T16:53:48.327,1,008/017,Uncommon,Lightning,80,Stage 1,"[1] Fasten Claws (10+)
+<br>Flip a coin. If heads, this attack does 10 damage plus 30 more damage.","[LL] Thunder Fang (30)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",F+20,M-20,,2.55,4.36,7.49,4.44,,Normal,
+86941,Luxio,Luxio,https://tcgplayer-cdn.tcgplayer.com/product/86941_200w.jpg,3,1450,https://cpt.tcgcsv.com/RNJ,2022-09-25T16:53:48.327,1,008/017,Uncommon,Lightning,80,Stage 1,"[1] Fasten Claws (10+)
+<br>Flip a coin. If heads, this attack does 10 damage plus 30 more damage.","[LL] Thunder Fang (30)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",F+20,M-20,,19.0,19.99,20.36,9.97,,Holofoil,
+86948,Luxray,Luxray,https://tcgplayer-cdn.tcgplayer.com/product/86948_200w.jpg,3,1450,https://cpt.tcgcsv.com/-NJ,2022-09-25T16:46:10.673,1,003/017,Rare,Lightning,120,Stage 2,"[1LLL] Thunder (120)
+<br>Flip a coin. If tails, Luxray does 40 damage to itself.",,F+30,M-20,1,4.33,5.63,8.0,6.47,,Normal,"<strong>Poké-BODY — Intimidating Fang</strong>
+<br>
+As long as Luxray is your Active Pokémon, any damage done by an opponent's attack is reduced by 10 <em>(before applying Weakness and Resistance)</em>."
+86948,Luxray,Luxray,https://tcgplayer-cdn.tcgplayer.com/product/86948_200w.jpg,3,1450,https://cpt.tcgcsv.com/-NJ,2022-09-25T16:46:10.673,1,003/017,Rare,Lightning,120,Stage 2,"[1LLL] Thunder (120)
+<br>Flip a coin. If tails, Luxray does 40 damage to itself.",,F+30,M-20,1,4.28,5.99,8.97,8.01,,Holofoil,"<strong>Poké-BODY — Intimidating Fang</strong>
+<br>
+As long as Luxray is your Active Pokémon, any damage done by an opponent's attack is reduced by 10 <em>(before applying Weakness and Resistance)</em>."
+87752,Night Maintenance,Night Maintenance,https://tcgplayer-cdn.tcgplayer.com/product/87752_200w.jpg,3,1450,https://cpt.tcgcsv.com/37K,2022-09-25T16:54:11.683,1,009/017,Uncommon,Item,,,,,,,,2.39,2.92,7.24,2.84,1.46,Normal,Search your discard pile for up to 3 in any combination of Pokémon and basic Energy cards. Show them to your opponent and shuffle them into your deck.
+88148,Piplup,Piplup,https://tcgplayer-cdn.tcgplayer.com/product/88148_200w.jpg,3,1450,https://cpt.tcgcsv.com/-gK,2023-02-12T15:47:25.507,1,015/017,Common,Water,60,Basic,[0] Peck (10),"[1W] Water Splash (20+)
+<br>Flip a coin. If heads, this attack does 20 damage plus 10 more damage.",L+10,,1,1.42,1.6,3.99,2.37,,Normal,
+88376,Probopass,Probopass,https://tcgplayer-cdn.tcgplayer.com/product/88376_200w.jpg,3,1450,https://cpt.tcgcsv.com/xmK,2025-01-13T21:05:15.427,1,004/017,Rare,Metal,90,Stage 1,"[1F] Rock Slide (20)
+<br>Does 10 damage to 2 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[2M] Triple Nose (50+)
+<br>Flip 3 coins. This attack does 50 damage plus 20 more damage for each heads.",R+30,P-20,3,0.49,1.98,20.0,1.98,2.04,Normal,
+88376,Probopass,Probopass,https://tcgplayer-cdn.tcgplayer.com/product/88376_200w.jpg,3,1450,https://cpt.tcgcsv.com/xmK,2025-01-13T21:05:15.427,1,004/017,Rare,Metal,90,Stage 1,"[1F] Rock Slide (20)
+<br>Does 10 damage to 2 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[2M] Triple Nose (50+)
+<br>Flip 3 coins. This attack does 50 damage plus 20 more damage for each heads.",R+30,P-20,3,0.99,1.65,6.97,1.81,2.05,Holofoil,
+88594,Rare Candy,Rare Candy,https://tcgplayer-cdn.tcgplayer.com/product/88594_200w.jpg,3,1450,https://cpt.tcgcsv.com/VrK,2022-09-25T16:54:45.97,1,010/017,Uncommon,Item,,,,,,,,4.0,8.57,12.99,6.98,5.59,Normal,"Choose 1 of your Basic Pokémon in play. If you have a Stage 1 or Stage 2 card that evolves from that Pokémon in your hand, put that card on the Basic Pokémon. (This counts as evolving that Pokémon.)"
+88755,Riolu,Riolu,https://tcgplayer-cdn.tcgplayer.com/product/88755_200w.jpg,3,1450,https://cpt.tcgcsv.com/7wK,2024-03-14T19:12:28.007,1,016/017,Common,Fighting,50,Basic,"[F] Quick Attack (10+)
+<br>Flip a coin. If heads, this attack does 10 damage plus 10 more damage.",,P+10,,1,0.4,0.85,1.19,0.93,,Normal,"<strong>Poké-BODY — Inner Focus</strong>
+<br>
+Riolu can't be Paralyzed."
+88755,Riolu,Riolu,https://tcgplayer-cdn.tcgplayer.com/product/88755_200w.jpg,3,1450,https://cpt.tcgcsv.com/7wK,2024-03-14T19:12:28.007,1,016/017,Common,Fighting,50,Basic,"[F] Quick Attack (10+)
+<br>Flip a coin. If heads, this attack does 10 damage plus 10 more damage.",,P+10,,1,7.97,7.97,7.97,7.97,,Reverse Holofoil,"<strong>Poké-BODY — Inner Focus</strong>
+<br>
+Riolu can't be Paralyzed."
+88816,Roseanne's Research,Roseannes Research,https://tcgplayer-cdn.tcgplayer.com/product/88816_200w.jpg,3,1450,https://cpt.tcgcsv.com/lxK,2022-09-25T16:55:22.487,1,011/017,Uncommon,Supporter,,,,,,,,2.99,4.52,7.17,6.37,,Normal,"You can play only one Supporter each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card.
+<br><br>
+Search your deck for up to 2 in any combination of basic Pokémon and basic Energy cards, show them to your opponent, and put them into your hand. Shuffle your deck afterward."
+90076,Turtwig,Turtwig,https://tcgplayer-cdn.tcgplayer.com/product/90076_200w.jpg,3,1450,https://cpt.tcgcsv.com/x2L,2024-09-22T10:34:01.58,1,017/017,Common,Grass,60,Basic,[0] Tackle (10),[G] Razor Leaf (20),R+10,W-20,2,0.85,1.3,4.47,1.15,,Normal,
+90691,Yanmega,Yanmega,https://tcgplayer-cdn.tcgplayer.com/product/90691_200w.jpg,3,1450,https://cpt.tcgcsv.com/RhL,2022-09-25T16:48:32.71,1,005/017,Rare,Grass,90,Stage 1,"[G] Supersonic
+<br>Flip a coin. If heads, the Defending Pokémon is now Confused.","[4] Air Slash (70)
+<br>Flip a coin. If tails, discard an Energy attached to Yanmega.",L+20,F-20,,1.5,3.45,9.89,4.22,,Normal,
+90691,Yanmega,Yanmega,https://tcgplayer-cdn.tcgplayer.com/product/90691_200w.jpg,3,1450,https://cpt.tcgcsv.com/RhL,2022-09-25T16:48:32.71,1,005/017,Rare,Grass,90,Stage 1,"[G] Supersonic
+<br>Flip a coin. If heads, the Defending Pokémon is now Confused.","[4] Air Slash (70)
+<br>Flip a coin. If tails, discard an Energy attached to Yanmega.",L+20,F-20,,4.0,7.33,10.98,7.93,1.92,Holofoil,
+190536,POP Series 8 Pack,POP Series 8 Pack,https://tcgplayer-cdn.tcgplayer.com/product/190536_200w.jpg,3,1450,https://cpt.tcgcsv.com/Ldx2,2019-05-16T15:24:47.033,1,,,,,,,,,,,13.98,20.0,22.68,18.9,,Normal,Each POP Series 8 Pack contains 2 random cards for the Promotional POP Series 8.
+616999,Chimchar (Cracked Ice Holo),Chimchar Cracked Ice Holo,https://tcgplayer-cdn.tcgplayer.com/product/616999_200w.jpg,3,1450,https://cpt.tcgcsv.com/_PX6,2025-02-05T16:19:43.15,1,012/017,Common,Fire,50,Basic,[0] Scratch (10),"[1R] Ember (30)
+<br>Flip a coin. If tails, discard a Fire Energy attached to Chimchar.",W+10,,1,8.96,9.48,10.0,8.96,,Holofoil,

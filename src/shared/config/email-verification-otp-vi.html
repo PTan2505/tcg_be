@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác Thực Email - Kādo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .title {
+            color: #27ae60;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .content {
+            color: #555;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        .email-highlight {
+            background-color: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .otp-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .otp-code {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            display: inline-block;
+            font-family: 'Courier New', monospace;
+        }
+        .otp-label {
+            font-size: 14px;
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+        .otp-number {
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 8px;
+            text-align: center;
+        }
+        .warning-box {
+            background-color: #e8f5e8;
+            border: 1px solid #c8e6c9;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .warning-icon {
+            font-size: 18px;
+            color: #27ae60;
+        }
+        .security-note {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .footer {
+            border-top: 1px solid #eee;
+            margin-top: 30px;
+            padding-top: 20px;
+            text-align: center;
+            color: #888;
+            font-size: 14px;
+        }
+        .contact-info {
+            margin-top: 15px;
+            font-size: 13px;
+        }
+        .welcome-message {
+            background-color: #f0f8ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            border: 2px solid #e3f2fd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">🎴 Kādo</div>
+            <div style="color: #666; font-size: 14px;">Nền tảng thẻ bài số 1 Việt Nam</div>
+        </div>
+
+        <!-- Title -->
+        <h2 class="title">✅ Xác Thực Địa Chỉ Email</h2>
+
+        <!-- Welcome Message -->
+        <div class="welcome-message">
+            <h3 style="color: #27ae60; margin: 0 0 10px 0;">🎉 Chào mừng bạn đến với Kādo!</h3>
+            <p style="margin: 0; color: #555;">Cảm ơn bạn đã đăng ký tài khoản. Hãy xác thực email để hoàn tất quá trình đăng ký.</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <p>Xin chào!</p>
+            
+            <p>Chúng tôi đã nhận được yêu cầu đăng ký tài khoản Kādo với địa chỉ email: <span class="email-highlight">{{email}}</span></p>
+            
+            <p>Để hoàn tất quá trình đăng ký và kích hoạt tài khoản của bạn, vui lòng sử dụng mã HOTP (HMAC-based One-Time Password) bên dưới:</p>
+        </div>
+
+        <!-- OTP Code -->
+        <div class="otp-container">
+            <div class="otp-code">
+                <div class="otp-label">MÃ HOTP XÁC THỰC CỦA BẠN</div>
+                <div class="otp-number">{{otpCode}}</div>
+            </div>
+        </div>
+
+        <!-- Warning Box -->
+        <div class="warning-box">
+            <p><span class="warning-icon">⏰</span> <strong>Quan trọng:</strong> Mã HOTP này sẽ hết hạn trong <strong>15 phút</strong> kể từ khi email này được gửi.</p>
+        </div>
+
+        <!-- Instructions -->
+        <div class="content">
+            <p><strong>Cách sử dụng mã HOTP:</strong></p>
+            <ol style="margin: 10px 0; padding-left: 20px;">
+                <li>Mở ứng dụng hoặc trang web Kādo</li>
+                <li>Đi đến trang "Xác thực email"</li>
+                <li>Nhập mã HOTP: <strong>{{otpCode}}</strong></li>
+                <li>Nhấn "Xác thực" để hoàn tất</li>
+            </ol>
+        </div>
+
+        <!-- Security Note -->
+        <div class="security-note">
+            <p><strong>🛡️ Lưu ý bảo mật:</strong></p>
+            <ul style="margin: 10px 0; padding-left: 20px;">
+                <li>Nếu bạn không đăng ký tài khoản này, bạn có thể bỏ qua email này một cách an toàn.</li>
+                <li>Không chia sẻ mã HOTP này với bất kỳ ai khác.</li>
+                <li>Đảm bảo rằng bạn đang truy cập trang web chính thức của Kādo.</li>
+                <li>Mã HOTP chỉ có thể được sử dụng một lần.</li>
+            </ul>
+        </div>
+
+        <!-- Benefits -->
+        <div class="content">
+            <p><strong>Sau khi xác thực email, bạn sẽ có thể:</strong></p>
+            <ul style="margin: 10px 0; padding-left: 20px;">
+                <li>🎴 Truy cập đầy đủ bộ sưu tập thẻ bài</li>
+                <li>💼 Quản lý bộ sưu tập cá nhân</li>
+                <li>🎯 Tham gia các trận đấu và giải đấu</li>
+                <li>🤝 Kết nối với cộng đồng người chơi</li>
+                <li>📧 Nhận thông báo về sự kiện và cập nhật mới</li>
+            </ul>
+        </div>
+
+        <!-- Help Section -->
+        <div class="content">
+            <p><strong>Cần hỗ trợ?</strong> Nếu bạn gặp khó khăn trong việc xác thực email, vui lòng liên hệ với đội ngũ hỗ trợ của chúng tôi.</p>
+            
+            <p>Cảm ơn bạn đã chọn Kādo!</p>
+            <p><strong>Đội ngũ Kādo</strong> 💙</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© {{year}} Kādo. Tất cả quyền được bảo lưu.</p>
+            <div class="contact-info">
+                <p>Email: support@kado.vn | Website: www.kado.vn</p>
+                <p>Địa chỉ: Tầng 10, Tòa nhà ABC, 123 Đường XYZ, Quận 1, TP.HCM</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

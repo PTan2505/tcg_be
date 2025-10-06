@@ -1,0 +1,20 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extWeakness,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extAttack2,extResistance
+110406,Weedle - 1/12,Weedle 1 12,https://tcgplayer-cdn.tcgplayer.com/product/110406_200w.jpg,3,1692,https://cpt.tcgcsv.com/8bV,2022-09-22T14:05:35.06,1,001/012,Promo,Grass,40,Basic,"[G] String Shot (10)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",Rx2,1,4.65,7.99,30.0,11.74,,Holofoil,,
+110407,Chespin - 2/12,Chespin 2 12,https://tcgplayer-cdn.tcgplayer.com/product/110407_200w.jpg,3,1692,https://cpt.tcgcsv.com/9bV,2022-09-22T14:07:06.233,1,002/012,Promo,Grass,60,Basic,[G] Vine Whip (10),Rx2,1,3.52,9.5,10.0,5.29,,Holofoil,[1G] Seed Bomb (20),
+110408,Fennekin - 3/12,Fennekin 3 12,https://tcgplayer-cdn.tcgplayer.com/product/110408_200w.jpg,3,1692,https://cpt.tcgcsv.com/bbV,2022-09-22T14:08:53.717,1,003/012,Promo,Fire,60,Basic,[R] Scratch (10),Wx2,1,4.41,5.0,19.99,10.71,,Holofoil,[1R] Live Coal (20),
+110409,Froakie - 4/12,Froakie 4 12,https://tcgplayer-cdn.tcgplayer.com/product/110409_200w.jpg,3,1692,https://cpt.tcgcsv.com/cbV,2022-09-22T14:10:51.227,1,004/012,Promo,Water,60,Basic,[W] Pound (10),Gx2,1,4.64,6.5,7.85,7.77,2.39,Holofoil,[1W] Water Drip (20),
+110410,Pikachu - 5/12,Pikachu 5 12,https://tcgplayer-cdn.tcgplayer.com/product/110410_200w.jpg,3,1692,https://cpt.tcgcsv.com/dbV,2022-12-13T13:31:46.887,1,005/012,Promo,Lightning,60,Basic,"[1] Nuzzle
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",Fx2,1,9.65,17.59,29.99,21.35,,Holofoil,"[2] Quick Attack (20+)
+<br>Flip a coin. If heads, this attack does 10 more damage.",M-20
+110411,Inkay - 6/12,Inkay 6 12,https://tcgplayer-cdn.tcgplayer.com/product/110411_200w.jpg,3,1692,https://cpt.tcgcsv.com/fbV,2022-09-22T14:13:33.05,1,006/012,Promo,Darkness,60,Basic,[D] Peck (10),Fx2,1,2.03,4.01,7.45,4.55,,Holofoil,,P-20
+110412,Honedge - 7/12,Honedge 7 12,https://tcgplayer-cdn.tcgplayer.com/product/110412_200w.jpg,3,1692,https://cpt.tcgcsv.com/gbV,2022-09-22T14:14:50.2,1,007/012,Promo,Metal,60,Basic,"[1M] Continuous Slice (30x)
+<br>Flip a coin until you get heads. This attack does 30 damage times the number of heads.",Rx2,2,3.04,6.23,7.77,5.19,,Holofoil,,P-20
+110413,Snubbull - 8/12,Snubbull 8 12,https://tcgplayer-cdn.tcgplayer.com/product/110413_200w.jpg,3,1692,https://cpt.tcgcsv.com/hbV,2022-09-22T14:16:11.217,1,008/012,Promo,Fairy,70,Basic,[1Y] Headbutt (20),Mx2,2,4.99,7.35,14.99,6.46,,Holofoil,,D-20
+110414,Swirlix - 9/12,Swirlix 9 12,https://tcgplayer-cdn.tcgplayer.com/product/110414_200w.jpg,3,1692,https://cpt.tcgcsv.com/jbV,2022-09-22T14:17:33.367,1,009/012,Promo,Fairy,60,Basic,"[Y] Draining Kiss (10)
+<br>Heal 10 damage from this Pokémon.",Mx2,1,1.96,4.15,5.9,4.05,,Holofoil,,D-20
+110415,Bunnelby - 10/12,Bunnelby 10 12,https://tcgplayer-cdn.tcgplayer.com/product/110415_200w.jpg,3,1692,https://cpt.tcgcsv.com/kbV,2022-09-22T14:18:38.94,1,010/012,Promo,Colorless,60,Basic,[2] Tackle (20),Fx2,2,2.59,7.0,9.99,6.42,,Holofoil,,
+110416,Fletchling - 11/12,Fletchling 11 12,https://tcgplayer-cdn.tcgplayer.com/product/110416_200w.jpg,3,1692,https://cpt.tcgcsv.com/lbV,2022-09-22T14:19:43.78,1,011/012,Promo,Colorless,50,Basic,"[1] Razor Wind (20)
+<br>Flip a coin. If tails, this attack does nothing.",Lx2,1,1.39,4.5,5.88,5.8,,Holofoil,,F-20
+110417,Furfrou - 12/12,Furfrou 12 12,https://tcgplayer-cdn.tcgplayer.com/product/110417_200w.jpg,3,1692,https://cpt.tcgcsv.com/mbV,2022-09-22T14:20:49.107,1,012/012,Promo,Colorless,90,Basic,"[2] Tight Jaw (20)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",Fx2,1,2.9,3.2,10.99,5.98,,Holofoil,[3] Sharp Fang (50),

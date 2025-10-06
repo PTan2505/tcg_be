@@ -1,0 +1,64 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extCardText,extUPC,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extWeakness,extResistance,extRetreatCost,extAttack2
+231299,First Partner Pack (Galar),First Partner Pack Galar,https://tcgplayer-cdn.tcgplayer.com/product/231299_200w.jpg,3,2776,https://cpt.tcgcsv.com/_wS2,2021-03-05T05:03:21.527,1,"Includes three oversize promo cards featuring the first partner Pokémon of the
+Galar region—Grookey, Scorbunny, and Sobble—plus two regular Pokémon TCG boosters.",0820650809613,23.98,28.49,49.0,18.09,,Normal,,,,,,,,,,
+231300,First Partner Pack (Alola),First Partner Pack Alola,https://tcgplayer-cdn.tcgplayer.com/product/231300_200w.jpg,3,2776,https://cpt.tcgcsv.com/0xS2,2021-04-02T04:03:07.323,1,"Includes three oversize promo cards featuring the first partner Pokémon of the Alola region—Rowlet, Litten, and Popplio—plus two regular Pokémon TCG boosters.",0820650819629,15.0,23.0,29.99,18.24,,Normal,,,,,,,,,,
+231301,First Partner Pack (Kalos),First Partner Pack Kalos,https://tcgplayer-cdn.tcgplayer.com/product/231301_200w.jpg,3,2776,https://cpt.tcgcsv.com/2xS2,2021-05-07T04:03:11.703,1,"Includes three oversize promo cards featuring the first partner Pokémon of the Kalos region—Chespin, Fennekin, and Froakie—plus two regular Pokémon TCG boosters.",0820650819636,19.0,25.0,29.99,16.06,,Normal,,,,,,,,,,
+231302,First Partner Pack (Unova),First Partner Pack Unova,https://tcgplayer-cdn.tcgplayer.com/product/231302_200w.jpg,3,2776,https://cpt.tcgcsv.com/3xS2,2021-06-04T04:03:36.873,1,"Includes three oversize promo cards featuring the first partner Pokémon of the Unova region—Snivy, Tepig, and Oshawott—plus two regular Pokémon TCG boosters.",0820650819643,11.99,19.99,29.99,15.03,,Normal,,,,,,,,,,
+231303,First Partner Pack (Sinnoh),First Partner Pack Sinnoh,https://tcgplayer-cdn.tcgplayer.com/product/231303_200w.jpg,3,2776,https://cpt.tcgcsv.com/5xS2,2021-07-09T04:03:08.203,1,"Includes three oversize promo cards featuring the first partner Pokémon of the Sinnoh region—Turtwig, Chimchar, and Piplup—plus two regular Pokémon TCG boosters.",0820650819650,16.78,22.0,29.99,16.78,,Normal,,,,,,,,,,
+231304,First Partner Pack (Hoenn),First Partner Pack Hoenn,https://tcgplayer-cdn.tcgplayer.com/product/231304_200w.jpg,3,2776,https://cpt.tcgcsv.com/6xS2,2021-08-12T04:03:07.89,1,"Includes three oversize promo cards featuring the first partner Pokémon of the Hoenn region—Treecko, Torchic, and Mudkip—plus two regular Pokémon TCG boosters.",0820650819674,14.0,24.94,25.0,15.81,,Normal,,,,,,,,,,
+231305,First Partner Pack (Johto),First Partner Pack Johto,https://tcgplayer-cdn.tcgplayer.com/product/231305_200w.jpg,3,2776,https://cpt.tcgcsv.com/7xS2,2021-09-10T04:03:07.857,1,"Includes three oversize promo cards featuring the first partner Pokémon of the Johto region—Chikorita, Cyndaquil, and Totodile—plus two regular Pokémon TCG boosters.",0820650819674,45.0,50.0,59.96,43.63,,Normal,,,,,,,,,,
+231306,First Partner Pack (Kanto),First Partner Pack Kanto,https://tcgplayer-cdn.tcgplayer.com/product/231306_200w.jpg,3,2776,https://cpt.tcgcsv.com/8xS2,2021-10-22T04:03:10.91,1,"Includes three oversize promo cards featuring the first partner Pokeémon of the Kanto region—Bulbasaur, Charmander, and Squirtle—plus two regular Pokémon TCG boosters.",0820650819681,45.0,57.48,99.99,39.61,,Normal,,,,,,,,,,
+231307,Bulbasaur,Bulbasaur,https://tcgplayer-cdn.tcgplayer.com/product/231307_200w.jpg,3,2776,https://cpt.tcgcsv.com/9xS2,2021-12-31T13:03:26.363,1,,,1.48,3.34,49.99,2.97,,Normal,044/102,Promo,Grass,40,Basic,"[GG] Leech Seed (20)
+<br>Unless all damage from this attack is prevented, you may remove 1 damage counter from Bulbasaur.",R,None,1,
+231451,Charmander,Charmander,https://tcgplayer-cdn.tcgplayer.com/product/231451_200w.jpg,3,2776,https://cpt.tcgcsv.com/2CS2,2021-12-31T13:03:55.417,1,,,1.13,1.75,10.0,1.72,,Normal,046/102,Promo,Fire,50,Basic,[1] Scratch (10),W,None,1,"[1R] Ember (30)
+<br>Discard 1 R Energy card attached to Charmander in order to use this attack."
+231452,Chespin,Chespin,https://tcgplayer-cdn.tcgplayer.com/product/231452_200w.jpg,3,2776,https://cpt.tcgcsv.com/3CS2,2021-05-07T04:03:11.703,1,,,1.0,1.75,10.0,1.29,,Normal,XY01,Promo,Grass,60,Basic,[G] Vine Whip (10),Rx2,None,1,[1G] Seed Bomb (20)
+231453,Chikorita,Chikorita,https://tcgplayer-cdn.tcgplayer.com/product/231453_200w.jpg,3,2776,https://cpt.tcgcsv.com/5CS2,2022-02-09T14:04:04.583,1,,,0.89,1.47,10.0,1.45,,Normal,054/111,Promo,Grass,50,Basic,"[1] Growl
+<br>If the Defending Pokemon attacks Chikorita during your opponent's next turn, any damage done to Chikorita is reduced by 10 <em>(before applying Weakness and Resistance)</em>. <em>(Benching or evolving either Pokemon ends this effect.)</em>",R,None,1,[1G] Razor Leaf (20)
+231454,Chimchar,Chimchar,https://tcgplayer-cdn.tcgplayer.com/product/231454_200w.jpg,3,2776,https://cpt.tcgcsv.com/6CS2,2021-07-09T04:03:08.203,1,,,0.47,1.09,4.99,1.11,,Normal,076/130,Promo,Fire,50,Basic,[0] Scratch (10),W+10,None,1,"[1R] Ember (30)
+<br>Flip a coin. If tails, discard a R Energy attached to Chimchar."
+231455,Cyndaquil,Cyndaquil,https://tcgplayer-cdn.tcgplayer.com/product/231455_200w.jpg,3,2776,https://cpt.tcgcsv.com/7CS2,2022-02-09T14:04:39.027,1,,,0.95,1.41,10.0,1.42,,Normal,057/111,Promo,Fire,50,Basic,"[R] Fireworks (20)
+<br>Flip a coin. If tails, discard 1 Energy card attached to Cyndaquil.",W,None,1,"[2] Quick Attack (10+)
+<br>Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage."
+231456,Fennekin,Fennekin,https://tcgplayer-cdn.tcgplayer.com/product/231456_200w.jpg,3,2776,https://cpt.tcgcsv.com/8CS2,2022-02-15T17:48:57.933,1,,,1.0,1.9,10.0,1.27,,Normal,XY02,Promo,Fire,60,Basic,[R] Scratch (10),Wx2,None,1,[1R] Live Coal (20)
+231457,Froakie,Froakie,https://tcgplayer-cdn.tcgplayer.com/product/231457_200w.jpg,3,2776,https://cpt.tcgcsv.com/9CS2,2021-05-07T04:03:11.703,1,,,1.0,2.12,10.0,1.94,,Normal,XY03,Promo,Water,60,Basic,[W] Pound (10),Gx2,None,1,[1W] Water Drip (20)
+231458,Grookey,Grookey,https://tcgplayer-cdn.tcgplayer.com/product/231458_200w.jpg,3,2776,https://cpt.tcgcsv.com/bCS2,2021-03-05T05:03:21.527,1,,,0.75,2.22,7.78,1.88,,Normal,SWSH001,Promo,Grass,60,Basic,[1G] Branch Poke (30),Rx2,None,1,
+231459,Litten,Litten,https://tcgplayer-cdn.tcgplayer.com/product/231459_200w.jpg,3,2776,https://cpt.tcgcsv.com/cCS2,2021-04-02T04:03:07.323,1,,,0.98,2.49,7.99,2.18,,Normal,SM02,Promo,Fire,60,Basic,[1R] Combustion (30),Wx2,None,1,
+231460,Mudkip,Mudkip,https://tcgplayer-cdn.tcgplayer.com/product/231460_200w.jpg,3,2776,https://cpt.tcgcsv.com/dCS2,2021-08-12T04:03:07.89,1,,,0.6,2.0,5.95,2.03,,Normal,059/109,Promo,Water,50,Basic,"[W] Bubble (10)
+<br>Flip a coin. If heads, the Defending Pokemon is now Paralyzed.",L,None,1,
+231461,Oshawott,Oshawott,https://tcgplayer-cdn.tcgplayer.com/product/231461_200w.jpg,3,2776,https://cpt.tcgcsv.com/fCS2,2021-06-04T04:03:36.873,1,,,0.7,1.35,5.95,1.35,,Normal,BW03,Promo,Water,60,Basic,"[1W] Water Pulse (20)
+<br>Flip a coin. If heads, the Defending Pokemon is now Asleep.",Lx2,None,1,
+231463,Piplup,Piplup,https://tcgplayer-cdn.tcgplayer.com/product/231463_200w.jpg,3,2776,https://cpt.tcgcsv.com/hCS2,2021-07-09T04:03:08.203,1,,,0.8,2.11,6.02,2.19,,Normal,093/130,Promo,Water,60,Basic,[0] Peck (10),L+10,None,1,"[1W] Water Splash (20+)
+<br>Flip a coin. If heads, this attack does 20 damage plus 10 more damage."
+231464,Popplio,Popplio,https://tcgplayer-cdn.tcgplayer.com/product/231464_200w.jpg,3,2776,https://cpt.tcgcsv.com/jCS2,2021-04-02T04:03:07.323,1,,,0.25,1.98,6.95,1.59,,Normal,SM03,Promo,Water,60,Basic,"[W] Sing
+<br>Your opponent's Active Pokemon is now Asleep.",Gx2,None,1,
+231465,Rowlet,Rowlet,https://tcgplayer-cdn.tcgplayer.com/product/231465_200w.jpg,3,2776,https://cpt.tcgcsv.com/kCS2,2021-04-02T04:03:07.323,1,,,1.75,2.75,6.95,2.51,,Normal,SM01,Promo,Grass,50,Basic,"[G] Fury Attack (10x)
+<br>Flip 3 coins. This attack does 10 damage for each heads.",Rx2,None,1,
+231466,Scorbunny,Scorbunny,https://tcgplayer-cdn.tcgplayer.com/product/231466_200w.jpg,3,2776,https://cpt.tcgcsv.com/lCS2,2022-02-15T17:49:35.447,1,,,2.0,3.96,7.44,3.12,,Normal,SWSH002,Promo,Fire,60,Basic,"[R] Super Singe (10)
+<br>Flip a coin. If heads, your opponent's Active Pokemon is is now Burned.",Wx2,None,1,
+231467,Snivy,Snivy,https://tcgplayer-cdn.tcgplayer.com/product/231467_200w.jpg,3,2776,https://cpt.tcgcsv.com/mCS2,2021-12-29T15:29:30.197,1,,,0.56,1.2,5.0,1.22,,Normal,BW01,Promo,Grass,60,Basic,"[1G] Slam (20x)
+<br>Flip 2 coins. This attack does 20 damage times the number of heads.",Rx2,W-20,1,
+231468,Sobble,Sobble,https://tcgplayer-cdn.tcgplayer.com/product/231468_200w.jpg,3,2776,https://cpt.tcgcsv.com/nCS2,2022-03-05T21:11:40.413,1,,,1.0,1.99,6.95,1.78,,Normal,SWSH003,Promo,Water,60,Basic,"[1W] Bind (20)
+<br>Flip a coin. If heads, your opponent's Active Pokemon is now Paralyzed.",Lx2,None,1,
+231469,Squirtle,Squirtle,https://tcgplayer-cdn.tcgplayer.com/product/231469_200w.jpg,3,2776,https://cpt.tcgcsv.com/pCS2,2022-02-15T17:47:52.247,1,,,1.48,3.12,7.77,3.08,,Normal,063/102,Promo,Water,40,Basic,"[W] Bubble (10)
+<br>Flip a coin. If heads, the Defending Pokemon is now Paralyzed.",L,None,1,"[1W] Withdraw
+<br>Flip a coin. If heads, prevent all damage done to Squirtle during your opponent's next turn. <em>(Any other effects of attacks still happen.)</em>"
+231470,Tepig,Tepig,https://tcgplayer-cdn.tcgplayer.com/product/231470_200w.jpg,3,2776,https://cpt.tcgcsv.com/qCS2,2021-06-04T04:03:36.873,1,,,0.35,0.97,5.0,0.9,,Normal,BW02,Promo,Fire,70,Basic,"[1R] Ember (30)
+<br>Discard an Energy attached to this Pokemon.",Wx2,None,2,
+231471,Torchic,Torchic,https://tcgplayer-cdn.tcgplayer.com/product/231471_200w.jpg,3,2776,https://cpt.tcgcsv.com/rCS2,2021-08-12T04:03:07.89,1,,,0.98,1.97,7.95,1.97,,Normal,074/109,Promo,Fire,50,Basic,"[1] Singe
+<br>Flip a coin. If heads, the Defending Pokemon is now Burned.",W,None,1,
+231472,Totodile,Totodile,https://tcgplayer-cdn.tcgplayer.com/product/231472_200w.jpg,3,2776,https://cpt.tcgcsv.com/sCS2,2022-02-09T14:05:06.15,1,,,0.75,1.5,10.0,1.57,,Normal,081/111,Promo,Water,50,Basic,"[1] Leer
+<br>Flip a coin. If heads, the Defending Pokemon can't attack Totodile during your opponent's next turn. <em>(Benching or evolving either Pokemon ends this effect.)</em>",G,None,1,"[W] Fury Swipes (10x)
+<br>Flip 3 coins. This attack does 10 damage times the number of heads."
+231473,Treecko,Treecko,https://tcgplayer-cdn.tcgplayer.com/product/231473_200w.jpg,3,2776,https://cpt.tcgcsv.com/tCS2,2021-08-12T04:03:07.89,1,,,0.7,1.41,5.0,1.39,,Normal,076/109,Promo,Grass,40,Basic,[1] Tail Slap (10),R,W-30,1,[1G] Razor Leaf (20)
+231474,Turtwig,Turtwig,https://tcgplayer-cdn.tcgplayer.com/product/231474_200w.jpg,3,2776,https://cpt.tcgcsv.com/vCS2,2021-07-09T04:03:08.203,1,,,0.64,1.43,5.74,1.44,,Normal,103/130,Promo,Grass,60,Basic,[0] Tackle (10),R+10,W-20,2,[G] Razor Leaf (20)
+261803,First Partner Packs [Set of 8] + Binder,First Partner Packs Set of 8 plus Binder,https://tcgplayer-cdn.tcgplayer.com/product/261803_200w.jpg,3,2776,https://cpt.tcgcsv.com/5L63,2024-05-14T16:15:32.93,5,"Contents:
+<br>• x1 First Partner Pack (Kanto)
+<br>• x1 First Partner Pack (Johto)
+<br>• x1 First Partner Pack (Hoenn)
+<br>• x1 First Partner Pack (Sinnoh)
+<br>• x1 First Partner Pack (Unova)
+<br>• x1 First Partner Pack (Kalos)
+<br>• x1 First Partner Pack (Alola)
+<br>• x1 First Partner Pack (Galar)
+<br>• x1 First Partner Collector's Binder",,229.99,249.97,250.0,158.06,,Normal,,,,,,,,,,

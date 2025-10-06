@@ -1,0 +1,55 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extAttribute,extMonsterType,extCardType,extAttack,extDefense,extDescription,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName
+23340,Total Defense Shogun,Total Defense Shogun,https://tcgplayer-cdn.tcgplayer.com/product/23340_200w.jpg,2,127,https://cpt.tcgcsv.com/Qlc,2025-03-18T20:03:19.4,1,CT1-EN001,Secret Rare,DARK,Warrior,Effect Monster,1550,2500,"This card is changed to Defense Position when it is Normal Summoned or Flip Summoned successfully. This card can attack while in Defense Position. If this card attacks while in Defense Position, apply the ATK of this card for damage calculation.",1.0,2.3,7.69,2.65,,Limited
+23341,Blade Knight,Blade Knight,https://tcgplayer-cdn.tcgplayer.com/product/23341_200w.jpg,2,127,https://cpt.tcgcsv.com/Rlc,2025-03-18T19:27:17.733,1,CT1-EN002,Secret Rare,LIGHT,Warrior,Effect Monster,1600,1000,"If you have 1 or less cards in your hand, the ATK of this card on the field is increased by 400 points. Also, if this card is the only monster on your side of the field, negate the effects of Flip Effect Monsters destroyed by this card as a result of battle.",8.46,14.75,42.62,16.19,16.19,Limited
+23342,Command Knight,Command Knight,https://tcgplayer-cdn.tcgplayer.com/product/23342_200w.jpg,2,127,https://cpt.tcgcsv.com/Slc,2025-03-18T19:49:35.467,1,CT1-EN003,Secret Rare,FIRE,Warrior,Effect Monster,1200,1900,"As long as at least 1 other monster exists on your side of the field, your opponent cannot select this card as an attack target. Also, as long as this card remains face up on the field, increase the ATK of all Warrior-Type monsters by 400 points.",1.83,3.12,11.99,4.33,,Limited
+23343,Swift Gaia the Fierce Knight,Swift Gaia the Fierce Knight,https://tcgplayer-cdn.tcgplayer.com/product/23343_200w.jpg,2,127,https://cpt.tcgcsv.com/Tlc,2025-03-18T19:59:58.867,0,CT1-EN004,Secret Rare,DARK,Warrior,Effect Monster,2300,2100,"If this card is the only card in your hand, you can Summon this card in face up attack position without offering monsters as tributes. This is counted as a normal summon.",1.99,7.04,39.98,6.88,,Limited
+23344,Insect Queen,Insect Queen,https://tcgplayer-cdn.tcgplayer.com/product/23344_200w.jpg,2,127,https://cpt.tcgcsv.com/Vlc,2025-03-18T19:56:36.263,1,CT1-EN005,Secret Rare,EARTH,Insect,Effect Monster,2200,2400,"You cannot declare an attack without offering 1 monster on your side of the field as a Tribute. Increase the ATK of this card by 200 points for each face-up Insect-Type monster on your field. Special Summon 1 ""Insect Monster Token"" (Insect-Type/Earth/1 Star/ATK 100/DEF/ 100) in Attack Position on your side of the field at the end of each turn that this card destroys your opponent's Monster.",3.5,6.0,20.0,6.63,,Limited
+23345,Obnoxious Celtic Guard,Obnoxious Celtic Guard,https://tcgplayer-cdn.tcgplayer.com/product/23345_200w.jpg,2,127,https://cpt.tcgcsv.com/Wlc,2025-03-18T19:59:07.01,1,CT1-EN006,Secret Rare,EARTH,Warrior,Effect Monster,1400,1200,This card is not destroyed as a result of battle when this card battles with a monster with an ATK of 1900 or more. (Damage calculation is applied normally.),2.79,8.0,11.79,8.41,,Limited
+206888,2004 Collectors Tin: Total Defense Shogun,2004 Collectors Tin Total Defense Shogun,https://tcgplayer-cdn.tcgplayer.com/product/206888_200w.jpg,2,127,https://cpt.tcgcsv.com/NMG2,2020-01-07T14:31:30.173,1,,,,,,,,"Each Collectible Tin 2004 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Pharaonic Guardian
+<br><span style=""color:white"">____</span> • 1 Magician's Force
+<br><span style=""color:white"">____</span> • 1 Dark Crisis
+<br><span style=""color:white"">____</span> • 1 Invasion of Chaos
+<br><span style=""color:white"">____</span> • 1 Ancient Sanctuary
+<br>• 1 Secret Rare promotional card",300.0,359.98,419.95,,,Normal
+206889,2004 Collectors Tin: Blade Knight,2004 Collectors Tin Blade Knight,https://tcgplayer-cdn.tcgplayer.com/product/206889_200w.jpg,2,127,https://cpt.tcgcsv.com/PMG2,2020-01-07T14:33:10.287,1,,,,,,,,"Each Collectible Tin 2004 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Pharaonic Guardian
+<br><span style=""color:white"">____</span> • 1 Magician's Force
+<br><span style=""color:white"">____</span> • 1 Dark Crisis
+<br><span style=""color:white"">____</span> • 1 Invasion of Chaos
+<br><span style=""color:white"">____</span> • 1 Ancient Sanctuary
+<br>• 1 Secret Rare promotional card",298.95,298.95,298.95,,,Normal
+206890,2004 Collectors Tin: Command Knight,2004 Collectors Tin Command Knight,https://tcgplayer-cdn.tcgplayer.com/product/206890_200w.jpg,2,127,https://cpt.tcgcsv.com/QMG2,2020-01-07T14:33:29.363,1,,,,,,,,"Each Collectible Tin 2004 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Pharaonic Guardian
+<br><span style=""color:white"">____</span> • 1 Magician's Force
+<br><span style=""color:white"">____</span> • 1 Dark Crisis
+<br><span style=""color:white"">____</span> • 1 Invasion of Chaos
+<br><span style=""color:white"">____</span> • 1 Ancient Sanctuary
+<br>• 1 Secret Rare promotional card",400.0,416.72,749.99,,,Normal
+206891,2004 Collectors Tin: Swift Gaia the Fierce Knight,2004 Collectors Tin Swift Gaia the Fierce Knight,https://tcgplayer-cdn.tcgplayer.com/product/206891_200w.jpg,2,127,https://cpt.tcgcsv.com/RMG2,2020-01-07T14:33:46.703,1,,,,,,,,"Each Collectible Tin 2004 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Pharaonic Guardian
+<br><span style=""color:white"">____</span> • 1 Magician's Force
+<br><span style=""color:white"">____</span> • 1 Dark Crisis
+<br><span style=""color:white"">____</span> • 1 Invasion of Chaos
+<br><span style=""color:white"">____</span> • 1 Ancient Sanctuary
+<br>• 1 Secret Rare promotional card",399.95,399.95,399.95,,,Normal
+206892,2004 Collectors Tin: Insect Queen,2004 Collectors Tin Insect Queen,https://tcgplayer-cdn.tcgplayer.com/product/206892_200w.jpg,2,127,https://cpt.tcgcsv.com/SMG2,2020-01-07T14:34:02.633,1,,,,,,,,"Each Collectible Tin 2004 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Pharaonic Guardian
+<br><span style=""color:white"">____</span> • 1 Magician's Force
+<br><span style=""color:white"">____</span> • 1 Dark Crisis
+<br><span style=""color:white"">____</span> • 1 Invasion of Chaos
+<br><span style=""color:white"">____</span> • 1 Ancient Sanctuary
+<br>• 1 Secret Rare promotional card",299.95,299.95,299.95,329.81,,Normal
+206893,2004 Collectors Tin: Obnoxious Celtic Guard,2004 Collectors Tin Obnoxious Celtic Guard,https://tcgplayer-cdn.tcgplayer.com/product/206893_200w.jpg,2,127,https://cpt.tcgcsv.com/TMG2,2020-01-07T14:34:20.003,1,,,,,,,,"Each Collectible Tin 2004 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Pharaonic Guardian
+<br><span style=""color:white"">____</span> • 1 Magician's Force
+<br><span style=""color:white"">____</span> • 1 Dark Crisis
+<br><span style=""color:white"">____</span> • 1 Invasion of Chaos
+<br><span style=""color:white"">____</span> • 1 Ancient Sanctuary
+<br>• 1 Secret Rare promotional card",,,,,,

@@ -1,0 +1,78 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extAttack2,extWeakness,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extCardText,extResistance
+84031,Bulbasaur,Bulbasaur,https://tcgplayer-cdn.tcgplayer.com/product/84031_200w.jpg,3,1447,https://cpt.tcgcsv.com/FDH,2022-09-23T18:30:01.573,1,012/17,Common,Grass,40,Basic,[1] Bite (10),[1G] Razor Leaf (20),P,1,10.06,25.0,77.9,12.18,,Normal,,
+84072,Cacnea,Cacnea,https://tcgplayer-cdn.tcgplayer.com/product/84072_200w.jpg,3,1447,https://cpt.tcgcsv.com/sFH,2022-09-23T18:30:50.353,1,013/017,Common,Grass,40,Basic,"[1] Sand Attack (10)
+<br>If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",,R,1,0.12,0.6,1.64,1.0,,Normal,,
+84151,Celebi ex (Non-Holo),Celebi ex Non Holo,https://tcgplayer-cdn.tcgplayer.com/product/84151_200w.jpg,3,1447,https://cpt.tcgcsv.com/2HH,2022-09-23T18:33:40.577,1,017/017,Ultra Rare,Psychic,80,Basic,"[1P] Psychic Shield (30)
+<br>Prevent all effects of attacks, including damage, done to Celebi ex by your opponent's Pokémon-ex during your opponent's next turn.",,P,1,27.91,59.99,99.99,39.99,,Normal,"<strong>Poké-POWER — Time Reversal</strong>
+<br>
+Once during your turn, when you put Celebi ex from your hand onto your Bench, you may search your discard pile for a card, show it to your opponent, and put it on top of your deck.
+<br><br><em>Pokémon-EX rule — When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.</em>",
+85271,Entei,Entei,https://tcgplayer-cdn.tcgplayer.com/product/85271_200w.jpg,3,1447,https://cpt.tcgcsv.com/r7J,2022-09-23T18:42:36.277,1,001/017,Rare,Fire,70,Basic,"[2] Stomp (10+)
+<br>Flip a coin. If heads, this attack does 10 damage plus 20 more damage.","[1RR] Fire Spin (50)
+<br>Discard 2 basic Energy cards attached to Entei or this attack does nothing.",W,1,10.99,16.72,18.58,18.58,,Normal,,
+85271,Entei,Entei,https://tcgplayer-cdn.tcgplayer.com/product/85271_200w.jpg,3,1447,https://cpt.tcgcsv.com/r7J,2022-09-23T18:42:36.277,1,001/017,Rare,Fire,70,Basic,"[2] Stomp (10+)
+<br>Flip a coin. If heads, this attack does 10 damage plus 20 more damage.","[1RR] Fire Spin (50)
+<br>Discard 2 basic Energy cards attached to Entei or this attack does nothing.",W,1,12.63,14.65,25.0,24.33,,Holofoil,,
+86298,Ivysaur,Ivysaur,https://tcgplayer-cdn.tcgplayer.com/product/86298_200w.jpg,3,1447,https://cpt.tcgcsv.com/-wJ,2022-09-23T18:43:15.933,1,007/017,Uncommon,Grass,80,Stage 1,"[1] Poison Seed
+<br>The Defending Pokémon is now Poisoned.",[1GG] Razor Leaf (50),P,1,11.48,16.25,40.0,14.67,,Normal,,
+86934,Luvdisc,Luvdisc,https://tcgplayer-cdn.tcgplayer.com/product/86934_200w.jpg,3,1447,https://cpt.tcgcsv.com/JNJ,2022-09-23T18:44:49.18,1,014/017,Common,Water,60,Basic,"[1] Paralyzing Kiss
+<br>If there are 2 Defending Pokémon in play, choose 1 of the Defending Pokémon. That Pokémon is now Paralyzed. (If there is only 1 Defending Pokémon, this attack does nothing.)","[1W] Fast Stream (20)
+<br>Move 1 Energy card attached to the Defending Pokémon to the other Defending Pokémon. (Ignore this effect if your opponent has only 1 Defending Pokémon.)",L,1,0.73,0.82,5.99,0.86,,Normal,,
+87586,Mr. Briney's Compassion,Mr Brineys Compassion,https://tcgplayer-cdn.tcgplayer.com/product/87586_200w.jpg,3,1447,https://cpt.tcgcsv.com/L2K,2022-09-23T18:45:29.59,1,008/017,Uncommon,Supporter,,,,,,,26.59,49.82,49.83,10.15,,Normal,"You can play only one Supporter card each turn.  When you play this card, put it next to your Active Pokemon.  When your turn ends, discard this card.
+<br>
+<br>Choose 1 of your Pokémon in play (excluding Pokémon-ex). Return that Pokémon and all cards attached to it to your hand.",
+87636,Multi Technical Machine 01,Multi Technical Machine 01,https://tcgplayer-cdn.tcgplayer.com/product/87636_200w.jpg,3,1447,https://cpt.tcgcsv.com/L3K,2024-11-11T13:40:36.19,1,009/017,Uncommon,Tool,,,"[1] Paralyzing Gaze
+<br>
+The Defending Pokémon is now Paralyzed.",,,,1.89,2.54,3.35,2.27,,Normal,"Attach this card to 1 of your Pokémon in play. That Pokémon may use this card's attack instead of its own. At the end of your turn, discard Multi Technical Machine 01.",
+88000,Phanpy,Phanpy,https://tcgplayer-cdn.tcgplayer.com/product/88000_200w.jpg,3,1447,https://cpt.tcgcsv.com/0dK,2022-09-23T18:49:55.74,1,015/017,Common,Fighting,50,Basic,"[F] Double Spin (10x)
+<br>Flip 2 coins. This attack does 10 damage times the number of heads.","[2] Body Slam (10)
+<br>
+Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",G,1,14.68,23.25,40.0,2.99,,Normal,,
+88032,Pidgeot,Pidgeot,https://tcgplayer-cdn.tcgplayer.com/product/88032_200w.jpg,3,1447,https://cpt.tcgcsv.com/GdK,2022-09-23T18:51:37.347,1,002/017,Rare,Colorless,80,Stage 2,"[3] Sharp Beak (20+)
+<br>Flip a coin. If heads, this attack does 20 damage plus 30 more damage.",,L,,5.0,6.36,9.89,6.36,,Normal,"<strong>Poké-POWER — Beating Wings</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, if Pidgeot is your Active Pokémon, you may shuffle 1 of your Benched Pokémon and all cards attached to it into your deck. This power can't be used if Pidgeot is affected by a Special Condition.",F
+88032,Pidgeot,Pidgeot,https://tcgplayer-cdn.tcgplayer.com/product/88032_200w.jpg,3,1447,https://cpt.tcgcsv.com/GdK,2022-09-23T18:51:37.347,1,002/017,Rare,Colorless,80,Stage 2,"[3] Sharp Beak (20+)
+<br>Flip a coin. If heads, this attack does 20 damage plus 30 more damage.",,L,,3.47,4.76,7.0,4.64,,Holofoil,"<strong>Poké-POWER — Beating Wings</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, if Pidgeot is your Active Pokémon, you may shuffle 1 of your Benched Pokémon and all cards attached to it into your deck. This power can't be used if Pidgeot is affected by a Special Condition.",F
+88081,Pikachu,Pikachu,https://tcgplayer-cdn.tcgplayer.com/product/88081_200w.jpg,3,1447,https://cpt.tcgcsv.com/FfK,2022-09-23T18:52:40.19,1,016/017,Common,Lightning,40,Basic,[1] Gnaw (10),"[1L] Thunder Jolt (30)
+<br>Flip a coin. If tails, Pikachu does 10 damage to self.",F,1,13.0,22.5,38.04,18.17,,Normal,,
+88231,Pokemon Park,Pokemon Park,https://tcgplayer-cdn.tcgplayer.com/product/88231_200w.jpg,3,1447,https://cpt.tcgcsv.com/FjK,2022-09-23T18:53:26.037,1,010/017,Uncommon,Stadium,,,,,,,5.99,7.83,13.69,8.04,,Normal,"This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.
+<br>
+<br>Once during each player's turn, when that player attaches an Energy card from his or her hand to 1 of his or her Benched Pokémon, he or she removes 1 damage counter from that Pokémon.",
+88533,Raikou,Raikou,https://tcgplayer-cdn.tcgplayer.com/product/88533_200w.jpg,3,1447,https://cpt.tcgcsv.com/HqK,2022-09-23T18:54:08.953,1,003/017,Rare,Lightning,70,Basic,"[1] Roar
+<br>Your opponent switches the Defending Pokémon with 1 of his or her Benched Pokémon, if any.","[1LL] Thunder (50)
+<br>Flip a coin. If tails, Raikou does 20 damage to itself.",F,1,15.0,19.37,25.66,19.74,,Normal,,
+88533,Raikou,Raikou,https://tcgplayer-cdn.tcgplayer.com/product/88533_200w.jpg,3,1447,https://cpt.tcgcsv.com/HqK,2022-09-23T18:54:08.953,1,003/017,Rare,Lightning,70,Basic,"[1] Roar
+<br>Your opponent switches the Defending Pokémon with 1 of his or her Benched Pokémon, if any.","[1LL] Thunder (50)
+<br>Flip a coin. If tails, Raikou does 20 damage to itself.",F,1,21.32,25.0,40.0,21.54,,Holofoil,,
+89602,Suicune,Suicune,https://tcgplayer-cdn.tcgplayer.com/product/89602_200w.jpg,3,1447,https://cpt.tcgcsv.com/3SK,2022-09-23T18:55:54.147,1,004/017,Rare,Water,70,Basic,"[1W] Bubblebeam (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",,L,1,8.98,14.99,20.0,11.45,,Normal,"<strong>Poké-BODY — MIrror Coat</strong>
+<br>
+If Suicune is Burned or Poisoned by an opponent's attack <em>(even if Suicune is Knocked Out)</em>, the Attacking Pokémon is now affected by the same Special Conditions (1 if there is only 1).",
+89602,Suicune,Suicune,https://tcgplayer-cdn.tcgplayer.com/product/89602_200w.jpg,3,1447,https://cpt.tcgcsv.com/3SK,2022-09-23T18:55:54.147,1,004/017,Rare,Water,70,Basic,"[1W] Bubblebeam (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",,L,1,8.83,19.99,26.29,26.03,,Holofoil,"<strong>Poké-BODY — MIrror Coat</strong>
+<br>
+If Suicune is Burned or Poisoned by an opponent's attack <em>(even if Suicune is Knocked Out)</em>, the Attacking Pokémon is now affected by the same Special Conditions (1 if there is only 1).",
+89762,Tauros,Tauros,https://tcgplayer-cdn.tcgplayer.com/product/89762_200w.jpg,3,1447,https://cpt.tcgcsv.com/gWK,2022-12-13T16:06:43.05,1,005/017,Rare,Colorless,70,Basic,"[2] Rage (10+)
+<br>Does 10 damage plus 10 more damage for each damage counter on Tauros.","[3] Take Down (40)
+<br>Tauros does 10 damage to itself.",F,1,0.8,3.05,4.33,3.33,,Normal,,
+89762,Tauros,Tauros,https://tcgplayer-cdn.tcgplayer.com/product/89762_200w.jpg,3,1447,https://cpt.tcgcsv.com/gWK,2022-12-13T16:06:43.05,1,005/017,Rare,Colorless,70,Basic,"[2] Rage (10+)
+<br>Does 10 damage plus 10 more damage for each damage counter on Tauros.","[3] Take Down (40)
+<br>Tauros does 10 damage to itself.",F,1,0.83,1.59,19.99,1.89,1.39,Holofoil,,
+90084,TV Reporter,TV Reporter,https://tcgplayer-cdn.tcgplayer.com/product/90084_200w.jpg,3,1447,https://cpt.tcgcsv.com/J2L,2022-09-23T18:57:29.293,1,011/017,Uncommon,Supporter,,,,,,,1.96,2.6,5.16,2.38,,Normal,"You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokemon. When your turn ends, discard this card.
+<br>
+<br>Draw 3 cards. Then discard any 1 card from your hand.",
+90317,Venusaur,Venusaur,https://tcgplayer-cdn.tcgplayer.com/product/90317_200w.jpg,3,1447,https://cpt.tcgcsv.com/m8L,2022-09-23T18:58:06.603,1,006/017,Rare,Grass,120,Stage 2,"[1GG] Wide Solarbeam (20)
+<br>Does 20 damage to 2 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[1GGG] Hard Plant (80)
+<br>Venusaur can't use Hard Plant during your next turn.",R,3,5.97,12.54,15.76,15.15,,Normal,,
+90317,Venusaur,Venusaur,https://tcgplayer-cdn.tcgplayer.com/product/90317_200w.jpg,3,1447,https://cpt.tcgcsv.com/m8L,2022-09-23T18:58:06.603,1,006/017,Rare,Grass,120,Stage 2,"[1GG] Wide Solarbeam (20)
+<br>Does 20 damage to 2 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[1GGG] Hard Plant (80)
+<br>Venusaur can't use Hard Plant during your next turn.",R,3,12.99,26.49,40.54,27.47,,Holofoil,,
+97808,Celebi ex (Holo),Celebi ex Holo,https://tcgplayer-cdn.tcgplayer.com/product/97808_200w.jpg,3,1447,https://cpt.tcgcsv.com/b8P,2022-09-23T18:33:05.14,1,017/017,Ultra Rare,Psychic,80,Basic,"[1P] Psychic Shield (30)
+<br>Prevent all effects of attacks, including damage, done to Celebi ex by your opponent's Pokémon-ex during your opponent's next turn.",,P,1,99.5,114.74,220.0,45.8,,Holofoil,"<strong>Poké-POWER — Time Reversal</strong>
+<br>
+Once during your turn, when you put Celebi ex from your hand onto your Bench, you may search your discard pile for a card, show it to your opponent, and put it on top of your deck.
+<br><br><em>Pokémon-EX rule — When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.</em>",
+141228,POP Series 2 Pack,POP Series 2 Pack,https://tcgplayer-cdn.tcgplayer.com/product/141228_200w.jpg,3,1447,https://cpt.tcgcsv.com/Bv82,2017-08-16T19:08:51.953,1,,,,,,,,,,56.94,72.95,99.0,61.11,,Normal,Each POP Series 2 Pack contains 2 random cards for the Promotional POP Series 2.,

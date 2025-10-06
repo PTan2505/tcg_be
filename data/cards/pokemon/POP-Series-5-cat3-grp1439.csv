@@ -1,0 +1,56 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extCardText,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extHP,extStage,extAttack1,extAttack2,extWeakness,extRetreatCost,extResistance
+83840,Bill's Maintenance,Bills Maintenance,https://tcgplayer-cdn.tcgplayer.com/product/83840_200w.jpg,3,1439,https://cpt.tcgcsv.com/QxH,2022-09-23T19:45:33.003,1,006/017,Uncommon,Supporter,"You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokémon. When your turn ends, discard this card.
+<br>
+<br>If you have any cards in your hand, shuffle 1 of them into your deck, then draw 3 cards.",3.13,3.84,5.86,4.29,,Normal,,,,,,,
+83941,Boost Energy,Boost Energy,https://tcgplayer-cdn.tcgplayer.com/product/83941_200w.jpg,3,1439,https://cpt.tcgcsv.com/RBH,2022-09-23T19:46:29.773,1,008/017,Uncommon,Special Energy,"Boost Energy can be attached only to an Evolved Pokémon. Discard Boost Energy at the end of the turn it was attached. Boost Energy provides 3 Colorless Energy. The Pokémon Boost Energy is attached to can't retreat. If the Pokémon Boost Energy is attached to isn't an Evolved Pokémon, discard Boost Energy.",1.75,3.75,5.39,3.71,,Normal,,,,,,,
+84221,Charmander (Delta Species),Charmander Delta Species,https://tcgplayer-cdn.tcgplayer.com/product/84221_200w.jpg,3,1439,https://cpt.tcgcsv.com/rJH,2022-09-23T19:47:10.607,1,010/017,Common,Lightning,,18.9,20.14,79.99,22.18,,Normal,50,Basic,[1] Scratch (10),[1L] Bite (20),W,1,
+84237,Charmeleon (Delta Species),Charmeleon Delta Species,https://tcgplayer-cdn.tcgplayer.com/product/84237_200w.jpg,3,1439,https://cpt.tcgcsv.com/MJH,2022-09-23T19:47:34.643,1,005/017,Uncommon,Lightning,,50.0,69.69,79.99,44.24,,Normal,70,Stage 1,[2] Slash (20),"[2L] Thunder Jolt (50)
+<br>Flip a coin. If tails, Charmeleon does 10 damage to itself.",W,1,
+84756,Delta Rainbow Energy,Delta Rainbow Energy,https://tcgplayer-cdn.tcgplayer.com/product/84756_200w.jpg,3,1439,https://cpt.tcgcsv.com/8WH,2022-10-13T16:41:23.2,1,009/017,Uncommon,Special Energy,"Delta Species Rainbow Energy provides 1 Colorless Energy. While attached to a Pokémon that has Delta Species on its card, Delta Species Rainbow Energy provides every type of Energy but provides only 1 Energy at a time. <em>(Has no effect other than providing Energy.)</em>",5.0,5.61,7.75,4.33,,Normal,,,,,,,
+84894,Double Rainbow Energy,Double Rainbow Energy,https://tcgplayer-cdn.tcgplayer.com/product/84894_200w.jpg,3,1439,https://cpt.tcgcsv.com/VZH,2022-09-23T19:51:51.733,1,004/017,Rare,Special Energy,"Double Rainbow Energy can be attached only to an Evolved Pokémon (excluding Pokémon-ex). While in play, Double Rainbow Energy provides every type of Energy but provides 2 Energy at a time. <em>(Has no effect other than providing Energy.)</em> Damage done to your opponent's Pokémon by the Pokémon Double Rainbow Energy is attached to is reduced by 10 <em>(before applying Weakness and Resistance)</em>. When the Pokémon Double Rainbow Energy is attached to is no longer an Evolved Pokémon, discard Double Rainbow Energy.",11.7,17.97,28.08,26.25,,Normal,,,,,,,
+85329,Espeon Star,Espeon Star,https://tcgplayer-cdn.tcgplayer.com/product/85329_200w.jpg,3,1439,https://cpt.tcgcsv.com/C8J,2022-11-01T21:31:47.697,1,016/017,Ultra Rare,Psychic,"<strong>Poké-POWER — Purple Ray</strong>
+<br>
+Once during your turn, when you put Espeon Star from your hand onto your Bench, you may use this power. Each Active Pokémon <em>(both yours and your opponent's)</em> is now Confused.
+<br><br>
+<em>You can't have more than 1 Pokémon Star in your deck.</em>",49999.99,52500.0,55000.0,,,Normal,70,Basic,"[1PP] Psychic Boom (30+)
+<br>Does 30 damage plus 10 more damage for each Energy attached to the Defending Pokémon.",,P,1,
+86123,Ho-Oh,Ho Oh,https://tcgplayer-cdn.tcgplayer.com/product/86123_200w.jpg,3,1439,https://cpt.tcgcsv.com/tsJ,2022-09-23T19:54:52.193,1,001/017,Rare,Fire,,5.0,12.51,22.99,15.29,,Normal,80,Basic,[1R] Fire Wing (20),"[1RRR] Fire Blast (60)
+<br>Discard a Fire Energy attached to Ho-Oh.",W,2,
+86123,Ho-Oh,Ho Oh,https://tcgplayer-cdn.tcgplayer.com/product/86123_200w.jpg,3,1439,https://cpt.tcgcsv.com/tsJ,2022-09-23T19:54:52.193,1,001/017,Rare,Fire,,15.0,19.5,114.95,24.41,,Holofoil,80,Basic,[1R] Fire Wing (20),"[1RRR] Fire Blast (60)
+<br>Discard a Fire Energy attached to Ho-Oh.",W,2,
+86907,Lugia,Lugia,https://tcgplayer-cdn.tcgplayer.com/product/86907_200w.jpg,3,1439,https://cpt.tcgcsv.com/9NJ,2022-09-23T19:55:38.823,1,002/017,Rare,Psychic,,1.25,6.76,41.98,100.0,,Normal,80,Basic,[1P] Super Psy Bolt (20),"[2P] Aerowing (30)
+<br>Before doing damage, you may flip a coin. If tails, this attack does nothing. If heads, this attack does 60 damage instead.",P,2,
+86907,Lugia,Lugia,https://tcgplayer-cdn.tcgplayer.com/product/86907_200w.jpg,3,1439,https://cpt.tcgcsv.com/9NJ,2022-09-23T19:55:38.823,1,002/017,Rare,Psychic,,36.0,80.0,113.68,100.14,,Holofoil,80,Basic,[1P] Super Psy Bolt (20),"[2P] Aerowing (30)
+<br>Before doing damage, you may flip a coin. If tails, this attack does nothing. If heads, this attack does 60 damage instead.",P,2,
+87330,Meowth (Delta Species),Meowth Delta Species,https://tcgplayer-cdn.tcgplayer.com/product/87330_200w.jpg,3,1439,https://cpt.tcgcsv.com/DXJ,2023-02-12T15:48:27.8,1,011/017,Common,Darkness,,4.05,5.93,9.69,4.71,,Normal,50,Basic,"[D] Feint Attack
+<br>Choose 1 of your opponent's Pokémon. This attack does 10 damage to that Pokémon. This attack's damage isn't affected by Weakness, Resistance, Poké-Powers, Poké-Bodies, or any other affects on that Pokémon.",,F,1,
+87407,Mew (Delta Species),Mew Delta Species,https://tcgplayer-cdn.tcgplayer.com/product/87407_200w.jpg,3,1439,https://cpt.tcgcsv.com/9-J,2022-09-23T19:57:48.317,1,003/017,Rare,Fire,,349.99,424.5,499.0,125.71,,Holofoil,60,Basic,"[1] Copy
+<br>Choose 1 of the Defending Pokémon's attacks. Copy copies that attack. This attack does nothing if Mew doesn't have the Energy necessary to use that attack. (You must still do anything else required for that attack.) Mew performs that attack.","[R] Extra Draw
+<br>If your opponent has any Pokémon-ex in play, search your deck for up to 2 basic Energy cards and attach them to Mew. Shuffle your deck afterward.",P,1,
+87981,Pelipper (Delta Species),Pelipper Delta Species,https://tcgplayer-cdn.tcgplayer.com/product/87981_200w.jpg,3,1439,https://cpt.tcgcsv.com/FcK,2022-09-23T19:59:06.147,1,014/017,Common,Lightning,"<strong>Poké-BODY — Mist</strong>
+<br>
+Any damage done to Pelipper by attacks from Stage 2 Evolved Pokémon <em>(both yours and your opponent's)</em> is reduced by 30 <em>(after applying Weakness and Resistance)</em>.",0.56,2.65,21.11,1.19,,Normal,70,Stage 1,"[2L] Lightning Wing (50)
+<br>Does 10 damage to 1 of your Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",,L,,F
+87981,Pelipper (Delta Species),Pelipper Delta Species,https://tcgplayer-cdn.tcgplayer.com/product/87981_200w.jpg,3,1439,https://cpt.tcgcsv.com/FcK,2022-09-23T19:59:06.147,1,014/017,Common,Lightning,"<strong>Poké-BODY — Mist</strong>
+<br>
+Any damage done to Pelipper by attacks from Stage 2 Evolved Pokémon <em>(both yours and your opponent's)</em> is reduced by 30 <em>(after applying Weakness and Resistance)</em>.",1.99,2.75,6.67,4.37,,Holofoil,70,Stage 1,"[2L] Lightning Wing (50)
+<br>Does 10 damage to 1 of your Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",,L,,F
+88085,Pikachu,Pikachu,https://tcgplayer-cdn.tcgplayer.com/product/88085_200w.jpg,3,1439,https://cpt.tcgcsv.com/KfK,2024-03-23T21:26:09.477,1,012/017,Common,Lightning,,20.5,27.25,45.69,27.4,,Normal,50,Basic,[L] Lightning Ball (10),"[2L] Thunderbolt (50)
+<br>Discard all Energy cards attached to Pikachu.",F,1,
+88085,Pikachu,Pikachu,https://tcgplayer-cdn.tcgplayer.com/product/88085_200w.jpg,3,1439,https://cpt.tcgcsv.com/KfK,2024-03-23T21:26:09.477,1,012/017,Common,Lightning,,35.43,66.29,110.25,99.97,,Holofoil,50,Basic,[L] Lightning Ball (10),"[2L] Thunderbolt (50)
+<br>Discard all Energy cards attached to Pikachu.",F,1,
+88110,Pikachu (Delta Species),Pikachu Delta Species,https://tcgplayer-cdn.tcgplayer.com/product/88110_200w.jpg,3,1439,https://cpt.tcgcsv.com/dgK,2022-09-23T20:00:18.007,1,013/017,Common,Metal,,28.69,31.19,33.69,24.75,,Normal,40,Basic,[1] Electric Punch (10),"[2] Heavy Metal (10+)
+<br>
+Flip a coin for each Metal Energy attached to Pikachu. This attack does 10 damage plus 20 more damage for each heads.",F,1,
+88592,Rare Candy,Rare Candy,https://tcgplayer-cdn.tcgplayer.com/product/88592_200w.jpg,3,1439,https://cpt.tcgcsv.com/SrK,2022-09-23T20:01:05.17,1,007/017,Uncommon,Item,"Choose 1 of your Basic Pokémon in play. If you have a Stage 1 or Stage 2 card that evolves from that Pokémon in your hand, put that card on the Basic Pokémon. (This counts as evolving that Pokémon.)",3.59,4.0,11.04,12.99,,Normal,,,,,,,
+90153,Umbreon Star,Umbreon Star,https://tcgplayer-cdn.tcgplayer.com/product/90153_200w.jpg,3,1439,https://cpt.tcgcsv.com/55L,2022-09-23T20:03:47.27,1,017/017,Ultra Rare,Darkness,"<strong>Poké-POWER — Dark Ray</strong>
+<br>
+Once during your turn, when you put Umbreon Star from your hand onto your Bench, you may choose 1 card from your opponent's hand without looking and discard it.",,,,,,,70,Basic,"[DD] Feint Attack
+<br>Choose 1 of your opponent's Pokémon. This attack does 30 damage to that Pokémon. This attack's damage isn't affected by Weakness, Resistance, Poké-Powers, Poke-Bodies, or any other effects on that Pokémon.
+<br><br>
+<em>You can't have more than 1 Pokémon Star in your deck.</em>",,F,1,
+90709,Zangoose (Delta Species),Zangoose Delta Species,https://tcgplayer-cdn.tcgplayer.com/product/90709_200w.jpg,3,1439,https://cpt.tcgcsv.com/cjL,2022-09-23T20:04:15.4,1,015/017,Common,Metal,,0.56,1.68,6.69,1.16,,Normal,70,Basic,"[1] Detect
+<br>Flip a coin. If heads, prevent all effects of an attack, including damage, done to Zangoose during your opponent's next turn.",[2M] Metal Claw (40),F,1,
+90709,Zangoose (Delta Species),Zangoose Delta Species,https://tcgplayer-cdn.tcgplayer.com/product/90709_200w.jpg,3,1439,https://cpt.tcgcsv.com/cjL,2022-09-23T20:04:15.4,1,015/017,Common,Metal,,3.59,5.45,9.04,6.15,6.95,Holofoil,70,Basic,"[1] Detect
+<br>Flip a coin. If heads, prevent all effects of an attack, including damage, done to Zangoose during your opponent's next turn.",[2M] Metal Claw (40),F,1,
+190534,POP Series 5 Pack,POP Series 5 Pack,https://tcgplayer-cdn.tcgplayer.com/product/190534_200w.jpg,3,1439,https://cpt.tcgcsv.com/Jdx2,2019-05-16T15:23:41.713,1,,,,Each POP Series 5 Pack contains 2 random cards for the Promotional POP Series 5.,1999.99,1999.99,1999.99,1350.0,,Normal,,,,,,,
