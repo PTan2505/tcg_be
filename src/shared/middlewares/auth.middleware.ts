@@ -1,12 +1,13 @@
 import { Context, Next } from "hono";
 import jwt from "jsonwebtoken";
 import UserModel from "../../database/models/user";
+import { MESSAGES, createErrorResponse } from "../constants/messages";
 
 export const authMiddleware = async (c: Context, next: Next) => {
   try {
     const token = c.req.header("Authorization")?.replace("Bearer ", "");
     if (!token) {
-      return c.json({ error: "No token provided" }, 401);
+      return c.json(createErrorResponse(MESSAGES.AUTH.NO_TOKEN_PROVIDED), 401);
     }
 
     // Verify token
@@ -17,7 +18,7 @@ export const authMiddleware = async (c: Context, next: Next) => {
     // Find user
     const user = await UserModel.findById(decoded.userId);
     if (!user) {
-      return c.json({ error: "User not found" }, 404);
+      return c.json(createErrorResponse(MESSAGES.AUTH.USER_NOT_FOUND), 404);
     }
 
     // Add user to request object for later use
@@ -25,8 +26,8 @@ export const authMiddleware = async (c: Context, next: Next) => {
     await next();
   } catch (error) {
     if (error instanceof jwt.JsonWebTokenError) {
-      return c.json({ error: "Invalid or expired token" }, 401);
+      return c.json(createErrorResponse(MESSAGES.AUTH.INVALID_TOKEN), 401);
     }
-    return c.json({ error: "Authentication failed" }, 401);
+    return c.json(createErrorResponse(MESSAGES.AUTH.AUTHENTICATION_FAILED), 401);
   }
 };
