@@ -1,4 +1,5 @@
 import { Context } from 'hono';
+import { MESSAGES, createSuccessResponse } from '../../shared/constants/messages';
 import { GetSetsOptions, ISetService, SetType } from './set.service';
 
 export class SetController {
@@ -33,7 +34,7 @@ export class SetController {
           error: {
             name: 'ValidationError',
             field: 'page',
-            message: 'Page must be greater than 0'
+            message: MESSAGES.VALIDATION.PAGE_GREATER_THAN_ZERO
           }
         }, 400);
       }
@@ -44,25 +45,21 @@ export class SetController {
           error: {
             name: 'ValidationError',
             field: 'limit',
-            message: 'Limit must be between 1 and 100'
+            message: MESSAGES.VALIDATION.LIMIT_BETWEEN_1_100
           }
         }, 400);
       }
 
       const result = await this.setService.getAllSets(options);
 
-      return c.json({
-        success: true,
-        data: result.sets,
-        pagination: result.pagination
-      });
+      return c.json(createSuccessResponse(result.sets, MESSAGES.SETS.FETCH_SUCCESS, result.pagination));
     } catch (error: any) {
       return c.json({
         success: false,
         error: {
           name: 'Error',
           field: 'general',
-          message: error.message || 'Failed to fetch sets'
+          message: error.message || MESSAGES.SETS.FETCH_FAILED
         }
       }, 500);
     }
@@ -88,7 +85,7 @@ export class SetController {
           error: {
             name: 'ValidationError',
             field: 'type',
-            message: 'Set type must be "pokemon", "yugioh", or "onepiece"'
+            message: MESSAGES.VALIDATION.GAME_TYPE_INVALID
           }
         }, 400);
       }
@@ -110,7 +107,7 @@ export class SetController {
           error: {
             name: 'ValidationError',
             field: 'page',
-            message: 'Page must be greater than 0'
+            message: MESSAGES.VALIDATION.PAGE_GREATER_THAN_ZERO
           }
         }, 400);
       }
@@ -121,25 +118,21 @@ export class SetController {
           error: {
             name: 'ValidationError',
             field: 'limit',
-            message: 'Limit must be between 1 and 100'
+            message: MESSAGES.VALIDATION.LIMIT_BETWEEN_1_100
           }
         }, 400);
       }
 
       const result = await this.setService.getSetsByType(type as SetType, options);
 
-      return c.json({
-        success: true,
-        data: result.sets,
-        pagination: result.pagination
-      });
+      return c.json(createSuccessResponse(result.sets, MESSAGES.SETS.FETCH_SUCCESS, result.pagination));
     } catch (error: any) {
       return c.json({
         success: false,
         error: {
           name: 'Error',
           field: 'general',
-          message: error.message || 'Failed to fetch sets'
+          message: error.message || MESSAGES.SETS.FETCH_FAILED
         }
       }, 500);
     }
@@ -151,10 +144,7 @@ export class SetController {
 
       const set = await this.setService.getSetById(setId);
 
-      return c.json({
-        success: true,
-        data: set
-      });
+      return c.json(createSuccessResponse(set));
     } catch (error: any) {
       if (error.message.includes('not found')) {
         return c.json({
@@ -162,7 +152,7 @@ export class SetController {
           error: {
             name: 'NotFoundError',
             field: 'setId',
-            message: error.message
+            message: MESSAGES.SETS.SET_NOT_FOUND
           }
         }, 404);
       }
@@ -172,7 +162,7 @@ export class SetController {
         error: {
           name: 'Error',
           field: 'general',
-          message: error.message || 'Failed to fetch set'
+          message: error.message || MESSAGES.SETS.FETCH_FAILED
         }
       }, 500);
     }
@@ -188,17 +178,14 @@ export class SetController {
           error: {
             name: 'ValidationError',
             field: 'groupId',
-            message: 'Valid group ID is required'
+            message: MESSAGES.VALIDATION.GROUP_ID_REQUIRED
           }
         }, 400);
       }
 
       const set = await this.setService.getSetByGroupId(parseInt(groupId));
 
-      return c.json({
-        success: true,
-        data: set
-      });
+      return c.json(createSuccessResponse(set));
     } catch (error: any) {
       if (error.message.includes('not found')) {
         return c.json({
@@ -206,7 +193,7 @@ export class SetController {
           error: {
             name: 'NotFoundError',
             field: 'groupId',
-            message: error.message
+            message: MESSAGES.SETS.SET_NOT_FOUND
           }
         }, 404);
       }
@@ -216,7 +203,7 @@ export class SetController {
         error: {
           name: 'Error',
           field: 'general',
-          message: error.message || 'Failed to fetch set'
+          message: error.message || MESSAGES.SETS.FETCH_FAILED
         }
       }, 500);
     }
@@ -234,7 +221,7 @@ export class SetController {
           error: {
             name: 'ValidationError',
             field: 'q',
-            message: 'Search query is required'
+            message: MESSAGES.VALIDATION.SEARCH_QUERY_REQUIRED
           }
         }, 400);
       }
@@ -246,7 +233,7 @@ export class SetController {
           error: {
             name: 'ValidationError',
             field: 'type',
-            message: 'Set type must be "pokemon", "yugioh", or "onepiece"'
+            message: MESSAGES.VALIDATION.GAME_TYPE_INVALID
           }
         }, 400);
       }
@@ -260,19 +247,14 @@ export class SetController {
 
       const result = await this.setService.searchSets(type as SetType, query, options);
 
-      return c.json({
-        success: true,
-        data: result.sets,
-        pagination: result.pagination,
-        query
-      });
+      return c.json(createSuccessResponse(result.sets, MESSAGES.SETS.SEARCH_SUCCESS, result.pagination));
     } catch (error: any) {
       return c.json({
         success: false,
         error: {
           name: 'Error',
           field: 'general',
-          message: error.message || 'Failed to search sets'
+          message: error.message || MESSAGES.SETS.SEARCH_FAILED
         }
       }, 500);
     }
@@ -289,24 +271,21 @@ export class SetController {
           error: {
             name: 'ValidationError',
             field: 'type',
-            message: 'Set type must be "pokemon", "yugioh", or "onepiece"'
+            message: MESSAGES.VALIDATION.GAME_TYPE_INVALID
           }
         }, 400);
       }
 
       const stats = await this.setService.getSetStats(type as SetType);
 
-      return c.json({
-        success: true,
-        data: stats
-      });
+      return c.json(createSuccessResponse(stats, MESSAGES.SETS.STATS_SUCCESS));
     } catch (error: any) {
       return c.json({
         success: false,
         error: {
           name: 'Error',
           field: 'general',
-          message: error.message || 'Failed to fetch set statistics'
+          message: error.message || MESSAGES.SETS.STATS_FAILED
         }
       }, 500);
     }
