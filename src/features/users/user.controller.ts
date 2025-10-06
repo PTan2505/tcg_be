@@ -1,4 +1,5 @@
 import { Context } from "hono";
+import { MESSAGES, createErrorResponse, createSuccessResponse } from "../../shared/constants/messages";
 import { IUserService } from "./user.service";
 
 export class UserController {
@@ -7,9 +8,9 @@ export class UserController {
   getUsers = async (c: Context) => {
     try {
       const users = await this.userService.getUsers();
-      return c.json(users);
+      return c.json(createSuccessResponse(users));
     } catch (error: any) {
-      return c.json({ error: error.message }, 500);
+      return c.json(createErrorResponse(error.message || MESSAGES.USERS.PROFILE_FAILED), 500);
     }
   };
 
@@ -17,12 +18,12 @@ export class UserController {
     try {
       const { id } = c.req.param();
       const user = await this.userService.getUserById(id);
-      return c.json(user);
+      return c.json(createSuccessResponse(user));
     } catch (error: any) {
       if (error.message === "User not found") {
-        return c.json({ error: "User not found" }, 404);
+        return c.json(createErrorResponse(MESSAGES.AUTH.USER_NOT_FOUND), 404);
       }
-      return c.json({ error: error.message }, 500);
+      return c.json(createErrorResponse(error.message || MESSAGES.USERS.PROFILE_FAILED), 500);
     }
   };
 
@@ -31,12 +32,12 @@ export class UserController {
       const { id } = c.req.param();
       const data = c.get("validatedData");
       const user = await this.userService.updateUser(id, data);
-      return c.json(user);
+      return c.json(createSuccessResponse(user, MESSAGES.USERS.UPDATE_PROFILE_SUCCESS));
     } catch (error: any) {
       if (error.message === "User not found") {
-        return c.json({ error: "User not found" }, 404);
+        return c.json(createErrorResponse(MESSAGES.AUTH.USER_NOT_FOUND), 404);
       }
-      return c.json({ error: error.message }, 400);
+      return c.json(createErrorResponse(error.message || MESSAGES.USERS.UPDATE_PROFILE_FAILED), 400);
     }
   };
 
@@ -44,12 +45,12 @@ export class UserController {
     try {
       const { id } = c.req.param();
       const user = await this.userService.deleteUser(id);
-      return c.json({ message: "User deleted successfully", user });
+      return c.json(createSuccessResponse(user, "Người dùng đã được xóa thành công"));
     } catch (error: any) {
       if (error.message === "User not found") {
-        return c.json({ error: "User not found" }, 404);
+        return c.json(createErrorResponse(MESSAGES.AUTH.USER_NOT_FOUND), 404);
       }
-      return c.json({ error: error.message }, 500);
+      return c.json(createErrorResponse(error.message || "Không thể xóa người dùng"), 500);
     }
   };
 
@@ -63,13 +64,16 @@ export class UserController {
         currentPassword,
         newPassword
       );
-      return c.json({ message: "Password changed successfully" });
+      return c.json({
+        success: true,
+        message: MESSAGES.USERS.CHANGE_PASSWORD_SUCCESS
+      });
     } catch (error: any) {
       if (error.message === "Current password is incorrect") {
-        return c.json({ error: "Current password is incorrect" }, 400);
+        return c.json(createErrorResponse(MESSAGES.USERS.CURRENT_PASSWORD_INCORRECT), 400);
       }
       return c.json(
-        { error: error.message || "Failed to change password" },
+        createErrorResponse(error.message || MESSAGES.USERS.CHANGE_PASSWORD_FAILED),
         400
       );
     }
@@ -78,9 +82,9 @@ export class UserController {
   getProfile = async (c: Context) => {
     try {
       const user = c.get("user");
-      return c.json(user.toJSON());
+      return c.json(createSuccessResponse(user.toJSON(), MESSAGES.USERS.PROFILE_SUCCESS));
     } catch (error: any) {
-      return c.json({ error: error?.message || "Failed to get profile" }, 400);
+      return c.json(createErrorResponse(error?.message || MESSAGES.USERS.PROFILE_FAILED), 400);
     }
   };
 }

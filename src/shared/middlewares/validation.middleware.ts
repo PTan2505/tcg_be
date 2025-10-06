@@ -1,5 +1,6 @@
 import { Context, Next } from "hono";
 import { ZodError, ZodSchema } from "zod";
+import { MESSAGES, translateZodMessage } from "../constants/messages";
 
 export const validateRequest = (schema: ZodSchema) => {
   return async (c: Context, next: Next) => {
@@ -12,13 +13,14 @@ export const validateRequest = (schema: ZodSchema) => {
       await next();
     } catch (error) {
       if (error instanceof ZodError) {
+        const firstIssue = error.issues[0];
         return c.json(
           {
             success: false,
             error: {
               name: "ValidationError",
-              field: error.issues[0].path.join("."),
-              message: error.issues[0].message,
+              field: firstIssue.path.join(".") || "general",
+              message: translateZodMessage(firstIssue.message),
             },
           },
           400
@@ -30,7 +32,7 @@ export const validateRequest = (schema: ZodSchema) => {
           error: {
             name: "ValidationError",
             field: "general",
-            message: error instanceof Error ? error.message : "Unknown error",
+            message: error instanceof Error ? error.message : MESSAGES.ERRORS.UNKNOWN_ERROR,
           },
         },
         400

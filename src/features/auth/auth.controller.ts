@@ -1,4 +1,5 @@
 import { Context } from "hono";
+import { MESSAGES, createErrorResponse, createSuccessResponse } from "../../shared/constants/messages";
 import { IAuthService } from "./auth.service";
 
 export class AuthController {
@@ -13,17 +14,13 @@ export class AuthController {
       return c.json(
         {
           success: true,
-          message:
-            "Đăng ký thành công. Vui lòng kiểm tra email để lấy mã OTP xác thực tài khoản.",
+          message: MESSAGES.AUTH.REGISTER_SUCCESS,
           user: user.toJSON(),
         },
         201
       );
     } catch (error: any) {
-      return c.json({ 
-        success: false, 
-        error: error?.message || "Registration failed" 
-      }, 400);
+      return c.json(createErrorResponse(error?.message || MESSAGES.AUTH.REGISTER_FAILED), 400);
     }
   };
 
@@ -31,15 +28,9 @@ export class AuthController {
     try {
       const data = c.get("validatedData");
       const tokens = await this.authService.login(data);
-      return c.json({
-        success: true,
-        data: tokens
-      });
+      return c.json(createSuccessResponse(tokens));
     } catch (error: any) {
-      return c.json({ 
-        success: false, 
-        error: error?.message || "Login failed" 
-      }, 400);
+      return c.json(createErrorResponse(error?.message || MESSAGES.AUTH.LOGIN_FAILED), 400);
     }
   };
 
@@ -49,14 +40,11 @@ export class AuthController {
       await this.authService.verifyEmailWithOTP(email, otp);
       return c.json({ 
         success: true,
-        message: "Xác thực email thành công" 
+        message: MESSAGES.AUTH.EMAIL_VERIFICATION_SUCCESS 
       });
     } catch (error: any) {
       return c.json(
-        { 
-          success: false,
-          error: error?.message || "Xác thực email thất bại" 
-        },
+        createErrorResponse(error?.message || MESSAGES.AUTH.EMAIL_VERIFICATION_FAILED),
         400
       );
     }
@@ -68,14 +56,11 @@ export class AuthController {
       await this.authService.resendEmailVerificationOTP(email);
       return c.json({ 
         success: true,
-        message: "Mã OTP mới đã được gửi đến email của bạn" 
+        message: MESSAGES.AUTH.OTP_RESENT 
       });
     } catch (error: any) {
       return c.json(
-        { 
-          success: false,
-          error: error?.message || "Không thể gửi lại mã OTP" 
-        },
+        createErrorResponse(error?.message || MESSAGES.AUTH.OTP_RESEND_FAILED),
         400
       );
     }
@@ -87,13 +72,10 @@ export class AuthController {
       await this.authService.forgotPassword(email);
       return c.json({
         success: true,
-        message: "Nếu email tồn tại, mã OTP đã được gửi đến hộp thư của bạn",
+        message: MESSAGES.AUTH.FORGOT_PASSWORD_SUCCESS,
       });
     } catch (error: any) {
-      return c.json({ 
-        success: false, 
-        error: "Không thể xử lý yêu cầu" 
-      }, 400);
+      return c.json(createErrorResponse(MESSAGES.AUTH.FORGOT_PASSWORD_FAILED), 400);
     }
   };
 
@@ -103,14 +85,11 @@ export class AuthController {
       await this.authService.resetPasswordWithOTP(email, otp, newPassword);
       return c.json({ 
         success: true,
-        message: "Đặt lại mật khẩu thành công" 
+        message: MESSAGES.AUTH.RESET_PASSWORD_SUCCESS 
       });
     } catch (error: any) {
       return c.json(
-        {
-          success: false,
-          error: error?.message || "Đặt lại mật khẩu thất bại",
-        },
+        createErrorResponse(error?.message || MESSAGES.AUTH.RESET_PASSWORD_FAILED),
         400
       );
     }
@@ -123,9 +102,7 @@ export class AuthController {
       return c.json(tokens);
     } catch (error: any) {
       return c.json(
-        {
-          error: error?.message || "Token refresh failed",
-        },
+        createErrorResponse(error?.message || MESSAGES.AUTH.TOKEN_REFRESH_FAILED),
         401
       );
     }
