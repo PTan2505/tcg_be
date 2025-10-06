@@ -581,54 +581,147 @@ export class EnhancedOCRService {
    * IMPROVED: Yu-Gi-Oh name extraction with multiple strategies
    */
   private findYugiohNameImproved(lines: string[], boundingBoxes: any[], fullText: string): string {
-    // Strategy 1: Look for common Yu-Gi-Oh card names in full text
-    const commonYugiohNames = [
-      'Dark Magician',
-      'Blue-Eyes White Dragon',
-      'Red-Eyes Black Dragon',
-      'Dark Magician Girl',
-      'Elemental Hero',
-      'Kuriboh'
+    logger.info(`🎯 YugiOh name extraction from: "${fullText.substring(0, 100)}..."`);
+    
+    // Strategy 1: Look for full card names using comprehensive patterns
+    const yugiohNamePatterns = [
+      // Elemental Hero variants
+      /\b(Elemental\s+H?ERO?\s+[A-Za-z\s]+?)(?=\s+(?:ATK|DEF|Level|Rank|\d+\/\d+|LV\d|\[|LIGHT|DARK|EARTH|WATER|FIRE|WIND))/gi,
+      
+      // Blue-Eyes variants  
+      /\b(Blue-?Eyes\s+[A-Za-z\s]+?)(?=\s+(?:ATK|DEF|Level|Rank|\d+\/\d+|LV\d|\[|LIGHT|DARK|EARTH|WATER|FIRE|WIND))/gi,
+      
+      // Dark Magician variants
+      /\b(Dark\s+Magician[A-Za-z\s]*?)(?=\s+(?:ATK|DEF|Level|Rank|\d+\/\d+|LV\d|\[|LIGHT|DARK|EARTH|WATER|FIRE|WIND))/gi,
+      
+      // Red-Eyes variants
+      /\b(Red-?Eyes\s+[A-Za-z\s]+?)(?=\s+(?:ATK|DEF|Level|Rank|\d+\/\d+|LV\d|\[|LIGHT|DARK|EARTH|WATER|FIRE|WIND))/gi,
+      
+      // Generic pattern: Any text before attributes/stats
+      /^([A-Z][A-Za-z\s\-\',\.]+?)(?=\s+(?:ATK|DEF|Level|Rank|\d+\/\d+|LV\d|\[|LIGHT|DARK|EARTH|WATER|FIRE|WIND|Warrior|Spellcaster|Dragon|Machine|Beast))/gm,
+      
+      // Card name before card type
+      /^([A-Z][A-Za-z\s\-\',\.]+?)(?=\s+(?:Normal Monster|Effect Monster|Fusion Monster|Synchro Monster|Xyz Monster|Pendulum Monster|Link Monster|Spell Card|Trap Card))/gm
     ];
 
-    for (const commonName of commonYugiohNames) {
-      if (fullText.toLowerCase().includes(commonName.toLowerCase())) {
-        return commonName;
+    // Try each pattern on the full text
+    for (const pattern of yugiohNamePatterns) {
+      const matches = fullText.match(pattern);
+      if (matches) {
+        for (const match of matches) {
+          const cleanName = match.trim().replace(/\s+/g, ' ');
+          if (this.isValidYugiohNameAdvanced(cleanName)) {
+            logger.info(`🎯 Pattern match found: "${cleanName}"`);
+            return cleanName;
+          }
+        }
       }
     }
 
-    // Strategy 2: Look for card name in the top lines (simpler approach)
-    const topLines = lines.slice(0, Math.min(3, lines.length));
+    // Strategy 2: Look for common Yu-Gi-Oh card archetypes and extend them
+    const archetypeExtensions = [
+      { base: 'Elemental Hero', extended: 'Elemental HERO' },
+      { base: 'Elemental HERO', extended: 'Elemental HERO' },
+      { base: 'Blue-Eyes', extended: 'Blue-Eyes White Dragon' },
+      { base: 'Dark Magician', extended: 'Dark Magician' },
+      { base: 'Red-Eyes', extended: 'Red-Eyes Black Dragon' },
+      { base: 'Cyber Dragon', extended: 'Cyber Dragon' }
+    ];
+
+    for (const archetype of archetypeExtensions) {
+      if (fullText.toLowerCase().includes(archetype.base.toLowerCase())) {
+        // Look for extended name in surrounding text
+        const baseIndex = fullText.toLowerCase().indexOf(archetype.base.toLowerCase());
+        const surroundingText = fullText.substring(Math.max(0, baseIndex - 20), baseIndex + 50);
+        
+        // Try to find complete name
+        const extendedPattern = new RegExp(`(${archetype.base}[A-Za-z\\s]*?)(?=\\s+(?:ATK|DEF|Level|\\d+|LIGHT|DARK|EARTH|WATER|FIRE|WIND|Warrior|Spellcaster))`, 'i');
+        const extendedMatch = surroundingText.match(extendedPattern);
+        
+        if (extendedMatch && extendedMatch[1]) {
+          const cleanName = extendedMatch[1].trim().replace(/\s+/g, ' ');
+          if (this.isValidYugiohNameAdvanced(cleanName)) {
+            logger.info(`🎯 Archetype extension found: "${cleanName}"`);
+            return cleanName;
+          }
+        }
+        
+        // Fallback to base name
+        logger.info(`🎯 Archetype base found: "${archetype.extended}"`);
+        return archetype.extended;
+      }
+    }
+
+    // Strategy 3: Look for card name in the top lines (enhanced)
+    const topLines = lines.slice(0, Math.min(4, lines.length));
     
     for (const line of topLines) {
       const cleanLine = line.trim();
-      if (this.isValidYugiohNameSimple(cleanLine)) {
+      if (this.isValidYugiohNameAdvanced(cleanLine)) {
+        logger.info(`🎯 Top line found: "${cleanLine}"`);
         return cleanLine;
       }
     }
 
-    // Strategy 3: Find the longest reasonable text that could be a name
+    // Strategy 4: Find the longest reasonable text that could be a name
     let bestCandidate = '';
     for (const line of lines) {
       const cleanLine = line.trim();
-      if (this.isValidYugiohNameSimple(cleanLine) && cleanLine.length > bestCandidate.length) {
+      if (this.isValidYugiohNameAdvanced(cleanLine) && cleanLine.length > bestCandidate.length) {
         bestCandidate = cleanLine;
       }
     }
 
-    if (bestCandidate) return bestCandidate;
+    if (bestCandidate) {
+      logger.info(`🎯 Best candidate found: "${bestCandidate}"`);
+      return bestCandidate;
+    }
 
-    // Strategy 4: Fallback to first reasonable line
+    // Strategy 5: Fallback to first reasonable line
     for (const line of lines) {
       const cleanLine = line.trim();
       if (cleanLine.length > 3 && 
           !cleanLine.match(/^\d+$/) && 
           cleanLine.match(/[A-Za-z]/)) {
+        logger.info(`🎯 Fallback found: "${cleanLine}"`);
         return cleanLine;
       }
     }
 
+    logger.warn(`❌ No YugiOh name found`);
     return '';
+  }
+
+  /**
+   * Advanced validation for Yu-Gi-Oh card names
+   */
+  private isValidYugiohNameAdvanced(line: string): boolean {
+    if (!line || line.length < 3 || line.length > 80) return false;
+    
+    // Exclude obvious non-names (more comprehensive)
+    if (line.match(/ATK|DEF|Level|Rank|\d+\/\d+|^\d+$|HP\s*\d+|LIGHT|DARK|EARTH|WATER|FIRE|WIND|Warrior|Spellcaster|Dragon|Machine|Beast|Fiend|Zombie|Plant|Insect|Thunder|Aqua|Psychic|Cyberse|Normal Monster|Effect Monster|Fusion Monster|Synchro Monster|Xyz Monster|Pendulum Monster|Link Monster|Spell Card|Trap Card/i)) {
+      return false;
+    }
+
+    // Exclude purely numeric or symbol text
+    if (line.match(/^[\d\s\-\[\]\/\(\)]+$/)) {
+      return false;
+    }
+
+    // Must contain at least some letters and reasonable character set
+    if (!/[A-Za-z]/.test(line)) return false;
+    
+    // Must not be purely uppercase abbreviations (like "CHT")
+    if (line.match(/^[A-Z]{2,5}$/) && !line.match(/^[A-Z][a-z]|[a-z][A-Z]/)) {
+      return false;
+    }
+
+    // Good indicators of card names
+    if (line.match(/\b(Elemental|Hero|Dragon|Magician|Eyes|Dark|Blue|Red|Cyber|Neo|Crystal|Rainbow|Ultimate|Ancient|Legendary|Divine|Sacred)\b/i)) {
+      return true;
+    }
+    
+    return true;
   }
 
   /**

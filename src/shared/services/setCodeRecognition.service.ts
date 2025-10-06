@@ -390,22 +390,29 @@ export class SetCodeRecognitionService {
     // Generate all possible OCR variations of the input text
     const textVariations = this.generateOCRVariations(text);
 
-    // More conservative patterns for Yu-Gi-Oh codes
+    // Enhanced patterns for Yu-Gi-Oh codes
     const ygoPatterns = [
+      // Collector's Tins: CT03-EN001, CTO3-ENOO1 (handle O/0 confusion more aggressively)
+      /\b(CT[O0]?\d{1,2})-[A-Z]*[O0]*\d+\b/gi,
+      
+      // More flexible patterns for CT series
+      /\b(CT[O0]?\d{1,2})-[ENG]*[O0N]*\d+\b/gi,
+      
       // Standard 3-letter codes: LOB-005, MRD-143
-      /\b([A-Z]{3})-\d{3}\b/gi,
+      /\b([A-Z]{3})-[O0]*\d{3}\b/gi,
       
-      // Known classic sets (exact matches) - UPDATED with BPT and more sets
-      /\b(LOB|MRD|SDK|PSV|MRL|SRL|PGD|IOC|AST|SOD|RDS|FET|TLM|CRV|EEN|SOI|EOJ|POTD|CDIP|STON|FLOD|GFTP|DUDE|MP\d{2}|MAGO|KICO|BPT|DBT|CT\d|TP\d|HL\d|CP\d|WC\d|SD\d|DP\d|EP\d)-?\d{3}\b/gi,
+      // 4-letter codes: BEWD-EN001 style, RATE-SE001
+      /\b([A-Z]{4})-[A-Z]{2}[O0]*\d{3}\b/gi,
       
-      // 4-letter codes: BEWD-EN001 style
-      /\b([A-Z]{4})-[A-Z]{2}\d{3}\b/gi,
+      // Known classic sets with numbers: CT03, CT04, CT05, MP17, MP18, etc.
+      /\b(LOB|MRD|SDK|PSV|MRL|SRL|PGD|IOC|AST|SOD|RDS|FET|TLM|CRV|EEN|SOI|EOJ|POTD|CDIP|STON|FLOD|GFTP|DUDE|MP\d{2}|MAGO|KICO|BPT|DBT|CT[O0]?\d{1,2}|TP\d|HL\d|CP\d|WC\d|SD\d|DP\d|EP\d|OP\d{2}|RA[O0]\d|TN\d{2})-?[A-Z]*[O0]*\d{1,3}\b/gi,
       
-      // Anniversary sets: 20TH-JPC55
+      // Anniversary sets: 20TH-JPC55, 25YC-xxx
       /\b(\d{2}TH-[A-Z]{3}\d{2,3})\b/gi,
+      /\b(\d{2}YC-[A-Z]*\d{3})\b/gi,
       
-      // Set codes without card numbers (must be known abbreviations)
-      /\b(LOB|MRD|SDK|PSV|MRL|SRL|PGD|IOC|AST|SOD|RDS|FET|TLM|CRV|EEN|SOI|EOJ|POTD|CDIP|STON|FLOD|GFTP|DUDE|MAGO|KICO|BPT)(?=\s|$)/gi
+      // Set codes without card numbers (include Collector's Tins)
+      /\b(LOB|MRD|SDK|PSV|MRL|SRL|PGD|IOC|AST|SOD|RDS|FET|TLM|CRV|EEN|SOI|EOJ|POTD|CDIP|STON|FLOD|GFTP|DUDE|MAGO|KICO|BPT|CT[O0]?\d{1,2})(?=\s|$|-)/gi
     ];
 
     // Try each variation of the text
@@ -416,8 +423,15 @@ export class SetCodeRecognitionService {
           for (const match of matches) {
             let setCode = match.split('-')[0].trim().toUpperCase();
             
+            // Fix common OCR errors in Yu-Gi-Oh set codes (enhanced)
+            setCode = setCode
+              .replace(/CTO(\d)/g, 'CT0$1')  // CTO3 → CT03
+              .replace(/CT([O0])(\d)/g, 'CT0$2')  // CTO3 → CT03, CT03 → CT03  
+              .replace(/([A-Z]{2})[O0](\d)/g, '$10$2')  // Generic XO1 → X01
+              .replace(/^[O0]([A-Z])/g, '0$1');  // Leading O → 0
+            
             // For anniversary codes, keep the full format
-            if (match.includes('TH-')) {
+            if (match.includes('TH-') || match.includes('YC-')) {
               setCode = match.toUpperCase();
             }
             

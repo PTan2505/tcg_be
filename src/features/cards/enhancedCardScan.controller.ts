@@ -134,8 +134,7 @@ export class EnhancedCardScanController {
           logger.info(`🔍 Set-based search found ${searchResults.matches.length} matches in ${topSetCode.setCode}`);
           
           // Fallback if no good results in the specific set
-          if (searchResults.matches.length === 0 || 
-              (searchResults.matches.length > 0 && searchResults.matches[0].confidence < 50)) {
+          if (searchResults.matches.length === 0 ) {
             logger.info('⚠️ Set-based search yielded poor results, expanding to full search...');
             
             searchResults = await smartCardSearch.findBestMatches(
