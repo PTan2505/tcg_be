@@ -3,6 +3,7 @@
   "scripts": {
     "dev": "bun run server.js",
     "dev-hot": "bun run --hot src/index.ts",
+    "test": "node tests/api/test-api-comprehensive.js",
     "import-card-sets": "bun run scripts/importCardSets.ts",
     "import-card-data": "bun run scripts/importCards.ts"
   },

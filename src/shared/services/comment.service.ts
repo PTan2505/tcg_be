@@ -199,11 +199,10 @@ export class CommentService {
     return true;
   }
 
-  async toggleReaction(commentId: Types.ObjectId, userId: Types.ObjectId, type: 'like' | 'dislike'): Promise<{
+  async toggleReaction(commentId: Types.ObjectId, userId: Types.ObjectId, type: 'like'): Promise<{
     success: boolean;
-    action: 'added' | 'removed' | 'changed';
+    action: 'added' | 'removed';
     likesCount: number;
-    dislikesCount: number;
   }> {
     const comment = await CommentModel.findById(commentId);
     if (!comment) throw new Error('Comment not found');
@@ -213,14 +212,14 @@ export class CommentService {
       user: userId
     });
 
-    let action: 'added' | 'removed' | 'changed';
+    let action: 'added' | 'removed';
     
     if (!existingReaction) {
-      // Add new reaction
+      // Add new like reaction
       await CommentReactionModel.create({
         comment: commentId,
         user: userId,
-        type
+        type: 'like'
       });
       action = 'added';
 
@@ -228,46 +227,28 @@ export class CommentService {
       await this.notificationService.createNotification({
         recipient: comment.author,
         sender: userId,
-        type: type === 'like' ? 'comment_like' : 'comment_dislike',
+        type: 'comment_like',
         post: comment.post,
         comment: commentId,
       });
-    } else if (existingReaction.type === type) {
-      // Remove existing reaction
+    } else {
+      // Remove existing like reaction (unlike)
       await CommentReactionModel.deleteOne({ _id: existingReaction._id });
       action = 'removed';
-    } else {
-      // Change reaction type
-      existingReaction.type = type;
-      await existingReaction.save();
-      action = 'changed';
-
-      // Create notification for new reaction type
-      await this.notificationService.createNotification({
-        recipient: comment.author,
-        sender: userId,
-        type: type === 'like' ? 'comment_like' : 'comment_dislike',
-        post: comment.post,
-        comment: commentId,
-      });
     }
 
-    // Update counts
-    const [likesCount, dislikesCount] = await Promise.all([
-      CommentReactionModel.countDocuments({ comment: commentId, type: 'like' }),
-      CommentReactionModel.countDocuments({ comment: commentId, type: 'dislike' })
-    ]);
+    // Update likes count only
+    const likesCount = await CommentReactionModel.countDocuments({ comment: commentId, type: 'like' });
 
     await CommentModel.updateOne(
       { _id: commentId },
-      { likesCount, dislikesCount }
+      { likesCount }
     );
 
     return {
       success: true,
       action,
-      likesCount,
-      dislikesCount
+      likesCount
     };
   }
 

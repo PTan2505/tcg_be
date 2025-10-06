@@ -161,11 +161,10 @@ export class PostService {
     return true;
   }
 
-  async toggleReaction(postId: Types.ObjectId, userId: Types.ObjectId, type: 'like' | 'dislike'): Promise<{
+  async toggleReaction(postId: Types.ObjectId, userId: Types.ObjectId, type: 'like'): Promise<{
     success: boolean;
-    action: 'added' | 'removed' | 'changed';
+    action: 'added' | 'removed';
     likesCount: number;
-    dislikesCount: number;
   }> {
     const post = await PostModel.findById(postId);
     if (!post) throw new Error('Post not found');
@@ -175,14 +174,14 @@ export class PostService {
       user: userId
     });
 
-    let action: 'added' | 'removed' | 'changed';
+    let action: 'added' | 'removed';
     
     if (!existingReaction) {
-      // Add new reaction
+      // Add new like reaction
       await PostReactionModel.create({
         post: postId,
         user: userId,
-        type
+        type: 'like'
       });
       action = 'added';
 
@@ -190,44 +189,27 @@ export class PostService {
       await this.notificationService.createNotification({
         recipient: post.author,
         sender: userId,
-        type: type === 'like' ? 'post_like' : 'post_dislike',
+        type: 'post_like',
         post: postId,
       });
-    } else if (existingReaction.type === type) {
-      // Remove existing reaction
+    } else {
+      // Remove existing like reaction (unlike)
       await PostReactionModel.deleteOne({ _id: existingReaction._id });
       action = 'removed';
-    } else {
-      // Change reaction type
-      existingReaction.type = type;
-      await existingReaction.save();
-      action = 'changed';
-
-      // Create notification for new reaction type
-      await this.notificationService.createNotification({
-        recipient: post.author,
-        sender: userId,
-        type: type === 'like' ? 'post_like' : 'post_dislike',
-        post: postId,
-      });
     }
 
-    // Update counts
-    const [likesCount, dislikesCount] = await Promise.all([
-      PostReactionModel.countDocuments({ post: postId, type: 'like' }),
-      PostReactionModel.countDocuments({ post: postId, type: 'dislike' })
-    ]);
+    // Update likes count only
+    const likesCount = await PostReactionModel.countDocuments({ post: postId, type: 'like' });
 
     await PostModel.updateOne(
       { _id: postId },
-      { likesCount, dislikesCount }
+      { likesCount }
     );
 
     return {
       success: true,
       action,
-      likesCount,
-      dislikesCount
+      likesCount
     };
   }
 

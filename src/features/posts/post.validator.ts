@@ -37,7 +37,7 @@ export const updateCommentSchema = z.object({
 });
 
 export const reactionSchema = z.object({
-  type: z.enum(['like', 'dislike'])
+  type: z.enum(['like'])
 });
 
 export const paginationSchema = z.object({
