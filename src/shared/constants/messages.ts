@@ -135,6 +135,8 @@ export const MESSAGES = {
     DELETE_FAILED: "Không thể xóa người dùng",
     CHANGE_PASSWORD_SUCCESS: "Đổi mật khẩu thành công",
     CHANGE_PASSWORD_FAILED: "Không thể đổi mật khẩu",
+    CHANGE_AVATAR_SUCCESS: "Đổi ảnh đại diện thành công",
+    CHANGE_AVATAR_FAILED: "Không thể đổi ảnh đại diện",
     PASSWORD_MISMATCH: "Mật khẩu xác nhận không khớp",
     CURRENT_PASSWORD_INCORRECT: "Mật khẩu hiện tại không đúng"
   },

@@ -17,9 +17,9 @@ export class S3Service {
     this.bucketName = process.env.AWS_S3_BUCKET_NAME!;
   }
 
-  async uploadFile(file: Buffer, fileName: string, mimeType: string): Promise<string> {
-    const key = `posts/${uuidv4()}-${fileName}`;
-    
+  async uploadFile(folder:string,file: Buffer, fileName: string, mimeType: string): Promise<string> {
+    const key = `${folder}/${uuidv4()}-${fileName}`;
+
     const command = new PutObjectCommand({
       Bucket: this.bucketName,
       Key: key,

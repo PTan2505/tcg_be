@@ -116,7 +116,7 @@ export class PostController {
             const buffer = Buffer.from(await file.arrayBuffer());
             
             // Upload to S3
-            const imageUrl = await this.s3Service.uploadFile(buffer, file.name, file.type);
+            const imageUrl = await this.s3Service.uploadFile('posts',buffer, file.name, file.type);
             imageUrls.push(imageUrl);
           } catch (uploadError) {
             console.error(`Error uploading file ${file.name}:`, uploadError);

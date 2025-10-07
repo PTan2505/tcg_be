@@ -793,7 +793,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
       },
     },
     "/users/change-password": {
-      post: {
+      put: {
         tags: ["Users"],
         summary: "Change authenticated user's password",
         security: [{ bearerAuth: [] }],
@@ -841,6 +841,69 @@ export const swaggerDoc: OpenAPIV3.Document = {
           },
           "400": {
             description: "Invalid input or current password incorrect",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+          "404": {
+            description: "User not found",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/users/change-avatar": {
+      put: {
+        tags: ["Users"],
+        summary: "Change authenticated user's avatar",
+        security: [{ bearerAuth: [] }],
+        requestBody: {
+          required: true,
+          content: {
+            "multipart/form-data": {
+              schema: {
+                type: "object",
+                required: ["image"],
+                properties: {
+                  image: {
+                    type: "string",
+                    format: "binary",
+                    description: "Image file to upload",
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "200": {
+            description: "Avatar changed successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    message: {
+                      type: "string",
+                      example: "Avatar changed successfully",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "400": {
+            description: "Invalid input",
             content: {
               "application/json": {
                 schema: {
@@ -2639,12 +2702,12 @@ export const swaggerDoc: OpenAPIV3.Document = {
     // CARD SCANNING - Enhanced Pipeline & History Only
     // =============================================================================
 
-
     "/cards/scan/history": {
       get: {
         tags: ["Card Scanning"],
         summary: "Get user's scanning history",
-        description: "Retrieve the user's card scanning history with pagination",
+        description:
+          "Retrieve the user's card scanning history with pagination",
         security: [{ bearerAuth: [] }],
         parameters: [
           {
@@ -2696,7 +2759,10 @@ export const swaggerDoc: OpenAPIV3.Document = {
                                   setName: { type: "string" },
                                 },
                               },
-                              scannedAt: { type: "string", format: "date-time" },
+                              scannedAt: {
+                                type: "string",
+                                format: "date-time",
+                              },
                               processingTime: { type: "number" },
                             },
                           },
@@ -2728,8 +2794,10 @@ export const swaggerDoc: OpenAPIV3.Document = {
     "/cards/scan/enhanced": {
       post: {
         tags: ["Card Scanning"],
-        summary: "Enhanced 5-step card scanning pipeline with Set Code Recognition",
-        description: "Advanced card scanning using 5-step AI pipeline: 1) Game Type Classification, 2) Enhanced OCR, 2.5) Set Code Recognition, 3) Smart Search, 4) Visual Matching, 5) Intelligent Results. This is the primary card scanning method.",
+        summary:
+          "Enhanced 5-step card scanning pipeline with Set Code Recognition",
+        description:
+          "Advanced card scanning using 5-step AI pipeline: 1) Game Type Classification, 2) Enhanced OCR, 2.5) Set Code Recognition, 3) Smart Search, 4) Visual Matching, 5) Intelligent Results. This is the primary card scanning method.",
         security: [{ bearerAuth: [] }],
         requestBody: {
           required: true,
@@ -2747,17 +2815,20 @@ export const swaggerDoc: OpenAPIV3.Document = {
                   gameType: {
                     type: "string",
                     enum: ["pokemon", "yugioh", "onepiece"],
-                    description: "Game type (optional - will auto-detect if not provided)",
+                    description:
+                      "Game type (optional - will auto-detect if not provided)",
                   },
                   location: {
                     type: "string",
                     description: "JSON string with user location data",
-                    example: '{"latitude": 37.7749, "longitude": -122.4194, "city": "San Francisco"}',
+                    example:
+                      '{"latitude": 37.7749, "longitude": -122.4194, "city": "San Francisco"}',
                   },
                   userPreferences: {
                     type: "string",
                     description: "JSON string with user scanning preferences",
-                    example: '{"preferredLanguage": "en", "confidenceThreshold": 0.8}',
+                    example:
+                      '{"preferredLanguage": "en", "confidenceThreshold": 0.8}',
                   },
                 },
               },
@@ -2766,7 +2837,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
         responses: {
           200: {
-            description: "Card scanned successfully using 5-step pipeline with set code recognition",
+            description:
+              "Card scanned successfully using 5-step pipeline with set code recognition",
             content: {
               "application/json": {
                 schema: {
@@ -2778,50 +2850,71 @@ export const swaggerDoc: OpenAPIV3.Document = {
                       properties: {
                         pipeline: {
                           type: "object",
-                          description: "Detailed information about each pipeline step",
+                          description:
+                            "Detailed information about each pipeline step",
                           properties: {
                             step1_gameType: {
                               type: "object",
                               properties: {
                                 detected: { type: "string", example: "yugioh" },
                                 confidence: { type: "number", example: 92 },
-                                provided: { type: "boolean", example: false }
-                              }
+                                provided: { type: "boolean", example: false },
+                              },
                             },
                             step2_ocr: {
                               type: "object",
                               properties: {
-                                cardName: { type: "string", example: "Dark Magician" },
-                                primaryStats: { 
+                                cardName: {
+                                  type: "string",
+                                  example: "Dark Magician",
+                                },
+                                primaryStats: {
                                   type: "object",
-                                  example: { "ATK": "2500", "DEF": "2100", "Level": "7" }
+                                  example: {
+                                    ATK: "2500",
+                                    DEF: "2100",
+                                    Level: "7",
+                                  },
                                 },
                                 confidence: { type: "number", example: 85 },
-                                extractedWords: { type: "number", example: 15 }
-                              }
+                                extractedWords: { type: "number", example: 15 },
+                              },
                             },
                             step2_5_setCode: {
                               type: "object",
                               properties: {
-                                detectedSetCodes: { 
-                                  type: "array", 
+                                detectedSetCodes: {
+                                  type: "array",
                                   items: { type: "string" },
-                                  example: ["YMPI", "YMPP", "YMII"]
+                                  example: ["YMPI", "YMPP", "YMII"],
                                 },
                                 setCodeCount: { type: "number", example: 3 },
-                                hasSetCodeFiltering: { type: "boolean", example: true },
-                                databaseMatches: { type: "number", example: 2 }
-                              }
+                                hasSetCodeFiltering: {
+                                  type: "boolean",
+                                  example: true,
+                                },
+                                databaseMatches: { type: "number", example: 2 },
+                              },
                             },
                             step3_search: {
                               type: "object",
                               properties: {
-                                strategy: { type: "string", example: "set_specific_exact_name_match_with_set_priority" },
+                                strategy: {
+                                  type: "string",
+                                  example:
+                                    "set_specific_exact_name_match_with_set_priority",
+                                },
                                 candidatesFound: { type: "number", example: 3 },
-                                candidatesAfterSetCodeFiltering: { type: "number", example: 3 },
-                                totalCardsSearched: { type: "number", example: 13 },
-                                searchTime: { type: "number", example: 4 }
-                              }
+                                candidatesAfterSetCodeFiltering: {
+                                  type: "number",
+                                  example: 3,
+                                },
+                                totalCardsSearched: {
+                                  type: "number",
+                                  example: 13,
+                                },
+                                searchTime: { type: "number", example: 4 },
+                              },
                             },
                             step4_visual: {
                               type: "object",
@@ -2833,26 +2926,39 @@ export const swaggerDoc: OpenAPIV3.Document = {
                                   properties: {
                                     cardId: { type: "string" },
                                     imageUrl: { type: "string" },
-                                    visualSimilarity: { type: "number", example: 0.93 },
-                                    matchType: { type: "string", example: "exact" },
-                                    textConfidence: { type: "number", example: 95 },
-                                    combinedScore: { type: "number", example: 0.938 }
-                                  }
-                                }
-                              }
+                                    visualSimilarity: {
+                                      type: "number",
+                                      example: 0.93,
+                                    },
+                                    matchType: {
+                                      type: "string",
+                                      example: "exact",
+                                    },
+                                    textConfidence: {
+                                      type: "number",
+                                      example: 95,
+                                    },
+                                    combinedScore: {
+                                      type: "number",
+                                      example: 0.938,
+                                    },
+                                  },
+                                },
+                              },
                             },
                             step5_results: {
                               type: "object",
                               properties: {
                                 topMatch: {
                                   type: "object",
-                                  description: "Best matching card with enhanced scoring"
+                                  description:
+                                    "Best matching card with enhanced scoring",
                                 },
                                 allCandidates: { type: "number", example: 1 },
-                                withVisualData: { type: "number", example: 1 }
-                              }
-                            }
-                          }
+                                withVisualData: { type: "number", example: 1 },
+                              },
+                            },
+                          },
                         },
                         candidates: {
                           type: "array",
@@ -2860,34 +2966,60 @@ export const swaggerDoc: OpenAPIV3.Document = {
                           items: {
                             type: "object",
                             properties: {
-                              cardId: { type: "string", example: "60a1b2c3d4e5f6789012345" },
-                              name: { type: "string", example: "Dark Magician" },
-                              setName: { type: "string", example: "Legend of Blue Eyes White Dragon" },
+                              cardId: {
+                                type: "string",
+                                example: "60a1b2c3d4e5f6789012345",
+                              },
+                              name: {
+                                type: "string",
+                                example: "Dark Magician",
+                              },
+                              setName: {
+                                type: "string",
+                                example: "Legend of Blue Eyes White Dragon",
+                              },
                               rarity: { type: "string", example: "Ultra Rare" },
                               confidence: { type: "string", example: "92%" },
-                              matchReason: { type: "string", example: "Fuzzy name match (92% similarity)" },
-                              matchedFields: { 
-                                type: "array", 
-                                items: { type: "string" },
-                                example: ["name", "stats"]
+                              matchReason: {
+                                type: "string",
+                                example: "Fuzzy name match (92% similarity)",
                               },
-                              imageUrl: { type: "string" }
-                            }
-                          }
+                              matchedFields: {
+                                type: "array",
+                                items: { type: "string" },
+                                example: ["name", "stats"],
+                              },
+                              imageUrl: { type: "string" },
+                            },
+                          },
                         },
                         topMatch: {
                           type: "object",
                           description: "The highest confidence match",
-                          nullable: true
+                          nullable: true,
                         },
-                        scanTime: { type: "number", example: 1850, description: "Total processing time in milliseconds" },
-                        method: { type: "string", example: "enhanced_5_step_pipeline_with_set_codes" },
+                        scanTime: {
+                          type: "number",
+                          example: 1850,
+                          description: "Total processing time in milliseconds",
+                        },
+                        method: {
+                          type: "string",
+                          example: "enhanced_5_step_pipeline_with_set_codes",
+                        },
                         gameType: { type: "string", example: "yugioh" },
                         confidence: { type: "string", example: "92%" },
-                        requiresSetSelection: { type: "boolean", example: false }
+                        requiresSetSelection: {
+                          type: "boolean",
+                          example: false,
+                        },
                       },
                     },
-                    message: { type: "string", example: "Card identified successfully using 5-step pipeline with set code recognition" },
+                    message: {
+                      type: "string",
+                      example:
+                        "Card identified successfully using 5-step pipeline with set code recognition",
+                    },
                   },
                 },
               },
@@ -2901,8 +3033,14 @@ export const swaggerDoc: OpenAPIV3.Document = {
                   type: "object",
                   properties: {
                     success: { type: "boolean", example: false },
-                    error: { type: "string", example: "Image file is required" },
-                    method: { type: "string", example: "enhanced_5_step_pipeline_with_set_codes" }
+                    error: {
+                      type: "string",
+                      example: "Image file is required",
+                    },
+                    method: {
+                      type: "string",
+                      example: "enhanced_5_step_pipeline_with_set_codes",
+                    },
                   },
                 },
               },
@@ -2924,7 +3062,10 @@ export const swaggerDoc: OpenAPIV3.Document = {
                   type: "object",
                   properties: {
                     success: { type: "boolean", example: false },
-                    error: { type: "string", example: "Rate limit exceeded. Try again later." },
+                    error: {
+                      type: "string",
+                      example: "Rate limit exceeded. Try again later.",
+                    },
                   },
                 },
               },
@@ -2939,8 +3080,10 @@ export const swaggerDoc: OpenAPIV3.Document = {
     "/cards/public/{type}": {
       get: {
         tags: ["Cards - Public"],
-        summary: "Get cards by game type with game-specific filtering (public endpoint - no auth required)",
-        description: "Search and filter cards with fuzzy name search and game-specific attributes. Parameters are organized by game type for easier frontend integration.",
+        summary:
+          "Get cards by game type with game-specific filtering (public endpoint - no auth required)",
+        description:
+          "Search and filter cards with fuzzy name search and game-specific attributes. Parameters are organized by game type for easier frontend integration.",
         parameters: [
           {
             in: "path",
@@ -2950,7 +3093,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "string",
               enum: ["pokemon", "yugioh", "onepiece"],
             },
-            description: "Game type determines which game-specific parameters are applicable",
+            description:
+              "Game type determines which game-specific parameters are applicable",
           },
           // ===== COMMON PARAMETERS (All Game Types) =====
           {
@@ -2980,7 +3124,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "🔍 [ALL GAMES] Fuzzy search for card names. Example: 'zoro' finds 'Roronoa Zoro'",
+            description:
+              "🔍 [ALL GAMES] Fuzzy search for card names. Example: 'zoro' finds 'Roronoa Zoro'",
           },
           {
             in: "query",
@@ -2989,7 +3134,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "string",
               enum: ["name", "price", "number", "createdAt"],
             },
-            description: "📊 [ALL GAMES] Sort field. Use game-specific sortBy values for advanced sorting",
+            description:
+              "📊 [ALL GAMES] Sort field. Use game-specific sortBy values for advanced sorting",
           },
           {
             in: "query",
@@ -3006,7 +3152,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "💎 [ALL GAMES] Filter by card rarity (e.g., 'Common', 'Rare', 'Ultra Rare')",
+            description:
+              "💎 [ALL GAMES] Filter by card rarity (e.g., 'Common', 'Rare', 'Ultra Rare')",
           },
           {
             in: "query",
@@ -3023,7 +3170,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "number",
               minimum: 0,
             },
-            description: "💰 [ALL GAMES] Minimum price filter (TCGPlayer market price)",
+            description:
+              "💰 [ALL GAMES] Minimum price filter (TCGPlayer market price)",
           },
           {
             in: "query",
@@ -3032,7 +3180,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "number",
               minimum: 0,
             },
-            description: "💰 [ALL GAMES] Maximum price filter (TCGPlayer market price)",
+            description:
+              "💰 [ALL GAMES] Maximum price filter (TCGPlayer market price)",
           },
           {
             in: "query",
@@ -3040,7 +3189,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "📝 [ALL GAMES] Search in card description/effect text",
+            description:
+              "📝 [ALL GAMES] Search in card description/effect text",
           },
           // ===== ONE PIECE SPECIFIC PARAMETERS =====
           {
@@ -3049,7 +3199,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "🏴‍☠️ [ONE PIECE] Card type: 'Leader', 'Character', 'Event', 'Stage' | 🎮 [POKEMON] Type/Color: 'Fire', 'Water', 'Lightning', 'Grass', etc. | 🃏 [YU-GI-OH] Card type: 'Monster', 'Spell', 'Trap'",
+            description:
+              "🏴‍☠️ [ONE PIECE] Card type: 'Leader', 'Character', 'Event', 'Stage' | 🎮 [POKEMON] Type/Color: 'Fire', 'Water', 'Lightning', 'Grass', etc. | 🃏 [YU-GI-OH] Card type: 'Monster', 'Spell', 'Trap'",
           },
           {
             in: "query",
@@ -3057,7 +3208,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "🏴‍☠️ [ONE PIECE ONLY] Card color: 'Red', 'Green', 'Blue', 'Purple', 'Black', 'Yellow'",
+            description:
+              "🏴‍☠️ [ONE PIECE ONLY] Card color: 'Red', 'Green', 'Blue', 'Purple', 'Black', 'Yellow'",
           },
           {
             in: "query",
@@ -3066,7 +3218,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "integer",
               minimum: 0,
             },
-            description: "🏴‍☠️ [ONE PIECE ONLY] Energy cost to play the card (0-10)",
+            description:
+              "🏴‍☠️ [ONE PIECE ONLY] Energy cost to play the card (0-10)",
           },
           {
             in: "query",
@@ -3084,7 +3237,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "integer",
               minimum: 0,
             },
-            description: "🏴‍☠️ [ONE PIECE ONLY] Leader life points (typically 4-5)",
+            description:
+              "🏴‍☠️ [ONE PIECE ONLY] Leader life points (typically 4-5)",
           },
           {
             in: "query",
@@ -3092,7 +3246,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "🏴‍☠️ [ONE PIECE] Combat attribute: 'Strike', 'Slash', 'Ranged', 'Special' | 🃏 [YU-GI-OH] Monster attribute: 'FIRE', 'WATER', 'EARTH', 'WIND', 'LIGHT', 'DARK'",
+            description:
+              "🏴‍☠️ [ONE PIECE] Combat attribute: 'Strike', 'Slash', 'Ranged', 'Special' | 🃏 [YU-GI-OH] Monster attribute: 'FIRE', 'WATER', 'EARTH', 'WIND', 'LIGHT', 'DARK'",
           },
           {
             in: "query",
@@ -3100,7 +3255,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "🏴‍☠️ [ONE PIECE] Character faction: 'Straw Hat Crew', 'Marine', 'Whitebeard Pirates', etc. | 🃏 [YU-GI-OH] Monster type: 'Warrior', 'Spellcaster', 'Dragon', etc.",
+            description:
+              "🏴‍☠️ [ONE PIECE] Character faction: 'Straw Hat Crew', 'Marine', 'Whitebeard Pirates', etc. | 🃏 [YU-GI-OH] Monster type: 'Warrior', 'Spellcaster', 'Dragon', etc.",
           },
           // ===== POKEMON SPECIFIC PARAMETERS =====
           {
@@ -3118,7 +3274,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "🎮 [POKEMON ONLY] Evolution stage: 'Basic', 'Stage 1', 'Stage 2', 'BREAK', 'GX', 'V', 'VMAX'",
+            description:
+              "🎮 [POKEMON ONLY] Evolution stage: 'Basic', 'Stage 1', 'Stage 2', 'BREAK', 'GX', 'V', 'VMAX'",
           },
           // ===== YU-GI-OH SPECIFIC PARAMETERS =====
           {
@@ -3145,7 +3302,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "🃏 [YU-GI-OH ONLY] Monster type: 'Warrior', 'Spellcaster', 'Dragon', 'Machine', etc. (same as subtype but more specific for monsters)",
+            description:
+              "🃏 [YU-GI-OH ONLY] Monster type: 'Warrior', 'Spellcaster', 'Dragon', 'Machine', etc. (same as subtype but more specific for monsters)",
           },
         ],
         responses: {
@@ -3180,8 +3338,10 @@ export const swaggerDoc: OpenAPIV3.Document = {
     "/cards/public/{type}/search": {
       get: {
         tags: ["Cards - Public"],
-        summary: "Search cards by game type with game-specific filtering (public endpoint - no auth required)",
-        description: "Advanced search with fuzzy name matching and game-specific filtering. Parameters are clearly categorized by game type for easier frontend development.",
+        summary:
+          "Search cards by game type with game-specific filtering (public endpoint - no auth required)",
+        description:
+          "Advanced search with fuzzy name matching and game-specific filtering. Parameters are clearly categorized by game type for easier frontend development.",
         parameters: [
           {
             in: "path",
@@ -3191,7 +3351,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "string",
               enum: ["pokemon", "yugioh", "onepiece"],
             },
-            description: "Game type determines which game-specific parameters are applicable",
+            description:
+              "Game type determines which game-specific parameters are applicable",
           },
           {
             in: "query",
@@ -3201,7 +3362,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "string",
               minLength: 1,
             },
-            description: "🔍 [ALL GAMES] Search query with fuzzy matching. Supports partial names and splits terms for better results.",
+            description:
+              "🔍 [ALL GAMES] Search query with fuzzy matching. Supports partial names and splits terms for better results.",
           },
           // ===== COMMON PARAMETERS =====
           {
@@ -3275,7 +3437,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "📝 [ALL GAMES] Search in card description/effect text",
+            description:
+              "📝 [ALL GAMES] Search in card description/effect text",
           },
           // ===== GAME-SPECIFIC PARAMETERS =====
           {
@@ -3284,7 +3447,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "🏴‍☠️ [ONE PIECE] 'Leader', 'Character', 'Event' | 🎮 [POKEMON] 'Fire', 'Water', 'Lightning' | 🃏 [YU-GI-OH] 'Monster', 'Spell', 'Trap'",
+            description:
+              "🏴‍☠️ [ONE PIECE] 'Leader', 'Character', 'Event' | 🎮 [POKEMON] 'Fire', 'Water', 'Lightning' | 🃏 [YU-GI-OH] 'Monster', 'Spell', 'Trap'",
           },
           {
             in: "query",
@@ -3292,7 +3456,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "🏴‍☠️ [ONE PIECE ONLY] Card color: 'Red', 'Green', 'Blue', 'Purple', 'Black', 'Yellow'",
+            description:
+              "🏴‍☠️ [ONE PIECE ONLY] Card color: 'Red', 'Green', 'Blue', 'Purple', 'Black', 'Yellow'",
           },
           {
             in: "query",
@@ -3327,7 +3492,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "🏴‍☠️ [ONE PIECE] 'Strike', 'Slash', 'Ranged' | 🃏 [YU-GI-OH] 'FIRE', 'WATER', 'EARTH', 'WIND'",
+            description:
+              "🏴‍☠️ [ONE PIECE] 'Strike', 'Slash', 'Ranged' | 🃏 [YU-GI-OH] 'FIRE', 'WATER', 'EARTH', 'WIND'",
           },
           {
             in: "query",
@@ -3335,7 +3501,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "🏴‍☠️ [ONE PIECE] 'Straw Hat Crew', 'Marine' | 🃏 [YU-GI-OH] 'Warrior', 'Dragon', 'Spellcaster'",
+            description:
+              "🏴‍☠️ [ONE PIECE] 'Straw Hat Crew', 'Marine' | 🃏 [YU-GI-OH] 'Warrior', 'Dragon', 'Spellcaster'",
           },
           {
             in: "query",
@@ -3352,7 +3519,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "🎮 [POKEMON ONLY] Evolution stage: 'Basic', 'Stage 1', 'Stage 2', 'GX', 'V', 'VMAX'",
+            description:
+              "🎮 [POKEMON ONLY] Evolution stage: 'Basic', 'Stage 1', 'Stage 2', 'GX', 'V', 'VMAX'",
           },
           {
             in: "query",
@@ -3378,7 +3546,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "🃏 [YU-GI-OH ONLY] Monster type: 'Warrior', 'Spellcaster', 'Dragon', 'Machine'",
+            description:
+              "🃏 [YU-GI-OH ONLY] Monster type: 'Warrior', 'Spellcaster', 'Dragon', 'Machine'",
           },
         ],
         responses: {
@@ -3552,8 +3721,10 @@ export const swaggerDoc: OpenAPIV3.Document = {
     "/cards": {
       get: {
         tags: ["Cards"],
-        summary: "Get all cards from all game types with enhanced filtering and pagination",
-        description: "Search and filter cards across all game types with fuzzy name matching and game-specific attributes. Requires authentication.",
+        summary:
+          "Get all cards from all game types with enhanced filtering and pagination",
+        description:
+          "Search and filter cards across all game types with fuzzy name matching and game-specific attributes. Requires authentication.",
         security: [{ bearerAuth: [] }],
         parameters: [
           {
@@ -3590,7 +3761,17 @@ export const swaggerDoc: OpenAPIV3.Document = {
             name: "sortBy",
             schema: {
               type: "string",
-              enum: ["name", "gameType", "price", "number", "cost", "power", "hp", "defense", "createdAt"],
+              enum: [
+                "name",
+                "gameType",
+                "price",
+                "number",
+                "cost",
+                "power",
+                "hp",
+                "defense",
+                "createdAt",
+              ],
             },
             description: "Sort field including game-specific attributes",
           },
@@ -3790,8 +3971,10 @@ export const swaggerDoc: OpenAPIV3.Document = {
     "/cards/{type}": {
       get: {
         tags: ["Cards"],
-        summary: "Get cards by game type with game-specific filtering (requires authentication)",
-        description: "Advanced card search with game-specific parameters organized by game type. Requires JWT authentication for access.",
+        summary:
+          "Get cards by game type with game-specific filtering (requires authentication)",
+        description:
+          "Advanced card search with game-specific parameters organized by game type. Requires JWT authentication for access.",
         security: [{ bearerAuth: [] }],
         parameters: [
           {
@@ -3802,7 +3985,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "string",
               enum: ["pokemon", "yugioh", "onepiece"],
             },
-            description: "Game type - determines which game-specific parameters are available",
+            description:
+              "Game type - determines which game-specific parameters are available",
           },
           // ===== COMMON PARAMETERS (All Game Types) =====
           {
@@ -3832,7 +4016,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "🔍 [ALL GAMES] Fuzzy search for card names with partial matching",
+            description:
+              "🔍 [ALL GAMES] Fuzzy search for card names with partial matching",
           },
           {
             in: "query",
@@ -3841,7 +4026,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "string",
               enum: ["name", "price", "number", "createdAt"],
             },
-            description: "📊 [ALL GAMES] Sort field including game-specific attributes",
+            description:
+              "📊 [ALL GAMES] Sort field including game-specific attributes",
           },
           {
             in: "query",
@@ -3892,7 +4078,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "📝 [ALL GAMES] Search in card description/effect text",
+            description:
+              "📝 [ALL GAMES] Search in card description/effect text",
           },
           // ===== GAME-SPECIFIC PARAMETERS =====
           {
@@ -3901,7 +4088,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "🏴‍☠️ [ONE PIECE] Card type: 'Leader', 'Character', 'Event', 'Stage' | 🎮 [POKEMON] Pokemon type/color: 'Fire', 'Water', 'Lightning', 'Grass', 'Fighting', 'Psychic', 'Colorless', 'Metal', 'Fairy', 'Darkness' | 🃏 [YU-GI-OH] Card type: 'Monster', 'Spell', 'Trap'",
+            description:
+              "🏴‍☠️ [ONE PIECE] Card type: 'Leader', 'Character', 'Event', 'Stage' | 🎮 [POKEMON] Pokemon type/color: 'Fire', 'Water', 'Lightning', 'Grass', 'Fighting', 'Psychic', 'Colorless', 'Metal', 'Fairy', 'Darkness' | 🃏 [YU-GI-OH] Card type: 'Monster', 'Spell', 'Trap'",
           },
           {
             in: "query",
@@ -3909,7 +4097,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "🏴‍☠️ [ONE PIECE ONLY] Card color: 'Red', 'Green', 'Blue', 'Purple', 'Black', 'Yellow' (not used for other games)",
+            description:
+              "🏴‍☠️ [ONE PIECE ONLY] Card color: 'Red', 'Green', 'Blue', 'Purple', 'Black', 'Yellow' (not used for other games)",
           },
           {
             in: "query",
@@ -3917,7 +4106,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "🏴‍☠️ [ONE PIECE] Combat attribute: 'Strike', 'Slash', 'Ranged', 'Special' | 🃏 [YU-GI-OH] Monster attribute: 'FIRE', 'WATER', 'EARTH', 'WIND', 'LIGHT', 'DARK', 'DIVINE' (not used for Pokemon)",
+            description:
+              "🏴‍☠️ [ONE PIECE] Combat attribute: 'Strike', 'Slash', 'Ranged', 'Special' | 🃏 [YU-GI-OH] Monster attribute: 'FIRE', 'WATER', 'EARTH', 'WIND', 'LIGHT', 'DARK', 'DIVINE' (not used for Pokemon)",
           },
           {
             in: "query",
@@ -3925,7 +4115,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "🏴‍☠️ [ONE PIECE] Character faction: 'Straw Hat Crew', 'Marine', 'Whitebeard Pirates', 'Big Mom Pirates', etc. | 🃏 [YU-GI-OH] Monster type: 'Warrior', 'Spellcaster', 'Dragon', 'Machine', 'Beast', 'Zombie', etc. (not used for Pokemon)",
+            description:
+              "🏴‍☠️ [ONE PIECE] Character faction: 'Straw Hat Crew', 'Marine', 'Whitebeard Pirates', 'Big Mom Pirates', etc. | 🃏 [YU-GI-OH] Monster type: 'Warrior', 'Spellcaster', 'Dragon', 'Machine', 'Beast', 'Zombie', etc. (not used for Pokemon)",
           },
           {
             in: "query",
@@ -3934,7 +4125,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "integer",
               minimum: 0,
             },
-            description: "🏴‍☠️ [ONE PIECE ONLY] Energy cost to play the card (typically 0-10, not used for other games)",
+            description:
+              "🏴‍☠️ [ONE PIECE ONLY] Energy cost to play the card (typically 0-10, not used for other games)",
           },
           {
             in: "query",
@@ -3943,7 +4135,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "integer",
               minimum: 0,
             },
-            description: "🏴‍☠️ [ONE PIECE ONLY] Character power/attack value (typically 1000-12000, not used for other games)",
+            description:
+              "🏴‍☠️ [ONE PIECE ONLY] Character power/attack value (typically 1000-12000, not used for other games)",
           },
           {
             in: "query",
@@ -3952,7 +4145,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "integer",
               minimum: 0,
             },
-            description: "🏴‍☠️ [ONE PIECE ONLY] Leader life points (typically 4-5, not used for other games)",
+            description:
+              "🏴‍☠️ [ONE PIECE ONLY] Leader life points (typically 4-5, not used for other games)",
           },
           {
             in: "query",
@@ -3961,7 +4155,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "integer",
               minimum: 0,
             },
-            description: "🎮 [POKEMON ONLY] Pokemon HP/health points (typically 10-340, not used for other games)",
+            description:
+              "🎮 [POKEMON ONLY] Pokemon HP/health points (typically 10-340, not used for other games)",
           },
           {
             in: "query",
@@ -3969,7 +4164,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "🎮 [POKEMON ONLY] Evolution stage: 'Basic', 'Stage 1', 'Stage 2', 'BREAK', 'GX', 'V', 'VMAX', 'VSTAR' (not used for other games)",
+            description:
+              "🎮 [POKEMON ONLY] Evolution stage: 'Basic', 'Stage 1', 'Stage 2', 'BREAK', 'GX', 'V', 'VMAX', 'VSTAR' (not used for other games)",
           },
           {
             in: "query",
@@ -3977,7 +4173,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "🃏 [YU-GI-OH ONLY] Monster type (same as subtype but more specific): 'Warrior', 'Spellcaster', 'Dragon', 'Machine', 'Beast', 'Zombie', 'Fiend', etc. (not used for other games)",
+            description:
+              "🃏 [YU-GI-OH ONLY] Monster type (same as subtype but more specific): 'Warrior', 'Spellcaster', 'Dragon', 'Machine', 'Beast', 'Zombie', 'Fiend', etc. (not used for other games)",
           },
           {
             in: "query",
@@ -3986,7 +4183,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "integer",
               minimum: 0,
             },
-            description: "🃏 [YU-GI-OH ONLY] Monster defense points (typically 0-5000, not used for other games)",
+            description:
+              "🃏 [YU-GI-OH ONLY] Monster defense points (typically 0-5000, not used for other games)",
           },
           {
             in: "query",
@@ -3995,7 +4193,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "integer",
               minimum: 0,
             },
-            description: "🃏 [YU-GI-OH ONLY] Monster level/rank (typically 1-12, not used for other games)",
+            description:
+              "🃏 [YU-GI-OH ONLY] Monster level/rank (typically 1-12, not used for other games)",
           },
         ],
         responses: {
@@ -4183,7 +4382,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
       get: {
         tags: ["Cards"],
         summary: "Get cards by set ID with enhanced filtering",
-        description: "Get all cards from a specific set with advanced filtering options by game-specific attributes.",
+        description:
+          "Get all cards from a specific set with advanced filtering options by game-specific attributes.",
         security: [{ bearerAuth: [] }],
         parameters: [
           {
@@ -5351,7 +5551,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
           },
           extendedData: {
             type: "object",
-            description: "Game-specific extended data containing detailed card attributes organized by game type",
+            description:
+              "Game-specific extended data containing detailed card attributes organized by game type",
             properties: {
               extNumber: {
                 type: "string",
@@ -5371,89 +5572,107 @@ export const swaggerDoc: OpenAPIV3.Document = {
               extDescription: {
                 type: "string",
                 description: "[ALL GAMES] Card effect text/description",
-                example: "[DON!! x1][When Attacking][Once Per Turn] You may return 1 of your Characters...",
+                example:
+                  "[DON!! x1][When Attacking][Once Per Turn] You may return 1 of your Characters...",
               },
               // ONE PIECE SPECIFIC FIELDS
               extColor: {
                 type: "string",
-                description: "[ONE PIECE ONLY] Card color(s): Red, Green, Blue, Purple, Black, Yellow",
+                description:
+                  "[ONE PIECE ONLY] Card color(s): Red, Green, Blue, Purple, Black, Yellow",
                 example: "Blue;Green",
               },
               extAttribute: {
                 type: "string",
-                description: "[ONE PIECE] Combat attribute: Strike, Slash, Ranged, Special | [YU-GI-OH] Monster attribute: FIRE, WATER, EARTH, WIND, LIGHT, DARK",
+                description:
+                  "[ONE PIECE] Combat attribute: Strike, Slash, Ranged, Special | [YU-GI-OH] Monster attribute: FIRE, WATER, EARTH, WIND, LIGHT, DARK",
                 example: "Strike;Slash",
               },
               extLife: {
                 type: "integer",
-                description: "[ONE PIECE ONLY] Life points for Leader cards (typically 4-5)",
+                description:
+                  "[ONE PIECE ONLY] Life points for Leader cards (typically 4-5)",
                 example: 4,
               },
               extPower: {
                 type: "integer",
-                description: "[ONE PIECE ONLY] Character power/attack value (typically 1000-12000)",
+                description:
+                  "[ONE PIECE ONLY] Character power/attack value (typically 1000-12000)",
                 example: 5000,
               },
               extCost: {
                 type: "integer",
-                description: "[ONE PIECE ONLY] Energy cost to play the card (0-10)",
+                description:
+                  "[ONE PIECE ONLY] Energy cost to play the card (0-10)",
                 example: 3,
               },
               extSubtypes: {
                 type: "string",
-                description: "[ONE PIECE] Character faction: Straw Hat Crew, Marine, etc. | [YU-GI-OH] Monster type: Warrior, Dragon, etc.",
+                description:
+                  "[ONE PIECE] Character faction: Straw Hat Crew, Marine, etc. | [YU-GI-OH] Monster type: Warrior, Dragon, etc.",
                 example: "Straw Hat Crew",
               },
               // POKEMON SPECIFIC FIELDS
               extHP: {
                 type: "integer",
-                description: "[POKEMON ONLY] Pokemon HP/health points (typically 10-340)",
+                description:
+                  "[POKEMON ONLY] Pokemon HP/health points (typically 10-340)",
                 example: 110,
               },
               extStage: {
                 type: "string",
-                description: "[POKEMON ONLY] Evolution stage: Basic, Stage 1, Stage 2, GX, V, VMAX, etc.",
+                description:
+                  "[POKEMON ONLY] Evolution stage: Basic, Stage 1, Stage 2, GX, V, VMAX, etc.",
                 example: "Stage 1",
               },
               extAttack1: {
                 type: "string",
-                description: "[POKEMON ONLY] First attack description with damage and effects",
-                example: "[L] Quick Attack (10+) - Flip a coin. If heads, this attack does 30 more damage.",
+                description:
+                  "[POKEMON ONLY] First attack description with damage and effects",
+                example:
+                  "[L] Quick Attack (10+) - Flip a coin. If heads, this attack does 30 more damage.",
               },
               extAttack2: {
                 type: "string",
-                description: "[POKEMON ONLY] Second attack description (if any)",
+                description:
+                  "[POKEMON ONLY] Second attack description (if any)",
                 example: "[2L] Electric Surfer (70)",
               },
               extWeakness: {
                 type: "string",
-                description: "[POKEMON ONLY] Pokemon weakness (e.g., Fx2 means Fire x2 damage)",
+                description:
+                  "[POKEMON ONLY] Pokemon weakness (e.g., Fx2 means Fire x2 damage)",
                 example: "Fx2",
               },
               extResistance: {
                 type: "string",
-                description: "[POKEMON ONLY] Pokemon resistance (e.g., M-20 means Metal -20 damage)",
+                description:
+                  "[POKEMON ONLY] Pokemon resistance (e.g., M-20 means Metal -20 damage)",
                 example: "M-20",
               },
               extRetreatCost: {
                 type: "integer",
-                description: "[POKEMON ONLY] Energy cost to retreat this Pokemon",
+                description:
+                  "[POKEMON ONLY] Energy cost to retreat this Pokemon",
                 example: 1,
               },
               // YU-GI-OH SPECIFIC FIELDS
               extDefense: {
                 type: "integer",
-                description: "[YU-GI-OH ONLY] Monster defense points (typically 0-5000)",
+                description:
+                  "[YU-GI-OH ONLY] Monster defense points (typically 0-5000)",
                 example: 1500,
               },
               extLevel: {
                 type: "integer",
-                description: "[YU-GI-OH ONLY] Monster level/rank (typically 1-12)",
+                description:
+                  "[YU-GI-OH ONLY] Monster level/rank (typically 1-12)",
                 example: 4,
               },
               extMonsterType: {
                 type: "string",
-                description: "[YU-GI-OH ONLY] Monster type: Warrior, Spellcaster, Dragon, Machine, etc.",
+                description:
+                  "[YU-GI-OH ONLY] Monster type: Warrior, Spellcaster, Dragon, Machine, etc.",
                 example: "Warrior",
               },
             },
@@ -5462,7 +5681,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
               extNumber: "ST12-001",
               extRarity: "L",
               extCardType: "Leader",
-              extDescription: "[DON!! x1][When Attacking][Once Per Turn] You may return 1 of your Characters with a cost of 2 or more to the owner's hand",
+              extDescription:
+                "[DON!! x1][When Attacking][Once Per Turn] You may return 1 of your Characters with a cost of 2 or more to the owner's hand",
               extAttribute: "Slash;Strike",
               extColor: "Blue;Green",
               extLife: 4,
@@ -5476,40 +5696,93 @@ export const swaggerDoc: OpenAPIV3.Document = {
                   title: "One Piece Card Extended Data",
                   type: "object",
                   properties: {
-                    extColor: { type: "string", description: "Card color: Red, Green, Blue, Purple, Black, Yellow" },
-                    extCost: { type: "integer", description: "Energy cost (0-10)" },
-                    extPower: { type: "integer", description: "Character power" },
-                    extLife: { type: "integer", description: "Leader life points" },
-                    extAttribute: { type: "string", description: "Combat attribute: Strike, Slash, Ranged" },
-                    extSubtypes: { type: "string", description: "Character faction" },
-                  }
+                    extColor: {
+                      type: "string",
+                      description:
+                        "Card color: Red, Green, Blue, Purple, Black, Yellow",
+                    },
+                    extCost: {
+                      type: "integer",
+                      description: "Energy cost (0-10)",
+                    },
+                    extPower: {
+                      type: "integer",
+                      description: "Character power",
+                    },
+                    extLife: {
+                      type: "integer",
+                      description: "Leader life points",
+                    },
+                    extAttribute: {
+                      type: "string",
+                      description: "Combat attribute: Strike, Slash, Ranged",
+                    },
+                    extSubtypes: {
+                      type: "string",
+                      description: "Character faction",
+                    },
+                  },
                 },
                 {
                   title: "Pokemon Card Extended Data",
                   type: "object",
                   properties: {
-                    extHP: { type: "integer", description: "Pokemon HP (10-340)" },
-                    extStage: { type: "string", description: "Evolution stage" },
+                    extHP: {
+                      type: "integer",
+                      description: "Pokemon HP (10-340)",
+                    },
+                    extStage: {
+                      type: "string",
+                      description: "Evolution stage",
+                    },
                     extAttack1: { type: "string", description: "First attack" },
-                    extAttack2: { type: "string", description: "Second attack" },
-                    extWeakness: { type: "string", description: "Pokemon weakness" },
-                    extResistance: { type: "string", description: "Pokemon resistance" },
-                    extRetreatCost: { type: "integer", description: "Retreat cost" },
-                  }
+                    extAttack2: {
+                      type: "string",
+                      description: "Second attack",
+                    },
+                    extWeakness: {
+                      type: "string",
+                      description: "Pokemon weakness",
+                    },
+                    extResistance: {
+                      type: "string",
+                      description: "Pokemon resistance",
+                    },
+                    extRetreatCost: {
+                      type: "integer",
+                      description: "Retreat cost",
+                    },
+                  },
                 },
                 {
                   title: "Yu-Gi-Oh Card Extended Data",
                   type: "object",
                   properties: {
-                    extAttribute: { type: "string", description: "Monster attribute: FIRE, WATER, EARTH, etc." },
-                    extDefense: { type: "integer", description: "Monster defense points" },
-                    extLevel: { type: "integer", description: "Monster level/rank" },
-                    extMonsterType: { type: "string", description: "Monster type: Warrior, Dragon, etc." },
-                    extSubtypes: { type: "string", description: "Monster type classification" },
-                  }
-                }
-              ]
-            }
+                    extAttribute: {
+                      type: "string",
+                      description:
+                        "Monster attribute: FIRE, WATER, EARTH, etc.",
+                    },
+                    extDefense: {
+                      type: "integer",
+                      description: "Monster defense points",
+                    },
+                    extLevel: {
+                      type: "integer",
+                      description: "Monster level/rank",
+                    },
+                    extMonsterType: {
+                      type: "string",
+                      description: "Monster type: Warrior, Dragon, etc.",
+                    },
+                    extSubtypes: {
+                      type: "string",
+                      description: "Monster type classification",
+                    },
+                  },
+                },
+              ],
+            },
           },
           isActive: {
             type: "boolean",

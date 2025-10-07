@@ -42,7 +42,8 @@ testRoutes.post('/test-scan', async (c) => {
     // Step 3: Smart Search
     console.log('🔍 Step 3: Searching for matches...');
     const searchResult = await smartCardSearch.findBestMatches(gameType, extractedData.extractedText, 20);
-    console.log(`   Found ${searchResult.matches.length} text matches`);
+    console.log(`   Found ${searchResult.candidates.length} text matches`);
+    console.log(`   Top match:`, searchResult.topMatch?.card?.name || 'None');
 
     // Step 4: Get card variants for visual matching
     console.log('🖼️ Step 4: Getting card variants...');
@@ -79,10 +80,10 @@ testRoutes.post('/test-scan', async (c) => {
       success: true,
       gameType,
       extractedText: extractedData.extractedText,
-      searchResults: searchResult.matches,
+      searchResults: searchResult.candidates,
       visualMatches,
       cardVariants: cardVariants.length,
-      confidence: searchResult.matches.length > 0 ? 85 : 50,
+      confidence: searchResult.candidates.length > 0 ? 85 : 50,
       pipeline: {
         step4_visual: {
           variantsFound: cardVariants.length,

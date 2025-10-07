@@ -13,6 +13,7 @@ export interface IUserService {
     currentPassword: string,
     newPassword: string
   ): Promise<void>;
+  changeAvatar(userId: string, imageUrl: string): Promise<void>;
   getProfile(userId: string): Promise<Document & User>;
 }
 
@@ -49,6 +50,16 @@ export class UserService implements IUserService {
     Object.assign(user, data);
     await user.save();
     return user;
+  }
+
+  async changeAvatar(userId: string, imageUrl: string): Promise<void> {
+    const user = await UserModel.findById(userId);
+    if (!user) {
+      throw new Error("User not found");
+    }
+
+    user.set("avatarUrl", imageUrl);
+    await user.save();
   }
 
   async deleteUser(id: string): Promise<Document & User> {
