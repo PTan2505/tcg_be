@@ -252,55 +252,212 @@ export class EnhancedOCRService {
   }
 
   /**
-   * Improved Pokemon name extraction
+   * ENHANCED: Pokemon name extraction with multiple strategies  
    */
   private findPokemonNameImproved(lines: string[], fullText: string): string {
-    // Common Pokemon names to look for
-    const commonPokemon = [
-      'Alakazam', 'Charizard', 'Blastoise', 'Venusaur', 'Pikachu', 
-      'Mewtwo', 'Mew', 'Gyarados', 'Dragonite', 'Gengar'
+    logger.info(`🎯 Pokemon name extraction from: "${fullText.substring(0, 100)}..."`);
+    
+    // STRATEGY 0: First word extraction (most reliable for clean OCR)
+    const firstWordMatch = fullText.match(/^([A-Za-z]+)/); // Fixed: single word only
+    if (firstWordMatch) {
+      const firstWord = firstWordMatch[1].trim();
+      logger.info(`🔍 First word: "${firstWord}"`);
+      
+      if (this.isValidPokemonNameDatabase(firstWord)) {
+        logger.info(`✅ First word is valid Pokemon: "${firstWord}"`);
+        return firstWord;
+      }
+    }
+    
+    // Strategy 1: Extract from evolution patterns
+    const evolutionPatterns = [
+      // "Put X on the Basic"
+      /Put\s+([A-Za-z][A-Za-z\s\-'\.]*?)\s+on\s+the\s+Basic/gi,
+      
+      // "Evolves from X Y" → Y is the card name (fix: target after first pokemon name)
+      /Evolves\s+from\s+[A-Za-z]+\s+Put\s+([A-Za-z][A-Za-z\s\-'\.]*?)\s+on/gi,
+      
+      // "STAGE I X HP" pattern
+      /STAGE\s+I{1,2}\s+([A-Za-z][A-Za-z\s\-'\.]*?)\s+\d+\s*HP/gi,
+      
+      // "Basic X HP" pattern  
+      /Basic\s+([A-Za-z][A-Za-z\s\-'\.]*?)\s+\d+\s*HP/gi
     ];
 
-    // Strategy 1: Look for common Pokemon names in full text
-    for (const pokemon of commonPokemon) {
-      if (fullText.toLowerCase().includes(pokemon.toLowerCase())) {
-        return pokemon;
+    for (const pattern of evolutionPatterns) {
+      const matches = fullText.match(pattern);
+      if (matches) {
+        for (const match of matches) {
+          const extracted = match.replace(pattern, '$1').trim();
+          if (this.isValidPokemonNameAdvanced(extracted)) {
+            logger.info(`🎯 Evolution pattern found: "${extracted}"`);
+            return extracted;
+          }
+        }
       }
     }
 
-    // Strategy 2: Find in top lines, avoiding HP and stage indicators
-    for (const line of lines.slice(0, 3)) {
+    // Strategy 2: Look for common Pokemon archetypes in context
+    const pokemonArchetypes = [
+      // Classic Pokemon
+      { names: ['Charizard', 'Blastoise', 'Venusaur'], priority: 10 },
+      { names: ['Pikachu', 'Raichu'], priority: 9 },
+      { names: ['Mewtwo', 'Mew'], priority: 8 },
+      { names: ['Alakazam', 'Abra', 'Kadabra'], priority: 7 },
+      { names: ['Gyarados', 'Magikarp'], priority: 6 },
+      { names: ['Clefable', 'Clefairy'], priority: 5 },
+      { names: ['Gengar', 'Gastly', 'Haunter'], priority: 4 },
+      { names: ['Machamp', 'Machoke', 'Machop'], priority: 3 },
+      
+      // More Pokemon can be added here
+      { names: ['Dragonite', 'Dratini', 'Dragonair'], priority: 6 },
+      { names: ['Zapdos', 'Moltres', 'Articuno'], priority: 7 },
+      { names: ['Snorlax', 'Lapras'], priority: 5 }
+    ];
+
+    let bestMatch = { name: '', priority: 0 };
+    
+    for (const archetype of pokemonArchetypes) {
+      for (const pokemonName of archetype.names) {
+        if (fullText.toLowerCase().includes(pokemonName.toLowerCase()) && archetype.priority > bestMatch.priority) {
+          bestMatch = { name: pokemonName, priority: archetype.priority };
+        }
+      }
+    }
+    
+    if (bestMatch.name) {
+      logger.info(`🎯 Archetype match found: "${bestMatch.name}"`);
+      return bestMatch.name;
+    }
+
+    // Strategy 3: Extract Pokemon name from structured patterns  
+    const structurePatterns = [
+      // Look for names that appear multiple times (likely the card name)
+      /\b([A-Z][a-z][A-Za-z\s\-'\.]*?)\b/g
+    ];
+
+    const nameFrequency: { [key: string]: number } = {};
+    
+    for (const pattern of structurePatterns) {
+      const matches = fullText.match(pattern);
+      if (matches) {
+        for (const match of matches) {
+          const cleanName = match.trim();
+          if (this.isValidPokemonNameAdvanced(cleanName)) {
+            nameFrequency[cleanName] = (nameFrequency[cleanName] || 0) + 1;
+          }
+        }
+      }
+    }
+
+    // Find the most frequent valid Pokemon name
+    let maxFreq = 0;
+    let mostFrequentName = '';
+    
+    for (const [name, freq] of Object.entries(nameFrequency)) {
+      if (freq > maxFreq && freq >= 2) { // Appears at least twice
+        maxFreq = freq;
+        mostFrequentName = name;
+      }
+    }
+    
+    if (mostFrequentName) {
+      logger.info(`🎯 Frequency analysis found: "${mostFrequentName}" (${maxFreq} times)`);
+      return mostFrequentName;
+    }
+
+    // Strategy 4: Look in top lines for standalone names
+    const topLines = lines.slice(0, Math.min(4, lines.length));
+    
+    for (const line of topLines) {
       const cleanLine = line.trim();
-      if (this.isValidPokemonName(cleanLine)) {
+      if (this.isValidPokemonNameAdvanced(cleanLine)) {
+        logger.info(`🎯 Top line found: "${cleanLine}"`);
         return cleanLine;
       }
     }
 
-    // Strategy 3: Find longest valid Pokemon name
-    let bestCandidate = '';
+    // Strategy 5: Fallback to any valid Pokemon name
     for (const line of lines) {
       const cleanLine = line.trim();
-      if (this.isValidPokemonName(cleanLine) && cleanLine.length > bestCandidate.length) {
-        bestCandidate = cleanLine;
+      if (this.isValidPokemonNameAdvanced(cleanLine)) {
+        logger.info(`🎯 Fallback found: "${cleanLine}"`);
+        return cleanLine;
       }
     }
 
-    return bestCandidate;
+    logger.warn(`❌ No Pokemon name found`);
+    return '';
   }
 
   /**
-   * Check if a line is a valid Pokemon name
+   * Enhanced database-based Pokemon name validation
    */
-  private isValidPokemonName(line: string): boolean {
-    if (!line || line.length < 3 || line.length > 30) return false;
+  private isValidPokemonNameDatabase(name: string): boolean {
+    if (!name || name.length < 2) return false;
     
-    // Exclude HP lines, stages, and stats
-    if (line.match(/HP\s*\d+|Basic|Stage|Evolution|\d+\/\d+|ATK|DEF/i)) {
+    // Load Pokemon database (in production, this should be cached)
+    try {
+      const fs = require('fs');
+      const path = require('path');
+      const dbPath = path.join(process.cwd(), 'pokemonNamesDB.json');
+      
+      if (fs.existsSync(dbPath)) {
+        const database = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
+        
+        // Check exact match in all names
+        if (database.allNames.includes(name)) {
+          return true;
+        }
+        
+        // Check case-insensitive match
+        const lowerName = name.toLowerCase();
+        const hasMatch = database.allNames.some((dbName: string) => 
+          dbName.toLowerCase() === lowerName
+        );
+        
+        return hasMatch;
+      }
+    } catch (error) {
+      console.log('Warning: Pokemon database not available, falling back to basic validation');
+    }
+    
+    // Fallback to basic validation
+    return this.isValidPokemonNameAdvanced(name);
+  }
+
+  /**
+   * Advanced validation for Pokemon names
+   */
+  private isValidPokemonNameAdvanced(line: string): boolean {
+    if (!line || line.length < 3 || line.length > 40) return false;
+    
+    // Exclude obvious non-Pokemon text
+    if (line.match(/HP\s*\d+|Basic|Stage|Evolution|\d+\/\d+|ATK|DEF|Weakness|Resistance|Retreat|Cost|Energy|Put|on|the|Evolves|from|Choose|attack|damage|turn|Pokémon|Length|Weight|lbs|Illus|Nintendo|Creatures|GAMEFREAK|Wizards|Copyright/i)) {
       return false;
     }
 
-    // Must contain letters
-    return /[A-Za-z]/.test(line) && /^[A-Za-z\s\-'\.]+$/.test(line);
+    // Exclude pure numbers, symbols, or very short words
+    if (line.match(/^\d+$|^[^A-Za-z]*$|^(a|an|the|of|and|or|in|on|at|to|for|is|are|was|were)$/i)) {
+      return false;
+    }
+
+    // Must start with capital letter and contain mostly letters
+    if (!/^[A-Z]/.test(line) || !/[A-Za-z]/.test(line)) {
+      return false;
+    }
+
+    // Valid Pokemon name pattern: letters, spaces, hyphens, apostrophes, periods
+    if (!/^[A-Za-z\s\-'\.]+$/.test(line)) {
+      return false;
+    }
+
+    // Good indicators of Pokemon names
+    if (line.match(/^[A-Z][a-z]+([A-Z][a-z]*)*$/)) { // PascalCase names like "Clefable"
+      return true;
+    }
+    
+    return true;
   }
 
   /**

@@ -458,7 +458,7 @@ export class SetCodeRecognitionService {
     // Generate all possible OCR variations of the input text
     const textVariations = this.generateOCRVariations(text);
 
-    // More precise patterns for Pokemon codes
+    // Enhanced patterns for Pokemon codes
     const pkmnPatterns = [
       // Scarlet/Violet series: SV1, SV10, SV12
       /\bSV(\d{1,2})\b/gi,
@@ -466,11 +466,24 @@ export class SetCodeRecognitionService {
       // Sword/Shield series: SWSH1, SWSH12
       /\bSWSH(\d{1,3})\b/gi,
       
-      // Known set abbreviations (must be exact matches)
-      /\b(PAL|PAR|MEW|OBF|TEF|TWM|SFA|EVO|CRZ|LOR|ASR|BRS|SP|PGO|VIV|CPA|RCL|SSH|DAA|WCS|UNM|LOT|DRM|BCR)(?=\s|$|\d)/gi,
+      // Card numbers: 01/64, 1/64, 64/64 etc. (MOST IMPORTANT for old cards)
+      /\b(\d{1,3})\/(\d{1,3})\b/gi,
+      
+      // Known set abbreviations (comprehensive list) - FIXED: exclude HP when preceded by number
+      /\b(?<!\d\s?)(JU|BS|FO|TR|G1|G2|N1|N2|N3|N4|LC|EX|AQ|SK|RS|SS|DR|MA|HL|RG|DX|EM|UF|DS|LM|CG|DF|PK|DP|MT|SW|GE|MD|LA|SF|PL|RR|SV|AR|HS|UL|UD|TM|CL|BLW|EPO|NVI|NXD|DEX|DRX|BCR|PLS|PLF|PLB|LTR|XY|FLF|FFI|PHF|PRC|ROS|AOR|BKT|BKP|GEN|FCO|STS|EVO|SUM|GRI|BUS|SHL|CIN|UPR|FLI|CES|DRM|LOT|TEU|UNB|UNM|HIF|CEC|SSH|RCL|DAA|CPA|VIV|SHF|BST|CRE|EVS|CEL|BRS|ASR|PGO|LOR|SIT|PAL|OBF|MEW|PAR|PAF|TEF|TWM|SFA|SCR|SSP|PRE|DRI|BLK|WHT|JTG|MEG|PFL|MEP|MEE)(?=\s|$|\d)/gi,
+      
+      // HP set code only when not preceded by numbers (avoid "70 HP")
+      /(?<!\d\s?)(?<!\d)\bHP\b(?!\s*\d)/gi,
       
       // PROMO cards
-      /\bPROMO\b/gi
+      /\bPROMO\b/gi,
+      
+      // Numbers at end that might be set numbers (like "1 64" → "01/64")
+      /\b(\d+)\s+(\d+)\s*$/gi,
+      
+      // Copyright years that help identify sets (1999 = Jungle, Base Set, etc.)
+      // OCR-aware: 2007 might be 2OO7, 2008 might be 2OO8, etc.
+      /\b(199\d|200\d|2O{2}[0-9O]|2[O0][O0][0-9O])\b/gi
     ];
 
     // Try each variation of the text
@@ -481,6 +494,30 @@ export class SetCodeRecognitionService {
           for (const match of matches) {
             let setCode = match.trim().toUpperCase();
             
+            // FILTER OUT: Skip if this looks like Pokemon stats (HP with numbers or OCR errors)
+            if (setCode === 'HP') {
+              // Check if HP is preceded by numbers/OCR errors (7O, 1O0, etc.)
+              const hpContext = variation.match(/([0-9O]{1,3})\s*HP/gi);
+              if (hpContext) {
+                continue; // Skip this HP as it's a Pokemon stat
+              }
+            }
+            
+            // FILTER OUT: Skip standalone artist names
+            if (setCode.match(/^(AR|ART|ARITA)$/) && variation.toLowerCase().includes('arita')) {
+              continue; // Skip "AR" from "Mitsuhiro Arita"
+            }
+            
+            // Special handling for card numbers: convert "1 64" → "1/64"
+            if (setCode.match(/^\d+\s+\d+$/)) {
+              setCode = setCode.replace(/\s+/, '/');
+            }
+            
+            // Special handling for OCR years: convert "2OO7" → "2007"
+            if (setCode.match(/^2[O0]{2}[O0-9]$/)) {
+              setCode = setCode.replace(/O/g, '0'); // Convert O to 0
+            }
+            
             // Handle SV series - keep SV + number format
             if (setCode.match(/^SV\d+$/)) {
               codes.push(setCode);
@@ -488,6 +525,16 @@ export class SetCodeRecognitionService {
             // Handle SWSH series
             else if (setCode.match(/^SWSH\d+$/)) {
               codes.push(setCode);
+            }
+            // Handle card numbers (store both the number and try to map to set)
+            else if (setCode.match(/^\d+\/\d+$/)) {
+              codes.push(setCode);
+              
+              // Try to determine set from card number context
+              const setFromCardNumber = this.inferSetFromCardNumber(setCode, variation);
+              if (setFromCardNumber) {
+                codes.push(setFromCardNumber);
+              }
             }
             // Handle other known abbreviations
             else if (setCode.length >= 2 && setCode.length <= 5) {
@@ -499,6 +546,82 @@ export class SetCodeRecognitionService {
     }
 
     return [...new Set(codes)]; // Remove duplicates
+  }
+
+  /**
+   * Infer Pokemon set abbreviation from card number and context
+   */
+  private inferSetFromCardNumber(cardNumber: string, contextText: string): string | null {
+    // Context clues for classic sets (enhanced with more patterns)
+    const setContexts = [
+      // Classic 1999 sets
+      { keywords: ['1999', 'Jungle', 'Clefable', 'Electrode', 'Kangaskhan'], cardRanges: ['64'], setCode: 'JU' },
+      { keywords: ['1999', 'Base', 'Charizard', 'Blastoise', 'Venusaur'], cardRanges: ['102'], setCode: 'BS' },
+      { keywords: ['1999', 'Fossil', 'Aerodactyl', 'Kabutops', 'Omastar'], cardRanges: ['62'], setCode: 'FO' },
+      
+      // 2000 sets
+      { keywords: ['2000', 'Team Rocket', 'Dark', 'Rocket'], cardRanges: ['82'], setCode: 'TR' },
+      { keywords: ['2000', 'Gym Heroes', 'Brock', 'Misty', 'Lt'], cardRanges: ['132'], setCode: 'G1' },
+      { keywords: ['2000', 'Gym Challenge', 'Koga', 'Sabrina', 'Blaine'], cardRanges: ['132'], setCode: 'G2' },
+      { keywords: ['2000', 'Neo Genesis', 'Lugia', 'Ho-oh'], cardRanges: ['111'], setCode: 'N1' },
+      
+      // 2001 sets
+      { keywords: ['2001', 'Neo Discovery', 'Espeon', 'Umbreon'], cardRanges: ['75'], setCode: 'N2' },
+      { keywords: ['2001', 'Neo Revelation', 'Entei', 'Raikou', 'Suicune'], cardRanges: ['64'], setCode: 'N3' },
+      
+      // 2002 sets
+      { keywords: ['2002', 'Neo Destiny', 'Celebi'], cardRanges: ['105'], setCode: 'N4' },
+      { keywords: ['2002', 'Legendary Collection'], cardRanges: ['110'], setCode: 'LC' },
+      { keywords: ['2002', 'Expedition'], cardRanges: ['165'], setCode: 'EX' },
+      
+      // 2007-2008 Diamond & Pearl era sets (NEW: Mysterious Treasures support)
+      { keywords: ['2007', 'Mysterious', 'Treasures', 'Abomasnow'], cardRanges: ['123'], setCode: 'MT' },
+      { keywords: ['2007', 'Diamond', 'Pearl', 'Dialga', 'Palkia'], cardRanges: ['130'], setCode: 'DP' },
+      { keywords: ['2007', 'Secret', 'Wonders'], cardRanges: ['132'], setCode: 'SW' },
+      { keywords: ['2008', 'Great', 'Encounters'], cardRanges: ['106'], setCode: 'GE' },
+      { keywords: ['2008', 'Majestic', 'Dawn'], cardRanges: ['100'], setCode: 'MD' },
+      { keywords: ['2008', 'Legends', 'Awakened'], cardRanges: ['146'], setCode: 'LA' },
+      
+      // Common patterns for quick identification
+      { keywords: ['Mitsuhiro Arita', 'Wizards', '64'], cardRanges: ['64'], setCode: 'JU' }, // Jungle artist signature
+      { keywords: ['Ken Sugimori', '102'], cardRanges: ['102'], setCode: 'BS' }, // Base Set artist
+      { keywords: ['Kazuyuki Kano', '123'], cardRanges: ['123'], setCode: 'MT' }, // Mysterious Treasures common artist
+      { keywords: ['Frost Tree', 'Glacier Snow', '123'], cardRanges: ['123'], setCode: 'MT' } // Abomasnow-specific clues
+    ];
+
+    const [cardNum, totalCards] = cardNumber.split('/');
+    
+    for (const context of setContexts) {
+      // Check if total cards matches known set size
+      if (context.cardRanges.includes(totalCards)) {
+        // Check if context contains set-specific keywords (need at least 2 matches for confidence)
+        let matchCount = 0;
+        for (const keyword of context.keywords) {
+          if (contextText.toLowerCase().includes(keyword.toLowerCase())) {
+            matchCount++;
+          }
+        }
+        
+        // Require at least 2 keyword matches for confident set identification
+        if (matchCount >= 2) {
+          return context.setCode;
+        }
+      }
+    }
+
+    // Fallback: try to guess from total cards only (less confident)
+    const totalCardsOnly: { [key: string]: string } = {
+      '64': 'JU',    // Most likely Jungle
+      '62': 'FO',    // Most likely Fossil  
+      '102': 'BS',   // Most likely Base Set
+      '82': 'TR',    // Most likely Team Rocket
+      '132': 'G1',   // Could be Gym Heroes or Challenge
+      '111': 'N1',   // Most likely Neo Genesis
+      '75': 'N2',    // Most likely Neo Discovery
+      '105': 'N4'    // Most likely Neo Destiny
+    };
+
+    return totalCardsOnly[totalCards] || null;
   }
 
   /**
