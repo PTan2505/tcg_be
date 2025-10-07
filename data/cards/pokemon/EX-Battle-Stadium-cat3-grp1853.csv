@@ -1,0 +1,117 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extAttack2,extWeakness,extResistance,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extCardText
+125108,EX Master Trainer Deck [Blaziken],EX Master Trainer Deck Blaziken,https://tcgplayer-cdn.tcgplayer.com/product/125108_200w.jpg,3,1853,https://cpt.tcgcsv.com/b302,2016-11-11T14:57:17.013,1,,,,,,,,,,,,,,,,,
+125109,EX Master Trainer Deck [Gardevoir],EX Master Trainer Deck Gardevoir,https://tcgplayer-cdn.tcgplayer.com/product/125109_200w.jpg,3,1853,https://cpt.tcgcsv.com/c302,2016-11-11T14:57:38.9,1,,,,,,,,,,,,,,,,,
+125110,Torchic,Torchic,https://tcgplayer-cdn.tcgplayer.com/product/125110_200w.jpg,3,1853,https://cpt.tcgcsv.com/d302,2016-11-11T14:59:02.463,1,73,Common,Fire,40,Basic,[1] Peck (10),"[1R] Fireworks (30)
+<br>Flip a coin. If tails, discard a Fire Energy card attached to Torchic.",Wx2,None,1,0.25,0.75,2.0,0.9,,Normal,
+125111,Combusken,Combusken,https://tcgplayer-cdn.tcgplayer.com/product/125111_200w.jpg,3,1853,https://cpt.tcgcsv.com/f302,2016-11-11T15:00:39.997,1,25,Uncommon,Fire,70,Stage 1,"[2] Quick Attack (10+)
+<br>Flip a coin. If heads, this attack does 10 damage plus 20 more damage.",[2R] Combustion (40),Wx2,None,1,0.47,0.87,1.68,0.49,,Normal,
+125112,Blaziken,Blaziken,https://tcgplayer-cdn.tcgplayer.com/product/125112_200w.jpg,3,1853,https://cpt.tcgcsv.com/g302,2016-11-11T15:02:45.63,1,3,Rare,Fire,100,Stage 2,"[2R] Fire Stream (50)
+<br>Discard a Fire Energy attached to Blaziken. If you do, this attack does 10 damage to each of your opponent's Benched Pokemon. <i>(Don't apply Weakness and Resistance for Benched Pokemon.)</i>",,Wx2,None,2,3.9,4.6,7.99,4.63,,Normal,"<b>Poke-POWER — Firestarter</b>
+<br>Once during your turn <em>(before your attack)</em>, you may attach a Fire Energy card from your discard pile to 1 of your Benched Pokemon. This power can't be used if Blaziken is affected by a Special Condition."
+125113,Blaziken (Holo),Blaziken Holo,https://tcgplayer-cdn.tcgplayer.com/product/125113_200w.jpg,3,1853,https://cpt.tcgcsv.com/h302,2016-11-11T15:03:28.58,1,3,Holo Rare,Fire,100,Stage 2,"[2R] Fire Stream (50)
+<br>Discard a Fire Energy attached to Blaziken. If you do, this attack does 10 damage to each of your opponent's Benched Pokemon. <i>(Don't apply Weakness and Resistance for Benched Pokemon.)</i>",,Wx2,None,2,12.62,14.06,49.99,16.84,,Holofoil,"<b>Poke-POWER — Firestarter</b>
+<br>Once during your turn <em>(before your attack)</em>, you may attach a Fire Energy card from your discard pile to 1 of your Benched Pokemon. This power can't be used if Blaziken is affected by a Special Condition."
+125114,Numel (69),Numel 69,https://tcgplayer-cdn.tcgplayer.com/product/125114_200w.jpg,3,1853,https://cpt.tcgcsv.com/j302,2018-11-16T15:11:00.233,1,69,Common,Fire,40,Basic,"[R] Firebreathing (10+)
+<br>Flip a coin. If heads, this attack does 10 damage plus 10 more damage.",[2] Tackle (20),Wx2,None,1,0.18,0.6,1.99,0.28,,Normal,
+125115,Camerupt,Camerupt,https://tcgplayer-cdn.tcgplayer.com/product/125115_200w.jpg,3,1853,https://cpt.tcgcsv.com/k302,2016-11-11T15:08:44.29,1,24,Uncommon,Fire,80,Stage 1,"[1R] Super Singe (20)
+<br>Flip a coin. If heads, the Defending Pokemon is now Burned.",[2R] Ram (50),Wx2,None,2,0.6,0.86,2.52,0.79,,Normal,
+125116,Goldeen,Goldeen,https://tcgplayer-cdn.tcgplayer.com/product/125116_200w.jpg,3,1853,https://cpt.tcgcsv.com/l302,2016-11-11T15:09:50.39,1,55,Common,Water,50,Basic,"[1] Flail (10x)
+<br>Does 10 damage for each damage counter on Goldeen.",,Lx2,None,1,0.21,0.56,0.99,0.63,,Normal,
+125117,Seaking,Seaking,https://tcgplayer-cdn.tcgplayer.com/product/125117_200w.jpg,3,1853,https://cpt.tcgcsv.com/m302,2016-11-11T15:11:31.323,1,21,Rare,Water,70,Stage 1,"[W] Water Arrow
+<br>Choose 1 of your opponent's Pokemon. This attack does 20 damage to that Pokemon. <i>(Don't apply Weakness and Resistance for Benched Pokemon.)</i>","[2] Fast Stream (30)
+<br>Move 1 Energy attached to the Defending Pokemon to the other Defending Pokemon. <i>(Ignore this effect if your opponent has only 1 Defending Pokemon.)</i>",Lx2,None,1,0.28,0.57,1.79,0.67,,Normal,
+125118,Horsea,Horsea,https://tcgplayer-cdn.tcgplayer.com/product/125118_200w.jpg,3,1853,https://cpt.tcgcsv.com/n302,2016-11-11T15:12:45.76,1,58,Common,Water,50,Basic,"[1] Paralyzing Gaze
+<br>Flip a coin. If heads, the Defending Pokemon is now Paralyzed.",[2] Wave Splash (20),Lx2,None,1,0.15,0.45,4.5,0.3,,Normal,
+125119,Seadra,Seadra,https://tcgplayer-cdn.tcgplayer.com/product/125119_200w.jpg,3,1853,https://cpt.tcgcsv.com/p302,2016-11-11T15:14:37.067,1,39,Uncommon,Water,70,Stage 1,"[W] Energy Cannon (20+)
+<br>Does 20 damage plus 10 more damage for each Energy attached to Seadra but not used to pay for this attack's Energy cost. You can't add more than 20 damage this way.","[2W] Water Arrow 
+<br>Choose 1 of your opponent's Pokemon. This attack does 30 damage to that Pokemon. <i>(Don't apply Weakness and Resistance for Benched Pokemon.)</i>",Lx2,None,1,0.59,0.8,1.0,0.88,,Normal,
+125120,Celio's Network,Celios Network,https://tcgplayer-cdn.tcgplayer.com/product/125120_200w.jpg,3,1853,https://cpt.tcgcsv.com/q302,2024-10-31T18:31:02.77,1,88,Uncommon,Supporter,,,,,,,,1.2,2.99,6.0,,,Normal,"<em>You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokemon. When your turn ends, discard this card.</em>
+<br>
+<br>Search your deck for a Basic Pokemon or Evolution card <em>(excluding Pokemon ex)</em>, show it to your opponent, and put it into your hand. Shuffle your deck afterward."
+125121,Life Herb,Life Herb,https://tcgplayer-cdn.tcgplayer.com/product/125121_200w.jpg,3,1853,https://cpt.tcgcsv.com/r302,2016-11-11T15:20:51.927,1,93,Uncommon,Item,,,,,,,,0.2,0.5,2.26,,,Normal,"Flip a coin. If heads, choose 1 of your Pokemon (excluding Pokemon ex), and remove all Special Conditions and 6 damage counters from that Pokémon <em>(all if there are less than 6).</em>"
+125122,Professor Birch,Professor Birch,https://tcgplayer-cdn.tcgplayer.com/product/125122_200w.jpg,3,1853,https://cpt.tcgcsv.com/s302,2019-11-29T19:55:00.957,1,89,Uncommon,Supporter,,,,,,,,0.25,0.84,1.99,0.99,,Normal,"<em>You can only play one Supporter each turn. When you play this card, put it next to your Active Pokemon. When your turn ends, discard this card.</em>
+<br>Draw cards from your deck until you have 6 cards in your hand."
+125123,Energy Search,Energy Search,https://tcgplayer-cdn.tcgplayer.com/product/125123_200w.jpg,3,1853,https://cpt.tcgcsv.com/t302,2016-11-11T15:43:12.05,1,90,Uncommon,Item,,,,,,,,0.06,0.24,1.37,0.17,,Normal,"Search your deck for a basic Energy card, show it to your opponent, and put it into your hand. Shuffle your deck afterward."
+125124,Fire Energy,Fire Energy,https://tcgplayer-cdn.tcgplayer.com/product/125124_200w.jpg,3,1853,https://cpt.tcgcsv.com/v302,2016-11-11T15:47:03.247,1,108,Common,Basic Fire Energy,,,,,,,,0.08,0.25,1.0,0.25,,Normal,
+125125,Water Energy,Water Energy,https://tcgplayer-cdn.tcgplayer.com/product/125125_200w.jpg,3,1853,https://cpt.tcgcsv.com/w302,2016-11-11T15:47:34.8,1,106,Common,Basic Water Energy,,,,,,,,0.05,0.2,1.0,0.1,,Normal,
+125126,Numel (61),Numel 61,https://tcgplayer-cdn.tcgplayer.com/product/125126_200w.jpg,3,1853,https://cpt.tcgcsv.com/x302,2018-11-16T15:11:08.02,1,61,Common,Fire,50,Basic,[1] Headbutt (10),"[1R] Burn Off
+<br>Flip a coin. If heads, each Defending Pokemon is now Burned.",Wx2,None,1,0.13,0.25,1.0,0.21,,Normal,
+125127,Jigglypuff,Jigglypuff,https://tcgplayer-cdn.tcgplayer.com/product/125127_200w.jpg,3,1853,https://cpt.tcgcsv.com/z302,2016-11-11T15:51:14.887,1,63,Common,Colorless,50,Basic,[1] Rollout (10),"[2] Sleepy Song
+<br>Each Defending Pokemon is now Asleep.",Fx2,None,1,1.25,2.96,6.99,5.13,,Normal,
+125128,Double Full Heal,Double Full Heal,https://tcgplayer-cdn.tcgplayer.com/product/125128_200w.jpg,3,1853,https://cpt.tcgcsv.com/B302,2016-11-11T15:53:06.967,1,86,Uncommon,Item,,,,,,,,0.2,0.33,1.0,0.32,,Normal,Remove all Special Conditions from each of your Active Pokemon.
+125129,Warp Point,Warp Point,https://tcgplayer-cdn.tcgplayer.com/product/125129_200w.jpg,3,1853,https://cpt.tcgcsv.com/C302,2016-11-11T15:55:06.337,1,88,Uncommon,Item,,,,,,,,1.0,1.99,2.49,1.0,,Normal,"Your opponent switches 1 of his or her Defending Pokémon with 1 of his or her Benched Pokémon, if any. You switch 1 of your Active Pokémon with 1 of your Benched Pokémon, if any."
+125130,Cyndaquil,Cyndaquil,https://tcgplayer-cdn.tcgplayer.com/product/125130_200w.jpg,3,1853,https://cpt.tcgcsv.com/D302,2016-11-11T15:57:36.74,1,59,Common,Fire,50,Basic,"[1] Swift (10)
+<br>This attack's damage isn't affected by Weakness, Resistance, Poke-Powers, Poke-Bodies, or any other effects on the Defending Pokemon.","[2] Rage (10+)
+<br>Does 10 damage plus 10 more damage for each damage counter on Cyndaquil.",Wx2,None,1,2.0,2.5,3.25,3.02,,Normal,
+125131,Quilava,Quilava,https://tcgplayer-cdn.tcgplayer.com/product/125131_200w.jpg,3,1853,https://cpt.tcgcsv.com/F302,2016-11-11T16:07:45.337,1,51,Uncommon,Fire,80,Stage 1,[2] Slash (20),"[2R] Burning Claw (40)
+<br>You may discard a Fire Energy card attached to Quilava. If you do, the Defending Pokemon is now Burned.",Wx2,None,2,3.66,4.04,7.06,4.79,,Normal,
+125132,Skitty,Skitty,https://tcgplayer-cdn.tcgplayer.com/product/125132_200w.jpg,3,1853,https://cpt.tcgcsv.com/G302,2016-11-11T16:09:09.197,1,79,Common,Colorless,50,Basic,"[1] Energy Catch
+<br>Search your discard pile for a basic Energy card, show it to your opponent, and put it into your hand.","[2] Double-edge (30)
+<br>Skitty does 10 damage to itself.",Fx2,None,1,1.35,1.43,1.5,1.4,,Normal,
+125133,Delcatty,Delcatty,https://tcgplayer-cdn.tcgplayer.com/product/125133_200w.jpg,3,1853,https://cpt.tcgcsv.com/H302,2016-11-11T16:10:39.45,1,29,Uncommon,Colorless,80,Basic,"[1] Energy Call
+<br>Attach 1 Energy from your discard pile to your Active Pokemon.","[2] Cannonball (30+)
+<br>Does 30 damage plus 10 more damage for each Energy attached to Delcatty but not used to pay for this attack's Energy cost.",Fx2,None,1,0.46,0.78,1.19,0.64,,Normal,
+125134,High Pressure System,High Pressure System,https://tcgplayer-cdn.tcgplayer.com/product/125134_200w.jpg,3,1853,https://cpt.tcgcsv.com/J302,2023-02-08T20:38:39.96,1,85,Uncommon,Stadium,,,,,,,,1.0,1.48,1.99,1.52,,Normal,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play.</em>
+<br>Each player pays Colorless less to retreat his or her Fire or Water Pokemon."
+125135,Potion,Potion,https://tcgplayer-cdn.tcgplayer.com/product/125135_200w.jpg,3,1853,https://cpt.tcgcsv.com/K302,2016-11-11T16:21:43.88,1,91,Uncommon,Item,,,,,,,,0.05,0.25,1.35,0.25,,Normal,"<b>Heal 30 damage from 1 of your Pokémon.</b>
+<br>
+<br><em>Old card text: Remove 2 damage counters from 1 of your Pokémon (remove 1 damage counter if that Pokémon has only 1).</em>"
+125136,Ralts,Ralts,https://tcgplayer-cdn.tcgplayer.com/product/125136_200w.jpg,3,1853,https://cpt.tcgcsv.com/L302,2016-11-11T17:10:40.163,1,74,Common,Psychic,50,Basic,"[1] Hypnosis
+<br>The Defending Pokemon is now Asleep.","[P] Psychic Boom (10x)
+<br>Does 10 damage times the amount of Energy attached to the Defending Pokemon.",Px2,None,1,0.34,0.9,1.79,0.97,,Normal,
+125137,Kirlia,Kirlia,https://tcgplayer-cdn.tcgplayer.com/product/125137_200w.jpg,3,1853,https://cpt.tcgcsv.com/M302,2016-11-11T17:11:59.88,1,34,Uncommon,Psychic,70,Stage 1,"[P] Removal Beam (10)
+<br>Flip a coin. If heads, discard 1 Energy card attached to the Defending Pokemon.",[2P] Super Psy (50),Px2,None,1,0.5,1.95,11.0,0.65,,Normal,
+125138,Gardevoir,Gardevoir,https://tcgplayer-cdn.tcgplayer.com/product/125138_200w.jpg,3,1853,https://cpt.tcgcsv.com/N302,2016-11-11T17:14:37.327,1,7,Rare,Psychic,100,Stage 2,"[P] Energy Burst (10x)
+<br>Does 10 damage times the total amount of Energy attached to Gardevoir and the Defending Pokemon.",,Px2,None,2,4.18,5.86,13.69,11.33,,Normal,"<b>Poke-POWER — Psy Shadow</b>
+<br>Once during your turn <em>(before your attack)</em>, you may search your deck for a Psychic Energy card and attach it to 1 of your Pokemon. Put 2 damage counters on that Pokemon. Shuffle your deck afterward. This power can't be used if Gardevoir is affected by a Special Condition."
+125139,Gardevoir (Holo),Gardevoir Holo,https://tcgplayer-cdn.tcgplayer.com/product/125139_200w.jpg,3,1853,https://cpt.tcgcsv.com/P302,2016-11-11T17:15:29.913,1,7,Holo Rare,Psychic,100,Stage 2,"[P] Energy Burst (10x)
+<br>Does 10 damage times the total amount of Energy attached to Gardevoir and the Defending Pokemon.",,Px2,None,2,10.0,11.01,11.74,16.11,,Holofoil,"<b>Poke-POWER — Psy Shadow</b>
+<br>Once during your turn <em>(before your attack)</em>, you may search your deck for a Psychic Energy card and attach it to 1 of your Pokemon. Put 2 damage counters on that Pokemon. Shuffle your deck afterward. This power can't be used if Gardevoir is affected by a Special Condition."
+125140,Meditite,Meditite,https://tcgplayer-cdn.tcgplayer.com/product/125140_200w.jpg,3,1853,https://cpt.tcgcsv.com/Q302,2016-11-11T17:20:12.843,1,65,Common,Psychic,50,Basic,"[1] Double Chop (10x)
+<br>Flip 2 coins. This attack does 10 damage times the number of heads.","[P] Calm Mind 
+<br> Remove 2 damage counters from Meditite <i>(remove 1 if there is only 1)</i>.",Px2,None,1,0.25,0.3,3.0,0.23,,Normal,
+125141,Medicham,Medicham,https://tcgplayer-cdn.tcgplayer.com/product/125141_200w.jpg,3,1853,https://cpt.tcgcsv.com/R302,2016-11-11T17:22:59.91,1,42,Uncommon,Fighting,80,Stage 1,"[1] Steady Punch (20+)
+<br>Flip a coin. If heads, this attack does 20 damage plus 10 more.","[1F] Power Heal (10+)
+<br>Does 10 damage plus 10 more damage for each damage counter on Medicham. After doing damage, remove 1 damage counter from Medicham.",Px2,None,1,0.29,0.94,3.0,0.99,,Normal,
+125142,Makuhita,Makuhita,https://tcgplayer-cdn.tcgplayer.com/product/125142_200w.jpg,3,1853,https://cpt.tcgcsv.com/S302,2016-11-11T17:23:45.66,1,57,Common,Fighting,50,Basic,"[1] Fling 
+<br>Your opponent switches the Defending Pokemon with 1 of his or her Benched Pokemon.",[1F] Low Kick (30),Px2,None,1,0.2,0.35,3.0,0.24,,Normal,
+125143,Hariyama,Hariyama,https://tcgplayer-cdn.tcgplayer.com/product/125143_200w.jpg,3,1853,https://cpt.tcgcsv.com/T302,2016-11-11T17:25:02.867,1,33,Uncommon,Fighting,80,Stage 1,"[1F] Shove (20)
+<br>Flip a coin. If heads, the Defending Pokemon is now Paralyzed.","[2F] Slap Down (40+)
+<br>Flip 2 coins. This attack does 40 damage plus 10 more damage for each heads.",Px2,None,1,0.31,0.5,3.0,0.48,,Normal,
+125144,Eevee,Eevee,https://tcgplayer-cdn.tcgplayer.com/product/125144_200w.jpg,3,1853,https://cpt.tcgcsv.com/V302,2016-11-11T17:26:22.91,1,63,Common,Colorless,50,Basic,"[1] Signs of Evolution
+<br>Search your deck for up to 3 cards that evolve from Eevee, show them to your opponent and put them into your hand. Shuffle your deck afterward.","[1] Quick Attack (10+)
+<br>Flip a coin. If heads, this attack does 10 damage plus 10 more damage.",Fx2,None,1,2.43,3.97,32.89,6.61,,Normal,
+125145,Espeon,Espeon,https://tcgplayer-cdn.tcgplayer.com/product/125145_200w.jpg,3,1853,https://cpt.tcgcsv.com/W302,2016-11-11T17:42:03.223,1,16,Rare,Psychic,80,Stage 1,"[P] Confuse Ray (20)
+<br>Flip a coin. If heads, the Defending Pokemon is now Confused.",[3] Does 20 damage plus 10 more damage for each Energy attached to all of your opponent's Pokemon.,Px2,None,1,2.93,3.47,4.0,3.71,,Normal,
+125146,Energy Removal 2,Energy Removal 2,https://tcgplayer-cdn.tcgplayer.com/product/125146_200w.jpg,3,1853,https://cpt.tcgcsv.com/X302,2016-11-11T17:44:25.063,1,80,Uncommon,Item,,,,,,,,1.0,1.5,3.0,,,Normal,"Flip a coin. If heads, choose 1 Energy card attached to 1 of your opponent's Pokemon and discard it."
+125147,TV Reporter,TV Reporter,https://tcgplayer-cdn.tcgplayer.com/product/125147_200w.jpg,3,1853,https://cpt.tcgcsv.com/Z302,2016-11-11T17:45:28.223,1,88,Uncommon,Supporter,,,,,,,,0.53,0.72,1.5,0.72,,Normal,"<em>You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokemon. When your turn ends, discard this card.</em>
+<br>Draw 3 cards. Then discard any 1 card from your hand."
+125148,Wally's Training,Wallys Training,https://tcgplayer-cdn.tcgplayer.com/product/125148_200w.jpg,3,1853,https://cpt.tcgcsv.com/-302,2016-11-11T17:46:27.03,1,89,Uncommon,Supporter,,,,,,,,0.64,0.87,2.5,1.55,,Normal,"<em>You can play only one Supporter card each turn. When you play this card, put it next to your Active Pokemon. When your turn ends, discard this card.</em>
+<br>Search your deck for a card that evolves from your Active Pokemon (choose 1 if there are 2) and put it on your Active Pokemon. <em>(This counts as evolving that Pokémon.)</em> Shuffle your deck afterward."
+125150,Psychic Energy,Psychic Energy,https://tcgplayer-cdn.tcgplayer.com/product/125150_200w.jpg,3,1853,https://cpt.tcgcsv.com/0502,2016-11-11T18:01:03.097,1,107,Common,Basic Psychic Energy,,,,,,,,0.1,0.25,1.49,0.23,,Normal,
+125151,Fighting Energy,Fighting Energy,https://tcgplayer-cdn.tcgplayer.com/product/125151_200w.jpg,3,1853,https://cpt.tcgcsv.com/2502,2016-11-11T18:02:04.47,1,105,Common,Basic Fighting Energy,,,,,,,,0.24,0.46,1.0,0.49,,Normal,
+125152,Natu,Natu,https://tcgplayer-cdn.tcgplayer.com/product/125152_200w.jpg,3,1853,https://cpt.tcgcsv.com/3502,2016-11-11T18:38:43.217,1,69,Common,Psychic,50,Basic,[1] Peck (10),"[P] Soothing Wave
+<br>Each Defending Pokemon is now Asleep.",P,None,1,0.28,0.53,3.0,0.5,,Normal,
+125153,Xatu,Xatu,https://tcgplayer-cdn.tcgplayer.com/product/125153_200w.jpg,3,1853,https://cpt.tcgcsv.com/5502,2016-11-11T18:40:20.107,1,55,Uncommon,Psychic,70,Stage 1,"[1P] Psyimpact
+<br>Put 1 damage counter on each of your opponent's Pokemon.",,Px2,F-30,0,0.5,1.03,3.0,1.5,,Normal,"<b>Poke-POWER — Healing Wind</b>
+<br>Once during your turn <em>(before your attack)</em>, you may remove 1 damage counter from each of your Active Pokemon. This power can't be used if Xatu is affected by a Special Condition."
+125154,Dunsparce,Dunsparce,https://tcgplayer-cdn.tcgplayer.com/product/125154_200w.jpg,3,1853,https://cpt.tcgcsv.com/6502,2016-11-11T18:42:28.463,1,60,Common,Colorless,50,Basic,"[1] Strike and Run
+<br>Search your deck for up to 3 Basic Pokemon and put them onto your Bench. Shuffle your deck afterward. You may switch Dunsparce with 1 of your Benched Pokemon.","[1] Sudden Flash (10)
+<br>Flip a coin. If heads, each Defending Pokemon is now Paralyzed.",Fx2,None,1,0.71,1.72,4.98,0.93,,Normal,
+125155,Taillow,Taillow,https://tcgplayer-cdn.tcgplayer.com/product/125155_200w.jpg,3,1853,https://cpt.tcgcsv.com/7502,2016-11-11T18:43:03.007,1,72,Common,Colorless,40,Basic,[1] Peck (10),[2] Wing Attack (20),Lx2,F-30,1,0.33,0.43,3.0,0.62,,Normal,
+125156,Swellow,Swellow,https://tcgplayer-cdn.tcgplayer.com/product/125156_200w.jpg,3,1853,https://cpt.tcgcsv.com/8502,2016-11-11T18:44:39.29,1,46,Uncommon,Colorless,70,Stage 1,[2] Wing Attack (30),,Lx2,F-30,0,0.8,1.0,5.0,0.93,,Normal,"<b>Poke-POWER — Drive Off</b>
+<br>Once during yoru turn <em>(before your attack)</em>, if Swellow is your Active Pokemon, you may switch 1 of the Defending Pokemon with 1 of your opponent's Benched Pokemon. Your opponent picks the Benched Pokemon to switch. This power can't be used if Swellow is affected by a Special Condition."
+125157,Onix,Onix,https://tcgplayer-cdn.tcgplayer.com/product/125157_200w.jpg,3,1853,https://cpt.tcgcsv.com/9502,2016-11-11T18:45:54.56,1,71,Common,Fighting,80,Basic,"[2] Bind (10)
+<br>Flip a coin. If heads, the Defending Pokemon is now Paralyzed.","[2F] Rage (10+)
+<br>Does 10 damage plus 10 more damage for each damage counter on Onix.",Wx2,None,3,0.25,0.49,8.88,0.43,,Normal,
+125158,Ancient Tomb,Ancient Tomb,https://tcgplayer-cdn.tcgplayer.com/product/125158_200w.jpg,3,1853,https://cpt.tcgcsv.com/b502,2016-11-11T18:47:25.583,1,87,Uncommon,Stadium,,,,,,,,4.75,7.99,20.0,5.0,,Normal,"<em>This card stays in play when you play it. Discard this card if another Stadium card comes into play.</em>
+<br>
+<br>Don't apply Weakness for all Pokemon in play <em>(excluding Pokemon ex and Pokemon that has an owner in its name)</em>."
+210078,EX Battle Stadium: Blaziken vs. Gardevoir,EX Battle Stadium Blaziken vs Gardevoir,https://tcgplayer-cdn.tcgplayer.com/product/210078_200w.jpg,3,1853,https://cpt.tcgcsv.com/B2J2,2020-02-29T16:34:35.353,1,,,,,,,,,,,,,,,,,"The Pokémon TCG: EX Battle Stadium is for the strong-hearted. Inside you will face challenges the likes of which you have never seen. Of course, you will not be alone. At your side will be either the fiery Blaziken or the psychic Gardevoir, plus a battle-ready team of Pokémon!
+<br>
+Everything two competitors need to face-off is inside the EX Battle Stadium. Each deck is built for epic battles, with sideboard kits to make them more powerful — even 2-on-2 Battles are possible.
+<br>
+So, are you feeling brave?"
+214286,Metal Energy (Special) - 94/109,Metal Energy Special 94 109,https://tcgplayer-cdn.tcgplayer.com/product/214286_200w.jpg,3,1853,https://cpt.tcgcsv.com/LKK2,2020-10-05T16:38:48.087,1,94/109,Rare,Special Metal Energy,,,,,,,,0.26,0.57,3.71,0.6,,Normal,"Damage done by attacks to the Pokemon that Metal Energy is attached to is reduced by 10 <em>(after applying Weakness and Resistance.)</em> Ignore this effect if the Pokemon that Metal Energy is attached to isn't Metal.  Metal Energy provides Metal Energy.  <em>(Doesn't count as a basic Energy card.)</em>
+
+<br><br><em>This card was reprinted without the e-card reader borders and symbol.</em>"

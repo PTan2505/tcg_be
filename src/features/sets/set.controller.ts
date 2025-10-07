@@ -1,4 +1,5 @@
 import { Context } from 'hono';
+import { MESSAGES, createSuccessResponse } from '../../shared/constants/messages';
 import { GetSetsOptions, ISetService, SetType } from './set.service';
 
 export class SetController {
@@ -6,44 +7,24 @@ export class SetController {
 
   getAllSets = async (c: Context) => {
     try {
-      const { category } = c.req.param();
       const {
         page,
         limit,
         search,
         sortBy,
-        sortOrder
+        sortOrder,
+        isSupplemental,
+        categoryId
       } = c.req.query();
-
-      // Validate set category is required
-      if (!category) {
-        return c.json({
-          success: false,
-          error: {
-            name: 'ValidationError',
-            field: 'category',
-            message: 'Category parameter is required. Must be either "pokemon" or "yugioh"'
-          }
-        }, 400);
-      }
-
-      if (!['pokemon', 'yugioh'].includes(category)) {
-        return c.json({
-          success: false,
-          error: {
-            name: 'ValidationError',
-            field: 'category',
-            message: 'Set category must be either "pokemon" or "yugioh"'
-          }
-        }, 400);
-      }
 
       const options: GetSetsOptions = {
         page: page ? parseInt(page) : undefined,
         limit: limit ? parseInt(limit) : undefined,
         search,
         sortBy,
-        sortOrder: sortOrder as 'asc' | 'desc'
+        sortOrder: sortOrder as 'asc' | 'desc',
+        isSupplemental: isSupplemental ? isSupplemental === 'true' : undefined,
+        categoryId: categoryId ? parseInt(categoryId) : undefined
       };
 
       // Validate pagination parameters
@@ -53,7 +34,7 @@ export class SetController {
           error: {
             name: 'ValidationError',
             field: 'page',
-            message: 'Page must be greater than 0'
+            message: MESSAGES.VALIDATION.PAGE_GREATER_THAN_ZERO
           }
         }, 400);
       }
@@ -64,25 +45,21 @@ export class SetController {
           error: {
             name: 'ValidationError',
             field: 'limit',
-            message: 'Limit must be between 1 and 100'
+            message: MESSAGES.VALIDATION.LIMIT_BETWEEN_1_100
           }
         }, 400);
       }
 
-      const result = await this.setService.getSetsByType(category as SetType, options);
+      const result = await this.setService.getAllSets(options);
 
-      return c.json({
-        success: true,
-        data: result.sets,
-        pagination: result.pagination
-      });
+      return c.json(createSuccessResponse(result.sets, MESSAGES.SETS.FETCH_SUCCESS, result.pagination));
     } catch (error: any) {
       return c.json({
         success: false,
         error: {
           name: 'Error',
           field: 'general',
-          message: error.message || 'Failed to fetch sets'
+          message: error.message || MESSAGES.SETS.FETCH_FAILED
         }
       }, 500);
     }
@@ -96,17 +73,19 @@ export class SetController {
         limit,
         search,
         sortBy,
-        sortOrder
+        sortOrder,
+        isSupplemental,
+        categoryId
       } = c.req.query();
 
       // Validate set type
-      if (!['pokemon', 'yugioh'].includes(type)) {
+      if (!['pokemon', 'yugioh', 'onepiece'].includes(type)) {
         return c.json({
           success: false,
           error: {
             name: 'ValidationError',
             field: 'type',
-            message: 'Set type must be either "pokemon" or "yugioh"'
+            message: MESSAGES.VALIDATION.GAME_TYPE_INVALID
           }
         }, 400);
       }
@@ -116,7 +95,9 @@ export class SetController {
         limit: limit ? parseInt(limit) : undefined,
         search,
         sortBy,
-        sortOrder: sortOrder as 'asc' | 'desc'
+        sortOrder: sortOrder as 'asc' | 'desc',
+        isSupplemental: isSupplemental ? isSupplemental === 'true' : undefined,
+        categoryId: categoryId ? parseInt(categoryId) : undefined
       };
 
       // Validate pagination parameters
@@ -126,7 +107,7 @@ export class SetController {
           error: {
             name: 'ValidationError',
             field: 'page',
-            message: 'Page must be greater than 0'
+            message: MESSAGES.VALIDATION.PAGE_GREATER_THAN_ZERO
           }
         }, 400);
       }
@@ -137,25 +118,21 @@ export class SetController {
           error: {
             name: 'ValidationError',
             field: 'limit',
-            message: 'Limit must be between 1 and 100'
+            message: MESSAGES.VALIDATION.LIMIT_BETWEEN_1_100
           }
         }, 400);
       }
 
       const result = await this.setService.getSetsByType(type as SetType, options);
 
-      return c.json({
-        success: true,
-        data: result.sets,
-        pagination: result.pagination
-      });
+      return c.json(createSuccessResponse(result.sets, MESSAGES.SETS.FETCH_SUCCESS, result.pagination));
     } catch (error: any) {
       return c.json({
         success: false,
         error: {
           name: 'Error',
           field: 'general',
-          message: error.message || 'Failed to fetch sets'
+          message: error.message || MESSAGES.SETS.FETCH_FAILED
         }
       }, 500);
     }
@@ -163,26 +140,11 @@ export class SetController {
 
   getSetById = async (c: Context) => {
     try {
-      const { category, setId } = c.req.param();
-
-      // Validate set category
-      if (!category || !['pokemon', 'yugioh'].includes(category)) {
-        return c.json({
-          success: false,
-          error: {
-            name: 'ValidationError',
-            field: 'category',
-            message: 'Set category must be either "pokemon" or "yugioh"'
-          }
-        }, 400);
-      }
+      const { setId } = c.req.param();
 
       const set = await this.setService.getSetById(setId);
 
-      return c.json({
-        success: true,
-        data: set
-      });
+      return c.json(createSuccessResponse(set));
     } catch (error: any) {
       if (error.message.includes('not found')) {
         return c.json({
@@ -190,7 +152,7 @@ export class SetController {
           error: {
             name: 'NotFoundError',
             field: 'setId',
-            message: error.message
+            message: MESSAGES.SETS.SET_NOT_FOUND
           }
         }, 404);
       }
@@ -200,7 +162,48 @@ export class SetController {
         error: {
           name: 'Error',
           field: 'general',
-          message: error.message || 'Failed to fetch set'
+          message: error.message || MESSAGES.SETS.FETCH_FAILED
+        }
+      }, 500);
+    }
+  };
+
+  getSetByGroupId = async (c: Context) => {
+    try {
+      const { groupId } = c.req.param();
+
+      if (!groupId || isNaN(parseInt(groupId))) {
+        return c.json({
+          success: false,
+          error: {
+            name: 'ValidationError',
+            field: 'groupId',
+            message: MESSAGES.VALIDATION.GROUP_ID_REQUIRED
+          }
+        }, 400);
+      }
+
+      const set = await this.setService.getSetByGroupId(parseInt(groupId));
+
+      return c.json(createSuccessResponse(set));
+    } catch (error: any) {
+      if (error.message.includes('not found')) {
+        return c.json({
+          success: false,
+          error: {
+            name: 'NotFoundError',
+            field: 'groupId',
+            message: MESSAGES.SETS.SET_NOT_FOUND
+          }
+        }, 404);
+      }
+
+      return c.json({
+        success: false,
+        error: {
+          name: 'Error',
+          field: 'general',
+          message: error.message || MESSAGES.SETS.FETCH_FAILED
         }
       }, 500);
     }
@@ -208,7 +211,7 @@ export class SetController {
 
   searchSets = async (c: Context) => {
     try {
-      const { category } = c.req.param();
+      const { type } = c.req.param();
       const { q: query, page, limit, sortBy, sortOrder } = c.req.query();
 
       // Validate search query
@@ -218,30 +221,19 @@ export class SetController {
           error: {
             name: 'ValidationError',
             field: 'q',
-            message: 'Search query is required'
+            message: MESSAGES.VALIDATION.SEARCH_QUERY_REQUIRED
           }
         }, 400);
       }
 
-      // Validate set category is required
-      if (!category) {
+      // Validate set type
+      if (!['pokemon', 'yugioh', 'onepiece'].includes(type)) {
         return c.json({
           success: false,
           error: {
             name: 'ValidationError',
-            field: 'category',
-            message: 'Category parameter is required. Must be either "pokemon" or "yugioh"'
-          }
-        }, 400);
-      }
-
-      if (!['pokemon', 'yugioh'].includes(category)) {
-        return c.json({
-          success: false,
-          error: {
-            name: 'ValidationError',
-            field: 'category',
-            message: 'Set category must be either "pokemon" or "yugioh"'
+            field: 'type',
+            message: MESSAGES.VALIDATION.GAME_TYPE_INVALID
           }
         }, 400);
       }
@@ -253,21 +245,47 @@ export class SetController {
         sortOrder: sortOrder as 'asc' | 'desc'
       };
 
-      const result = await this.setService.searchSets(category as SetType, query, options);
+      const result = await this.setService.searchSets(type as SetType, query, options);
 
-      return c.json({
-        success: true,
-        data: result.sets,
-        pagination: result.pagination,
-        query
-      });
+      return c.json(createSuccessResponse(result.sets, MESSAGES.SETS.SEARCH_SUCCESS, result.pagination));
     } catch (error: any) {
       return c.json({
         success: false,
         error: {
           name: 'Error',
           field: 'general',
-          message: error.message || 'Failed to search sets'
+          message: error.message || MESSAGES.SETS.SEARCH_FAILED
+        }
+      }, 500);
+    }
+  };
+
+  getSetStats = async (c: Context) => {
+    try {
+      const { type } = c.req.param();
+
+      // Validate set type if provided
+      if (type && !['pokemon', 'yugioh', 'onepiece'].includes(type)) {
+        return c.json({
+          success: false,
+          error: {
+            name: 'ValidationError',
+            field: 'type',
+            message: MESSAGES.VALIDATION.GAME_TYPE_INVALID
+          }
+        }, 400);
+      }
+
+      const stats = await this.setService.getSetStats(type as SetType);
+
+      return c.json(createSuccessResponse(stats, MESSAGES.SETS.STATS_SUCCESS));
+    } catch (error: any) {
+      return c.json({
+        success: false,
+        error: {
+          name: 'Error',
+          field: 'general',
+          message: error.message || MESSAGES.SETS.STATS_FAILED
         }
       }, 500);
     }

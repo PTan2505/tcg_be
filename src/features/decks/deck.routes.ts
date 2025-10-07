@@ -1,99 +1,36 @@
 import { Hono } from 'hono';
 import { authMiddleware } from '../../shared/middlewares/auth.middleware';
-import { rateLimitMiddleware, validateParamsMiddleware } from '../../shared/middlewares/security.middleware';
-import { validateRequest } from '../../shared/middlewares/validation.middleware';
-import { UserCardService } from '../collections/userCard.service';
-import { DeckController } from './deck.controller';
-import { DeckService } from './deck.service';
-import {
-  addCardToDeckSchema,
-  createDeckSchema,
-  duplicateDeckSchema,
-  updateCardQuantitySchema,
-  updateDeckSchema
-} from './deck.validator';
+import { deckController } from './deck.controller';
 
-const userCardService = new UserCardService();
-const deckService = new DeckService(userCardService);
-const deckController = new DeckController(deckService);
+const deck = new Hono();
 
-export const deckRoutes = new Hono();
+// User deck management routes (protected)
+deck.get('/user', authMiddleware, deckController.getUserDecks);
+deck.post('/user', authMiddleware, deckController.createDeck);
+deck.get('/user/:id', authMiddleware, deckController.getDeckById);
+deck.put('/user/:id', authMiddleware, deckController.updateDeck);
+deck.delete('/user/:id', authMiddleware, deckController.deleteDeck);
 
-// All routes require authentication and rate limiting
-deckRoutes.use('/*', authMiddleware);
-deckRoutes.use('/*', rateLimitMiddleware(100, 60000)); // 100 requests per minute for deck operations
+// User deck card management
+deck.post('/user/:id/cards', authMiddleware, deckController.addCardToDeck);
+deck.put('/user/:id/cards/:cardId', authMiddleware, (c) => c.json({ 
+  success: false, 
+  error: 'Update deck card not implemented yet' 
+}, 404));
+deck.delete('/user/:id/cards/:cardId', authMiddleware, deckController.removeCardFromDeck);
 
-// Create new deck
-deckRoutes.post(
-  '/',
-  validateRequest(createDeckSchema),
-  deckController.createDeck
-);
+// User deck operations
+deck.post('/user/:id/validate', authMiddleware, (c) => c.json({ 
+  success: true, 
+  message: 'Deck validation placeholder - always valid' 
+}));
+deck.post('/user/:id/duplicate', authMiddleware, deckController.duplicateDeck);
 
-// Get user's decks
-deckRoutes.get(
-  '/',
-  deckController.getUserDecks
-);
+// Public routes
+deck.get('/public', deckController.getPublicDecks);
+deck.get('/search', deckController.searchDecks);
+deck.get('/popular', deckController.getPopularDecks);
+deck.get('/:id', deckController.getDeckById);
+deck.get('/:id/stats', deckController.getDeckStats);
 
-// Get specific deck (can view public decks or owned decks)
-deckRoutes.get(
-  '/:deckId',
-  validateParamsMiddleware(['deckId']),
-  deckController.getDeckById
-);
-
-// Update deck (only owner)
-deckRoutes.patch(
-  '/:deckId',
-  validateParamsMiddleware(['deckId']),
-  validateRequest(updateDeckSchema),
-  deckController.updateDeck
-);
-
-// Delete deck (only owner)
-deckRoutes.delete(
-  '/:deckId',
-  validateParamsMiddleware(['deckId']),
-  deckController.deleteDeck
-);
-
-// Add card to deck (only owner, must own the card)
-deckRoutes.post(
-  '/:deckId/cards',
-  validateParamsMiddleware(['deckId']),
-  validateRequest(addCardToDeckSchema),
-  deckController.addCardToDeck
-);
-
-// Remove card from deck (only owner)
-deckRoutes.delete(
-  '/:deckId/cards/:cardId',
-  validateParamsMiddleware(['deckId', 'cardId']),
-  deckController.removeCardFromDeck
-);
-
-// Update card quantity in deck (only owner)
-deckRoutes.patch(
-  '/:deckId/cards/:cardId',
-  validateParamsMiddleware(['deckId', 'cardId']),
-  validateRequest(updateCardQuantitySchema),
-  deckController.updateCardQuantity
-);
-
-// Validate deck format compliance (only owner or public deck)
-deckRoutes.get(
-  '/:deckId/validate',
-  validateParamsMiddleware(['deckId']),
-  deckController.validateDeck
-);
-
-// Duplicate deck (can duplicate public decks or owned decks)
-deckRoutes.post(
-  '/:deckId/duplicate',
-  validateParamsMiddleware(['deckId']),
-  validateRequest(duplicateDeckSchema),
-  deckController.duplicateDeck
-);
-
-export default deckRoutes;
+export default deck;

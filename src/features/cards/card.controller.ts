@@ -1,13 +1,12 @@
 import { Context } from 'hono';
-import { getCardCategory, getValidCardCategories } from '../../shared/types/card.types';
-import { GetCardsOptions, ICardService } from './card.service';
+import { MESSAGES, createSuccessResponse } from '../../shared/constants/messages';
+import { GameType, GetCardsOptions, ICardService } from './card.service';
 
 export class CardController {
   constructor(private cardService: ICardService) {}
 
-  getCardsByType = async (c: Context) => {
+  getAllCards = async (c: Context) => {
     try {
-      const { category } = c.req.param();
       const {
         page,
         limit,
@@ -15,22 +14,130 @@ export class CardController {
         sortBy,
         sortOrder,
         rarity,
+        setId,
+        minPrice,
+        maxPrice,
+        // New enhanced filtering parameters
         cardType,
-        set,
+        color,
         attribute,
-        race
+        subtype,
+        cost,
+        power,
+        life,
+        hp,
+        stage,
+        monsterType,
+        defense,
+        level,
+        description
       } = c.req.query();
 
-      // Validate card category
-      try {
-        getCardCategory(category); // This will throw if invalid
-      } catch (error) {
+      const options: GetCardsOptions = {
+        page: page ? parseInt(page) : undefined,
+        limit: limit ? parseInt(limit) : undefined,
+        search,
+        sortBy,
+        sortOrder: sortOrder as 'asc' | 'desc',
+        rarity,
+        setId,
+        minPrice: minPrice ? parseFloat(minPrice) : undefined,
+        maxPrice: maxPrice ? parseFloat(maxPrice) : undefined,
+        // Enhanced filtering options
+        cardType,
+        color,
+        attribute,
+        subtype,
+        cost: cost ? parseInt(cost) : undefined,
+        power: power ? parseInt(power) : undefined,
+        life: life ? parseInt(life) : undefined,
+        hp: hp ? parseInt(hp) : undefined,
+        stage,
+        monsterType,
+        defense: defense ? parseInt(defense) : undefined,
+        level: level ? parseInt(level) : undefined,
+        description
+      };
+
+      // Validate pagination parameters
+      if (options.page && options.page < 1) {
         return c.json({
           success: false,
           error: {
             name: 'ValidationError',
-            field: 'category',
-            message: `Card category must be one of: ${getValidCardCategories().join(', ')}`
+            field: 'page',
+            message: MESSAGES.VALIDATION.PAGE_GREATER_THAN_ZERO
+          }
+        }, 400);
+      }
+
+      if (options.limit && (options.limit < 1 || options.limit > 100)) {
+        return c.json({
+          success: false,
+          error: {
+            name: 'ValidationError',
+            field: 'limit',
+            message: MESSAGES.VALIDATION.LIMIT_BETWEEN_1_100
+          }
+        }, 400);
+      }
+
+      const result = await this.cardService.getAllCards(options);
+
+      return c.json({
+        success: true,
+        data: result.cards,
+        pagination: result.pagination
+      });
+    } catch (error: any) {
+      return c.json({
+        success: false,
+        error: {
+          name: 'Error',
+          field: 'general',
+          message: error.message || MESSAGES.CARDS.FETCH_FAILED
+        }
+      }, 500);
+    }
+  };
+
+  getCardsByGameType = async (c: Context) => {
+    try {
+      const { type } = c.req.param();
+      const {
+        page,
+        limit,
+        search,
+        sortBy,
+        sortOrder,
+        rarity,
+        setId,
+        minPrice,
+        maxPrice,
+        // New enhanced filtering parameters
+        cardType,
+        color,
+        attribute,
+        subtype,
+        cost,
+        power,
+        life,
+        hp,
+        stage,
+        monsterType,
+        defense,
+        level,
+        description
+      } = c.req.query();
+
+      // Validate game type
+      if (!['pokemon', 'yugioh', 'onepiece'].includes(type)) {
+        return c.json({
+          success: false,
+          error: {
+            name: 'ValidationError',
+            field: 'type',
+            message: MESSAGES.VALIDATION.GAME_TYPE_INVALID
           }
         }, 400);
       }
@@ -41,13 +148,24 @@ export class CardController {
         search,
         sortBy,
         sortOrder: sortOrder as 'asc' | 'desc',
-        filters: {
-          rarity,
-          type: cardType,
-          set,
-          attribute,
-          race
-        }
+        rarity,
+        setId,
+        minPrice: minPrice ? parseFloat(minPrice) : undefined,
+        maxPrice: maxPrice ? parseFloat(maxPrice) : undefined,
+        // Enhanced filtering options
+        cardType,
+        color,
+        attribute,
+        subtype,
+        cost: cost ? parseInt(cost) : undefined,
+        power: power ? parseInt(power) : undefined,
+        life: life ? parseInt(life) : undefined,
+        hp: hp ? parseInt(hp) : undefined,
+        stage,
+        monsterType,
+        defense: defense ? parseInt(defense) : undefined,
+        level: level ? parseInt(level) : undefined,
+        description
       };
 
       // Validate pagination parameters
@@ -68,13 +186,12 @@ export class CardController {
           error: {
             name: 'ValidationError',
             field: 'limit',
-            message: 'Limit must be between 1 and 100'
+            message: MESSAGES.VALIDATION.LIMIT_BETWEEN_1_100
           }
         }, 400);
       }
 
-      const cardCategory = getCardCategory(category);
-      const result = await this.cardService.getCardsByType(cardCategory, options);
+      const result = await this.cardService.getCardsByGameType(type as GameType, options);
 
       return c.json({
         success: true,
@@ -87,7 +204,7 @@ export class CardController {
         error: {
           name: 'Error',
           field: 'general',
-          message: error.message || 'Failed to fetch cards'
+          message: error.message || MESSAGES.CARDS.FETCH_FAILED
         }
       }, 500);
     }
@@ -95,27 +212,11 @@ export class CardController {
 
   getCardById = async (c: Context) => {
     try {
-      const { category, cardId } = c.req.param();
+      const { cardId } = c.req.param();
 
-      // Validate card category
-      if (!['pokemon', 'yugioh'].includes(category)) {
-        return c.json({
-          success: false,
-          error: {
-            name: 'ValidationError',
-            field: 'category',
-            message: 'Card category must be either "pokemon" or "yugioh"'
-          }
-        }, 400);
-      }
+      const card = await this.cardService.getCardById(cardId);
 
-      const cardCategory = getCardCategory(category);
-      const card = await this.cardService.getCardById(cardId, cardCategory);
-
-      return c.json({
-        success: true,
-        data: card
-      });
+      return c.json(createSuccessResponse(card));
     } catch (error: any) {
       if (error.message.includes('not found')) {
         return c.json({
@@ -123,7 +224,7 @@ export class CardController {
           error: {
             name: 'NotFoundError',
             field: 'cardId',
-            message: error.message
+            message: MESSAGES.CARDS.CARD_NOT_FOUND
           }
         }, 404);
       }
@@ -133,7 +234,48 @@ export class CardController {
         error: {
           name: 'Error',
           field: 'general',
-          message: error.message || 'Failed to fetch card'
+          message: error.message || MESSAGES.CARDS.FETCH_FAILED
+        }
+      }, 500);
+    }
+  };
+
+  getCardByProductId = async (c: Context) => {
+    try {
+      const { productId } = c.req.param();
+
+      if (!productId || isNaN(parseInt(productId))) {
+        return c.json({
+          success: false,
+          error: {
+            name: 'ValidationError',
+            field: 'productId',
+            message: MESSAGES.VALIDATION.PRODUCT_ID_REQUIRED
+          }
+        }, 400);
+      }
+
+      const card = await this.cardService.getCardByProductId(parseInt(productId));
+
+      return c.json(createSuccessResponse(card));
+    } catch (error: any) {
+      if (error.message.includes('not found')) {
+        return c.json({
+          success: false,
+          error: {
+            name: 'NotFoundError',
+            field: 'productId',
+            message: MESSAGES.CARDS.CARD_NOT_FOUND
+          }
+        }, 404);
+      }
+
+      return c.json({
+        success: false,
+        error: {
+          name: 'Error',
+          field: 'general',
+          message: error.message || MESSAGES.CARDS.FETCH_FAILED
         }
       }, 500);
     }
@@ -141,17 +283,40 @@ export class CardController {
 
   searchCards = async (c: Context) => {
     try {
-      const { category } = c.req.param();
-      const { q: query, page, limit, sortBy, sortOrder } = c.req.query();
+      const { type } = c.req.param();
+      const {
+        q: query,
+        page,
+        limit,
+        sortBy,
+        sortOrder,
+        rarity,
+        minPrice,
+        maxPrice,
+        // New enhanced filtering parameters
+        cardType,
+        color,
+        attribute,
+        subtype,
+        cost,
+        power,
+        life,
+        hp,
+        stage,
+        monsterType,
+        defense,
+        level,
+        description
+      } = c.req.query();
 
-      // Validate card category
-      if (!['pokemon', 'yugioh'].includes(category)) {
+      // Validate game type
+      if (!['pokemon', 'yugioh', 'onepiece'].includes(type)) {
         return c.json({
           success: false,
           error: {
             name: 'ValidationError',
-            field: 'category',
-            message: 'Card category must be either "pokemon" or "yugioh"'
+            field: 'type',
+            message: MESSAGES.VALIDATION.GAME_TYPE_INVALID
           }
         }, 400);
       }
@@ -163,7 +328,7 @@ export class CardController {
           error: {
             name: 'ValidationError',
             field: 'q',
-            message: 'Search query is required'
+            message: MESSAGES.VALIDATION.SEARCH_QUERY_REQUIRED
           }
         }, 400);
       }
@@ -172,24 +337,36 @@ export class CardController {
         page: page ? parseInt(page) : undefined,
         limit: limit ? parseInt(limit) : undefined,
         sortBy,
-        sortOrder: sortOrder as 'asc' | 'desc'
+        sortOrder: sortOrder as "asc" | "desc",
+        rarity,
+        minPrice: minPrice ? parseFloat(minPrice) : undefined,
+        maxPrice: maxPrice ? parseFloat(maxPrice) : undefined,
+        // Enhanced filtering options
+        cardType,
+        color,
+        attribute,
+        subtype,
+        cost: cost ? parseInt(cost) : undefined,
+        power: power ? parseInt(power) : undefined,
+        life: life ? parseInt(life) : undefined,
+        hp: hp ? parseInt(hp) : undefined,
+        stage,
+        monsterType,
+        defense: defense ? parseInt(defense) : undefined,
+        level: level ? parseInt(level) : undefined,
+        description
       };
 
-      const cardCategory = getCardCategory(category);
-      const result = await this.cardService.searchCards(cardCategory, query, options);
+      const result = await this.cardService.searchCards(type as GameType, query, options);
 
-      return c.json({
-        success: true,
-        data: result.cards,
-        pagination: result.pagination
-      });
+      return c.json(createSuccessResponse(result.cards, MESSAGES.CARDS.SEARCH_SUCCESS, result.pagination));
     } catch (error: any) {
       return c.json({
         success: false,
         error: {
           name: 'Error',
           field: 'general',
-          message: error.message || 'Failed to search cards'
+          message: error.message || MESSAGES.CARDS.SEARCH_FAILED
         }
       }, 500);
     }
@@ -197,26 +374,28 @@ export class CardController {
 
   getCardsBySet = async (c: Context) => {
     try {
-      const { category, setId } = c.req.param();
+      const { setId } = c.req.param();
       const {
         page,
         limit,
         search,
         sortBy,
-        sortOrder
+        sortOrder,
+        // Enhanced filtering parameters for set-specific queries
+        cardType,
+        color,
+        attribute,
+        subtype,
+        cost,
+        power,
+        life,
+        hp,
+        stage,
+        monsterType,
+        defense,
+        level,
+        description
       } = c.req.query();
-
-      // Validate card category
-      if (!['pokemon', 'yugioh'].includes(category)) {
-        return c.json({
-          success: false,
-          error: {
-            name: 'ValidationError',
-            field: 'category',
-            message: 'Card category must be either "pokemon" or "yugioh"'
-          }
-        }, 400);
-      }
 
       // Validate set identifier
       if (!setId || setId.trim().length === 0) {
@@ -225,7 +404,7 @@ export class CardController {
           error: {
             name: 'ValidationError',
             field: 'setId',
-            message: 'Set ID is required'
+            message: MESSAGES.VALIDATION.SET_ID_REQUIRED
           }
         }, 400);
       }
@@ -235,7 +414,21 @@ export class CardController {
         limit: limit ? parseInt(limit) : undefined,
         search,
         sortBy,
-        sortOrder: sortOrder as 'asc' | 'desc'
+        sortOrder: sortOrder as 'asc' | 'desc',
+        // Enhanced filtering options
+        cardType,
+        color,
+        attribute,
+        subtype,
+        cost: cost ? parseInt(cost) : undefined,
+        power: power ? parseInt(power) : undefined,
+        life: life ? parseInt(life) : undefined,
+        hp: hp ? parseInt(hp) : undefined,
+        stage,
+        monsterType,
+        defense: defense ? parseInt(defense) : undefined,
+        level: level ? parseInt(level) : undefined,
+        description
       };
 
       // Validate pagination parameters
@@ -245,7 +438,7 @@ export class CardController {
           error: {
             name: 'ValidationError',
             field: 'page',
-            message: 'Page must be greater than 0'
+            message: MESSAGES.VALIDATION.PAGE_GREATER_THAN_ZERO
           }
         }, 400);
       }
@@ -256,30 +449,52 @@ export class CardController {
           error: {
             name: 'ValidationError',
             field: 'limit',
-            message: 'Limit must be between 1 and 100'
+            message: MESSAGES.VALIDATION.LIMIT_BETWEEN_1_100
           }
         }, 400);
       }
 
-      const cardCategory = getCardCategory(category);
-      const result = await this.cardService.getCardsBySet(cardCategory, setId, options);
+      const result = await this.cardService.getCardsBySet(setId, options);
 
-      return c.json({
-        success: true,
-        data: result.cards,
-        pagination: result.pagination,
-        metadata: {
-          setId,
-          cardCategory: category
-        }
-      });
+      return c.json(createSuccessResponse(result.cards, MESSAGES.CARDS.CARDS_BY_SET_SUCCESS, result.pagination));
     } catch (error: any) {
       return c.json({
         success: false,
         error: {
           name: 'Error',
           field: 'general',
-          message: error.message || 'Failed to fetch cards by set'
+          message: error.message || MESSAGES.CARDS.CARDS_BY_SET_FAILED
+        }
+      }, 500);
+    }
+  };
+
+  getCardStats = async (c: Context) => {
+    try {
+      const { type } = c.req.param();
+
+      // Validate game type if provided
+      if (type && !['pokemon', 'yugioh', 'onepiece'].includes(type)) {
+        return c.json({
+          success: false,
+          error: {
+            name: 'ValidationError',
+            field: 'type',
+            message: MESSAGES.VALIDATION.GAME_TYPE_INVALID
+          }
+        }, 400);
+      }
+
+      const stats = await this.cardService.getCardStats(type as GameType);
+
+      return c.json(createSuccessResponse(stats, MESSAGES.CARDS.STATS_SUCCESS));
+    } catch (error: any) {
+      return c.json({
+        success: false,
+        error: {
+          name: 'Error',
+          field: 'general',
+          message: error.message || MESSAGES.CARDS.STATS_FAILED
         }
       }, 500);
     }

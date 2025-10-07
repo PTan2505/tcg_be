@@ -1,0 +1,92 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extCardText,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extWeakness,extResistance,extRetreatCost,extAttack2
+280301,Trick or Trade BOOster Bundle - Mini Booster Pack,Trick or Trade BOOster Bundle Mini Booster Pack,https://tcgplayer-cdn.tcgplayer.com/product/280301_200w.jpg,3,3179,https://cpt.tcgcsv.com/28g3,2022-09-06T17:28:03.503,1,"Each Pokémon TCG: Trick or Trade BOOster Bundle mini booster packs each contain three cards that highlight a spooky Pokémon — such as Zubat, Gengar, Pumpkaboo, Mimikyu and Polteageist — and feature a Pikachu jack-o’-lantern stamp on every card. 
+<br><br><em>(Pokemon TCG booster packs vary by product.)</em>",0.25,0.86,4.47,0.81,,Normal,,,,,,,,,,
+280302,Trick or Trade BOOster Bundle (40 ct),Trick or Trade BOOster Bundle 40 ct,https://tcgplayer-cdn.tcgplayer.com/product/280302_200w.jpg,3,3179,https://cpt.tcgcsv.com/38g3,2024-11-11T17:09:59.547,1,"Make an unforgettable impression on the spookiest night of the year with the Pokémon TCG: Trick or Trade BOOster Bundle. Featuring 40 mini packs, each containing three cards boasting gourdgeous art, the Trick or Trade BOOster Bundle contains plenty of goodies for trick-or-treaters. Creep it real with a surprise that lasts longer than candy by merging the magic of Pokémon with all the delightful thrills and chills of Halloween.
+<br><br><em>(Pokemon TCG booster packs vary by product.)</em>",25.0,38.49,199.99,25.77,,Normal,,,,,,,,,,
+283766,Gengar (2021 Copyright Date),Gengar 2021 Copyright Date,https://tcgplayer-cdn.tcgplayer.com/product/283766_200w.jpg,3,3179,https://cpt.tcgcsv.com/lwh3,2025-01-22T18:50:24.803,1,"<strong>Ability — Last Gift</strong>
+<br>
+If this Pokémon is Knocked Out by damage from an attack from your opponent's Pokémon, search your deck for up to 2 cards and put them into your hand. Then, shuffle your deck.",0.15,0.6,20.39,0.61,,Holofoil,057/198,Promo,Psychic,130,Stage 2,"[3] Pain Burst (10+)
+<br>
+This attack does 40 more damage for each damage counter on your opponent's Active Pokémon.",Dx2,F-30,1,
+283785,Mewtwo,Mewtwo,https://tcgplayer-cdn.tcgplayer.com/product/283785_200w.jpg,3,3179,https://cpt.tcgcsv.com/Kwh3,2023-03-10T16:56:27.973,1,,0.09,0.4,15.39,0.43,,Holofoil,056/172,Promo,Psychic,130,Basic,"[P] Life Sucker (20)
+<br>
+Heal 20 damage from this Pokémon.",Dx2,F-30,2,[1PP] Psyburn (110)
+283786,Mismagius,Mismagius,https://tcgplayer-cdn.tcgplayer.com/product/283786_200w.jpg,3,3179,https://cpt.tcgcsv.com/Lwh3,2023-03-07T20:51:21.593,1,,0.01,0.19,4.39,0.14,,Holofoil,059/189,Promo,Psychic,90,Stage 1,"[P] Ominous Prose
+<br>
+Your opponent reveals their hand. If they have 4 or more cards in their hand, choose all but 3, and your opponent shuffles the chosen cards into their deck.",Dx2,F-30,1,[1P] Psybeam (50)
+283787,Dusknoir,Dusknoir,https://tcgplayer-cdn.tcgplayer.com/product/283787_200w.jpg,3,3179,https://cpt.tcgcsv.com/Mwh3,2023-03-07T20:50:40.87,1,"<strong>Ability — Special Transfer</strong>
+<br>
+As often as you like during your turn, you may move a Special Energy from 1 of your Pokémon to another of your Pokémon.",0.01,0.2,5.39,0.15,,Holofoil,062/172,Promo,Psychic,160,Stage 2,[2P] Devour Soul (120),Dx2,F-30,3,
+283788,Darkrai,Darkrai,https://tcgplayer-cdn.tcgplayer.com/product/283788_200w.jpg,3,3179,https://cpt.tcgcsv.com/Nwh3,2022-09-06T17:29:17.313,1,"<strong>Ability — Darkness Guard</strong>
+<br>
+If this Pokémon Has any Darkness Energy attached, it takes 20 less damage from attacks <em>(after applying Weakness and Resistance)</em>.",0.04,0.24,5.39,0.19,,Holofoil,105/189,Promo,Darkness,120,Basic,"[3] Vortex of Darkness (60+)
+<br>
+This attack does 20 more damage for each Darkness Energy attached to this Pokémon.",Gx2,,2,
+283790,Chandelure,Chandelure,https://tcgplayer-cdn.tcgplayer.com/product/283790_200w.jpg,3,3179,https://cpt.tcgcsv.com/Qwh3,2022-12-23T08:17:37.493,1,"<strong>Ability — Protective Glow</strong>
+<br>
+All of your Pokémon that have Energy attached have no Weakness.",0.01,0.21,6.39,0.21,,Holofoil,033/192,Promo,Fire,140,Stage 2,"[1R] Mirage Flare (110)
+<br>
+Your opponent's Active Pokémon is now Confused.",Wx2,,2,
+283793,Trevenant,Trevenant,https://tcgplayer-cdn.tcgplayer.com/product/283793_200w.jpg,3,3179,https://cpt.tcgcsv.com/Twh3,2022-09-06T17:37:39.96,1,,0.01,0.2,6.39,0.1,,Holofoil,015/192,Promo,Grass,130,Stage 1,[G] Seed Bomb (40),Rx2,,3,"[1GG] Shadow Cage (120)
+<br>
+During your opponent's next turn, the Defending Pokémon can't retreat."
+283795,Gourgeist,Gourgeist,https://tcgplayer-cdn.tcgplayer.com/product/283795_200w.jpg,3,3179,https://cpt.tcgcsv.com/Wwh3,2023-03-07T20:52:06.23,1,,0.01,0.2,5.39,0.19,,Holofoil,077/203,Promo,Psychic,120,Stage 1,"[2] Pandemonium (60x)
+<br>
+Reveal the top 6 cards of your deck. This attack does 60 damage for each Psychic Pokémon you find there. Then, shuffle those Pokémon back into your deck and discard the other cards.",Dx2,F-30,2,
+283798,Mimikyu,Mimikyu,https://tcgplayer-cdn.tcgplayer.com/product/283798_200w.jpg,3,3179,https://cpt.tcgcsv.com/-wh3,2022-09-06T17:34:33.2,1,"<strong>Ability — Heal Jamming</strong>
+<br>
+Your opponent's Benched Pokémon can't be healed.",0.08,0.27,9.0,0.28,,Holofoil,081/189,Promo,Psychic,70,Basic,[1P] Claw Slash (30),Dx2,F-30,1,
+283801,Hatterene,Hatterene,https://tcgplayer-cdn.tcgplayer.com/product/283801_200w.jpg,3,3179,https://cpt.tcgcsv.com/2xh3,2023-07-18T13:13:06.123,1,"<strong>Ability — Witch Rondo</strong>
+<br>
+Once during your turn, you may switch your Active Pokémon with 1 of your Benched Pokémon. If you do, your opponent switches their Active Pokémon with 1 of their Benched Pokémon.",0.01,0.2,10.0,0.16,,Holofoil,073/198,Promo,Psychic,130,Stage 2,"[2] Psychic (30+)
+<br>
+This attack does 50 more damage for each Energy attached to your opponent's Active Pokémon.",Dx2,F-30,1,
+283805,Pikachu,Pikachu,https://tcgplayer-cdn.tcgplayer.com/product/283805_200w.jpg,3,3179,https://cpt.tcgcsv.com/7xh3,2022-12-18T06:10:27.983,1,,0.15,0.28,5.39,0.28,,Normal,049/203,Promo,Lightning,60,Basic,"[L] Energize
+<br>
+Attach a Lightning Energy card from your discard pile to this Pokémon.",Fx2,,1,[2L] Electro Ball (30)
+283807,Cubone,Cubone,https://tcgplayer-cdn.tcgplayer.com/product/283807_200w.jpg,3,3179,https://cpt.tcgcsv.com/9xh3,2023-03-07T20:48:01.02,1,,0.01,0.2,2.89,0.13,,Normal,069/163,Promo,Fighting,70,Basic,[F] Beat (10),Gx2,,1,[1F] Headbutt (30)
+283810,Zubat,Zubat,https://tcgplayer-cdn.tcgplayer.com/product/283810_200w.jpg,3,3179,https://cpt.tcgcsv.com/dxh3,2022-09-06T17:37:50.117,1,,0.01,0.15,2.0,0.11,,Normal,089/163,Promo,Darkness,50,Basic,"[1] Hide in Shadows
+<br>
+Switch this Pokémon with 1 of your Benched Pokémon.",Fx2,,1,[2] Speed Dive (20)
+283811,Gastly,Gastly,https://tcgplayer-cdn.tcgplayer.com/product/283811_200w.jpg,3,3179,https://cpt.tcgcsv.com/fxh3,2023-03-07T20:49:07.9,1,,0.02,0.15,2.0,0.15,,Normal,055/198,Promo,Psychic,50,Basic,"[P] Sleep Pulse (10)
+<br>
+Flip a coin. If heads, your opponent's Active Pokémon is now Asleep.",Dx2,F-30,1,
+283812,Haunter,Haunter,https://tcgplayer-cdn.tcgplayer.com/product/283812_200w.jpg,3,3179,https://cpt.tcgcsv.com/gxh3,2023-03-07T20:48:43.24,1,,0.02,0.16,2.0,0.16,,Normal,056/198,Promo,Psychic,80,Stage 1,[P] Will-O-Wisp (30),Dx2,F-30,1,
+283815,Spinarak,Spinarak,https://tcgplayer-cdn.tcgplayer.com/product/283815_200w.jpg,3,3179,https://cpt.tcgcsv.com/kxh3,2024-02-07T19:27:15.553,1,,0.02,0.11,2.0,0.07,,Normal,102/189,Promo,Darkness,60,Basic,[D] Hang Down (10),Fx2,,1,[1D] Sting (20)
+283818,Ariados,Ariados,https://tcgplayer-cdn.tcgplayer.com/product/283818_200w.jpg,3,3179,https://cpt.tcgcsv.com/nxh3,2022-09-06T17:28:14.247,1,"<strong>Ability — Spider Net</strong>
+<br>
+When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may switch 1 of your opponent's Benched Pokémon with their Active Pokémon.",0.01,0.1,2.0,0.08,,Normal,103/189,Promo,Darkness,110,Stage 1,"[1D] Poison Sting (30)
+<br>Your opponent's Active Pokémon is now Poisoned.",Fx2,,2,
+283819,Murkrow,Murkrow,https://tcgplayer-cdn.tcgplayer.com/product/283819_200w.jpg,3,3179,https://cpt.tcgcsv.com/pxh3,2023-02-27T05:30:09.16,1,,0.02,0.1,5.0,0.07,,Normal,093/163,Promo,Darkness,70,Basic,"[1] Scout
+<br>
+Your opponent reveals their hand.",Lx2,F-30,1,[1D] Peck (20)
+283820,Misdreavus,Misdreavus,https://tcgplayer-cdn.tcgplayer.com/product/283820_200w.jpg,3,3179,https://cpt.tcgcsv.com/qxh3,2023-05-17T15:55:02.35,1,,0.01,0.1,5.0,0.1,,Normal,058/189,Promo,Psychic,60,Basic,[1] Mumble (10),Dx2,F-30,1,
+283821,Duskull,Duskull,https://tcgplayer-cdn.tcgplayer.com/product/283821_200w.jpg,3,3179,https://cpt.tcgcsv.com/rxh3,2022-09-06T17:30:03.303,1,,0.01,0.14,3.0,0.11,0.14,Normal,060/172,Promo,Psychic,60,Basic,"[P] Perplex (10)
+<br>
+Flip a coin. If heads, your opponent's Active Pokémon is now Confused.",Dx2,F-30,1,
+283822,Dusclops,Dusclops,https://tcgplayer-cdn.tcgplayer.com/product/283822_200w.jpg,3,3179,https://cpt.tcgcsv.com/sxh3,2022-09-06T17:29:31.447,1,,0.01,0.1,2.0,0.06,,Normal,061/172,Promo,Psychic,90,Stage 1,"[P] Fade to Black (30)
+<br>
+Your opponent's Active Pokémon is now Confused.",Dx2,F-30,2,
+283824,Litwick,Litwick,https://tcgplayer-cdn.tcgplayer.com/product/283824_200w.jpg,3,3179,https://cpt.tcgcsv.com/vxh3,2022-09-06T17:33:07.203,1,,0.03,0.11,2.0,0.07,,Normal,031/192,Promo,Fire,60,Basic,"[R] Scorch
+<br>
+Your opponent's Active Pokémon is now Burned.",Wx2,,1,
+283825,Lampent,Lampent,https://tcgplayer-cdn.tcgplayer.com/product/283825_200w.jpg,3,3179,https://cpt.tcgcsv.com/wxh3,2022-09-06T17:32:56.1,1,"<strong>Ability — Top Entry</strong>
+<br>
+Once during your turn, if you drew this Pokémon from your deck at the beginning of your turn and your Bench isn't full, before you put it into your hand, you may put it onto your Bench.",0.01,0.11,2.0,0.06,,Normal,032/192,Promo,Fire,80,Stage 1,"[R] Reignite (20)
+<br>
+Attach a Fire Energy card from your discard pile to 1 of your Pokémon.",Wx2,,1,
+283826,Phantump,Phantump,https://tcgplayer-cdn.tcgplayer.com/product/283826_200w.jpg,3,3179,https://cpt.tcgcsv.com/xxh3,2023-03-07T20:50:09.807,1,,0.01,0.1,2.0,0.07,0.06,Normal,016/264,Promo,Grass,60,Basic,[1] Tackle (10),Rx2,,,[1G] Seed Bomb (20)
+283828,Pumpkaboo,Pumpkaboo,https://tcgplayer-cdn.tcgplayer.com/product/283828_200w.jpg,3,3179,https://cpt.tcgcsv.com/Bxh3,2022-10-10T14:22:46.323,1,"<strong>Ability — Pumpkin Pit</strong>
+<br>
+When you play this Pokémon from your hand onto your Bench during your turn, you may discard a Stadium in play.",0.01,0.15,2.0,0.14,,Normal,076/203,Promo,Psychic,60,Basic,[2] Stampede (20),Dx2,F-30,,
+283831,Nickit,Nickit,https://tcgplayer-cdn.tcgplayer.com/product/283831_200w.jpg,3,3179,https://cpt.tcgcsv.com/Fxh3,2023-12-07T16:50:56.297,1,,0.02,0.1,2.0,0.08,,Normal,103/189,Promo,Darkness,60,Basic,[1] Rear Kick (10),Gx2,,1,
+283833,Hatenna,Hatenna,https://tcgplayer-cdn.tcgplayer.com/product/283833_200w.jpg,3,3179,https://cpt.tcgcsv.com/Hxh3,2022-09-06T17:31:04.493,1,,0.01,0.1,2.0,0.08,,Normal,018/073,Promo,Psychic,60,Basic,[P] Stamped (10),Dx2,F-30,1,[1P] Magical Shot (30)
+283836,Hattrem,Hattrem,https://tcgplayer-cdn.tcgplayer.com/product/283836_200w.jpg,3,3179,https://cpt.tcgcsv.com/Lxh3,2022-09-06T17:32:26.693,1,,0.02,0.12,5.0,0.08,,Normal,072/198,Promo,Psychic,80,Stage 1,[P] Spiral Drain (30),Dx2,F-30,1,
+283838,Sinistea,Sinistea,https://tcgplayer-cdn.tcgplayer.com/product/283838_200w.jpg,3,3179,https://cpt.tcgcsv.com/Nxh3,2022-09-06T17:36:52.503,1,,0.02,0.15,2.0,0.07,,Normal,082/189,Promo,Psychic,30,Basic,"[1] Furtive Drop
+<br>
+Put 2 damage counters on your opponent's Active Pokémon.",Dx2,F-30,1,
+283839,Polteageist,Polteageist,https://tcgplayer-cdn.tcgplayer.com/product/283839_200w.jpg,3,3179,https://cpt.tcgcsv.com/Pxh3,2024-03-15T05:20:22.187,1,"<strong>Ability — Tea Break</strong>
+<br>
+You must discard a Pokémon that has the Mad Party attack from your hand in order to use this Ability. Once during your turn, you may draw 2 cards.",0.01,0.1,2.0,0.07,,Normal,083/189,Promo,Psychic,60,Stage 1,"[2] Mad Party (20x)
+<br>
+This attack does 20 damage for each Pokémon in your discard pile that has the Mad Party attack.",Dx2,F-30,1,

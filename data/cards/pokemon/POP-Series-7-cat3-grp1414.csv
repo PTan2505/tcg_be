@@ -1,0 +1,71 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extCardText,extAttack1,extWeakness,extResistance,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extAttack2
+83542,Ampharos,Ampharos,https://tcgplayer-cdn.tcgplayer.com/product/83542_200w.jpg,3,1414,https://cpt.tcgcsv.com/SqH,2023-03-23T12:00:54.64,1,001/017,Rare,Lightning,130,Stage 2,"<strong>Poké-BODY — Jamming</strong>
+<br>
+After your opponent plays a Supporter card from his or her hand, put 1 damage counter on each of your opponent's Pokémon, You can't use more than 1 Jamming Poké-Body each turn.","[2L] Cluster Bolt (70)
+<br>You may discard all Lightning Energy attached to Ampharos. If you do, this attack does 20 damage to each of your opponent's Benched Pokémon that has any Energy cards attached to it.  <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",F+30,M-20,3,5.42,5.96,6.79,6.79,,Normal,
+83542,Ampharos,Ampharos,https://tcgplayer-cdn.tcgplayer.com/product/83542_200w.jpg,3,1414,https://cpt.tcgcsv.com/SqH,2023-03-23T12:00:54.64,1,001/017,Rare,Lightning,130,Stage 2,"<strong>Poké-BODY — Jamming</strong>
+<br>
+After your opponent plays a Supporter card from his or her hand, put 1 damage counter on each of your opponent's Pokémon, You can't use more than 1 Jamming Poké-Body each turn.","[2L] Cluster Bolt (70)
+<br>You may discard all Lightning Energy attached to Ampharos. If you do, this attack does 20 damage to each of your opponent's Benched Pokémon that has any Energy cards attached to it.  <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",F+30,M-20,3,6.86,8.99,14.85,9.95,9.59,Holofoil,
+84050,Burmy Plant Cloak,Burmy Plant Cloak,https://tcgplayer-cdn.tcgplayer.com/product/84050_200w.jpg,3,1414,https://cpt.tcgcsv.com/0FH,2022-09-23T20:38:36.803,1,011/017,Common,Grass,40,Basic,"<strong>Poké-POWER — Wear Cloak</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, if Burmy Plant Cloak is your Active Pokémon, you may search your discard pile for a basic Grass Energy card and attach it to Burmy Plant Cloak.","[1] Plant Cloak Tackle (10+)
+<br>If Burmy Plant Cloak has any Grass Energy attached to it, this attack does 10 damage plus 10 more damage.",R+10,,1,0.33,0.51,1.03,0.86,,Normal,
+84053,Burmy Sandy Cloak,Burmy Sandy Cloak,https://tcgplayer-cdn.tcgplayer.com/product/84053_200w.jpg,3,1414,https://cpt.tcgcsv.com/5FH,2023-05-06T19:38:30.433,1,012/017,Common,Grass,40,Basic,"<strong>Poké-POWER — Wear Cloak</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, if Burmy Sandy Cloak is your Active Pokémon, you may search your discard pile for a basic Fighting Energy card and attach it to Burmy Sandy Cloak.","[1] Sandy Cloak Tackle (10+)
+<br>If Burmy Sandy Cloak has any Fighting Energy attached to it, this attack does 10 damage plus 10 more damage.",R+10,,1,0.4,0.75,1.84,0.81,,Normal,
+84442,Corsola,Corsola,https://tcgplayer-cdn.tcgplayer.com/product/84442_200w.jpg,3,1414,https://cpt.tcgcsv.com/SNH,2022-09-23T20:42:28.583,1,013/017,Common,Water,70,Basic,,"[1] Rally
+<br>Search your deck for up to 3 different types of Basic Pokémon and put them on your Bench. Shuffle your deck afterward.",G+20,,1,0.2,0.8,2.23,0.88,,Normal,[1W] Hook (30)
+84749,Delibird,Delibird,https://tcgplayer-cdn.tcgplayer.com/product/84749_200w.jpg,3,1414,https://cpt.tcgcsv.com/_VH,2022-09-23T20:44:21.89,1,006/017,Uncommon,Water,70,Basic,,"[0] Present
+<br>Flip a coin. If heads, search your deck for any 1 card and put it into your hand. Shuffle your deck afterward.",M+20,,1,5.35,13.08,14.84,14.0,,Normal,[W] Ice Ball (20)
+85480,Flaaffy,Flaaffy,https://tcgplayer-cdn.tcgplayer.com/product/85480_200w.jpg,3,1414,https://cpt.tcgcsv.com/DcJ,2022-09-23T20:45:30.097,1,007/017,Uncommon,Lightning,80,Stage 1,,"[1] Attract Current (10)
+<br>Search your deck for a Lightning Energy card and attach it to 1 of your Pokémon. Shuffle your deck afterward.",F+20,M-20,1,,,,,,,"[1LL] Electromagnetic Kick (60)
+<br>Flip a coin. If tails, Flaaffy does 10 damage to itself."
+85605,Gallade,Gallade,https://tcgplayer-cdn.tcgplayer.com/product/85605_200w.jpg,3,1414,https://cpt.tcgcsv.com/7gJ,2022-09-23T20:48:17.02,1,002/017,Rare,Fighting,130,Stage 2,,"[1F] Sonic Blade
+<br>Put Damage counters on the Defending Pokémon until it is 50 HP away from being Knocked Out. If you do, your opponent switches the Defending Pokémon with 1 of his or her Benched Pokémon.",P+30,,2,4.25,8.0,10.17,8.37,,Normal,"[2P] Psychic Cut (60+)
+<br>You may choose as many of your face-down Prize cards as you like and put them face up. If you do, this attack does 60 damage plus 20 more damage for each Prize card you choose. <em>(These cards remain face up for the rest of the game.)</em>"
+85605,Gallade,Gallade,https://tcgplayer-cdn.tcgplayer.com/product/85605_200w.jpg,3,1414,https://cpt.tcgcsv.com/7gJ,2022-09-23T20:48:17.02,1,002/017,Rare,Fighting,130,Stage 2,,"[1F] Sonic Blade
+<br>Put Damage counters on the Defending Pokémon until it is 50 HP away from being Knocked Out. If you do, your opponent switches the Defending Pokémon with 1 of his or her Benched Pokémon.",P+30,,2,6.69,12.69,29.99,14.33,12.65,Holofoil,"[2P] Psychic Cut (60+)
+<br>You may choose as many of your face-down Prize cards as you like and put them face up. If you do, this attack does 60 damage plus 20 more damage for each Prize card you choose. <em>(These cards remain face up for the rest of the game.)</em>"
+86467,Kirlia,Kirlia,https://tcgplayer-cdn.tcgplayer.com/product/86467_200w.jpg,3,1414,https://cpt.tcgcsv.com/mCJ,2022-09-23T20:51:07.507,1,008/017,Uncommon,Psychic,80,Stage 1,,"[P] Psychic Research
+<br>Search your discard pile for a Supporter card and use the effect of that card as the effect of this attack. <em>(The Supporter card remains in your discard pile.)</em>",P+20,,1,0.82,3.66,13.97,6.22,,Normal,"[2P] Telekinesis
+<br>Choose 1 of your opponent's Pokémon. This attack does 40 damage to that Pokémon. This attack's damage isn't affected by Weakness or Resistance."
+86467,Kirlia,Kirlia,https://tcgplayer-cdn.tcgplayer.com/product/86467_200w.jpg,3,1414,https://cpt.tcgcsv.com/mCJ,2022-09-23T20:51:07.507,1,008/017,Uncommon,Psychic,80,Stage 1,,"[P] Psychic Research
+<br>Search your discard pile for a Supporter card and use the effect of that card as the effect of this attack. <em>(The Supporter card remains in your discard pile.)</em>",P+20,,1,7.94,11.2,39.99,13.29,,Holofoil,"[2P] Telekinesis
+<br>Choose 1 of your opponent's Pokémon. This attack does 40 damage to that Pokémon. This attack's damage isn't affected by Weakness or Resistance."
+86652,Latias,Latias,https://tcgplayer-cdn.tcgplayer.com/product/86652_200w.jpg,3,1414,https://cpt.tcgcsv.com/3HJ,2022-09-23T20:51:57.017,1,003/017,Rare,Colorless,80,Basic,,"[1] Miraculous Light (10)
+<br>Remove 1 damage counter and all Special Conditions from Latias.",C+20,F-20,1,8.05,10.13,14.99,10.71,,Normal,"[1RW] Mist Ball (80)
+<br>Discard a Fire Energy and a Water Energy attached to Latias."
+86652,Latias,Latias,https://tcgplayer-cdn.tcgplayer.com/product/86652_200w.jpg,3,1414,https://cpt.tcgcsv.com/3HJ,2022-09-23T20:51:57.017,1,003/017,Rare,Colorless,80,Basic,,"[1] Miraculous Light (10)
+<br>Remove 1 damage counter and all Special Conditions from Latias.",C+20,F-20,1,7.5,8.84,15.47,9.99,8.49,Holofoil,"[1RW] Mist Ball (80)
+<br>Discard a Fire Energy and a Water Energy attached to Latias."
+86666,Latios,Latios,https://tcgplayer-cdn.tcgplayer.com/product/86666_200w.jpg,3,1414,https://cpt.tcgcsv.com/lHJ,2024-04-01T05:30:39.493,1,004/017,Rare,Colorless,90,Basic,,"[1] Energy Draw (10)
+<br>Flip a coin. If heads, search your deck for a basic Energy card and attach it to Latios. Shuffle your deck afterward.",C+20,F-20,2,2.97,8.12,29.97,8.47,,Normal,"[2GL] Luster Purge (120)
+<br>Discard 3 Energy attached to Latios."
+86666,Latios,Latios,https://tcgplayer-cdn.tcgplayer.com/product/86666_200w.jpg,3,1414,https://cpt.tcgcsv.com/lHJ,2024-04-01T05:30:39.493,1,004/017,Rare,Colorless,90,Basic,,"[1] Energy Draw (10)
+<br>Flip a coin. If heads, search your deck for a basic Energy card and attach it to Latios. Shuffle your deck afterward.",C+20,F-20,2,8.85,11.39,69.99,10.71,4.03,Holofoil,"[2GL] Luster Purge (120)
+<br>Discard 3 Energy attached to Latios."
+87202,Mareep,Mareep,https://tcgplayer-cdn.tcgplayer.com/product/87202_200w.jpg,3,1414,https://cpt.tcgcsv.com/3VJ,2022-09-23T20:55:04.493,1,014/017,Common,Lightning,50,Basic,,"[L] Thundershock (10)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",F+10,M-20,1,0.63,0.99,2.5,1.07,,Normal,[1L] Static Shock (20)
+87581,Mothim,Mothim,https://tcgplayer-cdn.tcgplayer.com/product/87581_200w.jpg,3,1414,https://cpt.tcgcsv.com/F2K,2022-09-23T20:56:15.86,1,005/017,Rare,Grass,80,Stage 1,,"[0] Silver Wind
+<br>During your next turn, if an attack does damage to the Defending Pokémon <em>(after applying Weakness and Resistance.)</em>, that attack does 40 more damage.",R+20,F-20,,1.0,1.39,5.09,0.61,1.16,Normal,"[1G] Raging Scales (30+)
+<br>If Mothim has any damage counters on it, this attack does 30 damage plus 40 more damage."
+87581,Mothim,Mothim,https://tcgplayer-cdn.tcgplayer.com/product/87581_200w.jpg,3,1414,https://cpt.tcgcsv.com/F2K,2022-09-23T20:56:15.86,1,005/017,Rare,Grass,80,Stage 1,,"[0] Silver Wind
+<br>During your next turn, if an attack does damage to the Defending Pokémon <em>(after applying Weakness and Resistance.)</em>, that attack does 40 more damage.",R+20,F-20,,0.5,1.34,5.24,1.7,,Holofoil,"[1G] Raging Scales (30+)
+<br>If Mothim has any damage counters on it, this attack does 30 damage plus 40 more damage."
+88562,Ralts,Ralts,https://tcgplayer-cdn.tcgplayer.com/product/88562_200w.jpg,3,1414,https://cpt.tcgcsv.com/grK,2022-09-23T20:57:10.84,1,015/017,Common,Psychic,60,Basic,,[1] Smack (10),P+10,,1,1.0,5.34,5.99,1.21,,Normal,"[P] Confuse Ray
+<br>Flip a coin. If heads, the Defending Pokémon is now Confused."
+89067,Sentret,Sentret,https://tcgplayer-cdn.tcgplayer.com/product/89067_200w.jpg,3,1414,https://cpt.tcgcsv.com/mFK,2025-01-08T07:03:26.94,1,016/017,Common,Colorless,60,Basic,,"[1] Grope
+<br>Look at the top 2 cards of your deck, choose 1 of them and put it into your hand. Put the other on the bottom of your deck.",F+10,,1,0.4,0.72,1.98,0.92,,Normal,[1] Scratch (10)
+89462,Spinda,Spinda,https://tcgplayer-cdn.tcgplayer.com/product/89462_200w.jpg,3,1414,https://cpt.tcgcsv.com/gPK,2023-02-06T21:08:35.83,1,017/017,Common,Colorless,70,Basic,,"[1] Dish Out
+<br>Draw a card from the top and the bottom of your deck.",F+20,,1,0.5,0.79,1.27,1.1,,Normal,"[1] Synchro Punch (10+)
+<br>If any basic Energy card attached to Spinda is the same type as any Energy attached to the Defending Pokémon, this attack does 10 damage plus 30 more damage."
+89505,Stantler,Stantler,https://tcgplayer-cdn.tcgplayer.com/product/89505_200w.jpg,3,1414,https://cpt.tcgcsv.com/7QK,2022-09-23T21:00:21.343,1,009/017,Uncommon,Colorless,70,Basic,,"[0] Lead
+<br>Search your deck for a Supporter card, show it to your opponent, and put it into your hand. Shuffle your deck afterward.",F+20,,1,4.78,6.19,8.99,3.7,,Normal,"[2] Frighten Horn (20)
+<br>If the Defending Pokémon isn't an Evolved Pokémon, that Pokémon is now Confused."
+90643,Wormadam Sandy Cloak,Wormadam Sandy Cloak,https://tcgplayer-cdn.tcgplayer.com/product/90643_200w.jpg,3,1414,https://cpt.tcgcsv.com/TgL,2022-09-23T21:01:30.697,1,010/017,Uncommon,Fighting,80,Stage 1,"<strong>Poké-BODY — Sandy Cloak</strong>
+<br>
+Prevent all effects of attacks, excluding damage, done to Wormadam Sandy Cloak.","[2F] Push Over (40+)
+<br>Does 40 damage plus 10 more damage for each Fighting Energy attached to Wormadam Sandy Cloak.",R+20,L-20,1,1.25,2.3,5.69,3.83,,Normal,
+190535,POP Series 7 Pack,POP Series 7 Pack,https://tcgplayer-cdn.tcgplayer.com/product/190535_200w.jpg,3,1414,https://cpt.tcgcsv.com/Kdx2,2019-05-16T15:24:10.96,1,,,,,,Each POP Series 7 Pack contains 2 random cards for the Promotional POP Series 7.,,,,,14.97,19.5,34.44,19.59,,Normal,

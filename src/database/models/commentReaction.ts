@@ -4,7 +4,7 @@ export interface CommentReaction extends Document {
   _id: Types.ObjectId;
   user: Types.ObjectId;
   comment: Types.ObjectId;
-  type: 'like' | 'dislike';
+  type: 'like';
   createdAt: Date;
   updatedAt: Date;
 }
@@ -23,7 +23,7 @@ const commentReactionSchema = new Schema<CommentReaction>(
     },
     type: {
       type: String,
-      enum: ['like', 'dislike'],
+      enum: ['like'],
       required: true,
     },
   },

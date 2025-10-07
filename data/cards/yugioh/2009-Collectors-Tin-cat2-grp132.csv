@@ -1,0 +1,78 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extAttribute,extMonsterType,extCardType,extAttack,extDefense,extDescription,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName
+33118,Power Tool Dragon,Power Tool Dragon,https://tcgplayer-cdn.tcgplayer.com/product/33118_200w.jpg,2,132,https://cpt.tcgcsv.com/ngh,2024-03-28T15:45:19.697,1,CT06-EN001,Secret Rare,EARTH,Machine,Synchro/Effect Monster,2300,2500,"1 Tuner + 1 or more non-Tuner monsters
+Once per turn, during your Main Phase, you can select 3 Equip Spell Cards from your Deck, have your opponent pick 1 of them at random, and add it to your hand. Return the remaining cards to your Deck. If this card would be destroyed while equipped with an Equip Spell Card, you can send that card to the Graveyard instead.",3.3,7.68,25.0,8.12,,Limited
+33119,Ancient Fairy Dragon,Ancient Fairy Dragon,https://tcgplayer-cdn.tcgplayer.com/product/33119_200w.jpg,2,132,https://cpt.tcgcsv.com/pgh,2024-03-28T15:45:19.73,1,CT06-EN002,Secret Rare,LIGHT,Dragon,Synchro/Effect Monster,2100,3000,"1 Tuner + 1 or more non-Tuner monsters
+Once per turn, you can Special Summon 1 Level 4 or lower monster from your hand. If you activated this effect, you cannot enter your Battle Phase this turn. Also once per turn, you can destroy a Field Spell Card and gain 1000 Life Points. Then, you can add 1 Field Spell Card from your Deck to your hand.",3.78,7.2,38.8,7.38,5.19,Limited
+33120,Majestic Star Dragon,Majestic Star Dragon,https://tcgplayer-cdn.tcgplayer.com/product/33120_200w.jpg,2,132,https://cpt.tcgcsv.com/qgh,2024-03-28T15:45:20.13,1,CT06-EN003,Secret Rare,WIND,Dragon,Synchro/Effect Monster,3800,3000,"""Majestic Dragon"" + ""Stardust Dragon"" + 1 non-Tuner monster
+When your opponent activates the effect of a Spell, Trap or Effect Monster, you can Tribute this card to negate it, and destroy all cards your opponent controls. Once per turn, negate the effect(s) of 1 face-up monster your opponent controls until the End Phase. Also, that monster effect(s) can be treated as this card's effect and can be activated once. Return this card to the Extra Deck during the End Phase, and Special Summon 1 ""Stardust Dragon"" from your Graveyard.",1.99,5.0,12.78,9.67,,Limited
+33121,Earthbound Immortal Wiraqocha Rasca,Earthbound Immortal Wiraqocha Rasca,https://tcgplayer-cdn.tcgplayer.com/product/33121_200w.jpg,2,132,https://cpt.tcgcsv.com/rgh,2024-03-28T15:45:20.177,1,CT06-EN004,Secret Rare,DARK,Winged Beast,Effect Monster,100,100,"There can only be 1 face-up ""Earthbound Immortal"" monster on the field. If there is no face-up Field Spell Card on the field, destroy this card. Your opponent cannot select this card as an attack target. This card can attack your opponent directly. When this card is Normal Summoned, you can return up to 3 other cards you control to the Deck, then your opponent randomly discards cards from their hand equal to the amount of cards you returned, and this card gains 1000 ATK for each card discarded by your opponent.",0.5,2.11,20.0,2.12,,Limited
+79085,Blackwing - Elphin the Raven,Blackwing Elphin the Raven,https://tcgplayer-cdn.tcgplayer.com/product/79085_200w.jpg,2,132,https://cpt.tcgcsv.com/KFF,2024-03-28T15:45:20.207,1,CT06-ENS01,Secret Rare,DARK,Winged Beast,Effect Monster,2200,1200,"If you control a face-up Blackwing monster, you can Normal Summon this card without Tributing. When this card is Normal Summoned, you can change the Battle Position of 1 monster your opponent controls.",0.99,2.58,8.0,2.65,,Limited
+79086,Earthbound Immortal Aslla Piscu,Earthbound Immortal Aslla Piscu,https://tcgplayer-cdn.tcgplayer.com/product/79086_200w.jpg,2,132,https://cpt.tcgcsv.com/LFF,2024-03-28T15:45:20.253,1,CT06-ENS02,Secret Rare,DARK,Winged Beast,Effect Monster,2500,2500,"There can only be 1 ""Earthbound Immortal"" monster on the field. If there is no face-up Field Spell Card on the field, destroy this card. Your opponent cannot target this card for attacks. This card can attack your opponent directly. When this face-up card leaves the field, except by its own effect: Destroy as many face-up monsters your opponent controls as possible, and if you do, inflict 800 damage to your opponent for each monster destroyed.",2.0,5.29,9.98,5.94,,Limited
+79087,Earthbound Immortal Chacu Challhua,Earthbound Immortal Chacu Challhua,https://tcgplayer-cdn.tcgplayer.com/product/79087_200w.jpg,2,132,https://cpt.tcgcsv.com/MFF,2024-03-28T15:45:20.3,1,CT06-ENS03,Secret Rare,DARK,Fish,Effect Monster,2900,2400,"There can only be 1 face-up Earthbound Immortal monster on the field. If there is no face-up Field Spell Card on the field, destroy this card. Your opponent cannot select this card as an attack target. This card can attack your opponent directly. While th",6.72,10.12,18.0,9.92,,Limited
+79088,XX-Saber Gottoms,XX Saber Gottoms,https://tcgplayer-cdn.tcgplayer.com/product/79088_200w.jpg,2,132,https://cpt.tcgcsv.com/NFF,2024-03-28T15:45:20.353,1,CT06-ENS04,Secret Rare,EARTH,Beast-Warrior,Synchro/Effect Monster,3100,2600,1 Tuner Monster + 1 or more EARTH Monsters // You can Tribute 1 X-Saber monster to have your opponent discard 1 random card from their hand.,1.9,3.33,12.99,3.08,,Limited
+206916,2009 Collectors Tin: Wave 1 - Power Tool Dragon,2009 Collectors Tin Wave 1 Power Tool Dragon,https://tcgplayer-cdn.tcgplayer.com/product/206916_200w.jpg,2,132,https://cpt.tcgcsv.com/lNG2,2020-01-07T15:49:11.34,1,,,,,,,,"Each Collectible Tin 2009 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 2 Ancient Prophecy
+<br><span style=""color:white"">____</span> • 2 Crimson Crisis
+<br><span style=""color:white"">____</span> • 1 Raging Battle
+<br>• 1 Secret Rare promotional card",199.99,199.99,199.99,,,Normal
+206918,2009 Collectors Tin: Wave 1 - Ancient Fairy Dragon,2009 Collectors Tin Wave 1 Ancient Fairy Dragon,https://tcgplayer-cdn.tcgplayer.com/product/206918_200w.jpg,2,132,https://cpt.tcgcsv.com/nNG2,2020-01-07T16:04:08.813,1,,,,,,,,"Each Collectible Tin 2009 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 2 Ancient Prophecy
+<br><span style=""color:white"">____</span> • 2 Crimson Crisis
+<br><span style=""color:white"">____</span> • 1 Raging Battle
+<br>• 1 Secret Rare promotional card",299.99,299.99,299.99,,,Normal
+206922,2009 Exclusive Collectors Tin: Yusei Fudo,2009 Exclusive Collectors Tin Yusei Fudo,https://tcgplayer-cdn.tcgplayer.com/product/206922_200w.jpg,2,132,https://cpt.tcgcsv.com/sNG2,2020-01-07T16:11:57.023,1,,,,,,,,"Each Collectible Tin 2009 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 2 Ancient Prophecy
+<br><span style=""color:white"">____</span> • 1 Crimson Crisis
+<br><span style=""color:white"">____</span> • 1 Raging Battle
+<br><span style=""color:white"">____</span> • 1 Crossroads of Chaos
+<br>• 1 Secret Rare promotional card
+<br>• Yu-Gi-Oh! 5D's branded card sleeves
+<br>• 1 set of Deck partitions",449.95,449.95,449.95,,,Normal
+206923,2009 Exclusive Collectors Tin: Jack Atlas,2009 Exclusive Collectors Tin Jack Atlas,https://tcgplayer-cdn.tcgplayer.com/product/206923_200w.jpg,2,132,https://cpt.tcgcsv.com/tNG2,2020-01-07T16:12:23.173,1,,,,,,,,"Each Collectible Tin 2009 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 2 Ancient Prophecy
+<br><span style=""color:white"">____</span> • 1 Crimson Crisis
+<br><span style=""color:white"">____</span> • 1 Raging Battle
+<br><span style=""color:white"">____</span> • 1 Crossroads of Chaos
+<br>• 1 Secret Rare promotional card
+<br>• Yu-Gi-Oh! 5D's branded card sleeves
+<br>• 1 set of Deck partitions",249.98,274.99,500.0,,,Normal
+206924,2009 Exclusive Collectors Tin: Crow Hogan,2009 Exclusive Collectors Tin Crow Hogan,https://tcgplayer-cdn.tcgplayer.com/product/206924_200w.jpg,2,132,https://cpt.tcgcsv.com/vNG2,2020-01-07T16:12:41.32,1,,,,,,,,"Each Collectible Tin 2009 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 2 Ancient Prophecy
+<br><span style=""color:white"">____</span> • 1 Crimson Crisis
+<br><span style=""color:white"">____</span> • 1 Raging Battle
+<br><span style=""color:white"">____</span> • 1 Crossroads of Chaos
+<br>• 1 Secret Rare promotional card
+<br>• Yu-Gi-Oh! 5D's branded card sleeves
+<br>• 1 set of Deck partitions",699.99,699.99,699.99,,,Normal
+206925,2009 Exclusive Collectors Tin: Leo & Luna,2009 Exclusive Collectors Tin Leo and Luna,https://tcgplayer-cdn.tcgplayer.com/product/206925_200w.jpg,2,132,https://cpt.tcgcsv.com/wNG2,2020-01-07T16:13:50.56,1,,,,,,,,"Each Collectible Tin 2009 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 2 Ancient Prophecy
+<br><span style=""color:white"">____</span> • 1 Crimson Crisis
+<br><span style=""color:white"">____</span> • 1 Raging Battle
+<br><span style=""color:white"">____</span> • 1 Crossroads of Chaos
+<br>• 1 Secret Rare promotional card
+<br>• Yu-Gi-Oh! 5D's branded card sleeves
+<br>• 1 set of Deck partitions",799.99,799.99,799.99,,,Normal
+206927,2009 Collectors Tin: Wave 2 - Majestic Star Dragon,2009 Collectors Tin Wave 2 Majestic Star Dragon,https://tcgplayer-cdn.tcgplayer.com/product/206927_200w.jpg,2,132,https://cpt.tcgcsv.com/zNG2,2020-01-07T16:20:42.423,1,,,,,,,,"Each Collectible Tin 2009 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 2 Stardust Overdrive
+<br><span style=""color:white"">____</span> • 1 Ancient Prophecy
+<br><span style=""color:white"">____</span> • 1 Raging Battle
+<br><span style=""color:white"">____</span> • 1 Crimson Crisis
+<br>• 1 Secret Rare promotional card
+<br>• 1 pack of Yu-Gi-Oh! 5D's branded card sleeves
+<br>• 1 set of Deck partitions",249.99,249.99,249.99,,,Normal
+206929,2009 Collectors Tin: Wave 2 - Earthbound Immortal Wiraqocha Rasca,2009 Collectors Tin Wave 2 Earthbound Immortal Wiraqocha Rasca,https://tcgplayer-cdn.tcgplayer.com/product/206929_200w.jpg,2,132,https://cpt.tcgcsv.com/CNG2,2020-01-07T16:21:09.017,1,,,,,,,,"Each Collectible Tin 2009 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 2 Stardust Overdrive
+<br><span style=""color:white"">____</span> • 1 Ancient Prophecy
+<br><span style=""color:white"">____</span> • 1 Raging Battle
+<br><span style=""color:white"">____</span> • 1 Crimson Crisis
+<br>• 1 Secret Rare promotional card
+<br>• 1 pack of Yu-Gi-Oh! 5D's branded card sleeves
+<br>• 1 set of Deck partitions",249.99,260.5,271.0,,,Normal

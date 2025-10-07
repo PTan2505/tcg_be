@@ -1,0 +1,70 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extAttack2,extWeakness,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extCardText,extResistance,extAttack3
+83891,Blastoise,Blastoise,https://tcgplayer-cdn.tcgplayer.com/product/83891_200w.jpg,3,1442,https://cpt.tcgcsv.com/RzH,2022-09-23T19:00:24.973,1,001/017,Rare,Water,120,Stage 2,"[2] Smash Turn (30)
+<br>After your attack, you may switch Blastoise with 1 of your Benched Pokémon.","[2WW] Rocket Tackle (60)
+<br>Blastoise does 10 damage to itself. Flip a coin. If heads, prevent all damage done to Blastoise by attacks during your opponent's next turn.",L,2,84.99,95.0,124.99,121.66,,Holofoil,,,
+84405,Combusken,Combusken,https://tcgplayer-cdn.tcgplayer.com/product/84405_200w.jpg,3,1442,https://cpt.tcgcsv.com/7NH,2022-09-23T19:01:19.937,1,007/017,Uncommon,Fire,70,Stage 1,[1] Scratch (10),"[2R] Flamethrower (50)
+<br>Discard a Fire Energy attached to Combusken.",W,1,8.0,10.29,14.61,9.99,,Normal,,,
+84842,Ditto,Ditto,https://tcgplayer-cdn.tcgplayer.com/product/84842_200w.jpg,3,1442,https://cpt.tcgcsv.com/SXH,2022-09-23T19:03:07.613,1,012/017,Common,Psychic,60,Basic,"[1P] Psybeam (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Confused.",,P,1,19.99,19.99,19.99,17.13,,Normal,"<strong>Poké-POWER — Duplicate</strong>
+<br>
+Once during your turn <em>(before your attack)</em>, you may search your deck for another Ditto and switch it with Ditto. (Any cards attached to Ditto, damage counters, Special Conditions, and effects on it are now on the new Pokémon.) If you do, put Ditto on top of your deck. Shuffle your deck afterward. You can't use more than 1 Duplicate Poké-Power each turn.",,
+84874,Donphan,Donphan,https://tcgplayer-cdn.tcgplayer.com/product/84874_200w.jpg,3,1442,https://cpt.tcgcsv.com/vZH,2022-09-23T19:05:09.963,1,008/017,Uncommon,Fighting,80,Stage 1,"[1] Sniff Out
+<br>Put any 1 card from your discard pile into your hand.","[2F] Fury Attack (30x)
+<br>Flip 3 coins. This attack does 30 damage times the number of heads.",G,1,18.0,19.59,22.52,15.6,,Normal,,,
+85083,Eevee,Eevee,https://tcgplayer-cdn.tcgplayer.com/product/85083_200w.jpg,3,1442,https://cpt.tcgcsv.com/H2J,2022-09-23T19:05:41.69,1,013/017,Common,Colorless,50,Basic,[1] Tackle (10),"[2] Take Down (30)
+<br>Eevee does 10 damage to itself.",F,1,16.32,23.0,36.0,16.16,,Normal,,,
+85495,Flareon,Flareon,https://tcgplayer-cdn.tcgplayer.com/product/85495_200w.jpg,3,1442,https://cpt.tcgcsv.com/WcJ,2022-09-23T19:06:36.83,1,002/017,Rare,Fire,70,Stage 1,"[2] Quick Attack (10+)
+<br>Flip a coin. If heads, this attack does 10 damage plus 20 more damage.","[1FF] Fire Spin (70)
+<br>Discard 2 basic Energy cards attached to Flareon or this attack does nothing.",W,1,4.42,4.56,12.22,8.85,,Normal,,,
+85495,Flareon,Flareon,https://tcgplayer-cdn.tcgplayer.com/product/85495_200w.jpg,3,1442,https://cpt.tcgcsv.com/WcJ,2022-09-23T19:06:36.83,1,002/017,Rare,Fire,70,Stage 1,"[2] Quick Attack (10+)
+<br>Flip a coin. If heads, this attack does 10 damage plus 20 more damage.","[1FF] Fire Spin (70)
+<br>Discard 2 basic Energy cards attached to Flareon or this attack does nothing.",W,1,10.63,19.99,26.99,16.28,19.77,Holofoil,,,
+85549,Forretress,Forretress,https://tcgplayer-cdn.tcgplayer.com/product/85549_200w.jpg,3,1442,https://cpt.tcgcsv.com/_dJ,2022-09-23T19:07:29.963,1,009/017,Uncommon,Grass,70,Stage 1,[2] Tackle (20),"[1GG] Toxic (20)
+<br>The Defending Pokémon is now Poisoned. Put 2 damage counters instead of 1 on the Defending Pokemon between turns.",R,2,8.37,9.33,9.82,7.89,,Normal,,,
+86077,High Pressure System,High Pressure System,https://tcgplayer-cdn.tcgplayer.com/product/86077_200w.jpg,3,1442,https://cpt.tcgcsv.com/zrJ,2022-09-23T19:08:10.217,1,010/017,Uncommon,Stadium,,,,,,,2.0,4.17,5.0,3.45,,Normal,"This card stays in play when you play it. Discard this card if another Stadium card comes into play.
+<br>
+<br>Each player pays 1 less to retreat his of her Fire and Water Pokémon.",,
+86129,Ho-Oh ex (Non-Holo),Ho Oh ex Non Holo,https://tcgplayer-cdn.tcgplayer.com/product/86129_200w.jpg,3,1442,https://cpt.tcgcsv.com/CsJ,2022-09-23T19:10:32.777,1,017/017,Ultra Rare,Fire,110,Basic,"[3] Rainbow Burn (10+)
+<br>Does 10 damage plus 20 more damage for each type of basic Energy card attached to Ho-oh ex.",,W,2,37.23,59.48,87.21,59.0,,Normal,"<strong>Poké-POWER — Golden Wing</strong>
+<br>
+If Ho-Oh ex would be Knocked Out by damage from an opponent's attack, you may move up to 2 Energy attached to Ho-Oh ex to your Pokémon in any way you like.
+<br><br><em>Pokémon-EX rule — When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.</em>",,
+86299,Ivysaur,Ivysaur,https://tcgplayer-cdn.tcgplayer.com/product/86299_200w.jpg,3,1442,https://cpt.tcgcsv.com/_wJ,2022-09-23T19:11:36.243,1,014/017,Common,Grass,70,Stage 1,"[1] Gouge (10+)
+<br>Flip a coin. If heads, this attack does 10 damage plus 10 more damage.","[2G] Poisonpowder (40)
+<br>The Defending Pokémon is now Poisoned.",P,1,4.0,4.63,9.99,4.76,,Normal,,,
+86342,Jolteon,Jolteon,https://tcgplayer-cdn.tcgplayer.com/product/86342_200w.jpg,3,1442,https://cpt.tcgcsv.com/SxJ,2022-09-23T19:12:24.113,1,003/017,Rare,Lightning,70,Stage 1,"[1L] Thundershock (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.","[2L] Pin Missile (20x)
+<br>Flip 4 coins. This attack does 20 damage times the number of heads.",F,,0.99,2.96,12.99,15.57,,Normal,,M,
+86342,Jolteon,Jolteon,https://tcgplayer-cdn.tcgplayer.com/product/86342_200w.jpg,3,1442,https://cpt.tcgcsv.com/SxJ,2022-09-23T19:12:24.113,1,003/017,Rare,Lightning,70,Stage 1,"[1L] Thundershock (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Paralyzed.","[2L] Pin Missile (20x)
+<br>Flip 4 coins. This attack does 20 damage times the number of heads.",F,,5.36,10.44,39.99,13.2,39.99,Holofoil,,M,
+86847,Low Pressure System,Low Pressure System,https://tcgplayer-cdn.tcgplayer.com/product/86847_200w.jpg,3,1442,https://cpt.tcgcsv.com/ZLJ,2022-09-23T19:13:19.857,1,011/017,Uncommon,Stadium,,,,,,,3.88,6.72,7.67,4.62,,Normal,"This card stays in play when you play it.  Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.
+<br>
+<br>Each Grass and Lightning Pokemon in play <em>(both yours and your opponent's)</em> gets +10 HP.",,
+87236,Marshtomp,Marshtomp,https://tcgplayer-cdn.tcgplayer.com/product/87236_200w.jpg,3,1442,https://cpt.tcgcsv.com/LVJ,2022-09-23T19:13:46.103,1,015/017,Common,Fighting,70,Stage 1,[F] Mud Slap (20),"[3] Double-edge (40)
+<br>Marshtomp does 10 damage to itself.",G,1,2.75,5.38,8.0,3.04,,Normal,,,
+87487,Minun,Minun,https://tcgplayer-cdn.tcgplayer.com/product/87487_200w.jpg,3,1442,https://cpt.tcgcsv.com/M_J,2022-09-23T19:15:28.223,1,004/017,Rare,Lightning,50,Basic,"[1] Cheer Up
+<br>Draw a card. If Plusle is in play, draw 2 cards instead.","[1L] Negative Ion (20)
+<br>During your opponent's next turn, any damage done by attacks from the Defending Pokémon is reduced by 10 <em>(before applying Weakness and Resistance)</em>.",F,1,6.13,9.55,15.54,12.4,,Holofoil,,M,"[LL] Power Bolt
+<br>
+Choose 1 of your opponent's Pokémon that has any Poké-Powers. This attack does 30 damage to that Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>"
+88024,Pichu Bros.,Pichu Bros,https://tcgplayer-cdn.tcgplayer.com/product/88024_200w.jpg,3,1442,https://cpt.tcgcsv.com/vdK,2022-09-23T19:16:28.46,1,016/017,Common,Lightning,60,Basic,"[LL] Bustle (20x)
+<br>Flip 2 coins. This attack does 20 damage times the number of heads. If either coin is heads, the Defending Pokémon is now Confused.",,F,1,35.3,53.99,75.0,29.57,,Normal,,,
+88167,Plusle,Plusle,https://tcgplayer-cdn.tcgplayer.com/product/88167_200w.jpg,3,1442,https://cpt.tcgcsv.com/mhK,2022-09-23T19:17:53.22,1,005/017,Rare,Lightning,50,Basic,"[1] Cheer Up
+<br>Draw a card. If Minun is in play, draw 2 cards instead.","[1L] Positive Ion (20+)
+<br>Flip a coin. If heads, this attack does 20 damage plus 10 more damage.",F,1,3.2,6.06,29.99,9.99,,Normal,,M,"[LL] Body Bolt
+<br>Choose 1 of your opponent's Pokémon that has any Poké-Bodies. This attack does 30 damage to that Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>"
+88167,Plusle,Plusle,https://tcgplayer-cdn.tcgplayer.com/product/88167_200w.jpg,3,1442,https://cpt.tcgcsv.com/mhK,2022-09-23T19:17:53.22,1,005/017,Rare,Lightning,50,Basic,"[1] Cheer Up
+<br>Draw a card. If Minun is in play, draw 2 cards instead.","[1L] Positive Ion (20+)
+<br>Flip a coin. If heads, this attack does 20 damage plus 10 more damage.",F,1,35.3,36.04,42.0,5.96,,Holofoil,,M,"[LL] Body Bolt
+<br>Choose 1 of your opponent's Pokémon that has any Poké-Bodies. This attack does 30 damage to that Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>"
+90283,Vaporeon,Vaporeon,https://tcgplayer-cdn.tcgplayer.com/product/90283_200w.jpg,3,1442,https://cpt.tcgcsv.com/H7L,2022-09-23T19:18:36.72,1,006/017,Rare,Water,70,Stage 1,[1] Bite (20),"[1L] Water Gun (30+)
+<br>Does 30 damage plus 20 more damage for each Water Energy attached to Vaporeon but not used to pay for this attack's Energy cost. You can't add more than 40 damage in this way.",L,1,11.99,16.1,19.39,22.59,,Normal,,,
+90283,Vaporeon,Vaporeon,https://tcgplayer-cdn.tcgplayer.com/product/90283_200w.jpg,3,1442,https://cpt.tcgcsv.com/H7L,2022-09-23T19:18:36.72,1,006/017,Rare,Water,70,Stage 1,[1] Bite (20),"[1L] Water Gun (30+)
+<br>Does 30 damage plus 20 more damage for each Water Energy attached to Vaporeon but not used to pay for this attack's Energy cost. You can't add more than 40 damage in this way.",L,1,11.95,14.0,45.0,17.24,,Holofoil,,,
+97809,Ho-Oh ex (Holo),Ho Oh ex Holo,https://tcgplayer-cdn.tcgplayer.com/product/97809_200w.jpg,3,1442,https://cpt.tcgcsv.com/c8P,2022-09-23T19:09:40.283,1,017/017,Ultra Rare,Fire,110,Basic,"[3] Rainbow Burn (10+)
+<br>Does 10 damage plus 20 more damage for each type of basic Energy card attached to Ho-oh ex.",,W,2,167.0,233.5,299.99,144.5,,Holofoil,"<strong>Poké-POWER — Golden Wing</strong>
+<br>
+If Ho-Oh ex would be Knocked Out by damage from an opponent's attack, you may move up to 2 Energy attached to Ho-Oh ex to your Pokémon in any way you like.
+<br><br><em>Pokémon-EX rule — When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards.</em>",,
+190532,POP Series 3 Pack,POP Series 3 Pack,https://tcgplayer-cdn.tcgplayer.com/product/190532_200w.jpg,3,1442,https://cpt.tcgcsv.com/Gdx2,2019-05-16T15:22:48.253,1,,,,,,,,,,99.94,99.94,99.94,90.67,,Normal,Each POP Series 3 Pack contains 2 random cards for the Promotional POP Series 3.,,

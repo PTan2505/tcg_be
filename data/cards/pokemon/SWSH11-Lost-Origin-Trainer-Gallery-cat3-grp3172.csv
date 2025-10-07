@@ -1,0 +1,73 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extCardText,extAttack1,extWeakness,extResistance,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extAttack2
+284251,Charizard,Charizard,https://tcgplayer-cdn.tcgplayer.com/product/284251_200w.jpg,3,3172,https://cpt.tcgcsv.com/2Kh3,2024-11-29T02:10:26.407,1,TG03/TG30,Ultra Rare,Fire,170,Stage 2,"<strong>Ability — Battle Sense</strong>
+<br>Once during your turn, you may look at the top 3 cards of your deck and put 1 of them into your hand. Discard the other cards.","[RR] Royal Blaze (100+)
+<br>This attack does 50 more damage for each Leon in your discard pile.",Wx2,None,3,18.02,25.48,100.0,21.74,20.0,Holofoil,
+284253,Parasect,Parasect,https://tcgplayer-cdn.tcgplayer.com/product/284253_200w.jpg,3,3172,https://cpt.tcgcsv.com/5Kh3,2024-10-15T14:31:47.953,1,TG01/TG30,Ultra Rare,Grass,120,Stage 1,"Ability — Lethargy Spores
+<br>When you play this Pokemon from your hand to evolve 1 of your Pokemon during your turn, you may make both Active Pokemon Asleep and Poisoned.","[1G] X-Scissor (50+)
+<br>Flip a coin. If heads, this attack does 50 more damage.",Rx2,,2,1.0,1.99,999.99,1.67,,Holofoil,
+284254,Roserade,Roserade,https://tcgplayer-cdn.tcgplayer.com/product/284254_200w.jpg,3,3172,https://cpt.tcgcsv.com/6Kh3,2025-02-07T20:17:37.91,1,TG02/TG30,Ultra Rare,Grass,120,Stage 1,,"[G] Poisonous Whip (30)
+<br>Your opponent's Active Pokemon is now Poisoned.",Rx2,,1,1.0,2.0,999.99,1.89,2.39,Holofoil,"[1G] Assassin's Rose (60)
+<br>If your opponent's Active Pokemon is affected by a Special Condition, this attack also does 60 damage to 1 of your opponent's Benched Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>"
+284255,Chandelure,Chandelure,https://tcgplayer-cdn.tcgplayer.com/product/284255_200w.jpg,3,3172,https://cpt.tcgcsv.com/7Kh3,2022-09-09T04:03:39.38,1,TG04/TG30,Ultra Rare,Fire,150,Stage 2,"Ability — Mountain Toasting
+<br>When you play this Pokemon from your hand to evolve 1 of your Pokemon during your turn, you may discard the top 3 cards of your opponent's deck.",[1R] Heat Blast (90),Wx2,,2,0.5,2.29,15.0,2.32,3.0,Holofoil,
+284258,Pikachu,Pikachu,https://tcgplayer-cdn.tcgplayer.com/product/284258_200w.jpg,3,3172,https://cpt.tcgcsv.com/bKh3,2024-06-23T04:22:34.613,1,TG05/TG30,Ultra Rare,Lightning,60,Basic,"Ability — Pika Dash
+<br>If this Pokemon has any Energy attached, it has no Retreat Cost.","[2L] Whimsy Tackle (50)
+<br>Flip a coin. If tails, this attack does nothing.",Fx2,,1,24.55,31.2,418.15,28.98,27.99,Holofoil,
+284266,Gengar,Gengar,https://tcgplayer-cdn.tcgplayer.com/product/284266_200w.jpg,3,3172,https://cpt.tcgcsv.com/lKh3,2023-05-01T19:25:34.457,1,TG06/TG30,Ultra Rare,Psychic,120,Stage 2,"Ability — Netherworld Gate
+<br>Once during your turn, if this Pokemon is in your discard pile, you may put it onto your Bench. If you do, put 3 damage counters on this Pokemon.","[P] Screaming Circle
+<br>Put 2 damage counters on your opponent's Active Pokemon for each of your opponent's Benched Pokemon.",Dx2,F-30,2,34.2,50.21,104.99,45.23,34.2,Holofoil,
+284267,Banette,Banette,https://tcgplayer-cdn.tcgplayer.com/product/284267_200w.jpg,3,3172,https://cpt.tcgcsv.com/mKh3,2025-02-07T20:17:37.97,1,TG07/TG30,Ultra Rare,Psychic,80,Stage 1,,"[P] Resolute Spike (20x)
+<br>Put up to 7 damage counters on this Pokemon. This attack does 20 damage for each damage counter you placed in this way.",Dx2,F-30,1,1.0,2.22,999.99,2.32,2.89,Holofoil,"[1P] Eerie Light (50)
+<br>Your opponent's Active Pokemon is now Confused."
+284268,Hisuian Arcanine,Hisuian Arcanine,https://tcgplayer-cdn.tcgplayer.com/product/284268_200w.jpg,3,3172,https://cpt.tcgcsv.com/nKh3,2022-09-20T12:43:44.003,1,TG08/TG30,Ultra Rare,Fighting,130,Stage 1,,"[0] Very Vulnerable (10+)
+<br>If you have no cards in your hand, this attack does 150 more damage.",Gx2,,2,2.34,3.22,19.99,2.84,3.72,Holofoil,[2F] Sharp Fang (100)
+284269,Spiritomb,Spiritomb,https://tcgplayer-cdn.tcgplayer.com/product/284269_200w.jpg,3,3172,https://cpt.tcgcsv.com/pKh3,2024-10-15T14:32:16.793,1,TG09/TG30,Ultra Rare,Darkness,60,Basic,"Ability — Cursed Message
+<br>If this Pokemon is Knocked Out by damage from an attack from your opponent's Pokemon, search your deck for a card and put it into your hand. Then, shuffle your deck.","[DD] Chain of Spirits (10+)
+<br>This attack does 60 more damage for each Spirittomb in your discard pile.",Gx2,,2,1.33,2.1,99.0,1.99,,Holofoil,
+284270,Snorlax,Snorlax,https://tcgplayer-cdn.tcgplayer.com/product/284270_200w.jpg,3,3172,https://cpt.tcgcsv.com/qKh3,2024-02-20T18:26:49.893,1,TG10/TG30,Ultra Rare,Colorless,150,Basic,"Ability — Unfazed Fat
+<br>Prevent all effects of attacks from your opponent's Pokemon done to this Pokemon. <em>(Damage is not an effect.)</em>","[3] Thumping Snore (180)
+<br>This Pokemon is now Asleep. During Pokemon Checkup, flip 2 coins instead of 1. If either of them is tails, this Pokemon is still Asleep.",Fx2,,4,10.0,18.5,39.99,16.01,16.34,Holofoil,
+284271,Castform,Castform,https://tcgplayer-cdn.tcgplayer.com/product/284271_200w.jpg,3,3172,https://cpt.tcgcsv.com/rKh3,2025-02-07T20:17:38.017,1,TG11/TG30,Ultra Rare,Colorless,70,Basic,"<strong>Ability — Weather Reading</strong>
+<br>If you have 8 or more Stadium cards in your discard pile, ignore all Energy in this Pokemon's attack costs.","[3] Weather Force (80)
+<br>Draw cards until you have 6 cards in your hand.",Fx2,None,0,0.8,1.81,9.99,1.38,1.74,Holofoil,
+284272,Orbeetle V,Orbeetle V,https://tcgplayer-cdn.tcgplayer.com/product/284272_200w.jpg,3,3172,https://cpt.tcgcsv.com/sKh3,2022-09-09T04:03:39.38,1,TG12/TG30,Ultra Rare,Grass,180,Basic,,"[G] Strafe (20)
+<br>You may switch this Pokémon with 1 of your Benched Pokémon.",Rx2,None,1,2.95,4.32,15.0,3.84,4.54,Holofoil,"[1G] Mysterious Wave (50+)
+<br>This attack does 30 more damage times the amount of Energy attached to your opponent's Active Pokémon."
+284273,Orbeetle VMAX,Orbeetle VMAX,https://tcgplayer-cdn.tcgplayer.com/product/284273_200w.jpg,3,3172,https://cpt.tcgcsv.com/tKh3,2022-09-09T04:03:39.38,1,TG13/TG30,Ultra Rare,Grass,310,VMAX,"<strong>Ability — Eerie Beam</strong>
+<br>Once during your turn, if this Pokémon is in the Active Spot, you may put 1 damage counter on each of your opponent's Pokémon.","[1G] G-Max Wave (50+)
+<br>This attack does 50 more damage times the amount of Energy attached to your opponent's Active Pokémon.",Rx2,None,1,5.96,8.1,24.99,8.32,12.38,Holofoil,
+284275,Centiskorch V,Centiskorch V,https://tcgplayer-cdn.tcgplayer.com/product/284275_200w.jpg,3,3172,https://cpt.tcgcsv.com/wKh3,2024-05-30T09:06:02.743,1,TG14/TG30,Ultra Rare,Fire,210,Basic,,"[R] Heat Radiation (20)
+<br>You may discard an Energy from this Pokémon. If you do, discard an Energy attached to your opponent's Active Pokémon.",Wx2,None,3,2.73,3.85,15.0,3.64,5.39,Holofoil,[RRRR] Burning Train (180)
+284276,Centiskorch VMAX,Centiskorch VMAX,https://tcgplayer-cdn.tcgplayer.com/product/284276_200w.jpg,3,3172,https://cpt.tcgcsv.com/xKh3,2022-09-09T04:03:39.38,1,TG15/TG30,Ultra Rare,Fire,320,VMAX,,"[2] G-Max Centiferno (40+)
+<br>This attack does 40 more damage for each Fire Energy attached to this Pokémon. Then, you may attach a Fire Energy from your discard pile to this Pokémon.",Wx2,None,3,4.99,6.5,24.99,6.04,5.8,Holofoil,
+284278,Pikachu V,Pikachu V,https://tcgplayer-cdn.tcgplayer.com/product/284278_200w.jpg,3,3172,https://cpt.tcgcsv.com/BKh3,2025-01-23T21:14:36.117,1,TG16/TG30,Ultra Rare,Lightning,190,Basic,,"[L] Charge
+<br>Search your deck for up to 2 Lightning Energy cards and attach them to this Pokémon. Then, shuffle your deck.",Fx2,None,1,73.08,97.25,154.99,76.42,73.08,Holofoil,"[1LL] Thunderbolt (200)
+<br>Discard all Energy from this Pokémon."
+284283,Pikachu VMAX,Pikachu VMAX,https://tcgplayer-cdn.tcgplayer.com/product/284283_200w.jpg,3,3172,https://cpt.tcgcsv.com/HKh3,2025-09-26T20:12:59.457,1,TG17/TG30,Ultra Rare,Lightning,310,VMAX,,"[LLL] G-Max Volt Tackle (120+)
+<br>You may discard all Energy from this Pokémon. If you do, this attack does 150 more damage.",Fx2,None,2,77.0,94.98,299.99,84.84,89.99,Holofoil,
+284284,Enamorus V,Enamorus V,https://tcgplayer-cdn.tcgplayer.com/product/284284_200w.jpg,3,3172,https://cpt.tcgcsv.com/JKh3,2024-04-01T11:57:30.427,1,TG18/TG30,Ultra Rare,Psychic,210,Basic,"<strong>Ability — Guardian of Love</strong>
+<br>Prevent all effects of your opponent’s Pokémon’s Abilities done to each of your Pokémon that has any P Energy attached, except any Enamorus V.","[2P] Blossom Tail (100)
+<br>Attach up to 2 basic Energy cards from your discard pile to your Benched Pokémon in any way you like.",Mx2,,2,6.99,8.58,23.77,8.12,9.75,Holofoil,
+284286,Gallade V,Gallade V,https://tcgplayer-cdn.tcgplayer.com/product/284286_200w.jpg,3,3172,https://cpt.tcgcsv.com/LKh3,2022-09-09T04:03:39.38,1,TG19/TG30,Ultra Rare,Fighting,220,Basic,,"[1F] Rising Sword (20+)
+<br>This attack does 50 more damage for each Prize card you have taken.",Px2,,2,5.98,7.8,29.99,7.35,8.72,Holofoil,"[1FF] Buster Swing (130)
+<br>This attack's damage isn't affected by Resistance."
+284290,Crobat V,Crobat V,https://tcgplayer-cdn.tcgplayer.com/product/284290_200w.jpg,3,3172,https://cpt.tcgcsv.com/QKh3,2022-09-09T04:03:39.38,1,TG20/TG30,Ultra Rare,Darkness,180,Basic,"<strong>Ability — Night Asset</strong>
+<br>When you play this Pokémon from your hand onto your Bench during your turn, you may draw cards until you have 6 cards in your hand. You can't use more than 1 Night Asset Ability each turn.","[1D] Venomous Fang (70)
+<br>Your opponent's Active Pokémon is now Poisoned.",Fx2,None,1,4.99,7.86,29.99,7.73,7.82,Holofoil,
+284294,Eternatus V,Eternatus V,https://tcgplayer-cdn.tcgplayer.com/product/284294_200w.jpg,3,3172,https://cpt.tcgcsv.com/VKh3,2022-09-09T04:03:39.38,1,TG21/TG30,Ultra Rare,Darkness,220,Basic,,"[1] Power Accelerator (30)
+<br>You may attach a Darkness Energy card from your hand to 1 of your Benched Pokémon.",Fx2,None,2,2.0,3.75,12.99,3.48,4.24,Holofoil,"[3D] Dynamax Cannon (120+)
+<br>If your opponent's Active Pokémon is a Pokémon VMAX, this attack does 120 more damage."
+284295,Eternatus VMAX,Eternatus VMAX,https://tcgplayer-cdn.tcgplayer.com/product/284295_200w.jpg,3,3172,https://cpt.tcgcsv.com/WKh3,2024-04-24T12:51:35.017,1,TG22/TG30,Ultra Rare,Darkness,340,VMAX,"<strong>Ability — Eternal Zone</strong>
+<br>If all of your Pokémon in play are Darkness type, you can have up to 8 Pokémon on your Bench and you can't put non-Darkness Pokémon into play. <em>(If this Ability stops working, discard Pokémon from your Bench until you have 5.)</em>","[1D] Dread End (30x)
+<br>This attack does 30 damage for each of your Darkness Pokémon in play.",Fx2,None,3,6.94,8.99,41.07,8.09,8.09,Holofoil,
+284296,Adventurer's Discovery,Adventurers Discovery,https://tcgplayer-cdn.tcgplayer.com/product/284296_200w.jpg,3,3172,https://cpt.tcgcsv.com/XKh3,2022-09-09T04:03:39.38,1,TG23/TG30,Ultra Rare,Supporter,,,"Search your deck for up to 3 Pokemon V, reveal them, and put them into your hand. Then, shuffle your deck.",,,,,2.0,2.99,29.95,2.87,3.73,Holofoil,
+284297,Boss's Orders,Bosss Orders,https://tcgplayer-cdn.tcgplayer.com/product/284297_200w.jpg,3,3172,https://cpt.tcgcsv.com/ZKh3,2024-12-26T22:18:03.763,1,TG24/TG30,Ultra Rare,Supporter,,,Switch 1 of your opponent's Benched Pokemon with their Active Pokemon.,,,,,4.99,8.0,25.0,7.3,11.98,Holofoil,
+284298,Cook,Cook,https://tcgplayer-cdn.tcgplayer.com/product/284298_200w.jpg,3,3172,https://cpt.tcgcsv.com/-Kh3,2022-09-09T04:03:39.38,1,TG25/TG30,Ultra Rare,Supporter,,,Heal 70 damage from your Active Pokémon.,,,,,0.99,2.11,15.99,1.72,2.75,Holofoil,
+284299,Kabu,Kabu,https://tcgplayer-cdn.tcgplayer.com/product/284299_200w.jpg,3,3172,https://cpt.tcgcsv.com/_Kh3,2024-11-19T09:27:00.877,1,TG26/TG30,Ultra Rare,Supporter,,,"Shuffle your hand into your deck. Then, draw 4 cards. If your Active Pokémon is your only Pokémon in play, draw 8 cards instead.",,,,,0.97,1.53,14.99,1.37,1.53,Holofoil,
+284300,Nessa,Nessa,https://tcgplayer-cdn.tcgplayer.com/product/284300_200w.jpg,3,3172,https://cpt.tcgcsv.com/0Lh3,2024-10-31T09:49:05.27,1,TG27/TG30,Ultra Rare,Supporter,,,Put up to 4 in any combination of Water Pokemon and Water Energy cards from your discard pile into your hand.,,,,,7.69,10.0,55.0,8.82,10.42,Holofoil,
+284301,Opal,Opal,https://tcgplayer-cdn.tcgplayer.com/product/284301_200w.jpg,3,3172,https://cpt.tcgcsv.com/2Lh3,2023-06-27T14:27:40.747,1,TG28/TG30,Ultra Rare,Supporter,,,"Flip 2 coins. Search your deck for a number of cards up to the number of heads, put them into your hand, and shuffle your deck.",,,,,0.88,1.74,12.95,1.52,2.14,Holofoil,
+284302,Pikachu VMAX (Secret),Pikachu VMAX Secret,https://tcgplayer-cdn.tcgplayer.com/product/284302_200w.jpg,3,3172,https://cpt.tcgcsv.com/3Lh3,2022-09-09T04:03:39.38,1,TG29/TG30,Ultra Rare,Lightning,310,VMAX,,"[LLL] G-Max Volt Tackle (120+)
+<br>You may discard all Energy from this Pokémon. If you do, this attack does 150 more damage.",Fx2,None,2,13.19,20.81,75.0,20.81,13.27,Holofoil,
+284303,Mew VMAX (Secret),Mew VMAX Secret,https://tcgplayer-cdn.tcgplayer.com/product/284303_200w.jpg,3,3172,https://cpt.tcgcsv.com/5Lh3,2022-09-12T19:39:36.27,1,TG30/TG30,Secret Rare,Psychic,310,VMAX,,"[2] Cross Fusion Strike
+<br>Choose 1 of your Benched Fusion Strike Pokémon's attacks and use it as this attack.",Dx2,F-30,0,22.0,26.61,75.0,23.61,18.85,Holofoil,"[PP] Max Miracle (130)
+<br>This attack's damage isn't affected by any effects on your opponent's Active Pokémon."

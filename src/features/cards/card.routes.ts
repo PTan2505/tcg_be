@@ -4,43 +4,74 @@ import { cacheMiddleware } from '../../shared/middlewares/cache.middleware';
 import { rateLimitMiddleware, validateParamsMiddleware } from '../../shared/middlewares/security.middleware';
 import { CardController } from './card.controller';
 import { CardService } from './card.service';
+import cardScanRoutes from './cardScan.routes';
 
 const cardService = new CardService();
 const cardController = new CardController(cardService);
 
 export const cardRoutes = new Hono();
 
-// All routes require authentication and rate limiting
+// Mount card scanning routes (must be before other routes to avoid conflicts)
+cardRoutes.route('/scan', cardScanRoutes);
+
+// Public routes for testing (no auth required)
+cardRoutes.get('/public/stats', cardController.getCardStats);
+cardRoutes.get('/public/:type/stats', cardController.getCardStats);
+cardRoutes.get('/public/:type', cacheMiddleware(15 * 60 * 1000), cardController.getCardsByGameType);
+cardRoutes.get('/public/product/:productId', cardController.getCardByProductId);
+
+// All authenticated routes require authentication and rate limiting
 cardRoutes.use('/*', authMiddleware);
 cardRoutes.use('/*', rateLimitMiddleware(300, 60000)); // 300 requests per minute
 
-// Get cards by category with pagination and filtering
+// Get all cards with pagination and filtering
 cardRoutes.get(
-  '/:category',
-  validateParamsMiddleware(['category']),
+  '/',
   cacheMiddleware(10 * 60 * 1000), // Cache for 10 minutes
-  cardController.getCardsByType
+  cardController.getAllCards
 );
 
-// Search cards by category (must come before /:category/:cardId)
+// Get cards by game type with pagination and filtering
 cardRoutes.get(
-  '/:category/search',
-  validateParamsMiddleware(['category']),
-  cardController.searchCards
+  '/:type',
+  validateParamsMiddleware(['type']),
+  cacheMiddleware(10 * 60 * 1000), // Cache for 10 minutes
+  cardController.getCardsByGameType
 );
 
-// Get cards by set (must come before /:category/:cardId)
+// Get cards by set (must come before /:cardId)
 cardRoutes.get(
-  '/:category/sets/:setId',
-  validateParamsMiddleware(['category', 'setId']),
+  '/sets/:setId',
+  validateParamsMiddleware(['setId']),
   cardController.getCardsBySet
 );
 
-// Get specific card by ID and category
+// Get card statistics
 cardRoutes.get(
-  '/:category/:cardId',
-  validateParamsMiddleware(['category', 'cardId']),
+  '/stats',
+  cacheMiddleware(30 * 60 * 1000), // Cache for 30 minutes
+  cardController.getCardStats
+);
+
+cardRoutes.get(
+  '/:type/stats',
+  validateParamsMiddleware(['type']),
+  cacheMiddleware(30 * 60 * 1000), // Cache for 30 minutes
+  cardController.getCardStats
+);
+
+// Get specific card by ID
+cardRoutes.get(
+  '/card/:cardId',
+  validateParamsMiddleware(['cardId']),
   cardController.getCardById
+);
+
+// Get specific card by TCGPlayer Product ID
+cardRoutes.get(
+  '/product/:productId',
+  validateParamsMiddleware(['productId']),
+  cardController.getCardByProductId
 );
 
 export default cardRoutes;

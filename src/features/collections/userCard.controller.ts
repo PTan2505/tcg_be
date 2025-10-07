@@ -1,5 +1,6 @@
 import { Context } from 'hono';
 import { CardCategory } from '../../database/models/userCard';
+import { MESSAGES, createSuccessResponse } from '../../shared/constants/messages';
 import { GetUserCardsOptions, IUserCardService } from './userCard.service';
 
 export class UserCardController {
@@ -16,11 +17,7 @@ export class UserCardController {
         category
       );
 
-      return c.json({
-        success: true,
-        message: 'Card added to collection successfully',
-        data: userCard
-      }, 201);
+      return c.json(createSuccessResponse(userCard, MESSAGES.COLLECTIONS.ADD_CARD_SUCCESS), 201);
     } catch (error: any) {
       if (error.message === 'Card is already in your collection') {
         return c.json({
@@ -28,7 +25,7 @@ export class UserCardController {
           error: {
             name: 'ValidationError',
             field: 'cardId',
-            message: error.message
+            message: MESSAGES.COLLECTIONS.CARD_ALREADY_EXISTS
           }
         }, 400);
       }
@@ -37,7 +34,7 @@ export class UserCardController {
         error: {
           name: 'Error',
           field: 'general',
-          message: error.message || 'Failed to add card to collection'
+          message: error.message || MESSAGES.COLLECTIONS.ADD_CARD_FAILED
         }
       }, 400);
     }
@@ -55,7 +52,7 @@ export class UserCardController {
           error: {
             name: 'ValidationError',
             field: 'category',
-            message: 'Valid category is required'
+            message: MESSAGES.VALIDATION.REQUIRED_FIELD('category')
           }
         }, 400);
       }
@@ -68,7 +65,7 @@ export class UserCardController {
 
       return c.json({
         success: true,
-        message: 'Card removed from collection successfully'
+        message: MESSAGES.COLLECTIONS.REMOVE_CARD_SUCCESS
       });
     } catch (error: any) {
       return c.json({
@@ -76,7 +73,7 @@ export class UserCardController {
         error: {
           name: 'Error',
           field: 'general',
-          message: error.message || 'Failed to remove card from collection'
+          message: error.message || MESSAGES.COLLECTIONS.REMOVE_CARD_FAILED
         }
       }, 400);
     }
@@ -113,18 +110,14 @@ export class UserCardController {
 
       const userCards = await this.userCardService.getUserCards(user.id, options);
 
-      return c.json({
-        success: true,
-        data: userCards,
-        total: userCards.length
-      });
+      return c.json(createSuccessResponse(userCards, MESSAGES.COLLECTIONS.GET_SUCCESS));
     } catch (error: any) {
       return c.json({
         success: false,
         error: {
           name: 'Error',
           field: 'general',
-          message: error.message || 'Failed to fetch user collection'
+          message: error.message || MESSAGES.COLLECTIONS.GET_FAILED
         }
       }, 500);
     }
@@ -141,7 +134,7 @@ export class UserCardController {
           error: {
             name: 'ValidationError',
             field: 'category',
-            message: 'Invalid category'
+            message: MESSAGES.VALIDATION.REQUIRED_FIELD('category')
           }
         }, 400);
       }
@@ -151,18 +144,14 @@ export class UserCardController {
         category as CardCategory
       );
 
-      return c.json({
-        success: true,
-        data: userCards,
-        total: userCards.length
-      });
+      return c.json(createSuccessResponse(userCards, MESSAGES.COLLECTIONS.GET_SUCCESS));
     } catch (error: any) {
       return c.json({
         success: false,
         error: {
           name: 'Error',
           field: 'general',
-          message: error.message || 'Failed to fetch user cards by category'
+          message: error.message || MESSAGES.COLLECTIONS.GET_FAILED
         }
       }, 500);
     }
@@ -179,25 +168,21 @@ export class UserCardController {
           error: {
             name: 'ValidationError',
             field: 'q',
-            message: 'Search query is required'
+            message: MESSAGES.VALIDATION.SEARCH_QUERY_REQUIRED
           }
         }, 400);
       }
 
       const userCards = await this.userCardService.searchUserCards(user.id, query);
 
-      return c.json({
-        success: true,
-        data: userCards,
-        total: userCards.length
-      });
+      return c.json(createSuccessResponse(userCards, MESSAGES.COLLECTIONS.GET_SUCCESS));
     } catch (error: any) {
       return c.json({
         success: false,
         error: {
           name: 'Error',
           field: 'general',
-          message: error.message || 'Failed to search user cards'
+          message: error.message || MESSAGES.COLLECTIONS.GET_FAILED
         }
       }, 500);
     }
@@ -214,7 +199,7 @@ export class UserCardController {
           error: {
             name: 'ValidationError',
             field: 'category',
-            message: 'Valid category is required'
+            message: MESSAGES.VALIDATION.REQUIRED_FIELD('category')
           }
         }, 400);
       }
@@ -224,10 +209,7 @@ export class UserCardController {
         category as CardCategory
       );
 
-      return c.json({
-        success: true,
-        data: cardDetails
-      });
+      return c.json(createSuccessResponse(cardDetails));
     } catch (error: any) {
       if (error.message.includes('not found')) {
         return c.json({
@@ -235,7 +217,7 @@ export class UserCardController {
           error: {
             name: 'NotFoundError',
             field: 'cardId',
-            message: error.message
+            message: MESSAGES.COLLECTIONS.CARD_NOT_FOUND_IN_COLLECTION
           }
         }, 404);
       }
@@ -244,7 +226,7 @@ export class UserCardController {
         error: {
           name: 'Error',
           field: 'general',
-          message: error.message || 'Failed to get card details'
+          message: error.message || MESSAGES.COLLECTIONS.GET_FAILED
         }
       }, 500);
     }

@@ -1,0 +1,805 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extCardText,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extUPC,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extAttack2,extWeakness,extResistance,extRetreatCost
+216852,Darkness Ablaze Booster Pack,Darkness Ablaze Booster Pack,https://tcgplayer-cdn.tcgplayer.com/product/216852_200w.jpg,3,2675,https://cpt.tcgcsv.com/3ML2,2020-08-14T04:03:29.183,1,Each booster pack contains 10 random cards.,5.25,7.69,15.0,6.78,,Normal,,,,,,,,,,,
+216853,Darkness Ablaze Booster Box,Darkness Ablaze Booster Box,https://tcgplayer-cdn.tcgplayer.com/product/216853_200w.jpg,3,2675,https://cpt.tcgcsv.com/5ML2,2020-08-14T04:03:29.183,1,Each booster box contains 36 packs of 10 random cards.,339.99,394.99,1500.0,310.45,,Normal,,,,,,,,,,,
+216856,Darkness Ablaze Elite Trainer Box,Darkness Ablaze Elite Trainer Box,https://tcgplayer-cdn.tcgplayer.com/product/216856_200w.jpg,3,2675,https://cpt.tcgcsv.com/8ML2,2020-08-14T04:03:29.183,1,"Each Sword & Shield—Darkness Ablaze Elite Trainer Box includes:
+<br>• 8 Pokémon TCG: Sword & Shield—Darkness Ablaze booster packs
+<br>• 65 card sleeves featuring Eternatus
+<br>• 45 Pokémon TCG Energy cards
+<br>• A player’s guide to the Sword & Shield—Darkness Ablaze expansion
+<br>• A Pokémon TCG rulebook
+<br>• 6 damage-counter dice
+<br>• 1 competition-legal coin-flip die
+<br>• 2 acrylic condition markers
+<br>• A collector’s box to hold everything, with 4 dividers to keep it organized
+<br>• A code card for the Pokémon Trading Card Game Online",79.99,101.0,250.0,85.59,,Normal,0820650807312,,,,,,,,,,
+216857,Darkness Ablaze 3 Pack Blister [Eevee],Darkness Ablaze 3 Pack Blister Eevee,https://tcgplayer-cdn.tcgplayer.com/product/216857_200w.jpg,3,2675,https://cpt.tcgcsv.com/9ML2,2020-08-14T04:03:29.183,1,"Each 3 Pack blister comes with 3 Sword & Shield—Darkness Ablaze booster packs, 1 coin, and a cosmos holofoil of Eevee.",40.97,52.02,65.0,39.35,,Normal,0820650807169,,,,,,,,,,
+216858,Darkness Ablaze 3 Pack Blister [Flareon],Darkness Ablaze 3 Pack Blister Flareon,https://tcgplayer-cdn.tcgplayer.com/product/216858_200w.jpg,3,2675,https://cpt.tcgcsv.com/bML2,2020-08-14T04:03:29.183,1,"Each 3 Pack blister comes with 3 Sword & Shield—Darkness Ablaze booster packs, 1 coin, and a cosmos holofoil of Flareon.",52.0,65.0,330.0,38.97,,Normal,0820650807169,,,,,,,,,,
+216859,Darkness Ablaze Single Pack Blister [Hatenna],Darkness Ablaze Single Pack Blister Hatenna,https://tcgplayer-cdn.tcgplayer.com/product/216859_200w.jpg,3,2675,https://cpt.tcgcsv.com/cML2,2020-08-14T04:03:29.183,1,"Each blister comes with 1 Sword & Shield—Darkness Ablaze booster packs, a coin, and a promotional card of Hatenna.",18.0,59.0,100.0,12.6,,Normal,,,,,,,,,,,
+216860,Darkness Ablaze Single Pack Blister [Pikachu],Darkness Ablaze Single Pack Blister Pikachu,https://tcgplayer-cdn.tcgplayer.com/product/216860_200w.jpg,3,2675,https://cpt.tcgcsv.com/dML2,2020-08-14T04:03:29.183,1,"Each blister comes with 1 Sword & Shield—Darkness Ablaze booster packs, a coin, and a promotional card of Pikachu.",16.07,20.54,25.0,19.5,,Normal,,,,,,,,,,,
+216861,Darkness Ablaze Build & Battle Box,Darkness Ablaze Build and Battle Box,https://tcgplayer-cdn.tcgplayer.com/product/216861_200w.jpg,3,2675,https://cpt.tcgcsv.com/fML2,2021-04-14T12:59:49.07,1,"<strong>Build & Battle Box contents:</strong>
+<br>• 23-card Evolution pack featuring key cards from current and prior expansions <em>(including 1 of 4 alternate-art promo cards)</em>
+<br>• 4 Sword & Shield Darkness Ablaze booster packs
+<br>• 1 deck-building tip sheet",69.99,78.0,95.0,48.66,,Normal,0820650807343,,,,,,,,,,
+216862,Darkness Ablaze Build & Battle Box Display,Darkness Ablaze Build and Battle Box Display,https://tcgplayer-cdn.tcgplayer.com/product/216862_200w.jpg,3,2675,https://cpt.tcgcsv.com/gML2,2023-05-03T19:15:24.52,1,"Each display contains 10 Darkness Ablaze Build & Battle Boxes. 
+<br><strong>Build & Battle Box contents:</strong>
+<br>• 23-card Evolution pack featuring key cards from current and prior expansions <em>(including 1 of 4 alternate-art promo cards)</em>
+<br>• 4 Sword & Shield Darkness Ablaze booster packs
+<br>• 1 deck-building tip sheet",570.0,594.0,699.95,,,Normal,0820650817342,,,,,,,,,,
+216863,Darkness Ablaze Premium Checklane Blister,Darkness Ablaze Premium Checklane Blister,https://tcgplayer-cdn.tcgplayer.com/product/216863_200w.jpg,3,2675,https://cpt.tcgcsv.com/hML2,2020-08-14T04:03:29.183,1,Contains 1 Sword & Shield — Darkness Ablaze booster pack and 1 bonus booster pack from the Sword & Shield Series.,18.0,19.99,23.0,18.19,,Normal,,,,,,,,,,,
+216864,Darkness Ablaze Theme Deck Display,Darkness Ablaze Theme Deck Display,https://tcgplayer-cdn.tcgplayer.com/product/216864_200w.jpg,3,2675,https://cpt.tcgcsv.com/jML2,2020-08-14T04:03:29.183,1,Each display contains 8 total decks for Darkness Ablaze; 4 featuring Galarian Sirfetch'd & 4 featuring Galarian Darmanitan.,,,,,,,0820650817205,,,,,,,,,,
+216865,Darkness Ablaze Theme Deck [Galarian Darmanitan],Darkness Ablaze Theme Deck Galarian Darmanitan,https://tcgplayer-cdn.tcgplayer.com/product/216865_200w.jpg,3,2675,https://cpt.tcgcsv.com/kML2,2020-08-14T04:03:29.183,1,"Each theme deck contains a preconstructed 60-card deck, a custom coin, damage counters, a paper playmat and rules guide.",20.0,21.75,23.5,17.11,,Normal,0820650807206,,,,,,,,,,
+216866,Darkness Ablaze Theme Deck [Galarian Sirfetch'd],Darkness Ablaze Theme Deck Galarian Sirfetchd,https://tcgplayer-cdn.tcgplayer.com/product/216866_200w.jpg,3,2675,https://cpt.tcgcsv.com/lML2,2020-08-14T04:03:29.183,1,"Each theme deck contains a preconstructed 60-card deck, a custom coin, damage counters, a paper playmat and rules guide.",22.99,25.0,31.97,22.7,,Normal,0820650807206,,,,,,,,,,
+218839,True Steel Premium Collection [Zacian],True Steel Premium Collection Zacian,https://tcgplayer-cdn.tcgplayer.com/product/218839_200w.jpg,3,2675,https://cpt.tcgcsv.com/PxM2,2020-08-14T04:03:29.183,1,"The Pokémon TCG: True Steel Premium Collection includes:
+<br>• 1 foil promo cards featuring Zacian
+<br>• 1 finely sculpted figures of Zacian
+<br>• 1 collector's pins featuring Zacian
+
+6 Pokémon TCG booster packs
+
+A code card for the Pokémon Trading Card Game Online",399.97,499.96,599.95,242.22,,Normal,0820650807091,,,,,,,,,,
+218840,True Steel Premium Collection [Zamazenta],True Steel Premium Collection Zamazenta,https://tcgplayer-cdn.tcgplayer.com/product/218840_200w.jpg,3,2675,https://cpt.tcgcsv.com/QxM2,2020-08-14T04:03:29.183,1,"The Pokémon TCG: True Steel Premium Collection includes:
+<br>• 1 foil promo cards featuring Zamazenta
+<br>• 1 finely sculpted figures of Zamazenta
+<br>• 1 collector's pins featuring Zamazenta
+
+6 Pokémon TCG booster packs
+
+A code card for the Pokémon Trading Card Game Online",,,,,,,0820650807091,,,,,,,,,,
+219054,Butterfree V,Butterfree V,https://tcgplayer-cdn.tcgplayer.com/product/219054_200w.jpg,3,2675,https://cpt.tcgcsv.com/6FM2,2025-02-07T20:07:22.03,1,,0.58,1.1,6.0,1.0,,Holofoil,,001/189,Ultra Rare,Grass,190,Basic,"[1] Dizzying Poison
+<br>Your opponent's Active Pokémon is now Confused and Poisoned.",[1GG] Blasting Wind (130),Rx2,None,1
+219055,Butterfree VMAX,Butterfree VMAX,https://tcgplayer-cdn.tcgplayer.com/product/219055_200w.jpg,3,2675,https://cpt.tcgcsv.com/7FM2,2023-01-08T20:43:02.357,1,,1.99,3.49,10.0,3.35,6.49,Holofoil,,002/189,Ultra Rare,Grass,300,VMAX,"[1GG] G-Max Poison Wind (150)
+<br>Your opponent's Active Pokémon is now Confused and Poisoned.",,Rx2,None,0
+219061,Paras,Paras,https://tcgplayer-cdn.tcgplayer.com/product/219061_200w.jpg,3,2675,https://cpt.tcgcsv.com/fFM2,2021-01-27T21:50:33.893,1,,0.01,0.12,25.05,0.05,0.05,Normal,,003/189,Common,Grass,60,Basic,[G] Scratch (20),,Rx2,None,1
+219061,Paras,Paras,https://tcgplayer-cdn.tcgplayer.com/product/219061_200w.jpg,3,2675,https://cpt.tcgcsv.com/fFM2,2021-01-27T21:50:33.893,1,,0.04,0.2,2.0,0.17,0.09,Reverse Holofoil,,003/189,Common,Grass,60,Basic,[G] Scratch (20),,Rx2,None,1
+219068,Parasect,Parasect,https://tcgplayer-cdn.tcgplayer.com/product/219068_200w.jpg,3,2675,https://cpt.tcgcsv.com/nFM2,2025-02-07T20:07:22.077,1,,0.01,0.15,25.09,0.09,,Normal,,004/189,Uncommon,Grass,120,Stage 1,"[G] Mushroom Tackle (30)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",[1GG] Solar Beam (110),Rx2,None,2
+219068,Parasect,Parasect,https://tcgplayer-cdn.tcgplayer.com/product/219068_200w.jpg,3,2675,https://cpt.tcgcsv.com/nFM2,2025-02-07T20:07:22.077,1,,0.05,0.23,2.0,0.22,0.23,Reverse Holofoil,,004/189,Uncommon,Grass,120,Stage 1,"[G] Mushroom Tackle (30)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",[1GG] Solar Beam (110),Rx2,None,2
+219069,Carnivine,Carnivine,https://tcgplayer-cdn.tcgplayer.com/product/219069_200w.jpg,3,2675,https://cpt.tcgcsv.com/pFM2,2021-01-27T21:52:42.867,1,,0.01,0.15,25.05,0.05,0.05,Normal,,005/189,Uncommon,Grass,90,Basic,"[1] Return (20)
+<br>You may draw cards until you have 5 cards in your hand.","[1G] Giga Drain (40)
+<br>Heal from this Pokémon the same amount of damage you did to your opponent's Active Pokémon.",Rx2,None,1
+219069,Carnivine,Carnivine,https://tcgplayer-cdn.tcgplayer.com/product/219069_200w.jpg,3,2675,https://cpt.tcgcsv.com/pFM2,2021-01-27T21:52:42.867,1,,0.03,0.2,2.0,0.16,0.2,Reverse Holofoil,,005/189,Uncommon,Grass,90,Basic,"[1] Return (20)
+<br>You may draw cards until you have 5 cards in your hand.","[1G] Giga Drain (40)
+<br>Heal from this Pokémon the same amount of damage you did to your opponent's Active Pokémon.",Rx2,None,1
+219074,Pansage,Pansage,https://tcgplayer-cdn.tcgplayer.com/product/219074_200w.jpg,3,2675,https://cpt.tcgcsv.com/vFM2,2025-02-07T20:07:22.123,1,,0.01,0.1,25.05,0.05,,Normal,,006/189,Common,Grass,60,Basic,[G] Seed Bomb (10),[2] Bite (20),Rx2,None,1
+219074,Pansage,Pansage,https://tcgplayer-cdn.tcgplayer.com/product/219074_200w.jpg,3,2675,https://cpt.tcgcsv.com/vFM2,2025-02-07T20:07:22.123,1,,0.09,0.2,2.0,0.18,,Reverse Holofoil,,006/189,Common,Grass,60,Basic,[G] Seed Bomb (10),[2] Bite (20),Rx2,None,1
+219075,Simisage,Simisage,https://tcgplayer-cdn.tcgplayer.com/product/219075_200w.jpg,3,2675,https://cpt.tcgcsv.com/wFM2,2025-02-07T20:07:22.17,1,,0.01,0.12,25.07,0.07,,Normal,,007/189,Uncommon,Grass,100,Stage 1,[G] Seed Bomb (30),"[3] Giga Impact (110)
+<br>During your next turn, this Pokémon can't attack.",Rx2,None,1
+219075,Simisage,Simisage,https://tcgplayer-cdn.tcgplayer.com/product/219075_200w.jpg,3,2675,https://cpt.tcgcsv.com/wFM2,2025-02-07T20:07:22.17,1,,0.05,0.23,10.0,0.13,,Reverse Holofoil,,007/189,Uncommon,Grass,100,Stage 1,[G] Seed Bomb (30),"[3] Giga Impact (110)
+<br>During your next turn, this Pokémon can't attack.",Rx2,None,1
+219080,Karrablast,Karrablast,https://tcgplayer-cdn.tcgplayer.com/product/219080_200w.jpg,3,2675,https://cpt.tcgcsv.com/DFM2,2025-02-07T20:07:22.213,1,,0.05,0.2,2.0,0.14,,Reverse Holofoil,,008/189,Common,Grass,60,Basic,"[1] Continuous Headbutt (20x)
+<br>Flip a coin until you get tails. This attack does 20 damage for each heads.",,Rx2,None,1
+219080,Karrablast,Karrablast,https://tcgplayer-cdn.tcgplayer.com/product/219080_200w.jpg,3,2675,https://cpt.tcgcsv.com/DFM2,2025-02-07T20:07:22.213,1,,0.01,0.1,25.07,0.07,0.03,Normal,,008/189,Common,Grass,60,Basic,"[1] Continuous Headbutt (20x)
+<br>Flip a coin until you get tails. This attack does 20 damage for each heads.",,Rx2,None,1
+219081,Shelmet,Shelmet,https://tcgplayer-cdn.tcgplayer.com/product/219081_200w.jpg,3,2675,https://cpt.tcgcsv.com/FFM2,2024-10-15T15:45:54.207,1,,0.05,0.2,2.0,0.18,0.24,Reverse Holofoil,,009/189,Common,Grass,70,Basic,[1] Spray Fluid (10),,Rx2,None,3
+219081,Shelmet,Shelmet,https://tcgplayer-cdn.tcgplayer.com/product/219081_200w.jpg,3,2675,https://cpt.tcgcsv.com/FFM2,2024-10-15T15:45:54.207,1,,0.01,0.1,25.05,0.05,0.05,Normal,,009/189,Common,Grass,70,Basic,[1] Spray Fluid (10),,Rx2,None,3
+219087,Accelgor,Accelgor,https://tcgplayer-cdn.tcgplayer.com/product/219087_200w.jpg,3,2675,https://cpt.tcgcsv.com/MFM2,2022-04-25T08:10:04.45,1,,0.03,0.2,1.5,0.15,0.15,Normal,,010/189,Rare,Grass,90,Stage 1,[2] Jet Headbutt (70),,Rx2,None,0
+219087,Accelgor,Accelgor,https://tcgplayer-cdn.tcgplayer.com/product/219087_200w.jpg,3,2675,https://cpt.tcgcsv.com/MFM2,2022-04-25T08:10:04.45,1,,0.1,0.3,2.0,0.29,,Reverse Holofoil,,010/189,Rare,Grass,90,Stage 1,[2] Jet Headbutt (70),,Rx2,None,0
+219090,Rowlet,Rowlet,https://tcgplayer-cdn.tcgplayer.com/product/219090_200w.jpg,3,2675,https://cpt.tcgcsv.com/QFM2,2025-02-07T20:07:22.26,1,"<strong>Ability — Sky Circus</strong>
+<br>If you played Bird Keeper from your hand during this turn, ignore all Energy in the attack cost of each of this Pokémon's attacks.",0.01,0.11,25.06,0.06,0.03,Normal,,011/189,Common,Grass,50,Basic,"[3] Wind Shard
+<br>This attack does 60 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",,Rx2,None,1
+219090,Rowlet,Rowlet,https://tcgplayer-cdn.tcgplayer.com/product/219090_200w.jpg,3,2675,https://cpt.tcgcsv.com/QFM2,2025-02-07T20:07:22.26,1,"<strong>Ability — Sky Circus</strong>
+<br>If you played Bird Keeper from your hand during this turn, ignore all Energy in the attack cost of each of this Pokémon's attacks.",0.02,0.2,2.0,0.19,,Reverse Holofoil,,011/189,Common,Grass,50,Basic,"[3] Wind Shard
+<br>This attack does 60 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",,Rx2,None,1
+219092,Dartrix,Dartrix,https://tcgplayer-cdn.tcgplayer.com/product/219092_200w.jpg,3,2675,https://cpt.tcgcsv.com/SFM2,2025-02-07T20:07:22.307,1,,0.01,0.13,25.09,0.09,,Normal,,012/189,Uncommon,Grass,80,Stage 1,[G] Razor Leaf (40),,Rx2,None,1
+219092,Dartrix,Dartrix,https://tcgplayer-cdn.tcgplayer.com/product/219092_200w.jpg,3,2675,https://cpt.tcgcsv.com/SFM2,2025-02-07T20:07:22.307,1,,0.05,0.2,5.05,0.2,,Reverse Holofoil,,012/189,Uncommon,Grass,80,Stage 1,[G] Razor Leaf (40),,Rx2,None,1
+219226,Decidueye,Decidueye,https://tcgplayer-cdn.tcgplayer.com/product/219226_200w.jpg,3,2675,https://cpt.tcgcsv.com/xJM2,2025-02-07T20:07:22.353,1,"<strong>Ability — Deep Forest Camo</strong>
+<br>Prevent all damage done to this Pokémon by attacks from your opponent's Pokémon V and Pokémon-GX.",0.1,0.37,2.09,0.36,,Reverse Holofoil,,013/189,Holo Rare,Grass,140,Stage 2,"[1G] Split Arrow (90)
+<br><em>This attack also does 20 damage to 2 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon)</em>",,Rx2,None,2
+219226,Decidueye,Decidueye,https://tcgplayer-cdn.tcgplayer.com/product/219226_200w.jpg,3,2675,https://cpt.tcgcsv.com/xJM2,2025-02-07T20:07:22.353,1,"<strong>Ability — Deep Forest Camo</strong>
+<br>Prevent all damage done to this Pokémon by attacks from your opponent's Pokémon V and Pokémon-GX.",0.1,0.31,2.0,0.3,,Holofoil,,013/189,Holo Rare,Grass,140,Stage 2,"[1G] Split Arrow (90)
+<br><em>This attack also does 20 damage to 2 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon)</em>",,Rx2,None,2
+219227,Bounsweet,Bounsweet,https://tcgplayer-cdn.tcgplayer.com/product/219227_200w.jpg,3,2675,https://cpt.tcgcsv.com/zJM2,2021-01-27T21:47:19.787,1,,0.01,0.15,25.13,0.13,,Normal,,014/189,Common,Grass,60,Basic,"[1] Synthesis
+<br>Search your deck for a Grass Energy card and attach it to 1 of your Pokémon. Then, shuffle your deck.",[1G] Flop (20),Rx2,None,1
+219227,Bounsweet,Bounsweet,https://tcgplayer-cdn.tcgplayer.com/product/219227_200w.jpg,3,2675,https://cpt.tcgcsv.com/zJM2,2021-01-27T21:47:19.787,1,,0.1,0.31,2.0,0.32,0.29,Reverse Holofoil,,014/189,Common,Grass,60,Basic,"[1] Synthesis
+<br>Search your deck for a Grass Energy card and attach it to 1 of your Pokémon. Then, shuffle your deck.",[1G] Flop (20),Rx2,None,1
+219228,Steenee,Steenee,https://tcgplayer-cdn.tcgplayer.com/product/219228_200w.jpg,3,2675,https://cpt.tcgcsv.com/BJM2,2025-02-07T20:07:22.4,1,,0.08,0.2,2.0,0.17,,Reverse Holofoil,,015/189,Uncommon,Grass,80,Stage 1,"[1] Captivate
+<br>Switch 1 of your opponent's Benched Pokémon with their Active Pokémon.",[1G] Smack (40),Rx2,None,1
+219228,Steenee,Steenee,https://tcgplayer-cdn.tcgplayer.com/product/219228_200w.jpg,3,2675,https://cpt.tcgcsv.com/BJM2,2025-02-07T20:07:22.4,1,,0.01,0.12,25.08,0.08,,Normal,,015/189,Uncommon,Grass,80,Stage 1,"[1] Captivate
+<br>Switch 1 of your opponent's Benched Pokémon with their Active Pokémon.",[1G] Smack (40),Rx2,None,1
+219229,Tsareena,Tsareena,https://tcgplayer-cdn.tcgplayer.com/product/219229_200w.jpg,3,2675,https://cpt.tcgcsv.com/CJM2,2021-01-27T21:47:49.41,1,,0.1,0.37,1.58,0.37,,Reverse Holofoil,,016/189,Rare,Grass,150,Stage 2,"[1] Power Whip
+<br>This attack does 20 damage times the amount of Energy attached to this Pokémon to 1 of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[1G] Time Out Kick (100)
+<br>You may put an Energy attached to your opponent's Active Pokémon into their hand.",Rx2,None,2
+219229,Tsareena,Tsareena,https://tcgplayer-cdn.tcgplayer.com/product/219229_200w.jpg,3,2675,https://cpt.tcgcsv.com/CJM2,2021-01-27T21:47:49.41,1,,0.05,0.21,2.0,0.2,0.2,Normal,,016/189,Rare,Grass,150,Stage 2,"[1] Power Whip
+<br>This attack does 20 damage times the amount of Energy attached to this Pokémon to 1 of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[1G] Time Out Kick (100)
+<br>You may put an Energy attached to your opponent's Active Pokémon into their hand.",Rx2,None,2
+219230,Wimpod,Wimpod,https://tcgplayer-cdn.tcgplayer.com/product/219230_200w.jpg,3,2675,https://cpt.tcgcsv.com/DJM2,2025-02-07T20:07:22.447,1,,0.01,0.11,25.07,0.07,,Normal,,017/189,Common,Grass,70,Basic,"[G] Gnaw and Run (10)
+<br>Switch this Pokémon with 1 of your Benched Pokémon.",,Rx2,None,3
+219230,Wimpod,Wimpod,https://tcgplayer-cdn.tcgplayer.com/product/219230_200w.jpg,3,2675,https://cpt.tcgcsv.com/DJM2,2025-02-07T20:07:22.447,1,,0.09,0.21,25.2,0.2,,Reverse Holofoil,,017/189,Common,Grass,70,Basic,"[G] Gnaw and Run (10)
+<br>Switch this Pokémon with 1 of your Benched Pokémon.",,Rx2,None,3
+219231,Golisopod,Golisopod,https://tcgplayer-cdn.tcgplayer.com/product/219231_200w.jpg,3,2675,https://cpt.tcgcsv.com/FJM2,2025-02-07T20:07:22.493,1,,0.22,0.47,1.95,0.48,,Reverse Holofoil,,018/189,Holo Rare,Grass,130,Stage 1,"[2] Hard Times Slash (30+)
+<br>This attack does 50 more damage for each of your opponent's Pokémon V and Pokémon-GX in play.","[2G] Smash Turn (70)
+<br>Switch this Pokémon with 1 of your Benched Pokémon.",Rx2,None,2
+219231,Golisopod,Golisopod,https://tcgplayer-cdn.tcgplayer.com/product/219231_200w.jpg,3,2675,https://cpt.tcgcsv.com/FJM2,2025-02-07T20:07:22.493,1,,0.03,0.25,2.0,0.24,,Holofoil,,018/189,Holo Rare,Grass,130,Stage 1,"[2] Hard Times Slash (30+)
+<br>This attack does 50 more damage for each of your opponent's Pokémon V and Pokémon-GX in play.","[2G] Smash Turn (70)
+<br>Switch this Pokémon with 1 of your Benched Pokémon.",Rx2,None,2
+219232,Charizard V,Charizard V,https://tcgplayer-cdn.tcgplayer.com/product/219232_200w.jpg,3,2675,https://cpt.tcgcsv.com/GJM2,2024-11-13T20:57:25.76,1,,3.42,5.54,500.0,5.45,7.11,Holofoil,,019/189,Ultra Rare,Fire,220,Basic,[3] Claw Slash (80),"[2RR] Fire Spin (220)
+<br>Discard 2 Energy from this Pokémon.",Wx2,None,3
+219233,Charizard VMAX,Charizard VMAX,https://tcgplayer-cdn.tcgplayer.com/product/219233_200w.jpg,3,2675,https://cpt.tcgcsv.com/HJM2,2024-06-14T11:24:36.137,1,,38.65,55.0,125.0,51.63,49.21,Holofoil,,020/189,Ultra Rare,Fire,330,VMAX,[3] Claw Slash (100),"[2RRR] G-Max Wildfire (300)
+<br>Discard 2 Energy from this Pokémon.",Wx2,None,3
+219234,Houndoom V,Houndoom V,https://tcgplayer-cdn.tcgplayer.com/product/219234_200w.jpg,3,2675,https://cpt.tcgcsv.com/JJM2,2023-01-11T20:24:04.507,1,,0.9,1.61,7.0,1.65,2.16,Holofoil,,021/189,Ultra Rare,Fire,210,Basic,"[R] Searing Flame (20)
+<br>Your opponent's Active Pokémon is now Burned.","[1RR] Vengeful Flame (100+)
+<br>If any of your Benched Fire Pokémon have any damage counters on them, this attack does 100 more damage.",Wx2,None,1
+219235,Torchic,Torchic,https://tcgplayer-cdn.tcgplayer.com/product/219235_200w.jpg,3,2675,https://cpt.tcgcsv.com/KJM2,2022-03-29T15:43:52.04,1,,0.01,0.17,25.16,0.16,0.12,Normal,,022/189,Common,Fire,60,Basic,"[1] Call for Family
+<br>Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck.",[R] Live Coal (10),Wx2,None,1
+219235,Torchic,Torchic,https://tcgplayer-cdn.tcgplayer.com/product/219235_200w.jpg,3,2675,https://cpt.tcgcsv.com/KJM2,2022-03-29T15:43:52.04,1,,0.05,0.3,2.0,0.29,0.22,Reverse Holofoil,,022/189,Common,Fire,60,Basic,"[1] Call for Family
+<br>Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck.",[R] Live Coal (10),Wx2,None,1
+219236,Combusken,Combusken,https://tcgplayer-cdn.tcgplayer.com/product/219236_200w.jpg,3,2675,https://cpt.tcgcsv.com/LJM2,2024-02-15T10:43:23.01,1,,0.09,0.28,3.97,0.29,0.09,Reverse Holofoil,,023/189,Uncommon,Fire,90,Stage 1,[R] Smash Kick (20),"[2R] Heat Beak (40)
+<br>Your opponent's Active Pokémon is now Burned.",Wx2,None,1
+219236,Combusken,Combusken,https://tcgplayer-cdn.tcgplayer.com/product/219236_200w.jpg,3,2675,https://cpt.tcgcsv.com/LJM2,2024-02-15T10:43:23.01,1,,0.02,0.15,25.13,0.13,0.1,Normal,,023/189,Uncommon,Fire,90,Stage 1,[R] Smash Kick (20),"[2R] Heat Beak (40)
+<br>Your opponent's Active Pokémon is now Burned.",Wx2,None,1
+219237,Blaziken,Blaziken,https://tcgplayer-cdn.tcgplayer.com/product/219237_200w.jpg,3,2675,https://cpt.tcgcsv.com/MJM2,2021-12-25T05:55:36.523,1,"<strong>Ability — Double Type</strong>
+<br>As long as this Pokémon is in play, it is Fire and Fighting type.",0.2,0.56,3.24,0.48,,Holofoil,,024/189,Holo Rare,Fire,170,Stage 2,"[2R] Turbo Drive (130)
+<br>Attach a basic Energy card from your discard pile to 1 of your Benched Pokémon.",,Wx2,None,2
+219237,Blaziken,Blaziken,https://tcgplayer-cdn.tcgplayer.com/product/219237_200w.jpg,3,2675,https://cpt.tcgcsv.com/MJM2,2021-12-25T05:55:36.523,1,"<strong>Ability — Double Type</strong>
+<br>As long as this Pokémon is in play, it is Fire and Fighting type.",0.35,0.77,3.24,0.71,,Reverse Holofoil,,024/189,Holo Rare,Fire,170,Stage 2,"[2R] Turbo Drive (130)
+<br>Attach a basic Energy card from your discard pile to 1 of your Benched Pokémon.",,Wx2,None,2
+219238,Heatran,Heatran,https://tcgplayer-cdn.tcgplayer.com/product/219238_200w.jpg,3,2675,https://cpt.tcgcsv.com/NJM2,2024-11-15T20:08:54.127,1,,0.09,0.25,2.0,0.23,,Holofoil,,025/189,Holo Rare,Fire,130,Basic,"[1R] Fire Fang (30)
+<br>Your opponent's Active Pokémon is now Burned.","[1RR] Raging Flare (80+)
+<br>This attack does 10 more damage for each damage counter on this Pokémon.",Wx2,None,4
+219238,Heatran,Heatran,https://tcgplayer-cdn.tcgplayer.com/product/219238_200w.jpg,3,2675,https://cpt.tcgcsv.com/NJM2,2024-11-15T20:08:54.127,1,,0.1,0.36,2.0,0.36,,Reverse Holofoil,,025/189,Holo Rare,Fire,130,Basic,"[1R] Fire Fang (30)
+<br>Your opponent's Active Pokémon is now Burned.","[1RR] Raging Flare (80+)
+<br>This attack does 10 more damage for each damage counter on this Pokémon.",Wx2,None,4
+219239,Pansear,Pansear,https://tcgplayer-cdn.tcgplayer.com/product/219239_200w.jpg,3,2675,https://cpt.tcgcsv.com/PJM2,2025-02-07T20:07:22.54,1,,0.05,0.2,2.0,0.15,,Reverse Holofoil,,026/189,Common,Fire,60,Basic,[R] Live Coal (10),[2] Bite (20),Wx2,None,1
+219239,Pansear,Pansear,https://tcgplayer-cdn.tcgplayer.com/product/219239_200w.jpg,3,2675,https://cpt.tcgcsv.com/PJM2,2025-02-07T20:07:22.54,1,,0.01,0.1,25.06,0.06,0.03,Normal,,026/189,Common,Fire,60,Basic,[R] Live Coal (10),[2] Bite (20),Wx2,None,1
+219240,Simisear,Simisear,https://tcgplayer-cdn.tcgplayer.com/product/219240_200w.jpg,3,2675,https://cpt.tcgcsv.com/QJM2,2025-02-07T20:07:22.603,1,,0.01,0.14,25.12,0.12,,Normal,,027/189,Uncommon,Fire,100,Stage 1,[R] Flare (30),"[3] Giga Impact (110)
+<br>During your next turn, this Pokémon can't attack.",Wx2,None,1
+219240,Simisear,Simisear,https://tcgplayer-cdn.tcgplayer.com/product/219240_200w.jpg,3,2675,https://cpt.tcgcsv.com/QJM2,2025-02-07T20:07:22.603,1,,0.05,0.2,4.99,0.18,,Reverse Holofoil,,027/189,Uncommon,Fire,100,Stage 1,[R] Flare (30),"[3] Giga Impact (110)
+<br>During your next turn, this Pokémon can't attack.",Wx2,None,1
+219241,Galarian Darmanitan (28),Galarian Darmanitan 28,https://tcgplayer-cdn.tcgplayer.com/product/219241_200w.jpg,3,2675,https://cpt.tcgcsv.com/RJM2,2022-06-08T19:00:28.42,1,,0.13,0.41,1.56,0.41,,Reverse Holofoil,,028/189,Rare,Fire,140,Stage 1,[1] Headbutt (40),"[1WW] Frozen Heat (110+)
+<br>You may discard all Water Energy from this Pokémon. If you do, this attack does 60 more damage.",Wx2,None,3
+219241,Galarian Darmanitan (28),Galarian Darmanitan 28,https://tcgplayer-cdn.tcgplayer.com/product/219241_200w.jpg,3,2675,https://cpt.tcgcsv.com/RJM2,2022-06-08T19:00:28.42,1,,0.1,0.25,2.0,0.2,0.2,Normal,,028/189,Rare,Fire,140,Stage 1,[1] Headbutt (40),"[1WW] Frozen Heat (110+)
+<br>You may discard all Water Energy from this Pokémon. If you do, this attack does 60 more damage.",Wx2,None,3
+219242,Larvesta,Larvesta,https://tcgplayer-cdn.tcgplayer.com/product/219242_200w.jpg,3,2675,https://cpt.tcgcsv.com/SJM2,2025-02-07T20:07:22.683,1,,0.01,0.14,25.1,0.1,,Normal,,029/189,Common,Fire,70,Basic,"[R] Singe
+<br>Your opponent's Active Pokémon is now Burned.",,Wx2,None,2
+219242,Larvesta,Larvesta,https://tcgplayer-cdn.tcgplayer.com/product/219242_200w.jpg,3,2675,https://cpt.tcgcsv.com/SJM2,2025-02-07T20:07:22.683,1,,0.09,0.21,2.0,0.19,,Reverse Holofoil,,029/189,Common,Fire,70,Basic,"[R] Singe
+<br>Your opponent's Active Pokémon is now Burned.",,Wx2,None,2
+219244,Volcarona,Volcarona,https://tcgplayer-cdn.tcgplayer.com/product/219244_200w.jpg,3,2675,https://cpt.tcgcsv.com/VJM2,2025-02-07T20:07:22.727,1,,0.1,0.37,2.0,0.37,,Reverse Holofoil,,030/189,Rare,Fire,120,Stage 1,"[R] Cauterize (80)
+<br>If your opponent's Active Pokémon has no damage counters on it before this attack does damage, this attack does nothing.",[1RR] Fire Wing (110),Wx2,None,1
+219244,Volcarona,Volcarona,https://tcgplayer-cdn.tcgplayer.com/product/219244_200w.jpg,3,2675,https://cpt.tcgcsv.com/VJM2,2025-02-07T20:07:22.727,1,,0.05,0.21,2.0,0.21,,Normal,,030/189,Rare,Fire,120,Stage 1,"[R] Cauterize (80)
+<br>If your opponent's Active Pokémon has no damage counters on it before this attack does damage, this attack does nothing.",[1RR] Fire Wing (110),Wx2,None,1
+219245,Fletchinder,Fletchinder,https://tcgplayer-cdn.tcgplayer.com/product/219245_200w.jpg,3,2675,https://cpt.tcgcsv.com/WJM2,2025-02-07T20:07:22.783,1,,0.05,0.2,25.17,0.17,0.08,Reverse Holofoil,,031/189,Uncommon,Fire,70,Stage 1,"[1] Searing Flame (20)
+<br>Your opponent's Active Pokémon is now Burned.",,Lx2,F-30,1
+219245,Fletchinder,Fletchinder,https://tcgplayer-cdn.tcgplayer.com/product/219245_200w.jpg,3,2675,https://cpt.tcgcsv.com/WJM2,2025-02-07T20:07:22.783,1,,0.01,0.15,25.06,0.06,,Normal,,031/189,Uncommon,Fire,70,Stage 1,"[1] Searing Flame (20)
+<br>Your opponent's Active Pokémon is now Burned.",,Lx2,F-30,1
+219246,Talonflame,Talonflame,https://tcgplayer-cdn.tcgplayer.com/product/219246_200w.jpg,3,2675,https://cpt.tcgcsv.com/XJM2,2025-02-07T20:07:22.827,1,"<strong>Ability — Scorching Feathers</strong>
+<br>If this Pokémon is your Active Pokémon and is damaged by an opponent's attack <em>(even if this Pokémon is Knocked Out)</em>, the Attacking Pokémon is now Burned.",0.1,0.34,2.0,0.33,,Reverse Holofoil,,032/189,Rare,Fire,140,Stage 2,"[2R] Mach Flight (120)
+<br>During your opponent's next turn, the Defending Pokémon can't retreat.",,Lx2,F-30,1
+219246,Talonflame,Talonflame,https://tcgplayer-cdn.tcgplayer.com/product/219246_200w.jpg,3,2675,https://cpt.tcgcsv.com/XJM2,2025-02-07T20:07:22.827,1,"<strong>Ability — Scorching Feathers</strong>
+<br>If this Pokémon is your Active Pokémon and is damaged by an opponent's attack <em>(even if this Pokémon is Knocked Out)</em>, the Attacking Pokémon is now Burned.",0.01,0.2,2.0,0.16,,Normal,,032/189,Rare,Fire,140,Stage 2,"[2R] Mach Flight (120)
+<br>During your opponent's next turn, the Defending Pokémon can't retreat.",,Lx2,F-30,1
+219249,Centiskorch V,Centiskorch V,https://tcgplayer-cdn.tcgplayer.com/product/219249_200w.jpg,3,2675,https://cpt.tcgcsv.com/_JM2,2025-02-07T20:07:22.877,1,,0.38,0.99,6.99,0.81,,Holofoil,,033/189,Ultra Rare,Fire,210,Basic,"[R] Heat Radiation (20)
+<br>You may discard an Energy from this Pokémon. If you do, discard an Energy attached to your opponent's Active Pokémon.",[RRRR] Burning Train (180),Wx2,None,3
+219250,Centiskorch VMAX,Centiskorch VMAX,https://tcgplayer-cdn.tcgplayer.com/product/219250_200w.jpg,3,2675,https://cpt.tcgcsv.com/0KM2,2022-05-25T16:02:59.867,1,,1.3,2.3,15.95,1.98,2.99,Holofoil,,034/189,Ultra Rare,Fire,320,VMAX,"[2] G-Max Centiferno (40+)
+<br>This attack does 40 more damage for each Fire Energy attached to this Pokémon. Then, you may attach a Fire Energy from your discard pile to this Pokémon.",,Wx2,None,3
+219260,Galarian Mr. Mime,Galarian Mr Mime,https://tcgplayer-cdn.tcgplayer.com/product/219260_200w.jpg,3,2675,https://cpt.tcgcsv.com/dKM2,2025-02-07T20:07:22.933,1,,0.05,0.2,2.0,0.18,,Reverse Holofoil,,035/189,Common,Water,80,Basic,"[W] Reflect
+<br>During your opponent's next turn, this Pokémon takes 30 less damage from attacks <em>(after applying Weakness and Resistance)</em>.",[2] Icy Snow (30),Mx2,None,1
+219260,Galarian Mr. Mime,Galarian Mr Mime,https://tcgplayer-cdn.tcgplayer.com/product/219260_200w.jpg,3,2675,https://cpt.tcgcsv.com/dKM2,2025-02-07T20:07:22.933,1,,0.01,0.1,25.06,0.06,,Normal,,035/189,Common,Water,80,Basic,"[W] Reflect
+<br>During your opponent's next turn, this Pokémon takes 30 less damage from attacks <em>(after applying Weakness and Resistance)</em>.",[2] Icy Snow (30),Mx2,None,1
+219265,Big Parasol,Big Parasol,https://tcgplayer-cdn.tcgplayer.com/product/219265_200w.jpg,3,2675,https://cpt.tcgcsv.com/kKM2,2025-02-07T20:07:22.98,1,"Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached.
+<br>
+<br>As long as the Pokémon this card is attached to is in the Active Spot, prevent all effects of attacks from your opponent's Pokémon done to all of your Pokémon. <em>(Existing effects are not removed. Damage is not an effect.)</em>",0.15,0.35,2.0,0.32,,Reverse Holofoil,,157/189,Uncommon,Tool,,,,,,,
+219265,Big Parasol,Big Parasol,https://tcgplayer-cdn.tcgplayer.com/product/219265_200w.jpg,3,2675,https://cpt.tcgcsv.com/kKM2,2025-02-07T20:07:22.98,1,"Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached.
+<br>
+<br>As long as the Pokémon this card is attached to is in the Active Spot, prevent all effects of attacks from your opponent's Pokémon done to all of your Pokémon. <em>(Existing effects are not removed. Damage is not an effect.)</em>",0.01,0.15,1.49,0.09,0.06,Normal,,157/189,Uncommon,Tool,,,,,,,
+219267,Galarian Mr. Rime,Galarian Mr Rime,https://tcgplayer-cdn.tcgplayer.com/product/219267_200w.jpg,3,2675,https://cpt.tcgcsv.com/mKM2,2025-02-07T20:07:23.027,1,"<strong>Ability — Shuffle Dance</strong>
+<br>Once during your turn, you may switch 1 of your opponent's face-down Prize cards with the top card of their deck.",0.11,0.25,2.5,0.21,,Normal,,036/189,Rare,Water,120,Stage 1,"[2W] Mad Party (20x)
+<br>This attack does 20 damage times the number of Pokémon in your discard pile that have the Mad Party attack.",,Mx2,None,2
+219267,Galarian Mr. Rime,Galarian Mr Rime,https://tcgplayer-cdn.tcgplayer.com/product/219267_200w.jpg,3,2675,https://cpt.tcgcsv.com/mKM2,2025-02-07T20:07:23.027,1,"<strong>Ability — Shuffle Dance</strong>
+<br>Once during your turn, you may switch 1 of your opponent's face-down Prize cards with the top card of their deck.",0.1,0.48,2.0,0.44,,Reverse Holofoil,,036/189,Rare,Water,120,Stage 1,"[2W] Mad Party (20x)
+<br>This attack does 20 damage times the number of Pokémon in your discard pile that have the Mad Party attack.",,Mx2,None,2
+219268,Billowing Smoke,Billowing Smoke,https://tcgplayer-cdn.tcgplayer.com/product/219268_200w.jpg,3,2675,https://cpt.tcgcsv.com/nKM2,2022-02-12T12:29:06.663,1,"Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached.
+<br>
+<br>If the Pokémon this card is attached to is Knocked Out by damage from an attack from your opponent's Pokémon, that player discards any Prize cards they would take for that Knock Out instead of putting those cards into their hand.",0.09,0.25,1.67,0.24,,Reverse Holofoil,,158/189,Uncommon,Tool,,,,,,,
+219268,Billowing Smoke,Billowing Smoke,https://tcgplayer-cdn.tcgplayer.com/product/219268_200w.jpg,3,2675,https://cpt.tcgcsv.com/nKM2,2022-02-12T12:29:06.663,1,"Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached.
+<br>
+<br>If the Pokémon this card is attached to is Knocked Out by damage from an attack from your opponent's Pokémon, that player discards any Prize cards they would take for that Knock Out instead of putting those cards into their hand.",0.01,0.15,5.0,0.09,0.04,Normal,,158/189,Uncommon,Tool,,,,,,,
+219269,Bird Keeper,Bird Keeper,https://tcgplayer-cdn.tcgplayer.com/product/219269_200w.jpg,3,2675,https://cpt.tcgcsv.com/pKM2,2025-02-07T20:07:23.12,1,"Switch your Active Pokémon with 1 of your Benched Pokémon. If you do, draw 3 cards.",0.1,0.3,2.0,0.26,,Reverse Holofoil,,159/189,Uncommon,Supporter,,,,,,,
+219269,Bird Keeper,Bird Keeper,https://tcgplayer-cdn.tcgplayer.com/product/219269_200w.jpg,3,2675,https://cpt.tcgcsv.com/pKM2,2025-02-07T20:07:23.12,1,"Switch your Active Pokémon with 1 of your Benched Pokémon. If you do, draw 3 cards.",0.01,0.2,2.0,0.12,,Normal,,159/189,Uncommon,Supporter,,,,,,,
+219271,Suicune,Suicune,https://tcgplayer-cdn.tcgplayer.com/product/219271_200w.jpg,3,2675,https://cpt.tcgcsv.com/rKM2,2024-08-17T17:08:49.47,1,,0.4,0.85,4.03,0.79,,Holofoil,,037/189,Holo Rare,Water,120,Basic,[W] Wave Splash (20),"[1WW] Aurora Loop (130)
+<br>Put 2 Water Energy attached to this Pokémon into your hand.",Lx2,None,1
+219271,Suicune,Suicune,https://tcgplayer-cdn.tcgplayer.com/product/219271_200w.jpg,3,2675,https://cpt.tcgcsv.com/rKM2,2024-08-17T17:08:49.47,1,,0.49,0.86,3.74,0.86,,Reverse Holofoil,,037/189,Holo Rare,Water,120,Basic,[W] Wave Splash (20),"[1WW] Aurora Loop (130)
+<br>Put 2 Water Energy attached to this Pokémon into your hand.",Lx2,None,1
+219272,Cape of Toughness,Cape of Toughness,https://tcgplayer-cdn.tcgplayer.com/product/219272_200w.jpg,3,2675,https://cpt.tcgcsv.com/sKM2,2025-02-07T20:07:23.173,1,"Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached.
+<br>
+<br>The Basic Pokémon this card is attached to gets +50 HP, except Pokémon-GX.",0.1,0.43,1.99,0.43,,Reverse Holofoil,,160/189,Uncommon,Tool,,,,,,,
+219272,Cape of Toughness,Cape of Toughness,https://tcgplayer-cdn.tcgplayer.com/product/219272_200w.jpg,3,2675,https://cpt.tcgcsv.com/sKM2,2025-02-07T20:07:23.173,1,"Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached.
+<br>
+<br>The Basic Pokémon this card is attached to gets +50 HP, except Pokémon-GX.",0.01,0.2,2.0,0.14,,Normal,,160/189,Uncommon,Tool,,,,,,,
+219273,Familiar Bell,Familiar Bell,https://tcgplayer-cdn.tcgplayer.com/product/219273_200w.jpg,3,2675,https://cpt.tcgcsv.com/tKM2,2025-02-07T20:07:23.213,1,"Search your deck for a Pokémon with the same name as a Pokémon in your discard pile, reveal it, and put it into your hand. Then, shuffle your deck.",0.1,0.26,1.49,0.25,,Reverse Holofoil,,161/189,Uncommon,Item,,,,,,,
+219273,Familiar Bell,Familiar Bell,https://tcgplayer-cdn.tcgplayer.com/product/219273_200w.jpg,3,2675,https://cpt.tcgcsv.com/tKM2,2025-02-07T20:07:23.213,1,"Search your deck for a Pokémon with the same name as a Pokémon in your discard pile, reveal it, and put it into your hand. Then, shuffle your deck.",0.01,0.15,2.0,0.06,,Normal,,161/189,Uncommon,Item,,,,,,,
+219275,Feebas,Feebas,https://tcgplayer-cdn.tcgplayer.com/product/219275_200w.jpg,3,2675,https://cpt.tcgcsv.com/wKM2,2025-02-07T20:07:23.277,1,,0.05,0.2,2.0,0.18,,Reverse Holofoil,,038/189,Common,Water,30,Basic,"[1] Nap
+<br>Heal 20 damage from this Pokémon.",,Lx2,None,1
+219275,Feebas,Feebas,https://tcgplayer-cdn.tcgplayer.com/product/219275_200w.jpg,3,2675,https://cpt.tcgcsv.com/wKM2,2025-02-07T20:07:23.277,1,,0.01,0.14,25.12,0.12,,Normal,,038/189,Common,Water,30,Basic,"[1] Nap
+<br>Heal 20 damage from this Pokémon.",,Lx2,None,1
+219276,Glimwood Tangle,Glimwood Tangle,https://tcgplayer-cdn.tcgplayer.com/product/219276_200w.jpg,3,2675,https://cpt.tcgcsv.com/xKM2,2025-02-07T20:07:23.323,1,"Once during each player's turn, after that player flips any coins for an attack, they may ignore all results of those coin flips and begin flipping those coins again.",0.15,0.36,1.56,0.37,,Reverse Holofoil,,162/189,Uncommon,Item,,,,,,,
+219276,Glimwood Tangle,Glimwood Tangle,https://tcgplayer-cdn.tcgplayer.com/product/219276_200w.jpg,3,2675,https://cpt.tcgcsv.com/xKM2,2025-02-07T20:07:23.323,1,"Once during each player's turn, after that player flips any coins for an attack, they may ignore all results of those coin flips and begin flipping those coins again.",0.03,0.17,2.0,0.11,,Normal,,162/189,Uncommon,Item,,,,,,,
+219277,Kabu,Kabu,https://tcgplayer-cdn.tcgplayer.com/product/219277_200w.jpg,3,2675,https://cpt.tcgcsv.com/zKM2,2025-02-07T20:07:23.387,1,"Shuffle your hand into your deck. Then, draw 4 cards. If your Active Pokémon is your only Pokémon in play, draw 8 cards instead.",0.01,0.14,25.06,0.06,0.03,Normal,,163/189,Uncommon,Supporter,,,,,,,
+219277,Kabu,Kabu,https://tcgplayer-cdn.tcgplayer.com/product/219277_200w.jpg,3,2675,https://cpt.tcgcsv.com/zKM2,2025-02-07T20:07:23.387,1,"Shuffle your hand into your deck. Then, draw 4 cards. If your Active Pokémon is your only Pokémon in play, draw 8 cards instead.",0.09,0.26,2.0,0.24,,Reverse Holofoil,,163/189,Uncommon,Supporter,,,,,,,
+219278,Old PC,Old PC,https://tcgplayer-cdn.tcgplayer.com/product/219278_200w.jpg,3,2675,https://cpt.tcgcsv.com/BKM2,2025-02-07T20:07:23.433,1,"Flip 2 coins. If both are heads, put a card from your discard pile into your hand.",0.08,0.24,2.0,0.23,,Reverse Holofoil,,164/189,Uncommon,Item,,,,,,,
+219278,Old PC,Old PC,https://tcgplayer-cdn.tcgplayer.com/product/219278_200w.jpg,3,2675,https://cpt.tcgcsv.com/BKM2,2025-02-07T20:07:23.433,1,"Flip 2 coins. If both are heads, put a card from your discard pile into your hand.",0.01,0.15,25.09,0.08,0.04,Normal,,164/189,Uncommon,Item,,,,,,,
+219280,Piers,Piers,https://tcgplayer-cdn.tcgplayer.com/product/219280_200w.jpg,3,2675,https://cpt.tcgcsv.com/DKM2,2025-02-07T20:07:23.48,1,"Search your deck for an Energy card and a Darkness Pokémon, reveal them, and put them into your hand. Then, shuffle your deck.",0.1,0.3,2.0,0.28,,Reverse Holofoil,,165/189,Uncommon,Supporter,,,,,,,
+219280,Piers,Piers,https://tcgplayer-cdn.tcgplayer.com/product/219280_200w.jpg,3,2675,https://cpt.tcgcsv.com/DKM2,2025-02-07T20:07:23.48,1,"Search your deck for an Energy card and a Darkness Pokémon, reveal them, and put them into your hand. Then, shuffle your deck.",0.01,0.17,5.03,0.13,,Normal,,165/189,Uncommon,Supporter,,,,,,,
+219281,Pokemon Breeder's Nurturing,Pokemon Breeders Nurturing,https://tcgplayer-cdn.tcgplayer.com/product/219281_200w.jpg,3,2675,https://cpt.tcgcsv.com/FKM2,2025-02-07T20:07:23.527,1,"Choose up to 2 of your Pokémon in play. For each of those Pokémon, search your deck for a card that evolves from that Pokémon and put it onto that Pokémon to evolve it. Then, shuffle your deck. You can't use this card during your first turn or on a Pokémon that was put into play this turn.",0.17,0.37,1.63,0.36,,Reverse Holofoil,,166/189,Uncommon,Supporter,,,,,,,
+219281,Pokemon Breeder's Nurturing,Pokemon Breeders Nurturing,https://tcgplayer-cdn.tcgplayer.com/product/219281_200w.jpg,3,2675,https://cpt.tcgcsv.com/FKM2,2025-02-07T20:07:23.527,1,"Choose up to 2 of your Pokémon in play. For each of those Pokémon, search your deck for a card that evolves from that Pokémon and put it onto that Pokémon to evolve it. Then, shuffle your deck. You can't use this card during your first turn or on a Pokémon that was put into play this turn.",0.03,0.15,1.49,0.13,,Normal,,166/189,Uncommon,Supporter,,,,,,,
+219282,Rare Fossil,Rare Fossil,https://tcgplayer-cdn.tcgplayer.com/product/219282_200w.jpg,3,2675,https://cpt.tcgcsv.com/GKM2,2020-08-14T04:03:29.183,0,"Play this card as if it were a 70-HP Basic Colorless Pokémon. At any time during your turn, you may discard this card from play.
+<br>This card can't be affected by any Special Conditions, and it can't retreat.",0.13,0.39,2.0,0.37,0.35,Reverse Holofoil,,167/189,Uncommon,Item,70,Basic,,,,,
+219282,Rare Fossil,Rare Fossil,https://tcgplayer-cdn.tcgplayer.com/product/219282_200w.jpg,3,2675,https://cpt.tcgcsv.com/GKM2,2020-08-14T04:03:29.183,0,"Play this card as if it were a 70-HP Basic Colorless Pokémon. At any time during your turn, you may discard this card from play.
+<br>This card can't be affected by any Special Conditions, and it can't retreat.",0.01,0.17,1.49,0.17,0.1,Normal,,167/189,Uncommon,Item,70,Basic,,,,,
+219284,Rose,Rose,https://tcgplayer-cdn.tcgplayer.com/product/219284_200w.jpg,3,2675,https://cpt.tcgcsv.com/JKM2,2025-02-07T20:07:23.59,1,"Attach up to 2 basic Energy cards from your discard pile to 1 of your Pokémon VMAX. If you attached any Energy cards in this way, discard your hand.",0.01,0.12,2.0,0.08,,Normal,,168/189,Uncommon,Supporter,,,,,,,
+219284,Rose,Rose,https://tcgplayer-cdn.tcgplayer.com/product/219284_200w.jpg,3,2675,https://cpt.tcgcsv.com/JKM2,2025-02-07T20:07:23.59,1,"Attach up to 2 basic Energy cards from your discard pile to 1 of your Pokémon VMAX. If you attached any Energy cards in this way, discard your hand.",0.1,0.3,1.5,0.3,,Reverse Holofoil,,168/189,Uncommon,Supporter,,,,,,,
+219285,Rose Tower,Rose Tower,https://tcgplayer-cdn.tcgplayer.com/product/219285_200w.jpg,3,2675,https://cpt.tcgcsv.com/KKM2,2025-02-07T20:07:23.633,1,"Once during each player's turn, that player may draw cards until they have 3 cards in their hand.",0.02,0.15,2.0,0.08,,Normal,,169/189,Uncommon,Stadium,,,,,,,
+219285,Rose Tower,Rose Tower,https://tcgplayer-cdn.tcgplayer.com/product/219285_200w.jpg,3,2675,https://cpt.tcgcsv.com/KKM2,2025-02-07T20:07:23.633,1,"Once during each player's turn, that player may draw cards until they have 3 cards in their hand.",0.05,0.26,2.0,0.26,,Reverse Holofoil,,169/189,Uncommon,Stadium,,,,,,,
+219286,Spikemuth,Spikemuth,https://tcgplayer-cdn.tcgplayer.com/product/219286_200w.jpg,3,2675,https://cpt.tcgcsv.com/LKM2,2023-04-14T12:16:04.09,1,"Whenever a player's Active Pokémon moves to the Bench during their turn, put 2 damage counters on that Pokémon.",0.01,0.15,1.5,0.12,0.1,Normal,,170/189,Uncommon,Stadium,,,,,,,
+219286,Spikemuth,Spikemuth,https://tcgplayer-cdn.tcgplayer.com/product/219286_200w.jpg,3,2675,https://cpt.tcgcsv.com/LKM2,2023-04-14T12:16:04.09,1,"Whenever a player's Active Pokémon moves to the Bench during their turn, put 2 damage counters on that Pokémon.",0.1,0.3,4.99,0.3,,Reverse Holofoil,,170/189,Uncommon,Stadium,,,,,,,
+219287,Struggle Gloves,Struggle Gloves,https://tcgplayer-cdn.tcgplayer.com/product/219287_200w.jpg,3,2675,https://cpt.tcgcsv.com/MKM2,2022-07-29T05:49:18.407,1,"Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached.
+<br>
+<br>If the Pokémon this card is attached to has Weakness to your opponent's Active Pokémon's type, its attacks do 30 more damage to your opponent's Active Pokémon <em>(before applying Weakness and Resistance)</em>.",0.01,0.12,1.49,0.1,0.05,Normal,,171/189,Uncommon,Tool,,,,,,,
+219287,Struggle Gloves,Struggle Gloves,https://tcgplayer-cdn.tcgplayer.com/product/219287_200w.jpg,3,2675,https://cpt.tcgcsv.com/MKM2,2022-07-29T05:49:18.407,1,"Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached.
+<br>
+<br>If the Pokémon this card is attached to has Weakness to your opponent's Active Pokémon's type, its attacks do 30 more damage to your opponent's Active Pokémon <em>(before applying Weakness and Resistance)</em>.",0.09,0.26,2.0,0.26,0.2,Reverse Holofoil,,171/189,Uncommon,Tool,,,,,,,
+219289,Turbo Patch,Turbo Patch,https://tcgplayer-cdn.tcgplayer.com/product/219289_200w.jpg,3,2675,https://cpt.tcgcsv.com/PKM2,2025-02-07T20:07:23.707,1,"Flip a coin. If heads, attach a basic Energy card from your discard pile to 1 of your Basic Pokémon that isn't a Pokémon GX.",0.09,0.29,1.95,0.23,,Reverse Holofoil,,172/189,Uncommon,Item,,,,,,,
+219289,Turbo Patch,Turbo Patch,https://tcgplayer-cdn.tcgplayer.com/product/219289_200w.jpg,3,2675,https://cpt.tcgcsv.com/PKM2,2025-02-07T20:07:23.707,1,"Flip a coin. If heads, attach a basic Energy card from your discard pile to 1 of your Basic Pokémon that isn't a Pokémon GX.",0.01,0.15,1.52,0.08,0.05,Normal,,172/189,Uncommon,Item,,,,,,,
+219290,Yell Horn,Yell Horn,https://tcgplayer-cdn.tcgplayer.com/product/219290_200w.jpg,3,2675,https://cpt.tcgcsv.com/QKM2,2024-02-16T14:00:06.473,1,Both Active Pokémon are now Confused.,0.08,0.21,2.0,0.16,0.15,Reverse Holofoil,,173/189,Uncommon,Item,,,,,,,
+219290,Yell Horn,Yell Horn,https://tcgplayer-cdn.tcgplayer.com/product/219290_200w.jpg,3,2675,https://cpt.tcgcsv.com/QKM2,2024-02-16T14:00:06.473,1,Both Active Pokémon are now Confused.,0.01,0.15,25.13,0.13,0.06,Normal,,173/189,Uncommon,Item,,,,,,,
+219291,Heat R Energy,Heat R Energy,https://tcgplayer-cdn.tcgplayer.com/product/219291_200w.jpg,3,2675,https://cpt.tcgcsv.com/RKM2,2025-02-07T20:07:23.753,1,"As long as this card is attached to a Pokémon, it provides Fire Energy.
+<br>The Fire Pokémon this card is attached to gets +20 HP.",0.05,0.21,1.83,0.17,0.14,Normal,,174/189,Uncommon,Special Energy,,,,,,,
+219291,Heat R Energy,Heat R Energy,https://tcgplayer-cdn.tcgplayer.com/product/219291_200w.jpg,3,2675,https://cpt.tcgcsv.com/RKM2,2025-02-07T20:07:23.753,1,"As long as this card is attached to a Pokémon, it provides Fire Energy.
+<br>The Fire Pokémon this card is attached to gets +20 HP.",0.12,0.57,2.99,0.56,,Reverse Holofoil,,174/189,Uncommon,Special Energy,,,,,,,
+219293,Hiding D Energy,Hiding D Energy,https://tcgplayer-cdn.tcgplayer.com/product/219293_200w.jpg,3,2675,https://cpt.tcgcsv.com/TKM2,2025-02-07T20:07:23.803,1,"As long as this card is attached to a Pokémon, it provides Darkness Energy.
+<br>The Darkness Pokémon this card is attached to has no Retreat Cost.",0.05,0.25,1.64,0.25,0.2,Normal,,175/189,Uncommon,Special Energy,,,,,,,
+219293,Hiding D Energy,Hiding D Energy,https://tcgplayer-cdn.tcgplayer.com/product/219293_200w.jpg,3,2675,https://cpt.tcgcsv.com/TKM2,2025-02-07T20:07:23.803,1,"As long as this card is attached to a Pokémon, it provides Darkness Energy.
+<br>The Darkness Pokémon this card is attached to has no Retreat Cost.",0.46,0.75,1.99,0.64,,Reverse Holofoil,,175/189,Uncommon,Special Energy,,,,,,,
+219294,Powerful C Energy,Powerful C Energy,https://tcgplayer-cdn.tcgplayer.com/product/219294_200w.jpg,3,2675,https://cpt.tcgcsv.com/VKM2,2025-02-07T20:07:23.853,1,"As long as this card is attached to a Pokémon, it provides Colorless Energy.
+<br>The attacks of the Colorless Pokémon this card is attached to do 20 more damage to your opponent's Active Pokémon <em>(before applying Weakness and Resistance)</em>.",0.1,0.39,4.99,0.4,,Reverse Holofoil,,176/189,Uncommon,Special Energy,,,,,,,
+219294,Powerful C Energy,Powerful C Energy,https://tcgplayer-cdn.tcgplayer.com/product/219294_200w.jpg,3,2675,https://cpt.tcgcsv.com/VKM2,2025-02-07T20:07:23.853,1,"As long as this card is attached to a Pokémon, it provides Colorless Energy.
+<br>The attacks of the Colorless Pokémon this card is attached to do 20 more damage to your opponent's Active Pokémon <em>(before applying Weakness and Resistance)</em>.",0.05,0.25,2.99,0.2,0.19,Normal,,176/189,Uncommon,Special Energy,,,,,,,
+219297,Butterfree V (Full Art),Butterfree V Full Art,https://tcgplayer-cdn.tcgplayer.com/product/219297_200w.jpg,3,2675,https://cpt.tcgcsv.com/ZKM2,2022-10-10T12:46:32.137,1,,2.5,3.91,7.99,3.97,3.97,Holofoil,,177/189,Ultra Rare,Grass,190,Basic,"[1] Dizzying Poison
+<br>Your opponent's Active Pokémon is now Confused and Poisoned.",[1GG] Blasting Wind (130),Rx2,None,1
+219298,Houndoom V (Full Art),Houndoom V Full Art,https://tcgplayer-cdn.tcgplayer.com/product/219298_200w.jpg,3,2675,https://cpt.tcgcsv.com/-KM2,2023-01-16T11:00:09.583,1,,3.9,4.84,20.0,4.48,4.18,Holofoil,,178/189,Ultra Rare,Fire,210,Basic,"[R] Searing Flame (20)
+<br>Your opponent's Active Pokémon is now Burned.","[1RR] Settled Flame (100+)
+<br>If any of your Benched Fire Pokémon have any damage counters on them, this attack does 100 more damage.",Wx2,None,1
+219299,Centiskorch V (Full Art),Centiskorch V Full Art,https://tcgplayer-cdn.tcgplayer.com/product/219299_200w.jpg,3,2675,https://cpt.tcgcsv.com/_KM2,2022-08-03T14:48:04.197,1,,0.95,1.88,49.99,1.6,2.24,Holofoil,,179/189,Ultra Rare,Fire,210,Basic,"[R] Radiating Heat (20)
+<br>You may discard an Energy from this Pokémon. If you do, discard an Energy attached to your opponent's Active Pokémon.",[RRRR] Burning Train (180),Wx2,None,3
+219301,Vikavolt V (Full Art),Vikavolt V Full Art,https://tcgplayer-cdn.tcgplayer.com/product/219301_200w.jpg,3,2675,https://cpt.tcgcsv.com/2LM2,2022-03-25T14:31:55.36,1,,1.25,2.06,9.99,1.98,2.24,Holofoil,,180/189,Ultra Rare,Lightning,210,Basic,"[1L] Paralyzing Bolt (50)
+<br>Your opponent can't play any Item cards from their hand during their next turn.","[1LL] Super Zap Cannon (190)
+<br>Discard 2 Energy from this Pokémon.",Fx2,None,3
+219302,Rhyperior V (Full Art),Rhyperior V Full Art,https://tcgplayer-cdn.tcgplayer.com/product/219302_200w.jpg,3,2675,https://cpt.tcgcsv.com/3LM2,2023-07-31T07:23:05.76,1,,1.35,2.35,20.0,2.3,3.02,Holofoil,,181/189,Ultra Rare,Fighting,230,Basic,"[2F] Drill Run (80)
+<br>Discard an Energy from your opponent's Active Pokémon.","[3F] Heavy Rock Artillery (210)
+<br>During your next turn, this Pokémon can't use Heavy Rock Cannon.",Gx2,None,4
+219303,Milotic,Milotic,https://tcgplayer-cdn.tcgplayer.com/product/219303_200w.jpg,3,2675,https://cpt.tcgcsv.com/5LM2,2021-10-18T12:59:10.61,1,"<strong>Ability — Bright Heal</strong>
+<br>Once during your turn, you may heal 20 damage from each of your Pokémon.",0.31,0.5,1.99,0.49,,Reverse Holofoil,,039/189,Holo Rare,Water,120,Stage 1,[2W] Surf (80),,Lx2,None,2
+219303,Milotic,Milotic,https://tcgplayer-cdn.tcgplayer.com/product/219303_200w.jpg,3,2675,https://cpt.tcgcsv.com/5LM2,2021-10-18T12:59:10.61,1,"<strong>Ability — Bright Heal</strong>
+<br>Once during your turn, you may heal 20 damage from each of your Pokémon.",0.11,0.37,2.0,0.34,0.38,Holofoil,,039/189,Holo Rare,Water,120,Stage 1,[2W] Surf (80),,Lx2,None,2
+219304,Crobat V (Full Art),Crobat V Full Art,https://tcgplayer-cdn.tcgplayer.com/product/219304_200w.jpg,3,2675,https://cpt.tcgcsv.com/6LM2,2023-10-27T21:23:56.137,1,"<strong>Ability — Night Asset</strong>
+<br>When you play this Pokémon from your hand onto your Bench during your turn, you may draw cards until you have 6 cards in your hand. You can't use more than 1 Night Asset Ability each turn.",1.0,2.5,69.95,2.39,2.61,Holofoil,,182/189,Ultra Rare,Darkness,180,Basic,"[1D] Venomous Fang (70)
+<br>Your opponent's Active Pokémon is now Poisoned.",,Fx2,None,1
+219305,Scizor V (Full Art),Scizor V Full Art,https://tcgplayer-cdn.tcgplayer.com/product/219305_200w.jpg,3,2675,https://cpt.tcgcsv.com/7LM2,2021-07-29T17:40:36.233,1,,2.4,4.0,20.0,3.75,3.11,Holofoil,,183/189,Ultra Rare,Metal,210,Basic,"[M] Hack Off (30)
+<br>Discard a Pokémon Tool card and a Special Energy from your opponent's Active Pokémon.",[1MM] Slashing Claw (140),Rx2,G-30,2
+219306,Galarian Stunfisk V (Full Art),Galarian Stunfisk V Full Art,https://tcgplayer-cdn.tcgplayer.com/product/219306_200w.jpg,3,2675,https://cpt.tcgcsv.com/8LM2,2021-06-26T12:39:49.22,1,"<strong>Ability — Metal Skin</strong>
+<br>This Pokémon gets +20 HP for each Metal Energy attached to it.",0.99,1.91,25.0,1.74,1.67,Holofoil,,184/189,Ultra Rare,Metal,200,Basic,"[2] Trap Bite (60)
+<br>During your opponent's next turn, if this Pokémon is damaged by an attack <em>(even if it is Knocked Out)</em>, put 12 damage counters on the Attacking Pokémon.",,Rx2,G-30,4
+219307,Salamence V (Full Art),Salamence V Full Art,https://tcgplayer-cdn.tcgplayer.com/product/219307_200w.jpg,3,2675,https://cpt.tcgcsv.com/9LM2,2023-10-27T21:26:12.057,1,,2.48,3.49,22.0,3.06,3.14,Holofoil,,185/189,Ultra Rare,Colorless,220,Basic,"[3] Swoop Across
+<br>This attack does 30 damage to each of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",[4] Heavy Storm (160),Lx2,F-30,2
+219308,Kabu (Full Art),Kabu Full Art,https://tcgplayer-cdn.tcgplayer.com/product/219308_200w.jpg,3,2675,https://cpt.tcgcsv.com/bLM2,2024-11-08T12:42:35.777,1,"Shuffle your hand into your deck. Then, draw 4 cards. If your Active Pokémon is your only Pokémon in play, draw 8 cards instead.",0.8,1.52,20.0,1.39,1.0,Holofoil,,186/189,Ultra Rare,Supporter,,,,,,,
+219309,Piers (Full Art),Piers Full Art,https://tcgplayer-cdn.tcgplayer.com/product/219309_200w.jpg,3,2675,https://cpt.tcgcsv.com/cLM2,2021-06-26T12:42:40.387,1,"Search your deck for an Energy card and a Darkness Pokémon, reveal them, and put them into your hand. Then, shuffle your deck.",0.99,2.09,20.0,1.94,2.31,Holofoil,,187/189,Ultra Rare,Supporter,,,,,,,
+219310,Rose (Full Art),Rose Full Art,https://tcgplayer-cdn.tcgplayer.com/product/219310_200w.jpg,3,2675,https://cpt.tcgcsv.com/dLM2,2023-03-05T14:46:05.937,1,"Attach up to 2 basic Energy cards from your discard pile to 1 of your Pokémon VMAX. If you attached any Energy cards in this way, discard your hand.",0.69,1.58,16.99,1.43,1.98,Holofoil,,189/189,Ultra Rare,Supporter,,,,,,,
+219311,Pokemon Breeder's Nurturing (Full Art),Pokemon Breeders Nurturing Full Art,https://tcgplayer-cdn.tcgplayer.com/product/219311_200w.jpg,3,2675,https://cpt.tcgcsv.com/fLM2,2022-12-08T22:08:33.093,1,"Choose up to 2 of your Pokémon in play. For each of those Pokémon, search your deck for a card that evolves from that Pokémon and put it onto that Pokémon to evolve it. Then, shuffle your deck. You can't use this card during your first turn or on a Pokémon that was put into play this turn.",1.5,2.36,20.0,2.17,3.14,Holofoil,,188/189,Ultra Rare,Supporter,,,,,,,
+219312,Butterfree VMAX (Secret),Butterfree VMAX Secret,https://tcgplayer-cdn.tcgplayer.com/product/219312_200w.jpg,3,2675,https://cpt.tcgcsv.com/gLM2,2021-06-25T14:22:11.473,1,,9.5,11.99,34.98,12.07,11.52,Holofoil,,190/189,Secret Rare,Grass,300,VMAX,"[1GG] G-Max Poison Wind (150)
+<br>Your opponent's Active Pokémon is now Confused and Poisoned.",,Rx2,None,0
+219313,Centiskorch VMAX (Secret),Centiskorch VMAX Secret,https://tcgplayer-cdn.tcgplayer.com/product/219313_200w.jpg,3,2675,https://cpt.tcgcsv.com/hLM2,2024-11-22T07:15:18.537,1,,5.5,7.85,49.95,6.89,8.95,Holofoil,,191/189,Secret Rare,Fire,320,VMAX,"[2] G-Max Centiferno (40+)
+<br>This attack does 40 more damage for each Fire Energy attached to this Pokémon. Then, you may attach a Fire Energy from your discard pile to this Pokémon.",,Wx2,None,3
+219314,Pokemon Breeder's Nurturing (Secret),Pokemon Breeders Nurturing Secret,https://tcgplayer-cdn.tcgplayer.com/product/219314_200w.jpg,3,2675,https://cpt.tcgcsv.com/jLM2,2022-03-25T16:13:18.2,1,"Choose up to 2 of your Pokémon in play. For each of those Pokémon, search your deck for a card that evolves from that Pokémon and put it onto that Pokémon to evolve it. Then, shuffle your deck. You can't use this card during your first turn or on a Pokémon that was put into play this turn.",2.75,4.18,24.95,4.04,4.48,Holofoil,,195/189,Secret Rare,Supporter,,,,,,,
+219315,Rose (Secret),Rose Secret,https://tcgplayer-cdn.tcgplayer.com/product/219315_200w.jpg,3,2675,https://cpt.tcgcsv.com/kLM2,2021-10-18T12:59:49.043,1,"Attach up to 2 basic Energy cards from your discard pile to 1 of your Pokémon VMAX. If you attached any Energy cards in this way, discard your hand.",3.0,4.06,29.95,3.88,3.79,Holofoil,,196/189,Secret Rare,Supporter,,,,,,,
+219316,Big Parasol (Secret),Big Parasol Secret,https://tcgplayer-cdn.tcgplayer.com/product/219316_200w.jpg,3,2675,https://cpt.tcgcsv.com/lLM2,2023-01-27T19:08:38.62,1,"Attach a Pokémon Tool to 1 of your Pokémon that doesn't already have a Pokémon Tool attached.
+<br>
+<br>As long as the Pokémon this card is attached to is in the Active Spot, prevent all effects of attacks from your opponent's Pokémon done to all of your Pokémon. <em>(Existing effects are not removed. Damage is not an effect.)</em>",1.5,2.49,20.0,2.25,3.25,Holofoil,,199/189,Secret Rare,Tool,,,,,,,
+219317,Turbo Patch (Secret),Turbo Patch Secret,https://tcgplayer-cdn.tcgplayer.com/product/219317_200w.jpg,3,2675,https://cpt.tcgcsv.com/mLM2,2021-06-26T12:50:14.9,1,"Flip a coin. If heads, attach a basic Energy card from your discard pile to 1 of your Basic Pokémon that isn't a Pokémon GX.",1.75,3.0,45.99,2.67,2.37,Holofoil,,200/189,Secret Rare,Item,,,,,,,
+219318,Eternatus VMAX (Secret),Eternatus VMAX Secret,https://tcgplayer-cdn.tcgplayer.com/product/219318_200w.jpg,3,2675,https://cpt.tcgcsv.com/nLM2,2021-12-01T18:41:56.547,1,"<strong>Ability — Eternal Zone</strong>
+<br>If all of your Pokémon in play are Darkness type, you can have up to 8 Pokémon on your Bench and you can't put non-Darkness Pokémon into play. <em>(If this Ability stops working, discard Pokémon from your Bench until you have 5.)</em>",7.89,9.99,32.0,9.14,10.42,Holofoil,,192/189,Secret Rare,Darkness,340,VMAX,"[1D] Dread End (30x)
+<br>This attack does 30 damage for each of your Darkness Pokémon in play.",,Fx2,None,3
+219319,Scizor VMAX (Secret),Scizor VMAX Secret,https://tcgplayer-cdn.tcgplayer.com/product/219319_200w.jpg,3,2675,https://cpt.tcgcsv.com/pLM2,2020-08-14T04:03:29.183,1,,6.95,9.97,80.0,9.18,10.7,Holofoil,,193/189,Secret Rare,Metal,320,VMAX,"[1M] Hard Scissors (90)
+<br>During your opponent's next turn, this Pokémon takes 30 less damage from attacks <em>(after applying Weakness and Resistance)</em>.",[1MM] Max Steelspike (190),Rx2,G-30,2
+219320,Salamence VMAX (Secret),Salamence VMAX Secret,https://tcgplayer-cdn.tcgplayer.com/product/219320_200w.jpg,3,2675,https://cpt.tcgcsv.com/qLM2,2022-10-10T12:46:56.81,1,,9.45,13.19,49.99,13.19,15.56,Holofoil,,194/189,Secret Rare,Colorless,320,VMAX,"[1] Sonic Double
+<br>This attack does 40 damage to 2 of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[4] Max Wing (240)
+<br>During your next turn, this Pokémon can't use Max Wing.",Lx2,F-30,2
+219321,Rillaboom (Secret),Rillaboom Secret,https://tcgplayer-cdn.tcgplayer.com/product/219321_200w.jpg,3,2675,https://cpt.tcgcsv.com/rLM2,2023-02-23T17:18:04.837,1,"<strong>Ability — Voltage Beat</strong>
+<br>Once during your turn, you may search your deck for up to 2 Grass Energy cards and attach them to 1 of your Pokémon. Then, shuffle your deck.",4.0,6.64,65.89,5.93,6.99,Holofoil,,197/189,Secret Rare,Grass,170,Stage 2,[1GGG] Hammer In (140),,Rx2,None,3
+219322,Relicanth,Relicanth,https://tcgplayer-cdn.tcgplayer.com/product/219322_200w.jpg,3,2675,https://cpt.tcgcsv.com/sLM2,2025-02-07T20:07:23.903,1,,0.01,0.12,25.1,0.1,,Normal,,040/189,Uncommon,Water,90,Basic,"[1] Fossil Search
+<br>Search your deck for up to 2 Rare Fossil cards and put them onto your Bench. Then, shuffle your deck.",[1W] Surf (40),Lx2,None,1
+219322,Relicanth,Relicanth,https://tcgplayer-cdn.tcgplayer.com/product/219322_200w.jpg,3,2675,https://cpt.tcgcsv.com/sLM2,2025-02-07T20:07:23.903,1,,0.05,0.2,2.0,0.17,,Reverse Holofoil,,040/189,Uncommon,Water,90,Basic,"[1] Fossil Search
+<br>Search your deck for up to 2 Rare Fossil cards and put them onto your Bench. Then, shuffle your deck.",[1W] Surf (40),Lx2,None,1
+219323,Coalossal (Secret),Coalossal Secret,https://tcgplayer-cdn.tcgplayer.com/product/219323_200w.jpg,3,2675,https://cpt.tcgcsv.com/tLM2,2025-01-23T18:03:28.873,1,"<strong>Ability —Tar Generator</strong>
+<br>Once during your turn, you may attach a Fire Energy card, a Fighting Energy card, or 1 of each from your discard pile to your Pokemon in any way you like.",3.74,5.16,49.95,4.55,5.49,Holofoil,,198/189,Secret Rare,Fighting,160,Stage 2,[3F] Flaming Avalanche (130),,Gx2,None,4
+219324,Panpour,Panpour,https://tcgplayer-cdn.tcgplayer.com/product/219324_200w.jpg,3,2675,https://cpt.tcgcsv.com/vLM2,2025-02-07T20:07:23.95,1,,0.09,0.22,25.2,0.2,,Reverse Holofoil,,041/189,Common,Water,60,Basic,[W] Water Gun (10),[2] Bite (20),Lx2,None,1
+219324,Panpour,Panpour,https://tcgplayer-cdn.tcgplayer.com/product/219324_200w.jpg,3,2675,https://cpt.tcgcsv.com/vLM2,2025-02-07T20:07:23.95,1,,0.01,0.15,25.12,0.12,,Normal,,041/189,Common,Water,60,Basic,[W] Water Gun (10),[2] Bite (20),Lx2,None,1
+219325,Capture Energy (Secret),Capture Energy Secret,https://tcgplayer-cdn.tcgplayer.com/product/219325_200w.jpg,3,2675,https://cpt.tcgcsv.com/wLM2,2021-10-09T12:41:50.127,1,"As long as this card is attached to a Pokemon, it provides Colorless Energy.
+<br>When you attach this card from your hand to a Pokemon, search your deck for a Basic Pokemon and put it into your Bench. Then, shuffle your deck.",2.0,3.26,39.0,3.0,4.5,Holofoil,,201/189,Secret Rare,Special Energy,,,,,,,
+219328,Kangaskhan,Kangaskhan,https://tcgplayer-cdn.tcgplayer.com/product/219328_200w.jpg,3,2675,https://cpt.tcgcsv.com/BLM2,2021-09-21T19:49:52.257,1,,0.34,0.5,2.49,0.49,,Reverse Holofoil,,133/189,Holo Rare,Colorless,130,Basic,"[2] Rally Back (30+)
+<br>If any of your Pokémon were Knocked Out by damage from an opponent's attack during their last turn, this attack does 90 more damage.",[3] Hammer In (100),Fx2,None,2
+219328,Kangaskhan,Kangaskhan,https://tcgplayer-cdn.tcgplayer.com/product/219328_200w.jpg,3,2675,https://cpt.tcgcsv.com/BLM2,2021-09-21T19:49:52.257,1,,0.15,0.38,2.74,0.37,,Holofoil,,133/189,Holo Rare,Colorless,130,Basic,"[2] Rally Back (30+)
+<br>If any of your Pokémon were Knocked Out by damage from an opponent's attack during their last turn, this attack does 90 more damage.",[3] Hammer In (100),Fx2,None,2
+219329,Tauros,Tauros,https://tcgplayer-cdn.tcgplayer.com/product/219329_200w.jpg,3,2675,https://cpt.tcgcsv.com/CLM2,2022-12-27T19:42:01.3,1,,0.05,0.2,2.0,0.16,0.09,Reverse Holofoil,,134/189,Common,Colorless,110,Basic,[2] Horn Attack (60),,Fx2,None,2
+219329,Tauros,Tauros,https://tcgplayer-cdn.tcgplayer.com/product/219329_200w.jpg,3,2675,https://cpt.tcgcsv.com/CLM2,2022-12-27T19:42:01.3,1,,0.01,0.11,25.08,0.08,0.03,Normal,,134/189,Common,Colorless,110,Basic,[2] Horn Attack (60),,Fx2,None,2
+219331,Sentret,Sentret,https://tcgplayer-cdn.tcgplayer.com/product/219331_200w.jpg,3,2675,https://cpt.tcgcsv.com/FLM2,2025-02-07T20:07:23.997,1,,0.05,0.2,2.0,0.19,,Reverse Holofoil,,135/189,Common,Colorless,60,Basic,"[1] Call for Family
+<br>Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck.",,Fx2,None,1
+219331,Sentret,Sentret,https://tcgplayer-cdn.tcgplayer.com/product/219331_200w.jpg,3,2675,https://cpt.tcgcsv.com/FLM2,2025-02-07T20:07:23.997,1,,0.02,0.15,25.1,0.1,0.1,Normal,,135/189,Common,Colorless,60,Basic,"[1] Call for Family
+<br>Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck.",,Fx2,None,1
+219333,Furret,Furret,https://tcgplayer-cdn.tcgplayer.com/product/219333_200w.jpg,3,2675,https://cpt.tcgcsv.com/HLM2,2020-08-14T04:03:29.183,1,,0.01,0.19,25.17,0.17,0.11,Normal,,136/189,Uncommon,Colorless,110,Stage 1,"[1] Feelin' Fine
+<br>Draw 3 cards.","[1] Tail Smash (90)
+<br>Flip a coin. If tails, this attack does nothing.",Fx2,None,1
+219333,Furret,Furret,https://tcgplayer-cdn.tcgplayer.com/product/219333_200w.jpg,3,2675,https://cpt.tcgcsv.com/HLM2,2020-08-14T04:03:29.183,1,,0.09,0.3,5.17,0.33,0.3,Reverse Holofoil,,136/189,Uncommon,Colorless,110,Stage 1,"[1] Feelin' Fine
+<br>Draw 3 cards.","[1] Tail Smash (90)
+<br>Flip a coin. If tails, this attack does nothing.",Fx2,None,1
+219334,Dunsparce,Dunsparce,https://tcgplayer-cdn.tcgplayer.com/product/219334_200w.jpg,3,2675,https://cpt.tcgcsv.com/JLM2,2025-02-07T20:07:24.057,1,"<strong>Ability — Final Dig</strong>
+<br>If this Pokémon is Knocked Out by damage from an opponent's attack, discard the top 2 cards of your opponent's deck.",0.01,0.13,25.07,0.07,0.04,Normal,,137/189,Common,Colorless,60,Basic,[1] Ram (20),,Fx2,None,1
+219334,Dunsparce,Dunsparce,https://tcgplayer-cdn.tcgplayer.com/product/219334_200w.jpg,3,2675,https://cpt.tcgcsv.com/JLM2,2025-02-07T20:07:24.057,1,"<strong>Ability — Final Dig</strong>
+<br>If this Pokémon is Knocked Out by damage from an opponent's attack, discard the top 2 cards of your opponent's deck.",0.05,0.2,2.0,0.16,0.08,Reverse Holofoil,,137/189,Common,Colorless,60,Basic,[1] Ram (20),,Fx2,None,1
+219336,Teddiursa,Teddiursa,https://tcgplayer-cdn.tcgplayer.com/product/219336_200w.jpg,3,2675,https://cpt.tcgcsv.com/LLM2,2020-08-14T04:03:29.183,1,,0.02,0.15,25.11,0.11,0.05,Normal,,138/189,Common,Colorless,70,Basic,"[1] Baby-Doll Eyes
+<br>During your opponent's next turn, the Defending Pokémon can't retreat.",[2] Dig Claws (20),Fx2,None,2
+219336,Teddiursa,Teddiursa,https://tcgplayer-cdn.tcgplayer.com/product/219336_200w.jpg,3,2675,https://cpt.tcgcsv.com/LLM2,2020-08-14T04:03:29.183,1,,0.08,0.25,2.0,0.21,0.09,Reverse Holofoil,,138/189,Common,Colorless,70,Basic,"[1] Baby-Doll Eyes
+<br>During your opponent's next turn, the Defending Pokémon can't retreat.",[2] Dig Claws (20),Fx2,None,2
+219337,Ursaring,Ursaring,https://tcgplayer-cdn.tcgplayer.com/product/219337_200w.jpg,3,2675,https://cpt.tcgcsv.com/MLM2,2025-02-07T20:07:24.103,1,,0.01,0.15,25.09,0.09,,Normal,,139/189,Uncommon,Colorless,140,Stage 1,"[3] Hammer Arm (70)
+<br>Discard the top card of your opponent's deck.",[4] Claw Slash (120),Fx2,None,3
+219337,Ursaring,Ursaring,https://tcgplayer-cdn.tcgplayer.com/product/219337_200w.jpg,3,2675,https://cpt.tcgcsv.com/MLM2,2025-02-07T20:07:24.103,1,,0.08,0.2,2.0,0.16,,Reverse Holofoil,,139/189,Uncommon,Colorless,140,Stage 1,"[3] Hammer Arm (70)
+<br>Discard the top card of your opponent's deck.",[4] Claw Slash (120),Fx2,None,3
+219338,Simipour,Simipour,https://tcgplayer-cdn.tcgplayer.com/product/219338_200w.jpg,3,2675,https://cpt.tcgcsv.com/NLM2,2022-03-29T15:42:16.75,1,,0.04,0.23,2.0,0.15,0.09,Reverse Holofoil,,042/189,Uncommon,Water,100,Stage 1,[W] Water Gun (30),"[3] Giga Impact (110)
+<br>During your next turn, this Pokémon can't attack.",Lx2,None,1
+219338,Simipour,Simipour,https://tcgplayer-cdn.tcgplayer.com/product/219338_200w.jpg,3,2675,https://cpt.tcgcsv.com/NLM2,2022-03-29T15:42:16.75,1,,0.01,0.1,25.07,0.07,0.05,Normal,,042/189,Uncommon,Water,100,Stage 1,[W] Water Gun (30),"[3] Giga Impact (110)
+<br>During your next turn, this Pokémon can't attack.",Lx2,None,1
+219339,Galarian Darumaka,Galarian Darumaka,https://tcgplayer-cdn.tcgplayer.com/product/219339_200w.jpg,3,2675,https://cpt.tcgcsv.com/PLM2,2025-02-07T20:07:24.173,1,,0.05,0.2,2.0,0.16,,Reverse Holofoil,,043/189,Common,Water,70,Basic,[1] Tackle (10),[1W] Headbutt (20),Mx2,None,1
+219339,Galarian Darumaka,Galarian Darumaka,https://tcgplayer-cdn.tcgplayer.com/product/219339_200w.jpg,3,2675,https://cpt.tcgcsv.com/PLM2,2025-02-07T20:07:24.173,1,,0.01,0.1,25.07,0.07,0.03,Normal,,043/189,Common,Water,70,Basic,[1] Tackle (10),[1W] Headbutt (20),Mx2,None,1
+219340,Lugia,Lugia,https://tcgplayer-cdn.tcgplayer.com/product/219340_200w.jpg,3,2675,https://cpt.tcgcsv.com/QLM2,2023-05-21T08:32:02.147,1,,0.47,0.93,3.99,0.94,,Reverse Holofoil,,140/189,Rare,Colorless,130,Basic,[1] Gust (30),"[3] Energy Loop (120)
+<br>Put an Energy attached to this Pokémon into your hand.",Lx2,F-30,2
+219340,Lugia,Lugia,https://tcgplayer-cdn.tcgplayer.com/product/219340_200w.jpg,3,2675,https://cpt.tcgcsv.com/QLM2,2023-05-21T08:32:02.147,1,,0.08,0.34,5.13,0.3,,Normal,,140/189,Rare,Colorless,130,Basic,[1] Gust (30),"[3] Energy Loop (120)
+<br>Put an Energy attached to this Pokémon into your hand.",Lx2,F-30,2
+219341,Skitty,Skitty,https://tcgplayer-cdn.tcgplayer.com/product/219341_200w.jpg,3,2675,https://cpt.tcgcsv.com/RLM2,2022-03-29T15:42:42.71,1,,0.09,0.25,25.0,0.24,0.09,Reverse Holofoil,,141/189,Common,Colorless,60,Basic,"[1] Drawup Power
+<br>Search your deck for an Energy card, reveal it, and put it into your hand. Then, shuffle your deck.",[2] Cat Kick (20),Fx2,None,1
+219341,Skitty,Skitty,https://tcgplayer-cdn.tcgplayer.com/product/219341_200w.jpg,3,2675,https://cpt.tcgcsv.com/RLM2,2022-03-29T15:42:42.71,1,,0.02,0.15,25.13,0.13,0.05,Normal,,141/189,Common,Colorless,60,Basic,"[1] Drawup Power
+<br>Search your deck for an Energy card, reveal it, and put it into your hand. Then, shuffle your deck.",[2] Cat Kick (20),Fx2,None,1
+219342,Delcatty,Delcatty,https://tcgplayer-cdn.tcgplayer.com/product/219342_200w.jpg,3,2675,https://cpt.tcgcsv.com/SLM2,2020-08-14T04:03:29.183,1,,0.2,0.44,1.6,0.46,,Reverse Holofoil,,142/189,Rare,Colorless,100,Stage 1,"[1] Captivating Tail
+<br>Switch 1 of your opponent's Benched Pokémon with their Active Pokémon. The new Active Pokémon is now Confused.",[3] Moon Impact (90),Fx2,None,1
+219342,Delcatty,Delcatty,https://tcgplayer-cdn.tcgplayer.com/product/219342_200w.jpg,3,2675,https://cpt.tcgcsv.com/SLM2,2020-08-14T04:03:29.183,1,,0.1,0.25,2.0,0.22,0.2,Normal,,142/189,Rare,Colorless,100,Stage 1,"[1] Captivating Tail
+<br>Switch 1 of your opponent's Benched Pokémon with their Active Pokémon. The new Active Pokémon is now Confused.",[3] Moon Impact (90),Fx2,None,1
+219343,Salamence V,Salamence V,https://tcgplayer-cdn.tcgplayer.com/product/219343_200w.jpg,3,2675,https://cpt.tcgcsv.com/TLM2,2025-02-07T20:07:24.23,1,,0.62,1.0,25.0,0.97,,Holofoil,,143/189,Ultra Rare,Colorless,220,Basic,"[3] Swoop Across
+<br>This attack does 30 damage to each of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",[4] Heavy Storm (160),Lx2,F-30,2
+219345,Galarian Darmanitan (44),Galarian Darmanitan 44,https://tcgplayer-cdn.tcgplayer.com/product/219345_200w.jpg,3,2675,https://cpt.tcgcsv.com/WLM2,2023-05-04T15:46:51.613,1,,0.15,0.25,2.0,0.26,,Normal,,044/189,Rare,Water,140,Stage 1,"[2W] Blizzard (80)
+<br>This attack also does 10 damage to each of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[2WW] Crushing Headbutt (170)
+<br>During your next turn, this Pokémon can't use Crushing Headbutt.",Mx2,None,3
+219345,Galarian Darmanitan (44),Galarian Darmanitan 44,https://tcgplayer-cdn.tcgplayer.com/product/219345_200w.jpg,3,2675,https://cpt.tcgcsv.com/WLM2,2023-05-04T15:46:51.613,1,,0.1,0.35,2.0,0.33,,Reverse Holofoil,,044/189,Rare,Water,140,Stage 1,"[2W] Blizzard (80)
+<br>This attack also does 10 damage to each of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[2WW] Crushing Headbutt (170)
+<br>During your next turn, this Pokémon can't use Crushing Headbutt.",Mx2,None,3
+219347,Salamence VMAX,Salamence VMAX,https://tcgplayer-cdn.tcgplayer.com/product/219347_200w.jpg,3,2675,https://cpt.tcgcsv.com/ZLM2,2023-08-06T13:23:36.75,1,,2.0,3.68,24.99,3.56,4.45,Holofoil,,144/189,Ultra Rare,Colorless,320,VMAX,"[1] Sonic Double
+<br>This attack does 40 damage to 2 of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[4] Max Wing (240)
+<br>During your next turn, this Pokémon can't use Max Wing.",Lx2,F-30,2
+219348,Vanillite,Vanillite,https://tcgplayer-cdn.tcgplayer.com/product/219348_200w.jpg,3,2675,https://cpt.tcgcsv.com/-LM2,2025-02-07T20:07:24.277,1,,0.01,0.12,25.1,0.1,,Normal,,045/189,Common,Water,60,Basic,"[W] Ice Over (10)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",,Mx2,None,1
+219348,Vanillite,Vanillite,https://tcgplayer-cdn.tcgplayer.com/product/219348_200w.jpg,3,2675,https://cpt.tcgcsv.com/-LM2,2025-02-07T20:07:24.277,1,,0.07,0.2,2.0,0.19,0.21,Reverse Holofoil,,045/189,Common,Water,60,Basic,"[W] Ice Over (10)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",,Mx2,None,1
+219349,Vanillish,Vanillish,https://tcgplayer-cdn.tcgplayer.com/product/219349_200w.jpg,3,2675,https://cpt.tcgcsv.com/_LM2,2021-01-27T21:52:20.673,1,,0.06,0.22,2.0,0.19,0.09,Reverse Holofoil,,046/189,Uncommon,Water,80,Stage 1,"[W] Freezing Headbutt (30)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",,Mx2,None,2
+219349,Vanillish,Vanillish,https://tcgplayer-cdn.tcgplayer.com/product/219349_200w.jpg,3,2675,https://cpt.tcgcsv.com/_LM2,2021-01-27T21:52:20.673,1,,0.01,0.15,25.11,0.11,0.07,Normal,,046/189,Uncommon,Water,80,Stage 1,"[W] Freezing Headbutt (30)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",,Mx2,None,2
+219351,Vanilluxe,Vanilluxe,https://tcgplayer-cdn.tcgplayer.com/product/219351_200w.jpg,3,2675,https://cpt.tcgcsv.com/2MM2,2025-02-07T20:07:24.34,1,"<strong>Ability — Bitter Cold</strong>
+<br>Once during your turn, if this Pokémon is in the Active Spot, you may flip a coin. If heads, your opponent’s Active Pokémon is now Paralyzed.",0.1,0.32,2.0,0.31,,Reverse Holofoil,,047/189,Rare,Water,150,Stage 2,[1W] Frost Smash (90),,Mx2,None,2
+219351,Vanilluxe,Vanilluxe,https://tcgplayer-cdn.tcgplayer.com/product/219351_200w.jpg,3,2675,https://cpt.tcgcsv.com/2MM2,2025-02-07T20:07:24.34,1,"<strong>Ability — Bitter Cold</strong>
+<br>Once during your turn, if this Pokémon is in the Active Spot, you may flip a coin. If heads, your opponent’s Active Pokémon is now Paralyzed.",0.05,0.2,2.0,0.18,,Normal,,047/189,Rare,Water,150,Stage 2,[1W] Frost Smash (90),,Mx2,None,2
+219352,Starly,Starly,https://tcgplayer-cdn.tcgplayer.com/product/219352_200w.jpg,3,2675,https://cpt.tcgcsv.com/3MM2,2025-02-07T20:07:24.403,1,"<strong>Ability — Sky Circus</strong>
+<br>If you played Bird Keeper from your hand during this turn, ignore all Energy in the attack cost of each of this Pokémon's attacks.",0.09,0.2,2.0,0.18,,Reverse Holofoil,,145/189,Common,Colorless,50,Basic,"[2] Keen Eye
+<br>Search your deck for up to 2 cards and put them into your hand. Then, shuffle your deck.",,Lx2,F-30,1
+219352,Starly,Starly,https://tcgplayer-cdn.tcgplayer.com/product/219352_200w.jpg,3,2675,https://cpt.tcgcsv.com/3MM2,2025-02-07T20:07:24.403,1,"<strong>Ability — Sky Circus</strong>
+<br>If you played Bird Keeper from your hand during this turn, ignore all Energy in the attack cost of each of this Pokémon's attacks.",0.01,0.11,25.07,0.07,0.03,Normal,,145/189,Common,Colorless,50,Basic,"[2] Keen Eye
+<br>Search your deck for up to 2 cards and put them into your hand. Then, shuffle your deck.",,Lx2,F-30,1
+219354,Staravia,Staravia,https://tcgplayer-cdn.tcgplayer.com/product/219354_200w.jpg,3,2675,https://cpt.tcgcsv.com/6MM2,2025-02-07T20:07:24.48,1,,0.01,0.12,25.08,0.08,0.05,Normal,,146/189,Uncommon,Colorless,80,Stage 1,"[1] Ambush (20+)
+<br>Flip a coin. If heads, this attack does 20 more damage.",[2] Wing Attack (40),Lx2,F-30,1
+219354,Staravia,Staravia,https://tcgplayer-cdn.tcgplayer.com/product/219354_200w.jpg,3,2675,https://cpt.tcgcsv.com/6MM2,2025-02-07T20:07:24.48,1,,0.08,0.2,25.19,0.19,,Reverse Holofoil,,146/189,Uncommon,Colorless,80,Stage 1,"[1] Ambush (20+)
+<br>Flip a coin. If heads, this attack does 20 more damage.",[2] Wing Attack (40),Lx2,F-30,1
+219355,Staraptor,Staraptor,https://tcgplayer-cdn.tcgplayer.com/product/219355_200w.jpg,3,2675,https://cpt.tcgcsv.com/7MM2,2025-02-07T20:07:24.543,1,,0.08,0.23,2.0,0.22,,Normal,,147/189,Rare,Colorless,150,Stage 2,"[1] Hurricane Blender (70)
+<br>Move any number of Energy from your Pokémon to your other Pokémon in any way you like.","[3] Brave Bird (170)
+<br>This Pokémon does 30 damage to itself.",Lx2,F-30,0
+219355,Staraptor,Staraptor,https://tcgplayer-cdn.tcgplayer.com/product/219355_200w.jpg,3,2675,https://cpt.tcgcsv.com/7MM2,2025-02-07T20:07:24.543,1,,0.1,0.36,1.99,0.35,,Reverse Holofoil,,147/189,Rare,Colorless,150,Stage 2,"[1] Hurricane Blender (70)
+<br>Move any number of Energy from your Pokémon to your other Pokémon in any way you like.","[3] Brave Bird (170)
+<br>This Pokémon does 30 damage to itself.",Lx2,F-30,0
+219357,Ducklett,Ducklett,https://tcgplayer-cdn.tcgplayer.com/product/219357_200w.jpg,3,2675,https://cpt.tcgcsv.com/9MM2,2025-02-07T20:07:24.607,1,,0.01,0.11,25.11,0.11,0.04,Normal,,148/189,Common,Colorless,50,Basic,[1] Flap (20),,Lx2,F-30,1
+219357,Ducklett,Ducklett,https://tcgplayer-cdn.tcgplayer.com/product/219357_200w.jpg,3,2675,https://cpt.tcgcsv.com/9MM2,2025-02-07T20:07:24.607,1,,0.01,0.2,2.0,0.17,,Reverse Holofoil,,148/189,Common,Colorless,50,Basic,[1] Flap (20),,Lx2,F-30,1
+219358,Cubchoo,Cubchoo,https://tcgplayer-cdn.tcgplayer.com/product/219358_200w.jpg,3,2675,https://cpt.tcgcsv.com/bMM2,2025-02-07T20:07:24.67,1,,0.01,0.15,25.14,0.14,,Normal,,048/189,Common,Water,70,Basic,[1] Chop (10),[1W] Icicle (30),Mx2,None,2
+219358,Cubchoo,Cubchoo,https://tcgplayer-cdn.tcgplayer.com/product/219358_200w.jpg,3,2675,https://cpt.tcgcsv.com/bMM2,2025-02-07T20:07:24.67,1,,0.05,0.21,2.0,0.19,,Reverse Holofoil,,048/189,Common,Water,70,Basic,[1] Chop (10),[1W] Icicle (30),Mx2,None,2
+219360,Swanna,Swanna,https://tcgplayer-cdn.tcgplayer.com/product/219360_200w.jpg,3,2675,https://cpt.tcgcsv.com/dMM2,2025-02-07T20:07:24.743,1,"<strong>Ability — Sky Circus</strong>
+<br>If you played Bird Keeper from your hand during this turn, ignore all Energy in the attack cost of each of this Pokémon's attacks.",0.02,0.2,5.04,0.17,0.12,Normal,,149/189,Rare,Colorless,110,Stage 1,"[3] Feather Slash (70+)
+<br>You may discard 1 card from your hand. If you do, this attack does 70 more damage.",,Lx2,F-30,0
+219360,Swanna,Swanna,https://tcgplayer-cdn.tcgplayer.com/product/219360_200w.jpg,3,2675,https://cpt.tcgcsv.com/dMM2,2025-02-07T20:07:24.743,1,"<strong>Ability — Sky Circus</strong>
+<br>If you played Bird Keeper from your hand during this turn, ignore all Energy in the attack cost of each of this Pokémon's attacks.",0.09,0.25,1.99,0.23,,Reverse Holofoil,,149/189,Rare,Colorless,110,Stage 1,"[3] Feather Slash (70+)
+<br>You may discard 1 card from your hand. If you do, this attack does 70 more damage.",,Lx2,F-30,0
+219361,Beartic,Beartic,https://tcgplayer-cdn.tcgplayer.com/product/219361_200w.jpg,3,2675,https://cpt.tcgcsv.com/fMM2,2025-02-07T20:07:24.817,1,,0.1,0.36,2.0,0.36,,Reverse Holofoil,,049/189,Rare,Water,140,Stage 1,[2] Slash (40),"[2W] Frozen Slice (150)
+<br>This Pokémon does 50 damage to itself.",Mx2,None,3
+219361,Beartic,Beartic,https://tcgplayer-cdn.tcgplayer.com/product/219361_200w.jpg,3,2675,https://cpt.tcgcsv.com/fMM2,2025-02-07T20:07:24.817,1,,0.05,0.21,2.0,0.17,,Normal,,049/189,Rare,Water,140,Stage 1,[2] Slash (40),"[2W] Frozen Slice (150)
+<br>This Pokémon does 50 damage to itself.",Mx2,None,3
+219362,Bunnelby,Bunnelby,https://tcgplayer-cdn.tcgplayer.com/product/219362_200w.jpg,3,2675,https://cpt.tcgcsv.com/gMM2,2025-03-30T10:52:02.233,1,,0.01,0.13,5.01,0.09,0.03,Normal,,150/189,Common,Colorless,40,Basic,"[2] Mad Party (20x)
+<br>This attack does 20 damage times the number of Pokémon in your discard pile that have the Mad Party attack.",,Fx2,None,1
+219362,Bunnelby,Bunnelby,https://tcgplayer-cdn.tcgplayer.com/product/219362_200w.jpg,3,2675,https://cpt.tcgcsv.com/gMM2,2025-03-30T10:52:02.233,1,,0.05,0.29,2.0,0.3,,Reverse Holofoil,,150/189,Common,Colorless,40,Basic,"[2] Mad Party (20x)
+<br>This attack does 20 damage times the number of Pokémon in your discard pile that have the Mad Party attack.",,Fx2,None,1
+219364,Fletchling,Fletchling,https://tcgplayer-cdn.tcgplayer.com/product/219364_200w.jpg,3,2675,https://cpt.tcgcsv.com/jMM2,2022-05-13T12:34:41.257,1,,0.01,0.1,25.05,0.05,0.03,Normal,,151/189,Common,Colorless,60,Basic,[1] Tackle (20),,Lx2,None,1
+219364,Fletchling,Fletchling,https://tcgplayer-cdn.tcgplayer.com/product/219364_200w.jpg,3,2675,https://cpt.tcgcsv.com/jMM2,2022-05-13T12:34:41.257,1,,0.05,0.2,2.0,0.15,0.08,Reverse Holofoil,,151/189,Common,Colorless,60,Basic,[1] Tackle (20),,Lx2,None,1
+219365,Skwovet,Skwovet,https://tcgplayer-cdn.tcgplayer.com/product/219365_200w.jpg,3,2675,https://cpt.tcgcsv.com/kMM2,2025-02-07T20:07:24.897,1,,0.05,0.21,2.0,0.2,,Reverse Holofoil,,152/189,Common,Colorless,70,Basic,"[1] Whimsy Tackle (40)
+<br>Flip a coin. If tails, this attack does nothing.",,Fx2,None,1
+219365,Skwovet,Skwovet,https://tcgplayer-cdn.tcgplayer.com/product/219365_200w.jpg,3,2675,https://cpt.tcgcsv.com/kMM2,2025-02-07T20:07:24.897,1,,0.01,0.14,25.07,0.07,0.03,Normal,,152/189,Common,Colorless,70,Basic,"[1] Whimsy Tackle (40)
+<br>Flip a coin. If tails, this attack does nothing.",,Fx2,None,1
+219367,Greedent,Greedent,https://tcgplayer-cdn.tcgplayer.com/product/219367_200w.jpg,3,2675,https://cpt.tcgcsv.com/mMM2,2020-08-14T04:03:29.183,1,,0.1,0.32,2.0,0.31,0.13,Reverse Holofoil,,153/189,Rare,Colorless,120,Stage 1,"[1] Scrape Off (20)
+<br>Before doing damage, discard all Pokémon Tools from your opponent's Active Pokémon.","[2] Smack and Run (100)
+<br>Put this Pokémon and all attached cards into your hand.",Fx2,None,1
+219367,Greedent,Greedent,https://tcgplayer-cdn.tcgplayer.com/product/219367_200w.jpg,3,2675,https://cpt.tcgcsv.com/mMM2,2020-08-14T04:03:29.183,1,,0.05,0.23,2.0,0.17,0.15,Normal,,153/189,Rare,Colorless,120,Stage 1,"[1] Scrape Off (20)
+<br>Before doing damage, discard all Pokémon Tools from your opponent's Active Pokémon.","[2] Smack and Run (100)
+<br>Put this Pokémon and all attached cards into your hand.",Fx2,None,1
+219368,Rookidee,Rookidee,https://tcgplayer-cdn.tcgplayer.com/product/219368_200w.jpg,3,2675,https://cpt.tcgcsv.com/nMM2,2025-02-07T20:07:24.957,1,,0.08,0.2,2.0,0.15,,Reverse Holofoil,,154/189,Common,Colorless,60,Basic,"[1] Pluck (10)
+<br>Before doing damage, discard all Pokémon Tools from your opponent's Active Pokémon.",,Lx2,F-30,1
+219368,Rookidee,Rookidee,https://tcgplayer-cdn.tcgplayer.com/product/219368_200w.jpg,3,2675,https://cpt.tcgcsv.com/nMM2,2025-02-07T20:07:24.957,1,,0.01,0.1,25.07,0.07,0.03,Normal,,154/189,Common,Colorless,60,Basic,"[1] Pluck (10)
+<br>Before doing damage, discard all Pokémon Tools from your opponent's Active Pokémon.",,Lx2,F-30,1
+219370,Corvisquire,Corvisquire,https://tcgplayer-cdn.tcgplayer.com/product/219370_200w.jpg,3,2675,https://cpt.tcgcsv.com/qMM2,2023-02-13T15:56:59.303,1,,0.05,0.2,2.0,0.16,0.09,Reverse Holofoil,,155/189,Uncommon,Colorless,80,Stage 1,[1] Peck (30),"[3] Fury Attack (40x)
+<br>Flip 3 coins. This attack does 40 damage for each heads.",Lx2,F-30,1
+219370,Corvisquire,Corvisquire,https://tcgplayer-cdn.tcgplayer.com/product/219370_200w.jpg,3,2675,https://cpt.tcgcsv.com/qMM2,2023-02-13T15:56:59.303,1,,0.01,0.14,25.07,0.07,0.05,Normal,,155/189,Uncommon,Colorless,80,Stage 1,[1] Peck (30),"[3] Fury Attack (40x)
+<br>Flip 3 coins. This attack does 40 damage for each heads.",Lx2,F-30,1
+219371,Corviknight,Corviknight,https://tcgplayer-cdn.tcgplayer.com/product/219371_200w.jpg,3,2675,https://cpt.tcgcsv.com/rMM2,2025-02-07T20:07:25.003,1,"<strong>Ability — Flying Taxi</strong>
+<br>When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may put a Pokémon (excluding this Pokémon) and all cards attached to it into your hand.",0.06,0.4,1.59,0.34,,Reverse Holofoil,,156/189,Holo Rare,Colorless,160,Stage 2,[3] Blasting Wind (120),,Lx2,F-30,2
+219371,Corviknight,Corviknight,https://tcgplayer-cdn.tcgplayer.com/product/219371_200w.jpg,3,2675,https://cpt.tcgcsv.com/rMM2,2025-02-07T20:07:25.003,1,"<strong>Ability — Flying Taxi</strong>
+<br>When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may put a Pokémon (excluding this Pokémon) and all cards attached to it into your hand.",0.08,0.3,2.0,0.3,,Holofoil,,156/189,Holo Rare,Colorless,160,Stage 2,[3] Blasting Wind (120),,Lx2,F-30,2
+219373,Scizor V,Scizor V,https://tcgplayer-cdn.tcgplayer.com/product/219373_200w.jpg,3,2675,https://cpt.tcgcsv.com/tMM2,2025-02-07T20:07:25.067,1,,0.47,1.21,11.84,1.25,1.89,Holofoil,,118/189,Ultra Rare,Metal,210,Basic,"[M] Hack Off (30)
+<br>Discard a Pokémon Tool card and a Special Energy from your opponent's Active Pokémon.",[1MM] Slashing Claw (140),Rx2,G-30,2
+219374,Scizor VMAX,Scizor VMAX,https://tcgplayer-cdn.tcgplayer.com/product/219374_200w.jpg,3,2675,https://cpt.tcgcsv.com/vMM2,2023-02-06T06:32:34.333,1,,1.99,3.82,20.0,3.74,6.98,Holofoil,,119/189,Ultra Rare,Metal,320,VMAX,"[1M] Hard Scissors (90)
+<br>During your opponent's next turn, this Pokémon takes 30 less damage from attacks <em>(after applying Weakness and Resistance)</em>.",[1MM] Max Steelspike (190),Rx2,G-30,2
+219375,Wishiwashi,Wishiwashi,https://tcgplayer-cdn.tcgplayer.com/product/219375_200w.jpg,3,2675,https://cpt.tcgcsv.com/wMM2,2025-02-07T20:07:25.13,1,,0.01,0.1,25.09,0.09,0.03,Normal,,050/189,Common,Water,30,Basic,"[1] Deep Sea Swirl
+<br>Shuffle your hand into your deck. Then, draw 8 cards.",[W] Wave Splash (20),Lx2,None,1
+219375,Wishiwashi,Wishiwashi,https://tcgplayer-cdn.tcgplayer.com/product/219375_200w.jpg,3,2675,https://cpt.tcgcsv.com/wMM2,2025-02-07T20:07:25.13,1,,0.09,0.25,2.0,0.19,,Reverse Holofoil,,050/189,Common,Water,30,Basic,"[1] Deep Sea Swirl
+<br>Shuffle your hand into your deck. Then, draw 8 cards.",[W] Wave Splash (20),Lx2,None,1
+219376,Skarmory,Skarmory,https://tcgplayer-cdn.tcgplayer.com/product/219376_200w.jpg,3,2675,https://cpt.tcgcsv.com/xMM2,2024-03-04T18:32:17.083,1,,0.07,0.2,2.0,0.16,0.08,Reverse Holofoil,,120/189,Common,Metal,120,Basic,"[M] Metal Arms (10+)
+<br>If this Pokémon has a Pokémon Tool card attached to it, this attack does 40 more damage.",[2M] Cutting Wind (80),Lx2,F-30,1
+219376,Skarmory,Skarmory,https://tcgplayer-cdn.tcgplayer.com/product/219376_200w.jpg,3,2675,https://cpt.tcgcsv.com/xMM2,2024-03-04T18:32:17.083,1,,0.01,0.11,25.09,0.09,0.03,Normal,,120/189,Common,Metal,120,Basic,"[M] Metal Arms (10+)
+<br>If this Pokémon has a Pokémon Tool card attached to it, this attack does 40 more damage.",[2M] Cutting Wind (80),Lx2,F-30,1
+219377,Mareanie,Mareanie,https://tcgplayer-cdn.tcgplayer.com/product/219377_200w.jpg,3,2675,https://cpt.tcgcsv.com/zMM2,2021-05-27T15:33:22.14,1,,0.08,0.25,2.0,0.24,0.09,Reverse Holofoil,,051/189,Common,Water,70,Basic,"[1] Regeneration
+<br>Heal 30 damage from this Pokémon.","[1W] Poison Tentacles (20)
+<br>Your opponent's Active Pokémon is now Poisoned.",Lx2,None,2
+219377,Mareanie,Mareanie,https://tcgplayer-cdn.tcgplayer.com/product/219377_200w.jpg,3,2675,https://cpt.tcgcsv.com/zMM2,2021-05-27T15:33:22.14,1,,0.01,0.15,25.1,0.1,,Normal,,051/189,Common,Water,70,Basic,"[1] Regeneration
+<br>Heal 30 damage from this Pokémon.","[1W] Poison Tentacles (20)
+<br>Your opponent's Active Pokémon is now Poisoned.",Lx2,None,2
+219378,Aron,Aron,https://tcgplayer-cdn.tcgplayer.com/product/219378_200w.jpg,3,2675,https://cpt.tcgcsv.com/BMM2,2025-02-07T20:07:25.183,1,,0.08,0.2,2.0,0.2,,Reverse Holofoil,,121/189,Common,Metal,70,Basic,[1] Ram (10),[1M] Headbutt (20),Rx2,G-30,2
+219378,Aron,Aron,https://tcgplayer-cdn.tcgplayer.com/product/219378_200w.jpg,3,2675,https://cpt.tcgcsv.com/BMM2,2025-02-07T20:07:25.183,1,,0.01,0.11,25.07,0.07,,Normal,,121/189,Common,Metal,70,Basic,[1] Ram (10),[1M] Headbutt (20),Rx2,G-30,2
+219379,Toxapex,Toxapex,https://tcgplayer-cdn.tcgplayer.com/product/219379_200w.jpg,3,2675,https://cpt.tcgcsv.com/CMM2,2025-02-07T20:07:25.243,1,,0.01,0.15,25.1,0.09,,Normal,,052/189,Uncommon,Water,130,Stage 1,"[1] Recover
+<br>Discard an Energy from this Pokémon and heal all damage from it.","[2W] Poisonous Whip (80)
+<br>Your opponent's Active Pokémon is now Poisoned.",Lx2,None,3
+219379,Toxapex,Toxapex,https://tcgplayer-cdn.tcgplayer.com/product/219379_200w.jpg,3,2675,https://cpt.tcgcsv.com/CMM2,2025-02-07T20:07:25.243,1,,0.07,0.21,2.0,0.19,,Reverse Holofoil,,052/189,Uncommon,Water,130,Stage 1,"[1] Recover
+<br>Discard an Energy from this Pokémon and heal all damage from it.","[2W] Poisonous Whip (80)
+<br>Your opponent's Active Pokémon is now Poisoned.",Lx2,None,3
+219380,Lairon,Lairon,https://tcgplayer-cdn.tcgplayer.com/product/219380_200w.jpg,3,2675,https://cpt.tcgcsv.com/DMM2,2025-02-07T20:07:25.303,1,,0.08,0.2,2.0,0.18,,Reverse Holofoil,,122/189,Uncommon,Metal,100,Stage 1,"[2] Knock Away (30+)
+<br>Flip a coin. If heads, this attack does 30 more damage.",[2M] Lunge Out (50),Rx2,G-30,3
+219380,Lairon,Lairon,https://tcgplayer-cdn.tcgplayer.com/product/219380_200w.jpg,3,2675,https://cpt.tcgcsv.com/DMM2,2025-02-07T20:07:25.303,1,,0.01,0.13,25.09,0.09,,Normal,,122/189,Uncommon,Metal,100,Stage 1,"[2] Knock Away (30+)
+<br>Flip a coin. If heads, this attack does 30 more damage.",[2M] Lunge Out (50),Rx2,G-30,3
+219381,Aggron,Aggron,https://tcgplayer-cdn.tcgplayer.com/product/219381_200w.jpg,3,2675,https://cpt.tcgcsv.com/FMM2,2023-06-01T14:10:18.413,1,"<strong>Ability — Sturdy</strong>
+<br>If this Pokémon has full HP and would be Knocked Out by damage from an attack, this Pokémon is not Knocked Out, and its remaining HP becomes 10.",0.09,0.3,5.1,0.26,,Holofoil,,123/189,Holo Rare,Metal,160,Stage 2,[3M] Gigaton Stomp (160),,Rx2,G-30,3
+219381,Aggron,Aggron,https://tcgplayer-cdn.tcgplayer.com/product/219381_200w.jpg,3,2675,https://cpt.tcgcsv.com/FMM2,2023-06-01T14:10:18.413,1,"<strong>Ability — Sturdy</strong>
+<br>If this Pokémon has full HP and would be Knocked Out by damage from an attack, this Pokémon is not Knocked Out, and its remaining HP becomes 10.",0.1,0.44,2.0,0.44,0.47,Reverse Holofoil,,123/189,Holo Rare,Metal,160,Stage 2,[3M] Gigaton Stomp (160),,Rx2,G-30,3
+219382,Dracovish,Dracovish,https://tcgplayer-cdn.tcgplayer.com/product/219382_200w.jpg,3,2675,https://cpt.tcgcsv.com/GMM2,2025-02-07T20:07:25.35,1,"<strong>Ability — Primal Law</strong>
+<br>As long as this Pokémon is in the Active Spot, your opponent can't play any Pokémon from their hand to evolve their Pokémon.",0.4,0.68,2.0,0.71,,Reverse Holofoil,,053/189,Holo Rare,Water,150,Stage 1,[2W] Hammer In (120),,Lx2,None,3
+219382,Dracovish,Dracovish,https://tcgplayer-cdn.tcgplayer.com/product/219382_200w.jpg,3,2675,https://cpt.tcgcsv.com/GMM2,2025-02-07T20:07:25.35,1,"<strong>Ability — Primal Law</strong>
+<br>As long as this Pokémon is in the Active Spot, your opponent can't play any Pokémon from their hand to evolve their Pokémon.",0.27,0.7,2.0,0.74,,Holofoil,,053/189,Holo Rare,Water,150,Stage 1,[2W] Hammer In (120),,Lx2,None,3
+219383,Escavalier,Escavalier,https://tcgplayer-cdn.tcgplayer.com/product/219383_200w.jpg,3,2675,https://cpt.tcgcsv.com/HMM2,2025-02-07T20:07:25.413,1,,0.02,0.2,2.0,0.16,,Normal,,124/189,Rare,Metal,120,Stage 1,"[M] Fury Cutter (10+)
+<br>Flip 3 coins. If 1 of them is heads, this attack does 20 more damage. If 2 of them are heads, this attack does 70 more damage. If all of them are heads, this attack does 140 more damage.",[1M] Shell Attack (60),Rx2,G-30,2
+219383,Escavalier,Escavalier,https://tcgplayer-cdn.tcgplayer.com/product/219383_200w.jpg,3,2675,https://cpt.tcgcsv.com/HMM2,2025-02-07T20:07:25.413,1,,0.1,0.28,2.0,0.27,,Reverse Holofoil,,124/189,Rare,Metal,120,Stage 1,"[M] Fury Cutter (10+)
+<br>Flip 3 coins. If 1 of them is heads, this attack does 20 more damage. If 2 of them are heads, this attack does 70 more damage. If all of them are heads, this attack does 140 more damage.",[1M] Shell Attack (60),Rx2,G-30,2
+219384,Arctovish,Arctovish,https://tcgplayer-cdn.tcgplayer.com/product/219384_200w.jpg,3,2675,https://cpt.tcgcsv.com/JMM2,2021-01-27T21:53:09.23,1,,0.1,0.51,2.0,0.51,,Reverse Holofoil,,054/189,Rare,Water,150,Stage 1,"[2W] Hard Face (90)
+<br>During your opponent's next turn, this Pokémon takes 60 less damage from attacks <em>(after applying Weakness and Resistance)</em>.","[3W] Cold Breath (130)
+<br>Your opponent's Active Pokémon is now Asleep.",Lx2,None,2
+219384,Arctovish,Arctovish,https://tcgplayer-cdn.tcgplayer.com/product/219384_200w.jpg,3,2675,https://cpt.tcgcsv.com/JMM2,2021-01-27T21:53:09.23,1,,0.18,0.35,2.0,0.33,,Normal,,054/189,Rare,Water,150,Stage 1,"[2W] Hard Face (90)
+<br>During your opponent's next turn, this Pokémon takes 60 less damage from attacks <em>(after applying Weakness and Resistance)</em>.","[3W] Cold Breath (130)
+<br>Your opponent's Active Pokémon is now Asleep.",Lx2,None,2
+219385,Klink,Klink,https://tcgplayer-cdn.tcgplayer.com/product/219385_200w.jpg,3,2675,https://cpt.tcgcsv.com/KMM2,2025-02-07T20:07:25.49,1,,0.01,0.1,25.08,0.08,,Normal,,125/189,Common,Metal,60,Basic,"[M] Call for Backup
+<br>Search your deck for a Metal Pokémon, reveal it, and put it into your hand. Then, shuffle your deck.",,Rx2,G-30,2
+219385,Klink,Klink,https://tcgplayer-cdn.tcgplayer.com/product/219385_200w.jpg,3,2675,https://cpt.tcgcsv.com/KMM2,2025-02-07T20:07:25.49,1,,0.05,0.2,2.0,0.16,,Reverse Holofoil,,125/189,Common,Metal,60,Basic,"[M] Call for Backup
+<br>Search your deck for a Metal Pokémon, reveal it, and put it into your hand. Then, shuffle your deck.",,Rx2,G-30,2
+219386,Klang,Klang,https://tcgplayer-cdn.tcgplayer.com/product/219386_200w.jpg,3,2675,https://cpt.tcgcsv.com/LMM2,2025-02-07T20:07:25.567,1,,0.04,0.2,2.0,0.15,,Reverse Holofoil,,126/189,Uncommon,Metal,90,Stage 1,"[M] Call for Backup
+<br>Search your deck for a Metal Pokémon, reveal it, and put it into your hand. Then, shuffle your deck.",[2M] Spinning Attack (60),Rx2,G-30,3
+219386,Klang,Klang,https://tcgplayer-cdn.tcgplayer.com/product/219386_200w.jpg,3,2675,https://cpt.tcgcsv.com/LMM2,2025-02-07T20:07:25.567,1,,0.01,0.11,25.07,0.07,,Normal,,126/189,Uncommon,Metal,90,Stage 1,"[M] Call for Backup
+<br>Search your deck for a Metal Pokémon, reveal it, and put it into your hand. Then, shuffle your deck.",[2M] Spinning Attack (60),Rx2,G-30,3
+219387,Mareep,Mareep,https://tcgplayer-cdn.tcgplayer.com/product/219387_200w.jpg,3,2675,https://cpt.tcgcsv.com/MMM2,2021-01-27T21:53:14.447,1,,0.01,0.14,25.11,0.1,0.05,Normal,,055/189,Common,Lightning,60,Basic,[L] Static Shock (20),,Fx2,None,1
+219387,Mareep,Mareep,https://tcgplayer-cdn.tcgplayer.com/product/219387_200w.jpg,3,2675,https://cpt.tcgcsv.com/MMM2,2021-01-27T21:53:14.447,1,,0.05,0.24,2.0,0.22,,Reverse Holofoil,,055/189,Common,Lightning,60,Basic,[L] Static Shock (20),,Fx2,None,1
+219388,Klinklang,Klinklang,https://tcgplayer-cdn.tcgplayer.com/product/219388_200w.jpg,3,2675,https://cpt.tcgcsv.com/NMM2,2021-08-31T13:41:20.437,1,,0.1,0.2,2.0,0.18,0.15,Normal,,127/189,Rare,Metal,150,Stage 2,[2] Beam (60),"[2M] Clockwork (200)
+<br>If you don't have Klink and Klang on your Bench, this attack does nothing.",Rx2,G-30,3
+219388,Klinklang,Klinklang,https://tcgplayer-cdn.tcgplayer.com/product/219388_200w.jpg,3,2675,https://cpt.tcgcsv.com/NMM2,2021-08-31T13:41:20.437,1,,0.1,0.3,1.99,0.28,,Reverse Holofoil,,127/189,Rare,Metal,150,Stage 2,[2] Beam (60),"[2M] Clockwork (200)
+<br>If you don't have Klink and Klang on your Bench, this attack does nothing.",Rx2,G-30,3
+219389,Galarian Stunfisk V,Galarian Stunfisk V,https://tcgplayer-cdn.tcgplayer.com/product/219389_200w.jpg,3,2675,https://cpt.tcgcsv.com/PMM2,2024-01-19T14:51:25.047,1,"<strong>Ability — Metal Skin</strong>
+<br>This Pokémon gets +20 HP for each Metal Energy attached to it.",0.35,0.99,5.0,0.9,0.9,Holofoil,,128/189,Ultra Rare,Metal,200,Basic,"[2] Trap Bite (60)
+<br>During your opponent's next turn, if this Pokémon is damaged by an attack <em>(even if it is Knocked Out)</em>, put 12 damage counters on the Attacking Pokémon.",,Rx2,G-30,4
+219391,Meltan,Meltan,https://tcgplayer-cdn.tcgplayer.com/product/219391_200w.jpg,3,2675,https://cpt.tcgcsv.com/RMM2,2025-02-07T20:07:25.63,1,,0.07,0.2,2.0,0.19,,Reverse Holofoil,,129/189,Common,Metal,70,Basic,[1] Headbutt (10),[1M] Beam (20),Rx2,G-30,1
+219391,Meltan,Meltan,https://tcgplayer-cdn.tcgplayer.com/product/219391_200w.jpg,3,2675,https://cpt.tcgcsv.com/RMM2,2025-02-07T20:07:25.63,1,,0.01,0.12,25.07,0.07,,Normal,,129/189,Common,Metal,70,Basic,[1] Headbutt (10),[1M] Beam (20),Rx2,G-30,1
+219392,Melmetal,Melmetal,https://tcgplayer-cdn.tcgplayer.com/product/219392_200w.jpg,3,2675,https://cpt.tcgcsv.com/SMM2,2025-02-07T20:07:25.687,1,,0.03,0.2,2.0,0.2,,Normal,,130/189,Rare,Metal,150,Stage 1,"[M] Energy Link (30)
+<br>Attach an Energy card from your discard pile to this Pokémon.",[3M] Heavy Impact (130),Rx2,G-30,4
+219392,Melmetal,Melmetal,https://tcgplayer-cdn.tcgplayer.com/product/219392_200w.jpg,3,2675,https://cpt.tcgcsv.com/SMM2,2025-02-07T20:07:25.687,1,,0.1,0.3,2.0,0.27,,Reverse Holofoil,,130/189,Rare,Metal,150,Stage 1,"[M] Energy Link (30)
+<br>Attach an Energy card from your discard pile to this Pokémon.",[3M] Heavy Impact (130),Rx2,G-30,4
+219394,Flaaffy,Flaaffy,https://tcgplayer-cdn.tcgplayer.com/product/219394_200w.jpg,3,2675,https://cpt.tcgcsv.com/VMM2,2025-02-07T20:07:25.767,1,,0.01,0.25,2.0,0.25,,Reverse Holofoil,,056/189,Uncommon,Lightning,90,Stage 1,[L] Static Shock (40),,Fx2,None,1
+219394,Flaaffy,Flaaffy,https://tcgplayer-cdn.tcgplayer.com/product/219394_200w.jpg,3,2675,https://cpt.tcgcsv.com/VMM2,2025-02-07T20:07:25.767,1,,0.02,0.18,25.14,0.14,,Normal,,056/189,Uncommon,Lightning,90,Stage 1,[L] Static Shock (40),,Fx2,None,1
+219395,Cufant,Cufant,https://tcgplayer-cdn.tcgplayer.com/product/219395_200w.jpg,3,2675,https://cpt.tcgcsv.com/WMM2,2025-02-07T20:07:25.843,1,,0.01,0.1,25.08,0.08,,Normal,,131/189,Common,Metal,100,Basic,[2M] Strength (60),,Rx2,G-30,3
+219395,Cufant,Cufant,https://tcgplayer-cdn.tcgplayer.com/product/219395_200w.jpg,3,2675,https://cpt.tcgcsv.com/WMM2,2025-02-07T20:07:25.843,1,,0.01,0.21,2.0,0.19,,Reverse Holofoil,,131/189,Common,Metal,100,Basic,[2M] Strength (60),,Rx2,G-30,3
+219396,Copperajah,Copperajah,https://tcgplayer-cdn.tcgplayer.com/product/219396_200w.jpg,3,2675,https://cpt.tcgcsv.com/XMM2,2023-07-14T09:15:21.05,1,"<strong>Ability — Antibacterial Skin</strong>
+<br>This Pokémon can't be affected by any Special Conditions.",0.05,0.25,2.0,0.24,0.09,Holofoil,,132/189,Holo Rare,Metal,190,Stage 1,"[2MM] Revenge Stompe (120+)
+<br>If your Benched Pokémon have any damage counters on them, this attack does 120 more damage.",,Rx2,G-30,4
+219396,Copperajah,Copperajah,https://tcgplayer-cdn.tcgplayer.com/product/219396_200w.jpg,3,2675,https://cpt.tcgcsv.com/XMM2,2023-07-14T09:15:21.05,1,"<strong>Ability — Antibacterial Skin</strong>
+<br>This Pokémon can't be affected by any Special Conditions.",0.1,0.34,28.0,0.3,0.13,Reverse Holofoil,,132/189,Holo Rare,Metal,190,Stage 1,"[2MM] Revenge Stompe (120+)
+<br>If your Benched Pokémon have any damage counters on them, this attack does 120 more damage.",,Rx2,G-30,4
+219399,Galarian Slowbro V,Galarian Slowbro V,https://tcgplayer-cdn.tcgplayer.com/product/219399_200w.jpg,3,2675,https://cpt.tcgcsv.com/_MM2,2023-06-12T09:47:23.433,1,"<strong>Ability — Rapid-Fire Poison</strong>
+<br>Once during your turn, if this Pokémon is in the Active Spot, you may leave your opponent's Active Pokémon Poisoned.",0.34,1.0,5.0,0.98,1.0,Holofoil,,099/189,Ultra Rare,Darkness,210,Basic,"[1DD] Tripping Shot (130)
+<br>During your opponent's next turn, the Defending Pokémon can't retreat.",,Fx2,None,3
+219401,Grimer,Grimer,https://tcgplayer-cdn.tcgplayer.com/product/219401_200w.jpg,3,2675,https://cpt.tcgcsv.com/2NM2,2024-10-15T15:45:53.893,1,,0.01,0.1,25.07,0.07,0.03,Normal,,100/189,Common,Darkness,80,Basic,"[D] Stomp Off
+<br>Discard the top card of your opponent's deck.",[2D] Sludge Whirlpool (50),Fx2,None,3
+219401,Grimer,Grimer,https://tcgplayer-cdn.tcgplayer.com/product/219401_200w.jpg,3,2675,https://cpt.tcgcsv.com/2NM2,2024-10-15T15:45:53.893,1,,0.06,0.2,2.0,0.17,0.09,Reverse Holofoil,,100/189,Common,Darkness,80,Basic,"[D] Stomp Off
+<br>Discard the top card of your opponent's deck.",[2D] Sludge Whirlpool (50),Fx2,None,3
+219402,Muk,Muk,https://tcgplayer-cdn.tcgplayer.com/product/219402_200w.jpg,3,2675,https://cpt.tcgcsv.com/3NM2,2025-02-07T20:07:25.903,1,,0.05,0.2,2.0,0.16,,Normal,,101/189,Rare,Darkness,140,Stage 1,"[D] Triple Poison
+<br>Your opponent's Active Pokémon is now Poisoned. Put 3 damage counters instead of 1 on tha",[3D] Sludge Whirlpool (120),Fx2,None,4
+219402,Muk,Muk,https://tcgplayer-cdn.tcgplayer.com/product/219402_200w.jpg,3,2675,https://cpt.tcgcsv.com/3NM2,2025-02-07T20:07:25.903,1,,0.1,0.4,1.49,0.4,,Reverse Holofoil,,101/189,Rare,Darkness,140,Stage 1,"[D] Triple Poison
+<br>Your opponent's Active Pokémon is now Poisoned. Put 3 damage counters instead of 1 on tha",[3D] Sludge Whirlpool (120),Fx2,None,4
+219403,Ampharos,Ampharos,https://tcgplayer-cdn.tcgplayer.com/product/219403_200w.jpg,3,2675,https://cpt.tcgcsv.com/5NM2,2025-02-07T20:07:25.95,1,,0.02,0.24,4.99,0.23,,Normal,,057/189,Rare,Lightning,150,Stage 2,"[L] Dazzle Blast (50)
+<Br>Your opponent's Active Pokémon is now Confused.",[LL] Electric Ball (130),Fx2,None,2
+219403,Ampharos,Ampharos,https://tcgplayer-cdn.tcgplayer.com/product/219403_200w.jpg,3,2675,https://cpt.tcgcsv.com/5NM2,2025-02-07T20:07:25.95,1,,0.1,0.45,2.0,0.45,,Reverse Holofoil,,057/189,Rare,Lightning,150,Stage 2,"[L] Dazzle Blast (50)
+<Br>Your opponent's Active Pokémon is now Confused.",[LL] Electric Ball (130),Fx2,None,2
+219404,Spinarak,Spinarak,https://tcgplayer-cdn.tcgplayer.com/product/219404_200w.jpg,3,2675,https://cpt.tcgcsv.com/6NM2,2025-02-07T20:07:26.03,1,,0.01,0.1,25.07,0.07,0.05,Normal,,102/189,Common,Darkness,60,Basic,[D] Hang Down (10),[1D] Sting (20),Fx2,None,1
+219404,Spinarak,Spinarak,https://tcgplayer-cdn.tcgplayer.com/product/219404_200w.jpg,3,2675,https://cpt.tcgcsv.com/6NM2,2025-02-07T20:07:26.03,1,,0.02,0.2,2.0,0.14,,Reverse Holofoil,,102/189,Common,Darkness,60,Basic,[D] Hang Down (10),[1D] Sting (20),Fx2,None,1
+219405,Ariados,Ariados,https://tcgplayer-cdn.tcgplayer.com/product/219405_200w.jpg,3,2675,https://cpt.tcgcsv.com/7NM2,2025-02-07T20:07:26.097,1,"<strong>Ability — Spider Net</strong>
+<br>When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may switch 1 of your opponent's Benched Evolution Pokémon with their Active Pokémon.",0.08,0.2,2.0,0.18,0.2,Reverse Holofoil,,103/189,Uncommon,Darkness,110,Stage 1,"[1D] Poison Sting (30)
+<br>Your opponent's Active Pokémon is now Poisoned.",,Fx2,None,2
+219405,Ariados,Ariados,https://tcgplayer-cdn.tcgplayer.com/product/219405_200w.jpg,3,2675,https://cpt.tcgcsv.com/7NM2,2025-02-07T20:07:26.097,1,"<strong>Ability — Spider Net</strong>
+<br>When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may switch 1 of your opponent's Benched Evolution Pokémon with their Active Pokémon.",0.01,0.14,25.08,0.08,,Normal,,103/189,Uncommon,Darkness,110,Stage 1,"[1D] Poison Sting (30)
+<br>Your opponent's Active Pokémon is now Poisoned.",,Fx2,None,2
+219406,Crobat V,Crobat V,https://tcgplayer-cdn.tcgplayer.com/product/219406_200w.jpg,3,2675,https://cpt.tcgcsv.com/8NM2,2025-02-07T20:07:26.153,1,"<strong>Ability — Night Asset</strong>
+<br>When you play this Pokémon from your hand onto your Bench during your turn, you may draw cards until you have 6 cards in your hand. You can't use more than 1 Night Asset Ability each turn.",0.3,0.99,86.0,0.8,0.97,Holofoil,,104/189,Ultra Rare,Darkness,180,Basic,"[1D] Venomous Fang (70)
+<br>Your opponent's Active Pokémon is now Poisoned.",,Fx2,None,1
+219407,Electrike,Electrike,https://tcgplayer-cdn.tcgplayer.com/product/219407_200w.jpg,3,2675,https://cpt.tcgcsv.com/9NM2,2021-01-27T21:53:29.86,1,,0.01,0.1,25.09,0.09,0.03,Normal,,058/189,Common,Lightning,60,Basic,"[1L] Thunderbolt (50)
+<Br>Discard all Energy from this Pokémon.",,Fx2,None,1
+219407,Electrike,Electrike,https://tcgplayer-cdn.tcgplayer.com/product/219407_200w.jpg,3,2675,https://cpt.tcgcsv.com/9NM2,2021-01-27T21:53:29.86,1,,0.06,0.2,2.0,0.18,,Reverse Holofoil,,058/189,Common,Lightning,60,Basic,"[1L] Thunderbolt (50)
+<Br>Discard all Energy from this Pokémon.",,Fx2,None,1
+219408,Manectric,Manectric,https://tcgplayer-cdn.tcgplayer.com/product/219408_200w.jpg,3,2675,https://cpt.tcgcsv.com/bNM2,2023-01-30T20:45:05.71,1,,0.1,0.27,2.0,0.27,,Reverse Holofoil,,059/189,Rare,Lightning,110,Stage 1,"[L] Strafe (30)
+<Br>You may switch this Pokémon with 1 of your Benched Pokémon.","[1LL] Flash Impact (150)
+<br>This attack also does 30 damage to 1 of your Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",Fx2,None,1
+219408,Manectric,Manectric,https://tcgplayer-cdn.tcgplayer.com/product/219408_200w.jpg,3,2675,https://cpt.tcgcsv.com/bNM2,2023-01-30T20:45:05.71,1,,0.05,0.2,2.0,0.17,0.15,Normal,,059/189,Rare,Lightning,110,Stage 1,"[L] Strafe (30)
+<Br>You may switch this Pokémon with 1 of your Benched Pokémon.","[1LL] Flash Impact (150)
+<br>This attack also does 30 damage to 1 of your Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",Fx2,None,1
+219409,Darkrai,Darkrai,https://tcgplayer-cdn.tcgplayer.com/product/219409_200w.jpg,3,2675,https://cpt.tcgcsv.com/cNM2,2025-02-24T17:51:12.27,1,"<strong>Ability — Darkness Guard</strong>
+<br>If this Pokémon has a Darkness Energy attached to it, it takes 20 less damage from attacks <em>(after applying Weakness and Resistance)</em>.",0.04,0.3,10.16,0.24,,Holofoil,,105/189,Holo Rare,Darkness,120,Basic,"[3] Darkness Spiral (60+)
+<br>This attack does 20 more damage times the amount of Darkness Energy attached to this Pokémon.",,Gx2,None,2
+219409,Darkrai,Darkrai,https://tcgplayer-cdn.tcgplayer.com/product/219409_200w.jpg,3,2675,https://cpt.tcgcsv.com/cNM2,2025-02-24T17:51:12.27,1,"<strong>Ability — Darkness Guard</strong>
+<br>If this Pokémon has a Darkness Energy attached to it, it takes 20 less damage from attacks <em>(after applying Weakness and Resistance)</em>.",0.22,0.49,2.24,0.49,,Reverse Holofoil,,105/189,Holo Rare,Darkness,120,Basic,"[3] Darkness Spiral (60+)
+<br>This attack does 20 more damage times the amount of Darkness Energy attached to this Pokémon.",,Gx2,None,2
+219411,Vikavolt V,Vikavolt V,https://tcgplayer-cdn.tcgplayer.com/product/219411_200w.jpg,3,2675,https://cpt.tcgcsv.com/fNM2,2025-01-13T08:06:22.357,1,,0.4,0.99,9.99,0.81,0.99,Holofoil,,060/189,Ultra Rare,Lightning,210,Basic,"[1L] Paralyzing Bolt (50)
+<Br>Your opponent can't play any Item cards from their hand during their next turn.","[1LL] Super Zap Cannon (190)
+<br>Discard 2 Energy from this Pokémon.",Fx2,None,3
+219412,Purrloin,Purrloin,https://tcgplayer-cdn.tcgplayer.com/product/219412_200w.jpg,3,2675,https://cpt.tcgcsv.com/gNM2,2025-02-07T20:07:26.2,1,,0.01,0.11,25.08,0.08,,Normal,,106/189,Common,Darkness,70,Basic,[D] Dig Claws (10),"[2] Fake Out (20)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",Gx2,None,1
+219412,Purrloin,Purrloin,https://tcgplayer-cdn.tcgplayer.com/product/219412_200w.jpg,3,2675,https://cpt.tcgcsv.com/gNM2,2025-02-07T20:07:26.2,1,,0.04,0.21,2.0,0.18,0.08,Reverse Holofoil,,106/189,Common,Darkness,70,Basic,[D] Dig Claws (10),"[2] Fake Out (20)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",Gx2,None,1
+219413,Tapu Koko,Tapu Koko,https://tcgplayer-cdn.tcgplayer.com/product/219413_200w.jpg,3,2675,https://cpt.tcgcsv.com/hNM2,2025-02-07T20:07:26.293,1,,0.1,0.39,2.0,0.38,,Reverse Holofoil,,061/189,Holo Rare,Lightning,110,Basic,"[1] Allure
+<br>Draw 2 cards.",[1LL] Electric Ball (110),Fx2,None,0
+219413,Tapu Koko,Tapu Koko,https://tcgplayer-cdn.tcgplayer.com/product/219413_200w.jpg,3,2675,https://cpt.tcgcsv.com/hNM2,2025-02-07T20:07:26.293,1,,0.1,0.3,2.99,0.26,,Holofoil,,061/189,Holo Rare,Lightning,110,Basic,"[1] Allure
+<br>Draw 2 cards.",[1LL] Electric Ball (110),Fx2,None,0
+219414,Liepard,Liepard,https://tcgplayer-cdn.tcgplayer.com/product/219414_200w.jpg,3,2675,https://cpt.tcgcsv.com/jNM2,2025-02-07T20:07:26.37,1,"<strong>Ability — Limber</strong>
+<br>This Pokémon can't be Paralyzed.",0.1,0.35,1.59,0.34,,Reverse Holofoil,,107/189,Rare,Darkness,100,Stage 1,[2D] Slashing Claw (90),,Gx2,None,1
+219414,Liepard,Liepard,https://tcgplayer-cdn.tcgplayer.com/product/219414_200w.jpg,3,2675,https://cpt.tcgcsv.com/jNM2,2025-02-07T20:07:26.37,1,"<strong>Ability — Limber</strong>
+<br>This Pokémon can't be Paralyzed.",0.05,0.2,2.0,0.18,0.14,Normal,,107/189,Rare,Darkness,100,Stage 1,[2D] Slashing Claw (90),,Gx2,None,1
+219416,Toxel,Toxel,https://tcgplayer-cdn.tcgplayer.com/product/219416_200w.jpg,3,2675,https://cpt.tcgcsv.com/lNM2,2025-02-07T20:07:26.45,1,,0.05,0.21,2.0,0.18,,Reverse Holofoil,,062/189,Common,Lightning,70,Basic,[1] Slap (10),[1L] Static Shock (20),Fx2,None,2
+219416,Toxel,Toxel,https://tcgplayer-cdn.tcgplayer.com/product/219416_200w.jpg,3,2675,https://cpt.tcgcsv.com/lNM2,2025-02-07T20:07:26.45,1,,0.01,0.11,25.1,0.1,,Normal,,062/189,Common,Lightning,70,Basic,[1] Slap (10),[1L] Static Shock (20),Fx2,None,2
+219419,Toxtricity,Toxtricity,https://tcgplayer-cdn.tcgplayer.com/product/219419_200w.jpg,3,2675,https://cpt.tcgcsv.com/pNM2,2024-09-20T16:54:21.897,1,,0.1,0.37,1.97,0.31,,Reverse Holofoil,,063/189,Holo Rare,Lightning,120,Stage 1,"[2] Risk Taker
+<br>Flip a coin. If heads, discard the top 5 cards of your opponent's deck. If tails, discard the top 5 cards of your deck.","[1LL] Thunder Jolt (160)
+<br>This Pokémon does 30 damage to itself.",Fx2,None,2
+219419,Toxtricity,Toxtricity,https://tcgplayer-cdn.tcgplayer.com/product/219419_200w.jpg,3,2675,https://cpt.tcgcsv.com/pNM2,2024-09-20T16:54:21.897,1,,0.05,0.25,3.25,0.21,0.16,Holofoil,,063/189,Holo Rare,Lightning,120,Stage 1,"[2] Risk Taker
+<br>Flip a coin. If heads, discard the top 5 cards of your opponent's deck. If tails, discard the top 5 cards of your deck.","[1LL] Thunder Jolt (160)
+<br>This Pokémon does 30 damage to itself.",Fx2,None,2
+219420,Deino,Deino,https://tcgplayer-cdn.tcgplayer.com/product/219420_200w.jpg,3,2675,https://cpt.tcgcsv.com/qNM2,2025-02-07T20:07:26.51,1,,0.01,0.1,2.0,0.06,,Normal,,108/189,Common,Darkness,60,Basic,[1] Ram (10),,Gx2,None,1
+219420,Deino,Deino,https://tcgplayer-cdn.tcgplayer.com/product/219420_200w.jpg,3,2675,https://cpt.tcgcsv.com/qNM2,2025-02-07T20:07:26.51,1,,0.05,0.2,5.06,0.18,,Reverse Holofoil,,108/189,Common,Darkness,60,Basic,[1] Ram (10),,Gx2,None,1
+219421,Pincurchin,Pincurchin,https://tcgplayer-cdn.tcgplayer.com/product/219421_200w.jpg,3,2675,https://cpt.tcgcsv.com/rNM2,2022-08-28T19:15:29.503,1,,0.09,0.25,2.0,0.22,0.21,Holofoil,,064/189,Holo Rare,Lightning,80,Basic,"[L] Double Draw
+<Br>Draw 2 cards.","[2L] Zing Zap (50)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",Fx2,None,2
+219421,Pincurchin,Pincurchin,https://tcgplayer-cdn.tcgplayer.com/product/219421_200w.jpg,3,2675,https://cpt.tcgcsv.com/rNM2,2022-08-28T19:15:29.503,1,,0.1,0.31,2.0,0.31,0.27,Reverse Holofoil,,064/189,Holo Rare,Lightning,80,Basic,"[L] Double Draw
+<Br>Draw 2 cards.","[2L] Zing Zap (50)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",Fx2,None,2
+219422,Zweilous,Zweilous,https://tcgplayer-cdn.tcgplayer.com/product/219422_200w.jpg,3,2675,https://cpt.tcgcsv.com/sNM2,2025-02-07T20:07:26.573,1,,0.01,0.15,1.49,0.12,,Normal,,109/189,Uncommon,Darkness,100,Stage 1,[1D] Corkscrew Punch (30),[1DD] Darkness Fang (70),Gx2,None,2
+219422,Zweilous,Zweilous,https://tcgplayer-cdn.tcgplayer.com/product/219422_200w.jpg,3,2675,https://cpt.tcgcsv.com/sNM2,2025-02-07T20:07:26.573,1,,0.05,0.2,4.99,0.18,0.86,Reverse Holofoil,,109/189,Uncommon,Darkness,100,Stage 1,[1D] Corkscrew Punch (30),[1DD] Darkness Fang (70),Gx2,None,2
+219423,Hydreigon,Hydreigon,https://tcgplayer-cdn.tcgplayer.com/product/219423_200w.jpg,3,2675,https://cpt.tcgcsv.com/tNM2,2024-11-18T08:49:30.157,1,"<strong>Ability — Dark Squall</strong>
+<br>As often as you like during your turn, you may attach a Darkness Energy card from your hand to 1 of your Pokémon.",0.15,0.25,5.15,0.2,0.25,Normal,,110/189,Rare,Darkness,160,Stage 2,[1DD] Pitch-Black Fangs (130),,Gx2,None,3
+219423,Hydreigon,Hydreigon,https://tcgplayer-cdn.tcgplayer.com/product/219423_200w.jpg,3,2675,https://cpt.tcgcsv.com/tNM2,2024-11-18T08:49:30.157,1,"<strong>Ability — Dark Squall</strong>
+<br>As often as you like during your turn, you may attach a Darkness Energy card from your hand to 1 of your Pokémon.",0.21,0.48,9.99,0.42,,Reverse Holofoil,,110/189,Rare,Darkness,160,Stage 2,[1DD] Pitch-Black Fangs (130),,Gx2,None,3
+219424,Hoopa,Hoopa,https://tcgplayer-cdn.tcgplayer.com/product/219424_200w.jpg,3,2675,https://cpt.tcgcsv.com/vNM2,2025-02-07T20:07:26.653,1,,0.1,0.3,2.5,0.25,,Holofoil,,111/189,Holo Rare,Darkness,120,Basic,"[D] Assault Gate (90)
+<br>If this Pokémon wasn't moved from your Bench to the Active Spot this turn, this attack does nothing. This attack's damage isn't affected by Weakness.",,Gx2,None,2
+219424,Hoopa,Hoopa,https://tcgplayer-cdn.tcgplayer.com/product/219424_200w.jpg,3,2675,https://cpt.tcgcsv.com/vNM2,2025-02-07T20:07:26.653,1,,0.1,0.35,2.0,0.29,,Reverse Holofoil,,111/189,Holo Rare,Darkness,120,Basic,"[D] Assault Gate (90)
+<br>If this Pokémon wasn't moved from your Bench to the Active Spot this turn, this attack does nothing. This attack's damage isn't affected by Weakness.",,Gx2,None,2
+219426,Nickit,Nickit,https://tcgplayer-cdn.tcgplayer.com/product/219426_200w.jpg,3,2675,https://cpt.tcgcsv.com/xNM2,2025-02-07T20:07:26.71,1,,0.01,0.13,25.11,0.11,,Normal,,112/189,Common,Darkness,70,Basic,"[D] Tail Whip
+<br>Flip a coin. If heads, during your opponent's next turn, the Defending Pokémon can't attack.",,Gx2,None,1
+219426,Nickit,Nickit,https://tcgplayer-cdn.tcgplayer.com/product/219426_200w.jpg,3,2675,https://cpt.tcgcsv.com/xNM2,2025-02-07T20:07:26.71,1,,0.07,0.2,2.0,0.19,,Reverse Holofoil,,112/189,Common,Darkness,70,Basic,"[D] Tail Whip
+<br>Flip a coin. If heads, during your opponent's next turn, the Defending Pokémon can't attack.",,Gx2,None,1
+219427,Thievul,Thievul,https://tcgplayer-cdn.tcgplayer.com/product/219427_200w.jpg,3,2675,https://cpt.tcgcsv.com/zNM2,2025-02-07T20:07:26.773,1,,0.04,0.2,2.0,0.2,,Normal,,113/189,Rare,Darkness,100,Stage 1,"[D] Nasty Plot
+<br>Search your deck for up to 2 cards and put them into your hand. Then, shuffle your deck.",[DD] Sharp Fang (70),Gx2,None,1
+219427,Thievul,Thievul,https://tcgplayer-cdn.tcgplayer.com/product/219427_200w.jpg,3,2675,https://cpt.tcgcsv.com/zNM2,2025-02-07T20:07:26.773,1,,0.1,0.35,2.0,0.34,,Reverse Holofoil,,113/189,Rare,Darkness,100,Stage 1,"[D] Nasty Plot
+<br>Search your deck for up to 2 cards and put them into your hand. Then, shuffle your deck.",[DD] Sharp Fang (70),Gx2,None,1
+219428,Grimmsnarl V,Grimmsnarl V,https://tcgplayer-cdn.tcgplayer.com/product/219428_200w.jpg,3,2675,https://cpt.tcgcsv.com/BNM2,2023-05-30T15:05:50.56,1,,0.3,1.0,10.56,1.06,,Holofoil,,114/189,Ultra Rare,Darkness,220,Basic,[D] Bite (40),"[DDD] Spiky Knuckle (200)
+<br>Put 2 Darkness Energy attached to this Pokémon into your hand.",Gx2,None,2
+219429,Grimmsnarl VMAX,Grimmsnarl VMAX,https://tcgplayer-cdn.tcgplayer.com/product/219429_200w.jpg,3,2675,https://cpt.tcgcsv.com/CNM2,2022-03-23T17:30:07.79,1,,1.0,2.47,19.99,2.3,2.74,Holofoil,,115/189,Ultra Rare,Darkness,330,VMAX,"[DDD] G-Max Drill
+<br>This attack does 50 more damage for each extra Darkness Energy attached to this Pokémon (in addition to this attack's cost). You can't add more than 100 damage in this way.",,Gx2,None,3
+219431,Eternatus V,Eternatus V,https://tcgplayer-cdn.tcgplayer.com/product/219431_200w.jpg,3,2675,https://cpt.tcgcsv.com/FNM2,2024-09-18T11:50:14.52,0,,0.5,1.47,5.99,1.4,1.89,Holofoil,,116/189,Ultra Rare,Darkness,220,Basic,"[1] Power Accelerator (30)
+<br>You may attach a Darkness Energy card from your hand to 1 of your Benched Pokémon.","[3D] Dynamax Cannon (120+)
+<br>If your opponent's Active Pokémon is a Pokémon VMAX, this attack does 120 more damage.",Fx2,None,2
+219432,Dracozolt,Dracozolt,https://tcgplayer-cdn.tcgplayer.com/product/219432_200w.jpg,3,2675,https://cpt.tcgcsv.com/GNM2,2025-02-07T20:07:26.833,1,,0.1,0.51,2.0,0.58,,Reverse Holofoil,,065/189,Rare,Lightning,160,Stage 1,"[L] Amping Up (30)
+<br>During your next turn, this Pokémon’s Amping Up attack does 90 more damage <em>(before applying Weakness and Resistance).</em>","[4] Giga Impact (200)
+<br>During your next turn, this Pokémon can't attack.",Fx2,None,4
+219432,Dracozolt,Dracozolt,https://tcgplayer-cdn.tcgplayer.com/product/219432_200w.jpg,3,2675,https://cpt.tcgcsv.com/GNM2,2025-02-07T20:07:26.833,1,,0.15,0.3,2.0,0.24,,Normal,,065/189,Rare,Lightning,160,Stage 1,"[L] Amping Up (30)
+<br>During your next turn, this Pokémon’s Amping Up attack does 90 more damage <em>(before applying Weakness and Resistance).</em>","[4] Giga Impact (200)
+<br>During your next turn, this Pokémon can't attack.",Fx2,None,4
+219434,Arctozolt,Arctozolt,https://tcgplayer-cdn.tcgplayer.com/product/219434_200w.jpg,3,2675,https://cpt.tcgcsv.com/JNM2,2025-02-07T20:07:26.91,1,"<strong>Ability — Biting Whirlpool</strong>
+<br>Whenever your opponent attaches an Energy card from their hand to 1 of their Pokémon, put 2 damage counters on that Pokémon.",0.25,0.94,3.3,0.93,,Reverse Holofoil,,066/189,Holo Rare,Lightning,130,Stage 1,[1L] Electro Ball (70),,Fx2,None,2
+219434,Arctozolt,Arctozolt,https://tcgplayer-cdn.tcgplayer.com/product/219434_200w.jpg,3,2675,https://cpt.tcgcsv.com/JNM2,2025-02-07T20:07:26.91,1,"<strong>Ability — Biting Whirlpool</strong>
+<br>Whenever your opponent attaches an Energy card from their hand to 1 of their Pokémon, put 2 damage counters on that Pokémon.",0.25,1.09,2.0,1.15,,Holofoil,,066/189,Holo Rare,Lightning,130,Stage 1,[1L] Electro Ball (70),,Fx2,None,2
+219435,Eternatus VMAX,Eternatus VMAX,https://tcgplayer-cdn.tcgplayer.com/product/219435_200w.jpg,3,2675,https://cpt.tcgcsv.com/KNM2,2024-04-20T08:52:30.83,1,"<strong>Ability — Eternal Zone</strong>
+<br>If all of your Pokémon in play are Darkness type, you can have up to 8 Pokémon on your Bench and you can't put non-Darkness Pokémon into play. <em>(If this Ability stops working, discard Pokémon from your Bench until you have 5.)</em>",2.0,5.08,29.95,4.83,,Holofoil,,117/189,Ultra Rare,Darkness,340,VMAX,"[1D] Dread End (30x)
+<br>This attack does 30 damage for each of your Darkness Pokémon in play.",,Fx2,None,3
+219441,Jigglypuff,Jigglypuff,https://tcgplayer-cdn.tcgplayer.com/product/219441_200w.jpg,3,2675,https://cpt.tcgcsv.com/RNM2,2025-02-07T20:07:26.957,1,,0.09,0.26,2.0,0.27,,Reverse Holofoil,,067/189,Common,Psychic,70,Basic,[1] Mumble (10),[1P] Moon Kick (20),Mx2,None,1
+219441,Jigglypuff,Jigglypuff,https://tcgplayer-cdn.tcgplayer.com/product/219441_200w.jpg,3,2675,https://cpt.tcgcsv.com/RNM2,2025-02-07T20:07:26.957,1,,0.01,0.13,25.1,0.11,,Normal,,067/189,Common,Psychic,70,Basic,[1] Mumble (10),[1P] Moon Kick (20),Mx2,None,1
+219442,Wigglytuff,Wigglytuff,https://tcgplayer-cdn.tcgplayer.com/product/219442_200w.jpg,3,2675,https://cpt.tcgcsv.com/SNM2,2021-01-27T21:54:29.7,1,,0.05,0.25,2.0,0.25,0.13,Normal,,068/189,Rare,Psychic,120,Stage 1,"[P] Sleep Pulse (30)
+<br>Your opponent's Active Pokémon is now Asleep.","[3] Double Smash (90x)
+<br>Flip 2 coins. This attack does 90 damage for each heads.",Mx2,None,2
+219442,Wigglytuff,Wigglytuff,https://tcgplayer-cdn.tcgplayer.com/product/219442_200w.jpg,3,2675,https://cpt.tcgcsv.com/SNM2,2021-01-27T21:54:29.7,1,,0.12,0.49,2.0,0.49,0.71,Reverse Holofoil,,068/189,Rare,Psychic,120,Stage 1,"[P] Sleep Pulse (30)
+<br>Your opponent's Active Pokémon is now Asleep.","[3] Double Smash (90x)
+<br>Flip 2 coins. This attack does 90 damage for each heads.",Mx2,None,2
+219443,Mew V,Mew V,https://tcgplayer-cdn.tcgplayer.com/product/219443_200w.jpg,3,2675,https://cpt.tcgcsv.com/TNM2,2023-10-27T21:25:07.237,1,,1.9,3.2,100.0,3.03,4.03,Holofoil,,069/189,Ultra Rare,Psychic,180,Basic,"[PP] X Ball (30x)
+<br>This attack does 30 damage times the amount of Energy attached to this Pokémon and the Defending Pokémon.",,Dx2,F-30,0
+219445,Snubbull,Snubbull,https://tcgplayer-cdn.tcgplayer.com/product/219445_200w.jpg,3,2675,https://cpt.tcgcsv.com/WNM2,2021-01-27T21:54:52.593,1,,0.01,0.11,25.07,0.07,0.03,Normal,,070/189,Common,Psychic,80,Basic,[1P] Sharp Fang (30),,Dx2,None,2
+219445,Snubbull,Snubbull,https://tcgplayer-cdn.tcgplayer.com/product/219445_200w.jpg,3,2675,https://cpt.tcgcsv.com/WNM2,2021-01-27T21:54:52.593,1,,0.07,0.25,2.0,0.21,0.09,Reverse Holofoil,,070/189,Common,Psychic,80,Basic,[1P] Sharp Fang (30),,Dx2,None,2
+219446,Granbull,Granbull,https://tcgplayer-cdn.tcgplayer.com/product/219446_200w.jpg,3,2675,https://cpt.tcgcsv.com/XNM2,2023-06-22T07:45:14.557,1,,0.03,0.2,49.0,0.16,0.18,Normal,,071/189,Rare,Psychic,130,Stage 1,"[1P] Jaw Lock (50)
+<br>During your opponent's next turn, the Defending Pokémon can't retreat.",[1PP] Headbutt Bounce (130),Dx2,None,2
+219446,Granbull,Granbull,https://tcgplayer-cdn.tcgplayer.com/product/219446_200w.jpg,3,2675,https://cpt.tcgcsv.com/XNM2,2023-06-22T07:45:14.557,1,,0.1,0.32,1.59,0.33,,Reverse Holofoil,,071/189,Rare,Psychic,130,Stage 1,"[1P] Jaw Lock (50)
+<br>During your opponent's next turn, the Defending Pokémon can't retreat.",[1PP] Headbutt Bounce (130),Dx2,None,2
+219447,Lunatone,Lunatone,https://tcgplayer-cdn.tcgplayer.com/product/219447_200w.jpg,3,2675,https://cpt.tcgcsv.com/ZNM2,2025-02-07T20:07:27.037,1,,0.01,0.13,25.11,0.11,,Normal,,072/189,Uncommon,Psychic,90,Basic,"[1] Future Sight
+<br>Look at the top 4 cards of either player's deck and put them back in any order.","[1P] Psychic (20+)
+<br>This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon.",Dx2,F-30,1
+219447,Lunatone,Lunatone,https://tcgplayer-cdn.tcgplayer.com/product/219447_200w.jpg,3,2675,https://cpt.tcgcsv.com/ZNM2,2025-02-07T20:07:27.037,1,,0.04,0.2,2.0,0.15,,Reverse Holofoil,,072/189,Uncommon,Psychic,90,Basic,"[1] Future Sight
+<br>Look at the top 4 cards of either player's deck and put them back in any order.","[1P] Psychic (20+)
+<br>This attack does 20 more damage for each Energy attached to your opponent's Active Pokémon.",Dx2,F-30,1
+219449,Gothita,Gothita,https://tcgplayer-cdn.tcgplayer.com/product/219449_200w.jpg,3,2675,https://cpt.tcgcsv.com/_NM2,2025-02-07T20:07:27.097,1,,0.01,0.13,25.12,0.11,,Normal,,073/189,Common,Psychic,60,Basic,"[P] Fortunate Eye
+<br>Look at the top 5 cards of your opponent's deck and put them back on top of their deck in any order.",[1P] Gentle Slap (30),Dx2,F-30,1
+219449,Gothita,Gothita,https://tcgplayer-cdn.tcgplayer.com/product/219449_200w.jpg,3,2675,https://cpt.tcgcsv.com/_NM2,2025-02-07T20:07:27.097,1,,0.09,0.23,2.0,0.23,,Reverse Holofoil,,073/189,Common,Psychic,60,Basic,"[P] Fortunate Eye
+<br>Look at the top 5 cards of your opponent's deck and put them back on top of their deck in any order.",[1P] Gentle Slap (30),Dx2,F-30,1
+219451,Gothorita,Gothorita,https://tcgplayer-cdn.tcgplayer.com/product/219451_200w.jpg,3,2675,https://cpt.tcgcsv.com/2PM2,2025-02-07T20:07:27.16,1,,0.05,0.25,2.0,0.21,,Reverse Holofoil,,074/189,Uncommon,Psychic,80,Stage 1,"[P] Whiny Voice
+<br>Choose a random card from your opponent's hand. Your opponent reveals that card and shuffles it into their deck.","[1P] Double Spin (30x)
+<br>Flip 2 coins. This attack does 30 damage for each heads.",Dx2,F-30,2
+219451,Gothorita,Gothorita,https://tcgplayer-cdn.tcgplayer.com/product/219451_200w.jpg,3,2675,https://cpt.tcgcsv.com/2PM2,2025-02-07T20:07:27.16,1,,0.02,0.15,25.14,0.14,,Normal,,074/189,Uncommon,Psychic,80,Stage 1,"[P] Whiny Voice
+<br>Choose a random card from your opponent's hand. Your opponent reveals that card and shuffles it into their deck.","[1P] Double Spin (30x)
+<br>Flip 2 coins. This attack does 30 damage for each heads.",Dx2,F-30,2
+219454,Gothitelle,Gothitelle,https://tcgplayer-cdn.tcgplayer.com/product/219454_200w.jpg,3,2675,https://cpt.tcgcsv.com/6PM2,2025-02-07T20:07:27.237,1,,0.1,0.36,2.0,0.36,,Reverse Holofoil,,075/189,Rare,Psychic,140,Stage 2,"[P] Mind Bend (40)
+<br>Your opponent's Active Pokémon is now Confused.","[1P] Bend (90)
+<br>Choose 2 random cards from your opponent's hand. Your opponent reveals those cards and shuffles them into their deck.",Dx2,F-30,2
+219454,Gothitelle,Gothitelle,https://tcgplayer-cdn.tcgplayer.com/product/219454_200w.jpg,3,2675,https://cpt.tcgcsv.com/6PM2,2025-02-07T20:07:27.237,1,,0.04,0.21,2.0,0.19,,Normal,,075/189,Rare,Psychic,140,Stage 2,"[P] Mind Bend (40)
+<br>Your opponent's Active Pokémon is now Confused.","[1P] Bend (90)
+<br>Choose 2 random cards from your opponent's hand. Your opponent reveals those cards and shuffles them into their deck.",Dx2,F-30,2
+219456,Golett,Golett,https://tcgplayer-cdn.tcgplayer.com/product/219456_200w.jpg,3,2675,https://cpt.tcgcsv.com/8PM2,2025-02-07T20:07:27.33,1,,0.01,0.1,25.05,0.05,0.03,Normal,,076/189,Common,Psychic,90,Basic,[1P] Rollout (30),[2P] Hammer In (50),Dx2,F-30,3
+219456,Golett,Golett,https://tcgplayer-cdn.tcgplayer.com/product/219456_200w.jpg,3,2675,https://cpt.tcgcsv.com/8PM2,2025-02-07T20:07:27.33,1,,0.07,0.23,2.0,0.21,,Reverse Holofoil,,076/189,Common,Psychic,90,Basic,[1P] Rollout (30),[2P] Hammer In (50),Dx2,F-30,3
+219459,Golurk,Golurk,https://tcgplayer-cdn.tcgplayer.com/product/219459_200w.jpg,3,2675,https://cpt.tcgcsv.com/cPM2,2021-01-27T21:55:41.097,1,,0.05,0.2,2.0,0.17,0.15,Normal,,077/189,Rare,Psychic,150,Stage 1,[2P] Dynamic Chop (80),[4P] Golurk Hammer (180),Dx2,F-30,4
+219459,Golurk,Golurk,https://tcgplayer-cdn.tcgplayer.com/product/219459_200w.jpg,3,2675,https://cpt.tcgcsv.com/cPM2,2021-01-27T21:55:41.097,1,,0.1,0.35,2.0,0.34,,Reverse Holofoil,,077/189,Rare,Psychic,150,Stage 1,[2P] Dynamic Chop (80),[4P] Golurk Hammer (180),Dx2,F-30,4
+219462,Dedenne,Dedenne,https://tcgplayer-cdn.tcgplayer.com/product/219462_200w.jpg,3,2675,https://cpt.tcgcsv.com/gPM2,2025-02-07T20:07:27.39,1,,0.1,0.34,2.0,0.34,,Reverse Holofoil,,078/189,Uncommon,Psychic,70,Basic,"[2P] Mad Party (20x)
+<br>This attack does 20 damage times the number of Pokémon in your discard pile that have the Mad Party attack.",,Mx2,None,1
+219462,Dedenne,Dedenne,https://tcgplayer-cdn.tcgplayer.com/product/219462_200w.jpg,3,2675,https://cpt.tcgcsv.com/gPM2,2025-02-07T20:07:27.39,1,,0.01,0.19,2.0,0.17,,Normal,,078/189,Uncommon,Psychic,70,Basic,"[2P] Mad Party (20x)
+<br>This attack does 20 damage times the number of Pokémon in your discard pile that have the Mad Party attack.",,Mx2,None,1
+219464,Morelull,Morelull,https://tcgplayer-cdn.tcgplayer.com/product/219464_200w.jpg,3,2675,https://cpt.tcgcsv.com/jPM2,2021-01-27T21:55:54.347,1,,0.01,0.2,5.04,0.16,0.08,Reverse Holofoil,,079/189,Common,Psychic,60,Basic,"[1] Spore
+<br>Your opponent's Active Pokémon is now Asleep.",[1P] Flop (20),Mx2,None,1
+219464,Morelull,Morelull,https://tcgplayer-cdn.tcgplayer.com/product/219464_200w.jpg,3,2675,https://cpt.tcgcsv.com/jPM2,2021-01-27T21:55:54.347,1,,0.01,0.1,25.06,0.06,,Normal,,079/189,Common,Psychic,60,Basic,"[1] Spore
+<br>Your opponent's Active Pokémon is now Asleep.",[1P] Flop (20),Mx2,None,1
+219465,Shiinotic,Shiinotic,https://tcgplayer-cdn.tcgplayer.com/product/219465_200w.jpg,3,2675,https://cpt.tcgcsv.com/kPM2,2025-02-07T20:07:27.453,1,,0.07,0.22,2.0,0.19,0.22,Reverse Holofoil,,080/189,Uncommon,Psychic,110,Stage 1,"[1] Flickering Light (30)
+<br>Flip a coin. If heads, the Defending Pokémon can't attack during your opponent's next turn.","[1P] Fear the Forest (60+)
+<br>If Glimwood Tangle is in play, this attack does 60 more damage.",Mx2,None,2
+219465,Shiinotic,Shiinotic,https://tcgplayer-cdn.tcgplayer.com/product/219465_200w.jpg,3,2675,https://cpt.tcgcsv.com/kPM2,2025-02-07T20:07:27.453,1,,0.01,0.14,25.1,0.1,,Normal,,080/189,Uncommon,Psychic,110,Stage 1,"[1] Flickering Light (30)
+<br>Flip a coin. If heads, the Defending Pokémon can't attack during your opponent's next turn.","[1P] Fear the Forest (60+)
+<br>If Glimwood Tangle is in play, this attack does 60 more damage.",Mx2,None,2
+219467,Mimikyu,Mimikyu,https://tcgplayer-cdn.tcgplayer.com/product/219467_200w.jpg,3,2675,https://cpt.tcgcsv.com/mPM2,2024-01-22T10:24:07.27,1,"<strong>Ability — Healing Jammer</strong>
+<br>Your opponent's Benched Pokémon can't be healed.",0.05,0.28,2.0,0.28,,Normal,,081/189,Rare,Psychic,70,Basic,[1P] Claw Slash (30),,Mx2,F-30,1
+219467,Mimikyu,Mimikyu,https://tcgplayer-cdn.tcgplayer.com/product/219467_200w.jpg,3,2675,https://cpt.tcgcsv.com/mPM2,2024-01-22T10:24:07.27,1,"<strong>Ability — Healing Jammer</strong>
+<br>Your opponent's Benched Pokémon can't be healed.",0.2,0.5,3.99,0.54,,Reverse Holofoil,,081/189,Rare,Psychic,70,Basic,[1P] Claw Slash (30),,Mx2,F-30,1
+219468,Sinistea,Sinistea,https://tcgplayer-cdn.tcgplayer.com/product/219468_200w.jpg,3,2675,https://cpt.tcgcsv.com/nPM2,2025-02-07T20:07:27.517,1,,0.01,0.12,2.0,0.07,,Normal,,082/189,Common,Psychic,30,Basic,"[1] Furtive Drop
+<br>Put 2 damage counters on your opponent's Active Pokémon.",,Mx2,F-30,1
+219468,Sinistea,Sinistea,https://tcgplayer-cdn.tcgplayer.com/product/219468_200w.jpg,3,2675,https://cpt.tcgcsv.com/nPM2,2025-02-07T20:07:27.517,1,,0.07,0.2,2.0,0.2,,Reverse Holofoil,,082/189,Common,Psychic,30,Basic,"[1] Furtive Drop
+<br>Put 2 damage counters on your opponent's Active Pokémon.",,Mx2,F-30,1
+219470,Polteageist,Polteageist,https://tcgplayer-cdn.tcgplayer.com/product/219470_200w.jpg,3,2675,https://cpt.tcgcsv.com/qPM2,2025-02-07T20:07:27.58,1,"<strong>Ability — Tea Break</strong>
+<br>You must discard a Pokémon that has the Mad Party attack from your hand in order to use this Ability. Once during your turn, you may draw 2 cards.",0.01,0.19,2.0,0.2,,Normal,,083/189,Uncommon,Psychic,60,Stage 1,"[2] Mad Party (20x)
+<br>This attack does 20 damage times the number of Pokémon in your discard pile that have the Mad Party attack.",,Mx2,F-30,1
+219470,Polteageist,Polteageist,https://tcgplayer-cdn.tcgplayer.com/product/219470_200w.jpg,3,2675,https://cpt.tcgcsv.com/qPM2,2025-02-07T20:07:27.58,1,"<strong>Ability — Tea Break</strong>
+<br>You must discard a Pokémon that has the Mad Party attack from your hand in order to use this Ability. Once during your turn, you may draw 2 cards.",0.05,0.25,2.0,0.2,,Reverse Holofoil,,083/189,Uncommon,Psychic,60,Stage 1,"[2] Mad Party (20x)
+<br>This attack does 20 damage times the number of Pokémon in your discard pile that have the Mad Party attack.",,Mx2,F-30,1
+219471,Diglett,Diglett,https://tcgplayer-cdn.tcgplayer.com/product/219471_200w.jpg,3,2675,https://cpt.tcgcsv.com/rPM2,2025-02-07T20:07:27.66,1,,0.09,0.25,2.0,0.22,,Reverse Holofoil,,084/189,Common,Fighting,50,Basic,[F] Scratch (20),,Gx2,None,1
+219471,Diglett,Diglett,https://tcgplayer-cdn.tcgplayer.com/product/219471_200w.jpg,3,2675,https://cpt.tcgcsv.com/rPM2,2025-02-07T20:07:27.66,1,,0.01,0.15,25.11,0.11,,Normal,,084/189,Common,Fighting,50,Basic,[F] Scratch (20),,Gx2,None,1
+219473,Dugtrio,Dugtrio,https://tcgplayer-cdn.tcgplayer.com/product/219473_200w.jpg,3,2675,https://cpt.tcgcsv.com/tPM2,2023-09-04T15:41:06.49,1,,0.11,0.25,2.0,0.19,0.15,Reverse Holofoil,,085/189,Uncommon,Fighting,90,Stage 1,"[F] Dig (30)
+<br>Flip a coin. If heads, prevent all effects of attacks, including damage, done to this Pokémon during your opponent's next turn.",[1F] Mud Bomb (70),Gx2,None,1
+219473,Dugtrio,Dugtrio,https://tcgplayer-cdn.tcgplayer.com/product/219473_200w.jpg,3,2675,https://cpt.tcgcsv.com/tPM2,2023-09-04T15:41:06.49,1,,0.02,0.15,25.1,0.1,,Normal,,085/189,Uncommon,Fighting,90,Stage 1,"[F] Dig (30)
+<br>Flip a coin. If heads, prevent all effects of attacks, including damage, done to this Pokémon during your opponent's next turn.",[1F] Mud Bomb (70),Gx2,None,1
+219474,Larvitar,Larvitar,https://tcgplayer-cdn.tcgplayer.com/product/219474_200w.jpg,3,2675,https://cpt.tcgcsv.com/vPM2,2025-02-07T20:07:27.717,1,,0.01,0.12,25.1,0.1,0.03,Normal,,086/189,Common,Fighting,70,Basic,[F] Sand Spray (10),[2] Pierce (20),Gx2,None,1
+219474,Larvitar,Larvitar,https://tcgplayer-cdn.tcgplayer.com/product/219474_200w.jpg,3,2675,https://cpt.tcgcsv.com/vPM2,2025-02-07T20:07:27.717,1,,0.08,0.24,2.0,0.21,,Reverse Holofoil,,086/189,Common,Fighting,70,Basic,[F] Sand Spray (10),[2] Pierce (20),Gx2,None,1
+219476,Pupitar,Pupitar,https://tcgplayer-cdn.tcgplayer.com/product/219476_200w.jpg,3,2675,https://cpt.tcgcsv.com/xPM2,2021-01-27T21:56:53.303,1,,0.06,0.24,2.0,0.22,0.08,Reverse Holofoil,,087/189,Uncommon,Fighting,80,Stage 1,[F] Sand Spray (20),"[3] Rocket Evolution (40)
+<br>Search your deck for a card that evolves from this Pokémon and put it onto this Pokémon to evolve it. Then, shuffle your deck.",Gx2,None,3
+219476,Pupitar,Pupitar,https://tcgplayer-cdn.tcgplayer.com/product/219476_200w.jpg,3,2675,https://cpt.tcgcsv.com/xPM2,2021-01-27T21:56:53.303,1,,0.01,0.15,25.06,0.06,0.05,Normal,,087/189,Uncommon,Fighting,80,Stage 1,[F] Sand Spray (20),"[3] Rocket Evolution (40)
+<br>Search your deck for a card that evolves from this Pokémon and put it onto this Pokémon to evolve it. Then, shuffle your deck.",Gx2,None,3
+219477,Tyranitar,Tyranitar,https://tcgplayer-cdn.tcgplayer.com/product/219477_200w.jpg,3,2675,https://cpt.tcgcsv.com/zPM2,2023-04-04T15:05:59.163,1,,0.05,0.25,2.28,0.19,0.08,Holofoil,,088/189,Holo Rare,Fighting,180,Stage 2,"[2F] Bedrock Breaker (120)
+<br>Discard any Stadium card in play.","[2FF] Mountain Swing (250)
+<br>Discard the top 5 cards of your deck.",Gx2,None,4
+219477,Tyranitar,Tyranitar,https://tcgplayer-cdn.tcgplayer.com/product/219477_200w.jpg,3,2675,https://cpt.tcgcsv.com/zPM2,2023-04-04T15:05:59.163,1,,0.24,0.56,1.76,0.55,0.54,Reverse Holofoil,,088/189,Holo Rare,Fighting,180,Stage 2,"[2F] Bedrock Breaker (120)
+<br>Discard any Stadium card in play.","[2FF] Mountain Swing (250)
+<br>Discard the top 5 cards of your deck.",Gx2,None,4
+219479,Trapinch,Trapinch,https://tcgplayer-cdn.tcgplayer.com/product/219479_200w.jpg,3,2675,https://cpt.tcgcsv.com/CPM2,2024-10-15T15:45:54.143,1,,0.09,0.25,2.0,0.31,0.09,Reverse Holofoil,,089/189,Common,Fighting,60,Basic,"[F] Land's Pulse (10+)
+<br>If there is any Stadium card in play, this attack does 10 more damage.",,Gx2,None,1
+219479,Trapinch,Trapinch,https://tcgplayer-cdn.tcgplayer.com/product/219479_200w.jpg,3,2675,https://cpt.tcgcsv.com/CPM2,2024-10-15T15:45:54.143,1,,0.01,0.17,25.17,0.15,0.1,Normal,,089/189,Common,Fighting,60,Basic,"[F] Land's Pulse (10+)
+<br>If there is any Stadium card in play, this attack does 10 more damage.",,Gx2,None,1
+219481,Vibrava,Vibrava,https://tcgplayer-cdn.tcgplayer.com/product/219481_200w.jpg,3,2675,https://cpt.tcgcsv.com/FPM2,2025-02-07T20:07:27.78,1,,0.01,0.13,25.09,0.09,,Normal,,090/189,Uncommon,Fighting,80,Stage 1,"[F] Sand Pulse (20)
+<br>This attack also does 10 damage to each of your opponent's Benched Pokémon.<em> (Don't apply Weakness and Resistance for Benched Pokémon.)</em>",,Gx2,None,1
+219481,Vibrava,Vibrava,https://tcgplayer-cdn.tcgplayer.com/product/219481_200w.jpg,3,2675,https://cpt.tcgcsv.com/FPM2,2025-02-07T20:07:27.78,1,,0.05,0.21,2.0,0.16,,Reverse Holofoil,,090/189,Uncommon,Fighting,80,Stage 1,"[F] Sand Pulse (20)
+<br>This attack also does 10 damage to each of your opponent's Benched Pokémon.<em> (Don't apply Weakness and Resistance for Benched Pokémon.)</em>",,Gx2,None,1
+219482,Flygon,Flygon,https://tcgplayer-cdn.tcgplayer.com/product/219482_200w.jpg,3,2675,https://cpt.tcgcsv.com/GPM2,2025-02-07T20:07:27.84,1,"<strong>Ability — Labyrinth of Sand</strong>
+<br>As long as this Pokémon is in the Active Spot, your opponent's Active Pokémon can't retreat.",0.18,0.48,1.57,0.49,,Reverse Holofoil,,091/189,Rare,Fighting,150,Stage 2,"[2F] Desert Gazer (130)
+<br>If your opponent has a Stadium card in play, discard it. If you do, during your opponent's next turn, prevent all effects of attacks, including damage, done to this Pokémon.",,Gx2,None,1
+219482,Flygon,Flygon,https://tcgplayer-cdn.tcgplayer.com/product/219482_200w.jpg,3,2675,https://cpt.tcgcsv.com/GPM2,2025-02-07T20:07:27.84,1,"<strong>Ability — Labyrinth of Sand</strong>
+<br>As long as this Pokémon is in the Active Spot, your opponent's Active Pokémon can't retreat.",0.09,0.25,2.0,0.23,,Normal,,091/189,Rare,Fighting,150,Stage 2,"[2F] Desert Gazer (130)
+<br>If your opponent has a Stadium card in play, discard it. If you do, during your opponent's next turn, prevent all effects of attacks, including damage, done to this Pokémon.",,Gx2,None,1
+219484,Solrock,Solrock,https://tcgplayer-cdn.tcgplayer.com/product/219484_200w.jpg,3,2675,https://cpt.tcgcsv.com/JPM2,2024-10-15T15:45:54.277,1,"<strong>Ability — Resistance Shade</strong>
+<br>If you have Lunatone in play, your opponent's Pokémon in play have no Resistance.",0.09,0.2,2.0,0.18,0.09,Reverse Holofoil,,092/189,Uncommon,Fighting,90,Basic,[1F] Rock Throw (30),,Gx2,None,1
+219484,Solrock,Solrock,https://tcgplayer-cdn.tcgplayer.com/product/219484_200w.jpg,3,2675,https://cpt.tcgcsv.com/JPM2,2024-10-15T15:45:54.277,1,"<strong>Ability — Resistance Shade</strong>
+<br>If you have Lunatone in play, your opponent's Pokémon in play have no Resistance.",0.01,0.12,25.08,0.08,0.05,Normal,,092/189,Uncommon,Fighting,90,Basic,[1F] Rock Throw (30),,Gx2,None,1
+219485,Hippopotas,Hippopotas,https://tcgplayer-cdn.tcgplayer.com/product/219485_200w.jpg,3,2675,https://cpt.tcgcsv.com/KPM2,2025-02-07T20:07:27.917,1,,0.01,0.13,25.06,0.06,,Normal,,093/189,Common,Fighting,100,Basic,[1] Tackle (10),"[1FFF] Double Stomp (70+)
+<br>Flip 2 coins. This attack does 30 more damage for each heads.",Gx2,None,4
+219485,Hippopotas,Hippopotas,https://tcgplayer-cdn.tcgplayer.com/product/219485_200w.jpg,3,2675,https://cpt.tcgcsv.com/KPM2,2025-02-07T20:07:27.917,1,,0.03,0.19,2.0,0.15,,Reverse Holofoil,,093/189,Common,Fighting,100,Basic,[1] Tackle (10),"[1FFF] Double Stomp (70+)
+<br>Flip 2 coins. This attack does 30 more damage for each heads.",Gx2,None,4
+219487,Hippowdon,Hippowdon,https://tcgplayer-cdn.tcgplayer.com/product/219487_200w.jpg,3,2675,https://cpt.tcgcsv.com/MPM2,2021-01-27T21:57:40.013,1,,0.1,0.3,2.0,0.3,0.29,Reverse Holofoil,,094/189,Rare,Fighting,150,Stage 1,"[1FF] Triple Smash (80x)
+<br>Flip 3 coins. This attack does 80 damage for each heads.",[1FFF] Land Crush (150),Gx2,None,4
+219487,Hippowdon,Hippowdon,https://tcgplayer-cdn.tcgplayer.com/product/219487_200w.jpg,3,2675,https://cpt.tcgcsv.com/MPM2,2021-01-27T21:57:40.013,1,,0.02,0.23,2.0,0.18,0.15,Normal,,094/189,Rare,Fighting,150,Stage 1,"[1FF] Triple Smash (80x)
+<br>Flip 3 coins. This attack does 80 damage for each heads.",[1FFF] Land Crush (150),Gx2,None,4
+219488,Rhyperior V,Rhyperior V,https://tcgplayer-cdn.tcgplayer.com/product/219488_200w.jpg,3,2675,https://cpt.tcgcsv.com/NPM2,2025-02-07T20:07:27.993,1,,0.49,1.0,5.0,0.82,,Holofoil,,095/189,Ultra Rare,Fighting,230,Basic,"[1FF] Drill Run (80)
+<br>Discard an Energy from your opponent's Active Pokémon.","[3F] Heavy Rock Artillery (210)
+<br>During your next turn, this Pokémon can't use Heavy Rock Cannon.",Gx2,None,4
+219491,Diggersby,Diggersby,https://tcgplayer-cdn.tcgplayer.com/product/219491_200w.jpg,3,2675,https://cpt.tcgcsv.com/RPM2,2021-01-27T21:57:50.517,1,,0.01,0.2,9.0,0.14,,Normal,,096/189,Rare,Fighting,130,Stage 1,[2F] Hammer In (90),[2FF] Land Crush (140),Gx2,None,3
+219491,Diggersby,Diggersby,https://tcgplayer-cdn.tcgplayer.com/product/219491_200w.jpg,3,2675,https://cpt.tcgcsv.com/RPM2,2021-01-27T21:57:50.517,1,,0.09,0.28,2.0,0.28,,Reverse Holofoil,,096/189,Rare,Fighting,130,Stage 1,[2F] Hammer In (90),[2FF] Land Crush (140),Gx2,None,3
+219493,Passimian,Passimian,https://tcgplayer-cdn.tcgplayer.com/product/219493_200w.jpg,3,2675,https://cpt.tcgcsv.com/TPM2,2025-02-07T20:07:28.073,1,,0.04,0.2,2.0,0.14,,Reverse Holofoil,,097/189,Common,Fighting,110,Basic,"[1] Call for Family
+<br>Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck.","[2F] Rock Hurl (70)
+<br>This attack's damage isn't affected by Resistance.",Px2,None,1
+219493,Passimian,Passimian,https://tcgplayer-cdn.tcgplayer.com/product/219493_200w.jpg,3,2675,https://cpt.tcgcsv.com/TPM2,2025-02-07T20:07:28.073,1,,0.01,0.11,25.06,0.06,,Normal,,097/189,Common,Fighting,110,Basic,"[1] Call for Family
+<br>Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck.","[2F] Rock Hurl (70)
+<br>This attack's damage isn't affected by Resistance.",Px2,None,1
+219495,Galarian Sirfetch'd,Galarian Sirfetchd,https://tcgplayer-cdn.tcgplayer.com/product/219495_200w.jpg,3,2675,https://cpt.tcgcsv.com/WPM2,2021-05-23T14:03:57.24,1,,0.13,0.26,5.2,0.26,,Normal,,098/189,Rare,Fighting,130,Stage 1,[F] Pierce (40),"[2F] Meteor Assault (180)
+<br>This Pokémon can't use Meteor Assault again until it leaves the Active Spot.",Px2,None,2
+219495,Galarian Sirfetch'd,Galarian Sirfetchd,https://tcgplayer-cdn.tcgplayer.com/product/219495_200w.jpg,3,2675,https://cpt.tcgcsv.com/WPM2,2021-05-23T14:03:57.24,1,,0.1,0.47,2.0,0.47,,Reverse Holofoil,,098/189,Rare,Fighting,130,Stage 1,[F] Pierce (40),"[2F] Meteor Assault (180)
+<br>This Pokémon can't use Meteor Assault again until it leaves the Active Spot.",Px2,None,2
+220108,Darkness Ablaze Premium Checklane Blister [Dragapult],Darkness Ablaze Premium Checklane Blister Dragapult,https://tcgplayer-cdn.tcgplayer.com/product/220108_200w.jpg,3,2675,https://cpt.tcgcsv.com/b3N2,2020-08-14T04:03:29.183,1,"Contains 1 Sword & Shield — Darkness Ablaze booster pack, a TCGO Code, Coin and 3 cards with an evolution line.",,,,,,,,,,,,,,,,,
+220109,Darkness Ablaze Premium Checklane Blister [Grimmsnarl],Darkness Ablaze Premium Checklane Blister Grimmsnarl,https://tcgplayer-cdn.tcgplayer.com/product/220109_200w.jpg,3,2675,https://cpt.tcgcsv.com/c3N2,2020-08-14T04:03:29.183,1,"Contains 1 Sword & Shield — Darkness Ablaze booster pack, a TCGO Code, Coin and 3 cards with an evolution line.",,,,,,,,,,,,,,,,,
+220272,Galarian Sirfetch'd V Box,Galarian Sirfetchd V Box,https://tcgplayer-cdn.tcgplayer.com/product/220272_200w.jpg,3,2675,https://cpt.tcgcsv.com/s7N2,2020-09-25T04:04:39.21,1,"The Pokémon TCG: Galarian Sirfetch'd V Box includes:
+<br>• 1 foil card featuring Galarian Sirfetch'd V
+<br>• 1 oversize card of Galarian Sirfetch'd, suitable for display
+<br>• 4 Pokémon TCG booster packs
+<br>• A code card for the Pokémon Trading Card Game Online",89.87,89.87,89.87,63.03,,Normal,,,,,,,,,,,
+220277,Eternatus VMAX Premium Collection,Eternatus VMAX Premium Collection,https://tcgplayer-cdn.tcgplayer.com/product/220277_200w.jpg,3,2675,https://cpt.tcgcsv.com/z7N2,2020-09-04T04:03:07.263,1,"Product contents:
+<br>• 1 full-art foil promo card featuring Eternatus V
+<br>• 1 foil promo card featuring Eternatus VMAX
+<br>• 1 collector's pin featuring Eternatus
+<br>• 1 oversize foil card featuring Eternatus VMAX
+<br>• 1 metallic Pokémon coin
+<br>• 6 Pokémon TCG Booster packs 
+<br>• A code card to unlock a promo card in the Pokémon Trading Card Game Online",85.0,142.99,199.99,72.83,,Normal,,,,,,,,,,,
+251505,Code Card - Eternatus VMAX Premium Collection,Code Card Eternatus VMAX Premium Collection,https://tcgplayer-cdn.tcgplayer.com/product/251505_200w.jpg,3,2675,https://cpt.tcgcsv.com/7D03,2022-07-20T19:25:46.96,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",0.99,1.49,2.59,1.99,,Normal,,,Code Card,,,,,,,,
+251506,Code Card - True Steel Premium Collection [Zacian],Code Card True Steel Premium Collection Zacian,https://tcgplayer-cdn.tcgplayer.com/product/251506_200w.jpg,3,2675,https://cpt.tcgcsv.com/8D03,2022-07-20T19:52:18.527,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",0.8,1.9,3.0,,,Normal,,,Code Card,,,,,,,,
+251507,Code Card - True Steel Premium Collection [Zamazenta],Code Card True Steel Premium Collection Zamazenta,https://tcgplayer-cdn.tcgplayer.com/product/251507_200w.jpg,3,2675,https://cpt.tcgcsv.com/9D03,2022-07-20T19:52:28.13,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",0.65,2.0,2.5,,,Normal,,,Code Card,,,,,,,,
+251508,Code Card - Darkness Ablaze Elite Trainer Box,Code Card Darkness Ablaze Elite Trainer Box,https://tcgplayer-cdn.tcgplayer.com/product/251508_200w.jpg,3,2675,https://cpt.tcgcsv.com/bD03,2022-07-20T19:24:16.167,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",0.07,0.18,5.95,0.15,,Normal,,,Code Card,,,,,,,,
+251510,Code Card - Darkness Ablaze 3 Pack Blister [Eevee],Code Card Darkness Ablaze 3 Pack Blister Eevee,https://tcgplayer-cdn.tcgplayer.com/product/251510_200w.jpg,3,2675,https://cpt.tcgcsv.com/dD03,2022-07-20T19:24:07.253,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",0.05,0.14,0.25,,,Normal,,,Code Card,,,,,,,,
+251512,Code Card - Darkness Ablaze 3 Pack Blister [Flareon],Code Card Darkness Ablaze 3 Pack Blister Flareon,https://tcgplayer-cdn.tcgplayer.com/product/251512_200w.jpg,3,2675,https://cpt.tcgcsv.com/gD03,2022-07-20T19:24:08.88,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",0.1,0.12,0.25,,,Normal,,,Code Card,,,,,,,,
+251513,Code Card - Darkness Ablaze Booster Pack,Code Card Darkness Ablaze Booster Pack,https://tcgplayer-cdn.tcgplayer.com/product/251513_200w.jpg,3,2675,https://cpt.tcgcsv.com/hD03,2023-03-31T16:02:52.937,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",0.01,0.05,19.95,0.03,,Normal,,,Code Card,,,,,,,,
+251515,Code Card - Darkness Ablaze Build & Battle Box,Code Card Darkness Ablaze Build and Battle Box,https://tcgplayer-cdn.tcgplayer.com/product/251515_200w.jpg,3,2675,https://cpt.tcgcsv.com/kD03,2023-03-31T16:03:17.027,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",0.73,2.0,2.99,,,Normal,,,Code Card,,,,,,,,
+251518,Code Card - Darkness Ablaze Premium Checklane Blister [Dragapult],Code Card Darkness Ablaze Premium Checklane Blister Dragapult,https://tcgplayer-cdn.tcgplayer.com/product/251518_200w.jpg,3,2675,https://cpt.tcgcsv.com/nD03,2022-07-20T19:24:17.637,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",0.2,0.2,0.2,0.2,,Normal,,,Code Card,,,,,,,,
+251520,Code Card - Darkness Ablaze Premium Checklane Blister [Grimmsnarl],Code Card Darkness Ablaze Premium Checklane Blister Grimmsnarl,https://tcgplayer-cdn.tcgplayer.com/product/251520_200w.jpg,3,2675,https://cpt.tcgcsv.com/qD03,2022-07-20T19:24:19.113,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",0.25,0.25,0.25,,,Normal,,,Code Card,,,,,,,,
+251521,Code Card - Darkness Ablaze Single Pack Blister [Hatenna],Code Card Darkness Ablaze Single Pack Blister Hatenna,https://tcgplayer-cdn.tcgplayer.com/product/251521_200w.jpg,3,2675,https://cpt.tcgcsv.com/rD03,2022-07-20T19:24:20.787,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",0.02,0.13,0.5,,,Normal,,,Code Card,,,,,,,,
+251523,Code Card - Darkness Ablaze Single Pack Blister [Pikachu],Code Card Darkness Ablaze Single Pack Blister Pikachu,https://tcgplayer-cdn.tcgplayer.com/product/251523_200w.jpg,3,2675,https://cpt.tcgcsv.com/tD03,2023-03-31T16:03:39.533,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",0.02,0.1,0.25,,,Normal,,,Code Card,,,,,,,,
+251524,Code Card - Darkness Ablaze Theme Deck [Galarian Sirfetch'd],Code Card Darkness Ablaze Theme Deck Galarian Sirfetchd,https://tcgplayer-cdn.tcgplayer.com/product/251524_200w.jpg,3,2675,https://cpt.tcgcsv.com/vD03,2023-03-31T16:04:16.037,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",,,,,,,,,Code Card,,,,,,,,
+251527,Code Card - Darkness Ablaze Theme Deck [Galarian Darmanitan],Code Card Darkness Ablaze Theme Deck Galarian Darmanitan,https://tcgplayer-cdn.tcgplayer.com/product/251527_200w.jpg,3,2675,https://cpt.tcgcsv.com/zD03,2022-07-20T19:24:23.61,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",,,,,,,,,Code Card,,,,,,,,
+251531,Code Card - Galarian Sirfetch'd V Box,Code Card Galarian Sirfetchd V Box,https://tcgplayer-cdn.tcgplayer.com/product/251531_200w.jpg,3,2675,https://cpt.tcgcsv.com/FD03,2022-07-20T19:31:59.36,1,"This listing is <strong>not</strong> a physical item. Please keep in mind that this <strong>Code Card</strong> listing represents a digital copy of the stated item for the Pokémon TCG Online <strong>and/or</strong> the Pokémon TCG Live games. You may receive the physical <strong>Code Card</strong>. Upon purchase, please work with your specific Seller by sending them a message using the <strong>Contact Seller</strong> button on the order details in your <a href=https://store.tcgplayer.com/myaccount/orderhistory>Order History</a> to opt in to having your <strong>Code Card</strong> code delivered digitally due to the nature of the product.",0.04,0.36,1.15,0.36,,Normal,,,Code Card,,,,,,,,
+256971,Darkness Ablaze Booster Box Case,Darkness Ablaze Booster Box Case,https://tcgplayer-cdn.tcgplayer.com/product/256971_200w.jpg,3,2675,https://cpt.tcgcsv.com/rP33,2025-04-03T16:01:56.287,1,"Each booster box case contains 6 boxes of 36 packs each.
+<br>
+<br>Each Darkness Ablaze Booster Pack contains 10 random cards.",3298.95,3298.99,3300.0,1438.93,,Normal,820650827204,,,,,,,,,,
+257320,Darkness Ablaze Sleeved Booster Pack,Darkness Ablaze Sleeved Booster Pack,https://tcgplayer-cdn.tcgplayer.com/product/257320_200w.jpg,3,2675,https://cpt.tcgcsv.com/qX33,2021-12-06T15:26:09.31,1,Each Darkness Ablaze sleeved booster pack contains 10 random cards.,6.99,8.99,15.0,8.52,,Normal,,,,,,,,,,,
+265317,Darkness Ablaze Booster Pack Art Bundle [Set of 4],Darkness Ablaze Booster Pack Art Bundle Set of 4,https://tcgplayer-cdn.tcgplayer.com/product/265317_200w.jpg,3,2675,https://cpt.tcgcsv.com/m883,2022-03-11T20:28:27.143,1,"Collect each of the 4 unique art packs for Darkness Ablaze.
+<br>Each Darkness Ablaze booster pack contains 10 random cards.",38.98,44.49,49.99,30.09,,Normal,,,,,,,,,,,
+266951,Darkness Ablaze Elite Trainer Box Case,Darkness Ablaze Elite Trainer Box Case,https://tcgplayer-cdn.tcgplayer.com/product/266951_200w.jpg,3,2675,https://cpt.tcgcsv.com/2P83,2022-04-20T15:28:10.96,1,Each sealed Elite Trainer Box case contains 10 Elite Trainer Boxes,1140.0,1999.99,2500.0,744.55,,Normal,820650827310,,,,,,,,,,
+487797,Darkness Ablaze Sleeved Booster Pack Art Bundle [Set of 4],Darkness Ablaze Sleeved Booster Pack Art Bundle Set of 4,https://tcgplayer-cdn.tcgplayer.com/product/487797_200w.jpg,3,2675,https://cpt.tcgcsv.com/Z7W5,2023-03-13T16:46:41.86,1,"Collect each of the 4 unique art packs for Darkness Ablaze.
+<br>Each Darkness Ablaze booster pack contains 10 random cards.",39.4,54.95,59.99,28.16,,Normal,,,,,,,,,,,
+653206,Darkness Ablaze Fun Pack,Darkness Ablaze Fun Pack,https://tcgplayer-cdn.tcgplayer.com/product/653206_200w.jpg,3,2675,https://cpt.tcgcsv.com/8jf7,2025-09-09T18:07:54.76,1,Each Darkness Ablaze Fun Pack contains 3 random cards.,,,,,,,,,,,,,,,,,

@@ -1,6 +1,6 @@
 import UserModel from '../../database/models/user';
 import { CardCategory, IUserCard, UserCard } from '../../database/models/userCard';
-import { YugiohCard } from '../../database/models/yugioh/yugiohCard';
+import { Card } from '../../database/models/card';
 
 export interface IUserCardService {
   addCardToCollection(userId: string, cardId: string, category: CardCategory): Promise<IUserCard>;
@@ -133,21 +133,13 @@ export class UserCardService implements IUserCardService {
   }
 
   async getCardDetails(cardId: string, category: CardCategory): Promise<any> {
-    switch (category) {
-      case CardCategory.YUGIOH:
-        const yugiohCard = await YugiohCard.findById(cardId);
-        if (!yugiohCard) {
-          throw new Error('Yugioh card not found');
-        }
-        return yugiohCard.toObject();
-      
-      case CardCategory.POKEMON:
-        // TODO: Implement Pokemon card model and fetch
-        throw new Error('Pokemon card support not implemented yet');
-      
-      default:
-        throw new Error('Unsupported card category');
+    // With the unified model, we just need to find the card by ID
+    // The category parameter is kept for backward compatibility
+    const card = await Card.findById(cardId).populate('cardSet');
+    if (!card) {
+      throw new Error('Card not found');
     }
+    return card.toObject();
   }
 
   private async verifyCardExists(cardId: string, category: CardCategory): Promise<void> {

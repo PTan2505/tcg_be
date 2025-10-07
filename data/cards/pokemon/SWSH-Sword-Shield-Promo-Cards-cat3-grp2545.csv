@@ -1,0 +1,1076 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extWeakness,extResistance,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extAttack2,extCardText,extAttack3,extAttack4
+200300,Grookey - SWSH001,Grookey SWSH001,https://tcgplayer-cdn.tcgplayer.com/product/200300_200w.jpg,3,2545,https://cpt.tcgcsv.com/08D2,2021-08-06T15:01:02.357,1,SWSH001,Promo,Grass,60,Basic,[1G] Branch Poke (30),Rx2,None,1,1.7,2.77,5.0,2.4,,Holofoil,,,,
+200301,Scorbunny - SWSH002,Scorbunny SWSH002,https://tcgplayer-cdn.tcgplayer.com/product/200301_200w.jpg,3,2545,https://cpt.tcgcsv.com/28D2,2021-10-05T13:11:59.5,1,SWSH002,Promo,Fire,60,Basic,"[R] Super Singe (10)
+<br>Flip a coin. If heads, your opponent's Active Pokemon is now Burned.",Wx2,None,1,2.5,3.87,8.0,3.86,4.05,Holofoil,,,,
+200302,Sobble - SWSH003,Sobble SWSH003,https://tcgplayer-cdn.tcgplayer.com/product/200302_200w.jpg,3,2545,https://cpt.tcgcsv.com/38D2,2022-06-26T05:15:50.403,1,SWSH003,Promo,Water,60,Basic,"[1W] Bind (20)
+<br>Flip a coin. If heads, your opponent's Active Pokemon is now Paralyzed.",Lx2,None,1,2.15,3.2,11.53,3.17,2.99,Holofoil,,,,
+205465,Meowth V - SWSH004,Meowth V SWSH004,https://tcgplayer-cdn.tcgplayer.com/product/205465_200w.jpg,3,2545,https://cpt.tcgcsv.com/kcG2,2021-11-04T19:59:11.653,1,SWSH004,Promo,Colorless,180,Basic,"[1] Payday (30)
+<br>Draw a card.",Fx2,,2,0.88,1.5,7.49,1.48,1.48,Holofoil,[3] Slashing Claw (130),,,
+205466,Meowth VMAX - SWSH005,Meowth VMAX SWSH005,https://tcgplayer-cdn.tcgplayer.com/product/205466_200w.jpg,3,2545,https://cpt.tcgcsv.com/lcG2,2021-06-15T12:52:41.45,1,SWSH005,Promo,Colorless,300,VMAX,"[4] G-Max Gold Rush (200)
+<br>Draw 3 cards.",Fx2,,2,2.98,4.08,9.98,3.77,3.7,Holofoil,,,,
+206418,Inteleon V - SWSH016,Inteleon V SWSH016,https://tcgplayer-cdn.tcgplayer.com/product/206418_200w.jpg,3,2545,https://cpt.tcgcsv.com/nBG2,2023-04-12T17:05:40.5,1,SWSH016,Promo,Water,200,Basic,"[W] Snipe Shot
+<br>This attack does 40 damage to 1 of your opponent's Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon)</em>",Lx2,None,2,0.5,0.94,7.0,0.68,0.68,Holofoil,"[1WW] Aqua Report (130)
+<br>Your opponent reveals their hand.",,,
+206419,Cinderace V - SWSH015,Cinderace V SWSH015,https://tcgplayer-cdn.tcgplayer.com/product/206419_200w.jpg,3,2545,https://cpt.tcgcsv.com/pBG2,2021-12-01T15:24:21.377,1,SWSH015,Promo,Fire,210,Basic,[1RR] Crimson Legs (140),Wx2,None,2,0.48,0.97,4.92,0.73,,Holofoil,,"<strong>Ability — Field Runner</strong>
+<br>If a Stadium is in play, this Pokemon has no Retreat Cost.",,
+206421,Rillaboom V - SWSH014,Rillaboom V SWSH014,https://tcgplayer-cdn.tcgplayer.com/product/206421_200w.jpg,3,2545,https://cpt.tcgcsv.com/rBG2,2022-12-17T18:51:53.957,1,SWSH014,Promo,Grass,220,Basic,"[G] Forest Feast
+<br>Search your deck for up to 2 Basic Grass Pokemon and put them onto your Bench. Then, shuffle your deck.",Rx2,None,3,0.4,0.96,10.36,0.9,0.99,Holofoil,"[1GGG] Wood Hammer (220)
+<br>This Pokemon also does 30 damage to itself.",,,
+206425,Toxtricity V - SWSH017,Toxtricity V SWSH017,https://tcgplayer-cdn.tcgplayer.com/product/206425_200w.jpg,3,2545,https://cpt.tcgcsv.com/wBG2,2021-06-15T13:01:37.43,1,SWSH017,Promo,Lightning,210,Basic,"[1] Energize
+<br>Attach a Lightning Energy card from your discard pile to this Pokemon.",Fx2,None,2,0.6,1.0,5.0,0.96,,Holofoil,"[1LL] Venom Slap (120)
+<br>Your opponent's Active Pokemon is now Poisoned.",,,
+206427,Wooloo - SWSH011,Wooloo SWSH011,https://tcgplayer-cdn.tcgplayer.com/product/206427_200w.jpg,3,2545,https://cpt.tcgcsv.com/zBG2,2025-04-09T21:03:45.39,1,SWSH011,Promo,Colorless,60,Basic,"[1] Defense Curl
+<br>Flip a coin. If heads, prevent all damage done to this Pokemon by attacks during your opponent's next turn.",Fx2,None,1,0.49,1.0,6.0,1.18,1.5,Holofoil,[2] Headbutt (20),,,
+206428,Morpeko - SWSH012,Morpeko SWSH012,https://tcgplayer-cdn.tcgplayer.com/product/206428_200w.jpg,3,2545,https://cpt.tcgcsv.com/BBG2,2023-03-27T13:31:33.683,1,SWSH012,Promo,Lightning,80,Basic,"[2L] Thunder Shock (60)
+<br>Flip a coin. If heads, your opponent's Active Pokemon is now Paralyzed.",Fx2,None,1,0.47,0.85,5.03,0.99,,Holofoil,,,,
+206429,Gossifleur - SWSH010,Gossifleur SWSH010,https://tcgplayer-cdn.tcgplayer.com/product/206429_200w.jpg,3,2545,https://cpt.tcgcsv.com/CBG2,2024-08-20T18:07:45.69,1,SWSH010,Promo,Grass,50,Basic,"[1] Sing
+<br>Your opponent's Active Pokemon is now Asleep.",Rx2,None,1,0.25,0.4,7.0,0.39,0.3,Holofoil,,,,
+206430,Galarian Ponyta - SWSH013,Galarian Ponyta SWSH013,https://tcgplayer-cdn.tcgplayer.com/product/206430_200w.jpg,3,2545,https://cpt.tcgcsv.com/DBG2,2023-03-13T20:35:24.377,1,SWSH013,Promo,Psychic,70,Basic,"[1] Heal Pulse
+<br>Heal 30 damage from 1 of your Pokemon.",Dx2,F-30,1,3.2,4.75,9.99,4.82,9.95,Holofoil,[1P] Flop (20),,,
+208260,Rillaboom - SWSH006 (Prerelease) [Staff],Rillaboom SWSH006 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/208260_200w.jpg,3,2545,https://cpt.tcgcsv.com/dkH2,2024-04-08T15:55:21.49,1,SWSH006,Promo,Grass,170,Stage 2,[1GGG] Hammer In (140),Rx2,None,3,32.0,32.0,99.98,33.43,,Holofoil,,"<strong>Ability — Voltage Beat</strong>
+<br>Once during your turn, you may search your deck for up to 2 Grass Energy cards and attach them to 1 of your Pokemon. Then, shuffle your deck.",,
+208261,Rillaboom - SWSH006 (Prerelease),Rillaboom SWSH006 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/208261_200w.jpg,3,2545,https://cpt.tcgcsv.com/fkH2,2024-04-08T15:55:14.413,1,SWSH006,Promo,Grass,170,Stage 2,[1GGG] Hammer In (140),Rx2,None,3,4.47,5.72,8.98,5.61,5.89,Holofoil,,"<strong>Ability — Voltage Beat</strong>
+<br>Once during your turn, you may search your deck for up to 2 Grass Energy cards and attach them to 1 of your Pokemon. Then, shuffle your deck.",,
+208262,Frosmoth - SWSH007 (Prerelease),Frosmoth SWSH007 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/208262_200w.jpg,3,2545,https://cpt.tcgcsv.com/gkH2,2024-04-08T16:09:30.083,1,SWSH007,Promo,Water,90,Stage 1,[1W] Aurora Beam (30),Mx2,None,2,3.82,5.45,9.48,5.41,5.51,Holofoil,,"<strong>Ability — Ice Dance</strong>
+<br>As often as you like during your turn, you may attach a Water Energy card from your hand to 1 of your Benched Water Pokemon.",,
+208263,Frosmoth - SWSH007 (Prerelease) [Staff],Frosmoth SWSH007 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/208263_200w.jpg,3,2545,https://cpt.tcgcsv.com/hkH2,2024-04-08T16:09:34.74,1,SWSH007,Promo,Water,90,Stage 1,[1W] Aurora Beam (30),Mx2,None,2,71.24,79.99,199.99,76.66,,Holofoil,,"<strong>Ability — Ice Dance</strong>
+<br>As often as you like during your turn, you may attach a Water Energy card from your hand to 1 of your Benched Water Pokemon.",,
+208264,Galarian Perrserker - SWSH008 (Prerelease) [Staff],Galarian Perrserker SWSH008 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/208264_200w.jpg,3,2545,https://cpt.tcgcsv.com/jkH2,2024-04-08T16:11:13.987,1,SWSH008,Promo,Metal,120,Stage 1,[1MM] Metal Claw (70),Rx2,G-30,2,54.99,77.49,99.98,65.56,,Holofoil,,"<strong>Ability — Steely Spirit</strong>
+<br>Your Metal Pokemon's attacks do 20 more damage to your opponent's Active Pokemon <em>(before applying Weakness and Resistance)</em>.",,
+208265,Galarian Perrserker - SWSH008 (Prerelease),Galarian Perrserker SWSH008 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/208265_200w.jpg,3,2545,https://cpt.tcgcsv.com/kkH2,2024-04-08T16:11:00.82,1,SWSH008,Promo,Metal,120,Stage 1,[1MM] Metal Claw (70),Rx2,G-30,2,2.75,4.12,5.0,4.05,4.83,Holofoil,,"<strong>Ability — Steely Spirit</strong>
+<br>Your Metal Pokemon's attacks do 20 more damage to your opponent's Active Pokemon <em>(before applying Weakness and Resistance)</em>.",,
+208266,Cinccino - SWSH009 (Prerelease),Cinccino SWSH009 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/208266_200w.jpg,3,2545,https://cpt.tcgcsv.com/lkH2,2024-04-08T16:28:28.75,1,SWSH009,Promo,Colorless,90,Stage 1,"[1] Energy Assist (40)
+<br>Attach a basic Energy card from your discard pile to 1 of your Benched Pokemon.",Fx2,G-30,1,7.0,8.9,20.0,8.24,9.99,Holofoil,,"<strong>Ability — Make Do</strong>
+<br>You may discard a card from your hand in order to use this Ability. Once during your turn, you may draw 2 cards.",,
+208267,Cinccino - SWSH009 (Prerelease) [Staff],Cinccino SWSH009 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/208267_200w.jpg,3,2545,https://cpt.tcgcsv.com/mkH2,2024-04-08T16:28:34.563,1,SWSH009,Promo,Colorless,90,Stage 1,"[1] Energy Assist (40)
+<br>Attach a basic Energy card from your discard pile to 1 of your Benched Pokemon.",Fx2,G-30,1,75.0,84.38,100.0,77.63,,Holofoil,,"<strong>Ability — Make Do</strong>
+<br>You may discard a card from your hand in order to use this Ability. Once during your turn, you may draw 2 cards.",,
+210578,Snorlax - SWSH032,Snorlax SWSH032,https://tcgplayer-cdn.tcgplayer.com/product/210578_200w.jpg,3,2545,https://cpt.tcgcsv.com/BfJ2,2021-10-04T13:41:58.42,1,SWSH032,Promo,Colorless,150,Basic,[3] Rolling Tackle (80),Fx2,None,4,17.5,18.0,18.25,13.23,,Holofoil,[4] Heavy Impact (130),,,
+210579,Morpeko - SWSH031,Morpeko SWSH031,https://tcgplayer-cdn.tcgplayer.com/product/210579_200w.jpg,3,2545,https://cpt.tcgcsv.com/CfJ2,2021-10-20T14:20:14.143,1,SWSH031,Promo,Lightning,80,Basic,"[1] Famished
+<br>Draw a card.",Fx2,None,1,0.02,0.27,15.0,0.29,0.2,Holofoil,"[1L] Thunder Shock (40)
+<br>Flip a coin. If heads, your opponent’s Active Pokemon is now Paralyzed.",,,
+213096,Flapple - SWSH022 (Prerelease),Flapple SWSH022 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/213096_200w.jpg,3,2545,https://cpt.tcgcsv.com/XfK2,2024-04-08T16:08:35.127,1,SWSH022,Promo,Grass,80,Stage 1,"[2] Acid Spray (60)
+<br>Flip a coin. If heads, discard an Energy from your opponent's Active Pokemon.",Rx2,None,1,4.0,5.67,12.99,5.67,3.79,Holofoil,,"<strong>Ability — Apple Drop</strong>
+<br>Once during your turn, you may put 2 damage counters on 1 of your opponent's Pokemon. If you placed any damage counters in this way, shuffle this Pokemon and all attached cards into your deck.",,
+213097,Flapple - SWSH022 (Prerelease) [Staff],Flapple SWSH022 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/213097_200w.jpg,3,2545,https://cpt.tcgcsv.com/ZfK2,2025-02-21T03:12:37.507,1,SWSH022,Promo,Grass,80,Stage 1,"[2] Acid Spray (60)
+<br>Flip a coin. If heads, discard an Energy from your opponent's Active Pokemon.",Rx2,None,1,80.0,80.0,80.0,37.62,,Holofoil,,"<strong>Ability — Apple Drop</strong>
+<br>Once during your turn, you may put 2 damage counters on 1 of your opponent's Pokemon. If you placed any damage counters in this way, shuffle this Pokemon and all attached cards into your deck.",,
+213144,Luxray - SWSH023 (Prerelease),Luxray SWSH023 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/213144_200w.jpg,3,2545,https://cpt.tcgcsv.com/VgK2,2024-04-08T15:49:09.04,1,SWSH023,Promo,Lightning,160,Stage 2,"[L] Raid (60+)
+<br>If this Pokemon evolved from Luxio during this turn, this attack does 100 more damage.",Fx2,None,1,8.28,11.48,15.12,10.05,8.28,Holofoil,[1L] Head Bolt (120),,,
+213145,Luxray - SWSH023 (Prerelease) [Staff],Luxray SWSH023 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/213145_200w.jpg,3,2545,https://cpt.tcgcsv.com/WgK2,2024-04-08T15:49:14.397,1,SWSH023,Promo,Lightning,160,Stage 2,"[L] Raid (60+)
+<br>If this Pokemon evolved from Luxio during this turn, this attack does 100 more damage.",Fx2,None,1,14.99,30.17,45.35,53.32,,Holofoil,[1L] Head Bolt (120),,,
+213196,Coalossal - SWSH024 (Prerelease),Coalossal SWSH024 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/213196_200w.jpg,3,2545,https://cpt.tcgcsv.com/XhK2,2024-04-08T16:30:37.897,1,SWSH024,Promo,Fighting,160,Stage 2,[3F] Flaming Avalanche (130),Gx2,None,4,2.5,3.92,9.99,3.7,,Holofoil,,"<strong>Ability —Tar Generator</strong>
+<br>Once during your turn, you may attach a Fire Energy card, a Fighting Energy card, or 1 of each from your discard pile to your Pokemon in any way you like.",,
+213197,Coalossal - SWSH024 (Prerelease) [Staff],Coalossal SWSH024 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/213197_200w.jpg,3,2545,https://cpt.tcgcsv.com/ZhK2,2024-04-08T16:31:58.313,1,SWSH024,Promo,Fighting,160,Stage 2,[3F] Flaming Avalanche (130),Gx2,None,4,60.0,90.01,99.98,17.73,,Holofoil,,"<strong>Ability —Tar Generator</strong>
+<br>Once during your turn, you may attach a Fire Energy card, a Fighting Energy card, or 1 of each from your discard pile to your Pokemon in any way you like.",,
+213211,Garbodor - SWSH025 (Prerelease),Garbodor SWSH025 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/213211_200w.jpg,3,2545,https://cpt.tcgcsv.com/fjK2,2024-04-08T16:11:27.5,1,SWSH025,Promo,Darkness,120,Stage 1,[2D] Sludge Bomb (80),Fx2,None,2,4.01,5.67,14.99,5.69,5.0,Holofoil,,"<strong>Ability — Poisonous Puddle</strong>
+<br>Once during your turn, if a Stadium is in play, you may make your opponent's Active Pokemon Poisoned.",,
+213212,Garbodor - SWSH025 (Prerelease) [Staff],Garbodor SWSH025 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/213212_200w.jpg,3,2545,https://cpt.tcgcsv.com/gjK2,2024-04-08T16:13:43.367,1,SWSH025,Promo,Darkness,120,Stage 1,[2D] Sludge Bomb (80),Fx2,None,2,50.0,80.0,85.99,25.31,,Holofoil,,"<strong>Ability — Poisonous Puddle</strong>
+<br>Once during your turn, if a Stadium is in play, you may make your opponent's Active Pokemon Poisoned.",,
+214228,Copperajah V - SWSH030,Copperajah V SWSH030,https://tcgplayer-cdn.tcgplayer.com/product/214228_200w.jpg,3,2545,https://cpt.tcgcsv.com/BJK2,2021-06-15T12:37:11.307,1,SWSH030,Promo,Metal,220,Basic,"[1MM] Adamantine Press (90)
+<br>During your opponent's next turn, this Pokemon takes 30 less damage from attacks <em>(after applying Weakness and Resistance)</em>.",Rx2,G-30,4,0.5,0.99,3.25,0.84,,Holofoil,[1MMM] Wrack Down (180),,,
+214233,Zacian V - SWSH018,Zacian V SWSH018,https://tcgplayer-cdn.tcgplayer.com/product/214233_200w.jpg,3,2545,https://cpt.tcgcsv.com/HJK2,2022-12-07T04:42:08.957,1,SWSH018,Promo,Metal,220,Basic,"[MMM] Brave Blade (230)
+<br>During your next turn, this Pokemon can't attack.",Rx2,G-30,2,0.3,0.99,10.0,0.72,0.85,Holofoil,,"<strong>Ability — Intrepid Sword</strong>
+<br>Once during your turn, you may look at the top 3 cards of your deck and attach any number of Metal Energy cards you find there to this Pokemon. Put the other cards into your hand. If you use this Ability, your turn ends.",,
+214234,Zamazenta V - SWSH019,Zamazenta V SWSH019,https://tcgplayer-cdn.tcgplayer.com/product/214234_200w.jpg,3,2545,https://cpt.tcgcsv.com/JJK2,2024-08-20T18:07:45.743,1,SWSH019,Promo,Metal,230,Basic,"[1MM] Assault Tackle (130)
+<br>Discard a Special Energy from your opponent's Active Pokémon.",Rx2,G-30,2,0.38,0.99,10.0,0.62,,Holofoil,,"<strong>Ability — Dauntless Shield</strong>
+<br>Prevent all damage done to this Pokemon by attacks from your opponent's <strong>Pokemon VMAX</strong>.",,
+214235,Polteageist V - SWSH021,Polteageist V SWSH021,https://tcgplayer-cdn.tcgplayer.com/product/214235_200w.jpg,3,2545,https://cpt.tcgcsv.com/KJK2,2023-03-02T17:05:04.493,1,SWSH021,Promo,Psychic,170,Basic,"[2P] Mind Bend (100)
+<br>Your opponent's Active Pokemon is now Confused.",Dx2,F-30,1,0.94,1.31,5.0,1.24,1.27,Holofoil,,"<strong>Ability — Teapot of Surprises</strong>
+<br>If this Pokemon is in the Active Spot and is damaged by an opponent's attack <em>(even if it is Knocked Out)</em>, choose a random card from your opponent's hand. Your opponent reveals that card and puts it on the bottom of their deck.",,
+214237,Mantine - SWSH026,Mantine SWSH026,https://tcgplayer-cdn.tcgplayer.com/product/214237_200w.jpg,3,2545,https://cpt.tcgcsv.com/MJK2,2021-08-30T12:44:43.44,1,SWSH026,Promo,Water,110,Basic,"[W] Water Reserve
+<br>Search your deck for up to 3 Water Energy cards, reveal them, and put them into your hand. Then, shuffle your deck.",Lx2,None,1,0.84,1.25,7.0,1.31,,Holofoil,[WW] Wave Splash (60),,,
+214238,Noctowl - SWSH027,Noctowl SWSH027,https://tcgplayer-cdn.tcgplayer.com/product/214238_200w.jpg,3,2545,https://cpt.tcgcsv.com/NJK2,2024-05-13T08:33:44.737,1,SWSH027,Promo,Colorless,110,Stage 1,[2] Wing Attack (40),Lx2,F-30,1,1.0,1.89,7.0,1.93,2.23,Holofoil,"[3] Carry Off
+<br>Choose 1 of your opponent's Benched Pokemon. They shuffle that Pokemon and all attached cards into their deck. Then, shuffle this Pokemon and all attached cards into your deck.",,,
+214239,Duraludon - SWSH028,Duraludon SWSH028,https://tcgplayer-cdn.tcgplayer.com/product/214239_200w.jpg,3,2545,https://cpt.tcgcsv.com/PJK2,2025-01-31T10:42:46.517,1,SWSH028,Promo,Metal,130,Basic,[2M] Metal Claw (70),Rx2,G-30,2,0.02,0.52,3.0,0.51,,Holofoil,"[3M] Steel Beam (150)
+<br>This Pokemon also does 40 damage to itself.",,,
+214240,Rayquaza - SWSH029,Rayquaza SWSH029,https://tcgplayer-cdn.tcgplayer.com/product/214240_200w.jpg,3,2545,https://cpt.tcgcsv.com/QJK2,2022-05-04T11:11:53.517,1,SWSH029,Promo,Colorless,130,Basic,"[2] Jaw Lock (30)
+<br>During your opponent's next turn, the Defending Pokemon can't retreat.",Lx2,F-30,2,3.0,6.12,49.99,5.13,5.69,Holofoil,"[3] Power Blast (120)
+<br>Discard an Energy from this Pokemon.",,,
+214241,Pikachu - SWSH020,Pikachu SWSH020,https://tcgplayer-cdn.tcgplayer.com/product/214241_200w.jpg,3,2545,https://cpt.tcgcsv.com/RJK2,2021-10-05T13:11:34.963,1,SWSH020,Promo,Lightning,70,Basic,"[2] Iron Tail (30x)
+<br>Flip a coin until you get tails. This attack does 30 damage for each heads.",Fx2,None,1,94.0,149.85,208.7,103.19,139.99,Holofoil,[1LL] Electro Ball (60),,,
+218574,Kangaskhan - SWSH038 (Prerelease),Kangaskhan SWSH038 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/218574_200w.jpg,3,2545,https://cpt.tcgcsv.com/vrM2,2024-04-08T16:14:47.723,1,SWSH038,Promo,Colorless,130,Basic,"[2] Rally Back (30+)
+<br>If any of your Pokemon were Knocked Out by damage from an attack from your opponent's Pokemon during their last turn, this attack does 90 more damage.",Fx2,None,2,9.0,11.37,33.0,11.34,11.16,Holofoil,[3] Hammer In (100),,,
+218576,Kangaskhan - SWSH038 (Prerelease) [Staff],Kangaskhan SWSH038 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/218576_200w.jpg,3,2545,https://cpt.tcgcsv.com/xrM2,2024-04-08T15:48:43.617,1,SWSH038,Promo,Colorless,130,Basic,"[2] Rally Back (30+)
+<br>If any of your Pokemon were Knocked Out by damage from an attack from your opponent's Pokemon during their last turn, this attack does 90 more damage.",Fx2,None,2,50.2,65.0,89.99,59.05,,Holofoil,[3] Hammer In (100),,,
+218578,Decidueye - SWSH035 (Prerelease) [Staff],Decidueye SWSH035 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/218578_200w.jpg,3,2545,https://cpt.tcgcsv.com/BrM2,2024-04-08T16:36:14.963,1,SWSH035,Promo,Grass,140,Stage 2,"[1G] Splitting Arrow (90)
+<br>This attack also does 20 damage to 2 of your opponent's Benched Pokemon. <em>(Don't apply Weakness or Resistance for Benched Pokemon.)</em>",Rx2,None,2,50.0,64.99,75.0,51.67,,Holofoil,,"<strong>Ability — Deep Forest Camo</strong>
+<br>Prevent all damage done to this Pokemon by attacks from your opponent's Pokemon V and Pokemon GX.",,
+218579,Decidueye - SWSH035 (Prerelease),Decidueye SWSH035 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/218579_200w.jpg,3,2545,https://cpt.tcgcsv.com/CrM2,2024-04-08T16:36:08.57,1,SWSH035,Promo,Grass,140,Stage 2,"[1G] Splitting Arrow (90)
+<br>This attack also does 20 damage to 2 of your opponent's Benched Pokemon. <em>(Don't apply Weakness or Resistance for Benched Pokemon.)</em>",Rx2,None,2,4.81,5.85,12.0,5.68,5.96,Holofoil,,"<strong>Ability — Deep Forest Camo</strong>
+<br>Prevent all damage done to this Pokemon by attacks from your opponent's Pokemon V and Pokemon GX.",,
+218580,Arctozolt - SWSH036 (Prerelease),Arctozolt SWSH036 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/218580_200w.jpg,3,2545,https://cpt.tcgcsv.com/DrM2,2024-04-08T16:19:37.437,1,SWSH036,Promo,Lightning,130,Stage 1,[1L] Electro Ball (70),Fx2,None,2,6.49,8.02,11.24,7.74,7.47,Holofoil,,"<strong>Ability — Biting Whirlpool</strong>
+<br>Whenever your opponent attaches an Energy card from their hand to 1 of their Pokemon, put 2 damage counters on that Pokemon.",,
+218581,Arctozolt - SWSH036 (Prerelease) [Staff],Arctozolt SWSH036 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/218581_200w.jpg,3,2545,https://cpt.tcgcsv.com/FrM2,2024-04-08T16:19:42.963,1,SWSH036,Promo,Lightning,130,Stage 1,[1L] Electro Ball (70),Fx2,None,2,31.35,45.37,119.99,44.73,,Holofoil,,"<strong>Ability — Biting Whirlpool</strong>
+<br>Whenever your opponent attaches an Energy card from their hand to 1 of their Pokemon, put 2 damage counters on that Pokemon.",,
+218582,Hydreigon - SWSH037 (Prerelease) [Staff],Hydreigon SWSH037 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/218582_200w.jpg,3,2545,https://cpt.tcgcsv.com/GrM2,2024-04-08T16:14:00.233,1,SWSH037,Promo,Darkness,160,Stage 2,[1DD] Pitch-Black Fangs (130),Gx2,None,3,94.48,104.0,143.4,82.48,,Holofoil,,"<strong>Ability — Dark Squall</strong>
+<br>As often as you like during your turn, you may attach a Darkness Energy card from your hand to 1 of your Pokemon.",,
+218583,Hydreigon - SWSH037 (Prerelease),Hydreigon SWSH037 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/218583_200w.jpg,3,2545,https://cpt.tcgcsv.com/HrM2,2024-04-08T16:13:56.423,1,SWSH037,Promo,Darkness,160,Stage 2,[1DD] Pitch-Black Fangs (130),Gx2,None,3,5.0,7.49,29.95,7.16,7.3,Holofoil,,"<strong>Ability — Dark Squall</strong>
+<br>As often as you like during your turn, you may attach a Darkness Energy card from your hand to 1 of your Pokemon.",,
+220268,Pikachu - SWSH039,Pikachu SWSH039,https://tcgplayer-cdn.tcgplayer.com/product/220268_200w.jpg,3,2545,https://cpt.tcgcsv.com/n7N2,2025-05-08T21:03:48.987,1,SWSH039,Promo,Lightning,60,Basic,"[1] Tail Whip 
+<br>Flip a coin. If heads, during your opponent's next turn, the Defending Pokemon can't attack.",Fx2,None,1,3.47,12.61,99.99,9.7,,Holofoil,,,,
+220269,Hatenna - SWSH040,Hatenna SWSH040,https://tcgplayer-cdn.tcgplayer.com/product/220269_200w.jpg,3,2545,https://cpt.tcgcsv.com/p7N2,2024-08-20T18:07:45.807,1,SWSH040,Promo,Psychic,60,Basic,"[1] Find a Friend
+<br>Search your deck for a Pokemon, reveal it, and put it into your hand. Then, shuffle your deck.",Dx2,F-30,1,0.2,0.42,5.03,0.42,,Holofoil,[2] Psyshot (20),,,
+220270,Flareon - SWSH041,Flareon SWSH041,https://tcgplayer-cdn.tcgplayer.com/product/220270_200w.jpg,3,2545,https://cpt.tcgcsv.com/q7N2,2021-06-15T12:42:44.69,1,SWSH041,Promo,Fire,110,Stage 1,"[R] Singe
+<br>Your opponent's Active Pokemon is now Burned.",Wx2,None,2,4.26,5.49,9.32,5.15,,Holofoil,"[1RR] Kindle (120)
+<br>Discard an Energy from this Pokemon. If you do, discard an Energy from your opponent's Active Pokemon.",,,
+220271,Eevee - SWSH042,Eevee SWSH042,https://tcgplayer-cdn.tcgplayer.com/product/220271_200w.jpg,3,2545,https://cpt.tcgcsv.com/r7N2,2021-09-11T13:59:07.637,1,SWSH042,Promo,Colorless,60,Basic,"[1] Signs of Evolution
+<br>Search your deck for a card that evolves from Eevee, reveal it, and put it into your hand. Then, shuffle your deck.",Fx2,None,1,3.87,5.92,11.0,5.59,,Holofoil,"[2] Wild Kick (30)
+<br>Flip a coin. If tails, this attack does nothing.",,,
+220273,Galarian Sirfetch'd V - SWSH043,Galarian Sirfetchd V SWSH043,https://tcgplayer-cdn.tcgplayer.com/product/220273_200w.jpg,3,2545,https://cpt.tcgcsv.com/t7N2,2021-06-15T12:43:11.49,1,SWSH043,Promo,Fighting,210,Basic,"[1FF] Meteor Smash (200)
+<br>During your next turn, this Pokemon can't attack.",Px2,None,2,0.3,1.0,9.99,0.81,2.24,Holofoil,,"<strong>Ability — Resolute Spear</strong>
+<br>Once during your turn, when this Pokemon moves from your Bench to the Active Spot, you may move any amount of Fighting Energy from your other Pokemon to it.",,
+220279,Eternatus V - SWSH044,Eternatus V SWSH044,https://tcgplayer-cdn.tcgplayer.com/product/220279_200w.jpg,3,2545,https://cpt.tcgcsv.com/C7N2,2023-06-29T14:47:59.097,1,SWSH044,Promo,Darkness,220,Basic,"[1] Power Accelerator (30)
+<br>You may attach a Darkness Energy card from your hand to 1 of your Benched Pokemon.",Fx2,None,2,1.25,2.34,26.83,2.06,2.49,Holofoil,"[3D] Dynamax Cannon (120+)
+<br>If your opponent's Active Pokemon is a Pokemon VMAX, this attack does 120 more damage.",,,
+220281,Eternatus VMAX - SWSH045,Eternatus VMAX SWSH045,https://tcgplayer-cdn.tcgplayer.com/product/220281_200w.jpg,3,2545,https://cpt.tcgcsv.com/F7N2,2024-09-20T03:08:35.897,1,SWSH045,Promo,Darkness,340,VMAX,"[1D] Dread End (30x)
+<br>This attack does 30 damage for each of your Darkness Pokemon in play.",Fx2,None,3,1.79,3.17,9999.0,3.06,5.99,Holofoil,,"<strong>Ability — Eternal Zone</strong>
+<br>If all of your Pokemon in play are Darkness type, you can have up to 8 Pokemon on your Bench, and you can't put non-Darkness Pokemon into play. <em>(If this Ability stops working, discard Pokemon from your Bench until you have 5.)</em>",,
+220313,Zacian - SWSH033,Zacian SWSH033,https://tcgplayer-cdn.tcgplayer.com/product/220313_200w.jpg,3,2545,https://cpt.tcgcsv.com/h8N2,2021-10-04T13:42:41.38,1,SWSH033,Promo,Metal,130,Basic,"[3] Crunch (60)
+<br>Flip a coin. If heads, discard an Energy from your opponent's Active Pokemon.",Rx2,G-30,2,2.15,3.49,8.0,3.35,,Holofoil,"[1MMM] Metal Blade (190)
+<br>Discard 3 Energy from this Pokemon.",,,
+220314,Zamazenta - SWSH034,Zamazenta SWSH034,https://tcgplayer-cdn.tcgplayer.com/product/220314_200w.jpg,3,2545,https://cpt.tcgcsv.com/j8N2,2022-04-03T07:17:27.097,1,SWSH034,Promo,Metal,130,Basic,[1MMM] Headbang (130),Rx2,G-30,2,2.25,3.8,5.95,3.8,3.8,Holofoil,,"<strong>Ability — Sturdy Shield</strong>
+<br>This Pokemon takes 20 less damage from attacks <em>(after applying Weakness and Resistance)</em>.",,
+220315,Pikachu V - SWSH063,Pikachu V SWSH063,https://tcgplayer-cdn.tcgplayer.com/product/220315_200w.jpg,3,2545,https://cpt.tcgcsv.com/k8N2,2023-02-16T14:38:32.537,1,SWSH063,Promo,Lightning,190,Basic,[L] Pika Ball (30),Fx2,None,1,2.89,4.99,9.99,3.97,6.99,Holofoil,"[LL] Circle Circuit (30x)
+<br>This attack does 30 damage for each of your Benched Pokemon.",,,
+220316,Eternatus V - SWSH064,Eternatus V SWSH064,https://tcgplayer-cdn.tcgplayer.com/product/220316_200w.jpg,3,2545,https://cpt.tcgcsv.com/l8N2,2021-06-15T12:40:03.017,1,SWSH064,Promo,Darkness,220,Basic,"[1] Power Accelerator (30)
+<br>You may attach a Darkness Energy card from your hand to 1 of your Benched Pokemon.",Fx2,None,2,0.99,1.49,5.0,1.41,,Holofoil,"[3D] Dynamax Cannon (120+)
+<br>If your opponent's Active Pokemon is a Pokemon VMAX, this attack does 120 more damage.",,,
+220317,Eevee V - SWSH065,Eevee V SWSH065,https://tcgplayer-cdn.tcgplayer.com/product/220317_200w.jpg,3,2545,https://cpt.tcgcsv.com/m8N2,2024-09-18T11:48:45.303,1,SWSH065,Promo,Colorless,190,Basic,"[1] Collect
+<br>Draw 3 cards.",Fx2,None,1,2.9,5.0,9999.0,4.83,,Holofoil,"[3] Brave Buddies (80+)
+<br>If you played a Supporter card from your hand during this turn, this attack does 80 more damage.",,,
+221753,Vaporeon - SWSH072,Vaporeon SWSH072,https://tcgplayer-cdn.tcgplayer.com/product/221753_200w.jpg,3,2545,https://cpt.tcgcsv.com/5KN2,2024-08-28T19:11:04.26,1,SWSH072,Promo,Water,110,Stage 1,"[3] Hydro Pump (60+)
+<br>This attack does 20 more damage for each W energy attached to this Pokemon.",Lx2,None,2,2.73,5.1,9.0,4.92,,Holofoil,,"<strong>Ability — Watery Shroud</strong>                                          
+<br>As long as this Pokemon is on your Bench, prevent all damage done to this Pokemon by attacks <em>(both yours and your opponent's.)</em>",,
+221754,Sobble - SWSH073,Sobble SWSH073,https://tcgplayer-cdn.tcgplayer.com/product/221754_200w.jpg,3,2545,https://cpt.tcgcsv.com/6KN2,2024-08-28T19:10:18.38,1,SWSH073,Promo,Water,60,Basic,"[1] Growl
+<br>During your opponent's next turn, the Defending Pokemon's attacks do 20 less damage <em>(before applying Weakness and Resistance).</em>",Lx2,None,1,0.5,1.0,3.0,0.99,1.99,Holofoil,[W] Rain Splash (10),,,
+222071,Lapras - SWSH051,Lapras SWSH051,https://tcgplayer-cdn.tcgplayer.com/product/222071_200w.jpg,3,2545,https://cpt.tcgcsv.com/rRN2,2021-10-04T13:40:08.57,1,SWSH051,Promo,Water,130,Basic,"[WWWW] Aqua Wash (70)
+<br>You may put 2 Energy attached to your opponent's Active Pokemon into their hand.",Lx2,None,3,3.0,5.99,999.99,3.0,90.8,Holofoil,,,,
+222072,Gengar - SWSH052,Gengar SWSH052,https://tcgplayer-cdn.tcgplayer.com/product/222072_200w.jpg,3,2545,https://cpt.tcgcsv.com/sRN2,2023-02-28T08:57:06.02,1,SWSH052,Promo,Psychic,110,Stage 2,"[1PP] Hypnoblast (90)
+<br>Your opponent's Active Pokemon is now Asleep.",Dx2,F-30,2,68.39,95.0,149.95,94.47,69.98,Holofoil,,"<strong>Ability — Life Shaker</strong>
+<br>As often as you like during your turn, you may move 1 damage counter from 1 of your Psychic Pokemon to another of your Psychic Pokemon.",,
+222073,Machamp - SWSH053,Machamp SWSH053,https://tcgplayer-cdn.tcgplayer.com/product/222073_200w.jpg,3,2545,https://cpt.tcgcsv.com/tRN2,2021-04-22T13:55:39,1,SWSH053,Promo,Fighting,170,Stage 2,"[1F] Macho Revenge (20x)
+<br>This attack does 20 damage for each Fighting Pokemon in your discard pile.",Px2,None,3,0.7,6.99,9.99,1.96,,Holofoil,"[1FF] Dynamite Punch (200)
+<br>This Pokemon also does 50 damage to itself.",,,
+222074,Coalossal - SWSH054,Coalossal SWSH054,https://tcgplayer-cdn.tcgplayer.com/product/222074_200w.jpg,3,2545,https://cpt.tcgcsv.com/vRN2,2021-10-04T13:31:06.567,1,SWSH054,Promo,Fighting,160,Stage 2,[3F] Flaming Avalanche (130),Gx2,None,4,0.75,1.04,5.7,1.04,1.08,Holofoil,,"<strong>Ability — Tar Generator</strong>
+<br>Once during your turn, you may attach a Fire Energy card, a Fighting Energy card, or 1 each from your discard pile to your Pokemon in any way you like.",,
+223749,Centiskorch - SWSH048,Centiskorch SWSH048,https://tcgplayer-cdn.tcgplayer.com/product/223749_200w.jpg,3,2545,https://cpt.tcgcsv.com/_vP2,2020-09-25T04:03:13.787,1,SWSH048,Promo,Fire,130,Stage 1,"[R] Hundred Foot Flames
+<br>For each Fire Energy attached to this Pokemon, discard the top card of your opponent's deck.",Wx2,None,3,0.8,1.08,2.99,1.01,1.13,Holofoil,"[3R] Searing Flame (110)
+<br>Your opponent's Active Pokemon is now Burned.",,,
+223750,Drednaw - SWSH047,Drednaw SWSH047,https://tcgplayer-cdn.tcgplayer.com/product/223750_200w.jpg,3,2545,https://cpt.tcgcsv.com/0wP2,2021-11-04T20:01:45.657,1,SWSH047,Promo,Water,130,Stage 1,"[2W] Vise Bite (60+)
+<br>This attack does 30 more damage for each Colorless in your opponent's Active Pokemon's Retreat Cost.",Lx2,None,3,0.5,1.0,2.99,0.99,0.89,Holofoil,"[3W] Jaw Lock (130)
+<br>During your opponent's next turn, the Defending Pokemon can't retreat.",,,
+223751,Eldegoss - SWSH046,Eldegoss SWSH046,https://tcgplayer-cdn.tcgplayer.com/product/223751_200w.jpg,3,2545,https://cpt.tcgcsv.com/2wP2,2024-08-30T20:16:52.297,1,SWSH046,Promo,Grass,80,Stage 1,"[1] Blessing of Fluff
+<br>Search your deck for up to 3 Grass Energy cards and attach them to your Benched Pokemon in any way you like. Then, shuffle your deck.",Rx2,None,1,0.45,0.88,2.99,0.73,,Holofoil,[G] Leafage (30),,,
+223752,Dubwool V - SWSH049,Dubwool V SWSH049,https://tcgplayer-cdn.tcgplayer.com/product/223752_200w.jpg,3,2545,https://cpt.tcgcsv.com/3wP2,2024-08-20T18:07:45.913,1,SWSH049,Promo,Colorless,210,Basic,"[3] Revenge Blast (120+)
+<br>This attack does 30 more damage for each Prize card your opponent has taken.",Fx2,None,2,0.23,0.87,10.25,0.48,0.47,Holofoil,,"<strong>Ability — Soft Wool</strong>
+<br>This Pokemon takes 30 less damage from attacks <em>(after applying Weakness and Resistance)</em>.",,
+223754,Charizard V - SWSH050,Charizard V SWSH050,https://tcgplayer-cdn.tcgplayer.com/product/223754_200w.jpg,3,2545,https://cpt.tcgcsv.com/6wP2,2023-10-31T16:48:42.373,1,SWSH050,Promo,Fire,220,Basic,[3] Claw Slash (80),Wx2,None,3,9.5,14.13,500.0,10.46,10.24,Holofoil,"[2RR] Fire Spin (220)
+<br>Discard 2 Energy from this Pokemon.",,,
+223755,Hatterene V - SWSH055,Hatterene V SWSH055,https://tcgplayer-cdn.tcgplayer.com/product/223755_200w.jpg,3,2545,https://cpt.tcgcsv.com/7wP2,2024-02-09T15:13:35.51,1,SWSH055,Promo,Psychic,200,Basic,"[1P] Confounding Pulse
+<br>Switch 1 of your opponent's Benched Pokemon with their Active Pokemon. The Active Pokemon is now Confused.",Dx2,F-30,2,0.38,0.92,7.0,0.84,0.72,Holofoil,"[1PP] Mental Crush (90+)
+<br>If your opponent's Active Pokemon is Confused, this attack does 90 more damage.",,,
+223757,Morpeko V - SWSH056,Morpeko V SWSH056,https://tcgplayer-cdn.tcgplayer.com/product/223757_200w.jpg,3,2545,https://cpt.tcgcsv.com/9wP2,2021-06-15T12:58:37.16,1,SWSH056,Promo,Lightning,170,Basic,"[1] Spark (20)
+<br>This attack also does 20 damage to 1 of your opponent's Benched Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>",Fx2,None,2,0.7,1.17,6.0,1.12,,Holofoil,"[1LL] Electro Wheel (150)
+<br>Discard an Energy from this Pokemon. If you do, switch it with 1 of your Benched Pokemon.",,,
+223758,Grimmsnarl V - SWSH057,Grimmsnarl V SWSH057,https://tcgplayer-cdn.tcgplayer.com/product/223758_200w.jpg,3,2545,https://cpt.tcgcsv.com/bwP2,2023-06-30T11:49:23.983,1,SWSH057,Promo,Darkness,220,Basic,[D] Bite (40),Gx2,None,2,0.59,1.0,10.59,0.89,,Holofoil,"[DDD] Spiky Knuckle (200)
+<br>Put 2 Darkness Energy attached to this Pokemon into your hand.",,,
+224361,Snorlax - SWSH068 (Prerelease),Snorlax SWSH068 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/224361_200w.jpg,3,2545,https://cpt.tcgcsv.com/fMP2,2024-04-08T15:55:29.01,1,SWSH068,Promo,Colorless,130,Basic,"[4] Body Slam (100)
+<br>Flip a coin. If heads, your opponent's Active Pokemon is now Paralyzed.",Fx2,None,3,13.84,18.77,99.0,18.21,18.99,Holofoil,,"<strong>Ability — Gormandize</strong>
+<br>Once during your turn, if this Pokemon  is in the Active Spot, you may draw cards until you have 7 cards in your hand. If you use this Ability, your turn ends.",,
+224362,Snorlax - SWSH068 (Prerelease) [Staff],Snorlax SWSH068 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/224362_200w.jpg,3,2545,https://cpt.tcgcsv.com/gMP2,2024-04-08T15:55:34.15,1,SWSH068,Promo,Colorless,130,Basic,"[4] Body Slam (100)
+<br>Flip a coin. If heads, your opponent's Active Pokemon is now Paralyzed.",Fx2,None,3,,,,,,,,"<strong>Ability — Gormandize</strong>
+<br>Once during your turn, if this Pokemon  is in the Active Spot, you may draw cards until you have 7 cards in your hand. If you use this Ability, your turn ends.",,
+224363,Lugia - SWSH069 (Prerelease) [Staff],Lugia SWSH069 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/224363_200w.jpg,3,2545,https://cpt.tcgcsv.com/hMP2,2024-04-08T15:49:03.893,1,SWSH069,Promo,Colorless,130,Basic,[2] Gust (40),Lx2,F-30,2,249.98,252.5,1000.0,249.98,,Holofoil,"[4] Wind Pressure (250)
+<br>If your opponent has 5 or fewer cards in their hand, this attack does nothing.",,,
+224364,Lugia - SWSH069 (Prerelease),Lugia SWSH069 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/224364_200w.jpg,3,2545,https://cpt.tcgcsv.com/jMP2,2024-04-08T15:48:59.553,1,SWSH069,Promo,Colorless,130,Basic,[2] Gust (40),Lx2,F-30,2,129.95,129.95,129.95,22.93,,Holofoil,"[4] Wind Pressure (250)
+<br>If your opponent has 5 or fewer cards in their hand, this attack does nothing.",,,
+224365,Charizard - SWSH066 (Prerelease),Charizard SWSH066 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/224365_200w.jpg,3,2545,https://cpt.tcgcsv.com/kMP2,2024-04-08T16:27:06.417,1,SWSH066,Promo,Fire,170,Stage 2,"[RR] Royal Blaze (100+)
+<br>This attack does 50 more damage for each Leon card in your discard pile.",Wx2,None,3,60.0,74.55,328.45,52.68,67.49,Holofoil,,"<strong>Ability — Battle Sense</strong>
+<br>Once during your turn, you may look  at the top 3 cards of your deck and put 1 of them into your hand. Discard the other cards.",,
+224366,Charizard - SWSH066 (Prerelease) [Staff],Charizard SWSH066 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/224366_200w.jpg,3,2545,https://cpt.tcgcsv.com/lMP2,2024-04-08T16:28:12.707,1,SWSH066,Promo,Fire,170,Stage 2,"[RR] Royal Blaze (100+)
+<br>This attack does 50 more damage for each Leon card in your discard pile.",Wx2,None,3,999.99,5499.99,9999.99,550.0,,Holofoil,,"<strong>Ability — Battle Sense</strong>
+<br>Once during your turn, you may look  at the top 3 cards of your deck and put 1 of them into your hand. Discard the other cards.",,
+224367,Donphan - SWSH067 (Prerelease) [Staff],Donphan SWSH067 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/224367_200w.jpg,3,2545,https://cpt.tcgcsv.com/mMP2,2024-04-08T16:08:21.157,1,SWSH067,Promo,Fighting,150,Stage 1,"[F] Earthquake (120)
+<br>This attack also does 20 damage to each of your Benched Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>",Gx2,None,4,32.76,37.75,115.98,31.48,,Holofoil,[2F] Heavy Impact (90),,,
+224368,Donphan - SWSH067 (Prerelease),Donphan SWSH067 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/224368_200w.jpg,3,2545,https://cpt.tcgcsv.com/nMP2,2024-04-08T16:06:09.31,1,SWSH067,Promo,Fighting,150,Stage 1,"[F] Earthquake (120)
+<br>This attack also does 20 damage to each of your Benched Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>",Gx2,None,4,2.39,3.95,9.99,3.22,4.0,Holofoil,[2F] Heavy Impact (90),,,
+227025,Orbeetle V - SWSH078,Orbeetle V SWSH078,https://tcgplayer-cdn.tcgplayer.com/product/227025_200w.jpg,3,2545,https://cpt.tcgcsv.com/wQQ2,2023-02-08T10:34:05.047,1,SWSH078,Promo,Grass,180,Basic,"[G] Strafe (20)
+<br>You may switch this Pokémon with 1 of your Benched Pokémon.",Rx2,None,1,0.21,0.99,4.0,0.67,,Holofoil,"[1G] Mysterious Wave (50+)
+<br>This attack does 30 more damage times the amount of Energy attached to your opponent's Active Pokémon.",,,
+227027,Scorbunny - SWSH071,Scorbunny SWSH071,https://tcgplayer-cdn.tcgplayer.com/product/227027_200w.jpg,3,2545,https://cpt.tcgcsv.com/zQQ2,2021-10-04T13:41:43.97,1,SWSH071,Promo,Fire,60,Basic,"[1] Me First
+<br>Draw a card.",Wx2,None,1,0.2,0.59,7.0,0.59,0.47,Holofoil,[RR] Live Coal (20),,,
+227028,Grookey - SWSH070,Grookey SWSH070,https://tcgplayer-cdn.tcgplayer.com/product/227028_200w.jpg,3,2545,https://cpt.tcgcsv.com/BQQ2,2024-08-20T18:07:45.993,1,SWSH070,Promo,Grass,60,Basic,"[G] Full On (30)
+<br>Flip a coin. If tails, this attack does nothing.",Rx2,None,1,0.24,0.55,5.03,0.56,0.25,Holofoil,,,,
+227029,Alcremie - SWSH058,Alcremie SWSH058,https://tcgplayer-cdn.tcgplayer.com/product/227029_200w.jpg,3,2545,https://cpt.tcgcsv.com/CQQ2,2021-11-04T20:01:15.653,1,SWSH058,Promo,Psychic,110,Stage 1,"[1] Decorate
+<br>Attach any number of basic Energy cards from your hand to your Pokemon in any way you like.",Mx2,None,1,2.0,3.86,7.0,3.22,,Holofoil,"[1P] Draining Kiss (50)
+<br>Heal 30 damage from this Pokemon.",,,
+227030,Galarian Obstagoon - SWSH059,Galarian Obstagoon SWSH059,https://tcgplayer-cdn.tcgplayer.com/product/227030_200w.jpg,3,2545,https://cpt.tcgcsv.com/DQQ2,2021-11-04T20:02:04.09,1,SWSH059,Promo,Darkness,160,Stage 2,"[1D] Obstruct (90)
+<br>During your opponent's next turn, prevent all damage done to this Pokemon by attacks from Basic Pokemon.",Gx2,None,2,1.0,1.31,5.0,1.25,1.79,Holofoil,,"<strong>Ability — Untamed Shout</strong>
+<br>When you play this Pokemon from your hand to evolve 1 of your Pokemon during your turn, you may put 3 damage counters on 1 of your opponent's Pokemon.",,
+227031,Duraludon - SWSH060,Duraludon SWSH060,https://tcgplayer-cdn.tcgplayer.com/product/227031_200w.jpg,3,2545,https://cpt.tcgcsv.com/FQQ2,2021-11-04T20:02:52.717,1,SWSH060,Promo,Metal,130,Basic,"[1] Metal Sharpener (30)
+<br>Attach a Metal Energy card from your discard pile to 1 of your Pokemon.",Rx2,G-30,2,1.47,1.99,5.0,1.73,,Holofoil,[1MM] Power Beam (110),,,
+227646,Special Delivery Pikachu - SWSH074,Special Delivery Pikachu SWSH074,https://tcgplayer-cdn.tcgplayer.com/product/227646_200w.jpg,3,2545,https://cpt.tcgcsv.com/X3R2,2020-12-07T15:56:27.5,1,SWSH074,Promo,Lightning,60,Basic,"[1] Happy Delivery 
+<br>Search your deck for an Item card, reveal it, and putt it into your hand. Then, shuffle your deck.",Fx2,None,1,200.52,399.99,799.99,253.81,200.52,Holofoil,[1L] Electro Ball (30),,,
+228595,Zacian V - SWSH076,Zacian V SWSH076,https://tcgplayer-cdn.tcgplayer.com/product/228595_200w.jpg,3,2545,https://cpt.tcgcsv.com/WrR2,2021-10-05T13:12:17.173,1,SWSH076,Promo,Metal,220,Basic,"[MMM] Brave Blade (230)
+<br>During your next turn, this Pokemon can't attack.",Rx2,G-30,2,14.97,23.27,9999.0,15.76,17.19,Holofoil,,"<strong>Ability — Intrepid Sword</strong>
+<br>Once during your turn, you may look at the top 3 cards of your deck and attach any number of Metal Energy cards you find there to this Pokemon. Put the other cards into your hand. If you use this Ability, your turn ends.",,
+228596,Zamazenta V - SWSH077,Zamazenta V SWSH077,https://tcgplayer-cdn.tcgplayer.com/product/228596_200w.jpg,3,2545,https://cpt.tcgcsv.com/XrR2,2021-08-13T15:49:06.63,1,SWSH077,Promo,Metal,230,Basic,"[1MM] Assault Tackle (130)
+<br>Discard a Special Energy from your opponent's Active Pokémon.",Rx2,G-30,2,12.19,18.47,9999.0,12.38,17.99,Holofoil,,"<strong>Ability — Dauntless Shield</strong>
+<br>Prevent all damage done to this Pokemon by attacks from your opponent's <strong>Pokemon VMAX</strong>.",,
+228980,Alakazam V - SWSH083,Alakazam V SWSH083,https://tcgplayer-cdn.tcgplayer.com/product/228980_200w.jpg,3,2545,https://cpt.tcgcsv.com/DCR2,2025-01-14T11:10:13.68,1,SWSH083,Promo,Psychic,190,Basic,"[P] Zen Spoon
+<br>Put 3 damage counters on your opponent's Pokemon in any way you like.",Dx2,F-30,1,0.58,1.16,59.99,1.05,2.02,Holofoil,"[PP] Mind Ruler (30x)
+<br>This attack does 30 damage for each card in your opponent's hand.",,,
+232434,Pikachu V - SWSH061,Pikachu V SWSH061,https://tcgplayer-cdn.tcgplayer.com/product/232434_200w.jpg,3,2545,https://cpt.tcgcsv.com/J-S2,2024-09-04T08:43:11.953,1,SWSH061,Promo,Lightning,190,Basic,"[L] Charge
+<br>Search your deck for up to 2 Lightning Energy cards and attach them to this Pokemon. Then, shuffle your deck.",Fx2,None,1,0.59,1.34,29.99,1.3,1.5,Holofoil,"[1LL] Thunderbolt (200)
+<br>Discard all Energy from this Pokemon.",,,
+232450,Galarian Mr. Rime - SWSH079,Galarian Mr Rime SWSH079,https://tcgplayer-cdn.tcgplayer.com/product/232450_200w.jpg,3,2545,https://cpt.tcgcsv.com/0_S2,2021-03-09T13:35:59.31,1,SWSH079,Promo,Water,120,Stage 1,"[2W] Mad Party (20x)
+<br>This attack does 20 damage for each Pokemon in your discard pile that has the Mad Party attack.",Mx2,None,2,0.25,0.62,7.0,0.71,,Holofoil,,"<strong>Ability — Shuffle Dance</strong>
+<br>Once during my turn, you may switch 1 of your opponent's face-down Prize cards with the top card of their deck. <em>(The cards stay face down.)</em>",,
+232453,Dedenne - SWSH080,Dedenne SWSH080,https://tcgplayer-cdn.tcgplayer.com/product/232453_200w.jpg,3,2545,https://cpt.tcgcsv.com/5_S2,2023-07-12T17:13:47.657,1,SWSH080,Promo,Psychic,70,Basic,"[2P] Mad Party (20x)
+<br>This attack does 20 damage for each Pokemon in your discard pile that has the Mad Party attack.",Mx2,None,1,0.41,0.75,8.0,0.72,,Holofoil,,,,
+232458,Polteageist - SWSH081,Polteageist SWSH081,https://tcgplayer-cdn.tcgplayer.com/product/232458_200w.jpg,3,2545,https://cpt.tcgcsv.com/b_S2,2022-05-28T17:55:57.93,1,SWSH081,Promo,Psychic,60,Stage 1,"[2P] Mad Party (20x)
+<br>This attack does 20 damage for each Pokemon in your discard pile that has the Mad Party attack.",Dx2,F-30,1,0.1,0.49,7.0,0.45,0.25,Holofoil,,"<strong>Ability — Tea Break</strong>
+<br>You must discard a Pokemon that has the Mad Party attack from your hand in order to use this Ability. Once during your turn, you may draw 2 cards.",,
+232461,Bunnelby - SWSH082,Bunnelby SWSH082,https://tcgplayer-cdn.tcgplayer.com/product/232461_200w.jpg,3,2545,https://cpt.tcgcsv.com/f_S2,2024-08-20T18:07:46.08,1,SWSH082,Promo,Colorless,40,Basic,"[2] Mad Party (20x)
+<br>This attack does 20 damage for each Pokemon in your discard pile that has the Mad Party attack.",Dx2,None,1,0.25,0.55,3.0,0.49,0.44,Holofoil,,,,
+232481,Eldegoss V - SWSH084,Eldegoss V SWSH084,https://tcgplayer-cdn.tcgplayer.com/product/232481_200w.jpg,3,2545,https://cpt.tcgcsv.com/F_S2,2025-02-14T07:04:59.043,1,SWSH084,Promo,Grass,180,Basic,"[2] Float Up (50)
+<br>You may shuffle this Pokemon and all attached cards into your deck.",Rx2,None,1,0.39,0.99,10.4,0.65,,Holofoil,,"<strong>Ability — Happy Match</strong>
+<br>When you play this Pokemon from your hand onto your Bench during your turn, you may put a Supporter card from your discard pile into your hand.",,
+232499,Boltund V - SWSH085,Boltund V SWSH085,https://tcgplayer-cdn.tcgplayer.com/product/232499_200w.jpg,3,2545,https://cpt.tcgcsv.com/__S2,2024-04-05T16:08:00.38,1,SWSH085,Promo,Lightning,200,Basic,"[L] Electrify
+<br>Search your deck for up to 2 Lightning Energy cards and attach them to your Benched Pokemon in any way you like. Then, shuffle your deck.",Fx2,None,2,0.35,0.99,8.0,0.76,0.82,Holofoil,"[1L] Bolt Storm (10+)
+<br>This attack does 30 damage for each Lightning Energy attached to all of your Pokemon.",,,
+232503,Cramorant V - SWSH086,Cramorant V SWSH086,https://tcgplayer-cdn.tcgplayer.com/product/232503_200w.jpg,3,2545,https://cpt.tcgcsv.com/50T2,2024-07-07T14:11:09.76,1,SWSH086,Promo,Colorless,200,Basic,"[1] Beak Catch
+<br>Search your deck for up to 2 cards and put them into your hand. Then, shuffle your deck.",Lx2,F-30,1,0.45,0.99,25.79,0.8,0.8,Holofoil,"[3] Spit Shot
+<br>Discard all Energy from this Pokemon. This attack does 160 damage to 1 of your opponent's Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>",,,
+232608,Dragapult VMAX - SWSH097,Dragapult VMAX SWSH097,https://tcgplayer-cdn.tcgplayer.com/product/232608_200w.jpg,3,2545,https://cpt.tcgcsv.com/b3T2,2023-12-11T02:37:04.483,1,SWSH097,Promo,Psychic,320,VMAX,"[P] Shred (60)
+<br>This attack's damage isn't affected by any effects on your opponent's Active Pokemon.",Dx2,F-30,1,1.65,2.93,9999.0,2.81,2.81,Holofoil,"[PP] Max Phantom (130)
+<br>Put 5 damage counters on your opponent's Benched Pokemon in any way you like.",,,
+232610,Dragapult V - SWSH096,Dragapult V SWSH096,https://tcgplayer-cdn.tcgplayer.com/product/232610_200w.jpg,3,2545,https://cpt.tcgcsv.com/d3T2,2021-07-23T21:09:02.213,1,SWSH096,Promo,Psychic,210,Basic,[P] Bite (30),Dx2,F-30,1,1.25,2.0,15.0,1.87,2.48,Holofoil,"[PP] Jet Assault (60+)
+<br>If this Pokemon moved from your Bench to the Active Spot this turn, this attack does 80 more damage.",,,
+232611,Eevee VMAX - SWSH087,Eevee VMAX SWSH087,https://tcgplayer-cdn.tcgplayer.com/product/232611_200w.jpg,3,2545,https://cpt.tcgcsv.com/f3T2,2025-01-05T22:17:20.167,1,SWSH087,Promo,Colorless,300,VMAX,"[3] G-Max Cuddle (150)
+<br>During your opponent's next turn, if the Defending Pokemon tries to attack, your opponent flips a coin. If tails, that attack doesn't happen.",Fx2,None,2,2.5,4.98,100.0,4.02,3.38,Holofoil,,,,
+232612,Crobat V - SWSH098,Crobat V SWSH098,https://tcgplayer-cdn.tcgplayer.com/product/232612_200w.jpg,3,2545,https://cpt.tcgcsv.com/g3T2,2024-08-20T18:07:46.11,1,SWSH098,Promo,Darkness,180,Basic,"[1D] Venomous Fang (70)
+<br>Your opponent's Active Pokemon is now Poisoned.",Fx2,None,1,0.89,1.67,20.0,1.47,1.6,Holofoil,,"<strong>Ability — Dark Asset</strong>
+<br>When you play this Pokemon from your hand onto your Bench during your turn, you may draw cards until you have 6 cards in your hand. You can't use more than 1 Dark Asset Ability each turn.",,
+232613,Crobat VMAX - SWSH099,Crobat VMAX SWSH099,https://tcgplayer-cdn.tcgplayer.com/product/232613_200w.jpg,3,2545,https://cpt.tcgcsv.com/h3T2,2024-10-11T07:42:19.023,1,SWSH099,Promo,Darkness,300,VMAX,"[1D] Stealth Poison (70)
+<br>Your opponent's Active Pokemon is now Poisoned. Switch this Pokemon with 1 of your Bench Pokemon.",Fx2,None,1,1.5,2.5,19.99,2.02,2.48,Holofoil,[1DD] Max Cutter (180),,,
+232723,Venusaur V - SWSH100,Venusaur V SWSH100,https://tcgplayer-cdn.tcgplayer.com/product/232723_200w.jpg,3,2545,https://cpt.tcgcsv.com/t6T2,2021-03-09T13:37:27.053,1,SWSH100,Promo,Grass,220,VMAX,"[1G] Leaf Drain (50)
+<br>Heal 30 damage from this Pokemon.",Rx2,None,3,2.49,3.46,14.97,3.33,4.74,Holofoil,"[1GG] Double-Edge (190)
+<br>This Pokemon also does 30 damage to itself.",,,
+232724,Blastoise V - SWSH101,Blastoise V SWSH101,https://tcgplayer-cdn.tcgplayer.com/product/232724_200w.jpg,3,2545,https://cpt.tcgcsv.com/v6T2,2022-07-14T16:05:38.563,1,SWSH101,Promo,Water,220,VMAX,[W] Water Gun (30),Lx2,None,3,3.87,5.72,79.99,5.59,7.74,Holofoil,"[WWW] Torrential Cannon (200)
+<br>During your next turn, this Pokemon can't use Torrential Cannon.",,,
+234276,Cherrim - SWSH088 (Prerelease),Cherrim SWSH088 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/234276_200w.jpg,3,2545,https://cpt.tcgcsv.com/xKT2,2024-04-08T16:28:20.747,1,SWSH088,Promo,Grass,80,Stage 1,[2G] Seed Bomb (70),Rx2,None,2,5.28,7.99,15.0,8.21,9.99,Holofoil,,"<strong>Ability — Spring Bloom</strong>                                             
+<br>As often as you like during your turn, you may attach a G Energy card from your hand to 1 of your Pokemon that doesn't have a Rule Box <em>(Pokemon V, Pokemon-GX, etc. have Rule Boxes).</em>",,
+234277,Octillery - SWSH089 (Prerelease),Octillery SWSH089 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/234277_200w.jpg,3,2545,https://cpt.tcgcsv.com/zKT2,2024-04-08T15:50:37.883,1,SWSH089,Promo,Water,110,Stage 1,[2W] Waterfall (50),Lx2,None,2,2.99,4.07,9.99,3.86,4.05,Holofoil,,"<strong>Ability — Rapid Strike Search</strong>
+<br>Once during your turn, you may search your deck for a Rapid Strike card, reveal it, and put it into your hand. Then, shuffle your deck. You can't use more than 1 Rapid Strike Search Ability each turn.",,
+234278,Houndoom - SWSH090 (Prerelease),Houndoom SWSH090 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/234278_200w.jpg,3,2545,https://cpt.tcgcsv.com/BKT2,2024-04-08T16:13:47.927,1,SWSH090,Promo,Darkness,130,Stage 1,[1D] Darkness Fang (50),Gx2,None,2,5.17,6.75,12.99,7.25,,Holofoil,,"<strong>Ability — Single Strike Roar</strong>
+<br>Once during your turn, you may search your deck for a Single Strike Energy card and attach it to 1 of your Single Strike Pokemon. Then, shuffle your deck. If you attached Energy to a Pokemon in this way, put 2 damage counters on that Pokemon.",,
+234279,Bronzong - SWSH091 (Prerelease),Bronzong SWSH091 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/234279_200w.jpg,3,2545,https://cpt.tcgcsv.com/CKT2,2024-04-08T16:19:48.05,1,SWSH091,Promo,Metal,110,Stage 1,[1MM] Zen Headbutt (70),Rx2,G-30,3,2.25,3.15,11.0,3.01,2.99,Holofoil,,"<strong>Ability — Metal Transfer</strong>
+<br>As often as you like during your turn, you may move a Metal Energy from 1 of your Pokemon to another of your Pokemon.",,
+234282,Charmander - SWSH092,Charmander SWSH092,https://tcgplayer-cdn.tcgplayer.com/product/234282_200w.jpg,3,2545,https://cpt.tcgcsv.com/GKT2,2023-01-06T06:27:06.057,1,SWSH092,Promo,Fire,70,Basic,"[R] Collect
+<br>Draw a card.",Wx2,None,1,0.68,1.77,10.0,1.76,,Holofoil,[RR] Flare (30),,,
+234283,Arrokuda - SWSH093,Arrokuda SWSH093,https://tcgplayer-cdn.tcgplayer.com/product/234283_200w.jpg,3,2545,https://cpt.tcgcsv.com/HKT2,2021-03-19T04:03:23.62,1,SWSH093,Promo,Water,60,Basic,"[1] Flock
+<br>Search your deck for up to 2 Arrokuda and put them onto your Bench. Then, shuffle your deck.",Lx2,None,1,0.03,0.26,10.0,0.27,,Holofoil,[1W] Peck (20),,,
+234284,Jolteon - SWSH094,Jolteon SWSH094,https://tcgplayer-cdn.tcgplayer.com/product/234284_200w.jpg,3,2545,https://cpt.tcgcsv.com/JKT2,2022-11-25T17:22:49.34,1,SWSH094,Promo,Lightning,100,Stage 1,"[L] Energize
+<br>Attach a L Energy card from your discard pile to this Pokemon.",Fx2,None,0,1.93,3.49,14.99,3.22,,Holofoil,"[1LL] Thunder (160)
+<br>This Pokemon also does 30 damage to itself.",,,
+234287,Eevee - SWSH095,Eevee SWSH095,https://tcgplayer-cdn.tcgplayer.com/product/234287_200w.jpg,3,2545,https://cpt.tcgcsv.com/MKT2,2022-03-31T15:58:00.157,1,SWSH095,Promo,Colorless,60,Basic,"[1] First Step
+<br>Draw a card.",Fx2,None,1,0.81,3.05,19.99,2.76,3.44,Holofoil,[3] Tail Whap (30),,,
+234296,Single Strike Urshifu V - SWSH106,Single Strike Urshifu V SWSH106,https://tcgplayer-cdn.tcgplayer.com/product/234296_200w.jpg,3,2545,https://cpt.tcgcsv.com/XKT2,2023-06-07T07:48:41.877,1,SWSH106,Promo,Fighting,220,VMAX,[F] Low Kick (30),Px2,None,2,0.5,1.0,4.95,0.92,,Holofoil,"[FFFF] Brawny Knuckle (180)
+<br>This attack's damage isn't affected by Resistance.",,,
+234297,Rapid Strike Urshifu V - SWSH107,Rapid Strike Urshifu V SWSH107,https://tcgplayer-cdn.tcgplayer.com/product/234297_200w.jpg,3,2545,https://cpt.tcgcsv.com/ZKT2,2023-10-13T15:07:29.25,1,SWSH107,Promo,Fighting,220,VMAX,[1F] Spiral Kick (40),Px2,None,2,0.6,1.0,4.99,0.9,,Holofoil,"[1FF] Sonic Legs (90)
+<br>This attack also does 20 damage to 2 of your opponent's Benched Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>",,,
+234298,Venusaur VMAX - SWSH102,Venusaur VMAX SWSH102,https://tcgplayer-cdn.tcgplayer.com/product/234298_200w.jpg,3,2545,https://cpt.tcgcsv.com/-KT2,2023-06-26T12:16:47.903,1,SWSH102,Promo,Grass,330,VMAX,"[2] Forest Storm (30x)
+<br>This attack does 30 damage for each G Energy attached to all of your Pokemon.",Fx2,None,4,16.09,26.41,9999.0,24.9,24.9,Holofoil,"[2GG] G-Max Bloom (210)
+<br>Heal 30 damage from this Pokemon.",,,
+234299,Blastoise VMAX - SWSH103,Blastoise VMAX SWSH103,https://tcgplayer-cdn.tcgplayer.com/product/234299_200w.jpg,3,2545,https://cpt.tcgcsv.com/_KT2,2022-06-13T13:59:41.403,1,SWSH103,Promo,Water,330,VMAX,"[WWW] Grand Falls (120)
+<br>Search your deck for up to 3 W Energy cards and attach them to your Benched Pokemon in any way you like. Then, shuffle your deck.",Lx2,None,3,33.95,49.5,9999.0,38.05,39.0,Holofoil,"[WWWW] G-Max Bombard (220)
+<br>This attack also does 30 damage to 2 of your opponent's Benched Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>",,,
+236054,Galarian Rapidash V - SWSH111,Galarian Rapidash V SWSH111,https://tcgplayer-cdn.tcgplayer.com/product/236054_200w.jpg,3,2545,https://cpt.tcgcsv.com/6rV2,2023-02-25T13:13:23.433,1,SWSH111,Promo,Psychic,210,Basic,"[2] Libra Horn
+<br>Put damage counters on 1 of your opponent's Pokemon until its remaining HP is 100.",Dx2,F-30,1,0.99,1.83,9999.0,1.82,2.31,Holofoil,"[PP] Psychic (60+)
+<br>This attack does 30 more damage for each Energy attached to your opponent's Active Pokemon.",,,
+238545,Gardevoir V - SWSH105,Gardevoir V SWSH105,https://tcgplayer-cdn.tcgplayer.com/product/238545_200w.jpg,3,2545,https://cpt.tcgcsv.com/WqW2,2021-05-26T20:21:45.54,1,SWSH105,Promo,Psychic,210,Basic,[P] Magical Shot (30),Mx2,None,2,0.75,1.5,9.9,1.46,2.48,Holofoil,"[1PP] Swelling Pulse (120+)
+<br>If this Pokemon was healed during this turn, this attack does 80 more damage.",,,
+238546,Victini V - SWSH104,Victini V SWSH104,https://tcgplayer-cdn.tcgplayer.com/product/238546_200w.jpg,3,2545,https://cpt.tcgcsv.com/XqW2,2021-05-14T13:58:08.337,1,SWSH104,Promo,Fire,190,Basic,"[1] Spreading Flames
+<br>Attach up to 3 Fire Energy cards from your discard pile to your Pokemon in any way you like.",Wx2,None,2,0.7,1.26,5.62,1.27,,Holofoil,"[RR] Energy Burst (30x)
+<br>This attack does 30 damage for each Energy attached to both Active Pokemon.",,,
+238553,Tyranitar V - SWSH109,Tyranitar V SWSH109,https://tcgplayer-cdn.tcgplayer.com/product/238553_200w.jpg,3,2545,https://cpt.tcgcsv.com/5rW2,2021-09-20T07:31:30.223,1,SWSH109,Promo,Darkness,230,Basic,"[2D] Cragalanche (60)
+<br>Discard the top 2 cards of your opponent's deck.",Gx2,None,3,0.3,0.76,7.0,0.73,,Holofoil,"[2DD] Single Strike Crush (240)
+<br>Discard the top 4 cards of your deck.",,,
+238555,Empoleon V - SWSH108,Empoleon V SWSH108,https://tcgplayer-cdn.tcgplayer.com/product/238555_200w.jpg,3,2545,https://cpt.tcgcsv.com/7rW2,2025-03-04T20:22:14.537,1,SWSH108,Promo,Water,210,Basic,"[2W] Swirling Slice (130)
+<br>Move an Energy from this Pokemon to 1 of your Benched Pokemon.",Lx2,None,2,0.25,0.77,25.78,0.67,2.23,Holofoil,,"<strong>Ability — Emperor's Eyes</strong>                                          
+<br>As long as this Pokemon is in the Active Spot, your opponent's Basic Pokemon in play have no Abilities, except for Pokemon with a Rule Box <em>(Pokemon V, Pokemon-GX, etc. have Rule Boxes).</em>",,
+240891,Cinderace - SWSH112 (Prerelease),Cinderace SWSH112 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/240891_200w.jpg,3,2545,https://cpt.tcgcsv.com/RmX2,2024-04-08T16:29:33.823,1,SWSH112,Promo,Fire,170,Stage 2,"[1R] Fireball Shot (150)
+<br>During your next turn, this Pokemon can't attack.",Wx2,None,1,0.99,1.99,19.99,1.92,2.62,Holofoil,,"<strong>Ability — Crisis Power</strong>
+<br>This Pokemon's attacks do 30 more damage to your opponent's Active Pokemon for each Prize card your opponent has taken <em>(before applying Weakness and Resistance)</em>.",,
+240892,Inteleon - SWSH113 (Prerelease),Inteleon SWSH113 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/240892_200w.jpg,3,2545,https://cpt.tcgcsv.com/SmX2,2024-04-08T16:14:06.683,1,SWSH113,Promo,Water,150,Stage 2,[2] Waterfall (70),Lx2,None,1,1.32,2.04,7.0,1.96,2.37,Holofoil,,"<strong>Ability — Quick Shooting</strong>
+<br>Once during your turn, you may put 2 damage counters on 1 of your opponent's Pokemon.",,
+240893,Cresselia - SWSH114 (Prerelease),Cresselia SWSH114 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/240893_200w.jpg,3,2545,https://cpt.tcgcsv.com/TmX2,2024-04-08T16:32:03.463,1,SWSH114,Promo,Psychic,120,Basic,"[P] Crescent Glare 
+<br>Search your deck for a Psychic Energy card and attach it to 1 of your Pokemon. If you go second and it's your first turn, instead search for up to 3 Psychic Energy cards and attach them to 1 of your Pokemon. Then, shuffle your deck.",Dx2,F-30,1,1.0,2.99,13.05,2.31,4.49,Holofoil,"[PP] Photon Laser (30+)
+<br>If you have at least 5 Energy in play, this attack does 90 more damage.",,,
+240894,Passimian - SWSH115 (Prerelease),Passimian SWSH115 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/240894_200w.jpg,3,2545,https://cpt.tcgcsv.com/VmX2,2024-04-08T15:51:48.63,1,SWSH115,Promo,Fighting,110,Basic,"[F] Fling 
+<br>This attack does 20 damage to 1 of your opponent's Benched Pokemon <em>(Don't apply Weakness and Resistance for Benched Pokemon)</em>.",Px2,None,1,0.5,1.0,24.99,1.0,0.89,Holofoil,,"<strong>Ability — Throwing Coach</strong>
+<br>Your Rapid Strike Pokemon's attacks do 30 more damage to your opponent's Benched Pokemon V and Benched Pokemon-GX <em>(before applying Weakness and Resistance)</em>. You can't apply more than 1 Throwing Coach Ability at a time.",,
+241881,Morpeko - SWSH116,Morpeko SWSH116,https://tcgplayer-cdn.tcgplayer.com/product/241881_200w.jpg,3,2545,https://cpt.tcgcsv.com/FMX2,2021-06-18T04:03:13.16,1,SWSH116,Promo,Lightning,80,Basic,"[1] Famished
+<br>Draw a card.",Fx2,None,1,0.24,0.67,7.0,0.85,,Holofoil,"[1L] Thunder Shock (40)
+<br>Flip a coin. If heads, your opponent's Active Pokemon is now Paralyzed.",,,
+241882,Phanpy - SWSH117,Phanpy SWSH117,https://tcgplayer-cdn.tcgplayer.com/product/241882_200w.jpg,3,2545,https://cpt.tcgcsv.com/GMX2,2024-08-20T18:07:46.14,1,SWSH117,Promo,Fighting,70,Basic,[F] Stampede (10),Gx2,None,2,0.1,0.32,7.0,0.32,,Holofoil,"[1F] Strike Back (30x)
+<br>This attack does 30 damage for each damage counter on this Pokemon.",,,
+241883,Eevee - SWSH118,Eevee SWSH118,https://tcgplayer-cdn.tcgplayer.com/product/241883_200w.jpg,3,2545,https://cpt.tcgcsv.com/HMX2,2022-03-31T15:58:10.45,1,SWSH118,Promo,Colorless,60,Basic,"[1] Signs of Evolution
+<br>Search your deck for a card that evolves from Eevee, reveal it, and put it into your hand. Then, shuffle your deck.",Fx2,None,1,1.48,2.53,79.99,2.66,1.8,Holofoil,"[2] Wild Kick (30)
+<br>Flip a coin. If tails, this attack does nothing.",,,
+241884,Snorlax - SWSH119,Snorlax SWSH119,https://tcgplayer-cdn.tcgplayer.com/product/241884_200w.jpg,3,2545,https://cpt.tcgcsv.com/JMX2,2022-11-21T12:08:29.147,1,SWSH119,Promo,Colorless,140,Basic,[2] Slap Push (30),Fx2,None,4,1.52,2.49,19.99,2.02,2.99,Holofoil,"[3] Single Strike Tackle (120)
+<br>This Pokemon also does 30 damage to itself.",,,
+245867,Shadow Rider Calyrex V - SWSH131,Shadow Rider Calyrex V SWSH131,https://tcgplayer-cdn.tcgplayer.com/product/245867_200w.jpg,3,2545,https://cpt.tcgcsv.com/mm-2,2021-12-05T06:37:34.433,1,SWSH131,Promo,Psychic,210,Basic,"[P] Darkness Cloak
+<br>Attach a P Energy card from your discard pile to this Pokémon.",Dx2,F-30,2,0.58,1.0,10.0,1.0,1.49,Holofoil,"[1PP] Hollow Bind (130)
+<br>During your opponent's next turn, the Defending Pokémon can't retreat.",,,
+245868,Ice Rider Calyrex V - SWSH130,Ice Rider Calyrex V SWSH130,https://tcgplayer-cdn.tcgplayer.com/product/245868_200w.jpg,3,2545,https://cpt.tcgcsv.com/nm-2,2021-11-03T12:16:48.72,1,SWSH130,Promo,Water,210,Basic,"[1W] Blizzard (40)
+<br>This attack also does 10 damage to each of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",Mx2,None,2,0.74,1.0,10.0,0.96,1.16,Holofoil,[1WW] Frost Stamp (140),,,
+245871,Marnie - SWSH120,Marnie SWSH120,https://tcgplayer-cdn.tcgplayer.com/product/245871_200w.jpg,3,2545,https://cpt.tcgcsv.com/rm-2,2023-10-25T17:55:04.71,1,SWSH120,Promo,Supporter,,,,,,,1.0,2.5,15.0,2.36,3.08,Holofoil,,"Each player shuffles their hand and puts it on the bottom of their deck. If either player put any cards on the bottom of their deck in this way, you draw 5 cards, and your opponent draws 4 cards",,
+245872,Marnie - SWSH121,Marnie SWSH121,https://tcgplayer-cdn.tcgplayer.com/product/245872_200w.jpg,3,2545,https://cpt.tcgcsv.com/sm-2,2023-08-11T13:28:08.753,1,SWSH121,Promo,Supporter,,,,,,,24.5,29.06,55.0,26.11,30.99,Holofoil,,"Each player shuffles their hand and puts it on the bottom of their deck. If either player put any cards on the bottom of their deck in this way, you draw 5 cards, and your opponent draws 4 cards",,
+245875,Crobat V - SWSH110,Crobat V SWSH110,https://tcgplayer-cdn.tcgplayer.com/product/245875_200w.jpg,3,2545,https://cpt.tcgcsv.com/wm-2,2022-03-24T16:08:40.427,1,SWSH110,Promo,Darkness,180,Basic,"[1D] Venomous Fang (70)
+<br>Your opponent's Active Pokemon is now Poisoned.",Fx2,None,1,0.55,0.99,7.95,0.8,0.97,Holofoil,,"<strong>Ability — Dark Asset</strong>                                             
+<br>When you play this Pokemon from your hand onto your Bench during your turn, you may draw cards until you have 6 cards in your hand. You can't use more than 1 Dark Asset Ability each turn.",,
+246275,Professor's Research - SWSH178 (with Pokemon Go Code),Professors Research SWSH178 with Pokemon Go Code,https://tcgplayer-cdn.tcgplayer.com/product/246275_200w.jpg,3,2545,https://cpt.tcgcsv.com/ww-2,2023-08-18T13:16:29.203,1,SWSH178,Promo,Supporter,,,,,,,0.29,0.67,9.99,0.61,,Normal,,"Discard your hand and draw 7 cards.
+<br><br>
+<em>This promo was a gift with Pokemon Center purchases and features a Pokemon GO code for Special Research.
+<br><br>
+<span style=""color:Red"">There is no deadline to complete the Special Research, but the codes expired on August 1st, 2023.</span></em>",,
+246927,Galarian Articuno - SWSH123 (Prerelease),Galarian Articuno SWSH123 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/246927_200w.jpg,3,2545,https://cpt.tcgcsv.com/zN-2,2024-04-08T16:10:07.113,1,SWSH123,Promo,Psychic,120,Basic,"[1PP] Psylaser
+<br>Discard all Psychic Energy from this Pokemon. This attack does 120 damage to 1 of your opponent's Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>",Dx2,F-30,2,6.8,8.94,9.99,7.13,8.88,Holofoil,,"<strong>Ability — Cruel Charge</strong>
+<br>When you play this Pokemon from your hand onto your Bench during your turn, you may attach up to 2 Psychic Energy cards from your hand to this Pokemon.",,
+246929,Galarian Moltres - SWSH125 (Prerelease),Galarian Moltres SWSH125 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/246929_200w.jpg,3,2545,https://cpt.tcgcsv.com/CN-2,2024-08-09T19:29:11.75,1,SWSH125,Promo,Darkness,120,Basic,"[1DD] Fiery Wrath (20+)
+<br>This attack does 50 more damage for each Prize card your opponent has taken.",Gx2,,2,8.17,11.38,17.98,9.88,12.48,Holofoil,,"<strong>Ability — Malevolent Charge</strong>
+<br>When you play this Pokemon from your hand onto your Bench during your turn, you may attach up to 2 D Energy cards from your hand to this Pokemon.",,
+246931,Flaaffy - SWSH122 (Prerelease),Flaaffy SWSH122 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/246931_200w.jpg,3,2545,https://cpt.tcgcsv.com/FN-2,2024-04-08T16:08:25.627,1,SWSH122,Promo,Lightning,90,Stage 1,[1LL] Electro Ball (50),Fx2,None,2,3.2,4.15,12.95,3.93,3.99,Holofoil,,"<strong>Ability — Dynamotor</strong>                                          
+<br>Once during your turn, you may attach a L Energy card from your discard pile to 1 of your Benched Pokemon.",,
+246933,Galarian Zapdos - SWSH124 (Prerelease),Galarian Zapdos SWSH124 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/246933_200w.jpg,3,2545,https://cpt.tcgcsv.com/HN-2,2024-04-08T16:11:18.863,1,SWSH124,Promo,Fighting,110,Basic,"[1FF] Zapper Kick (70)
+<br>You may discard all Energy from this Pokemon. If you do, your opponent's Active Pokemon is now Paralyzed.",Px2,None,0,5.01,7.0,24.99,6.92,5.01,Holofoil,,"<strong>Ability — Strong Legs Charge</strong>
+<br>When you play this Pokemon from your hand onto your Bench during your turn, you may attach up to 2 Fighting Energy cards from your hand to this Pokemon.",,
+247290,Galarian Slowpoke - SWSH126,Galarian Slowpoke SWSH126,https://tcgplayer-cdn.tcgplayer.com/product/247290_200w.jpg,3,2545,https://cpt.tcgcsv.com/QW-2,2025-04-25T14:58:59.61,1,SWSH126,Promo,Psychic,70,Basic,"[1] Everyone Laze Around
+<br>Heal 10 damage from each of your Pokemon.",Dx2,F-30,2,4.19,8.22,50.0,7.28,,Holofoil,[3] Tail Whap (30),,,
+247291,Eevee - SWSH127,Eevee SWSH127,https://tcgplayer-cdn.tcgplayer.com/product/247291_200w.jpg,3,2545,https://cpt.tcgcsv.com/RW-2,2023-03-01T17:55:38.833,1,SWSH127,Promo,Colorless,60,Basic,"[1] Be Prepared
+<br>Attach a basic Energy card from your hand to this Pokemon.",Fx2,None,1,1.15,4.46,30.0,3.4,4.42,Holofoil,[3] Bite (30),,,
+247292,Eiscue - SWSH128,Eiscue SWSH128,https://tcgplayer-cdn.tcgplayer.com/product/247292_200w.jpg,3,2545,https://cpt.tcgcsv.com/SW-2,2023-05-23T07:33:37.407,1,SWSH128,Promo,Water,120,Basic,"[W] Ice Bonus
+<br>Discard a Water Energy card from your hand. If you do, draw 3 cards.",Mx2,None,2,0.19,0.4,30.0,0.36,,Holofoil,[1WW] Headbutt Bounce (100),,,
+247294,Umbreon - SWSH129,Umbreon SWSH129,https://tcgplayer-cdn.tcgplayer.com/product/247294_200w.jpg,3,2545,https://cpt.tcgcsv.com/VW-2,2024-08-13T12:39:28.783,1,SWSH129,Promo,Darkness,110,Stage 1,"[D] Blindside
+<br>This attack does 60 damage to 1 of your opponent's Pokemon that has any damage counters on it. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>",Gx2,None,1,6.09,19.25,146.89,14.04,11.79,Holofoil,"[2D] Moon Mirage (80)
+<br>Your opponent's Active Pokemon is now Confused.",,,
+247295,Flareon V - SWSH149,Flareon V SWSH149,https://tcgplayer-cdn.tcgplayer.com/product/247295_200w.jpg,3,2545,https://cpt.tcgcsv.com/WW-2,2024-08-28T19:02:29.74,1,SWSH149,Promo,Fire,210,Basic,"[1] Flaming Breath (20)
+<br>Search your deck for a R Energy card and attach it to this Pokemon. Then, shuffle your deck.",Wx2,,2,2.0,3.38,79.99,2.9,2.89,Holofoil,"[1RR] Scorching Column (120)
+<br>Your opponent's Active Pokemon is now Burned.",,,
+247296,Vaporeon V - SWSH150,Vaporeon V SWSH150,https://tcgplayer-cdn.tcgplayer.com/product/247296_200w.jpg,3,2545,https://cpt.tcgcsv.com/XW-2,2024-08-09T18:59:51.743,1,SWSH150,Promo,Water,210,Basic,"[1] Triple Draw
+<br>Draw 3 cards.",Lx2,,2,2.97,4.97,9999.0,4.79,3.38,Holofoil,"[1WW] Splash Jump (90)
+<br>Switch this Pokemon with 1 of your Benched Pokemon.",,,
+247297,Jolteon V - SWSH151,Jolteon V SWSH151,https://tcgplayer-cdn.tcgplayer.com/product/247297_200w.jpg,3,2545,https://cpt.tcgcsv.com/ZW-2,2023-03-04T22:36:08.267,1,SWSH151,Promo,Lightning,190,Basic,"[1] Thunder Spear
+<br>This attack does 20 damage to 1 of your opponent's Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>",Fx2,None,0,1.9,3.25,9999.0,2.58,2.69,Holofoil,"[1LL] Pin Missile (60x)
+<br>Flip 4 coins. This attack does 60 damage for each heads.",,,
+247298,Dragonite V - SWSH154,Dragonite V SWSH154,https://tcgplayer-cdn.tcgplayer.com/product/247298_200w.jpg,3,2545,https://cpt.tcgcsv.com/-W-2,2021-11-17T05:03:06.673,1,SWSH154,Promo,Dragon,230,Basic,"[2] Shred (50)
+<br>This attack's damage isn't affected by any effects on your opponent's Active Pokemon.",None,None,3,0.49,3.0,15.0,3.3,,Holofoil,"[WWL] Dragon Gale (250)
+<br>This attack also does 20 damage to each of your Benched Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>",,,
+247299,Professor Burnet - SWSH167,Professor Burnet SWSH167,https://tcgplayer-cdn.tcgplayer.com/product/247299_200w.jpg,3,2545,https://cpt.tcgcsv.com/_W-2,2025-05-08T19:03:03.607,1,SWSH167,Promo,Supporter,,,,,,,0.01,0.2,19.99,0.17,0.17,Normal,,"Search your deck for up to 2 cards and discard them. Then, shuffle your deck.",,
+247300,Professor Burnet - SWSH167 (25th Anniversary Stamp),Professor Burnet SWSH167 25th Anniversary Stamp,https://tcgplayer-cdn.tcgplayer.com/product/247300_200w.jpg,3,2545,https://cpt.tcgcsv.com/0X-2,2024-11-10T12:13:26.117,1,SWSH167,Promo,Supporter,,,,,,,0.05,0.3,19.99,0.3,,Normal,,,,
+247364,Zacian V-UNION - SWSH163,Zacian V UNION SWSH163,https://tcgplayer-cdn.tcgplayer.com/product/247364_200w.jpg,3,2545,https://cpt.tcgcsv.com/jZ-2,2021-10-04T20:32:46.563,1,SWSH163,Promo,Metal,320,V-UNION,"[1] Union Gain
+<br>Attach up to 2 M Energy cards from your discard pile to this Pokemon.",Rx2,G-30,2,1.68,2.02,11.9,1.82,1.91,Holofoil,"<em>[1MM] Dance of the Crowned Sword (150)
+<br>During your opponent's next turn, the Defending Pokemon's attacks do 150 less damage (before applying Weakness and Resistance).</em>","How to play a Pokemon V-UNION
+<br>Once per game during your turn, combine 4 different Zacian V-Union from your discard pile and put them onto your Bench.",<em>[1MM] Steel Cut (200)</em>,"<em>[1MMM] Master Blade (340)
+<br>Discard 3 Energy from this Pokemon.</em>"
+247365,Zacian V-UNION - SWSH164,Zacian V UNION SWSH164,https://tcgplayer-cdn.tcgplayer.com/product/247365_200w.jpg,3,2545,https://cpt.tcgcsv.com/kZ-2,2021-10-04T20:33:00.063,1,SWSH164,Promo,Metal,320,V-UNION,"<em>[1] Union Gain
+<br>Attach up to 2 M Energy cards from your discard pile to this Pokemon.</em>",Rx2,G-30,2,1.4,2.22,11.99,2.05,2.49,Holofoil,"[1MM] Dance of the Crowned Sword (150)
+<br>During your opponent's next turn, the Defending Pokemon's attacks do 150 less damage (before applying Weakness and Resistance).","How to play a Pokemon V-UNION
+<br>Once per game during your turn, combine 4 different Zacian V-Union from your discard pile and put them onto your Bench.",<em>[1MM] Steel Cut (200)</em>,"<em>[1MMM] Master Blade (340)
+<br>Discard 3 Energy from this Pokemon.</em>"
+247366,Zacian V-UNION - SWSH165,Zacian V UNION SWSH165,https://tcgplayer-cdn.tcgplayer.com/product/247366_200w.jpg,3,2545,https://cpt.tcgcsv.com/lZ-2,2021-10-04T20:33:09.993,1,SWSH165,Promo,Metal,320,V-UNION,"<em>[1] Union Gain
+<br>Attach up to 2 M Energy cards from your discard pile to this Pokemon.</em>",Rx2,G-30,2,1.39,2.22,11.99,2.11,1.39,Holofoil,"<em>[1MM] Dance of the Crowned Sword (150)
+<br>During your opponent's next turn, the Defending Pokemon's attacks do 150 less damage (before applying Weakness and Resistance).</em>","How to play a Pokemon V-UNION
+<br>Once per game during your turn, combine 4 different Zacian V-Union from your discard pile and put them onto your Bench.",[1MM] Steel Cut (200),"<em>[1MMM] Master Blade (340)
+<br>Discard 3 Energy from this Pokemon.</em>"
+247367,Zacian V-UNION - SWSH166,Zacian V UNION SWSH166,https://tcgplayer-cdn.tcgplayer.com/product/247367_200w.jpg,3,2545,https://cpt.tcgcsv.com/mZ-2,2021-10-04T20:33:22.983,1,SWSH166,Promo,Metal,320,V-UNION,"<em>[1] Union Gain
+<br>Attach up to 2 M Energy cards from your discard pile to this Pokemon.</em>",Rx2,G-30,2,2.22,3.42,42.55,3.21,3.18,Holofoil,"<em>[1MM] Dance of the Crowned Sword (150)
+<br>During your opponent's next turn, the Defending Pokemon's attacks do 150 less damage (before applying Weakness and Resistance).</em>","How to play a Pokemon V-UNION
+<br>Once per game during your turn, combine 4 different Zacian V-Union from your discard pile and put them onto your Bench.",<em>[1MM] Steel Cut (200)</em>,"[1MMM] Master Blade (340)
+<br>Discard 3 Energy from this Pokemon."
+247376,Zacian V-UNION [Set of 4],Zacian V UNION Set of 4,https://tcgplayer-cdn.tcgplayer.com/product/247376_200w.jpg,3,2545,https://cpt.tcgcsv.com/xZ-2,2024-08-22T12:19:48.94,1,,Promo,Metal,320,V-UNION,"[1] Union Gain
+<br>Attach up to 2 M Energy cards from your discard pile to this Pokemon.",Rx2,G-30,2,7.0,11.5,16.82,11.82,,Holofoil,"[1MM] Dance of the Crowned Sword (150)
+<br>During your opponent's next turn, the Defending Pokemon's attacks do 150 less damage (before applying Weakness and Resistance).","How to play a Pokemon V-UNION
+<br>Once per game during your turn, combine 4 different Zacian V-Union from your discard pile and put them onto your Bench.",[1MM] Steel Cut (200),"[1MMM] Master Blade (340)
+<br>Discard 3 Energy from this Pokemon."
+247386,Special Delivery Bidoof,Special Delivery Bidoof,https://tcgplayer-cdn.tcgplayer.com/product/247386_200w.jpg,3,2545,https://cpt.tcgcsv.com/LZ-2,2021-08-25T18:28:11.747,1,SWSH177,Promo,Colorless,70,Basic,"[1] Happy Delivery
+<br>Search you deck for an Item card, reveal it, and put it into your hand. Then, shuffle your deck.",Fx2,,2,499.95,550.0,999.99,337.82,,Holofoil,"[3] Rock Smash (30+)
+<br>Flip a coin. If heads, this attack does 30 more damage.",,,
+248731,Greninja Star,Greninja Star,https://tcgplayer-cdn.tcgplayer.com/product/248731_200w.jpg,3,2545,https://cpt.tcgcsv.com/Fv_2,2025-04-27T10:42:25.01,1,SWSH144,Promo,Darkness,130,Basic,"[2D] Mist Slash (100)
+<br>This attack's damage isn't affected by Weakness or Resistance, of by any effects on your opponent's Active Pokemon.",G,None,1,11.95,21.9,9999.0,18.26,,Holofoil,,"<span style=""color:red"">(This card cannot be used at official tournaments.)</span>
+<br>[Poke-POWER] <span style=""color:red"">Shadow Knife</span>
+<br>When you play this Pokemon from your hand onto your Bench during your turn, you may put 1 damage counter on 1 of your opponent's Pokemon.",,
+248887,Greninja V-UNION - SWSH155,Greninja V UNION SWSH155,https://tcgplayer-cdn.tcgplayer.com/product/248887_200w.jpg,3,2545,https://cpt.tcgcsv.com/Mz_2,2024-08-30T18:05:10.307,1,SWSH155,Promo,Water,300,V-UNION,"[1] Union Gain
+<br>Attach up to 2 W Energy cards from your discard pile to this Pokemon.",Lx2,None,2,1.99,3.18,12.72,3.18,3.85,Holofoil,"<em><strong>Ability - Ninja Body</strong>
+<br>Whenever your opponent plays an Item card from their hand, prevent all effects of that card done to this Pokemon.
+<br>[W] Aqua Edge (130)</em>","How to play a Pokemon V-UNION
+<br>Once per game during your turn, combine 4 different Greninja V-Union from your discard pile and put them onto your Bench.","<em><strong>Ability - Antidote Jutsu</strong>
+<br>This Pokemon can't be Poisoned.
+<br>[1WW] Twister Shuriken
+<br>This attack does 100 damage to each of your opponent's Benched Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>","<em><strong>Ability - Feel the Way</strong>
+<br>Once during your turn, you may have your opponent reveal their hand.
+<br>[1WW] Waterfall Bind (180)
+<br>During your opponent's next turn, the Defending Pokemon can't retreat.</em>"
+248888,Greninja V-UNION - SWSH156,Greninja V UNION SWSH156,https://tcgplayer-cdn.tcgplayer.com/product/248888_200w.jpg,3,2545,https://cpt.tcgcsv.com/Nz_2,2024-08-30T18:05:15.707,1,SWSH156,Promo,Water,300,V-UNION,"<em>[1] Union Gain
+<br>Attach up to 2 W Energy cards from your discard pile to this Pokemon.</em>",Lx2,None,2,2.15,3.43,13.19,3.42,,Holofoil,"<strong>Ability– Ninja Body</strong>
+<br>Whenever your opponent plays an Item card from their hand, prevent all effects of that card done to this Pokemon.
+<br>[W] Aqua Edge (130)","How to play a Pokemon V-UNION
+<br>Once per game during your turn, combine 4 different Greninja V-Union from your discard pile and put them onto your Bench.","<em><strong>Ability - Antidote Jutsu</strong>
+<br>This Pokemon can't be Poisoned.
+<br>[1WW] Twister Shuriken
+<br>This attack does 100 damage to each of your opponent's Benched Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>","<em><strong>Ability - Feel the Way</strong>
+<br>Once during your turn, you may have your opponent reveal their hand.
+<br>[1WW] Waterfall Bind (180)
+<br>During your opponent's next turn, the Defending Pokemon can't retreat.</em>"
+248889,Greninja V-UNION - SWSH157,Greninja V UNION SWSH157,https://tcgplayer-cdn.tcgplayer.com/product/248889_200w.jpg,3,2545,https://cpt.tcgcsv.com/Pz_2,2024-08-30T18:05:20.383,1,SWSH157,Promo,Water,300,V-UNION,"<em>[1] Union Gain
+<br>Attach up to 2 W Energy cards from your discard pile to this Pokemon.</em>",Lx2,None,2,3.0,5.03,6.54,4.94,,Holofoil,"<em><strong>Ability– Ninja Body</strong>
+<br>Whenever your opponent plays an Item card from their hand, prevent all effects of that card done to this Pokemon.
+<br>[W] Aqua Edge (130)</em>","How to play a Pokemon V-UNION
+<br>Once per game during your turn, combine 4 different Greninja V-Union from your discard pile and put them onto your Bench.","<strong>Ability - Antidote Jutsu</strong>
+<br>This Pokemon can't be Poisoned.
+<br>[1WW] Twister Shuriken
+<br>This attack does 100 damage to each of your opponent's Benched Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>","<em><strong>Ability - Feel the Way</strong>
+<br>Once during your turn, you may have your opponent reveal their hand.
+<br>[1WW] Waterfall Bind (180)
+<br>During your opponent's next turn, the Defending Pokemon can't retreat.</em>"
+248890,Greninja V-UNION - SWSH158,Greninja V UNION SWSH158,https://tcgplayer-cdn.tcgplayer.com/product/248890_200w.jpg,3,2545,https://cpt.tcgcsv.com/Qz_2,2024-08-30T18:05:27.067,1,SWSH158,Promo,Water,300,V-UNION,"<em>[1] Union Gain
+<br>Attach up to 2 W Energy cards from your discard pile to this Pokemon.</em>",Lx2,None,2,2.32,3.78,42.58,3.58,42.58,Holofoil,"<em><strong>Ability– Ninja Body</strong>
+<br>Whenever your opponent plays an Item card from their hand, prevent all effects of that card done to this Pokemon.
+<br>[W] Aqua Edge (130)</em>","How to play a Pokemon V-UNION
+<br>Once per game during your turn, combine 4 different Greninja V-Union from your discard pile and put them onto your Bench.","<em><strong>Ability - Antidote Jutsu</strong>
+<br>This Pokemon can't be Poisoned.
+<br>[1WW] Twister Shuriken
+<br>This attack does 100 damage to each of your opponent's Benched Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>","<strong>Ability - Feel the Way</strong>
+<br>Once during your turn, you may have your opponent reveal their hand.
+<br>[1WW] Waterfall Bind (180)
+<br>During your opponent's next turn, the Defending Pokemon can't retreat."
+248891,Mewtwo V-UNION - SWSH159,Mewtwo V UNION SWSH159,https://tcgplayer-cdn.tcgplayer.com/product/248891_200w.jpg,3,2545,https://cpt.tcgcsv.com/Rz_2,2024-08-22T16:06:31.987,1,SWSH159,Promo,Psychic,310,V-UNION,"[1] Union Gain
+<br>Attach up to 2 P Energy cards from your discard pile to this Pokemon.",Dx2,F-30,2,6.27,7.33,10.28,6.84,8.56,Holofoil,"<em>[1PP] Super Regeneration
+<br>Heal 200 damage from this Pokemon</em>","How to play a Pokemon V-UNION
+<br>Once per game during your turn, combine 4 different Greninja V-Union from your discard pile and put them onto your Bench.","<em>[1PP] Psysplosion
+<br>Put 16 damage counters on your opponent's Pokemon in any way you like.</em>","<em><strong>Ability - Photon Barrier</strong>
+<br>Prevent all effects of attacks from your opponent's Pokemon done to this Pokemon.
+<br>[1PPP] Final Burn (300)</em>"
+248892,Mewtwo V-UNION - SWSH160,Mewtwo V UNION SWSH160,https://tcgplayer-cdn.tcgplayer.com/product/248892_200w.jpg,3,2545,https://cpt.tcgcsv.com/Sz_2,2024-08-22T16:06:57.317,1,SWSH160,Promo,Psychic,310,V-UNION,"<em>[1] Union Gain
+<br>Attach up to 2 P Energy cards from your discard pile to this Pokemon.</em>",Dx2,F-30,2,7.0,11.03,12.12,8.75,,Holofoil,"[1PP] Super Regeneration
+<br>Heal 200 damage from this Pokemon.","How to play a Pokemon V-UNION
+<br>Once per game during your turn, combine 4 different Greninja V-Union from your discard pile and put them onto your Bench.","<em>[1PP] Psysplosion
+<br>Put 16 damage counters on your opponent's Pokemon in any way you like.</em>","<em><strong>Ability - Photon Barrier</strong>
+<br>Prevent all effects of attacks from your opponent's Pokemon done to this Pokemon.
+<br>[1PPP] Final Burn (300)</em>"
+248893,Mewtwo V-UNION - SWSH161,Mewtwo V UNION SWSH161,https://tcgplayer-cdn.tcgplayer.com/product/248893_200w.jpg,3,2545,https://cpt.tcgcsv.com/Tz_2,2024-08-22T16:07:38.48,1,SWSH161,Promo,Psychic,310,V-UNION,"<em>[1] Union Gain
+<br>Attach up to 2 P Energy cards from your discard pile to this Pokemon.</em>",Dx2,F-30,2,5.48,7.1,10.99,7.03,7.99,Holofoil,"<em>[1PP] Super Regeneration
+<br>Heal 200 damage from this Pokemon.</em>","How to play a Pokemon V-UNION
+<br>Once per game during your turn, combine 4 different Greninja V-Union from your discard pile and put them onto your Bench.","[1PP] Psysplosion
+<br>Put 16 damage counters on your opponent's Pokemon in any way you like.","<em><strong>Ability - Photon Barrier</strong>
+<br>Prevent all effects of attacks from your opponent's Pokemon done to this Pokemon.
+<br>[1PPP] Final Burn (300)</em>"
+248894,Mewtwo V-UNION - SWSH162,Mewtwo V UNION SWSH162,https://tcgplayer-cdn.tcgplayer.com/product/248894_200w.jpg,3,2545,https://cpt.tcgcsv.com/Vz_2,2024-08-22T16:07:57.53,1,SWSH162,Promo,Psychic,310,V-UNION,"<em>[1] Union Gain
+<br>Attach up to 2 P Energy cards from your discard pile to this Pokemon.</em>",Dx2,F-30,2,7.0,8.49,9999.0,7.53,7.48,Holofoil,"<em>[1PP] Super Regeneration
+<br>Heal 200 damage from this Pokemon.</em>","How to play a Pokemon V-UNION
+<br>Once per game during your turn, combine 4 different Greninja V-Union from your discard pile and put them onto your Bench.","<em>[1PP] Psysplosion
+<br>Put 16 damage counters on your opponent's Pokemon in any way you like.</em>","<strong>Ability - Photon Barrier</strong>
+<br>Prevent all effects of attacks from your opponent's Pokemon done to this Pokemon.
+<br>[1PPP] Final Burn (300)"
+248895,Mewtwo V-UNION [Set of 4],Mewtwo V UNION Set of 4,https://tcgplayer-cdn.tcgplayer.com/product/248895_200w.jpg,3,2545,https://cpt.tcgcsv.com/Wz_2,2025-03-27T04:43:39.02,1,,Promo,Psychic,310,V-UNION,"[1] Union Gain
+<br>Attach up to 2 P Energy cards from your discard pile to this Pokemon.",Dx2,F-30,2,32.0,39.25,1000.0,33.79,,Holofoil,"[1PP] Super Regeneration
+<br>Heal 200 damage from this Pokemon.","How to play a Pokemon V-UNION
+<br>Once per game during your turn, combine 4 different Mewtwo V-Union from your discard pile and put them onto your Bench.","[1PP] Psysplosion
+<br>Put 16 damage counters on your opponent's Pokemon in any way you like.","<strong>Ability - Photon Barrier</strong>
+<br>Prevent all effects of attacks from your opponent's Pokemon done to this Pokemon.
+<br>[1PPP] Final Burn (300)"
+248896,Greninja V-UNION [Set of 4],Greninja V UNION Set of 4,https://tcgplayer-cdn.tcgplayer.com/product/248896_200w.jpg,3,2545,https://cpt.tcgcsv.com/Xz_2,2025-03-27T04:43:28.39,1,,Promo,Water,300,V-UNION,"[1] Union Gain
+<br>Attach up to 2 W Energy cards from your discard pile to this Pokemon.",Lx2,None,2,16.67,20.0,199.99,18.35,,Holofoil,"<strong>Ability– Ninja Body</strong>
+<br>Whenever your opponent plays an Item card from their hand, prevent all effects of that card done to this Pokemon.
+<br>[W] Aqua Edge (130)","How to play a Pokemon V-UNION
+<br>Once per game during your turn, combine 4 different Greninja V-Union from your discard pile and put them onto your Bench.","<strong>Ability - Antidote Jutsu</strong>
+<br>This Pokemon can't be Poisoned.
+<br>[1WW] Twister Shuriken
+<br>This attack does 100 damage to each of your opponent's Benched Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)","<strong>Ability - Feel the Way</strong>
+<br>Once during your turn, you may have your opponent reveal their hand.
+<br>[1WW] Waterfall Bind (180)
+<br>During your opponent's next turn, the Defending Pokemon can't retreat."
+250577,Rayquaza V - SWSH147,Rayquaza V SWSH147,https://tcgplayer-cdn.tcgplayer.com/product/250577_200w.jpg,3,2545,https://cpt.tcgcsv.com/zf03,2024-04-23T08:44:01.243,1,SWSH147,Promo,Dragon,210,Basic,"[L] Dragon Pulse (40)
+<br>Discard the top 2 cards of your deck.",None,None,2,8.24,22.0,9999.0,9.15,8.24,Holofoil,"[RL] Spiral Burst (20+)
+<br>You may discard up to 2 basic Fire Energy or up to 2 Basic Lightning Energy from this Pokemon. This attack does 80 more damage for each card you discarded in this way.",,,
+250578,Noivern V - SWSH148,Noivern V SWSH148,https://tcgplayer-cdn.tcgplayer.com/product/250578_200w.jpg,3,2545,https://cpt.tcgcsv.com/Bf03,2021-10-08T04:03:13.39,1,SWSH148,Promo,Dragon,200,Basic,"[P] Boomburst
+<br>This attack does 20 damage to each of your opponent's Pokemon <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>",None,None,0,1.25,1.88,5.5,1.84,,Holofoil,"[PD] Synchro Loud (60+)
+<br>If you have the same number of cards in your hand as your opponent, this attack does 120 more damage.",,,
+251086,Pikachu VMAX - SWSH062,Pikachu VMAX SWSH062,https://tcgplayer-cdn.tcgplayer.com/product/251086_200w.jpg,3,2545,https://cpt.tcgcsv.com/Lr03,2022-08-25T14:15:54.847,1,SWSH062,Promo,Lightning,310,VMAX,"[LLL] G-Max Volt Tackle (120+)
+<br>You may discard all Energy from this Pokémon. If you do, this attack does 150 more damage.",Fx2,None,2,10.77,23.36,43.99,18.65,22.32,Holofoil,,,,
+251088,Dragapult (Prime) - SWSH132,Dragapult Prime SWSH132,https://tcgplayer-cdn.tcgplayer.com/product/251088_200w.jpg,3,2545,https://cpt.tcgcsv.com/Nr03,2021-10-08T04:03:13.047,1,SWSH132,Promo,Psychic,150,Stage 2,"[P] Mach Turn (60)
+<br>You may switch this Pokemon with 1 of your Benched Pokemon.",Dx2,F-30,0,5.74,9.88,22.99,8.87,11.38,Holofoil,"[1PP] Diving Swipe (150)
+<br>Discard a random card from your opponent's hand.","<span style=""color:red"">(This card cannot be used at official tournaments.)</span>",,
+251089,Lance's Charizard V - SWSH133,Lances Charizard V SWSH133,https://tcgplayer-cdn.tcgplayer.com/product/251089_200w.jpg,3,2545,https://cpt.tcgcsv.com/Pr03,2025-03-24T04:24:33.727,1,SWSH133,Promo,Fire,220,Basic,"[1RR] Flamethrower (200)
+<br>Discard an Energy from this Pokemon.",Wx2,None,3,11.67,19.99,200.0,18.74,18.74,Holofoil,,,,
+251090,Dark Sylveon V - SWSH134,Dark Sylveon V SWSH134,https://tcgplayer-cdn.tcgplayer.com/product/251090_200w.jpg,3,2545,https://cpt.tcgcsv.com/Qr03,2025-03-14T14:45:27.497,1,SWSH134,Promo,Psychic,180,Basic,"[2] Disarming Voice (30)
+<br>You opponent's Active Pokemon is now confused.",Mx2,None,1,21.09,34.16,179.99,21.24,49.99,Holofoil,"[2P] Tricky Ribbon (100)
+<br>Choose a random card from your opponent's hand. Your opponent reveals that card and shuffles it into their deck.",,,
+251091,Zacian LV. X - SWSH135,Zacian LV X SWSH135,https://tcgplayer-cdn.tcgplayer.com/product/251091_200w.jpg,3,2545,https://cpt.tcgcsv.com/Rr03,2022-11-07T10:44:42.723,1,SWSH135,Promo,Metal,160,Level-Up,"[1MM] Brave Blade (240)
+<br>During your next turn, this Pokemon can't attack.",Rx2,G-30,2,1.92,5.17,19.99,4.86,4.86,Holofoil,,"<span style=""color:red"">(This card cannot be used at official tournaments.)</span>
+<br>[Poke-Body] Bladed Armament
+<br>Damage from this Pokemon's attacks isn't affected by any effects on your opponent's Active Pokemon.",,
+251092,Mimikyu (Delta Species) - SWSH136,Mimikyu Delta Species SWSH136,https://tcgplayer-cdn.tcgplayer.com/product/251092_200w.jpg,3,2545,https://cpt.tcgcsv.com/Sr03,2024-05-08T12:11:40.3,1,SWSH136,Promo,Water,70,Basic,"[W] Filch
+<br>Draw 2 cards",L,None,1,9.99,16.24,1000.0,13.15,17.12,Holofoil,"[1W] Wet Claw (40)
+<br>Put an Energy attached to your opponent's Active Pokemon into their hand.","<span style=""color:red"">(This card cannot be used at official tournaments.)</span>",,
+251093,Light Toxtricity - SWSH137,Light Toxtricity SWSH137,https://tcgplayer-cdn.tcgplayer.com/product/251093_200w.jpg,3,2545,https://cpt.tcgcsv.com/Tr03,2023-10-09T03:41:42.937,1,SWSH137,Promo,Lightning,120,Stage 1,"[1] Slow Ballad
+<br>Heal 30 damage from both Active Pokemon.",F,None,2,2.0,9.75,29.99,8.37,,Holofoil,"[1LL] Beatdown Smash (160)
+<br>During your next turn, this Pokemon can't use Beatdown Smash.","<span style=""color:red"">(This card cannot be used at official tournaments.)</span>",,
+251094,Hydreigon C lv.61 - SWSH138,Hydreigon C lv61 SWSH138,https://tcgplayer-cdn.tcgplayer.com/product/251094_200w.jpg,3,2545,https://cpt.tcgcsv.com/Vr03,2024-08-20T18:07:46.283,1,SWSH138,Promo,Darkness,110,Basic,[2] Bite (30),Gx2,None,2,0.35,1.09,21.0,1.02,0.5,Holofoil,"[1DD] Berserker Blade (100)
+<br>This attack also does 20 damage to 2 of your opponent's Benched Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon)</em>","<span style=""color:red"">(This card cannot be used at official tournaments.)</span>",,
+251095,Pikachu V-Union - SWSH139,Pikachu V Union SWSH139,https://tcgplayer-cdn.tcgplayer.com/product/251095_200w.jpg,3,2545,https://cpt.tcgcsv.com/Wr03,2024-08-22T15:50:45.847,1,SWSH139,Promo,Lightning,300,V-Union,"[1] Union Gain
+<br>Attach up to 2 L Energy cards from your discard pile to this Pokemon.",Fx2,None,2,2.42,4.48,9999.0,3.83,4.95,Holofoil,"<em>[1L] Shocking Shock (120)
+<br>Flip a coin. If heads, your opponent's Active Pokemon is now Paralyzed.</em>","How to play a Pokemon V-Union
+<br>Once per game during your turn, combine 4 different Pikachu V-Union from your discard pile and put them onto your Bench.","<em>[1LLL] Disconnect (150)
+<br>During your opponent's next turn, they can't play any Item cards from their hand.</em>",<em>[1LL] Electro Ball Together (250)</em>
+251096,Pikachu V-Union - SWSH140,Pikachu V Union SWSH140,https://tcgplayer-cdn.tcgplayer.com/product/251096_200w.jpg,3,2545,https://cpt.tcgcsv.com/Xr03,2024-08-22T15:53:20.667,1,SWSH140,Promo,Lightning,300,V-Union,"<em>[1] Union Gain
+<br>Attach up to 2 L Energy cards from your discard pile to this Pokemon.</em>",Fx2,None,2,1.7,5.59,9999.0,4.43,7.29,Holofoil,"[1L] Shocking Shock (120)
+<br>Flip a coin. If heads, your opponent's Active Pokemon is now Paralyzed.","How to play a Pokemon V-Union
+<br>Once per game during your turn, combine 4 different Pikachu V-Union from your discard pile and put them onto your Bench.","<em>[1LLL] Disconnect (150)
+<br>During your opponent's next turn, they can't play any Item cards from their hand.</em>",<em>[1LL] Electro Ball Together (250)</em>
+251097,Pikachu V-Union - SWSH141,Pikachu V Union SWSH141,https://tcgplayer-cdn.tcgplayer.com/product/251097_200w.jpg,3,2545,https://cpt.tcgcsv.com/Zr03,2024-08-22T15:53:49.963,1,SWSH141,Promo,Lightning,300,V-Union,"<em>[1] Union Gain
+<br>Attach up to 2 L Energy cards from your discard pile to this Pokemon.</em>",Fx2,None,2,7.16,19.22,79.99,7.57,29.99,Holofoil,"<em>[1L] Shocking Shock (120)
+<br>Flip a coin. If heads, your opponent's Active Pokemon is now Paralyzed.</em>","How to play a Pokemon V-Union
+<br>Once per game during your turn, combine 4 different Pikachu V-Union from your discard pile and put them onto your Bench.","[1LLL] Disconnect (150)
+<br>During your opponent's next turn, they can't play any Item cards from their hand.",<em>[1LL] Electro Ball Together (250)</em>
+251098,Pikachu V-Union - SWSH142,Pikachu V Union SWSH142,https://tcgplayer-cdn.tcgplayer.com/product/251098_200w.jpg,3,2545,https://cpt.tcgcsv.com/-r03,2024-08-22T15:54:33.52,1,SWSH142,Promo,Lightning,300,V-Union,"<em>[1] Union Gain
+<br>Attach up to 2 L Energy cards from your discard pile to this Pokemon.</em>",Fx2,None,2,4.04,6.38,59.99,5.3,7.58,Holofoil,"<em>[1L] Shocking Shock (120)
+<br>Flip a coin. If heads, your opponent's Active Pokemon is now Paralyzed.</em>","How to play a Pokemon V-Union
+<br>Once per game during your turn, combine 4 different Pikachu V-Union from your discard pile and put them onto your Bench.","<em>[1LLL] Disconnect (150)
+<br>During your opponent's next turn, they can't play any Item cards from their hand.</em>",[1LL] Electro Ball Together (250)
+251099,Pikachu V-Union [Set of 4],Pikachu V Union Set of 4,https://tcgplayer-cdn.tcgplayer.com/product/251099_200w.jpg,3,2545,https://cpt.tcgcsv.com/_r03,2024-08-31T19:01:25.013,1,,Promo,Lightning,300,V-Union,"[1] Union Gain
+<br>Attach up to 2 L Energy cards from your discard pile to this Pokemon.",Fx2,None,2,13.47,20.48,500.0,20.35,,Holofoil,"[1L] Shocking Shock (120)
+<br>Flip a coin. If heads, your opponent's Active Pokemon is now Paralyzed.","How to play a Pokemon V-Union
+<br>Once per game during your turn, combine 4 different Pikachu V-Union from your discard pile and put them onto your Bench.","[1LLL] Disconnect (150)
+<br>During your opponent's next turn, they can't play any Item cards from their hand.",[1LL] Electro Ball Together (250)
+251101,Pikachu V - SWSH143,Pikachu V SWSH143,https://tcgplayer-cdn.tcgplayer.com/product/251101_200w.jpg,3,2545,https://cpt.tcgcsv.com/2s03,2024-09-29T09:43:34.06,1,SWSH143,Promo,Lightning,190,Basic,"[1LL] Volt Tackle (210)
+<br>This Pokemon also does 30 damage to itself.",Fx2,None,1,5.24,12.1,9999.0,11.96,13.41,Holofoil,,,,
+251102,Pikachu V - SWSH145,Pikachu V SWSH145,https://tcgplayer-cdn.tcgplayer.com/product/251102_200w.jpg,3,2545,https://cpt.tcgcsv.com/3s03,2022-08-09T14:24:11.077,1,SWSH145,Promo,Lightning,190,Basic,"[1LL] Volt Tackle (210)
+<br>This Pokemon also does 30 damage to itself.",Fx2,None,1,69.4,80.98,9999.0,70.09,84.96,Holofoil,,,,
+251103,Poke Ball - SWSH146,Poke Ball SWSH146,https://tcgplayer-cdn.tcgplayer.com/product/251103_200w.jpg,3,2545,https://cpt.tcgcsv.com/5s03,2022-08-09T14:24:38.73,1,SWSH146,Promo,Lightning,,,,,,,18.88,24.9,9999.0,19.49,24.89,Holofoil,,"Flip a coin. If heads, search your deck for a Pokemon, reveal it, and put it into your hand. Then, shuffle your deck.",,
+253404,Oricorio - SWSH168 (Prerelease),Oricorio SWSH168 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/253404_200w.jpg,3,2545,https://cpt.tcgcsv.com/6n23,2024-04-08T15:51:40.643,1,SWSH168,Promo,Fire,90,Basic,"[1R] Glistening Droplets
+<br>Put 5 damage counters on your opponent's Pokemon in any way you like.",Wx2,None,1,0.37,0.89,9.99,0.73,0.85,Holofoil,,"<strong>Ability — Lesson in Zeal</strong>
+<br>All of your Fusion Strike Pokemon take 20 less damage from attacks from your opponent's Pokemon <em>(after applying Weakness and Resistance).</em> You can't apply more than 1 Leasson of Zeal Ability at a time.",,
+253405,Pyukumuku - SWSH169 (Prerelease),Pyukumuku SWSH169 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/253405_200w.jpg,3,2545,https://cpt.tcgcsv.com/7n23,2025-05-19T18:03:24.687,1,SWSH169,Promo,Water,80,Basic,[2W] Knuckle Punch (50),Lx2,None,1,0.59,0.99,9.99,0.96,,Holofoil,,"<strong>Ability — Pitch a Pyukumuku</strong>
+<br>Once during your turn, if this Pokemon is in your hand, you may reveal it and put it on the bottom of your deck. If you do, draw a card. You can't use more than 1 Pitch a Pyukumuku Ability each turn.",,
+253406,Deoxys - SWSH170 (Prerelease),Deoxys SWSH170 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/253406_200w.jpg,3,2545,https://cpt.tcgcsv.com/8n23,2024-04-08T16:36:18.633,1,SWSH170,Promo,Psychic,120,Basic,"[3] Photon Boost (80+)
+<br>If this Pokemon has any Fusion Strike Energy attached, this attack does 80 more damage.",Dx2,F-30,1,1.39,3.5,25.0,3.29,1.81,Holofoil,,,,
+253407,Latias - SWSH171 (Prerelease),Latias SWSH171 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/253407_200w.jpg,3,2545,https://cpt.tcgcsv.com/9n23,2024-04-08T15:48:49.38,1,SWSH171,Promo,Dragon,120,Basic,"[1RP] Dyna Barrier (70)
+<br>During your opponent's next turn, prevent all damage done to this Pokémon by attacks from Pokémon VMAX.",None,None,1,6.69,9.57,24.99,8.7,8.99,Holofoil,,"<strong>Ability — Red Assist</strong>
+<br>Once during your turn, you may attach a Psychic Energy card from your hand to 1 of your Latios.",,
+253408,Tepig - SWSH172,Tepig SWSH172,https://tcgplayer-cdn.tcgplayer.com/product/253408_200w.jpg,3,2545,https://cpt.tcgcsv.com/bn23,2022-11-01T04:35:05.657,1,SWSH172,Promo,Fire,80,Basic,[2] Ram (20),Wx2,None,2,0.09,0.4,4.0,0.46,,Holofoil,[1RR] Combustion (50),,,
+253409,Blitzle - SWSH173,Blitzle SWSH173,https://tcgplayer-cdn.tcgplayer.com/product/253409_200w.jpg,3,2545,https://cpt.tcgcsv.com/cn23,2021-11-12T05:03:11.043,1,SWSH173,Promo,Lightning,60,Basic,"[L] Thunder Spear
+<br>This attack does 10 damage to 1 of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",Fx2,None,1,0.09,0.3,5.0,0.36,,Holofoil,,,,
+253410,Espeon - SWSH174,Espeon SWSH174,https://tcgplayer-cdn.tcgplayer.com/product/253410_200w.jpg,3,2545,https://cpt.tcgcsv.com/dn23,2021-11-12T19:09:23.237,1,SWSH174,Promo,Psychic,110,Stage 1,"[P] Psy Bolt (20)
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",Dx2,F-30,1,3.99,10.99,50.0,10.21,6.64,Holofoil,"[1P] Psychic (10+)
+<br>This attack does 40 more damage for each Energy attached to your opponent's Active Pokémon.",,,
+253412,Hoopa V - SWSH176,Hoopa V SWSH176,https://tcgplayer-cdn.tcgplayer.com/product/253412_200w.jpg,3,2545,https://cpt.tcgcsv.com/gn23,2024-08-20T18:07:46.523,1,SWSH176,Promo,Darkness,220,Basic,"[1DD] Shadow Impact (170)
+<br>Put 3 damage counters on 1 of your Pokémon.",Gx2,None,2,0.43,0.95,9.0,0.69,0.99,Holofoil,,"<strong>Ability — Two-Faced</strong>
+<br>As long as this Pokémon is in play, it is Psychic and Darkness type.",,
+253413,Eevee - SWSH175,Eevee SWSH175,https://tcgplayer-cdn.tcgplayer.com/product/253413_200w.jpg,3,2545,https://cpt.tcgcsv.com/hn23,2021-11-12T19:09:14.57,1,SWSH175,Promo,Colorless,60,Basic,"[1] Be Prepared
+<br>Attach a basic Energy card from your hand to this Pokémon.",Fx2,None,1,2.49,4.69,8.0,4.48,,Holofoil,[3] Bite (30),,,
+253414,Flareon V - SWSH179,Flareon V SWSH179,https://tcgplayer-cdn.tcgplayer.com/product/253414_200w.jpg,3,2545,https://cpt.tcgcsv.com/jn23,2024-02-08T14:31:55.62,1,SWSH179,Promo,Fire,210,Basic,"[1] Flaming Breath (20)
+<br>Search your deck for a Fire Energy card and attach it to this Pokémon.  Then, shuffle your deck.",Wx2,None,2,68.0,78.15,129.63,71.02,76.49,Holofoil,"[1RR] Scorching Column (120)
+<br>Your opponent's Active Pokémon is now Burned.",,,
+253415,Flareon VMAX - SWSH180,Flareon VMAX SWSH180,https://tcgplayer-cdn.tcgplayer.com/product/253415_200w.jpg,3,2545,https://cpt.tcgcsv.com/kn23,2022-06-13T13:59:51.217,1,SWSH180,Promo,Fire,320,VMAX,"[1RR] Max Detonate (100x)
+<br>Discard the top 5 cards of your deck. This attack does 100 damage for each Energy card you discarded in this way.",Wx2,None,2,45.0,84.99,150.0,72.05,84.99,Holofoil,,,,
+253416,Vaporeon V - SWSH181,Vaporeon V SWSH181,https://tcgplayer-cdn.tcgplayer.com/product/253416_200w.jpg,3,2545,https://cpt.tcgcsv.com/ln23,2021-12-03T05:03:08.31,1,SWSH181,Promo,Water,210,Basic,"[1] Triple Draw
+<br>Draw 3 cards.",Lx2,None,2,68.45,90.46,154.99,84.76,79.43,Holofoil,"[1WW] Splash Jump (90)
+<br>Switch this Pokémon with 1 of your Benched Pokémon.",,,
+253417,Vaporeon VMAX - SWSH182,Vaporeon VMAX SWSH182,https://tcgplayer-cdn.tcgplayer.com/product/253417_200w.jpg,3,2545,https://cpt.tcgcsv.com/mn23,2023-06-19T09:24:27.137,1,SWSH182,Promo,Water,320,VMAX,"[1] Bubble Pod
+<br>Put a Water Pokémon from your discard pile onto your Bench. If you do, attach up to 3 Water Energy cards from your discard pile to that Pokémon.",Lx2,None,2,73.99,112.0,204.99,104.52,98.32,Holofoil,"[2W] Max Torrent (100+)
+<br>If your opponent's Active Pokémon already has any damage counters on it, this attack does 100 more damage.",,,
+253418,Jolteon V - SWSH183,Jolteon V SWSH183,https://tcgplayer-cdn.tcgplayer.com/product/253418_200w.jpg,3,2545,https://cpt.tcgcsv.com/nn23,2024-10-21T21:28:58.377,1,SWSH183,Promo,Lightning,190,Basic,"[1] Thunder Spear 
+<br>This attack does 20 damage to 1 of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",Fx2,None,0,40.0,74.9,131.32,66.98,62.51,Holofoil,"[2L] Pin Missile (60x)
+<br>Flip 4 coins. This attack does 60 damage for each heads.",,,
+253419,Jolteon VMAX - SWSH184,Jolteon VMAX SWSH184,https://tcgplayer-cdn.tcgplayer.com/product/253419_200w.jpg,3,2545,https://cpt.tcgcsv.com/pn23,2022-07-31T11:04:03.19,1,SWSH184,Promo,Lightning,300,VMAX,"[1L] Max Thunder Rumble (100)
+<br>This attack also does 100 damage to 1 of your opponent's Benched Pokémon that has any damage counters on it. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",Fx2,None,0,40.0,79.34,9999.0,71.53,70.0,Holofoil,,,,
+257102,Cramorant - 226/S-P,Cramorant 226 S P,https://tcgplayer-cdn.tcgplayer.com/product/257102_200w.jpg,3,2545,https://cpt.tcgcsv.com/3S33,2024-03-06T13:56:04.7,1,226/S-P,Promo,Water,90,Basic,"[WWW] Triple Jab (60x)
+<br>Flip 3 coins. This attack does 60 damage for each heads.",Lx2,F-20,1,399.99,399.99,399.99,258.87,,Normal,,,,
+257103,Pikachu - 227/S-P,Pikachu 227 S P,https://tcgplayer-cdn.tcgplayer.com/product/257103_200w.jpg,3,2545,https://cpt.tcgcsv.com/5S33,2024-03-06T13:56:45.713,1,227/S-P,Promo,Lightning,60,Basic,"[1] Trading Places
+<br>Switch this Pokemon with 1 of your Benched Pokemon.",Fx2,None,1,1600.0,1600.0,1600.0,1125.39,,Normal,,,,
+260711,Pikachu V - SWSH198,Pikachu V SWSH198,https://tcgplayer-cdn.tcgplayer.com/product/260711_200w.jpg,3,2545,https://cpt.tcgcsv.com/fj63,2025-08-27T22:52:53.707,1,SWSH198,Promo,Lightning,190,Basic,"[1LL] Lightning Blast (100+)
+<br>You may discard all L Energy from this Pokemon. If you do, this attack does 120 more damage,",Fx2,None,1,0.75,1.62,9.0,1.38,2.14,Holofoil,,,,
+262563,Leafeon V - SWSH194,Leafeon V SWSH194,https://tcgplayer-cdn.tcgplayer.com/product/262563_200w.jpg,3,2545,https://cpt.tcgcsv.com/h273,2022-02-02T14:59:42.603,1,SWSH194,Promo,Grass,210,Basic,"[G] Leaf Guard (30)
+<br>During your opponent's next turn, this Pokemon takes 30 less damage from attacks <em>(after applying Weakness and Resistance).</em>",Rx2,,2,0.95,1.9,79.99,1.73,2.29,Holofoil,"[1GG] Slashing Strike (180)
+<br>During your next turn, this Pokemon can't use Slashing Strike.",,,
+262566,Leafeon VSTAR - SWSH195,Leafeon VSTAR SWSH195,https://tcgplayer-cdn.tcgplayer.com/product/262566_200w.jpg,3,2545,https://cpt.tcgcsv.com/l273,2025-01-13T20:55:16.533,1,SWSH195,Promo,Grass,260,VSTAR,"[1GG] Leaf Guard (180)
+<br>During your opponent's next turn, this Pokemon takes 30 less damage from attacks <em>(after applying Weakness and Resistance).</em>",Rx2,,2,1.35,2.0,19.95,1.95,2.52,Holofoil,,"VSTAR Power
+<br><strong>Ability — Ivy Star</strong>                                          
+<br>During your turn, you may switch 1 of your opponent's Benched Pokemon with their Active Pokemon. <em>(You can't use more than 1 <strong>VSTAR</strong> Power in a game.)</em>",,
+262569,Glaceon VSTAR - SWSH197,Glaceon VSTAR SWSH197,https://tcgplayer-cdn.tcgplayer.com/product/262569_200w.jpg,3,2545,https://cpt.tcgcsv.com/p273,2024-08-09T18:55:08.167,1,SWSH197,Promo,Water,260,VSTAR,"[1WW] Icicle Shot (180)
+<br>During your opponent's next turn, the Defending Pokemon can't retreat.",Mx2,,2,1.64,2.39,20.0,2.32,2.17,Holofoil,,"VSTAR Power
+<br>[1WW] Crystal Star (220)                                         
+<br>During your opponent's next turn, prevent all damage from and effects of attacks done to this Pokemon. <em>(You can't use more than 1 <strong>VSTAR</strong> Power in a game.)</em>",,
+262571,Glaceon V - SWSH196,Glaceon V SWSH196,https://tcgplayer-cdn.tcgplayer.com/product/262571_200w.jpg,3,2545,https://cpt.tcgcsv.com/r273,2022-08-29T09:43:05.453,1,SWSH196,Promo,Water,210,Basic,"[W] Frost Charge (30)
+<br>Search your deck for a W Energy card and attach it to this Pokemon. Then, shuffle your deck.",Mx2,,2,0.9,1.84,49.99,1.75,2.49,Holofoil,[1WW] Freezing Wind (130),,,
+264277,Moltres - SWSH185,Moltres SWSH185,https://tcgplayer-cdn.tcgplayer.com/product/264277_200w.jpg,3,2545,https://cpt.tcgcsv.com/zK73,2024-06-10T11:40:33.163,1,SWSH185,Promo,Fire,120,Basic,"[R] Inferno Wings (20+)
+<br>If this Pokemon has any damage counters on it, this attack does 70 more damage. This attack's damage isn't affected by Weakness.",Wx2,None,1,11.0,16.0,25.0,14.68,18.35,Holofoil,,,,
+264278,Lucario - SWSH186,Lucario SWSH186,https://tcgplayer-cdn.tcgplayer.com/product/264278_200w.jpg,3,2545,https://cpt.tcgcsv.com/BK73,2025-01-07T04:31:07.503,1,SWSH186,Promo,Fighting,120,Stage 1,"[FF] Aura Sphere Volley (10+)
+<br>Discard all F Energy from this Pokemon. This attack does 60 more damage for each card discarded in this way.",Px2,None,2,1.2,3.13,24.99,4.25,,Holofoil,,"<strong>Ability — Roaring Resolve</strong>
+<br>Once during your turn, you may put 2 damage counters on this Pokemon. If you do, search your deck for a F Energy and attach it to this Pokemon. Then, shuffle your deck.",,
+264279,Liepard - SWSH187,Liepard SWSH187,https://tcgplayer-cdn.tcgplayer.com/product/264279_200w.jpg,3,2545,https://cpt.tcgcsv.com/CK73,2022-07-01T18:50:50.087,1,SWSH187,Promo,Darkness,100,Stage 1,[2] Slash (60),Gx2,None,1,0.5,0.96,8.0,0.82,0.87,Holofoil,,"<strong>Ability — Trade</strong>
+<br>You must discard a card from your hand in order to use this Ability. Once during your turn, you may draw 2 cards.",,
+264280,Bibarel - SWSH188,Bibarel SWSH188,https://tcgplayer-cdn.tcgplayer.com/product/264280_200w.jpg,3,2545,https://cpt.tcgcsv.com/DK73,2022-02-25T05:03:23.55,1,SWSH188,Promo,Colorless,120,Stage 1,"[3] Tail Smash (100)
+<br>Flip a coin. If tails, this attack does nothing.",Fx2,None,2,0.5,1.24,15.95,0.94,1.0,Holofoil,,"<strong>Ability — Industrious Incisors</strong>
+<br>Once during your turn, you may draw until you have 5 cards in your hand.",,
+264282,Flapple - SWSH189,Flapple SWSH189,https://tcgplayer-cdn.tcgplayer.com/product/264282_200w.jpg,3,2545,https://cpt.tcgcsv.com/GK73,2025-02-06T17:23:41.287,1,SWSH189,Promo,Dragon,80,Stage 1,"[F] Flight Up
+<br>Attach up to 3 basic Energy cards from your discard pile to 1 of your Benched Pokemon.",,,1,0.1,0.29,7.0,0.31,0.21,Holofoil,"[GR] Corrosive Acid (70)
+<br>Your opponent's Active Pokemon is Burned.",,,
+264283,Eevee - SWSH190,Eevee SWSH190,https://tcgplayer-cdn.tcgplayer.com/product/264283_200w.jpg,3,2545,https://cpt.tcgcsv.com/HK73,2022-06-27T11:38:42.03,1,SWSH190,Promo,Colorless,60,Basic,"[1] Be Prepared
+<br>Attach a basic Energy card from your hand to this Pokémon.",Fx2,None,1,0.99,2.67,79.99,2.6,,Holofoil,[3] Bite (30),,,
+264284,Leafeon - SWSH191,Leafeon SWSH191,https://tcgplayer-cdn.tcgplayer.com/product/264284_200w.jpg,3,2545,https://cpt.tcgcsv.com/JK73,2022-03-15T17:47:51.047,1,SWSH191,Promo,Grass,110,Stage 1,"[G] Leaf Guard (30)
+<br>During your opponent's next turn, this Pokemon takes 30 less damage from attacks <em>(after applying Weakness and Resistance)</em>.",Rx2,None,1,1.51,2.89,15.0,2.91,2.9,Holofoil,"[1G] Grass Knot (50+)
+<br>This attack does 30 more damage for each C in your opponent's Active Pokemon's Retreat Cost.",,,
+264285,Glaceon - SWSH192,Glaceon SWSH192,https://tcgplayer-cdn.tcgplayer.com/product/264285_200w.jpg,3,2545,https://cpt.tcgcsv.com/KK73,2022-05-23T11:03:23.263,1,SWSH192,Promo,Water,110,Stage 1,"[W] Hail
+<br>This attack does 20 damage to each of your opponent's Pokemon. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>",Mx2,None,1,2.03,3.85,10.0,3.38,,Holofoil,"[2W] Frosty Typhoon (120)
+<br>During your next turn, this Pokemon can't use Frosty Typhoon.",,,
+266616,Lycanroc V - SWSH199,Lycanroc V SWSH199,https://tcgplayer-cdn.tcgplayer.com/product/266616_200w.jpg,3,2545,https://cpt.tcgcsv.com/lG83,2022-03-18T14:20:57.037,1,SWSH199,Promo,Fighting,200,Basic,[F] Rock Throw (40),Gx2,None,1,0.66,1.0,5.0,0.92,,Holofoil,"[1FF] Crashing Fangs (200)
+<br>During your next turn, this Pokemon can't attack.",,,
+266627,Corviknight V - SWSH200,Corviknight V SWSH200,https://tcgplayer-cdn.tcgplayer.com/product/266627_200w.jpg,3,2545,https://cpt.tcgcsv.com/zG83,2022-03-18T14:20:46.173,1,SWSH200,Promo,Metal,210,Basic,"[M] Clutch (30)
+<br>During your opponent's next turn, the Defending Pokemon can't retreat.",Rx2,G-30,1,0.69,1.0,10.1,1.0,,Holofoil,"[1MM] Sky Hurricane (190)
+<br>During your next turn, this Pokemon can't use Sky Hurricane.",,,
+268304,Lucario VSTAR - SWSH214,Lucario VSTAR SWSH214,https://tcgplayer-cdn.tcgplayer.com/product/268304_200w.jpg,3,2545,https://cpt.tcgcsv.com/6l93,2025-01-25T03:21:44.463,1,SWSH214,Promo,Fighting,270,VSTAR,"[2F] Fighting Knuckle (120+)
+<br>If your opponent's Active Pokémon is a Pokémon V, this attack does 120 more damage.",Px2,None,2,1.0,2.2,99.99,2.02,1.47,Holofoil,"<span style=""color:gold""><strong>VSTAR Power</strong></span> [1F] Aura Star (70x)
+<br>This attack does 70 damage for each Energy attached to all of your opponent's Pokémon. <em>(You can't use more than I VSTAR Power in a game.)</em>",,,
+268306,Lucario V - SWSH213,Lucario V SWSH213,https://tcgplayer-cdn.tcgplayer.com/product/268306_200w.jpg,3,2545,https://cpt.tcgcsv.com/8l93,2022-07-10T09:11:32.85,1,SWSH213,Promo,Fighting,210,Basic,"[2] Crushing Punch (50)
+<br>Discard a Special Energy from your opponent's Active Pokémon.",Px2,None,2,0.96,2.23,19.99,2.06,,Holofoil,[2F] Cyclone Kick (120),,,
+268444,Morpeko V-Union - SWSH215,Morpeko V Union SWSH215,https://tcgplayer-cdn.tcgplayer.com/product/268444_200w.jpg,3,2545,https://cpt.tcgcsv.com/Vn93,2023-04-16T09:00:53.393,1,SWSH215,Promo,Lightning,310,V-Union,"[1] Union Gain
+<br>Attach up to 2 L Energy cards from your discard pile to this Pokemon.",Fx2,None,2,0.1,0.79,3.89,0.71,,Holofoil,"<em>[2] All You Can Eat
+<br>Draw cards until you have 10 cards in your hand.</em>","How to play a Pokemon V-Union
+<br>Once per game during your turn, combine 4 different Pikachu V-Union from your discard pile and put them onto your Bench.","<em>[2L] Burst Wheel (100x)
+<br>Discard all Energy from this Pokemon. This attack does 100 damage for each card you discarded in this way.</em>",<em>[2L] Electric Ball (160)</em>
+268445,Morpeko V-Union - SWSH216,Morpeko V Union SWSH216,https://tcgplayer-cdn.tcgplayer.com/product/268445_200w.jpg,3,2545,https://cpt.tcgcsv.com/Wn93,2022-04-28T13:22:20.833,1,SWSH216,Promo,Lightning,310,V-Union,"<em>[1] Union Gain
+<br>Attach up to 2 L Energy cards from your discard pile to this Pokemon.</em>",Fx2,None,2,0.29,0.74,3.74,0.68,,Holofoil,"[2] All You Can Eat
+<br>Draw cards until you have 10 cards in your hand.","How to play a Pokemon V-Union
+<br>Once per game during your turn, combine 4 different Pikachu V-Union from your discard pile and put them onto your Bench.","<em>[2L] Burst Wheel (100x)
+<br>Discard all Energy from this Pokemon. This attack does 100 damage for each card you discarded in this way.</em>",<em>[2L] Electric Ball (160)</em>
+268446,Morpeko V-Union - SWSH217,Morpeko V Union SWSH217,https://tcgplayer-cdn.tcgplayer.com/product/268446_200w.jpg,3,2545,https://cpt.tcgcsv.com/Xn93,2022-04-28T13:22:40.357,1,SWSH217,Promo,Lightning,310,V-Union,"<em>[1] Union Gain
+<br>Attach up to 2 L Energy cards from your discard pile to this Pokemon.</em>",Fx2,None,2,0.41,0.74,3.77,0.66,,Holofoil,"<em>[2] All You Can Eat
+<br>Draw cards until you have 10 cards in your hand.</em>","How to play a Pokemon V-Union
+<br>Once per game during your turn, combine 4 different Pikachu V-Union from your discard pile and put them onto your Bench.","[2L] Burst Wheel (100x)
+<br>Discard all Energy from this Pokemon. This attack does 100 damage for each card you discarded in this way.",<em>[2L] Electric Ball (160)</em>
+268447,Morpeko V-Union - SWSH218,Morpeko V Union SWSH218,https://tcgplayer-cdn.tcgplayer.com/product/268447_200w.jpg,3,2545,https://cpt.tcgcsv.com/Zn93,2022-04-28T13:22:56.027,1,SWSH218,Promo,Lightning,310,V-Union,"<em>[1] Union Gain
+<br>Attach up to 2 L Energy cards from your discard pile to this Pokemon.</em>",Fx2,None,2,0.37,0.81,3.84,0.78,0.52,Holofoil,"<em>[2] All You Can Eat
+<br>Draw cards until you have 10 cards in your hand.</em>","How to play a Pokemon V-Union
+<br>Once per game during your turn, combine 4 different Pikachu V-Union from your discard pile and put them onto your Bench.","<em>[2L] Burst Wheel (100x)
+<br>Discard all Energy from this Pokemon. This attack does 100 damage for each card you discarded in this way.</em>",[2L] Electric Ball (160)
+268450,Morpeko V-Union [Set of 4],Morpeko V Union Set of 4,https://tcgplayer-cdn.tcgplayer.com/product/268450_200w.jpg,3,2545,https://cpt.tcgcsv.com/0p93,2022-04-28T13:23:14.413,1,SWSH218,Promo,Lightning,310,V-Union,"[1] Union Gain
+<br>Attach up to 2 L Energy cards from your discard pile to this Pokemon.",Fx2,None,2,2.5,4.0,199.99,3.51,,Holofoil,"[2] All You Can Eat
+<br>Draw cards until you have 10 cards in your hand.","How to play a Pokemon V-Union
+<br>Once per game during your turn, combine 4 different Morpeko V-Union from your discard pile and put them onto your Bench.","[2L] Burst Wheel (100x)
+<br>Discard all Energy from this Pokemon. This attack does 100 damage for each card you discarded in this way.",[2L] Electric Ball (160)
+268705,Rowlet - SWSH220,Rowlet SWSH220,https://tcgplayer-cdn.tcgplayer.com/product/268705_200w.jpg,3,2545,https://cpt.tcgcsv.com/7v93,2022-05-27T21:15:47.97,1,SWSH220,Promo,Grass,60,Basic,"[1] Jump On (10+)
+<br>Flip a coin. If heads, This attack does 10 more damage.",Rx2,None,1,0.03,0.28,25.0,0.24,,Holofoil,,,,
+268706,Cyndaquil - SWSH221,Cyndaquil SWSH221,https://tcgplayer-cdn.tcgplayer.com/product/268706_200w.jpg,3,2545,https://cpt.tcgcsv.com/8v93,2022-05-27T21:16:24.617,1,SWSH221,Promo,Fire,60,Basic,"[1] Charge Energy
+<br>Search your deck for up to 2 basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck.",Wx2,None,1,0.05,0.44,7.0,0.45,0.35,Holofoil,[1] Live Coal (10),,,
+268707,Oshawott - SWSH222,Oshawott SWSH222,https://tcgplayer-cdn.tcgplayer.com/product/268707_200w.jpg,3,2545,https://cpt.tcgcsv.com/9v93,2022-04-14T15:19:14.757,1,SWSH222,Promo,Water,70,Basic,[1] Beat (10),Lx2,None,1,0.09,0.35,7.0,0.35,,Holofoil,,,,
+268708,Galarian Obstagoon - SWSH193,Galarian Obstagoon SWSH193,https://tcgplayer-cdn.tcgplayer.com/product/268708_200w.jpg,3,2545,https://cpt.tcgcsv.com/bv93,2022-04-12T15:22:05.333,1,SWSH193,Promo,Darkness,170,Stage 2,"[1DD] Rampaging Kick (180)
+<br>Discard 2 D Energy from this Pokemon",Gx2,None,2,4.49,6.03,15.09,5.74,,Normal,,,,
+268709,Professor's Research - SWSH152,Professors Research SWSH152,https://tcgplayer-cdn.tcgplayer.com/product/268709_200w.jpg,3,2545,https://cpt.tcgcsv.com/cv93,2024-05-08T13:05:07.71,1,SWSH152,Promo,Supporter,,,,,,,1.99,4.0,26.0,3.57,3.49,Holofoil,,Discard your hand and draw 7 cards.,,
+268710,Espeon V - SWSH201,Espeon V SWSH201,https://tcgplayer-cdn.tcgplayer.com/product/268710_200w.jpg,3,2545,https://cpt.tcgcsv.com/dv93,2025-06-08T09:53:36.75,1,SWSH201,Promo,Psychic,200,Basic,"[P] Zen Shot
+<br>This attack does 60 damage to 1 of your opponent's Pokemon V. <em>(Don't apply Weakness and Resistance for Benched Pokemon.)</em>",Dx2,F-30,1,0.98,1.99,9999.0,1.62,,Holofoil,[2P] Super Psy Bolt (120),,,
+268711,Sylveon V - SWSH202,Sylveon V SWSH202,https://tcgplayer-cdn.tcgplayer.com/product/268711_200w.jpg,3,2545,https://cpt.tcgcsv.com/fv93,2023-10-02T16:55:53.317,1,SWSH202,Promo,Psychic,200,Basic,[2] Magical Shot (60),Mx2,None,1,1.0,2.66,39.99,2.26,2.76,Holofoil,,"<strong>Ability — Dream Gift</strong>
+<br>Once during your turn, you may search your deck for an Item card, reveal it, and put it into your hand. Then, shuffle your deck. If you use this Ability, your turn ends.",,
+268712,Umbreon V - SWSH203,Umbreon V SWSH203,https://tcgplayer-cdn.tcgplayer.com/product/268712_200w.jpg,3,2545,https://cpt.tcgcsv.com/gv93,2023-12-11T13:18:27.123,1,SWSH203,Promo,Darkness,200,Basic,"[D] Mean Look (30)
+<br>During your opponent's next turn, the Defending Pokemon can't retreat.",Gx2,None,2,3.13,7.45,9999.0,5.74,5.85,Holofoil,"[2D] Moonlight Blade (80+)
+<br>If this Pokemon has any damage counters on it, this attack does 80 more damage.",,,
+270468,Boltund V - SWSH219,Boltund V SWSH219,https://tcgplayer-cdn.tcgplayer.com/product/270468_200w.jpg,3,2545,https://cpt.tcgcsv.com/ncb3,2022-05-16T20:12:03.04,1,SWSH219,Promo,Lightning,200,Basic,"[L] Smash Turn (30)
+<br>You may switch this Pokémon with 1 of your Benched Pokémon.",Fx2,None,1,0.3,0.89,14.99,0.68,0.86,Holofoil,"[1LL] Electrobullet (120)
+<br>This attack also does 30 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",,,
+270718,Mewtwo V - SWSH223,Mewtwo V SWSH223,https://tcgplayer-cdn.tcgplayer.com/product/270718_200w.jpg,3,2545,https://cpt.tcgcsv.com/njb3,2022-07-01T04:03:10.78,1,SWSH223,Promo,Psychic,220,Basic,[1P] Super Psy Bolt (50),Dx2,F-30,2,3.5,5.54,25.0,5.54,,Holofoil,"[1PP] Transfer Break (160)
+<br>Move an Energy from this Pokémon to 1 of your Benched Pokémon.",,,
+270719,Melmetal V - SWSH224,Melmetal V SWSH224,https://tcgplayer-cdn.tcgplayer.com/product/270719_200w.jpg,3,2545,https://cpt.tcgcsv.com/pjb3,2022-07-01T04:03:10.78,1,SWSH224,Promo,Metal,220,Basic,"[MM] Arm Charge (50)
+<br>You may attach a Metal Energy card from your hand to this Pokémon.",Rx2,G-30,3,0.49,0.99,3.88,0.89,0.99,Holofoil,[MMM] Mega Punch (140),,,
+270720,Spark - SWSH226,Spark SWSH226,https://tcgplayer-cdn.tcgplayer.com/product/270720_200w.jpg,3,2545,https://cpt.tcgcsv.com/qjb3,2023-02-20T15:00:49.86,1,SWSH226,Promo,Supporter,,,,,,,1.45,2.21,29.99,2.08,2.49,Holofoil,,"Draw 2 cards. If you drew any cards in this way, flip a coin. If heads, attach a Lightning Energy card from your discard pile to 1 of your Benched Pokémon.",,
+270721,Blanche - SWSH227,Blanche SWSH227,https://tcgplayer-cdn.tcgplayer.com/product/270721_200w.jpg,3,2545,https://cpt.tcgcsv.com/rjb3,2023-06-21T08:23:51.767,1,SWSH227,Promo,Supporter,,,,,,,1.5,2.28,9999.0,2.21,2.99,Holofoil,,"Draw 2 cards. If you drew any cards in this way, flip a coin. If heads, attach a Water Energy card from your discard pile to 1 of your Benched Pokémon.",,
+270722,Candela - SWSH228,Candela SWSH228,https://tcgplayer-cdn.tcgplayer.com/product/270722_200w.jpg,3,2545,https://cpt.tcgcsv.com/sjb3,2022-10-14T09:46:30.62,1,SWSH228,Promo,Supporter,,,,,,,1.25,2.01,15.0,2.01,2.25,Holofoil,,"Draw 2 cards. If you drew any cards in this way, flip a coin. If heads, attach a Fire Energy card from your discard pile to 1 of your Benched Pokémon.",,
+270723,Alolan Exeggutor V - SWSH225,Alolan Exeggutor V SWSH225,https://tcgplayer-cdn.tcgplayer.com/product/270723_200w.jpg,3,2545,https://cpt.tcgcsv.com/tjb3,2023-04-12T17:40:03.46,1,SWSH225,Promo,Grass,240,Basic,"[G] Growing Tall
+<br>Flip a coin. If heads, search your deck for up to 5 Grass Energy cards and attach them to your Pokémon in any way you like. Then, shuffle your deck.",Rx2,None,3,0.34,0.99,9.99,0.69,,Holofoil,"[3] Head Swing
+<br>This attack does 30 damage to 1 of your opponent's Pokémon for each Grass Energy attached to this Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",,,
+270724,Radiant Eevee - SWSH230,Radiant Eevee SWSH230,https://tcgplayer-cdn.tcgplayer.com/product/270724_200w.jpg,3,2545,https://cpt.tcgcsv.com/vjb3,2022-08-12T16:44:33.2,1,SWSH230,Promo,Colorless,90,Basic,"[1] Twinkle Gathering
+<br>Search your deck for a number of cards up to the number of different types of Pokémon you have in play and put them into your hand. Then, shuffle your deck.",Fx2,None,1,15.49,22.0,1000.0,20.16,21.6,Holofoil,[3] Boost Dash (50),Radiant Pokémon Rule: You can't have more than 1 Radiant Pokémon in your deck.,,
+271837,Arceus V - SWSH204,Arceus V SWSH204,https://tcgplayer-cdn.tcgplayer.com/product/271837_200w.jpg,3,2545,https://cpt.tcgcsv.com/MLb3,2024-08-22T05:00:26.15,1,SWSH204,Promo,Colorless,220,Basic,"[2] Trinity Charge 
+<br>Search your deck for up to 3 basic Energy cards and attach them to your Pokemon V in any way you like. Then, shuffle your deck.",Fx2,None,2,23.62,31.02,179.99,27.94,,Holofoil,[3] Power Edge (130),,,
+273154,Hisuian Basculegion - SWSH205,Hisuian Basculegion SWSH205,https://tcgplayer-cdn.tcgplayer.com/product/273154_200w.jpg,3,2545,https://cpt.tcgcsv.com/6hc3,2022-05-26T12:44:39.207,1,SWSH205,Promo,Water,120,Stage 1,"[W] Grudge Dive (30+)
+<br>If any of your Pokémon were Knocked Out by damage from an attack from your opponent's Pokémon during their last turn, this attack does 90 more damage, and your opponent's Active Pokémon is now Confused.",Lx2,None,2,0.39,0.91,5.0,0.74,,Holofoil,[2W] Jet Headbutt (80),,,
+273155,Wyrdeer - SWSH206,Wyrdeer SWSH206,https://tcgplayer-cdn.tcgplayer.com/product/273155_200w.jpg,3,2545,https://cpt.tcgcsv.com/7hc3,2022-05-26T12:45:58.693,1,SWSH206,Promo,Psychic,140,Stage 1,"[2] Extrasensory (40+)
+<br>If you have the same number of cards in your hand as your opponent, this attack does 80 more damage.",Dx2,F-30,2,0.44,0.86,5.0,0.67,,Holofoil,,"<strong>Ability — Hurried Gait</strong>                                          
+<br>Once during your turn, you may draw a card.",,
+273156,Hisuian Samurott - SWSH207,Hisuian Samurott SWSH207,https://tcgplayer-cdn.tcgplayer.com/product/273156_200w.jpg,3,2545,https://cpt.tcgcsv.com/8hc3,2023-11-11T16:53:21.483,1,SWSH207,Promo,Darkness,170,Stage 2,"[2D] Dark Mastery (60+)
+<br>This attack does 20 more damage for each Energy attached to all of your Pokémon.",Gx2,None,2,0.2,0.89,6.08,0.69,,Holofoil,,"<strong>Ability — Wily Stance</strong>                                          
+<br>You must discard a card from your hand in order to use this Ability. Once during your turn, you may draw 3 cards.",,
+273158,Magnezone - SWSH208,Magnezone SWSH208,https://tcgplayer-cdn.tcgplayer.com/product/273158_200w.jpg,3,2545,https://cpt.tcgcsv.com/bhc3,2023-04-11T19:33:58.167,1,SWSH208,Promo,Metal,150,Stage 2,[2M] Power Beam (120),Rx2,G-30,2,0.18,0.86,9.99,0.58,,Holofoil,,"<strong>Ability — Giga Magnet</strong>
+<br>Once during your turn, you may look at the top 6 cards of your deck and attach any number of Metal Energy cards you find there to your Pokémon in any way you like. Shuffle the other cards back into your deck.",,
+273583,Toxel - SWSH209,Toxel SWSH209,https://tcgplayer-cdn.tcgplayer.com/product/273583_200w.jpg,3,2545,https://cpt.tcgcsv.com/Hrc3,2022-05-30T20:17:35.26,1,SWSH209,Promo,Lightning,60,Basic,"[1] Growl
+<br>During your opponent's next turn, the Defending Pokémon's attacks do 30 less damage <em>(before applying Weakness and Resistance)</em>.",Fx2,None,1,0.05,0.3,7.0,0.3,0.25,Holofoil,[L] Tiny Bolt (10),,,
+273585,Oricorio - SWSH210,Oricorio SWSH210,https://tcgplayer-cdn.tcgplayer.com/product/273585_200w.jpg,3,2545,https://cpt.tcgcsv.com/Krc3,2022-05-30T20:18:48.157,1,SWSH210,Promo,Psychic,90,Basic,"[1] Mixed Call
+<br>Search your deck for a Pokémon and a Supporter card, reveal them, and put them into your hand. Then, shuffle your deck.",Dx2,F-30,1,0.07,0.3,7.0,0.31,0.23,Holofoil,[2P] Razor Wing (80),,,
+273588,Sylveon - SWSH211,Sylveon SWSH211,https://tcgplayer-cdn.tcgplayer.com/product/273588_200w.jpg,3,2545,https://cpt.tcgcsv.com/Nrc3,2022-05-30T20:20:49.097,1,SWSH211,Promo,Psychic,110,Stage 1,"[P] Time Out Kick (30)
+<br>You may put an Energy attached to your opponent's Active Pokémon into their hand.",Mx2,None,1,3.49,4.58,10.0,5.02,4.57,Holofoil,"[2P] Symphony Whip (70+)
+<br>If you played a Supporter card from your hand during this turn, this attack does 70 more damage.",,,
+273590,Eevee - SWSH212,Eevee SWSH212,https://tcgplayer-cdn.tcgplayer.com/product/273590_200w.jpg,3,2545,https://cpt.tcgcsv.com/Qrc3,2022-05-30T20:21:41.703,1,SWSH212,Promo,Colorless,60,Basic,"[1] Be Prepared
+<br>Attach a basic Energy card from your hand to this Pokémon.",Fx2,None,1,1.37,3.29,8.0,3.28,,Holofoil,[3] Bite (30),,,
+273938,Kleavor V (Full Art) - SWSH248,Kleavor V Full Art SWSH248,https://tcgplayer-cdn.tcgplayer.com/product/273938_200w.jpg,3,2545,https://cpt.tcgcsv.com/NBc3,2022-06-15T21:41:13.92,1,SWSH248,Promo,Fighting,210,Basic,[F] Cut (40),Gx2,None,2,0.42,0.99,9.99,0.88,0.99,Holofoil,"[1FF] Axe Slash (150)
+<br>Discard an Energy from this Pokémon. If you do, discard an Energy from your opponent's Active Pokémon.",,,
+273939,Kleavor VSTAR - SWSH249,Kleavor VSTAR SWSH249,https://tcgplayer-cdn.tcgplayer.com/product/273939_200w.jpg,3,2545,https://cpt.tcgcsv.com/PBc3,2022-11-02T12:59:34.127,1,SWSH249,Promo,Fighting,270,VSTAR,"[1F] Axe Break (120)
+<br>This attack also does 60 damage to 1 of your opponent's Benched Pokémon V. (Don't apply Weakness and Resistance for Benched Pokémon.)",Gx2,None,2,0.4,0.98,29.99,0.84,0.99,Holofoil,,"<span style=""color:gold""><strong>VSTAR Power</strong></span> [F] Rampaging Star (30x)
+<br>This attack does 30 damage for each Pokémon in your discard pile. (You can't use more than 1 VSTAR Power in a game.)",,
+275165,Hisuian Samurott V - SWSH239,Hisuian Samurott V SWSH239,https://tcgplayer-cdn.tcgplayer.com/product/275165_200w.jpg,3,2545,https://cpt.tcgcsv.com/k5d3,2023-12-22T15:13:30.157,1,SWSH239,Promo,Darkness,220,Basic,"[D] Basket Crash
+<br>Discard up to 2 Pokémon Tools from your opponent's Pokémon in play.",Gx2,None,2,0.49,0.96,7.0,0.83,,Holofoil,"[DDD] Shadow Slash (180)
+<br>Discard an Energy from this Pokémon.",,,
+275166,Hisuian Decidueye V - SWSH238,Hisuian Decidueye V SWSH238,https://tcgplayer-cdn.tcgplayer.com/product/275166_200w.jpg,3,2545,https://cpt.tcgcsv.com/l5d3,2023-06-30T21:15:54.333,1,SWSH238,Promo,Fighting,220,Basic,"[F] Mountain Hunt
+<br>Search your deck for up to 2 cards and put them into your hand. Then, shuffle your deck.",Px2,None,2,0.47,0.99,25.76,0.76,,Holofoil,"[2F] Close-Quarters Shooting (100)
+<br>This attack's damage isn't affected by any effects on your opponent's Active Pokémon.",,,
+275167,Hisuian Typhlosion V - SWSH237,Hisuian Typhlosion V SWSH237,https://tcgplayer-cdn.tcgplayer.com/product/275167_200w.jpg,3,2545,https://cpt.tcgcsv.com/m5d3,2023-08-04T18:10:57.693,1,SWSH237,Promo,Psychic,210,Basic,"[0] Singe
+<br>Your opponent's Active Pokémon is now Burned.",Dx2,F-30,2,0.5,0.99,6.0,0.93,,Holofoil,"[1PP] Terrifying Flames (120)
+<br>Choose a random card from your opponent's hand. Your opponent reveals that card and shuffles it into their deck.",,,
+275828,Bulbasaur - SWSH231,Bulbasaur SWSH231,https://tcgplayer-cdn.tcgplayer.com/product/275828_200w.jpg,3,2545,https://cpt.tcgcsv.com/Bld3,2022-09-02T04:03:07.71,1,SWSH231,Promo,Grass,70,Basic,[G] Vine Whip (10),Rx2,None,2,3.0,4.6,9.33,4.0,4.99,Holofoil,[1G] Razor Leaf (20),,,
+275829,Charmander - SWSH232,Charmander SWSH232,https://tcgplayer-cdn.tcgplayer.com/product/275829_200w.jpg,3,2545,https://cpt.tcgcsv.com/Cld3,2022-09-02T04:03:07.71,1,SWSH232,Promo,Fire,60,Basic,"[R] Tail on Fire (10)
+<br>Search your deck for a R Energy card and attach it to this Pokémon. Then, shuffle your deck.",Wx2,None,1,9.0,14.63,24.99,10.54,24.99,Holofoil,,,,
+275830,Squirtle - SWSH233,Squirtle SWSH233,https://tcgplayer-cdn.tcgplayer.com/product/275830_200w.jpg,3,2545,https://cpt.tcgcsv.com/Dld3,2022-09-02T04:03:07.71,1,SWSH233,Promo,Water,70,Basic,[W] Water Gun (10),Lx2,None,1,11.51,12.99,14.3,7.61,,Holofoil,,,,
+275843,Dragonite VSTAR - SWSH236,Dragonite VSTAR SWSH236,https://tcgplayer-cdn.tcgplayer.com/product/275843_200w.jpg,3,2545,https://cpt.tcgcsv.com/Tld3,2024-10-04T15:37:24.537,1,SWSH236,Promo,Dragon,280,VSTAR,"[2WL] Gigi Impact (250)
+<br>During your next turn, this Pokemon can't attack.",None,None,2,1.35,3.0,75.0,3.01,3.49,Holofoil,,"<span style=""color:gold""><strong>VSTAR Power</strong></span> 
+<br>[1] Draconic Star
+<br>Look at the top 12 cards of your deck and attach any number of W or L Energy cards you find there to your Pokémon in any way you like. Shuffle the other cards back into your deck. <em>(You can't use more than I VSTAR Power in a game.)</em>",,
+275844,Dragonite V - SWSH235,Dragonite V SWSH235,https://tcgplayer-cdn.tcgplayer.com/product/275844_200w.jpg,3,2545,https://cpt.tcgcsv.com/Vld3,2024-05-22T12:08:32.127,1,SWSH235,Promo,Dragon,230,Basic,"[WL] Hyper Beam (60)
+<br>Discard an Energy from your opponent's Active Pokemon.",None,None,2,3.0,4.99,75.0,4.69,5.86,Holofoil,[1WL] Buster Tail (160),,,
+277039,Pikachu - SWSH234,Pikachu SWSH234,https://tcgplayer-cdn.tcgplayer.com/product/277039_200w.jpg,3,2545,https://cpt.tcgcsv.com/PQd3,2022-09-02T14:58:35.263,1,SWSH234,Promo,Lightning,60,Basic,"[1] Gift Delivery
+<br>Flip a coin. If heads, search your deck for an Item card, reveal it, and put it into your hand. Then, shuffle your deck.",Fx2,None,1,0.99,4.83,20.0,4.61,,Holofoil,[2L] Pika Ball (50),,,
+277040,Mewtwo V - SWSH229,Mewtwo V SWSH229,https://tcgplayer-cdn.tcgplayer.com/product/277040_200w.jpg,3,2545,https://cpt.tcgcsv.com/QQd3,2023-09-25T13:12:07.167,1,SWSH229,Promo,Psychic,220,Basic,[P1] Super Psy Bolt (50),Dx2,F-30,2,5.42,10.9,100.0,9.55,5.42,Holofoil,"[PP1] Transfer Break (160)
+<br>Move an Energy from this Pokémon to 1 of your Benched Pokémon.",,,
+278705,Professor's Research - SWSH178,Professors Research SWSH178,https://tcgplayer-cdn.tcgplayer.com/product/278705_200w.jpg,3,2545,https://cpt.tcgcsv.com/7vf3,2022-11-07T13:27:46.497,1,SWSH178,Promo,Supporter,,,,,,,0.1,0.4,5.0,0.35,,Holofoil,,Discard your hand and draw 7 cards.,,
+279141,Lumineon V - SWSH250,Lumineon V SWSH250,https://tcgplayer-cdn.tcgplayer.com/product/279141_200w.jpg,3,2545,https://cpt.tcgcsv.com/RGf3,2024-10-07T18:20:52.227,1,SWSH250,Promo,Water,170,Basic,"[2W] Aqua Return (120)
+<br>Shuffle this Pokemon and all cards attached into your deck.",Lx2,None,1,0.4,1.0,7.0,0.77,0.75,Holofoil,,"<strong>Ability — Luminous Sign</strong>
+<br>When you play this Pokemon from your hand onto your Bench during your turn, you may search your deck for a Supporter card, reveal it, and put it into your hand. Then, shuffle your deck.",,
+282259,Special Delivery Charizard - SWSH075,Special Delivery Charizard SWSH075,https://tcgplayer-cdn.tcgplayer.com/product/282259_200w.jpg,3,2545,https://cpt.tcgcsv.com/cWg3,2022-08-11T12:40:21.127,1,SWSH075,Promo,Fire,160,Stage 2,"[1] Happy Delivery 
+<br>Search your deck for an Item card, reveal it, and put it into your hand. Then, shuffle your deck.",Wx2,,3,135.0,159.99,500.0,143.07,141.16,Holofoil,"[1RR] Flamethrower (160)
+<br>
+Discard an Energy from this Pokémon.",,,
+283301,Pikachu - SWSH153 (Holiday Calendar),Pikachu SWSH153 Holiday Calendar,https://tcgplayer-cdn.tcgplayer.com/product/283301_200w.jpg,3,2545,https://cpt.tcgcsv.com/2lh3,2022-11-22T13:17:04.833,1,SWSH153,Promo,Electric,60,Basic,"[LL] Thunder Shock (30)
+<br>
+Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",Fx2,,1,23.51,26.67,36.3,25.14,32.49,Holofoil,,,,
+283369,Infernape V - SWSH252,Infernape V SWSH252,https://tcgplayer-cdn.tcgplayer.com/product/283369_200w.jpg,3,2545,https://cpt.tcgcsv.com/pmh3,2022-09-09T04:03:40.297,1,SWSH252,Promo,Fire,200,Basic,"[1] Meteor Punch (30x)
+<br>
+Flip a coin until you get tails. This attack does 30 damage for each heads.",Wx2,,,0.42,0.99,25.99,0.86,,Holofoil,"[1RR] Bright Flame (200)
+<br>
+Discard 2 Energy from this Pokémon.","<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+285251,Machamp - SWSH243 (Prerelease),Machamp SWSH243 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/285251_200w.jpg,3,2545,https://cpt.tcgcsv.com/27j3,2022-09-09T04:03:39.38,1,SWSH243,Promo,Fighting,150,Stage 2,"[FF] Strong-Arm Lariat (100+)
+<br>
+You may do 100 more damage. If you do, during your next turn, this Pokémon can't attack.",Px2,,2,1.0,2.73,7.0,2.29,2.75,Holofoil,,"<strong>Ability — Crisis Muscles</strong>
+<br>
+If your opponent has 3 or fewer Prize cards remaining, this Pokémon gets +150 HP.",,
+285253,Comfey - SWSH242 (Prerelease),Comfey SWSH242 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/285253_200w.jpg,3,2545,https://cpt.tcgcsv.com/57j3,2024-04-19T18:11:00.82,1,SWSH242,Promo,Psychic,70,Basic,[1P] Spinning Attack (30),Mx2,,1,0.4,0.99,19.99,0.76,0.85,Holofoil,,"<strong>Ability — Flower Selecting</strong>
+<br>
+Once during your turn, if this Pokémon is in the Active Spot, you may look at the top 2 cards of your deck and put 1 of them into your hand. Put the other card in the Lost Zone.",,
+285254,Finneon - SWSH240 (Prerelease),Finneon SWSH240 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/285254_200w.jpg,3,2545,https://cpt.tcgcsv.com/67j3,2022-09-09T04:03:39.38,1,SWSH240,Promo,Water,50,Basic,[W] Water Gun (10),Lx2,,1,0.11,0.58,4.99,0.48,0.47,Holofoil,,"<strong>Ability — Oceanic Accompaniment</strong>
+<br>
+As often as you like during your turn, you may attach a Water Energy card from your hand to 1 of your Pokémon that has the Swim Freely attack.",,
+285257,Gengar - SWSH241 (Prerelease),Gengar SWSH241 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/285257_200w.jpg,3,2545,https://cpt.tcgcsv.com/97j3,2022-09-09T04:03:39.38,1,SWSH241,Promo,Psychic,120,Stage 2,"[P] Screaming Circle
+<br>
+Put 2 damage counters on your opponent's Active Pokémon for each of your opponent's Benched Pokémon.",Dx2,F-30,2,16.76,23.23,9999.0,23.16,28.89,Holofoil,,"<strong>Ability — Netherworld Gate</strong>
+<br>
+Once during your turn, if this Pokémon is in your discard pile, you may put it onto your Bench. If you do, put 3 damage counters on this Pokémon.",,
+285258,Regigigas - SWSH247 (Cosmos Holo),Regigigas SWSH247 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/285258_200w.jpg,3,2545,https://cpt.tcgcsv.com/b7j3,2024-02-15T05:59:15.493,1,SWSH247,Promo,Colorless,150,Basic,"[1] Limber Up (20)
+<br>
+Attach a Basic Energy card from your discard pile to this Pokémon.",Fx2,,4,0.25,0.5,10.0,0.45,,Holofoil,"[4] Double Impact (120x)
+<br>
+Flip 2 coins. This attack does 120 damage for each heads.",,,
+285259,Croagunk - SWSH245 (Cosmos Holo),Croagunk SWSH245 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/285259_200w.jpg,3,2545,https://cpt.tcgcsv.com/c7j3,2023-03-24T08:51:07.353,1,SWSH245,Promo,Darkness,60,Basic,[D] Corkscrew Punch (20),Fx2,,1,0.08,0.26,5.0,0.25,,Holofoil,,,,
+285262,Weavile - SWSH246 (Cosmos Holo),Weavile SWSH246 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/285262_200w.jpg,3,2545,https://cpt.tcgcsv.com/g7j3,2022-09-19T20:51:28.01,1,SWSH246,Promo,Darkness,110,Stage 1,"[D] Pursuit Claw
+<br>
+This attack does 20 damage to 1 of your opponent's Benched Pokémon for each damage counter on that Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",Gx2,,1,0.13,0.4,10.0,0.4,,Holofoil,[1DD] Claw Slash (110),,,
+285264,Scorbunny - SWSH244 (Cosmos Holo),Scorbunny SWSH244 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/285264_200w.jpg,3,2545,https://cpt.tcgcsv.com/j7j3,2022-09-19T20:51:17.2,1,SWSH244,Promo,Fire,60,Basic,"[R] Flaring Dash
+<br>
+Flip a coin until you get tails. For each heads, draw a card.",Wx2,,1,0.15,0.44,4.0,0.47,0.33,Holofoil,[2R] Flare (30),,,
+285378,Charizard VMAX - SWSH261,Charizard VMAX SWSH261,https://tcgplayer-cdn.tcgplayer.com/product/285378_200w.jpg,3,2545,https://cpt.tcgcsv.com/B9j3,2024-10-02T14:50:25.09,1,SWSH261,Promo,Fire,330,VMAX,[3] Claw Slash (100),Wx2,,3,41.0,60.0,722.99,49.76,42.99,Holofoil,"[2RRR] G-Max Wildfire (300)
+<br>Discard 2 Energy from this Pokémon.","<em>VMAX rule — When your Pokémon VMAX is Knocked Out, your opponent takes 3 Prize cards.</em>",,
+285384,Charizard V - SWSH260,Charizard V SWSH260,https://tcgplayer-cdn.tcgplayer.com/product/285384_200w.jpg,3,2545,https://cpt.tcgcsv.com/J9j3,2025-01-05T22:18:33.727,1,SWSH260,Promo,Fire,220,Basic,"[1RR] Incinerate (90)
+<br>
+Before doing damage, discard all Pokémon Tools from your opponent's Active Pokémon.",Wx2,,2,35.0,47.0,1000.0,40.84,40.24,Holofoil,[1RRR] Heat Blast (180),"<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+285396,Charizard VSTAR - SWSH262,Charizard VSTAR SWSH262,https://tcgplayer-cdn.tcgplayer.com/product/285396_200w.jpg,3,2545,https://cpt.tcgcsv.com/X9j3,2024-11-11T12:41:26.73,1,SWSH262,Promo,Fire,280,VSTAR,"[1RR] Explosive Fire (130+)
+<br>
+If this Pokémon has any damage counters on it, this attack does 100 more damage.",Wx2,,2,58.1,74.42,259.99,61.55,64.73,Holofoil,,"<span style=""color:gold""><strong>VSTAR Power</strong></span>
+<br>
+[1RRR] Star Blaze (320)
+<br>
+Discard 2 Energy from this Pokémon. <em>(You can't use more than 1 VSTAR Power in a game.)</em>
+<br><br>
+<em>VSTAR rule — When your Pokémon VSTAR is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+449509,Origin Forme Dialga VSTAR,Origin Forme Dialga VSTAR,https://tcgplayer-cdn.tcgplayer.com/product/449509_200w.jpg,3,2545,https://cpt.tcgcsv.com/cQC5,2023-04-06T21:41:37.123,1,SWSH256,Promo,Metal,280,VSTAR,"[1] Metal Blast (40+)
+<br>This attack does 40 more damage for each Metal Energy attached to this Pokémon.",Rx2,G-30,3,1.0,2.13,18.0,1.84,2.42,Holofoil,,"<span style=""color:gold""><strong>VSTAR Power</strong></span> [1MMMM] Star Chronos (220)
+<br>Take another turn after this one. (You can't use more than 1 VSTAR Power in a game.)",,
+449510,Origin Forme Dialga V,Origin Forme Dialga V,https://tcgplayer-cdn.tcgplayer.com/product/449510_200w.jpg,3,2545,https://cpt.tcgcsv.com/dQC5,2022-10-07T04:03:31.737,1,SWSH255,Promo,Metal,220,Basic,"[1] Metal Coating
+<br>
+Attach up to 2 Metal Energy cards from your discard pile to this Pokémon.",Rx2,G-30,2,1.7,3.0,50.0,2.85,2.99,Holofoil,[1MMM] Temporal Rupture (180),"<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+449511,Origin Forme Palkia VSTAR,Origin Forme Palkia VSTAR,https://tcgplayer-cdn.tcgplayer.com/product/449511_200w.jpg,3,2545,https://cpt.tcgcsv.com/fQC5,2025-01-05T22:11:44.803,1,SWSH254,Promo,Water,280,VSTAR,"[WW] Subspace Swell (60+)
+<br>This attack does 20 more damage for each Benched Pokémon <em>(both yours and your opponent's)</em>.",Lx2,,2,0.5,1.68,10.0,1.31,1.7,Holofoil,,"<strong>VSTAR Power</strong>
+<br><strong>Ability — Star Portal</strong>                                          
+<br>During your turn, you may attach up to 3 Water Energy cards from your discard pile to your Water Pokémon in any way you like. <em>(You can't use more than 1 VSTAR Power in a game.)</em>",,
+449512,Origin Forme Palkia V,Origin Forme Palkia V,https://tcgplayer-cdn.tcgplayer.com/product/449512_200w.jpg,3,2545,https://cpt.tcgcsv.com/gQC5,2025-03-21T20:20:05.493,1,SWSH253,Promo,Water,220,Basic,"[W] Rule the Region
+<br>
+Search your deck for a Stadium card, reveal it, and put it into your hand. Then, shuffle your deck.",Lx2,,2,0.99,2.11,9999.0,1.76,2.24,Holofoil,"[1WW] Hydro Break (200)
+<br>
+During your next turn, this Pokémon can't attack.","<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+449515,Virizion V - SWSH295,Virizion V SWSH295,https://tcgplayer-cdn.tcgplayer.com/product/449515_200w.jpg,3,2545,https://cpt.tcgcsv.com/kQC5,2023-04-18T09:36:20.257,1,SWSH295,Promo,Grass,200,Basic,"[1GG] Emerald Blade (200)
+<br>This Pokémon can't attack during your next turn.",Rx2,,1,0.25,0.96,9.95,0.6,0.77,Holofoil,,"<strong>Ability — Verdant Wind</strong>
+<br>
+Each of your Pokémon that has any Grass Energy attached recovers from all Special Conditions and can't be affected by any Special Conditions.
+<br><br><em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+449518,Zeraora V - SWSH263,Zeraora V SWSH263,https://tcgplayer-cdn.tcgplayer.com/product/449518_200w.jpg,3,2545,https://cpt.tcgcsv.com/nQC5,2022-12-15T16:24:10.13,1,SWSH263,Promo,Lightning,210,Basic,[1L] Claw Slash (50),Fx2,,1,0.48,1.0,10.58,0.82,1.07,Holofoil,"[1LL] Thunderous Bolt (190)
+<br>
+During your next turn, this Pokémon can't attack.","<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+449519,Zeraora VMAX - SWSH264,Zeraora VMAX SWSH264,https://tcgplayer-cdn.tcgplayer.com/product/449519_200w.jpg,3,2545,https://cpt.tcgcsv.com/pQC5,2022-12-15T16:24:03.123,1,SWSH264,Promo,Lightning,320,VMAX,"[LL] Reactive Pulse (60x)
+<br>
+This attack does 60 damage for each of your opponent's Pokémon in play that has an Ability.",Fx2,,2,2.0,3.0,9999.0,2.96,,Holofoil,"[1LL] Max Fist (240)
+<br>
+Discard 2 Energy from this Pokémon.","<em>VMAX rule — When your Pokémon VMAX is Knocked Out, your opponent takes 3 Prize cards.</em>",,
+449520,Zeraora VSTAR - SWSH265,Zeraora VSTAR SWSH265,https://tcgplayer-cdn.tcgplayer.com/product/449520_200w.jpg,3,2545,https://cpt.tcgcsv.com/qQC5,2022-12-15T16:23:57.077,1,SWSH265,Promo,Lightning,270,VSTAR,"[1LL] Crushing Beat (190)
+<br>
+You may discard a Stadium in play.",Fx2,,,1.1,2.08,9999.0,1.8,2.43,Holofoil,,"<span style=""color:gold""><strong>VSTAR Power</strong></span>
+<br>
+[1LLL] Lightning Storm Star
+<br>
+Choose 1 of your opponent's Pokémon 4 times. <em>(You can choose the same Pokémon more than once.)</em> For each time you chose a Pokémon, do 60 damage to it. This damage isn't affected by Weakness or Resistance. <em>(You can't use more than 1 VSTAR Power in a game.)</em>
+<br><br>
+<em>VSTAR rule — When your Pokémon VSTAR is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+449521,Deoxys V - SWSH266,Deoxys V SWSH266,https://tcgplayer-cdn.tcgplayer.com/product/449521_200w.jpg,3,2545,https://cpt.tcgcsv.com/rQC5,2022-12-15T16:23:41.787,1,SWSH266,Promo,Psychic,210,Basic,"[1P] Psychic (30+)
+<br>
+This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon.",Dx2,F-30,2,0.99,1.74,79.99,1.62,2.15,Holofoil,[1PP] Power Edge (140),"<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+449522,Deoxys VMAX - SWSH267,Deoxys VMAX SWSH267,https://tcgplayer-cdn.tcgplayer.com/product/449522_200w.jpg,3,2545,https://cpt.tcgcsv.com/sQC5,2022-12-15T16:23:33.373,1,SWSH267,Promo,Psychic,330,VMAX,"[2P] Max Drain (160)
+<br>
+Heal 30 damage from this Pokémon.",Dx2,F-30,3,3.5,4.5,7.99,4.14,,Holofoil,,"<strong>Ability — Protective DNA</strong>
+<br>
+All of your Pokémon take 30 less damage from attacks from your opponent's Pokémon VSTAR <em>(after applying Weakness and Resistance)</em>.
+<br><br>
+<em>VMAX rule — When your Pokémon VMAX is Knocked Out, your opponent takes 3 Prize cards.</em>",,
+449523,Deoxys VSTAR - SWSH268,Deoxys VSTAR SWSH268,https://tcgplayer-cdn.tcgplayer.com/product/449523_200w.jpg,3,2545,https://cpt.tcgcsv.com/tQC5,2022-12-15T16:23:25.757,1,SWSH268,Promo,Psychic,270,VSTAR,"[1PP] Psychic Javelin (190)
+<br>
+This attack also does 60 damage to 1 of your opponent's Benched Pokémon V. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",Dx2,F-30,2,3.44,4.69,9999.0,4.46,4.75,Holofoil,,"<span style=""color:gold""><strong>VSTAR Power</strong></span>
+<br>
+[P] Star Force (60x)
+<br>
+This attack does 60 damage for each Energy attached to both Active Pokémon. <em>(You can't use more than 1 VSTAR Power in a game.)</em>
+<br><br>
+<em>VSTAR rule — When your Pokémon VSTAR is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+449526,Hisuian Zoroark V - SWSH297,Hisuian Zoroark V SWSH297,https://tcgplayer-cdn.tcgplayer.com/product/449526_200w.jpg,3,2545,https://cpt.tcgcsv.com/xQC5,2024-04-23T15:08:16.863,1,SWSH297,Promo,Colorless,210,Basic,"[0] Void Return (30)
+<br>
+You may switch this Pokémon with 1 of your Benched Pokémon.",Fx2,,2,0.75,1.4,999.99,1.16,1.47,Holofoil,"[3] Shadow Cyclone (130)
+<br>
+Move an Energy from this Pokémon to 1 of your Benched Pokémon.","<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+449527,Hisuian Zoroark VSTAR - SWSH298,Hisuian Zoroark VSTAR SWSH298,https://tcgplayer-cdn.tcgplayer.com/product/449527_200w.jpg,3,2545,https://cpt.tcgcsv.com/zQC5,2023-11-01T14:24:51.493,1,SWSH298,Promo,Colorless,270,VSTAR,"[2] Ticking Curse (50x)
+<br>
+This attack does 50 damage for each of your Pokémon that has any damage counters on it.",Fx2,,2,0.25,1.29,20.0,1.21,1.49,Holofoil,,"<span style=""color:gold""><strong>VSTAR Power</strong></span>
+<br>
+<strong>Ability — Phantom Star</strong>
+<br>
+During your turn, you may discard your hand and draw 7 cards. <em>(You can't use more than 1 VSTAR Power in a game.)</em>
+<br><br>
+<em>VSTAR rule — When your Pokémon VSTAR is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+450653,Rotom V - SWSH257,Rotom V SWSH257,https://tcgplayer-cdn.tcgplayer.com/product/450653_200w.jpg,3,2545,https://cpt.tcgcsv.com/5hD5,2024-03-27T14:11:29.433,1,SWSH257,Promo,Lightning,190,Basic,"[1] Lost Hack
+<br>
+Put a Special Energy attached to 1 of your opponent's Pokémon in the Lost Zone.",Fx2,,1,0.31,0.95,10.3,0.55,,Holofoil,"[1LL] Extreme Current (160)
+<br>
+Discard an Energy from this Pokémon.","<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+450656,Gallade V - SWSH258,Gallade V SWSH258,https://tcgplayer-cdn.tcgplayer.com/product/450656_200w.jpg,3,2545,https://cpt.tcgcsv.com/8hD5,2022-10-18T19:14:33.293,1,SWSH258,Promo,Fighting,220,Basic,"[1F] Rising Sword (20+)
+<br>
+This attack does 50 more damage for each Prize card you have taken.",Px2,,2,0.42,0.84,10.38,0.73,,Holofoil,"[1FF] Buster Swing (130)
+<br>
+This attack's damage isn't affected by Resistance.","<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+450657,Giratina V - SWSH259,Giratina V SWSH259,https://tcgplayer-cdn.tcgplayer.com/product/450657_200w.jpg,3,2545,https://cpt.tcgcsv.com/9hD5,2023-07-07T15:08:53.427,1,SWSH259,Promo,Dragon,220,Basic,"[1] Abyss Seeking
+<br>
+Look at the top 4 cards of your deck and put 2 of them into your hand. Put the other cards in the Lost Zone.",,,2,0.99,1.61,89.99,1.41,1.89,Holofoil,"[1GP] Shred (160)
+<br>
+This attack's damage isn't affected by any effects on your opponent's Active Pokémon.","<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+451115,Hisuian Electrode V - SWSH294,Hisuian Electrode V SWSH294,https://tcgplayer-cdn.tcgplayer.com/product/451115_200w.jpg,3,2545,https://cpt.tcgcsv.com/ksD5,2024-11-21T12:51:27.24,1,SWSH294,Promo,Grass,210,Basic,"[0] Tantrum Blast (100x)
+<br>
+This attack does 100 damage for each Special Condition affecting this Pokémon.",Rx2,,1,0.25,1.04,40.0,1.04,1.24,Holofoil,"[1G] Solar Shot (120)
+<br>
+Discard all Energy from this Pokémon.","<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+451844,Sunflora - SWSH269 (Prerelease),Sunflora SWSH269 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/451844_200w.jpg,3,2545,https://cpt.tcgcsv.com/VLD5,2022-10-28T17:17:05.84,1,SWSH269,Promo,Grass,90,Basic,"[2] Bright Beam (10+)
+<br>
+You may discard up to 3 Energy cards from your hand. This attack does 70 more damage for each card you discarded in this way.",Rx2,,2,0.03,0.54,28.89,0.38,0.38,Holofoil,,,,
+451845,Rapidash - SWSH270 (Prerelease),Rapidash SWSH270 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/451845_200w.jpg,3,2545,https://cpt.tcgcsv.com/WLD5,2022-10-28T17:17:01.573,1,SWSH270,Promo,Fire,100,Stage 1,[1R] Fire Mane (60),Wx2,,1,0.21,1.0,6.0,1.1,0.97,Holofoil,,"<strong>Ability — Heat Boost</strong>
+<br>
+Once during your turn, you may discard a Fire Energy card from your hand in order to use this Ability. During this turn, your Pokémon's attacks do 30 more damage to your opponent's Active Pokémon <em>(before applying Weakness and Resistance)</em>.",,
+451846,Kirlia - SWSH271 (Prerelease),Kirlia SWSH271 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/451846_200w.jpg,3,2545,https://cpt.tcgcsv.com/XLD5,2024-12-17T11:56:49.267,1,SWSH271,Promo,Psychic,80,Stage 1,[1P] Slap (30),Mx2,,2,0.5,1.25,8.0,1.19,1.14,Holofoil,,"<strong>Ability — Refinement</strong>
+<br>
+You must discard a card from your hand in order to use this Ability. Once during your turn, you may draw 2 cards.",,
+451847,Archeops - SWSH272 (Prerelease),Archeops SWSH272 Prerelease,https://tcgplayer-cdn.tcgplayer.com/product/451847_200w.jpg,3,2545,https://cpt.tcgcsv.com/ZLD5,2024-09-18T11:51:07.21,1,SWSH272,Promo,Psychic,150,Stage 2,[3] Speed Wing (120),Lx2,F-30,1,0.31,0.99,59.99,1.0,0.85,Holofoil,,"<strong>Ability — Primal Turbo</strong>
+<br>
+Once during your turn, you may search your deck for up to 2 Special Energy cards and attach them to 1 of your Pokémon. Then, shuffle your deck.",,
+451884,Sunflora - SWSH269 (Prerelease) [STAFF],Sunflora SWSH269 Prerelease STAFF,https://tcgplayer-cdn.tcgplayer.com/product/451884_200w.jpg,3,2545,https://cpt.tcgcsv.com/JMD5,2022-11-30T17:37:29.083,1,SWSH269,Promo,Grass,90,Basic,"[2] Bright Beam (10+)
+<br>
+You may discard up to 3 Energy cards from your hand. This attack does 70 more damage for each card you discarded in this way.",Rx2,,2,54.99,57.35,89.51,8.92,,Holofoil,,,,
+451885,Rapidash - SWSH270 (Prerelease) [STAFF],Rapidash SWSH270 Prerelease STAFF,https://tcgplayer-cdn.tcgplayer.com/product/451885_200w.jpg,3,2545,https://cpt.tcgcsv.com/KMD5,2022-11-30T17:37:35.7,1,SWSH270,Promo,Fire,100,Stage 1,[1R] Fire Mane (60),Wx2,,1,31.01,34.0,50.0,18.05,46.58,Holofoil,,"<strong>Ability — Heat Boost</strong>
+<br>
+Once during your turn, you may discard a Fire Energy card from your hand in order to use this Ability. During this turn, your Pokémon's attacks do 30 more damage to your opponent's Active Pokémon <em>(before applying Weakness and Resistance)</em>.",,
+451886,Kirlia - SWSH271 (Prerelease) [STAFF],Kirlia SWSH271 Prerelease STAFF,https://tcgplayer-cdn.tcgplayer.com/product/451886_200w.jpg,3,2545,https://cpt.tcgcsv.com/LMD5,2022-11-30T17:37:42.727,1,SWSH271,Promo,Psychic,80,Stage 1,[1P] Slap (30),Mx2,,2,26.31,32.43,55.0,23.97,,Holofoil,,"<strong>Ability — Refinement</strong>
+<br>
+You must discard a card from your hand in order to use this Ability. Once during your turn, you may draw 2 cards.",,
+451887,Archeops - SWSH272 (Prerelease) [STAFF],Archeops SWSH272 Prerelease STAFF,https://tcgplayer-cdn.tcgplayer.com/product/451887_200w.jpg,3,2545,https://cpt.tcgcsv.com/MMD5,2024-01-26T06:01:17.61,1,SWSH272,Promo,Psychic,150,Stage 2,[3] Speed Wing (120),Lx2,F-30,1,15.0,21.16,99.98,20.8,,Holofoil,,"<strong>Ability — Primal Turbo</strong>
+<br>
+Once during your turn, you may search your deck for up to 2 Special Energy cards and attach them to 1 of your Pokémon. Then, shuffle your deck.",,
+453483,Regieleki V - SWSH280,Regieleki V SWSH280,https://tcgplayer-cdn.tcgplayer.com/product/453483_200w.jpg,3,2545,https://cpt.tcgcsv.com/HpF5,2023-01-20T14:25:15.467,1,SWSH280,Promo,Lightning,200,Basic,[L] Switching Bolt (30),Fx2,,1,0.21,0.65,5.0,0.54,,Holofoil,"[2L] Lightning Wall (100)
+<br>
+During your opponent's next turn, this Pokémon takes 100 less damage from attacks <em>(after applying Weakness and Resistance)</em>.","<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+453485,Regidrago V - SWSH281,Regidrago V SWSH281,https://tcgplayer-cdn.tcgplayer.com/product/453485_200w.jpg,3,2545,https://cpt.tcgcsv.com/KpF5,2023-05-17T12:41:47.143,1,SWSH281,Promo,Dragon,220,Basic,"[1] Celestial Roar
+<br>
+Discard the top 3 cards of your deck. If any of those cards are Energy cards, attach them to this Pokémon.",,,3,0.33,0.99,10.0,0.73,0.99,Holofoil,"[GGR] Dragon Laser (130)
+<br>
+This attack also does 30 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+454225,Togetic - SWSH276,Togetic SWSH276,https://tcgplayer-cdn.tcgplayer.com/product/454225_200w.jpg,3,2545,https://cpt.tcgcsv.com/wJF5,2022-12-15T16:20:39.697,1,SWSH276,Promo,Psychic,80,Stage 1,[1P] Fairy Wind (30),Mx2,,1,0.12,0.84,7.0,0.83,,Holofoil,,"<strong>Ability — Voice of Happiness</strong>
+<br>
+When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may heal 30 damage from your Active Pokémon.",,
+454226,Manaphy - SWSH275,Manaphy SWSH275,https://tcgplayer-cdn.tcgplayer.com/product/454226_200w.jpg,3,2545,https://cpt.tcgcsv.com/xJF5,2022-12-15T16:20:32.27,1,SWSH275,Promo,Water,70,Basic,"[W] Pulling Currents
+<br>
+Your opponent reveals their hand. Put up to 2 Basic Pokémon you find there onto your opponent's Bench.",Lx2,,1,0.25,0.57,7.0,0.57,0.69,Holofoil,"[1W] Aqua Bullet (40)
+<br>
+This attack also does 20 damage to 1 of your opponent's Benched Pokémon. </em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",,,
+454227,Cranidos - SWSH274,Cranidos SWSH274,https://tcgplayer-cdn.tcgplayer.com/product/454227_200w.jpg,3,2545,https://cpt.tcgcsv.com/zJF5,2023-01-12T14:43:43.307,1,SWSH274,Promo,Fighting,90,Stage 1,[F] Ram (20),Gx2,,2,0.04,0.25,7.0,0.23,0.2,Holofoil,"[FF] Stone Edge (40+)
+<br>
+Flip a coin. If heads, this attack does 40 more damage.",,,
+454228,Hisuian Basculin - SWSH273,Hisuian Basculin SWSH273,https://tcgplayer-cdn.tcgplayer.com/product/454228_200w.jpg,3,2545,https://cpt.tcgcsv.com/BJF5,2022-12-15T16:20:16.113,1,SWSH273,Promo,Water,50,Basic,"[1] Submerge Silently
+<br>
+You can use this attack only if you go second, and only during your first turn. During your opponent's next turn, prevent all damage done to this Pokémon by attacks.",Lx2,,1,0.04,0.25,7.0,0.2,0.13,Holofoil,[2] Bite (20),,,
+475621,Rillaboom - SWSH277,Rillaboom SWSH277,https://tcgplayer-cdn.tcgplayer.com/product/475621_200w.jpg,3,2545,https://cpt.tcgcsv.com/rgQ5,2025-03-15T10:06:30.727,1,SWSH277,Promo,Grass,180,Stage 2,"[1G] Wood Drain (60)
+<br>
+Heal 30 damage from this Pokémon.",Rx2,,3,0.16,0.49,1.95,0.44,0.33,Holofoil,"[1GG] Raging Repeated Strike (120+)
+<br>
+Discard any amount of Energy from your Pokémon. This attack does 30 more damage for each card you discarded in this way.",,,
+475622,Cinderace - SWSH278,Cinderace SWSH278,https://tcgplayer-cdn.tcgplayer.com/product/475622_200w.jpg,3,2545,https://cpt.tcgcsv.com/sgQ5,2023-04-14T04:03:08.263,1,SWSH278,Promo,Fire,170,Stage 2,"[1R] Fireball Shot (150)
+<br>
+During your next turn, this Pokémon can't attack.",Wx2,,1,0.24,0.47,1.95,0.46,0.47,Holofoil,,"<strong>Ability — Crisis Power</strong>
+<br>
+This Pokémon's attacks do 30 more damage to your opponent's Active Pokémon for each Prize card your opponent has taken <em>(before applying Weakness and Resistance)</em>.",,
+475623,Inteleon - SWSH279,Inteleon SWSH279,https://tcgplayer-cdn.tcgplayer.com/product/475623_200w.jpg,3,2545,https://cpt.tcgcsv.com/tgQ5,2023-04-14T04:03:08.263,1,SWSH279,Promo,Water,150,Stage 2,[2] Waterfall (70),Lx2,,1,0.15,0.45,1.95,0.4,,Holofoil,,"<strong>Ability — Quick Shooting</strong>
+<br>
+Once during your turn, you may put 2 damage counters on 1 of your opponent's Pokémon.",,
+475642,Lucario VSTAR - SWSH291,Lucario VSTAR SWSH291,https://tcgplayer-cdn.tcgplayer.com/product/475642_200w.jpg,3,2545,https://cpt.tcgcsv.com/SgQ5,2024-11-26T11:53:39.503,1,SWSH291,Promo,Fighting,270,VSTAR,"[2F] Fighting Knuckle (120+)
+<br>If your opponent's Active Pokémon is a Pokémon V, this attack does 120 more damage.",Px2,,2,9.46,16.5,100.0,14.94,11.71,Holofoil,"<span style=""color:gold""><strong>VSTAR Power</strong></span>
+<br>
+[1F] Aura Star (70x)
+<br>
+This attack does 70 damage for each Energy attached to all of your opponent's Pokémon. <em>(You can't use more than 1 VSTAR Power in a game.)</em>","<em>VSTAR rule — When your Pokémon VSTAR is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+477063,Zacian V (Shiny) - SWSH292,Zacian V Shiny SWSH292,https://tcgplayer-cdn.tcgplayer.com/product/477063_200w.jpg,3,2545,https://cpt.tcgcsv.com/hRQ5,2023-08-20T02:42:00.923,1,SWSH292,Promo,Metal,220,Basic,"[MMM] Brave Blade (230)
+<br>During your next turn, this Pokemon can't attack.",Rx2,G-30,2,3.26,4.48,30.0,4.41,4.12,Holofoil,,"<strong>Ability — Intrepid Sword</strong>
+<br>Once during your turn, you may look at the top 3 cards of your deck and attach any number of Metal Energy cards you find there to this Pokemon. Put the other cards into your hand. If you use this Ability, your turn ends.
+<br><br>
+<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+477064,Zamazenta V (Shiny) - SWSH293,Zamazenta V Shiny SWSH293,https://tcgplayer-cdn.tcgplayer.com/product/477064_200w.jpg,3,2545,https://cpt.tcgcsv.com/jRQ5,2024-10-31T10:00:51.203,1,SWSH293,Promo,Metal,230,Basic,"[1MM] Assault Tackle (130)
+<br>
+Discard a Special Energy from your opponent's Active Pokémon.",Rx2,G-30,2,1.85,2.75,9999.0,2.56,2.95,Holofoil,,"<strong>Ability — Dauntless Shield</strong>
+<br>
+Prevent all damage done to this Pokémon by attacks from your opponent's Pokémon VMAX.
+<br><br>
+<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+477065,Morpeko V-Union - SWSH287,Morpeko V Union SWSH287,https://tcgplayer-cdn.tcgplayer.com/product/477065_200w.jpg,3,2545,https://cpt.tcgcsv.com/kRQ5,2023-04-14T04:03:08.593,1,SWSH287,Promo,Lightning,310,V-UNION,"[1] Union Gain
+<br>Attach up to 2 Lightning Energy cards from your discard pile to this Pokémon.",Fx2,,2,0.28,0.75,4.99,0.73,,Holofoil,"[2] All You Can Eat
+<br>
+Draw cards until you have 10 cards in your hand.","<em>How to play a Pokemon V-Union</em>
+<br>Once per game during your turn, combine 4 different Pikachu V-Union from your discard pile and put them onto your Bench.
+<br><br>
+<em>V-UNION rule</em> — When your Pokémon V-UNION is Knocked Out, your opponent takes 3 Prize cards.","[2L] Burst Wheel (100x)
+<br>
+Discard all Energy from this Pokémon. This attack does 100 damage for each card you discarded in this way.",[2L] Electric Ball (160)
+477066,Morpeko V-Union - SWSH288,Morpeko V Union SWSH288,https://tcgplayer-cdn.tcgplayer.com/product/477066_200w.jpg,3,2545,https://cpt.tcgcsv.com/lRQ5,2023-04-14T04:03:08.593,1,SWSH288,Promo,Lightning,310,V-UNION,"[1] Union Gain
+<br>Attach up to 2 Lightning Energy cards from your discard pile to this Pokémon.",Fx2,,2,0.5,0.95,9.95,0.92,,Holofoil,"[2] All You Can Eat
+<br>
+Draw cards until you have 10 cards in your hand.","<em>How to play a Pokemon V-Union</em>
+<br>Once per game during your turn, combine 4 different Pikachu V-Union from your discard pile and put them onto your Bench.
+<br><br>
+<em>V-UNION rule</em> — When your Pokémon V-UNION is Knocked Out, your opponent takes 3 Prize cards.","[2L] Burst Wheel (100x)
+<br>
+Discard all Energy from this Pokémon. This attack does 100 damage for each card you discarded in this way.",[2L] Electric Ball (160)
+477067,Morpeko V-Union - SWSH289,Morpeko V Union SWSH289,https://tcgplayer-cdn.tcgplayer.com/product/477067_200w.jpg,3,2545,https://cpt.tcgcsv.com/mRQ5,2023-04-14T04:03:08.593,1,SWSH289,Promo,Lightning,310,V-UNION,"[1] Union Gain
+<br>Attach up to 2 Lightning Energy cards from your discard pile to this Pokémon.",Fx2,,2,0.31,0.78,4.99,0.77,,Holofoil,"[2] All You Can Eat
+<br>
+Draw cards until you have 10 cards in your hand.","<em>How to play a Pokemon V-Union</em>
+<br>Once per game during your turn, combine 4 different Pikachu V-Union from your discard pile and put them onto your Bench.
+<br><br>
+<em>V-UNION rule</em> — When your Pokémon V-UNION is Knocked Out, your opponent takes 3 Prize cards.","[2L] Burst Wheel (100x)
+<br>
+Discard all Energy from this Pokémon. This attack does 100 damage for each card you discarded in this way.",[2L] Electric Ball (160)
+477068,Morpeko V-Union - SWSH290,Morpeko V Union SWSH290,https://tcgplayer-cdn.tcgplayer.com/product/477068_200w.jpg,3,2545,https://cpt.tcgcsv.com/nRQ5,2023-04-14T04:03:08.593,1,SWSH290,Promo,Lightning,310,V-UNION,"[1] Union Gain
+<br>Attach up to 2 Lightning Energy cards from your discard pile to this Pokémon.",Fx2,,2,0.34,0.86,4.99,0.82,,Holofoil,"[2] All You Can Eat
+<br>
+Draw cards until you have 10 cards in your hand.","<em>How to play a Pokemon V-Union</em>
+<br>Once per game during your turn, combine 4 different Pikachu V-Union from your discard pile and put them onto your Bench.
+<br><br>
+<em>V-UNION rule</em> — When your Pokémon V-UNION is Knocked Out, your opponent takes 3 Prize cards.","[2L] Burst Wheel (100x)
+<br>
+Discard all Energy from this Pokémon. This attack does 100 damage for each card you discarded in this way.",[2L] Electric Ball (160)
+478423,Pikachu V - SWSH285,Pikachu V SWSH285,https://tcgplayer-cdn.tcgplayer.com/product/478423_200w.jpg,3,2545,https://cpt.tcgcsv.com/tnR5,2023-02-17T05:03:11.747,1,SWSH285,Promo,Lightning,200,Basic,"[1LL] Pika Drive (200)
+<br>During your next turn, this Pokémon can't attack.",Fx2,None,1,1.08,2.26,9.99,2.13,2.76,Holofoil,,"<em>V rule — When your Pokémon V is Knocked Out, your opponent  takes 2 Prize cards.</em>",,
+478424,Pikachu VMAX - SWSH286,Pikachu VMAX SWSH286,https://tcgplayer-cdn.tcgplayer.com/product/478424_200w.jpg,3,2545,https://cpt.tcgcsv.com/vnR5,2025-04-03T11:27:09,1,SWSH286,Promo,Lightning,310,VMAX,"[L] Tail Charge (30)
+<br>Attach up to 3 Lightning Energy cards from your discard pile to 1 of your Pokémon.",Fx2,None,2,3.99,5.99,25.0,5.4,5.39,Holofoil,[1LLL] G-Max Thunder (250),"<em>VMAX rule — When your Pokémon VMAX is Knocked Out, your opponent  takes 2 Prize cards.</em>",,
+485843,Bulbasaur (Illustration Contest 2022),Bulbasaur Illustration Contest 2022,https://tcgplayer-cdn.tcgplayer.com/product/485843_200w.jpg,3,2545,https://cpt.tcgcsv.com/TlV5,2023-03-27T15:45:41.58,1,SWSH303,Promo,Grass,70,Basic,"[G] Shake and Gather
+<br>
+Flip a coin until you get tails. For each heads, draw a card.",Rx2,,2,25.43,67.49,139.99,35.68,65.99,Normal,,,,
+485844,Arcanine (Illustration Contest 2022),Arcanine Illustration Contest 2022,https://tcgplayer-cdn.tcgplayer.com/product/485844_200w.jpg,3,2545,https://cpt.tcgcsv.com/VlV5,2023-03-27T15:45:28.59,1,SWSH304,Promo,Fire,130,Stage 1,"[1RR] Sun-Drenched Tackle (160)
+<br>
+During your next turn, this Pokémon can't attack.",Wx2,,3,19.59,35.0,54.5,23.32,,Normal,,,,
+485845,Greninja (Illustration Contest 2022),Greninja Illustration Contest 2022,https://tcgplayer-cdn.tcgplayer.com/product/485845_200w.jpg,3,2545,https://cpt.tcgcsv.com/WlV5,2025-02-19T18:17:05.597,1,SWSH305,Promo,Water,140,Stage 2,"[2W] Coordinated Shuriken (120)
+<br>
+This attack also does 10 damage to 3 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",Lx2,,1,27.64,44.59,99.0,40.66,44.73,Normal,,,,
+488271,Galarian Articuno - SWSH282,Galarian Articuno SWSH282,https://tcgplayer-cdn.tcgplayer.com/product/488271_200w.jpg,3,2545,https://cpt.tcgcsv.com/rkW5,2025-08-11T13:59:02.467,1,SWSH282,Promo,Psychic,120,Basic,"[1PP] Psylaser
+<br>Discard all Psychic Energy from this Pokémon. This attack does 120 damage to 1 of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",Dx2,F-30,2,2.6,5.8,50.0,5.18,4.26,Holofoil,,"<strong>Ability — Cruel Charge</strong>
+<br>
+When you play this Pokémon from your hand onto your Bench during your turn, you may attach up to 2 Psychic Energy cards from your hand to this Pokémon.",,
+488274,Galarian Zapdos - SWSH283,Galarian Zapdos SWSH283,https://tcgplayer-cdn.tcgplayer.com/product/488274_200w.jpg,3,2545,https://cpt.tcgcsv.com/vkW5,2023-03-20T13:27:06.867,1,SWSH283,Promo,Fighting,110,Basic,"[1FF] Zapper Kick (70)
+<br>You may discard all Energy from this Pokémon. If you do, your opponent's Active Pokémon is now Paralyzed.",Px2,,,1.73,4.13,40.0,3.49,3.79,Holofoil,,"<strong>Ability — Strong Legs Charge</strong>
+<br>When you play this Pokémon from your hand onto your Bench during your turn, you may attach up to 2 Fighting Energy cards from your hand to this Pokémon.",,
+488275,Galarian Moltres - SWSH284,Galarian Moltres SWSH284,https://tcgplayer-cdn.tcgplayer.com/product/488275_200w.jpg,3,2545,https://cpt.tcgcsv.com/wkW5,2023-03-20T13:28:11.537,1,SWSH284,Promo,Darkness,120,Basic,"[1DD] Fiery Wrath (20+)
+<br>This attack does 50 more damage for each Prize card your opponent has taken.",Gx2,,2,13.97,20.79,100.0,19.93,15.0,Holofoil,,"<strong>Ability — Malevolent Charge</strong>
+<br>When you play this Pokémon from your hand onto your Bench during your turn, you may attach up to 2 Darkness Energy cards from your hand to this Pokémon.",,
+489390,Cyndaquil - SWSH221 (Cosmos Holo),Cyndaquil SWSH221 Cosmos Holo,https://tcgplayer-cdn.tcgplayer.com/product/489390_200w.jpg,3,2545,https://cpt.tcgcsv.com/QMW5,2023-03-22T14:10:19.613,1,SWSH221,Promo,Fire,60,Basic,"[1] Charge Energy
+<br>Search your deck for up to 2 basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck.",Wx2,None,1,0.2,0.5,1.74,0.59,,Holofoil,[1] Live Coal (10),,,
+489692,Klara (Full Art),Klara Full Art,https://tcgplayer-cdn.tcgplayer.com/product/489692_200w.jpg,3,2545,https://cpt.tcgcsv.com/STW5,2024-10-16T20:30:30.083,1,SWSH302,Ultra Rare,Supporter,,,,,,,1.91,3.11,21.0,2.86,2.7,Holofoil,,"Choose 1 or both:
+<br>• Put up to 2 Pokemon from your discard pile into your hand.
+<br>•  Put up to 2 basic Energy cards from your discard pile into your hand.",,
+489944,Boss's Orders (Full Art),Bosss Orders Full Art,https://tcgplayer-cdn.tcgplayer.com/product/489944_200w.jpg,3,2545,https://cpt.tcgcsv.com/V-W5,2023-03-27T13:39:55.513,1,SWSH251,Promo,Supporter,,,,,,,7.29,10.0,19.99,8.77,9.1,Holofoil,,"Switch 1 of your opponent's Benched Pokémon with their Active Pokémon.
+<br><br>
+You may play only 1 Supporter card during your turn.",,
+495215,Morpeko V-Union (SWSH287-290) (Set of 4),Morpeko V Union SWSH287 290 Set of 4,https://tcgplayer-cdn.tcgplayer.com/product/495215_200w.jpg,3,2545,https://cpt.tcgcsv.com/k6-5,2025-05-16T14:17:20.493,0,SWSH290,Promo,Lightning,310,V-UNION,"[1] Union Gain
+<br>Attach up to 2 Lightning Energy cards from your discard pile to this Pokémon.",Fx2,,2,0.01,1.92,25.0,1.95,1.45,Holofoil,"[2] All You Can Eat
+<br>
+Draw cards until you have 10 cards in your hand.","<em>How to play a Pokemon V-Union</em>
+<br>Once per game during your turn, combine 4 different Pikachu V-Union from your discard pile and put them onto your Bench.
+<br><br>
+<em>V-UNION rule</em> — When your Pokémon V-UNION is Knocked Out, your opponent takes 3 Prize cards.","[2L] Burst Wheel (100x)
+<br>
+Discard all Energy from this Pokémon. This attack does 100 damage for each card you discarded in this way.",[2L] Electric Ball (160)
+499984,Arceus VSTAR - SWSH307,Arceus VSTAR SWSH307,https://tcgplayer-cdn.tcgplayer.com/product/499984_200w.jpg,3,2545,https://cpt.tcgcsv.com/J__5,2024-03-20T11:53:40.697,1,SWSH307,Promo,Colorless,280,VSTAR,"[3] Trinity Nova (200)
+<br>Search your deck for up to 3 basic Energy cards and attach them to your Pokémon V in anyway you like. Then, shuffle your deck.",Fx2,,2,3.29,5.0,10.99,4.82,6.24,Holofoil,,"<span style=""color:gold""><strong>VSTAR Power</strong></span>
+<br>
+Ability — Starbirth
+<br>During your turn, you may search your deck for up to 2 cards and put them into your hand. Then, shuffle your deck. <em>(You can't use more than 1 <strong>VSTAR</strong> Power in a game.)</em>
+<br><br>
+<em>VSTAR rule — When your Pokémon VSTAR is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+499989,Arceus V - SWSH306,Arceus V SWSH306,https://tcgplayer-cdn.tcgplayer.com/product/499989_200w.jpg,3,2545,https://cpt.tcgcsv.com/P__5,2025-03-07T20:54:19.153,1,SWSH306,Promo,Colorless,220,Basic,"[2] Trinity Charge 
+<br>Search your deck for up to 3 basic Energy cards and attach them to your Pokémon V in any way you like. Then, shuffle your deck.",Fx2,,2,1.5,3.0,8.99,2.84,2.73,Holofoil,[3] Power Edge (130),"<em>V rule — When your Pokemon V is Knocked Out, your opponent takes 2 Prize cards.</em>",,
+503454,Champions Festival - SWSH296 (World Championships 2022) [Staff],Champions Festival SWSH296 World Championships 2022 Staff,https://tcgplayer-cdn.tcgplayer.com/product/503454_200w.jpg,3,2545,https://cpt.tcgcsv.com/6p26,2023-07-11T20:58:06.763,1,SWSH296,Promo,Stadium,,,,,,,,,,,,,,"Once during each player's turn, if that player has 6 Pokémon in play, they may heal 10 damage from each of their Pokémon.",,
+505968,Unown V - SWSH300,Unown V SWSH300,https://tcgplayer-cdn.tcgplayer.com/product/505968_200w.jpg,3,2545,https://cpt.tcgcsv.com/np36,2024-10-04T15:35:45.143,1,SWSH300,Promo,Psychic,180,Basic,"[P] Shady Stamp (30)
+<br>Your opponent's Active Pokémon is now Confused.",Dx2,F-30,1,0.5,1.0,60.0,0.95,,Holofoil,"[3] Victory Symbol
+<br>If you use this attack when you have only 1 Prize card remaining, you win this game.",[,,
+505996,Lugia V - SWSH301,Lugia V SWSH301,https://tcgplayer-cdn.tcgplayer.com/product/505996_200w.jpg,3,2545,https://cpt.tcgcsv.com/Xp36,2024-02-12T16:46:29.237,1,SWSH301,Promo,Colorless,220,Basic,"[1] Read the Wind
+<br>Discard a card from your hand. If you do, draw 3 cards.",Lx2,F-30,2,5.0,13.99,9999.0,13.46,7.92,Holofoil,"[4] Aero Dive (130)
+<br>You may discard a Stadium in play.",,,
+544371,Jirachi V - 299,Jirachi V 299,https://tcgplayer-cdn.tcgplayer.com/product/544371_200w.jpg,3,2545,https://cpt.tcgcsv.com/rMm6,2024-03-28T12:56:48.063,1,SWSH299,Promo,Psychic,180,Basic,"[1P] Hypnostrike (60)
+<br>Both Active Pokemon are no Asleep.",Dx2,F-30,1,2.0,3.36,9999.0,3.19,,Holofoil,,"Ability — Wish Connector
+<br>When 1 of your Basic Pokémon V is Knocked Out by damage from an opponent's attack, you may move a basic Energy card from that Pokémon to another of your Pokémon.",,
+547707,Dragonite (Silver Tempest Stamped),Dragonite Silver Tempest Stamped,https://tcgplayer-cdn.tcgplayer.com/product/547707_200w.jpg,3,2545,https://cpt.tcgcsv.com/96p6,2024-04-23T14:30:44,1,131/195,Holo Rare,Dragon,160,Stage 2,[3] Dragon Claw (80),,,2,13.99,17.72,19.98,14.25,,Holofoil,"[2WL] Energy Hurricane (180)
+<br>
+Search your deck for up to 3 basic Energy cards and attach them to your Pokémon in any way you like. Then, shuffle your deck.",,,
+575154,Champions Festival - SWSH296 (World Championships 2022),Champions Festival SWSH296 World Championships 2022,https://tcgplayer-cdn.tcgplayer.com/product/575154_200w.jpg,3,2545,https://cpt.tcgcsv.com/65D6,2024-09-03T15:08:44.22,1,SWSH296,Promo,Stadium,,,,,,,420.0,447.48,474.95,349.98,,Normal,,"Once during each player's turn, if that player has 6 Pokémon in play, they may heal 10 damage from each of their Pokémon.",,
+594750,Oshawott - SWSH222 (Cosmo Holo),Oshawott SWSH222 Cosmo Holo,https://tcgplayer-cdn.tcgplayer.com/product/594750_200w.jpg,3,2545,https://cpt.tcgcsv.com/0WM6,2024-11-13T17:32:16.953,1,SWSH222,Promo,Water,70,Basic,[1] Beat (10),Lx2,None,1,0.15,0.38,2.99,0.51,,Holofoil,,,,
+607368,Gengar - SWSH241 (Prerelease) (Staff),Gengar SWSH241 Prerelease Staff,https://tcgplayer-cdn.tcgplayer.com/product/607368_200w.jpg,3,2545,https://cpt.tcgcsv.com/nZS6,2024-12-26T20:14:22.687,0,SWSH241,Promo,Psychic,120,Stage 2,"[P] Screaming Circle
+<br>
+Put 2 damage counters on your opponent's Active Pokémon for each of your opponent's Benched Pokémon.",Dx2,F-30,2,,,,,,,,"<strong>Ability — Netherworld Gate</strong>
+<br>
+Once during your turn, if this Pokémon is in your discard pile, you may put it onto your Bench. If you do, put 3 damage counters on this Pokémon.",,
+655094,Umbreon ex - 176,Umbreon ex 176,https://tcgplayer-cdn.tcgplayer.com/product/655094_200w.jpg,3,2545,https://cpt.tcgcsv.com/V2g7,2025-09-22T15:50:05.247,0,SVP 176,Promo,Darkness,280,Stage 1,[DCC] Moon Mirage (160)<br> Your opponent's Active Pokemon is now Confused.,Gx2,,2,,,,,,,"[LPD] Onyx<br> Discard all Energy from this Pokemon, and take a Prize card.",,,
+655095,Espeon ex - 175,Espeon ex 175,https://tcgplayer-cdn.tcgplayer.com/product/655095_200w.jpg,3,2545,https://cpt.tcgcsv.com/W2g7,2025-09-22T15:53:55.29,0,SVP 175,Promo,Psychic,270,Stage 1,[PCC] Psych Out (160)<br> Discard a random card from your opponent's hand.,Dx2,F-30,1,,,,,,,[GPD] Amazez<br> Devolve each of your opponent's evolved Pokemon by shuffling the highest Stage Evolution card on it into your opponent's deck.,,,

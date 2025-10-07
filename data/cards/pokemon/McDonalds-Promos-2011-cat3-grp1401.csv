@@ -1,0 +1,25 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extAttack2,extWeakness,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extResistance
+83507,Alomomola - 5/12,Alomomola 5 12,https://tcgplayer-cdn.tcgplayer.com/product/83507_200w.jpg,3,1401,https://cpt.tcgcsv.com/9qH,2022-09-21T19:55:15.5,1,005/012,Promo,Water,100,Basic,[2] Pound (20),[2WW] Wave Splash (60),Lx2,2,1.37,3.34,9.99,3.51,,Holofoil,
+83660,Audino - 12/12,Audino 12 12,https://tcgplayer-cdn.tcgplayer.com/product/83660_200w.jpg,3,1401,https://cpt.tcgcsv.com/dtH,2022-09-21T19:56:23.087,1,012/012,Promo,Colorless,80,Basic,"[2] Doubleslap (30x)
+<br>Flip 2 coins. This attack does 30 damage times the number of heads.",,Fx2,2,0.99,2.42,9.99,2.34,,Holofoil,
+83929,Blitzle - 6/12,Blitzle 6 12,https://tcgplayer-cdn.tcgplayer.com/product/83929_200w.jpg,3,1401,https://cpt.tcgcsv.com/CBH,2022-09-21T19:58:00.11,1,006/012,Promo,Lightning,60,Basic,"[1L] Quick Attack (10+)
+<br>Flip a coin. If heads, this attack does 20 more damage.",,Fx2,1,1.55,3.55,9.99,3.9,,Holofoil,
+86480,Klink - 10/12,Klink 10 12,https://tcgplayer-cdn.tcgplayer.com/product/86480_200w.jpg,3,1401,https://cpt.tcgcsv.com/DCJ,2022-09-21T19:59:15.393,1,010/012,Promo,Metal,50,Basic,"[M] Charge Beam (10)
+<br>Flip a coin. If heads, attach an Energy card from your discard pile to this Pokémon.",[1M] Irongrip (20),Rx2,1,0.64,1.4,16.45,2.99,1.24,Holofoil,P-20
+87189,Maractus - 2/12,Maractus 2 12,https://tcgplayer-cdn.tcgplayer.com/product/87189_200w.jpg,3,1401,https://cpt.tcgcsv.com/PTJ,2022-09-21T20:44:14.8,1,002/012,Promo,Grass,80,Basic,"[G] Mega Drain (20)
+<br>Heal 20 damage from this Pokémon.","[1GG] Pin Missile (20x)
+<br>Flip 4 coins. This attack does 20 damage times the number of heads.",Rx2,2,1.99,5.34,14.99,5.57,2.86,Holofoil,W-20
+87642,Munna - 7/12,Munna 7 12,https://tcgplayer-cdn.tcgplayer.com/product/87642_200w.jpg,3,1401,https://cpt.tcgcsv.com/S3K,2022-09-21T20:45:19.263,1,007/012,Promo,Psychic,60,Basic,"[P] Yawn
+<br>The Defending Pokémon is now Asleep.",,Px2,1,1.5,2.85,14.99,3.41,,Holofoil,
+87893,Oshawott - 4/12,Oshawott 4 12,https://tcgplayer-cdn.tcgplayer.com/product/87893_200w.jpg,3,1401,https://cpt.tcgcsv.com/T9K,2022-09-21T20:47:26.603,1,004/012,Promo,Water,60,Basic,"[1W] Water Pulse (20)
+<br>Flip a coin. If heads, the Defending Pokémon is now Asleep.",,Lx2,1,2.99,3.75,14.99,4.64,,Holofoil,
+88055,Pidove - 11/12,Pidove 11 12,https://tcgplayer-cdn.tcgplayer.com/product/88055_200w.jpg,3,1401,https://cpt.tcgcsv.com/7fK,2022-09-21T20:48:57.97,1,011/012,Promo,Colorless,40,Basic,"[1] Growl
+<br>During your opponent's next turn, any damage done by attacks from the Defending Pokémon is reduced by 20 <em>(before applying Weakness and Resistance)</em>.",[1] Gust (10),Lx2,1,1.0,2.47,14.99,2.71,,Holofoil,F-20
+88913,Sandile - 8/12,Sandile 8 12,https://tcgplayer-cdn.tcgplayer.com/product/88913_200w.jpg,3,1401,https://cpt.tcgcsv.com/hBK,2022-11-26T17:41:15.467,1,008/012,Promo,Fighting,70,Basic,"[2F] Sand Tomb (30)
+<br>The Defending Pokémon can't retreat during your opponent's next turn.",,Wx2,2,1.58,2.66,14.99,2.85,,Holofoil,
+89378,Snivy - 1/12,Snivy 1 12,https://tcgplayer-cdn.tcgplayer.com/product/89378_200w.jpg,3,1401,https://cpt.tcgcsv.com/BMK,2022-09-21T20:54:57.38,1,001/012,Promo,Grass,60,Basic,"[1G] Slam (20x)
+<br>Flip 2 coins. This attack does 20 damage times the number of heads.",,Rx2,1,1.59,3.8,9.99,4.33,,Holofoil,W-20
+89882,Tepig - 3/12,Tepig 3 12,https://tcgplayer-cdn.tcgplayer.com/product/89882_200w.jpg,3,1401,https://cpt.tcgcsv.com/GZK,2022-09-21T20:55:57.907,1,003/012,Promo,Fire,70,Basic,"[1R] Ember (30)
+<br>Discard an Energy attached to this Pokémon.",,Wx2,2,2.5,4.06,6.59,5.14,,Holofoil,
+90758,Zorua - 9/12,Zorua 9 12,https://tcgplayer-cdn.tcgplayer.com/product/90758_200w.jpg,3,1401,https://cpt.tcgcsv.com/bkL,2022-09-21T20:57:10.887,1,009/012,Promo,Darkness,50,Basic,[1] Scratch (10),"[1D] Fury Swipes (10x)
+<br>Flip 3 coins. This attack does 10 damage times the number of heads.",Fx2,1,2.16,5.8,19.99,5.93,,Holofoil,P-20

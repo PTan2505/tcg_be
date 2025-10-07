@@ -4,7 +4,7 @@ export interface PostReaction extends Document {
   _id: Types.ObjectId;
   user: Types.ObjectId;
   post: Types.ObjectId;
-  type: 'like' | 'dislike';
+  type: 'like';
   createdAt: Date;
   updatedAt: Date;
 }
@@ -23,7 +23,7 @@ const postReactionSchema = new Schema<PostReaction>(
     },
     type: {
       type: String,
-      enum: ['like', 'dislike'],
+      enum: ['like'],
       required: true,
     },
   },

@@ -1,0 +1,32 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extCardText,extAttack1,extWeakness,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extAttack2
+281472,Tynamo - 10/15,Tynamo 10 15,https://tcgplayer-cdn.tcgplayer.com/product/281472_200w.jpg,3,3150,https://cpt.tcgcsv.com/sCg3,2022-09-23T18:01:54.687,1,010/015,Promo,Lightning,40,Basic,"<strong>Ability — Levitate</strong>
+<br>If this Pokémon has any Energy attached to it, it has no Retreat Cost.",[L] Tiny Charge (10),Fx2,1,0.06,0.25,1.49,0.29,,Normal,
+281473,Rowlet - 2/15,Rowlet 2 15,https://tcgplayer-cdn.tcgplayer.com/product/281473_200w.jpg,3,3150,https://cpt.tcgcsv.com/tCg3,2024-05-08T11:30:55.18,1,002/015,Promo,Grass,50,Basic,"<strong>Ability — Sky Circus</strong>                                          
+<br>If you played Bird Keeper from your hand during this turn, ignore all Energy in this Pokémon's attack costs.","[3] Wind Shard
+<br>This attack does 60 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",Rx2,1,0.15,0.55,29.99,0.56,,Holofoil,
+281476,Ledyba - 1/15,Ledyba 1 15,https://tcgplayer-cdn.tcgplayer.com/product/281476_200w.jpg,3,3150,https://cpt.tcgcsv.com/xCg3,2022-09-23T17:53:30.893,1,001/015,Promo,Grass,60,Basic,,"[1] Collect
+<br>Draw a card.",Rx2,1,0.01,0.2,1.49,0.2,,Normal,[2] Punch (20)
+281478,Flaaffy - 9/15,Flaaffy 9 15,https://tcgplayer-cdn.tcgplayer.com/product/281478_200w.jpg,3,3150,https://cpt.tcgcsv.com/BCg3,2022-09-23T17:46:37.33,1,009/015,Promo,Lightning,100,Stage 1,,[1L] Electro Ball (50),Fx2,2,0.1,0.26,1.49,0.27,,Normal,
+281482,Gossifleur - 3/15,Gossifleur 3 15,https://tcgplayer-cdn.tcgplayer.com/product/281482_200w.jpg,3,3150,https://cpt.tcgcsv.com/GCg3,2022-09-23T17:47:49.937,1,003/015,Promo,Grass,50,Basic,,"[G] Blot (10)
+<br>Heal 10 damage from this Pokémon.",Rx2,1,0.08,0.5,9.99,0.52,0.24,Holofoil,
+281485,Lapras - 6/15,Lapras 6 15,https://tcgplayer-cdn.tcgplayer.com/product/281485_200w.jpg,3,3150,https://cpt.tcgcsv.com/KCg3,2022-09-23T17:52:16.883,1,006/015,Promo,Water,110,Basic,,"[1] Wintry Call
+<br>Search your deck for up to 2 Melony cards, reveal them, and put them into your hand. Then, shuffle your deck.",Mx2,1,0.1,0.3,22.99,0.35,,Normal,"[1W] Icy Wind (50)
+<br>Your opponent's Active Pokémon is now Asleep."
+281491,Chinchou - 8/15,Chinchou 8 15,https://tcgplayer-cdn.tcgplayer.com/product/281491_200w.jpg,3,3150,https://cpt.tcgcsv.com/RCg3,2023-01-17T20:44:29.257,1,008/015,Promo,Lightning,70,Basic,,[L] Electro Ball (10),Fx2,1,0.01,0.24,1.49,0.24,,Normal,
+281493,Victini - 5/15,Victini 5 15,https://tcgplayer-cdn.tcgplayer.com/product/281493_200w.jpg,3,3150,https://cpt.tcgcsv.com/TCg3,2023-04-15T18:43:07.917,1,005/015,Promo,Fire,60,Basic,,"[2] Victory Dive (30)
+<br>You may search your deck for up to 2 cards and put them into your hand. Then, shuffle your deck.",Wx2,1,0.3,0.67,5.0,0.68,,Holofoil,
+281494,Cutiefly - 11/15,Cutiefly 11 15,https://tcgplayer-cdn.tcgplayer.com/product/281494_200w.jpg,3,3150,https://cpt.tcgcsv.com/VCg3,2022-09-23T17:43:04.183,1,011/015,Promo,Psychic,30,Basic,,[1] Flap (10),Mx2,0,0.01,0.25,13.99,0.55,,Normal,
+281497,Drampa - 14/15,Drampa 14 15,https://tcgplayer-cdn.tcgplayer.com/product/281497_200w.jpg,3,3150,https://cpt.tcgcsv.com/ZCg3,2022-09-23T17:45:17.827,1,014/015,Promo,Dragon,120,Basic,,[1] Corkscrew Punch (30),,2,0.12,0.25,1.99,0.24,,Normal,"[WF] Berserk (70+)
+<br>If your Benched Pokémon have any damage counters on them, this attack does 90 more damage."
+281500,Smeargle - 15/15,Smeargle 15 15,https://tcgplayer-cdn.tcgplayer.com/product/281500_200w.jpg,3,3150,https://cpt.tcgcsv.com/0Dg3,2022-09-23T18:00:19.303,1,015/015,Promo,Colorless,80,Basic,,"[2] Live Painting (30+)
+<br>Reveal any number of basic Energy cards from your hand. This attack does 30 more damage for each type of basic Energy you revealed in this way.",Fx2,1,0.12,0.65,5.0,0.69,,Holofoil,
+281503,Growlithe - 4/15,Growlithe 4 15,https://tcgplayer-cdn.tcgplayer.com/product/281503_200w.jpg,3,3150,https://cpt.tcgcsv.com/5Dg3,2023-03-07T20:11:57.707,1,004/015,Promo,Fire,80,Basic,,"[1] Warm Up
+<br>Search your deck for a Fire Energy card and attach it to 1 of your Pokémon. Then, shuffle your deck.",Wx2,2,0.16,0.85,15.95,0.93,0.74,Holofoil,[2R] Combustion (30)
+281504,Bewear - 12/15,Bewear 12 15,https://tcgplayer-cdn.tcgplayer.com/product/281504_200w.jpg,3,3150,https://cpt.tcgcsv.com/6Dg3,2022-09-23T17:40:43.713,1,012/015,Promo,Fighting,130,Stage 1,,"[1F] Split Spiral Punch (40)
+<br>Your opponent's Active Pokémon is now Confused.",Px2,3,0.01,0.21,1.49,0.21,,Normal,[1FF] Strength (130)
+281505,Pangoro - 13/15,Pangoro 13 15,https://tcgplayer-cdn.tcgplayer.com/product/281505_200w.jpg,3,3150,https://cpt.tcgcsv.com/7Dg3,2022-09-23T17:55:13.58,1,013/015,Promo,Darkness,140,Stage 1,,"[1DD] Knocking Hammer (90)
+<br>Discard the top card of your opponent's deck.",Gx2,4,0.01,0.25,2.0,0.26,,Normal,"[1DDD] Shakedown (150)
+<br>Discard a random card from your opponent's hand."
+282523,Pikachu - 7/15,Pikachu 7 15,https://tcgplayer-cdn.tcgplayer.com/product/282523_200w.jpg,3,3150,https://cpt.tcgcsv.com/t0h3,2022-09-23T17:56:34.683,1,007/015,Promo,Lightning,60,Basic,,"[L] Energize
+<br>Attach a Lightning Energy card from your discard pile to this Pokémon.",Fx2,1,1.0,2.38,19.95,3.36,,Holofoil,[2L] Electro Ball (30)
+282530,McDonald's 2022 Match & Battle Pack,McDonalds 2022 Match and Battle Pack,https://tcgplayer-cdn.tcgplayer.com/product/282530_200w.jpg,3,3150,https://cpt.tcgcsv.com/D0h3,2022-08-17T14:52:48.207,1,,,,,,Each paper booster pack contains 4 random promotional cards <em>(1 holofoil & 3 non-holofoil)</em>.,,,,4.29,4.99,5.97,4.25,,Normal,

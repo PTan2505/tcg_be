@@ -31,16 +31,14 @@ export const swaggerDoc: OpenAPIV3.Document = {
       description: "User deck management operations (CRUD)",
     },
     {
-      name: "Pokemon Decks",
-      description: "Pokemon recommended deck browsing (read-only)",
-    },
-    {
       name: "Cards",
-      description: "Card browsing and discovery",
+      description:
+        "Unified card browsing and discovery (Pokemon, Yu-Gi-Oh!, One Piece)",
     },
     {
       name: "Sets",
-      description: "Card set management and discovery",
+      description:
+        "Unified card set management and discovery (Pokemon, Yu-Gi-Oh!, One Piece)",
     },
     {
       name: "Social Posts",
@@ -52,7 +50,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
     },
     {
       name: "Reactions",
-      description: "Like and dislike reactions",
+      description: "Like reactions",
     },
     {
       name: "Friendship",
@@ -61,6 +59,10 @@ export const swaggerDoc: OpenAPIV3.Document = {
     {
       name: "Notifications",
       description: "Real-time notifications",
+    },
+    {
+      name: "Card Scanning",
+      description: "AI-powered card scanning with OCR and recognition",
     },
   ],
   paths: {
@@ -94,7 +96,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
                     minLength: 3,
                     maxLength: 30,
                     pattern: "^[a-zA-Z0-9_]+$",
-                    description: "Unique username (letters, numbers, underscores only)",
+                    description:
+                      "Unique username (letters, numbers, underscores only)",
                     example: "john_doe",
                   },
                   password: {
@@ -238,7 +241,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
       post: {
         tags: ["Authentication"],
         summary: "Verify email address using HOTP code",
-        description: "Verify user email using HMAC-based One-Time Password (HOTP) received via email",
+        description:
+          "Verify user email using HMAC-based One-Time Password (HOTP) received via email",
         requestBody: {
           required: true,
           content: {
@@ -378,7 +382,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
       post: {
         tags: ["Authentication"],
         summary: "Request password reset HOTP",
-        description: "Send HMAC-based One-Time Password (HOTP) to user's email for password reset",
+        description:
+          "Send HMAC-based One-Time Password (HOTP) to user's email for password reset",
         requestBody: {
           required: true,
           content: {
@@ -411,7 +416,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
                     },
                     message: {
                       type: "string",
-                      example: "Nếu email tồn tại, mã OTP đã được gửi đến hộp thư của bạn",
+                      example:
+                        "Nếu email tồn tại, mã OTP đã được gửi đến hộp thư của bạn",
                     },
                   },
                 },
@@ -526,7 +532,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
       post: {
         tags: ["Authentication"],
         summary: "Reset password using HOTP code",
-        description: "Reset user password using HMAC-based One-Time Password (HOTP) received via email",
+        description:
+          "Reset user password using HMAC-based One-Time Password (HOTP) received via email",
         requestBody: {
           required: true,
           content: {
@@ -874,7 +881,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
                   },
                   category: {
                     type: "string",
-                    enum: ["PokemonCard", "YugiohCard"],
+                    enum: ["PokemonCard", "YugiohCard", "OnePieceCard"],
                     description: "Card category",
                   },
                 },
@@ -915,7 +922,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
             name: "category",
             schema: {
               type: "string",
-              enum: ["PokemonCard", "YugiohCard"],
+              enum: ["PokemonCard", "YugiohCard", "OnePieceCard"],
             },
             description: "Filter by card category",
           },
@@ -1008,7 +1015,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
             required: true,
             schema: {
               type: "string",
-              enum: ["PokemonCard", "YugiohCard"],
+              enum: ["PokemonCard", "YugiohCard", "OnePieceCard"],
             },
             description: "Card category",
           },
@@ -1039,7 +1046,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
             required: true,
             schema: {
               type: "string",
-              enum: ["PokemonCard", "YugiohCard"],
+              enum: ["PokemonCard", "YugiohCard", "OnePieceCard"],
             },
             description: "Card category",
           },
@@ -1123,7 +1130,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
             required: true,
             schema: {
               type: "string",
-              enum: ["PokemonCard", "YugiohCard"],
+              enum: ["PokemonCard", "YugiohCard", "OnePieceCard"],
             },
             description: "Card category",
           },
@@ -1171,7 +1178,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
                   },
                   category: {
                     type: "string",
-                    enum: ["PokemonCard", "YugiohCard"],
+                    enum: ["PokemonCard", "YugiohCard", "OnePieceCard"],
                     description: "Card category",
                   },
                   format: {
@@ -1379,7 +1386,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
                   cardId: { type: "string" },
                   category: {
                     type: "string",
-                    enum: ["PokemonCard", "YugiohCard"],
+                    enum: ["PokemonCard", "YugiohCard", "OnePieceCard"],
                   },
                   quantity: {
                     type: "integer",
@@ -1575,1024 +1582,12 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/decks/pokemon": {
-      get: {
-        tags: ["Pokemon Decks"],
-        summary: "Get all Pokemon recommended decks",
-        parameters: [
-          {
-            in: "query",
-            name: "page",
-            schema: {
-              type: "integer",
-              minimum: 1,
-              default: 1,
-            },
-            description: "Page number",
-          },
-          {
-            in: "query",
-            name: "limit",
-            schema: {
-              type: "integer",
-              minimum: 1,
-              maximum: 100,
-              default: 20,
-            },
-            description: "Number of decks per page",
-          },
-        ],
-        responses: {
-          "200": {
-            description: "Pokemon decks retrieved successfully",
-            content: {
-              "application/json": {
-                schema: {
-                  type: "object",
-                  properties: {
-                    success: { type: "boolean" },
-                    data: {
-                      type: "array",
-                      items: { $ref: "#/components/schemas/PokemonDeck" },
-                    },
-                    pagination: {
-                      type: "object",
-                      properties: {
-                        page: { type: "integer" },
-                        limit: { type: "integer" },
-                        total: { type: "integer" },
-                        totalPages: { type: "integer" },
-                        hasNext: { type: "boolean" },
-                        hasPrev: { type: "boolean" },
-                      },
-                    },
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-    "/decks/pokemon/search": {
-      get: {
-        tags: ["Pokemon Decks"],
-        summary: "Search Pokemon decks",
-        parameters: [
-          {
-            in: "query",
-            name: "query",
-            required: true,
-            schema: {
-              type: "string",
-            },
-            description: "Search query",
-          },
-          {
-            in: "query",
-            name: "page",
-            schema: {
-              type: "integer",
-              minimum: 1,
-              default: 1,
-            },
-            description: "Page number",
-          },
-          {
-            in: "query",
-            name: "limit",
-            schema: {
-              type: "integer",
-              minimum: 1,
-              maximum: 100,
-              default: 20,
-            },
-            description: "Number of decks per page",
-          },
-        ],
-        responses: {
-          "200": {
-            description: "Search results retrieved successfully",
-            content: {
-              "application/json": {
-                schema: {
-                  type: "object",
-                  properties: {
-                    success: { type: "boolean" },
-                    data: {
-                      type: "array",
-                      items: { $ref: "#/components/schemas/PokemonDeck" },
-                    },
-                    pagination: {
-                      type: "object",
-                      properties: {
-                        page: { type: "integer" },
-                        limit: { type: "integer" },
-                        total: { type: "integer" },
-                        totalPages: { type: "integer" },
-                        hasNext: { type: "boolean" },
-                        hasPrev: { type: "boolean" },
-                      },
-                    },
-                    query: { type: "string" },
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-    "/decks/pokemon/types": {
-      get: {
-        tags: ["Pokemon Decks"],
-        summary: "Get Pokemon decks by types",
-        parameters: [
-          {
-            in: "query",
-            name: "types",
-            required: true,
-            schema: {
-              type: "array",
-              items: { type: "string" },
-            },
-            description: "Pokemon types to filter by",
-          },
-          {
-            in: "query",
-            name: "page",
-            schema: {
-              type: "integer",
-              minimum: 1,
-              default: 1,
-            },
-            description: "Page number",
-          },
-          {
-            in: "query",
-            name: "limit",
-            schema: {
-              type: "integer",
-              minimum: 1,
-              maximum: 100,
-              default: 20,
-            },
-            description: "Number of decks per page",
-          },
-        ],
-        responses: {
-          "200": {
-            description: "Decks filtered by types retrieved successfully",
-            content: {
-              "application/json": {
-                schema: {
-                  type: "object",
-                  properties: {
-                    success: { type: "boolean" },
-                    data: {
-                      type: "array",
-                      items: { $ref: "#/components/schemas/PokemonDeck" },
-                    },
-                    pagination: {
-                      type: "object",
-                      properties: {
-                        page: { type: "integer" },
-                        limit: { type: "integer" },
-                        total: { type: "integer" },
-                        totalPages: { type: "integer" },
-                        hasNext: { type: "boolean" },
-                        hasPrev: { type: "boolean" },
-                      },
-                    },
-                    types: {
-                      type: "array",
-                      items: { type: "string" },
-                    },
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-    "/decks/pokemon/id/{deckId}": {
-      get: {
-        tags: ["Pokemon Decks"],
-        summary: "Get Pokemon deck by ID",
-        parameters: [
-          {
-            in: "path",
-            name: "deckId",
-            required: true,
-            schema: {
-              type: "string",
-            },
-            description: "Pokemon deck ID",
-          },
-        ],
-        responses: {
-          "200": {
-            description: "Pokemon deck retrieved successfully",
-            content: {
-              "application/json": {
-                schema: {
-                  type: "object",
-                  properties: {
-                    success: { type: "boolean" },
-                    data: { $ref: "#/components/schemas/PokemonDeck" },
-                  },
-                },
-              },
-            },
-          },
-          "404": {
-            description: "Pokemon deck not found",
-            content: {
-              "application/json": {
-                schema: {
-                  $ref: "#/components/schemas/Error",
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-    "/decks/pokemon/ext/{deckExtId}": {
-      get: {
-        tags: ["Pokemon Decks"],
-        summary: "Get Pokemon deck by external ID",
-        parameters: [
-          {
-            in: "path",
-            name: "deckExtId",
-            required: true,
-            schema: {
-              type: "string",
-            },
-            description: "Pokemon deck external ID",
-          },
-        ],
-        responses: {
-          "200": {
-            description: "Pokemon deck retrieved successfully",
-            content: {
-              "application/json": {
-                schema: {
-                  type: "object",
-                  properties: {
-                    success: { type: "boolean" },
-                    data: { $ref: "#/components/schemas/PokemonDeck" },
-                  },
-                },
-              },
-            },
-          },
-          "404": {
-            description: "Pokemon deck not found",
-            content: {
-              "application/json": {
-                schema: {
-                  $ref: "#/components/schemas/Error",
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-    "/decks/pokemon/id/{deckId}/stats": {
-      get: {
-        tags: ["Pokemon Decks"],
-        summary: "Get Pokemon deck statistics",
-        parameters: [
-          {
-            in: "path",
-            name: "deckId",
-            required: true,
-            schema: {
-              type: "string",
-            },
-            description: "Pokemon deck ID",
-          },
-        ],
-        responses: {
-          "200": {
-            description: "Pokemon deck statistics retrieved successfully",
-            content: {
-              "application/json": {
-                schema: {
-                  type: "object",
-                  properties: {
-                    success: { type: "boolean" },
-                    data: {
-                      type: "object",
-                      properties: {
-                        totalCards: { type: "integer" },
-                        uniqueCards: { type: "integer" },
-                        pokemonCount: { type: "integer" },
-                        trainerCount: { type: "integer" },
-                        energyCount: { type: "integer" },
-                        typeDistribution: {
-                          type: "object",
-                          additionalProperties: { type: "integer" },
-                        },
-                        rarityDistribution: {
-                          type: "object",
-                          additionalProperties: { type: "integer" },
-                        },
-                        averageCost: { type: "number" },
-                      },
-                    },
-                  },
-                },
-              },
-            },
-          },
-          "404": {
-            description: "Pokemon deck not found",
-            content: {
-              "application/json": {
-                schema: {
-                  $ref: "#/components/schemas/Error",
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-    "/cards/{category}": {
-      get: {
-        tags: ["Cards"],
-        summary: "Get cards by category with pagination and filtering",
-        parameters: [
-          {
-            in: "path",
-            name: "category",
-            required: true,
-            schema: {
-              type: "string",
-              enum: ["pokemon", "yugioh"],
-            },
-            description: "Card category (pokemon or yugioh)",
-          },
-          {
-            in: "query",
-            name: "page",
-            schema: {
-              type: "integer",
-              minimum: 1,
-              default: 1,
-            },
-            description: "Page number",
-          },
-          {
-            in: "query",
-            name: "limit",
-            schema: {
-              type: "integer",
-              minimum: 1,
-              maximum: 100,
-              default: 20,
-            },
-            description: "Number of cards per page",
-          },
-          {
-            in: "query",
-            name: "search",
-            schema: {
-              type: "string",
-            },
-            description: "Search cards by name",
-          },
-          {
-            in: "query",
-            name: "sortBy",
-            schema: {
-              type: "string",
-              enum: ["name", "type", "rarity", "createdAt"],
-            },
-            description: "Sort field",
-          },
-          {
-            in: "query",
-            name: "sortOrder",
-            schema: {
-              type: "string",
-              enum: ["asc", "desc"],
-            },
-            description: "Sort order",
-          },
-        ],
-        responses: {
-          "200": {
-            description: "Cards retrieved successfully",
-            content: {
-              "application/json": {
-                schema: {
-                  type: "object",
-                  properties: {
-                    success: {
-                      type: "boolean",
-                      example: true,
-                    },
-                    data: {
-                      type: "array",
-                      items: {
-                        $ref: "#/components/schemas/CardDetails",
-                      },
-                    },
-                    pagination: {
-                      type: "object",
-                      properties: {
-                        page: { type: "integer" },
-                        limit: { type: "integer" },
-                        total: { type: "integer" },
-                        totalPages: { type: "integer" },
-                        hasNext: { type: "boolean" },
-                        hasPrev: { type: "boolean" },
-                      },
-                    },
-                  },
-                },
-              },
-            },
-          },
-          "400": {
-            description: "Invalid card category or parameters",
-            content: {
-              "application/json": {
-                schema: {
-                  $ref: "#/components/schemas/ValidationError",
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-    "/cards/{category}/{cardId}": {
-      get: {
-        tags: ["Cards"],
-        summary: "Get specific card by ID and category",
-        parameters: [
-          {
-            in: "path",
-            name: "category",
-            required: true,
-            schema: {
-              type: "string",
-              enum: ["pokemon", "yugioh"],
-            },
-            description: "Card category (pokemon or yugioh)",
-          },
-          {
-            in: "path",
-            name: "cardId",
-            required: true,
-            schema: {
-              type: "string",
-            },
-            description: "Card ID",
-          },
-        ],
-        responses: {
-          "200": {
-            description: "Card retrieved successfully",
-            content: {
-              "application/json": {
-                schema: {
-                  type: "object",
-                  properties: {
-                    success: {
-                      type: "boolean",
-                      example: true,
-                    },
-                    data: {
-                      $ref: "#/components/schemas/CardDetails",
-                    },
-                  },
-                },
-              },
-            },
-          },
-          "404": {
-            description: "Card not found",
-            content: {
-              "application/json": {
-                schema: {
-                  $ref: "#/components/schemas/Error",
-                },
-              },
-            },
-          },
-          "400": {
-            description: "Invalid card category",
-            content: {
-              "application/json": {
-                schema: {
-                  $ref: "#/components/schemas/ValidationError",
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-    "/cards/{category}/search": {
-      get: {
-        tags: ["Cards"],
-        summary: "Search cards by category with advanced filters",
-        parameters: [
-          {
-            in: "path",
-            name: "category",
-            required: true,
-            schema: {
-              type: "string",
-              enum: ["pokemon", "yugioh"],
-            },
-            description: "Card category (pokemon or yugioh)",
-          },
-          {
-            in: "query",
-            name: "q",
-            required: true,
-            schema: {
-              type: "string",
-            },
-            description: "Search query",
-          },
-          {
-            in: "query",
-            name: "page",
-            schema: {
-              type: "integer",
-              minimum: 1,
-              default: 1,
-            },
-            description: "Page number",
-          },
-          {
-            in: "query",
-            name: "limit",
-            schema: {
-              type: "integer",
-              minimum: 1,
-              maximum: 100,
-              default: 20,
-            },
-            description: "Number of cards per page",
-          },
-          {
-            in: "query",
-            name: "sortBy",
-            schema: {
-              type: "string",
-              enum: ["name", "type", "rarity", "relevance"],
-            },
-            description: "Sort field",
-          },
-          {
-            in: "query",
-            name: "sortOrder",
-            schema: {
-              type: "string",
-              enum: ["asc", "desc"],
-            },
-            description: "Sort order",
-          },
-        ],
-        responses: {
-          "200": {
-            description: "Search results retrieved successfully",
-            content: {
-              "application/json": {
-                schema: {
-                  type: "object",
-                  properties: {
-                    success: {
-                      type: "boolean",
-                      example: true,
-                    },
-                    data: {
-                      type: "array",
-                      items: {
-                        $ref: "#/components/schemas/CardDetails",
-                      },
-                    },
-                    pagination: {
-                      type: "object",
-                      properties: {
-                        page: { type: "integer" },
-                        limit: { type: "integer" },
-                        total: { type: "integer" },
-                        totalPages: { type: "integer" },
-                        hasNext: { type: "boolean" },
-                        hasPrev: { type: "boolean" },
-                      },
-                    },
-                    query: {
-                      type: "string",
-                      description: "Search query used",
-                    },
-                  },
-                },
-              },
-            },
-          },
-          "400": {
-            description: "Invalid search parameters",
-            content: {
-              "application/json": {
-                schema: {
-                  $ref: "#/components/schemas/ValidationError",
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-    "/cards/{category}/sets/{setId}": {
-      get: {
-        tags: ["Cards"],
-        summary: "Get cards by set ID and category",
-        parameters: [
-          {
-            in: "path",
-            name: "category",
-            required: true,
-            schema: {
-              type: "string",
-              enum: ["pokemon", "yugioh"],
-            },
-            description: "Card category (pokemon or yugioh)",
-          },
-          {
-            in: "path",
-            name: "setId",
-            required: true,
-            schema: {
-              type: "string",
-            },
-            description: "Set ID",
-          },
-          {
-            in: "query",
-            name: "page",
-            schema: {
-              type: "integer",
-              minimum: 1,
-              default: 1,
-            },
-            description: "Page number",
-          },
-          {
-            in: "query",
-            name: "limit",
-            schema: {
-              type: "integer",
-              minimum: 1,
-              maximum: 100,
-              default: 20,
-            },
-            description: "Number of cards per page",
-          },
-        ],
-        responses: {
-          "200": {
-            description: "Cards from set retrieved successfully",
-            content: {
-              "application/json": {
-                schema: {
-                  type: "object",
-                  properties: {
-                    success: {
-                      type: "boolean",
-                      example: true,
-                    },
-                    data: {
-                      type: "array",
-                      items: {
-                        $ref: "#/components/schemas/CardDetails",
-                      },
-                    },
-                    pagination: {
-                      type: "object",
-                      properties: {
-                        page: { type: "integer" },
-                        limit: { type: "integer" },
-                        total: { type: "integer" },
-                        totalPages: { type: "integer" },
-                        hasNext: { type: "boolean" },
-                        hasPrev: { type: "boolean" },
-                      },
-                    },
-                    setInfo: {
-                      type: "object",
-                      description: "Information about the set",
-                    },
-                  },
-                },
-              },
-            },
-          },
-          "404": {
-            description: "Set not found",
-            content: {
-              "application/json": {
-                schema: {
-                  $ref: "#/components/schemas/Error",
-                },
-              },
-            },
-          },
-          "400": {
-            description: "Invalid card category or set ID",
-            content: {
-              "application/json": {
-                schema: {
-                  $ref: "#/components/schemas/ValidationError",
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-    "/sets/{category}": {
-      get: {
-        tags: ["Sets"],
-        summary: "Get sets with pagination and filtering",
-        parameters: [
-          {
-            in: "path",
-            name: "category",
-            required: true,
-            schema: {
-              type: "string",
-              enum: ["pokemon", "yugioh"],
-            },
-            description: "Set category (pokemon or yugioh)",
-          },
-          {
-            in: "query",
-            name: "page",
-            schema: {
-              type: "integer",
-              minimum: 1,
-              default: 1,
-            },
-            description: "Page number",
-          },
-          {
-            in: "query",
-            name: "limit",
-            schema: {
-              type: "integer",
-              minimum: 1,
-              maximum: 100,
-              default: 20,
-            },
-            description: "Number of sets per page",
-          },
-          {
-            in: "query",
-            name: "search",
-            schema: {
-              type: "string",
-            },
-            description: "Search sets by name",
-          },
-          {
-            in: "query",
-            name: "sortBy",
-            schema: {
-              type: "string",
-              enum: ["name", "releaseDate", "cardCount", "createdAt"],
-            },
-            description: "Sort field",
-          },
-          {
-            in: "query",
-            name: "sortOrder",
-            schema: {
-              type: "string",
-              enum: ["asc", "desc"],
-            },
-            description: "Sort order",
-          },
-        ],
-        responses: {
-          "200": {
-            description: "Sets retrieved successfully",
-            content: {
-              "application/json": {
-                schema: {
-                  type: "object",
-                  properties: {
-                    success: {
-                      type: "boolean",
-                      example: true,
-                    },
-                    data: {
-                      type: "array",
-                      items: {
-                        $ref: "#/components/schemas/SetDetails",
-                      },
-                    },
-                    pagination: {
-                      type: "object",
-                      properties: {
-                        page: { type: "integer" },
-                        limit: { type: "integer" },
-                        total: { type: "integer" },
-                        totalPages: { type: "integer" },
-                        hasNext: { type: "boolean" },
-                        hasPrev: { type: "boolean" },
-                      },
-                    },
-                  },
-                },
-              },
-            },
-          },
-          "400": {
-            description: "Invalid parameters",
-            content: {
-              "application/json": {
-                schema: {
-                  $ref: "#/components/schemas/ValidationError",
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-    "/sets/{category}/{setId}": {
-      get: {
-        tags: ["Sets"],
-        summary: "Get set by ID and category",
-        parameters: [
-          {
-            in: "path",
-            name: "category",
-            required: true,
-            schema: {
-              type: "string",
-              enum: ["pokemon", "yugioh"],
-            },
-            description: "Set category (pokemon or yugioh)",
-          },
-          {
-            in: "path",
-            name: "setId",
-            required: true,
-            schema: {
-              type: "string",
-            },
-            description: "Set ID",
-          },
-        ],
-        responses: {
-          "200": {
-            description: "Set retrieved successfully",
-            content: {
-              "application/json": {
-                schema: {
-                  type: "object",
-                  properties: {
-                    success: {
-                      type: "boolean",
-                      example: true,
-                    },
-                    data: {
-                      $ref: "#/components/schemas/SetDetails",
-                    },
-                  },
-                },
-              },
-            },
-          },
-          "404": {
-            description: "Set not found",
-            content: {
-              "application/json": {
-                schema: {
-                  $ref: "#/components/schemas/Error",
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-    "/sets/{category}/search": {
-      get: {
-        tags: ["Sets"],
-        summary: "Search sets with advanced filters",
-        parameters: [
-          {
-            in: "path",
-            name: "category",
-            required: true,
-            schema: {
-              type: "string",
-              enum: ["pokemon", "yugioh"],
-            },
-            description: "Set category (pokemon or yugioh)",
-          },
-          {
-            in: "query",
-            name: "q",
-            required: true,
-            schema: {
-              type: "string",
-            },
-            description: "Search query",
-          },
-          {
-            in: "query",
-            name: "page",
-            schema: {
-              type: "integer",
-              minimum: 1,
-              default: 1,
-            },
-            description: "Page number",
-          },
-          {
-            in: "query",
-            name: "limit",
-            schema: {
-              type: "integer",
-              minimum: 1,
-              maximum: 100,
-              default: 20,
-            },
-            description: "Number of sets per page",
-          },
-        ],
-        responses: {
-          "200": {
-            description: "Search results retrieved successfully",
-            content: {
-              "application/json": {
-                schema: {
-                  type: "object",
-                  properties: {
-                    success: {
-                      type: "boolean",
-                      example: true,
-                    },
-                    data: {
-                      type: "array",
-                      items: {
-                        $ref: "#/components/schemas/SetDetails",
-                      },
-                    },
-                    pagination: {
-                      type: "object",
-                      properties: {
-                        page: { type: "integer" },
-                        limit: { type: "integer" },
-                        total: { type: "integer" },
-                        totalPages: { type: "integer" },
-                        hasNext: { type: "boolean" },
-                        hasPrev: { type: "boolean" },
-                      },
-                    },
-                    query: {
-                      type: "string",
-                      description: "Search query used",
-                    },
-                  },
-                },
-              },
-            },
-          },
-          "400": {
-            description: "Invalid search parameters",
-            content: {
-              "application/json": {
-                schema: {
-                  $ref: "#/components/schemas/ValidationError",
-                },
-              },
-            },
-          },
-        },
-      },
-    },
     "/posts": {
       post: {
         tags: ["Social Posts"],
         summary: "Create a text-only post",
-        description: "Create a post without images. For posts with images, use /posts/with-files endpoint.",
+        description:
+          "Create a post without images. For posts with images, use /posts/with-files endpoint.",
         security: [{ bearerAuth: [] }],
         requestBody: {
           required: true,
@@ -2613,7 +1608,10 @@ export const swaggerDoc: OpenAPIV3.Document = {
                       type: "object",
                       properties: {
                         cardId: { type: "string" },
-                        cardType: { type: "string", enum: ["pokemon", "yugioh"] },
+                        cardType: {
+                          type: "string",
+                          enum: ["pokemon", "yugioh", "onepiece"],
+                        },
                       },
                     },
                     description: "Referenced cards",
@@ -2662,7 +1660,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
       post: {
         tags: ["Social Posts"],
         summary: "Create a new post with file uploads",
-        description: "Create a post with actual image file uploads (multipart/form-data)",
+        description:
+          "Create a post with actual image file uploads (multipart/form-data)",
         security: [{ bearerAuth: [] }],
         requestBody: {
           required: true,
@@ -2836,7 +1835,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
       get: {
         tags: ["Social Posts"],
         summary: "Get taggable users for @mentions",
-        description: "Get list of users that can be tagged based on context (friends, post owner, comment owner)",
+        description:
+          "Get list of users that can be tagged based on context (friends, post owner, comment owner)",
         security: [{ bearerAuth: [] }],
         parameters: [
           {
@@ -2847,23 +1847,23 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
               enum: ["post", "comment", "reply"],
-              default: "post"
-            }
+              default: "post",
+            },
           },
           {
             name: "postId",
             in: "query",
             required: false,
             description: "Post ID (required for reply context)",
-            schema: { type: "string" }
+            schema: { type: "string" },
           },
           {
             name: "parentCommentId",
             in: "query",
             required: false,
             description: "Parent comment ID (required for reply context)",
-            schema: { type: "string" }
-          }
+            schema: { type: "string" },
+          },
         ],
         responses: {
           "200": {
@@ -2882,18 +1882,18 @@ export const swaggerDoc: OpenAPIV3.Document = {
                           _id: { type: "string" },
                           username: { type: "string" },
                           firstName: { type: "string" },
-                          lastName: { type: "string" }
-                        }
-                      }
+                          lastName: { type: "string" },
+                        },
+                      },
                     },
-                    message: { type: "string" }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
+                    message: { type: "string" },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
     },
     "/posts/{id}": {
       get: {
@@ -3011,7 +2011,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
     "/posts/{id}/reactions": {
       post: {
         tags: ["Reactions"],
-        summary: "Toggle post reaction (like/dislike)",
+        summary: "Toggle post reaction (like/unlike)",
         security: [{ bearerAuth: [] }],
         parameters: [
           {
@@ -3032,7 +2032,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
                 properties: {
                   type: {
                     type: "string",
-                    enum: ["like", "dislike"],
+                    enum: ["like"],
                     description: "Reaction type",
                   },
                 },
@@ -3054,10 +2054,9 @@ export const swaggerDoc: OpenAPIV3.Document = {
                       properties: {
                         action: {
                           type: "string",
-                          enum: ["added", "removed", "changed"],
+                          enum: ["added", "removed"],
                         },
                         likesCount: { type: "integer" },
-                        dislikesCount: { type: "integer" },
                       },
                     },
                   },
@@ -3636,6 +2635,2043 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
+    // =============================================================================
+    // CARD SCANNING - Enhanced Pipeline & History Only
+    // =============================================================================
+
+
+    "/cards/scan/history": {
+      get: {
+        tags: ["Card Scanning"],
+        summary: "Get user's scanning history",
+        description: "Retrieve the user's card scanning history with pagination",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "query",
+            name: "page",
+            schema: { type: "integer", minimum: 1, default: 1 },
+            description: "Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: { type: "integer", minimum: 1, maximum: 100, default: 20 },
+            description: "Number of records per page",
+          },
+          {
+            in: "query",
+            name: "gameType",
+            schema: {
+              type: "string",
+              enum: ["onepiece", "pokemon", "yugioh"],
+            },
+            description: "Filter by game type",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Scanning history retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "object",
+                      properties: {
+                        scans: {
+                          type: "array",
+                          items: {
+                            type: "object",
+                            properties: {
+                              scanId: { type: "string" },
+                              gameType: { type: "string" },
+                              confidence: { type: "number" },
+                              selectedCard: {
+                                type: "object",
+                                properties: {
+                                  name: { type: "string" },
+                                  setName: { type: "string" },
+                                },
+                              },
+                              scannedAt: { type: "string", format: "date-time" },
+                              processingTime: { type: "number" },
+                            },
+                          },
+                        },
+                        total: { type: "integer" },
+                        pagination: {
+                          type: "object",
+                          properties: {
+                            page: { type: "integer" },
+                            limit: { type: "integer" },
+                            totalPages: { type: "integer" },
+                            hasNext: { type: "boolean" },
+                            hasPrev: { type: "boolean" },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    // =============================================================================
+    // ENHANCED CARD SCANNING - 4-Step AI Pipeline
+    // =============================================================================
+    "/cards/scan/enhanced": {
+      post: {
+        tags: ["Card Scanning"],
+        summary: "Enhanced 5-step card scanning pipeline with Set Code Recognition",
+        description: "Advanced card scanning using 5-step AI pipeline: 1) Game Type Classification, 2) Enhanced OCR, 2.5) Set Code Recognition, 3) Smart Search, 4) Visual Matching, 5) Intelligent Results. This is the primary card scanning method.",
+        security: [{ bearerAuth: [] }],
+        requestBody: {
+          required: true,
+          content: {
+            "multipart/form-data": {
+              schema: {
+                type: "object",
+                required: ["image"],
+                properties: {
+                  image: {
+                    type: "string",
+                    format: "binary",
+                    description: "Card image file (JPEG, PNG, WebP - max 10MB)",
+                  },
+                  gameType: {
+                    type: "string",
+                    enum: ["pokemon", "yugioh", "onepiece"],
+                    description: "Game type (optional - will auto-detect if not provided)",
+                  },
+                  location: {
+                    type: "string",
+                    description: "JSON string with user location data",
+                    example: '{"latitude": 37.7749, "longitude": -122.4194, "city": "San Francisco"}',
+                  },
+                  userPreferences: {
+                    type: "string",
+                    description: "JSON string with user scanning preferences",
+                    example: '{"preferredLanguage": "en", "confidenceThreshold": 0.8}',
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          200: {
+            description: "Card scanned successfully using 5-step pipeline with set code recognition",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean", example: true },
+                    data: {
+                      type: "object",
+                      properties: {
+                        pipeline: {
+                          type: "object",
+                          description: "Detailed information about each pipeline step",
+                          properties: {
+                            step1_gameType: {
+                              type: "object",
+                              properties: {
+                                detected: { type: "string", example: "yugioh" },
+                                confidence: { type: "number", example: 92 },
+                                provided: { type: "boolean", example: false }
+                              }
+                            },
+                            step2_ocr: {
+                              type: "object",
+                              properties: {
+                                cardName: { type: "string", example: "Dark Magician" },
+                                primaryStats: { 
+                                  type: "object",
+                                  example: { "ATK": "2500", "DEF": "2100", "Level": "7" }
+                                },
+                                confidence: { type: "number", example: 85 },
+                                extractedWords: { type: "number", example: 15 }
+                              }
+                            },
+                            step2_5_setCode: {
+                              type: "object",
+                              properties: {
+                                detectedSetCodes: { 
+                                  type: "array", 
+                                  items: { type: "string" },
+                                  example: ["YMPI", "YMPP", "YMII"]
+                                },
+                                setCodeCount: { type: "number", example: 3 },
+                                hasSetCodeFiltering: { type: "boolean", example: true },
+                                databaseMatches: { type: "number", example: 2 }
+                              }
+                            },
+                            step3_search: {
+                              type: "object",
+                              properties: {
+                                strategy: { type: "string", example: "set_specific_exact_name_match_with_set_priority" },
+                                candidatesFound: { type: "number", example: 3 },
+                                candidatesAfterSetCodeFiltering: { type: "number", example: 3 },
+                                totalCardsSearched: { type: "number", example: 13 },
+                                searchTime: { type: "number", example: 4 }
+                              }
+                            },
+                            step4_visual: {
+                              type: "object",
+                              properties: {
+                                variantsFound: { type: "number", example: 1 },
+                                visualMatches: { type: "number", example: 1 },
+                                topVisualMatch: {
+                                  type: "object",
+                                  properties: {
+                                    cardId: { type: "string" },
+                                    imageUrl: { type: "string" },
+                                    visualSimilarity: { type: "number", example: 0.93 },
+                                    matchType: { type: "string", example: "exact" },
+                                    textConfidence: { type: "number", example: 95 },
+                                    combinedScore: { type: "number", example: 0.938 }
+                                  }
+                                }
+                              }
+                            },
+                            step5_results: {
+                              type: "object",
+                              properties: {
+                                topMatch: {
+                                  type: "object",
+                                  description: "Best matching card with enhanced scoring"
+                                },
+                                allCandidates: { type: "number", example: 1 },
+                                withVisualData: { type: "number", example: 1 }
+                              }
+                            }
+                          }
+                        },
+                        candidates: {
+                          type: "array",
+                          description: "Ranked list of matching cards",
+                          items: {
+                            type: "object",
+                            properties: {
+                              cardId: { type: "string", example: "60a1b2c3d4e5f6789012345" },
+                              name: { type: "string", example: "Dark Magician" },
+                              setName: { type: "string", example: "Legend of Blue Eyes White Dragon" },
+                              rarity: { type: "string", example: "Ultra Rare" },
+                              confidence: { type: "string", example: "92%" },
+                              matchReason: { type: "string", example: "Fuzzy name match (92% similarity)" },
+                              matchedFields: { 
+                                type: "array", 
+                                items: { type: "string" },
+                                example: ["name", "stats"]
+                              },
+                              imageUrl: { type: "string" }
+                            }
+                          }
+                        },
+                        topMatch: {
+                          type: "object",
+                          description: "The highest confidence match",
+                          nullable: true
+                        },
+                        scanTime: { type: "number", example: 1850, description: "Total processing time in milliseconds" },
+                        method: { type: "string", example: "enhanced_5_step_pipeline_with_set_codes" },
+                        gameType: { type: "string", example: "yugioh" },
+                        confidence: { type: "string", example: "92%" },
+                        requiresSetSelection: { type: "boolean", example: false }
+                      },
+                    },
+                    message: { type: "string", example: "Card identified successfully using 5-step pipeline with set code recognition" },
+                  },
+                },
+              },
+            },
+          },
+          400: {
+            description: "Invalid request parameters",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean", example: false },
+                    error: { type: "string", example: "Image file is required" },
+                    method: { type: "string", example: "enhanced_5_step_pipeline_with_set_codes" }
+                  },
+                },
+              },
+            },
+          },
+          401: {
+            description: "Unauthorized - Invalid or missing token",
+            content: {
+              "application/json": {
+                schema: { $ref: "#/components/schemas/Error" },
+              },
+            },
+          },
+          429: {
+            description: "Rate limit exceeded (15 enhanced scans per minute)",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean", example: false },
+                    error: { type: "string", example: "Rate limit exceeded. Try again later." },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    // =============================================================================
+    // PUBLIC CARD ROUTES - No authentication required
+    // =============================================================================
+    "/cards/public/{type}": {
+      get: {
+        tags: ["Cards - Public"],
+        summary: "Get cards by game type with game-specific filtering (public endpoint - no auth required)",
+        description: "Search and filter cards with fuzzy name search and game-specific attributes. Parameters are organized by game type for easier frontend integration.",
+        parameters: [
+          {
+            in: "path",
+            name: "type",
+            required: true,
+            schema: {
+              type: "string",
+              enum: ["pokemon", "yugioh", "onepiece"],
+            },
+            description: "Game type determines which game-specific parameters are applicable",
+          },
+          // ===== COMMON PARAMETERS (All Game Types) =====
+          {
+            in: "query",
+            name: "page",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              default: 1,
+            },
+            description: "📄 [ALL GAMES] Page number for pagination",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              maximum: 100,
+              default: 20,
+            },
+            description: "📄 [ALL GAMES] Number of cards per page",
+          },
+          {
+            in: "query",
+            name: "search",
+            schema: {
+              type: "string",
+            },
+            description: "🔍 [ALL GAMES] Fuzzy search for card names. Example: 'zoro' finds 'Roronoa Zoro'",
+          },
+          {
+            in: "query",
+            name: "sortBy",
+            schema: {
+              type: "string",
+              enum: ["name", "price", "number", "createdAt"],
+            },
+            description: "📊 [ALL GAMES] Sort field. Use game-specific sortBy values for advanced sorting",
+          },
+          {
+            in: "query",
+            name: "sortOrder",
+            schema: {
+              type: "string",
+              enum: ["asc", "desc"],
+            },
+            description: "📊 [ALL GAMES] Sort order",
+          },
+          {
+            in: "query",
+            name: "rarity",
+            schema: {
+              type: "string",
+            },
+            description: "💎 [ALL GAMES] Filter by card rarity (e.g., 'Common', 'Rare', 'Ultra Rare')",
+          },
+          {
+            in: "query",
+            name: "setId",
+            schema: {
+              type: "string",
+            },
+            description: "📦 [ALL GAMES] Filter by card set ID",
+          },
+          {
+            in: "query",
+            name: "minPrice",
+            schema: {
+              type: "number",
+              minimum: 0,
+            },
+            description: "💰 [ALL GAMES] Minimum price filter (TCGPlayer market price)",
+          },
+          {
+            in: "query",
+            name: "maxPrice",
+            schema: {
+              type: "number",
+              minimum: 0,
+            },
+            description: "💰 [ALL GAMES] Maximum price filter (TCGPlayer market price)",
+          },
+          {
+            in: "query",
+            name: "description",
+            schema: {
+              type: "string",
+            },
+            description: "📝 [ALL GAMES] Search in card description/effect text",
+          },
+          // ===== ONE PIECE SPECIFIC PARAMETERS =====
+          {
+            in: "query",
+            name: "cardType",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE] Card type: 'Leader', 'Character', 'Event', 'Stage' | 🎮 [POKEMON] Type/Color: 'Fire', 'Water', 'Lightning', 'Grass', etc. | 🃏 [YU-GI-OH] Card type: 'Monster', 'Spell', 'Trap'",
+          },
+          {
+            in: "query",
+            name: "color",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Card color: 'Red', 'Green', 'Blue', 'Purple', 'Black', 'Yellow'",
+          },
+          {
+            in: "query",
+            name: "cost",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Energy cost to play the card (0-10)",
+          },
+          {
+            in: "query",
+            name: "power",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Character power/attack value",
+          },
+          {
+            in: "query",
+            name: "life",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Leader life points (typically 4-5)",
+          },
+          {
+            in: "query",
+            name: "attribute",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE] Combat attribute: 'Strike', 'Slash', 'Ranged', 'Special' | 🃏 [YU-GI-OH] Monster attribute: 'FIRE', 'WATER', 'EARTH', 'WIND', 'LIGHT', 'DARK'",
+          },
+          {
+            in: "query",
+            name: "subtype",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE] Character faction: 'Straw Hat Crew', 'Marine', 'Whitebeard Pirates', etc. | 🃏 [YU-GI-OH] Monster type: 'Warrior', 'Spellcaster', 'Dragon', etc.",
+          },
+          // ===== POKEMON SPECIFIC PARAMETERS =====
+          {
+            in: "query",
+            name: "hp",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🎮 [POKEMON ONLY] Pokemon HP/health points (10-340)",
+          },
+          {
+            in: "query",
+            name: "stage",
+            schema: {
+              type: "string",
+            },
+            description: "🎮 [POKEMON ONLY] Evolution stage: 'Basic', 'Stage 1', 'Stage 2', 'BREAK', 'GX', 'V', 'VMAX'",
+          },
+          // ===== YU-GI-OH SPECIFIC PARAMETERS =====
+          {
+            in: "query",
+            name: "defense",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🃏 [YU-GI-OH ONLY] Monster defense points (0-5000)",
+          },
+          {
+            in: "query",
+            name: "level",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🃏 [YU-GI-OH ONLY] Monster level/rank (1-12)",
+          },
+          {
+            in: "query",
+            name: "monsterType",
+            schema: {
+              type: "string",
+            },
+            description: "🃏 [YU-GI-OH ONLY] Monster type: 'Warrior', 'Spellcaster', 'Dragon', 'Machine', etc. (same as subtype but more specific for monsters)",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Cards retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      type: "array",
+                      items: {
+                        $ref: "#/components/schemas/UnifiedCard",
+                      },
+                    },
+                    pagination: {
+                      $ref: "#/components/schemas/Pagination",
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/cards/public/{type}/search": {
+      get: {
+        tags: ["Cards - Public"],
+        summary: "Search cards by game type with game-specific filtering (public endpoint - no auth required)",
+        description: "Advanced search with fuzzy name matching and game-specific filtering. Parameters are clearly categorized by game type for easier frontend development.",
+        parameters: [
+          {
+            in: "path",
+            name: "type",
+            required: true,
+            schema: {
+              type: "string",
+              enum: ["pokemon", "yugioh", "onepiece"],
+            },
+            description: "Game type determines which game-specific parameters are applicable",
+          },
+          {
+            in: "query",
+            name: "q",
+            required: true,
+            schema: {
+              type: "string",
+              minLength: 1,
+            },
+            description: "🔍 [ALL GAMES] Search query with fuzzy matching. Supports partial names and splits terms for better results.",
+          },
+          // ===== COMMON PARAMETERS =====
+          {
+            in: "query",
+            name: "page",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              default: 1,
+            },
+            description: "📄 [ALL GAMES] Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              maximum: 100,
+              default: 20,
+            },
+            description: "📄 [ALL GAMES] Number of cards per page",
+          },
+          {
+            in: "query",
+            name: "sortBy",
+            schema: {
+              type: "string",
+              enum: ["name", "price", "number"],
+            },
+            description: "📊 [ALL GAMES] Sort field",
+          },
+          {
+            in: "query",
+            name: "sortOrder",
+            schema: {
+              type: "string",
+              enum: ["asc", "desc"],
+            },
+            description: "📊 [ALL GAMES] Sort order",
+          },
+          {
+            in: "query",
+            name: "rarity",
+            schema: {
+              type: "string",
+            },
+            description: "💎 [ALL GAMES] Filter by card rarity",
+          },
+          {
+            in: "query",
+            name: "minPrice",
+            schema: {
+              type: "number",
+              minimum: 0,
+            },
+            description: "💰 [ALL GAMES] Minimum price filter",
+          },
+          {
+            in: "query",
+            name: "maxPrice",
+            schema: {
+              type: "number",
+              minimum: 0,
+            },
+            description: "💰 [ALL GAMES] Maximum price filter",
+          },
+          {
+            in: "query",
+            name: "description",
+            schema: {
+              type: "string",
+            },
+            description: "📝 [ALL GAMES] Search in card description/effect text",
+          },
+          // ===== GAME-SPECIFIC PARAMETERS =====
+          {
+            in: "query",
+            name: "cardType",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE] 'Leader', 'Character', 'Event' | 🎮 [POKEMON] 'Fire', 'Water', 'Lightning' | 🃏 [YU-GI-OH] 'Monster', 'Spell', 'Trap'",
+          },
+          {
+            in: "query",
+            name: "color",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Card color: 'Red', 'Green', 'Blue', 'Purple', 'Black', 'Yellow'",
+          },
+          {
+            in: "query",
+            name: "cost",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Energy cost (0-10)",
+          },
+          {
+            in: "query",
+            name: "power",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Character power value",
+          },
+          {
+            in: "query",
+            name: "life",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Leader life points",
+          },
+          {
+            in: "query",
+            name: "attribute",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE] 'Strike', 'Slash', 'Ranged' | 🃏 [YU-GI-OH] 'FIRE', 'WATER', 'EARTH', 'WIND'",
+          },
+          {
+            in: "query",
+            name: "subtype",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE] 'Straw Hat Crew', 'Marine' | 🃏 [YU-GI-OH] 'Warrior', 'Dragon', 'Spellcaster'",
+          },
+          {
+            in: "query",
+            name: "hp",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🎮 [POKEMON ONLY] Pokemon HP (10-340)",
+          },
+          {
+            in: "query",
+            name: "stage",
+            schema: {
+              type: "string",
+            },
+            description: "🎮 [POKEMON ONLY] Evolution stage: 'Basic', 'Stage 1', 'Stage 2', 'GX', 'V', 'VMAX'",
+          },
+          {
+            in: "query",
+            name: "defense",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🃏 [YU-GI-OH ONLY] Monster defense points (0-5000)",
+          },
+          {
+            in: "query",
+            name: "level",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🃏 [YU-GI-OH ONLY] Monster level/rank (1-12)",
+          },
+          {
+            in: "query",
+            name: "monsterType",
+            schema: {
+              type: "string",
+            },
+            description: "🃏 [YU-GI-OH ONLY] Monster type: 'Warrior', 'Spellcaster', 'Dragon', 'Machine'",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Search results retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      type: "array",
+                      items: {
+                        $ref: "#/components/schemas/UnifiedCard",
+                      },
+                    },
+                    pagination: {
+                      $ref: "#/components/schemas/Pagination",
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/cards/public/{type}/stats": {
+      get: {
+        tags: ["Cards - Public"],
+        summary:
+          "Get card statistics for a specific game type (public endpoint - no auth required)",
+        parameters: [
+          {
+            in: "path",
+            name: "type",
+            required: true,
+            schema: {
+              type: "string",
+              enum: ["pokemon", "yugioh", "onepiece"],
+            },
+            description: "Game type to get statistics for",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Card statistics retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      type: "object",
+                      properties: {
+                        totalCards: {
+                          type: "integer",
+                        },
+                        lastUpdated: {
+                          type: "string",
+                          format: "date-time",
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/cards/public/stats": {
+      get: {
+        tags: ["Cards - Public"],
+        summary:
+          "Get general card statistics (public endpoint - no auth required)",
+        responses: {
+          "200": {
+            description: "Card statistics retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      type: "object",
+                      properties: {
+                        totalCards: {
+                          type: "integer",
+                        },
+                        cardsByGameType: {
+                          type: "object",
+                          properties: {
+                            pokemon: { type: "integer" },
+                            yugioh: { type: "integer" },
+                            onepiece: { type: "integer" },
+                          },
+                        },
+                        lastUpdated: {
+                          type: "string",
+                          format: "date-time",
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/cards/public/product/{productId}": {
+      get: {
+        tags: ["Cards - Public"],
+        summary:
+          "Get card by TCGPlayer Product ID (public endpoint - no auth required)",
+        parameters: [
+          {
+            in: "path",
+            name: "productId",
+            required: true,
+            schema: {
+              type: "integer",
+            },
+            description: "TCGPlayer Product ID",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Card retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      $ref: "#/components/schemas/UnifiedCard",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "404": {
+            description: "Card not found",
+          },
+        },
+      },
+    },
+    // =============================================================================
+    // AUTHENTICATED CARD ROUTES - Authentication required
+    // =============================================================================
+    "/cards": {
+      get: {
+        tags: ["Cards"],
+        summary: "Get all cards from all game types with enhanced filtering and pagination",
+        description: "Search and filter cards across all game types with fuzzy name matching and game-specific attributes. Requires authentication.",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "query",
+            name: "page",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              default: 1,
+            },
+            description: "Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              maximum: 100,
+              default: 20,
+            },
+            description: "Number of cards per page",
+          },
+          {
+            in: "query",
+            name: "search",
+            schema: {
+              type: "string",
+            },
+            description: "Fuzzy search for card names across all game types",
+          },
+          {
+            in: "query",
+            name: "sortBy",
+            schema: {
+              type: "string",
+              enum: ["name", "gameType", "price", "number", "cost", "power", "hp", "defense", "createdAt"],
+            },
+            description: "Sort field including game-specific attributes",
+          },
+          {
+            in: "query",
+            name: "sortOrder",
+            schema: {
+              type: "string",
+              enum: ["asc", "desc"],
+            },
+            description: "Sort order",
+          },
+          {
+            in: "query",
+            name: "rarity",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card rarity",
+          },
+          {
+            in: "query",
+            name: "setId",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card set ID",
+          },
+          {
+            in: "query",
+            name: "minPrice",
+            schema: {
+              type: "number",
+              minimum: 0,
+            },
+            description: "Minimum price filter",
+          },
+          {
+            in: "query",
+            name: "maxPrice",
+            schema: {
+              type: "number",
+              minimum: 0,
+            },
+            description: "Maximum price filter",
+          },
+          {
+            in: "query",
+            name: "cardType",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card type",
+          },
+          {
+            in: "query",
+            name: "color",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card color/type",
+          },
+          {
+            in: "query",
+            name: "attribute",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card attribute",
+          },
+          {
+            in: "query",
+            name: "subtype",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card subtype",
+          },
+          {
+            in: "query",
+            name: "cost",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact cost value",
+          },
+          {
+            in: "query",
+            name: "power",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact power value",
+          },
+          {
+            in: "query",
+            name: "life",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact life value",
+          },
+          {
+            in: "query",
+            name: "hp",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact HP value",
+          },
+          {
+            in: "query",
+            name: "stage",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by Pokemon stage",
+          },
+          {
+            in: "query",
+            name: "monsterType",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by Yu-Gi-Oh monster type",
+          },
+          {
+            in: "query",
+            name: "defense",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact defense value",
+          },
+          {
+            in: "query",
+            name: "level",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact level value",
+          },
+          {
+            in: "query",
+            name: "description",
+            schema: {
+              type: "string",
+            },
+            description: "Search in card description/effect text",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Cards retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      type: "array",
+                      items: {
+                        $ref: "#/components/schemas/UnifiedCard",
+                      },
+                    },
+                    pagination: {
+                      $ref: "#/components/schemas/Pagination",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "401": {
+            description: "Unauthorized",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/cards/{type}": {
+      get: {
+        tags: ["Cards"],
+        summary: "Get cards by game type with game-specific filtering (requires authentication)",
+        description: "Advanced card search with game-specific parameters organized by game type. Requires JWT authentication for access.",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "path",
+            name: "type",
+            required: true,
+            schema: {
+              type: "string",
+              enum: ["pokemon", "yugioh", "onepiece"],
+            },
+            description: "Game type - determines which game-specific parameters are available",
+          },
+          // ===== COMMON PARAMETERS (All Game Types) =====
+          {
+            in: "query",
+            name: "page",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              default: 1,
+            },
+            description: "📄 [ALL GAMES] Page number for pagination",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              maximum: 100,
+              default: 20,
+            },
+            description: "📄 [ALL GAMES] Number of cards per page",
+          },
+          {
+            in: "query",
+            name: "search",
+            schema: {
+              type: "string",
+            },
+            description: "🔍 [ALL GAMES] Fuzzy search for card names with partial matching",
+          },
+          {
+            in: "query",
+            name: "sortBy",
+            schema: {
+              type: "string",
+              enum: ["name", "price", "number", "createdAt"],
+            },
+            description: "📊 [ALL GAMES] Sort field including game-specific attributes",
+          },
+          {
+            in: "query",
+            name: "sortOrder",
+            schema: {
+              type: "string",
+              enum: ["asc", "desc"],
+            },
+            description: "📊 [ALL GAMES] Sort order",
+          },
+          {
+            in: "query",
+            name: "rarity",
+            schema: {
+              type: "string",
+            },
+            description: "💎 [ALL GAMES] Filter by card rarity",
+          },
+          {
+            in: "query",
+            name: "setId",
+            schema: {
+              type: "string",
+            },
+            description: "📦 [ALL GAMES] Filter by card set ID",
+          },
+          {
+            in: "query",
+            name: "minPrice",
+            schema: {
+              type: "number",
+              minimum: 0,
+            },
+            description: "💰 [ALL GAMES] Minimum price filter",
+          },
+          {
+            in: "query",
+            name: "maxPrice",
+            schema: {
+              type: "number",
+              minimum: 0,
+            },
+            description: "💰 [ALL GAMES] Maximum price filter",
+          },
+          {
+            in: "query",
+            name: "description",
+            schema: {
+              type: "string",
+            },
+            description: "📝 [ALL GAMES] Search in card description/effect text",
+          },
+          // ===== GAME-SPECIFIC PARAMETERS =====
+          {
+            in: "query",
+            name: "cardType",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE] Card type: 'Leader', 'Character', 'Event', 'Stage' | 🎮 [POKEMON] Pokemon type/color: 'Fire', 'Water', 'Lightning', 'Grass', 'Fighting', 'Psychic', 'Colorless', 'Metal', 'Fairy', 'Darkness' | 🃏 [YU-GI-OH] Card type: 'Monster', 'Spell', 'Trap'",
+          },
+          {
+            in: "query",
+            name: "color",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Card color: 'Red', 'Green', 'Blue', 'Purple', 'Black', 'Yellow' (not used for other games)",
+          },
+          {
+            in: "query",
+            name: "attribute",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE] Combat attribute: 'Strike', 'Slash', 'Ranged', 'Special' | 🃏 [YU-GI-OH] Monster attribute: 'FIRE', 'WATER', 'EARTH', 'WIND', 'LIGHT', 'DARK', 'DIVINE' (not used for Pokemon)",
+          },
+          {
+            in: "query",
+            name: "subtype",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE] Character faction: 'Straw Hat Crew', 'Marine', 'Whitebeard Pirates', 'Big Mom Pirates', etc. | 🃏 [YU-GI-OH] Monster type: 'Warrior', 'Spellcaster', 'Dragon', 'Machine', 'Beast', 'Zombie', etc. (not used for Pokemon)",
+          },
+          {
+            in: "query",
+            name: "cost",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Energy cost to play the card (typically 0-10, not used for other games)",
+          },
+          {
+            in: "query",
+            name: "power",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Character power/attack value (typically 1000-12000, not used for other games)",
+          },
+          {
+            in: "query",
+            name: "life",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Leader life points (typically 4-5, not used for other games)",
+          },
+          {
+            in: "query",
+            name: "hp",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🎮 [POKEMON ONLY] Pokemon HP/health points (typically 10-340, not used for other games)",
+          },
+          {
+            in: "query",
+            name: "stage",
+            schema: {
+              type: "string",
+            },
+            description: "🎮 [POKEMON ONLY] Evolution stage: 'Basic', 'Stage 1', 'Stage 2', 'BREAK', 'GX', 'V', 'VMAX', 'VSTAR' (not used for other games)",
+          },
+          {
+            in: "query",
+            name: "monsterType",
+            schema: {
+              type: "string",
+            },
+            description: "🃏 [YU-GI-OH ONLY] Monster type (same as subtype but more specific): 'Warrior', 'Spellcaster', 'Dragon', 'Machine', 'Beast', 'Zombie', 'Fiend', etc. (not used for other games)",
+          },
+          {
+            in: "query",
+            name: "defense",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🃏 [YU-GI-OH ONLY] Monster defense points (typically 0-5000, not used for other games)",
+          },
+          {
+            in: "query",
+            name: "level",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🃏 [YU-GI-OH ONLY] Monster level/rank (typically 1-12, not used for other games)",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Cards retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      type: "array",
+                      items: {
+                        $ref: "#/components/schemas/UnifiedCard",
+                      },
+                    },
+                    pagination: {
+                      $ref: "#/components/schemas/Pagination",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "400": {
+            description: "Invalid game type or parameters",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/ValidationError",
+                },
+              },
+            },
+          },
+          "401": {
+            description: "Unauthorized",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/cards/card/{cardId}": {
+      get: {
+        tags: ["Cards"],
+        summary: "Get specific card by ID",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "path",
+            name: "cardId",
+            required: true,
+            schema: {
+              type: "string",
+            },
+            description: "Card ID",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Card retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      $ref: "#/components/schemas/UnifiedCard",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "404": {
+            description: "Card not found",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+          "401": {
+            description: "Unauthorized",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/cards/{type}/stats": {
+      get: {
+        tags: ["Cards"],
+        summary: "Get card statistics for a specific game type",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "path",
+            name: "type",
+            required: true,
+            schema: {
+              type: "string",
+              enum: ["pokemon", "yugioh", "onepiece"],
+            },
+            description: "Game type to get statistics for",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Card statistics retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      type: "object",
+                      properties: {
+                        totalCards: {
+                          type: "integer",
+                        },
+                        cardsByGameType: {
+                          type: "object",
+                          properties: {
+                            pokemon: {
+                              type: "integer",
+                            },
+                            yugioh: {
+                              type: "integer",
+                            },
+                            onepiece: {
+                              type: "integer",
+                            },
+                          },
+                        },
+                        lastUpdated: {
+                          type: "string",
+                          format: "date-time",
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "401": {
+            description: "Unauthorized",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/cards/sets/{setId}": {
+      get: {
+        tags: ["Cards"],
+        summary: "Get cards by set ID with enhanced filtering",
+        description: "Get all cards from a specific set with advanced filtering options by game-specific attributes.",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "path",
+            name: "setId",
+            required: true,
+            schema: {
+              type: "string",
+            },
+            description: "Set ID",
+          },
+          {
+            in: "query",
+            name: "page",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              default: 1,
+            },
+            description: "Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              maximum: 100,
+              default: 20,
+            },
+            description: "Number of cards per page",
+          },
+          {
+            in: "query",
+            name: "search",
+            schema: {
+              type: "string",
+            },
+            description: "Search card names within the set",
+          },
+          {
+            in: "query",
+            name: "sortBy",
+            schema: {
+              type: "string",
+              enum: ["name", "number", "cost", "power", "hp", "defense"],
+            },
+            description: "Sort field",
+          },
+          {
+            in: "query",
+            name: "sortOrder",
+            schema: {
+              type: "string",
+              enum: ["asc", "desc"],
+            },
+            description: "Sort order",
+          },
+          {
+            in: "query",
+            name: "cardType",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card type",
+          },
+          {
+            in: "query",
+            name: "color",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card color/type",
+          },
+          {
+            in: "query",
+            name: "attribute",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card attribute",
+          },
+          {
+            in: "query",
+            name: "subtype",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card subtype",
+          },
+          {
+            in: "query",
+            name: "cost",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact cost value",
+          },
+          {
+            in: "query",
+            name: "power",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact power value",
+          },
+          {
+            in: "query",
+            name: "life",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact life value",
+          },
+          {
+            in: "query",
+            name: "hp",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact HP value",
+          },
+          {
+            in: "query",
+            name: "stage",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by Pokemon stage",
+          },
+          {
+            in: "query",
+            name: "monsterType",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by Yu-Gi-Oh monster type",
+          },
+          {
+            in: "query",
+            name: "defense",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact defense value",
+          },
+          {
+            in: "query",
+            name: "level",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact level value",
+          },
+          {
+            in: "query",
+            name: "description",
+            schema: {
+              type: "string",
+            },
+            description: "Search in card description/effect text",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Cards retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      type: "array",
+                      items: {
+                        $ref: "#/components/schemas/UnifiedCard",
+                      },
+                    },
+                    pagination: {
+                      $ref: "#/components/schemas/Pagination",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "401": {
+            description: "Unauthorized",
+          },
+          "404": {
+            description: "Set not found",
+          },
+        },
+      },
+    },
+    "/cards/stats": {
+      get: {
+        tags: ["Cards"],
+        summary: "Get general card statistics across all game types",
+        security: [{ bearerAuth: [] }],
+        responses: {
+          "200": {
+            description: "Card statistics retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      type: "object",
+                      properties: {
+                        totalCards: {
+                          type: "integer",
+                        },
+                        cardsByGameType: {
+                          type: "object",
+                          properties: {
+                            pokemon: { type: "integer" },
+                            yugioh: { type: "integer" },
+                            onepiece: { type: "integer" },
+                          },
+                        },
+                        lastUpdated: {
+                          type: "string",
+                          format: "date-time",
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "401": {
+            description: "Unauthorized",
+          },
+        },
+      },
+    },
+    "/cards/product/{productId}": {
+      get: {
+        tags: ["Cards"],
+        summary: "Get card by TCGPlayer Product ID",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "path",
+            name: "productId",
+            required: true,
+            schema: {
+              type: "integer",
+            },
+            description: "TCGPlayer Product ID",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Card retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      $ref: "#/components/schemas/UnifiedCard",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "401": {
+            description: "Unauthorized",
+          },
+          "404": {
+            description: "Card not found",
+          },
+        },
+      },
+    },
+    "/sets": {
+      get: {
+        tags: ["Sets"],
+        summary:
+          "Get all sets from all game types with pagination and filtering",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "query",
+            name: "page",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              default: 1,
+            },
+            description: "Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              maximum: 100,
+              default: 20,
+            },
+            description: "Number of sets per page",
+          },
+          {
+            in: "query",
+            name: "sortBy",
+            schema: {
+              type: "string",
+              enum: ["name", "gameType", "groupId", "createdAt"],
+            },
+            description: "Sort field",
+          },
+          {
+            in: "query",
+            name: "sortOrder",
+            schema: {
+              type: "string",
+              enum: ["asc", "desc"],
+            },
+            description: "Sort order",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Sets retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      type: "array",
+                      items: {
+                        $ref: "#/components/schemas/UnifiedSet",
+                      },
+                    },
+                    pagination: {
+                      $ref: "#/components/schemas/Pagination",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "401": {
+            description: "Unauthorized",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/sets/{gameType}": {
+      get: {
+        tags: ["Sets"],
+        summary: "Get sets by game type with pagination and filtering",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "path",
+            name: "gameType",
+            required: true,
+            schema: {
+              type: "string",
+              enum: ["pokemon", "yugioh", "onepiece"],
+            },
+            description: "Game type (pokemon, yugioh, or onepiece)",
+          },
+          {
+            in: "query",
+            name: "page",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              default: 1,
+            },
+            description: "Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              maximum: 100,
+              default: 20,
+            },
+            description: "Number of sets per page",
+          },
+          {
+            in: "query",
+            name: "sortBy",
+            schema: {
+              type: "string",
+              enum: ["name", "groupId", "publishedOn"],
+            },
+            description: "Sort field",
+          },
+          {
+            in: "query",
+            name: "sortOrder",
+            schema: {
+              type: "string",
+              enum: ["asc", "desc"],
+            },
+            description: "Sort order",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Sets retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: {
+                      type: "boolean",
+                      example: true,
+                    },
+                    data: {
+                      type: "array",
+                      items: {
+                        $ref: "#/components/schemas/UnifiedSet",
+                      },
+                    },
+                    pagination: {
+                      $ref: "#/components/schemas/Pagination",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "400": {
+            description: "Invalid game type or parameters",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/ValidationError",
+                },
+              },
+            },
+          },
+          "401": {
+            description: "Unauthorized",
+            content: {
+              "application/json": {
+                schema: {
+                  $ref: "#/components/schemas/Error",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
   },
   components: {
     securitySchemes: {
@@ -3756,7 +4792,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
           },
           category: {
             type: "string",
-            enum: ["PokemonCard", "YugiohCard"],
+            enum: ["PokemonCard", "YugiohCard", "OnePieceCard"],
             description: "Card category",
           },
           addedAt: {
@@ -3782,7 +4818,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
           },
           type: {
             type: "string",
-            description: "Card category (pokemon or yugioh)",
+            description: "Card category (pokemon, yugioh, or onepiece)",
           },
           desc: {
             type: "string",
@@ -3844,7 +4880,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
           },
           category: {
             type: "string",
-            enum: ["PokemonCard", "YugiohCard"],
+            enum: ["PokemonCard", "YugiohCard", "OnePieceCard"],
             description: "Card category",
           },
           format: {
@@ -3872,206 +4908,6 @@ export const swaggerDoc: OpenAPIV3.Document = {
             type: "array",
             items: { type: "string" },
             description: "Deck tags",
-          },
-          createdAt: {
-            type: "string",
-            format: "date-time",
-          },
-          updatedAt: {
-            type: "string",
-            format: "date-time",
-          },
-        },
-      },
-      PokemonDeck: {
-        type: "object",
-        properties: {
-          _id: {
-            type: "string",
-            description: "Pokemon deck ID",
-          },
-          name: {
-            type: "string",
-            description: "Deck name",
-          },
-          description: {
-            type: "string",
-            description: "Deck description",
-          },
-          extId: {
-            type: "string",
-            description: "External deck ID",
-          },
-          types: {
-            type: "array",
-            items: { type: "string" },
-            description: "Pokemon types in deck",
-          },
-          legality: {
-            type: "object",
-            properties: {
-              standard: { type: "boolean" },
-              expanded: { type: "boolean" },
-              unlimited: { type: "boolean" },
-            },
-            description: "Format legality",
-          },
-          cards: {
-            type: "array",
-            items: {
-              type: "object",
-              properties: {
-                count: { type: "integer" },
-                cardDetails: {
-                  type: "object",
-                  properties: {
-                    id: { type: "string" },
-                    name: { type: "string" },
-                    supertype: { type: "string" },
-                    subtypes: {
-                      type: "array",
-                      items: { type: "string" },
-                    },
-                    hp: { type: "string" },
-                    types: {
-                      type: "array",
-                      items: { type: "string" },
-                    },
-                    attacks: {
-                      type: "array",
-                      items: {
-                        type: "object",
-                        properties: {
-                          name: { type: "string" },
-                          cost: {
-                            type: "array",
-                            items: { type: "string" },
-                          },
-                          convertedEnergyCost: { type: "integer" },
-                          damage: { type: "string" },
-                          text: { type: "string" },
-                        },
-                      },
-                    },
-                    weaknesses: {
-                      type: "array",
-                      items: {
-                        type: "object",
-                        properties: {
-                          type: { type: "string" },
-                          value: { type: "string" },
-                        },
-                      },
-                    },
-                    resistances: {
-                      type: "array",
-                      items: {
-                        type: "object",
-                        properties: {
-                          type: { type: "string" },
-                          value: { type: "string" },
-                        },
-                      },
-                    },
-                    retreatCost: {
-                      type: "array",
-                      items: { type: "string" },
-                    },
-                    convertedRetreatCost: { type: "integer" },
-                    set: {
-                      type: "object",
-                      properties: {
-                        id: { type: "string" },
-                        name: { type: "string" },
-                        series: { type: "string" },
-                        printedTotal: { type: "integer" },
-                        total: { type: "integer" },
-                        legalities: {
-                          type: "object",
-                          additionalProperties: { type: "string" },
-                        },
-                        releaseDate: { type: "string" },
-                        updatedAt: { type: "string" },
-                        images: {
-                          type: "object",
-                          properties: {
-                            symbol: { type: "string" },
-                            logo: { type: "string" },
-                          },
-                        },
-                      },
-                    },
-                    number: { type: "string" },
-                    artist: { type: "string" },
-                    rarity: { type: "string" },
-                    flavorText: { type: "string" },
-                    nationalPokedexNumbers: {
-                      type: "array",
-                      items: { type: "integer" },
-                    },
-                    legalities: {
-                      type: "object",
-                      additionalProperties: { type: "string" },
-                    },
-                    images: {
-                      type: "object",
-                      properties: {
-                        small: { type: "string" },
-                        large: { type: "string" },
-                      },
-                    },
-                    tcgplayer: {
-                      type: "object",
-                      properties: {
-                        url: { type: "string" },
-                        updatedAt: { type: "string" },
-                        prices: {
-                          type: "object",
-                          additionalProperties: {
-                            type: "object",
-                            properties: {
-                              low: { type: "number" },
-                              mid: { type: "number" },
-                              high: { type: "number" },
-                              market: { type: "number" },
-                              directLow: { type: "number" },
-                            },
-                          },
-                        },
-                      },
-                    },
-                    cardmarket: {
-                      type: "object",
-                      properties: {
-                        url: { type: "string" },
-                        updatedAt: { type: "string" },
-                        prices: {
-                          type: "object",
-                          properties: {
-                            averageSellPrice: { type: "number" },
-                            lowPrice: { type: "number" },
-                            trendPrice: { type: "number" },
-                            germanProLow: { type: "number" },
-                            suggestedPrice: { type: "number" },
-                            reverseHoloSell: { type: "number" },
-                            reverseHoloLow: { type: "number" },
-                            reverseHoloTrend: { type: "number" },
-                            lowPriceExPlus: { type: "number" },
-                            avg1: { type: "number" },
-                            avg7: { type: "number" },
-                            avg30: { type: "number" },
-                            reverseHoloAvg1: { type: "number" },
-                            reverseHoloAvg7: { type: "number" },
-                            reverseHoloAvg30: { type: "number" },
-                          },
-                        },
-                      },
-                    },
-                  },
-                },
-              },
-            },
-            description: "Cards in deck with details",
           },
           createdAt: {
             type: "string",
@@ -4142,8 +4978,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
           },
           setType: {
             type: "string",
-            enum: ["pokemon", "yugioh"],
-            description: "Set category (pokemon or yugioh)",
+            enum: ["pokemon", "yugioh", "onepiece"],
+            description: "Set category (pokemon, yugioh, or onepiece)",
           },
           createdAt: {
             type: "string",
@@ -4174,7 +5010,10 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "object",
               properties: {
                 cardId: { type: "string" },
-                cardType: { type: "string", enum: ["pokemon", "yugioh"] },
+                cardType: {
+                  type: "string",
+                  enum: ["pokemon", "yugioh", "onepiece"],
+                },
               },
             },
             description: "Referenced cards",
@@ -4195,7 +5034,6 @@ export const swaggerDoc: OpenAPIV3.Document = {
             description: "Tagged users",
           },
           likesCount: { type: "integer", description: "Number of likes" },
-          dislikesCount: { type: "integer", description: "Number of dislikes" },
           commentsCount: { type: "integer", description: "Number of comments" },
           createdAt: { type: "string", format: "date-time" },
           updatedAt: { type: "string", format: "date-time" },
@@ -4215,7 +5053,6 @@ export const swaggerDoc: OpenAPIV3.Document = {
             description: "Tagged users",
           },
           likesCount: { type: "integer", description: "Number of likes" },
-          dislikesCount: { type: "integer", description: "Number of dislikes" },
           repliesCount: { type: "integer", description: "Number of replies" },
           createdAt: { type: "string", format: "date-time" },
           updatedAt: { type: "string", format: "date-time" },
@@ -4231,10 +5068,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             type: "string",
             enum: [
               "post_like",
-              "post_dislike",
               "post_comment",
               "comment_like",
-              "comment_dislike",
               "comment_reply",
               "post_tag",
               "comment_tag",
@@ -4271,7 +5106,11 @@ export const swaggerDoc: OpenAPIV3.Document = {
           _id: { type: "string", description: "User ID" },
           firstName: { type: "string", description: "First name" },
           lastName: { type: "string", description: "Last name" },
-          avatarUrl: { type: "string", format: "uri", description: "Avatar URL" },
+          avatarUrl: {
+            type: "string",
+            format: "uri",
+            description: "Avatar URL",
+          },
           friendshipId: { type: "string", description: "Friendship ID" },
           friendsSince: { type: "string", format: "date-time" },
         },
@@ -4329,7 +5168,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
             format: "password",
             minLength: 8,
             pattern: "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)",
-            description: "New password (must contain uppercase, lowercase, and number)",
+            description:
+              "New password (must contain uppercase, lowercase, and number)",
             example: "NewSecurePass123",
           },
         },
@@ -4366,6 +5206,561 @@ export const swaggerDoc: OpenAPIV3.Document = {
           },
         },
         description: "HOTP operation error response",
+      },
+      UnifiedCard: {
+        type: "object",
+        properties: {
+          _id: {
+            type: "string",
+            description: "MongoDB document ID",
+            example: "68e15a102b74a9f502f033c1",
+          },
+          productId: {
+            type: "integer",
+            description: "TCGPlayer Product ID (unique)",
+            example: 24825,
+          },
+          cardSet: {
+            type: "object",
+            properties: {
+              _id: {
+                type: "string",
+                description: "Card set MongoDB ID",
+              },
+              name: {
+                type: "string",
+                description: "Card set name",
+              },
+              abbreviation: {
+                type: "string",
+                description: "Card set abbreviation",
+              },
+              gameType: {
+                type: "string",
+                enum: ["pokemon", "yugioh", "onepiece"],
+                description: "Game type",
+              },
+            },
+            description: "Populated card set information",
+          },
+          name: {
+            type: "string",
+            description: "Card name",
+            example: '"A Case for K9"',
+          },
+          cleanName: {
+            type: "string",
+            description: "Cleaned card name without quotes/extras",
+            example: "A Case for K9",
+          },
+          imageUrl: {
+            type: "string",
+            description: "Main card image URL",
+            example:
+              "https://tcgplayer-cdn.tcgplayer.com/product/24825_200w.jpg",
+          },
+          categoryId: {
+            type: "integer",
+            description: "TCGPlayer category ID",
+            example: 2,
+          },
+          groupId: {
+            type: "integer",
+            description: "TCGPlayer group ID",
+            example: 173,
+          },
+          gameType: {
+            type: "string",
+            enum: ["pokemon", "yugioh", "onepiece"],
+            description: "Game type",
+            example: "yugioh",
+          },
+          setCode: {
+            type: "string",
+            description: "Set code (optional)",
+            example: "DR2",
+          },
+          number: {
+            type: "string",
+            description: "Card number in set (optional)",
+          },
+          rarity: {
+            type: "string",
+            description: "Card rarity (optional)",
+          },
+          tcgPlayerPrice: {
+            type: "object",
+            properties: {
+              productId: {
+                type: "integer",
+                description: "Product ID",
+              },
+              lowPrice: {
+                type: "number",
+                description: "Lowest price",
+              },
+              midPrice: {
+                type: "number",
+                description: "Mid-range price",
+              },
+              highPrice: {
+                type: "number",
+                description: "Highest price",
+              },
+              marketPrice: {
+                type: "number",
+                description: "Current market price",
+              },
+              directLowPrice: {
+                type: "number",
+                description: "Direct low price (optional)",
+              },
+              subTypeName: {
+                type: "string",
+                description: "Card subtype (e.g., '1st Edition', 'Unlimited')",
+              },
+            },
+            description: "TCGPlayer pricing information",
+          },
+          images: {
+            type: "object",
+            properties: {
+              small: {
+                type: "string",
+                description: "Small image URL",
+              },
+              large: {
+                type: "string",
+                description: "Large image URL",
+              },
+              normal: {
+                type: "string",
+                description: "Normal size image URL",
+              },
+              holofoil: {
+                type: "string",
+                description: "Holofoil image URL (optional)",
+              },
+            },
+            description: "Card image URLs in different sizes",
+          },
+          url: {
+            type: "string",
+            description: "External URL reference",
+            example: "https://cpt.tcgcsv.com/wXc",
+          },
+          extendedData: {
+            type: "object",
+            description: "Game-specific extended data containing detailed card attributes organized by game type",
+            properties: {
+              extNumber: {
+                type: "string",
+                description: "[ALL GAMES] Card number/ID within set",
+                example: "ST12-001",
+              },
+              extRarity: {
+                type: "string",
+                description: "[ALL GAMES] Card rarity",
+                example: "Super Rare",
+              },
+              extCardType: {
+                type: "string",
+                description: "[ALL GAMES] Card type - varies by game",
+                example: "Leader",
+              },
+              extDescription: {
+                type: "string",
+                description: "[ALL GAMES] Card effect text/description",
+                example: "[DON!! x1][When Attacking][Once Per Turn] You may return 1 of your Characters...",
+              },
+              // ONE PIECE SPECIFIC FIELDS
+              extColor: {
+                type: "string",
+                description: "[ONE PIECE ONLY] Card color(s): Red, Green, Blue, Purple, Black, Yellow",
+                example: "Blue;Green",
+              },
+              extAttribute: {
+                type: "string",
+                description: "[ONE PIECE] Combat attribute: Strike, Slash, Ranged, Special | [YU-GI-OH] Monster attribute: FIRE, WATER, EARTH, WIND, LIGHT, DARK",
+                example: "Strike;Slash",
+              },
+              extLife: {
+                type: "integer",
+                description: "[ONE PIECE ONLY] Life points for Leader cards (typically 4-5)",
+                example: 4,
+              },
+              extPower: {
+                type: "integer",
+                description: "[ONE PIECE ONLY] Character power/attack value (typically 1000-12000)",
+                example: 5000,
+              },
+              extCost: {
+                type: "integer",
+                description: "[ONE PIECE ONLY] Energy cost to play the card (0-10)",
+                example: 3,
+              },
+              extSubtypes: {
+                type: "string",
+                description: "[ONE PIECE] Character faction: Straw Hat Crew, Marine, etc. | [YU-GI-OH] Monster type: Warrior, Dragon, etc.",
+                example: "Straw Hat Crew",
+              },
+              // POKEMON SPECIFIC FIELDS
+              extHP: {
+                type: "integer",
+                description: "[POKEMON ONLY] Pokemon HP/health points (typically 10-340)",
+                example: 110,
+              },
+              extStage: {
+                type: "string",
+                description: "[POKEMON ONLY] Evolution stage: Basic, Stage 1, Stage 2, GX, V, VMAX, etc.",
+                example: "Stage 1",
+              },
+              extAttack1: {
+                type: "string",
+                description: "[POKEMON ONLY] First attack description with damage and effects",
+                example: "[L] Quick Attack (10+) - Flip a coin. If heads, this attack does 30 more damage.",
+              },
+              extAttack2: {
+                type: "string",
+                description: "[POKEMON ONLY] Second attack description (if any)",
+                example: "[2L] Electric Surfer (70)",
+              },
+              extWeakness: {
+                type: "string",
+                description: "[POKEMON ONLY] Pokemon weakness (e.g., Fx2 means Fire x2 damage)",
+                example: "Fx2",
+              },
+              extResistance: {
+                type: "string",
+                description: "[POKEMON ONLY] Pokemon resistance (e.g., M-20 means Metal -20 damage)",
+                example: "M-20",
+              },
+              extRetreatCost: {
+                type: "integer",
+                description: "[POKEMON ONLY] Energy cost to retreat this Pokemon",
+                example: 1,
+              },
+              // YU-GI-OH SPECIFIC FIELDS
+              extDefense: {
+                type: "integer",
+                description: "[YU-GI-OH ONLY] Monster defense points (typically 0-5000)",
+                example: 1500,
+              },
+              extLevel: {
+                type: "integer",
+                description: "[YU-GI-OH ONLY] Monster level/rank (typically 1-12)",
+                example: 4,
+              },
+              extMonsterType: {
+                type: "string",
+                description: "[YU-GI-OH ONLY] Monster type: Warrior, Spellcaster, Dragon, Machine, etc.",
+                example: "Warrior",
+              },
+            },
+            example: {
+              // One Piece Leader example
+              extNumber: "ST12-001",
+              extRarity: "L",
+              extCardType: "Leader",
+              extDescription: "[DON!! x1][When Attacking][Once Per Turn] You may return 1 of your Characters with a cost of 2 or more to the owner's hand",
+              extAttribute: "Slash;Strike",
+              extColor: "Blue;Green",
+              extLife: 4,
+              extPower: 5000,
+              extSubtypes: "Straw Hat Crew",
+              extCost: 0,
+            },
+            additionalProperties: {
+              oneOf: [
+                {
+                  title: "One Piece Card Extended Data",
+                  type: "object",
+                  properties: {
+                    extColor: { type: "string", description: "Card color: Red, Green, Blue, Purple, Black, Yellow" },
+                    extCost: { type: "integer", description: "Energy cost (0-10)" },
+                    extPower: { type: "integer", description: "Character power" },
+                    extLife: { type: "integer", description: "Leader life points" },
+                    extAttribute: { type: "string", description: "Combat attribute: Strike, Slash, Ranged" },
+                    extSubtypes: { type: "string", description: "Character faction" },
+                  }
+                },
+                {
+                  title: "Pokemon Card Extended Data",
+                  type: "object",
+                  properties: {
+                    extHP: { type: "integer", description: "Pokemon HP (10-340)" },
+                    extStage: { type: "string", description: "Evolution stage" },
+                    extAttack1: { type: "string", description: "First attack" },
+                    extAttack2: { type: "string", description: "Second attack" },
+                    extWeakness: { type: "string", description: "Pokemon weakness" },
+                    extResistance: { type: "string", description: "Pokemon resistance" },
+                    extRetreatCost: { type: "integer", description: "Retreat cost" },
+                  }
+                },
+                {
+                  title: "Yu-Gi-Oh Card Extended Data",
+                  type: "object",
+                  properties: {
+                    extAttribute: { type: "string", description: "Monster attribute: FIRE, WATER, EARTH, etc." },
+                    extDefense: { type: "integer", description: "Monster defense points" },
+                    extLevel: { type: "integer", description: "Monster level/rank" },
+                    extMonsterType: { type: "string", description: "Monster type: Warrior, Dragon, etc." },
+                    extSubtypes: { type: "string", description: "Monster type classification" },
+                  }
+                }
+              ]
+            }
+          },
+          isActive: {
+            type: "boolean",
+            description: "Whether the card is active",
+            example: true,
+          },
+          createdAt: {
+            type: "string",
+            format: "date-time",
+            description: "Creation timestamp",
+          },
+          updatedAt: {
+            type: "string",
+            format: "date-time",
+            description: "Last update timestamp",
+          },
+          lastPriceUpdate: {
+            type: "string",
+            format: "date-time",
+            description: "Last price update timestamp",
+          },
+          __v: {
+            type: "integer",
+            description: "MongoDB version key",
+          },
+        },
+        required: [
+          "_id",
+          "productId",
+          "cardSet",
+          "name",
+          "gameType",
+          "categoryId",
+          "groupId",
+        ],
+        description:
+          "Unified card structure for all TCG types with actual database schema",
+      },
+      UnifiedSet: {
+        type: "object",
+        properties: {
+          _id: {
+            type: "string",
+            description: "Set ID",
+          },
+          name: {
+            type: "string",
+            description: "Set name",
+          },
+          game: {
+            type: "string",
+            enum: ["pokemon", "yugioh", "onepiece"],
+            description: "Game type",
+          },
+          releaseDate: {
+            type: "string",
+            format: "date",
+            description: "Set release date",
+          },
+          cardCount: {
+            type: "integer",
+            description: "Total cards in set",
+          },
+          symbol: {
+            type: "string",
+            description: "Set symbol",
+          },
+          logo: {
+            type: "string",
+            description: "Set logo URL",
+          },
+        },
+        description: "Unified set structure for all TCG types",
+      },
+      Pagination: {
+        type: "object",
+        properties: {
+          page: {
+            type: "integer",
+            description: "Current page number",
+          },
+          limit: {
+            type: "integer",
+            description: "Items per page",
+          },
+          total: {
+            type: "integer",
+            description: "Total number of items",
+          },
+          totalPages: {
+            type: "integer",
+            description: "Total number of pages",
+          },
+        },
+        description: "Pagination information",
+      },
+      ScanHistory: {
+        type: "object",
+        properties: {
+          scanId: {
+            type: "string",
+            description: "Unique scan identifier",
+          },
+          userId: {
+            type: "string",
+            description: "User who performed the scan",
+          },
+          gameType: {
+            type: "string",
+            enum: ["onepiece", "pokemon", "yugioh"],
+            description: "Type of trading card game",
+          },
+          ocrResults: {
+            type: "object",
+            properties: {
+              extractedText: {
+                type: "array",
+                items: { type: "string" },
+                description: "Text extracted from OCR",
+              },
+              confidence: {
+                type: "number",
+                description: "OCR confidence score",
+              },
+              boundingBoxes: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    text: { type: "string" },
+                    box: {
+                      type: "object",
+                      properties: {
+                        x: { type: "number" },
+                        y: { type: "number" },
+                        width: { type: "number" },
+                        height: { type: "number" },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          recognitionData: {
+            type: "object",
+            properties: {
+              recognizedName: { type: "string" },
+              recognizedSetCode: { type: "string" },
+              recognizedRarity: { type: "string" },
+              confidence: { type: "number" },
+            },
+          },
+          matches: {
+            type: "array",
+            items: {
+              type: "object",
+              properties: {
+                cardId: { type: "string" },
+                name: { type: "string" },
+                setInfo: {
+                  type: "object",
+                  properties: {
+                    setName: { type: "string" },
+                    setCode: { type: "string" },
+                  },
+                },
+                confidence: { type: "number" },
+                estimatedValue: { type: "number" },
+              },
+            },
+          },
+          selectedCard: {
+            type: "object",
+            properties: {
+              cardId: { type: "string" },
+              name: { type: "string" },
+              setName: { type: "string" },
+            },
+          },
+          confidence: {
+            type: "number",
+            description: "Overall scan confidence",
+          },
+          processingTime: {
+            type: "number",
+            description: "Processing time in milliseconds",
+          },
+          scannedAt: {
+            type: "string",
+            format: "date-time",
+            description: "When the scan was performed",
+          },
+        },
+        description: "Card scanning history record",
+      },
+      CardScanResult: {
+        type: "object",
+        properties: {
+          scanId: {
+            type: "string",
+            description: "Unique scan identifier",
+          },
+          confidence: {
+            type: "number",
+            description: "Overall confidence score (0-1)",
+          },
+          requiresSetSelection: {
+            type: "boolean",
+            description: "Whether user needs to select from multiple sets",
+          },
+          matches: {
+            type: "array",
+            items: {
+              type: "object",
+              properties: {
+                cardId: { type: "string" },
+                name: { type: "string" },
+                setInfo: {
+                  type: "object",
+                  properties: {
+                    setName: { type: "string" },
+                    setCode: { type: "string" },
+                  },
+                },
+                confidence: { type: "number" },
+                estimatedValue: { type: "number" },
+                imageUrl: { type: "string" },
+              },
+            },
+          },
+          ocrResult: {
+            type: "object",
+            properties: {
+              extractedText: {
+                type: "array",
+                items: { type: "string" },
+              },
+              confidence: { type: "number" },
+            },
+          },
+          recognitionData: {
+            type: "object",
+            properties: {
+              recognizedName: { type: "string" },
+              recognizedSetCode: { type: "string" },
+              recognizedRarity: { type: "string" },
+            },
+          },
+        },
+        description: "Result from card scanning operation",
       },
     },
   },

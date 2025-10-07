@@ -1,0 +1,21 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extWeakness,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extAttack2,extResistance
+110422,Lotad - 2/12,Lotad 2 12,https://tcgplayer-cdn.tcgplayer.com/product/110422_200w.jpg,3,1694,https://cpt.tcgcsv.com/sbV,2022-09-22T20:27:24.857,1,002/012,Promo,Grass,60,Basic,[2] Beat (20),Rx2,1,1.25,4.86,8.91,8.52,4.73,Holofoil,,
+110423,Zigzagoon - 11/12,Zigzagoon 11 12,https://tcgplayer-cdn.tcgplayer.com/product/110423_200w.jpg,3,1694,https://cpt.tcgcsv.com/tbV,2022-09-22T20:48:29.85,1,011/012,Promo,Colorless,60,Basic,"[1] Sand Attack
+<br>If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",Fx2,1,4.5,5.5,8.97,5.25,,Holofoil,[2] Headbutt (20),
+110424,Pikachu - 6/12,Pikachu 6 12,https://tcgplayer-cdn.tcgplayer.com/product/110424_200w.jpg,3,1694,https://cpt.tcgcsv.com/vbV,2022-09-22T20:34:46.033,1,006/012,Promo,Lightning,60,Basic,"[1] Tail Whip
+<br>Flip a coin. If heads, the Defending Pokémon can't attack during your opponent's next turn.",Fx2,1,15.67,25.34,59.43,42.53,,Holofoil,[1L] Electro Ball (30),M-20
+110425,Meditite - 9/12,Meditite 9 12,https://tcgplayer-cdn.tcgplayer.com/product/110425_200w.jpg,3,1694,https://cpt.tcgcsv.com/wbV,2022-09-22T20:31:25.427,1,009/012,Promo,Fighting,50,Basic,[F] Smack (20),Px2,1,2.24,2.72,4.95,3.06,,Holofoil,,
+110426,Rhyhorn - 8/12,Rhyhorn 8 12,https://tcgplayer-cdn.tcgplayer.com/product/110426_200w.jpg,3,1694,https://cpt.tcgcsv.com/xbV,2022-09-22T20:36:19.213,1,008/012,Promo,Fighting,80,Basic,"[FF] Take Down (40)
+<br>This Pokémon does 10 damage to itself.",Gx2,3,1.61,3.42,6.5,4.9,,Holofoil,,
+110427,Mudkip - 5/12,Mudkip 5 12,https://tcgplayer-cdn.tcgplayer.com/product/110427_200w.jpg,3,1694,https://cpt.tcgcsv.com/zbV,2022-09-22T20:32:52.23,1,005/012,Promo,Water,60,Basic,[W] Tackle (10),Gx2,1,6.35,7.99,17.99,15.68,,Holofoil,[1W] Mud-Slap (20),
+110428,Electrike - 7/12,Electrike 7 12,https://tcgplayer-cdn.tcgplayer.com/product/110428_200w.jpg,3,1694,https://cpt.tcgcsv.com/BbV,2022-09-22T20:25:45.71,1,007/012,Promo,Lightning,60,Basic,"[1] Charge
+<br>Search your deck for a Lightning Energy card and attach it to this Pokémon. Shuffle your deck afterward.",Fx2,1,1.88,2.76,9.99,4.6,2.4,Holofoil,[1L] Bite (20),M-20
+110429,Treecko - 1/12,Treecko 1 12,https://tcgplayer-cdn.tcgplayer.com/product/110429_200w.jpg,3,1694,https://cpt.tcgcsv.com/CbV,2022-09-22T20:46:05.197,1,001/012,Promo,Grass,60,Basic,"[G] Quick Attack (10+)
+<br>Flip a coin. If heads, this attack does 10 more damage.",Rx2,1,0.7,2.24,9.99,4.06,,Holofoil,,
+110430,Marill - 10/12,Marill 10 12,https://tcgplayer-cdn.tcgplayer.com/product/110430_200w.jpg,3,1694,https://cpt.tcgcsv.com/DbV,2022-09-22T20:28:54.587,1,010/012,Promo,Fairy,70,Basic,[1] Tackle (10),Mx2,2,3.99,7.1,14.98,7.43,,Holofoil,[1Y] Rollout (20),D-20
+110431,Staryu - 4/12,Staryu 4 12,https://tcgplayer-cdn.tcgplayer.com/product/110431_200w.jpg,3,1694,https://cpt.tcgcsv.com/FbV,2022-09-22T20:41:08.547,1,004/012,Promo,Water,60,Basic,"[1] Lunge (20)
+<br>Flip a coin. If tails, this attack does nothing.",Gx2,1,5.99,6.29,9.92,9.89,,Holofoil,,
+110432,Skitty - 12/12,Skitty 12 12,https://tcgplayer-cdn.tcgplayer.com/product/110432_200w.jpg,3,1694,https://cpt.tcgcsv.com/GbV,2022-09-22T20:39:20.867,1,012/012,Promo,Colorless,50,Basic,"[1] Charm 
+<br>During your opponent's next turn, any damage done by attacks from the Defending Pokémon is reduced by 20 <em>(before applying Weakness and Resistance)</em>.",Fx2,1,7.0,11.0,25.36,12.39,,Holofoil,[2] Tail Smack (20),
+110433,Torchic - 3/12,Torchic 3 12,https://tcgplayer-cdn.tcgplayer.com/product/110433_200w.jpg,3,1694,https://cpt.tcgcsv.com/HbV,2022-09-22T20:43:53.507,1,003/012,Promo,Fire,60,Basic,"[R] Ember (20)
+<br>Flip a coin. If tails, discard a Fire Energy attached to this Pokémon.",Wx2,1,4.0,9.64,49.99,13.51,14.99,Holofoil,,

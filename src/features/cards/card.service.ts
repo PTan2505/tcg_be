@@ -1,10 +1,7 @@
-import { PokemonCard } from '../../database/models/pokemon/pokemonCard';
-import { PokemonSet } from '../../database/models/pokemon/pokemonSet';
-import { YugiohCard, YugiohSet } from '../../database/models/yugioh';
-import { CardCategory } from '../../shared/types/card.types';
+import mongoose from 'mongoose';
+import { Card, ICard } from '../../database/models/card';
 
-// Keep backward compatibility with string type for now, but prefer enum
-export type CardType = CardCategory;
+export type GameType = 'pokemon' | 'yugioh' | 'onepiece';
 
 export interface GetCardsOptions {
   page?: number;
@@ -12,404 +9,529 @@ export interface GetCardsOptions {
   search?: string;
   sortBy?: string;
   sortOrder?: 'asc' | 'desc';
-  filters?: {
-    rarity?: string;
-    type?: string;
-    set?: string;
-    attribute?: string;
-    race?: string;
+  rarity?: string;
+  setId?: string;
+  minPrice?: number;
+  maxPrice?: number;
+  // New fields for enhanced filtering
+  cardType?: string;        // extCardType: Character, Leader, Event, etc.
+  color?: string;          // extColor: Red, Green, Blue, etc.
+  attribute?: string;      // extAttribute: Strike, Slash, etc.
+  subtype?: string;        // extSubtypes: Straw Hat Crew, etc.
+  cost?: number;           // extCost: Energy/mana cost
+  power?: number;          // extPower: Attack power
+  life?: number;           // extLife: Life points for leaders
+  hp?: number;             // extHP: Health points for Pokemon
+  stage?: string;          // extStage: Basic, Stage 1, Stage 2 for Pokemon
+  monsterType?: string;    // extMonsterType: for Yu-Gi-Oh
+  defense?: number;        // extDefense: for Yu-Gi-Oh
+  level?: number;          // extLevel: for Yu-Gi-Oh
+  description?: string;    // extDescription: Card text search
+}
+
+export interface CardsResult {
+  cards: ICard[];
+  pagination: {
+    totalPages: number;
+    currentPage: number;
+    totalItems: number;
+    itemsPerPage: number;
+    hasNextPage: boolean;
+    hasPrevPage: boolean;
   };
 }
 
-export interface GetCardsResult {
-  cards: any[];
-  pagination: {
-    page: number;
-    limit: number;
-    total: number;
-    totalPages: number;
-    hasNext: boolean;
-    hasPrev: boolean;
+export interface CardStats {
+  totalCards: number;
+  totalSets: number;
+  avgPrice: number;
+  priceRange: {
+    min: number;
+    max: number;
   };
+  topRarities: Array<{
+    rarity: string;
+    count: number;
+  }>;
+  gameType?: GameType;
 }
 
 export interface ICardService {
-  getCardsByType(cardType: CardType, options?: GetCardsOptions): Promise<GetCardsResult>;
-  getCardById(cardId: string, cardType: CardType): Promise<any>;
-  searchCards(cardType: CardType, query: string, options?: GetCardsOptions): Promise<GetCardsResult>;
-  getCardsBySet(cardType: CardType, setId: string, options?: GetCardsOptions): Promise<GetCardsResult>;
+  getAllCards(options?: GetCardsOptions): Promise<CardsResult>;
+  getCardsByGameType(gameType: GameType, options?: GetCardsOptions): Promise<CardsResult>;
+  getCardsBySet(setId: string, options?: GetCardsOptions): Promise<CardsResult>;
+  getCardById(cardId: string): Promise<ICard>;
+  getCardByProductId(productId: number): Promise<ICard>;
+  searchCards(gameType: GameType, query: string, options?: GetCardsOptions): Promise<CardsResult>;
+  getCardStats(gameType?: GameType): Promise<CardStats | CardStats[]>;
+  updateCardPrices(productIds: number[]): Promise<{ updated: number; errors: number }>;
 }
 
 export class CardService implements ICardService {
-  async getCardsByType(cardType: CardType, options: GetCardsOptions = {}): Promise<GetCardsResult> {
+  async getAllCards(options: GetCardsOptions = {}): Promise<CardsResult> {
     const {
       page = 1,
       limit = 20,
-      search = '',
+      search,
       sortBy = 'name',
       sortOrder = 'asc',
-      filters = {}
+      rarity,
+      setId,
+      minPrice,
+      maxPrice,
+      cardType,
+      color,
+      attribute,
+      subtype,
+      cost,
+      power,
+      life,
+      hp,
+      stage,
+      monsterType,
+      defense,
+      level,
+      description
     } = options;
 
-    const skip = (page - 1) * limit;
-    const sort: any = { [sortBy]: sortOrder === 'asc' ? 1 : -1 };
+    // Build filter
+    const filter: any = { isActive: true };
 
-    let query: any = {};
-    let cards: any[];
-    let total: number;
-
-    // Select appropriate model and build query based on card type
-    if (cardType === CardCategory.POKEMON) {
-      query = this.buildPokemonQuery(search, filters);
+    // Enhanced fuzzy search for name
+    if (search) {
+      const searchTerms = search.trim().split(/\s+/);
+      const searchConditions = [];
       
-      const [pokemonCards, pokemonTotal] = await Promise.all([
-        PokemonCard.find(query)
-          .sort(sort)
-          .skip(skip)
-          .limit(limit)
-          .populate('set')
-          .lean(),
-        PokemonCard.countDocuments(query)
-      ]);
-      
-      cards = pokemonCards;
-      total = pokemonTotal;
-    } else if (cardType === CardCategory.YUGIOH) {
-      let baseQuery = this.buildYugiohQuery(search, filters);
-      
-      // Handle set and rarity filters through YugiohSet collection
-      if (filters.set || filters.rarity) {
-        let setFilters: any = {};
-        
-        if (filters.set) {
-          setFilters.$or = [
-            { setName: { $regex: filters.set, $options: 'i' } },
-            { setCode: { $regex: filters.set, $options: 'i' } }
-          ];
-        }
-        
-        if (filters.rarity) {
-          setFilters.setRarity = { $regex: filters.rarity, $options: 'i' };
-        }
-        
-        // Find matching set ObjectIds
-        const matchingSets = await YugiohSet.find(setFilters).distinct('_id');
-        baseQuery.cardSets = { $in: matchingSets };
+      // Create fuzzy search patterns for each term
+      for (const term of searchTerms) {
+        const fuzzyPattern = term.split('').join('.*');
+        searchConditions.push(
+          { name: { $regex: fuzzyPattern, $options: 'i' } },
+          { cleanName: { $regex: fuzzyPattern, $options: 'i' } },
+          { name: { $regex: term, $options: 'i' } },
+          { cleanName: { $regex: term, $options: 'i' } }
+        );
       }
       
-      const [yugiohCards, yugiohTotal] = await Promise.all([
-        YugiohCard.find(baseQuery)
-          .sort(sort)
-          .skip(skip)
-          .limit(limit)
-          .populate('cardSets')
-          .lean(),
-        YugiohCard.countDocuments(baseQuery)
-      ]);
-      
-      // Cards already have populated set information via populate
-      cards = yugiohCards;
-      total = yugiohTotal;
-    } else {
-      throw new Error('Invalid card type. Must be "pokemon" or "yugioh"');
+      // Also include exact phrase search
+      searchConditions.push(
+        { name: { $regex: search, $options: 'i' } },
+        { cleanName: { $regex: search, $options: 'i' } }
+      );
+
+      filter.$or = searchConditions;
     }
 
-    const totalPages = Math.ceil(total / limit);
+    // Enhanced filtering options
+    if (rarity) {
+      filter['extendedData.extRarity'] = { $regex: rarity, $options: 'i' };
+    }
+
+    if (setId) {
+      filter.cardSet = new mongoose.Types.ObjectId(setId);
+    }
+
+    if (minPrice !== undefined || maxPrice !== undefined) {
+      filter['tcgPlayerPrice.marketPrice'] = {};
+      if (minPrice !== undefined) {
+        filter['tcgPlayerPrice.marketPrice'].$gte = minPrice;
+      }
+      if (maxPrice !== undefined) {
+        filter['tcgPlayerPrice.marketPrice'].$lte = maxPrice;
+      }
+    }
+
+    // Game-specific filtering
+    if (cardType) {
+      filter['extendedData.extCardType'] = { $regex: cardType, $options: 'i' };
+    }
+
+    if (color) {
+      filter['extendedData.extColor'] = { $regex: color, $options: 'i' };
+    }
+
+    if (attribute) {
+      filter['extendedData.extAttribute'] = { $regex: attribute, $options: 'i' };
+    }
+
+    if (subtype) {
+      filter['extendedData.extSubtypes'] = { $regex: subtype, $options: 'i' };
+    }
+
+    if (cost !== undefined) {
+      filter['extendedData.extCost'] = cost;
+    }
+
+    if (power !== undefined) {
+      filter['extendedData.extPower'] = power;
+    }
+
+    if (life !== undefined) {
+      filter['extendedData.extLife'] = life;
+    }
+
+    if (hp !== undefined) {
+      filter['extendedData.extHP'] = hp;
+    }
+
+    if (stage) {
+      filter['extendedData.extStage'] = { $regex: stage, $options: 'i' };
+    }
+
+    if (monsterType) {
+      filter['extendedData.extMonsterType'] = { $regex: monsterType, $options: 'i' };
+    }
+
+    if (defense !== undefined) {
+      filter['extendedData.extDefense'] = defense;
+    }
+
+    if (level !== undefined) {
+      filter['extendedData.extLevel'] = level;
+    }
+
+    if (description) {
+      filter['extendedData.extDescription'] = { $regex: description, $options: 'i' };
+    }
+
+    // Build sort with enhanced options
+    const sort: any = {};
+    if (sortBy === 'price') {
+      sort['tcgPlayerPrice.marketPrice'] = sortOrder === 'desc' ? -1 : 1;
+    } else if (sortBy === 'name') {
+      sort.name = sortOrder === 'desc' ? -1 : 1;
+    } else if (sortBy === 'number') {
+      sort.number = sortOrder === 'desc' ? -1 : 1;
+    } else if (sortBy === 'cost') {
+      sort['extendedData.extCost'] = sortOrder === 'desc' ? -1 : 1;
+    } else if (sortBy === 'power') {
+      sort['extendedData.extPower'] = sortOrder === 'desc' ? -1 : 1;
+    } else if (sortBy === 'hp') {
+      sort['extendedData.extHP'] = sortOrder === 'desc' ? -1 : 1;
+    } else if (sortBy === 'defense') {
+      sort['extendedData.extDefense'] = sortOrder === 'desc' ? -1 : 1;
+    } else {
+      sort[sortBy] = sortOrder === 'desc' ? -1 : 1;
+    }
+
+    // Execute query with pagination
+    const skip = (page - 1) * limit;
+    
+    const [cards, totalItems] = await Promise.all([
+      Card.find(filter)
+        .populate('cardSet', 'name abbreviation gameType')
+        .sort(sort)
+        .skip(skip)
+        .limit(limit)
+        .lean(),
+      Card.countDocuments(filter)
+    ]);
+
+    const totalPages = Math.ceil(totalItems / limit);
 
     return {
-      cards,
+      cards: cards as ICard[],
       pagination: {
-        page,
-        limit,
-        total,
         totalPages,
-        hasNext: page < totalPages,
-        hasPrev: page > 1
+        currentPage: page,
+        totalItems,
+        itemsPerPage: limit,
+        hasNextPage: page < totalPages,
+        hasPrevPage: page > 1
       }
     };
   }
 
-  async getCardById(cardId: string, cardType: CardType): Promise<any> {
-    let card: any;
+  async getCardsByGameType(gameType: GameType, options: GetCardsOptions = {}): Promise<CardsResult> {
+    const filter: any = { gameType, isActive: true };
+    
+    // Merge the gameType filter with the base options
+    const {
+      page = 1,
+      limit = 20,
+      search,
+      sortBy = 'name',
+      sortOrder = 'asc',
+      rarity,
+      setId,
+      minPrice,
+      maxPrice,
+      cardType,
+      color,
+      attribute,
+      subtype,
+      cost,
+      power,
+      life,
+      hp,
+      stage,
+      monsterType,
+      defense,
+      level,
+      description
+    } = options;
 
-    if (cardType === CardCategory.POKEMON) {
-      card = await PokemonCard.findById(cardId)
-        .populate('set')
-        .lean();
-    } else if (cardType === CardCategory.YUGIOH) {
-      card = await YugiohCard.findById(cardId)
-        .populate('cardSets')
-        .lean();
+    // Enhanced fuzzy search for name
+    if (search) {
+      const searchTerms = search.trim().split(/\s+/);
+      const searchConditions = [];
+      
+      // Create fuzzy search patterns for each term
+      for (const term of searchTerms) {
+        const fuzzyPattern = term.split('').join('.*');
+        searchConditions.push(
+          { name: { $regex: fuzzyPattern, $options: 'i' } },
+          { cleanName: { $regex: fuzzyPattern, $options: 'i' } },
+          { name: { $regex: term, $options: 'i' } },
+          { cleanName: { $regex: term, $options: 'i' } }
+        );
+      }
+      
+      // Also include exact phrase search
+      searchConditions.push(
+        { name: { $regex: search, $options: 'i' } },
+        { cleanName: { $regex: search, $options: 'i' } }
+      );
+
+      filter.$or = searchConditions;
+    }
+
+    // Enhanced filtering options
+    if (rarity) {
+      filter['extendedData.extRarity'] = { $regex: rarity, $options: 'i' };
+    }
+
+    if (setId) {
+      filter.cardSet = new mongoose.Types.ObjectId(setId);
+    }
+
+    if (minPrice !== undefined || maxPrice !== undefined) {
+      filter['tcgPlayerPrice.marketPrice'] = {};
+      if (minPrice !== undefined) {
+        filter['tcgPlayerPrice.marketPrice'].$gte = minPrice;
+      }
+      if (maxPrice !== undefined) {
+        filter['tcgPlayerPrice.marketPrice'].$lte = maxPrice;
+      }
+    }
+
+    // New filtering options based on game-specific fields
+    if (cardType) {
+      filter['extendedData.extCardType'] = { $regex: cardType, $options: 'i' };
+    }
+
+    if (color) {
+      filter['extendedData.extColor'] = { $regex: color, $options: 'i' };
+    }
+
+    if (attribute) {
+      filter['extendedData.extAttribute'] = { $regex: attribute, $options: 'i' };
+    }
+
+    if (subtype) {
+      filter['extendedData.extSubtypes'] = { $regex: subtype, $options: 'i' };
+    }
+
+    if (cost !== undefined) {
+      filter['extendedData.extCost'] = cost;
+    }
+
+    if (power !== undefined) {
+      filter['extendedData.extPower'] = power;
+    }
+
+    if (life !== undefined) {
+      filter['extendedData.extLife'] = life;
+    }
+
+    if (hp !== undefined) {
+      filter['extendedData.extHP'] = hp;
+    }
+
+    if (stage) {
+      filter['extendedData.extStage'] = { $regex: stage, $options: 'i' };
+    }
+
+    if (monsterType) {
+      filter['extendedData.extMonsterType'] = { $regex: monsterType, $options: 'i' };
+    }
+
+    if (defense !== undefined) {
+      filter['extendedData.extDefense'] = defense;
+    }
+
+    if (level !== undefined) {
+      filter['extendedData.extLevel'] = level;
+    }
+
+    if (description) {
+      filter['extendedData.extDescription'] = { $regex: description, $options: 'i' };
+    }
+
+    // Build sort with enhanced options
+    const sort: any = {};
+    if (sortBy === 'price') {
+      sort['tcgPlayerPrice.marketPrice'] = sortOrder === 'desc' ? -1 : 1;
+    } else if (sortBy === 'name') {
+      sort.name = sortOrder === 'desc' ? -1 : 1;
+    } else if (sortBy === 'number') {
+      sort.number = sortOrder === 'desc' ? -1 : 1;
+    } else if (sortBy === 'cost') {
+      sort['extendedData.extCost'] = sortOrder === 'desc' ? -1 : 1;
+    } else if (sortBy === 'power') {
+      sort['extendedData.extPower'] = sortOrder === 'desc' ? -1 : 1;
+    } else if (sortBy === 'hp') {
+      sort['extendedData.extHP'] = sortOrder === 'desc' ? -1 : 1;
+    } else if (sortBy === 'defense') {
+      sort['extendedData.extDefense'] = sortOrder === 'desc' ? -1 : 1;
     } else {
-      throw new Error('Invalid card category. Must be "pokemon" or "yugioh"');
+      sort[sortBy] = sortOrder === 'desc' ? -1 : 1;
     }
 
-    if (!card) {
-      throw new Error(`${cardType} card not found`);
-    }
+    // Execute query with pagination
+    const skip = (page - 1) * limit;
+    
+    const [cards, totalItems] = await Promise.all([
+      Card.find(filter)
+        .populate('cardSet', 'name abbreviation gameType')
+        .sort(sort)
+        .skip(skip)
+        .limit(limit)
+        .lean(),
+      Card.countDocuments(filter)
+    ]);
 
-    return card;
+    const totalPages = Math.ceil(totalItems / limit);
+
+    return {
+      cards: cards as ICard[],
+      pagination: {
+        totalPages,
+        currentPage: page,
+        totalItems,
+        itemsPerPage: limit,
+        hasNextPage: page < totalPages,
+        hasPrevPage: page > 1
+      }
+    };
   }
 
-  async searchCards(cardType: CardType, query: string, options: GetCardsOptions = {}): Promise<GetCardsResult> {
+  async getCardsBySet(setId: string, options: GetCardsOptions = {}): Promise<CardsResult> {
+    return this.getAllCards({ ...options, setId });
+  }
+
+  async getCardById(cardId: string): Promise<ICard> {
+    const card = await Card.findById(cardId)
+      .populate('cardSet', 'name abbreviation gameType categoryId groupId')
+      .lean();
+
+    if (!card) {
+      throw new Error(`Card with ID ${cardId} not found`);
+    }
+
+    return card as ICard;
+  }
+
+  async getCardByProductId(productId: number): Promise<ICard> {
+    const card = await Card.findOne({ productId, isActive: true })
+      .populate('cardSet', 'name abbreviation gameType categoryId groupId')
+      .lean();
+
+    if (!card) {
+      throw new Error(`Card with ProductId ${productId} not found`);
+    }
+
+    return card as ICard;
+  }
+
+  async searchCards(gameType: GameType, query: string, options: GetCardsOptions = {}): Promise<CardsResult> {
     const searchOptions = {
       ...options,
       search: query
     };
 
-    return this.getCardsByType(cardType, searchOptions);
+    return this.getCardsByGameType(gameType, searchOptions);
   }
 
-  async getCardsBySet(cardType: CardType, setId: string, options: GetCardsOptions = {}): Promise<GetCardsResult> {
-    const {
-      page = 1,
-      limit = 20,
-      search = '',
-      sortBy = 'name',
-      sortOrder = 'asc'
-    } = options;
-
-    const skip = (page - 1) * limit;
-    const sort: any = { [sortBy]: sortOrder === 'asc' ? 1 : -1 };
-
-    let cards: any[];
-    let total: number;
-
-    if (cardType === CardCategory.POKEMON) {
-      // For Pokemon, setId can be set name or set ID
-      let setQuery: any = {};
-
-      // Check if setId is a MongoDB ObjectId or set name
-      if (setId.match(/^[0-9a-fA-F]{24}$/)) {
-        // Valid MongoDB ObjectId format - check if it exists
-        const setExists = await PokemonSet.findById(setId);
-        if (!setExists) {
-          throw new Error(`Set with ID '${setId}' not found`);
-        }
-        setQuery = { set: setId }; // ObjectId
-      } else {
-        // Validate if setId looks like a reasonable set identifier
-        if (setId.length < 2 || setId.includes('invalid') || setId.includes('fake')) {
-          throw new Error(`Invalid set identifier: '${setId}'`);
-        }
-        
-        // Find set by name first
-        const pokemonSet = await PokemonSet.findOne({ 
-          $or: [
-            { name: { $regex: setId, $options: 'i' } },
-            { id: setId }
-          ]
-        });
-        
-        if (!pokemonSet) {
-          // For partial name matches, return empty result (this is acceptable)
-          // But for clearly invalid identifiers, throw error
-          return {
-            cards: [],
-            pagination: {
-              page,
-              limit,
-              total: 0,
-              totalPages: 0,
-              hasNext: false,
-              hasPrev: false
-            }
-          };
-        }
-        
-        setQuery = { set: pokemonSet._id };
-      }
-
-      // Add search filter if provided
-      let query: any = { ...setQuery };
-      if (search) {
-        query.$and = [
-          setQuery,
-          {
-            $or: [
-              { name: { $regex: search, $options: 'i' } },
-              { supertype: { $regex: search, $options: 'i' } },
-              { subtypes: { $in: [new RegExp(search, 'i')] } },
-              { types: { $in: [new RegExp(search, 'i')] } }
-            ]
-          }
-        ];
-      }
-
-      const [pokemonCards, pokemonTotal] = await Promise.all([
-        PokemonCard.find(query)
-          .sort(sort)
-          .skip(skip)
-          .limit(limit)
-          .populate('set')
-          .lean(),
-        PokemonCard.countDocuments(query)
-      ]);
-      
-      cards = pokemonCards;
-      total = pokemonTotal;
-
-    } else if (cardType === CardCategory.YUGIOH) {
-      // For Yu-Gi-Oh!, find all cards that reference the specified set
-      
-      // Validate if setId looks like a reasonable set identifier
-      if (setId.length < 2 || setId.includes('invalid') || setId.includes('fake')) {
-        throw new Error(`Invalid set identifier: '${setId}'`);
-      }
-      
-      let setQuery: any = {};
-      
-      // Check if setId is a MongoDB ObjectId or set name/code
-      if (setId.match(/^[0-9a-fA-F]{24}$/)) {
-        // Valid MongoDB ObjectId format - check if it exists
-        const setExists = await YugiohSet.findById(setId);
-        if (!setExists) {
-          throw new Error(`Set with ID '${setId}' not found`);
-        }
-        setQuery = { _id: setId };
-      } else {
-        // Find set by name or code
-        setQuery = {
-          $or: [
-            { setName: { $regex: setId, $options: 'i' } },
-            { setCode: { $regex: setId, $options: 'i' } }
-          ]
-        };
-      }
-
-      // Find all sets matching the identifier
-      const yugiohSets = await YugiohSet.find(setQuery).lean();
-      
-      if (yugiohSets.length === 0) {
-        // For partial name matches, return empty result (this is acceptable)
-        return {
-          cards: [],
-          pagination: {
-            page,
-            limit,
-            total: 0,
-            totalPages: 0,
-            hasNext: false,
-            hasPrev: false
-          }
-        };
-      }
-
-      // Get all set ObjectIds that match
-      const setObjectIds = yugiohSets.map(set => set._id);
-
-      // Build card query - find cards that reference these sets
-      let cardQuery: any = { cardSets: { $in: setObjectIds } };
-      
-      if (search) {
-        cardQuery.$and = [
-          { cardSets: { $in: setObjectIds } },
-          {
-            $or: [
-              { name: { $regex: search, $options: 'i' } },
-              { type: { $regex: search, $options: 'i' } },
-              { desc: { $regex: search, $options: 'i' } },
-              { race: { $regex: search, $options: 'i' } },
-              { attribute: { $regex: search, $options: 'i' } }
-            ]
-          }
-        ];
-      }
-
-      const [yugiohCards, yugiohTotal] = await Promise.all([
-        YugiohCard.find(cardQuery)
-          .sort(sort)
-          .skip(skip)
-          .limit(limit)
-          .populate('cardSets')
-          .lean(),
-        YugiohCard.countDocuments(cardQuery)
-      ]);
-      
-      cards = yugiohCards;
-      total = yugiohTotal;
-
-    } else {
-      throw new Error('Invalid card type. Must be "pokemon" or "yugioh"');
+  async getCardStats(gameType?: GameType): Promise<CardStats | CardStats[]> {
+    if (gameType) {
+      return this.getStatsForGameType(gameType);
     }
 
-    const totalPages = Math.ceil(total / limit);
+    // Get stats for all game types
+    const gameTypes: GameType[] = ['pokemon', 'yugioh', 'onepiece'];
+    const allStats = await Promise.all(
+      gameTypes.map(type => this.getStatsForGameType(type))
+    );
+
+    return allStats;
+  }
+
+  private async getStatsForGameType(gameType: GameType): Promise<CardStats> {
+    const [
+      totalCards,
+      priceStats,
+      rarityStats,
+      setCount
+    ] = await Promise.all([
+      Card.countDocuments({ gameType, isActive: true }),
+      Card.aggregate([
+        { $match: { gameType, isActive: true, 'tcgPlayerPrice.marketPrice': { $exists: true, $ne: null } } },
+        {
+          $group: {
+            _id: null,
+            avgPrice: { $avg: '$tcgPlayerPrice.marketPrice' },
+            minPrice: { $min: '$tcgPlayerPrice.marketPrice' },
+            maxPrice: { $max: '$tcgPlayerPrice.marketPrice' }
+          }
+        }
+      ]),
+      Card.aggregate([
+        { $match: { gameType, isActive: true } },
+        { $group: { _id: '$rarity', count: { $sum: 1 } } },
+        { $sort: { count: -1 } },
+        { $limit: 5 }
+      ]),
+      Card.distinct('cardSet', { gameType, isActive: true }).then(sets => sets.length)
+    ]);
+
+    const priceData = priceStats[0] || { avgPrice: 0, minPrice: 0, maxPrice: 0 };
 
     return {
-      cards,
-      pagination: {
-        page,
-        limit,
-        total,
-        totalPages,
-        hasNext: page < totalPages,
-        hasPrev: page > 1
-      }
+      totalCards,
+      totalSets: setCount,
+      avgPrice: priceData.avgPrice || 0,
+      priceRange: {
+        min: priceData.minPrice || 0,
+        max: priceData.maxPrice || 0
+      },
+      topRarities: rarityStats.map(r => ({
+        rarity: r._id || 'Unknown',
+        count: r.count
+      })),
+      gameType
     };
   }
 
-  private buildPokemonQuery(search: string, filters: any): any {
-    const query: any = {};
+  async updateCardPrices(productIds: number[]): Promise<{ updated: number; errors: number }> {
+    // This would implement price update logic by fetching fresh data from TCGPlayer
+    // For now, it's a placeholder
+    let updated = 0;
+    let errors = 0;
 
-    // Search functionality
-    if (search) {
-      query.$or = [
-        { name: { $regex: search, $options: 'i' } },
-        { supertype: { $regex: search, $options: 'i' } },
-        { subtypes: { $in: [new RegExp(search, 'i')] } },
-        { types: { $in: [new RegExp(search, 'i')] } },
-        { artist: { $regex: search, $options: 'i' } },
-        { rarity: { $regex: search, $options: 'i' } }
-      ];
+    for (const productId of productIds) {
+      try {
+        // Here you would fetch updated price data and update the card
+        await Card.updateOne(
+          { productId },
+          { $set: { lastPriceUpdate: new Date() } }
+        );
+        updated++;
+      } catch (error) {
+        errors++;
+      }
     }
 
-    // Apply filters
-    if (filters.rarity) {
-      query.rarity = { $regex: filters.rarity, $options: 'i' };
-    }
-
-    if (filters.type) {
-      query.types = { $in: [filters.type] };
-    }
-
-    if (filters.set) {
-      query.set = filters.set;
-    }
-
-    return query;
-  }
-
-  private buildYugiohQuery(search: string, filters: any): any {
-    const query: any = {};
-
-    // Search functionality
-    if (search) {
-      query.$or = [
-        { name: { $regex: search, $options: 'i' } },
-        { type: { $regex: search, $options: 'i' } },
-        { desc: { $regex: search, $options: 'i' } },
-        { race: { $regex: search, $options: 'i' } },
-        { attribute: { $regex: search, $options: 'i' } },
-        { archetype: { $regex: search, $options: 'i' } }
-      ];
-    }
-
-    // Apply filters
-    if (filters.type) {
-      query.type = { $regex: filters.type, $options: 'i' };
-    }
-
-    if (filters.attribute) {
-      query.attribute = { $regex: filters.attribute, $options: 'i' };
-    }
-
-    if (filters.race) {
-      query.race = { $regex: filters.race, $options: 'i' };
-    }
-
-    // For set and rarity filters, we need to find cards through the YugiohSet collection
-    // This will be handled in the main query logic above
-
-    return query;
+    return { updated, errors };
   }
 }

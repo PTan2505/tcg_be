@@ -1,0 +1,106 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extWeakness,extResistance,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extAttack2,extCardText
+83831,Bidoof,Bidoof,https://tcgplayer-cdn.tcgplayer.com/product/83831_200w.jpg,3,1522,https://cpt.tcgcsv.com/FxH,2022-12-14T16:17:46.963,1,29/39,Common,Colorless,70,Basic,[3] Rollout (60),Fx2,None,2,4.89,8.0,14.28,10.22,,Normal,,
+83847,Bisharp,Bisharp,https://tcgplayer-cdn.tcgplayer.com/product/83847_200w.jpg,3,1522,https://cpt.tcgcsv.com/ZxH,2022-12-14T16:16:52.983,1,20/39,Common,Metal,90,Stage 1,"[M] Wicked Jab (20) 
+<br>Flip a coin.  If heads, your opponent's Active Pokemon is now Paralyzed.",Rx2,P-20,1,0.37,0.5,4.54,0.55,,Normal,[2M] Metal Claw (70),
+83949,Braixen,Braixen,https://tcgplayer-cdn.tcgplayer.com/product/83949_200w.jpg,3,1522,https://cpt.tcgcsv.com/_BH,2022-12-14T16:13:32.983,1,9/39,Common,Fire,80,Stage 1,"[1R] Firebreathing (20+) Flip a coin.  If heads, this attack does 20 more damage.",Wx2,,1,0.2,0.4,1.71,0.59,,Normal,,
+83949,Braixen,Braixen,https://tcgplayer-cdn.tcgplayer.com/product/83949_200w.jpg,3,1522,https://cpt.tcgcsv.com/_BH,2022-12-14T16:13:32.983,1,9/39,Common,Fire,80,Stage 1,"[1R] Firebreathing (20+) Flip a coin.  If heads, this attack does 20 more damage.",Wx2,,1,0.25,0.85,3.84,0.95,,Holofoil,,
+84047,Bunnelby,Bunnelby,https://tcgplayer-cdn.tcgplayer.com/product/84047_200w.jpg,3,1522,https://cpt.tcgcsv.com/ZDH,2022-12-14T16:17:53.347,1,30/39,Common,Colorless,60,Basic,[2] Tackle (20),Fx2,None,1,0.17,0.64,1.21,0.92,,Normal,,
+84268,Chesnaught,Chesnaught,https://tcgplayer-cdn.tcgplayer.com/product/84268_200w.jpg,3,1522,https://cpt.tcgcsv.com/nKH,2022-12-14T16:12:54.16,1,5/39,Common,Grass,150,Stage 2,[2G] Needle Arm (50),Rx2,None,4,0.64,1.16,5.63,1.65,,Normal,"[2GG] Tumbling Attack (80) 
+<br>Flip a coin.  If heads, this attack does 40 more damage.",
+84268,Chesnaught,Chesnaught,https://tcgplayer-cdn.tcgplayer.com/product/84268_200w.jpg,3,1522,https://cpt.tcgcsv.com/nKH,2022-12-14T16:12:54.16,1,5/39,Common,Grass,150,Stage 2,[2G] Needle Arm (50),Rx2,None,4,0.85,1.94,5.94,1.93,,Holofoil,"[2GG] Tumbling Attack (80) 
+<br>Flip a coin.  If heads, this attack does 40 more damage.",
+84271,Chespin,Chespin,https://tcgplayer-cdn.tcgplayer.com/product/84271_200w.jpg,3,1522,https://cpt.tcgcsv.com/rKH,2022-12-14T16:12:28.23,1,3/39,Common,Grass,60,Basic,[G] Vine Whip (10),Rx2,None,1,0.01,0.32,3.57,0.31,0.25,Normal,[1G] Seed Bomb (20),
+84271,Chespin,Chespin,https://tcgplayer-cdn.tcgplayer.com/product/84271_200w.jpg,3,1522,https://cpt.tcgcsv.com/rKH,2022-12-14T16:12:28.23,1,3/39,Common,Grass,60,Basic,[G] Vine Whip (10),Rx2,None,1,0.39,0.9,5.24,0.96,,Holofoil,[1G] Seed Bomb (20),
+84326,Clauncher,Clauncher,https://tcgplayer-cdn.tcgplayer.com/product/84326_200w.jpg,3,1522,https://cpt.tcgcsv.com/xLH,2022-12-14T16:14:08.217,1,15/39,Common,Water,70,Basic,[1W] Water Gun (20),Gx2,None,1,0.2,0.62,1.75,0.68,,Normal,,
+84507,Crushing Hammer,Crushing Hammer,https://tcgplayer-cdn.tcgplayer.com/product/84507_200w.jpg,3,1522,https://cpt.tcgcsv.com/9QH,2022-12-14T16:18:20.337,1,34/39,Common,Item,,,,,,,0.19,0.37,1.51,0.23,,Normal,,"You may play as many Item cards as you like during your turn <em>(before your attack).</em>
+<br>
+<br>
+Flip a coin.  If heads, discard an Energy attached to 1 of your opponent's Pokemon."
+84682,Darkness Energy (Basic),Darkness Energy Basic,https://tcgplayer-cdn.tcgplayer.com/product/84682_200w.jpg,3,1522,https://cpt.tcgcsv.com/GTH,2015-04-03T12:20:32.2,1,,Common,Basic Energy,,,,,,,0.19,0.2,0.94,0.84,,Normal,,
+84753,Delphox,Delphox,https://tcgplayer-cdn.tcgplayer.com/product/84753_200w.jpg,3,1522,https://cpt.tcgcsv.com/5WH,2022-12-14T16:13:38.323,1,10/39,Common,Fire,140,Stage 2,[1R] Will-O-Wisp (30),Wx2,None,2,0.4,0.72,1.99,0.87,,Normal,"[3R] Fire Blast (120) 
+<br>Discard an Energy attached to this Pokemon.",
+84753,Delphox,Delphox,https://tcgplayer-cdn.tcgplayer.com/product/84753_200w.jpg,3,1522,https://cpt.tcgcsv.com/5WH,2022-12-14T16:13:38.323,1,10/39,Common,Fire,140,Stage 2,[1R] Will-O-Wisp (30),Wx2,None,2,0.4,0.95,1.81,0.96,,Holofoil,"[3R] Fire Blast (120) 
+<br>Discard an Energy attached to this Pokemon.",
+85378,Fairy Energy,Fairy Energy,https://tcgplayer-cdn.tcgplayer.com/product/85378_200w.jpg,3,1522,https://cpt.tcgcsv.com/B9J,2015-04-03T12:20:38.107,1,,Common,Basic Energy,,,,,,,0.5,1.3,1.79,1.3,,Normal,,
+85390,Farfetch'd,Farfetchd,https://tcgplayer-cdn.tcgplayer.com/product/85390_200w.jpg,3,1522,https://cpt.tcgcsv.com/Q9J,2022-12-14T16:17:22.03,1,25/39,Common,Colorless,70,Basic,[1] Slash (30),Lx2,F-20,1,0.2,0.75,2.6,1.86,,Normal,,
+85411,Fennekin,Fennekin,https://tcgplayer-cdn.tcgplayer.com/product/85411_200w.jpg,3,1522,https://cpt.tcgcsv.com/fbJ,2022-12-14T16:13:26.127,1,8/39,Common,Fire,60,Basic,[R] Scratch (10),Wx2,None,1,0.04,0.2,1.49,0.17,,Normal,[1R] Live Coal (20),
+85411,Fennekin,Fennekin,https://tcgplayer-cdn.tcgplayer.com/product/85411_200w.jpg,3,1522,https://cpt.tcgcsv.com/fbJ,2022-12-14T16:13:26.127,1,8/39,Common,Fire,60,Basic,[R] Scratch (10),Wx2,None,1,0.3,0.7,3.1,1.91,,Holofoil,[1R] Live Coal (20),
+85469,Fire Energy,Fire Energy,https://tcgplayer-cdn.tcgplayer.com/product/85469_200w.jpg,3,1522,https://cpt.tcgcsv.com/pcJ,2015-04-03T12:30:27.563,1,,Common,Energy,0,Energy,,,,,0.01,0.21,5.05,1.1,,Normal,,
+85508,Fletchling,Fletchling,https://tcgplayer-cdn.tcgplayer.com/product/85508_200w.jpg,3,1522,https://cpt.tcgcsv.com/bdJ,2022-12-14T16:18:01.117,1,31/39,Common,Colorless,50,Basic,"[1] Razor Wind (20) 
+<br>Flip a coin.  If tails, this attack does nothing.",Lx2,F-20,1,0.25,0.53,1.99,0.66,,Normal,,
+85569,Froakie,Froakie,https://tcgplayer-cdn.tcgplayer.com/product/85569_200w.jpg,3,1522,https://cpt.tcgcsv.com/pfJ,2022-12-14T16:13:49.667,1,12/39,Common,Water,60,Basic,[W] Pound (10),Gx2,None,1,0.15,0.5,1.75,0.47,,Normal,[1W] Water Drip (20),
+85569,Froakie,Froakie,https://tcgplayer-cdn.tcgplayer.com/product/85569_200w.jpg,3,1522,https://cpt.tcgcsv.com/pfJ,2022-12-14T16:13:49.667,1,12/39,Common,Water,60,Basic,[W] Pound (10),Gx2,None,1,0.4,0.91,4.54,1.08,,Holofoil,[1W] Water Drip (20),
+85571,Frogadier,Frogadier,https://tcgplayer-cdn.tcgplayer.com/product/85571_200w.jpg,3,1522,https://cpt.tcgcsv.com/rfJ,2022-12-14T16:13:56.457,1,13/39,Common,Water,80,Stage 1,[W] Water Drip (20),Gx2,None,1,0.2,0.62,1.99,0.62,,Normal,"[1WW] Aqua Wave (40+) 
+<br>Flip 2 coins.  This attack does 20 more damage for each heads.",
+85571,Frogadier,Frogadier,https://tcgplayer-cdn.tcgplayer.com/product/85571_200w.jpg,3,1522,https://cpt.tcgcsv.com/rfJ,2022-12-14T16:13:56.457,1,13/39,Common,Water,80,Stage 1,[W] Water Drip (20),Gx2,None,1,0.5,0.75,2.62,2.44,,Holofoil,"[1WW] Aqua Wave (40+) 
+<br>Flip 2 coins.  This attack does 20 more damage for each heads.",
+85587,Furfrou (32),Furfrou 32,https://tcgplayer-cdn.tcgplayer.com/product/85587_200w.jpg,3,1522,https://cpt.tcgcsv.com/MfJ,2022-12-14T16:18:06.69,1,32/39,Common,Colorless,90,Basic,"[2] Tight Jaw (20) Flip a coin.  If heads, your opponent's Active Pokemon is now Paralyzed.",Fx2,,1,0.59,0.95,2.5,1.88,,Normal,,
+85588,Furfrou (33),Furfrou 33,https://tcgplayer-cdn.tcgplayer.com/product/85588_200w.jpg,3,1522,https://cpt.tcgcsv.com/NfJ,2022-12-14T16:18:13.6,1,33/39,Common,Colorless,90,Basic,"[2] Tight Jaw (20)
+<br>Flip a coin.  If heads, your opponent's Active Pokemon is now Paralyzed.",Fx2,None,1,1.2,1.64,4.16,2.67,,Normal,,
+85867,Granbull,Granbull,https://tcgplayer-cdn.tcgplayer.com/product/85867_200w.jpg,3,1522,https://cpt.tcgcsv.com/mmJ,2022-12-14T16:17:10.427,1,23/39,Common,Fairy,100,Stage 1,[1Y] Headbutt (30),Mx2,D-20,3,0.01,0.75,2.0,1.16,,Normal,"[2Y] Double Stomp (50+) 
+<br>Flip 2 coins.  This attack does 20 more damage for each heads.",
+85884,Grass Energy,Grass Energy,https://tcgplayer-cdn.tcgplayer.com/product/85884_200w.jpg,3,1522,https://cpt.tcgcsv.com/JmJ,2015-04-03T12:30:40.59,1,,Common,Basic Energy,,,,,,,0.49,0.49,4.95,2.27,,Normal,,
+85903,Greninja,Greninja,https://tcgplayer-cdn.tcgplayer.com/product/85903_200w.jpg,3,1522,https://cpt.tcgcsv.com/5nJ,2022-12-14T16:14:02.493,1,14/39,Common,Water,140,Stage 2,"[1] Mat Block (40) 
+<br>Flip a coin.  If heads, discard an Energy attached to your opponent's Active Pokemon.",Gx2,None,1,1.25,2.34,4.8,4.21,,Normal,[1WW] Aqua Edge (80),
+85903,Greninja,Greninja,https://tcgplayer-cdn.tcgplayer.com/product/85903_200w.jpg,3,1522,https://cpt.tcgcsv.com/5nJ,2022-12-14T16:14:02.493,1,14/39,Common,Water,140,Stage 2,"[1] Mat Block (40) 
+<br>Flip a coin.  If heads, discard an Energy attached to your opponent's Active Pokemon.",Gx2,None,1,1.0,3.5,8.08,7.11,,Holofoil,[1WW] Aqua Edge (80),
+86167,Honedge,Honedge,https://tcgplayer-cdn.tcgplayer.com/product/86167_200w.jpg,3,1522,https://cpt.tcgcsv.com/mtJ,2022-12-14T16:16:58.683,1,21/39,Common,Metal,60,Basic,"[1M] Continuous Slash (30x) 
+<br>Flip a coin until you get tails.  This attack does 30 damage times the number of heads.",Rx2,P-20,2,0.44,0.77,4.54,0.8,,Normal,,
+86285,Inkay,Inkay,https://tcgplayer-cdn.tcgplayer.com/product/86285_200w.jpg,3,1522,https://cpt.tcgcsv.com/KwJ,2022-12-14T16:14:28.8,1,18/39,Common,Darkness,60,Basic,[D] Peck (10),Fx2,P-20,1,0.25,0.55,2.49,0.92,,Normal,,
+87355,Metal Energy (Basic),Metal Energy Basic,https://tcgplayer-cdn.tcgplayer.com/product/87355_200w.jpg,3,1522,https://cpt.tcgcsv.com/7ZJ,2015-04-03T12:35:55.613,1,,Common,Basic Energy,,,,,,,0.1,0.25,1.26,1.42,,Normal,,
+87449,Mightyena,Mightyena,https://tcgplayer-cdn.tcgplayer.com/product/87449_200w.jpg,3,1522,https://cpt.tcgcsv.com/_-J,2022-12-14T16:14:22.79,1,17/39,Common,Darkness,90,Stage 1,"[1D] Hard Bite (40+) 
+<br>Flip a coin.  If heads, this attack does 20 more damage.",Fx2,P-20,1,0.3,0.84,2.91,1.88,,Normal,,
+87468,Miltank,Miltank,https://tcgplayer-cdn.tcgplayer.com/product/87468_200w.jpg,3,1522,https://cpt.tcgcsv.com/n_J,2022-12-14T16:17:33.293,1,27/39,Common,Colorless,100,Basic,"[3] Sitdown Splash (50+) 
+<br>Flip a coin.  If heads, this attack does 20 more damage.",Fx2,None,3,3.25,4.49,7.42,5.86,,Normal,,
+87931,Panpour,Panpour,https://tcgplayer-cdn.tcgplayer.com/product/87931_200w.jpg,3,1522,https://cpt.tcgcsv.com/FbK,2022-12-14T16:13:44.29,1,11/39,Common,Water,70,Basic,"[1] Collect 
+<br>Draw a card.",Gx2,None,1,0.29,0.75,2.5,0.75,,Normal,"[2] Fury Swipes (10x) 
+<br>Flip 3 coins.  This attack does 10 damage times the number of heads.",
+87939,Pansage,Pansage,https://tcgplayer-cdn.tcgplayer.com/product/87939_200w.jpg,3,1522,https://cpt.tcgcsv.com/PbK,2022-12-14T16:12:19.337,1,2/39,Common,Grass,70,Basic,"[1] Collect 
+<br>Draw a card.",Rx2,None,1,0.1,0.4,2.49,0.42,,Normal,"[2] Fury Swipes (10x) 
+<br>Flip 3 coins.  This attack does 10 damage times the number of heads.",
+87946,Pansear,Pansear,https://tcgplayer-cdn.tcgplayer.com/product/87946_200w.jpg,3,1522,https://cpt.tcgcsv.com/XbK,2022-12-14T16:13:14.15,1,7/39,Common,Fire,70,Basic,"[1] Collect  
+<br>Draw a card.",Wx2,None,1,0.2,0.37,1.76,0.59,,Normal,"[2] Fury Swipes (10x) 
+<br>Flip 3 coins.  This attack does 10 damage times the number of heads.",
+87973,Pawniard,Pawniard,https://tcgplayer-cdn.tcgplayer.com/product/87973_200w.jpg,3,1522,https://cpt.tcgcsv.com/tcK,2022-12-14T16:14:36.457,1,19/39,Common,Metal,60,Basic,[M] Pierce (10),Rx2,P-20,1,0.15,0.45,1.0,0.56,,Normal,[2] Cut (20),
+88194,Poke Ball,Poke Ball,https://tcgplayer-cdn.tcgplayer.com/product/88194_200w.jpg,3,1522,https://cpt.tcgcsv.com/VhK,2022-12-14T16:18:28.683,1,35/39,Common,Item,,,,,,,0.03,0.2,1.49,0.2,,Normal,,"You may play as many Item cards as you like during your turn <em>(before your attack).</em>
+<br>
+<br>
+Flip a coin.  If heads, search your deck for a Pokemon, reveal it, and put it into your hand.  Shuffle your deck afterward."
+88211,Pokemon Catcher,Pokemon Catcher,https://tcgplayer-cdn.tcgplayer.com/product/88211_200w.jpg,3,1522,https://cpt.tcgcsv.com/fjK,2022-12-14T16:18:34.353,1,36/39,Common,Item,,,,,,,0.1,0.25,1.49,0.29,,Normal,,"You may play as many Item cards as you like during your turn <em>(before your attack).</em>
+<br>
+<br>
+Flip a coin.  If heads, switch 1 of your opponent's Benched Pokemon with his or her Active Pokemon."
+88302,Poochyena,Poochyena,https://tcgplayer-cdn.tcgplayer.com/product/88302_200w.jpg,3,1522,https://cpt.tcgcsv.com/3lK,2022-12-14T16:14:13.753,1,16/39,Common,Darkness,60,Basic,[1D] Bite (20),Fx2,P-20,1,0.2,0.45,1.76,0.7,,Normal,,
+88349,Potion,Potion,https://tcgplayer-cdn.tcgplayer.com/product/88349_200w.jpg,3,1522,https://cpt.tcgcsv.com/_lK,2022-12-14T16:18:40.523,1,37/39,Common,Item,,,,,,,0.01,0.15,1.54,0.13,,Normal,,"You may play as many Item cards as you like during your turn <em>(before your attack).</em>
+<br>
+<br>
+Heal 30 damage from 1 of your Pokemon."
+88490,Quilladin,Quilladin,https://tcgplayer-cdn.tcgplayer.com/product/88490_200w.jpg,3,1522,https://cpt.tcgcsv.com/QpK,2022-12-14T16:12:47.927,1,4/39,Common,Grass,90,Stage 1,"[1G] Leech Seed (20) 
+<br>Heal 10 damage from this Pokemon.",Rx2,None,2,0.5,0.83,1.96,0.94,,Normal,[2G] Needle Arm (50),
+88490,Quilladin,Quilladin,https://tcgplayer-cdn.tcgplayer.com/product/88490_200w.jpg,3,1522,https://cpt.tcgcsv.com/QpK,2022-12-14T16:12:47.927,1,4/39,Common,Grass,90,Stage 1,"[1G] Leech Seed (20) 
+<br>Heal 10 damage from this Pokemon.",Rx2,None,2,0.75,1.35,2.84,1.48,,Holofoil,[2G] Needle Arm (50),
+89272,Skitty,Skitty,https://tcgplayer-cdn.tcgplayer.com/product/89272_200w.jpg,3,1522,https://cpt.tcgcsv.com/sKK,2022-12-14T16:17:39.147,1,28/39,Common,Colorless,60,Basic,"[2] Jump On (20+) 
+<br>Flip a coin.  If heads, this attack does 20 more damage.",Fx2,None,1,3.34,4.64,11.16,5.62,,Normal,,
+89348,Slugma,Slugma,https://tcgplayer-cdn.tcgplayer.com/product/89348_200w.jpg,3,1522,https://cpt.tcgcsv.com/-LK,2022-12-14T16:13:02.357,1,6/39,Common,Fire,80,Basic,[1R] Combustion (20),Wx2,None,2,0.2,0.31,2.49,1.4,,Normal,,
+89394,Snorlax,Snorlax,https://tcgplayer-cdn.tcgplayer.com/product/89394_200w.jpg,3,1522,https://cpt.tcgcsv.com/VMK,2022-12-14T16:17:27.887,1,26/39,Common,Colorless,120,Basic,"[3] Rock Smash (10+) 
+<br>Flip a coin.  If heads, this attack does 30 more damage.",Fx2,None,4,27.9,48.69,49.99,30.92,,Normal,[4] Strength (70),
+89418,Snubbull,Snubbull,https://tcgplayer-cdn.tcgplayer.com/product/89418_200w.jpg,3,1522,https://cpt.tcgcsv.com/nNK,2022-12-14T16:17:04.357,1,22/39,Common,Fairy,70,Basic,[1Y] Headbutt (20),Mx2,D-20,2,0.15,0.47,2.49,0.57,,Normal,,
+89708,Swirlix,Swirlix,https://tcgplayer-cdn.tcgplayer.com/product/89708_200w.jpg,3,1522,https://cpt.tcgcsv.com/bVK,2022-12-14T16:17:15.727,1,24/39,Common,Fairy,60,Basic,"[Y] Draining Kiss (10) 
+<br>Heal 10 damage from this Pokemon.",Mx2,D-20,1,0.34,0.61,3.99,1.02,,Normal,,
+89723,Switch,Switch,https://tcgplayer-cdn.tcgplayer.com/product/89723_200w.jpg,3,1522,https://cpt.tcgcsv.com/tVK,2022-12-14T16:18:46.003,1,38/39,Common,Item,,,,,,,0.05,0.23,19.0,0.22,,Normal,,"You may play as many Item cards as you like during your turn <em>(before your attack).</em>
+<br>
+<br>
+Switch your Active Pokemon with 1 of your Benched Pokemon."
+89911,Tierno,Tierno,https://tcgplayer-cdn.tcgplayer.com/product/89911_200w.jpg,3,1522,https://cpt.tcgcsv.com/f-K,2022-12-14T16:18:51.623,1,39/39,Common,Supporter,,,,,,,0.01,0.19,1.32,0.15,,Normal,,"You may play only 1 Supporter card during your turn <em>(before your attack).</em>
+<br>
+<br>
+Draw 3 cards."
+90529,Water Energy,Water Energy,https://tcgplayer-cdn.tcgplayer.com/product/90529_200w.jpg,3,1522,https://cpt.tcgcsv.com/CdL,2015-04-03T12:49:08.14,1,,Common,Basic Energy,,,,,,,0.21,0.24,0.79,0.21,,Normal,,
+90549,Weedle,Weedle,https://tcgplayer-cdn.tcgplayer.com/product/90549_200w.jpg,3,1522,https://cpt.tcgcsv.com/_dL,2022-12-14T16:12:07.643,1,1/39,Common,Grass,50,Basic,"[G] String Shot (10)
+<br> Flip a coin.  If heads, your opponent's Active Pokemon is now Paralyzed.",Rx2,None,1,0.41,0.6,2.41,1.27,,Normal,,
+97716,Kalos Starter Deck [Chespin],Kalos Starter Deck Chespin,https://tcgplayer-cdn.tcgplayer.com/product/97716_200w.jpg,3,1522,https://cpt.tcgcsv.com/l6P,2015-04-03T12:52:01.23,1,,,,,,,,,,,,,,,,,"Features the Kalos starter Pokemon, Chespin! Includes damage counters, a custom coin, a Chespin deckbox and a code for the Pokemon Trading Card Game Online."
+97717,Kalos Starter Deck [Fennekin],Kalos Starter Deck Fennekin,https://tcgplayer-cdn.tcgplayer.com/product/97717_200w.jpg,3,1522,https://cpt.tcgcsv.com/m6P,2015-04-03T12:52:22.697,1,,,,,,,,,,,,,,,,,"Features the Kalos starter Pokemon, Fennekin! Includes damage counters, a custom coin, a Fennekin deckbox and a code for the Pokemon Trading Card Game Online."
+97718,Kalos Starter Deck [Froakie],Kalos Starter Deck Froakie,https://tcgplayer-cdn.tcgplayer.com/product/97718_200w.jpg,3,1522,https://cpt.tcgcsv.com/n6P,2015-04-03T12:52:37.247,1,,,,,,,,,,,,,,,,,"Features the Kalos starter Pokemon, Froakie! Includes damage counters, a custom coin, a Froakie deckbox and a code for the Pokemon Trading Card Game Online."
+97719,Deluxe Kalos Starter Deck [Froakie],Deluxe Kalos Starter Deck Froakie,https://tcgplayer-cdn.tcgplayer.com/product/97719_200w.jpg,3,1522,https://cpt.tcgcsv.com/p6P,2015-04-06T12:51:46.127,1,,,,,,,,,,,,,,,,,"Features the Kalos starter Pokemon, Froakie! Includes damage counters, a custom coin, a Froakie deckbox and a code for the Pokemon Trading Card Game Online and a booster pack from the Black & White Series!"
+97720,Deluxe Kalos Starter Deck [Fennekin],Deluxe Kalos Starter Deck Fennekin,https://tcgplayer-cdn.tcgplayer.com/product/97720_200w.jpg,3,1522,https://cpt.tcgcsv.com/q6P,2015-04-03T12:51:36.13,1,,,,,,,,,,,,,,,,,"Features the Kalos starter Pokemon, Fennekin! Includes damage counters, a custom coin, a Fennekin deckbox and a code for the Pokemon Trading Card Game Online and a booster pack from the Black & White Series!"
+97721,Deluxe Kalos Starter Deck [Chespin],Deluxe Kalos Starter Deck Chespin,https://tcgplayer-cdn.tcgplayer.com/product/97721_200w.jpg,3,1522,https://cpt.tcgcsv.com/r6P,2015-04-03T12:51:16.513,1,,,,,,,,,,,,,,,,,"Features the Kalos starter Pokemon, Chespin! Includes damage counters, a custom coin, a Chespin deckbox and a code for the Pokemon Trading Card Game Online and a booster pack from the Black & White Series!"

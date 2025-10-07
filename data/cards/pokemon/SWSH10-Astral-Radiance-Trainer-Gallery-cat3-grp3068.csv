@@ -1,0 +1,74 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extCardText,extAttack1,extWeakness,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extResistance,extAttack2
+272472,Abomasnow,Abomasnow,https://tcgplayer-cdn.tcgplayer.com/product/272472_200w.jpg,3,3068,https://cpt.tcgcsv.com/s_b3,2025-02-07T20:19:00.16,1,TG01/TG30,Ultra Rare,Grass,140,Stage 1,"<strong>Ability — Toughness Boost</strong>
+<br>Your Single Strike Pokémon in play, except any Abomasnow, get +50 HP. You can't apply more than 1 Toughness Boost Ability at a time.",[2G] Mega Punch (90),Rx2,3,0.99,1.95,999.99,1.62,,Holofoil,,
+272473,Flapple,Flapple,https://tcgplayer-cdn.tcgplayer.com/product/272473_200w.jpg,3,3068,https://cpt.tcgcsv.com/t_b3,2022-08-04T18:24:39.173,1,TG02/TG30,Ultra Rare,Grass,80,Stage 1,"<strong>Ability — Apple Drop</strong>
+<br>Once during your turn, you may put 2 damage counters on I of your opponent's Pokémon. If you placed any damage counters in this way, shuffle this Pokémon and all attached cards into your deck.","[2] Acid Spray (60)
+<br>Flip a coin. If heads, discard an Energy from your opponent's Active Pokémon.",Rx2,1,1.0,1.99,999.99,1.5,2.0,Holofoil,,
+272474,Kingdra,Kingdra,https://tcgplayer-cdn.tcgplayer.com/product/272474_200w.jpg,3,3068,https://cpt.tcgcsv.com/v_b3,2022-05-27T04:03:19.25,1,TG03/TG30,Ultra Rare,Water,150,Stage 2,"<strong>Ability — Deep Sea King</strong>
+<br>When your Active Pokémon is Knocked Out by damage from an attack from your opponent's Pokémon, you may move any amount of Water Energy from that Pokémon to this Pokémon:","[W] Aqua Burst (40x)
+<br>This attack does 40 damage for each Energy attached to this Pokémon.",Lx2,1,4.99,11.95,50.0,9.93,13.09,Holofoil,,
+272475,Frosmoth,Frosmoth,https://tcgplayer-cdn.tcgplayer.com/product/272475_200w.jpg,3,3068,https://cpt.tcgcsv.com/w_b3,2025-02-07T20:19:00.26,1,TG04/TG30,Ultra Rare,Water,90,Stage 1,"<strong>Ability — Ice Dance</strong>
+<br>As often as you like during your turn, you may attach a Energy card from your hand to of your Benched Pokémon.",[1W] Aurora Beam (30),Mx2,2,1.93,2.78,999.99,2.44,,Holofoil,,
+272476,Gardevoir,Gardevoir,https://tcgplayer-cdn.tcgplayer.com/product/272476_200w.jpg,3,3068,https://cpt.tcgcsv.com/x_b3,2024-06-21T12:10:27.693,1,TG05/TG30,Ultra Rare,Psychic,140,Stage 2,"<strong>Ability — Shining Arcana</strong>
+<br>Once during your turn, you may look at the top 2 cards of your deck and attach any number of basic Energy cards you find there to your Pokémon in any way you like. Put the other cards into your hand.","[3] Brainwave (60+)
+<br>This attack does 30 more damage for each Psychic Energy attached to this Pokémon.",Mx2,2,3.0,5.5,30.0,5.36,3.04,Holofoil,,
+272477,Wyrdeer,Wyrdeer,https://tcgplayer-cdn.tcgplayer.com/product/272477_200w.jpg,3,3068,https://cpt.tcgcsv.com/z_b3,2022-05-27T04:03:19.25,1,TG06/TG30,Ultra Rare,Psychic,140,Stage 1,"<strong>Ability — Hurried Gait</strong>
+<br>Once during your turn, you may draw a card.","[2] Extrasensory (40+)
+<br>If you have the same number of cards in your hand as your opponent, this attack does 80 more damage.",Dx2,2,0.78,1.91,999.99,1.73,2.12,Holofoil,F-30,
+272478,Falinks,Falinks,https://tcgplayer-cdn.tcgplayer.com/product/272478_200w.jpg,3,3068,https://cpt.tcgcsv.com/B_b3,2022-05-27T04:03:19.25,1,TG07/TG30,Ultra Rare,Fighting,110,Basic,,"[1F] Rapid Strike Squad (20x)
+<br>This attack does 20 damage for each of your Rapid Strike Pokémon in play",Px2,2,1.5,2.84,999.99,3.03,2.69,Holofoil,,
+272479,Kleavor,Kleavor,https://tcgplayer-cdn.tcgplayer.com/product/272479_200w.jpg,3,3068,https://cpt.tcgcsv.com/C_b3,2024-07-04T07:16:04.093,1,TG08/TG30,Ultra Rare,Fighting,140,Stage 1,,"[2] Timbercleave
+<br>Flip 2 coins. If both of them are heads, your opponent's Active Pokémon is Knocked Out.",Gx2,2,1.25,2.49,999.99,2.36,,Holofoil,,"[FF] Berserker Tackle (120)
+<br>This Pokémon also does 30 damage to itself."
+272480,Mightyena,Mightyena,https://tcgplayer-cdn.tcgplayer.com/product/272480_200w.jpg,3,3068,https://cpt.tcgcsv.com/D_b3,2022-05-27T04:03:19.25,1,TG09/TG30,Ultra Rare,Darkness,110,Stage 1,"<strong>Ability — Hustle Bark</strong>
+<br>If your opponent has any Pokémon-VMAX in play, this Pokémon's attacks cost less.","[3] Wild Tackle (160)
+<br>This Pokémon also does 50 damage to itself.",Gx2,2,2.0,3.06,999.99,3.06,2.99,Holofoil,,
+272481,Galarian Obstagoon,Galarian Obstagoon,https://tcgplayer-cdn.tcgplayer.com/product/272481_200w.jpg,3,3068,https://cpt.tcgcsv.com/F_b3,2025-02-07T20:19:00.353,1,TG10/TG30,Ultra Rare,Darkness,160,Stage 2,"<strong>Ability — Untamed Shout</strong>
+<br>When you play this Pokémon from your hand to evolve 1 of your Pokémon during your turn, you may put 3 damage counters on I of your opponent's Pokémon.","[1D] Obstruct (90)
+<br>During your opponent's next turn, prevent all damage done to this Pokémon by attacks from Basic Pokémon. weakness",Gx2,2,1.0,2.0,999.99,1.76,,Holofoil,,
+272482,Bronzong,Bronzong,https://tcgplayer-cdn.tcgplayer.com/product/272482_200w.jpg,3,3068,https://cpt.tcgcsv.com/G_b3,2025-02-07T20:19:00.437,1,TG11/TG30,Ultra Rare,Metal,110,Stage 1,"<strong>Ability — Metal Transfer</strong>
+<br>As often as you like during your turn, you may move a Metal Energy from 1 of your Pokémon to another of your Pokémon.",[2M] Zen Headbutt (70,Rx2,3,1.4,2.69,999.99,2.48,2.99,Holofoil,G-30,
+272483,Hoothoot,Hoothoot,https://tcgplayer-cdn.tcgplayer.com/product/272483_200w.jpg,3,3068,https://cpt.tcgcsv.com/H_b3,2024-11-01T13:04:41.013,1,TG12/TG30,Ultra Rare,Colorless,50,Basic,"<strong>Ability — Stand Sentry</strong>
+<br>Basic Energy attached to your Benched Pokémon can't be discarded by an effect of your opponent's Item or Supporter cards.",[2] Flap (20),Lx2,1,2.26,4.0,999.99,3.84,3.5,Holofoil,F-30,
+272484,Starmie V,Starmie V,https://tcgplayer-cdn.tcgplayer.com/product/272484_200w.jpg,3,3068,https://cpt.tcgcsv.com/J_b3,2022-09-22T03:51:11.15,1,TG13/TG30,Ultra Rare,Water,190,Basic,,"[2] Swift (5)
+<br>This attack's damage isn't affected by Weakness or Resistance, or by any effects on your opponent's Active Pokémon",Lx2,,89.99,121.18,200.0,107.07,114.97,Holofoil,,"[WW] Energy Spiral (50)
+<Br>This attack does 50 damage for each Energy attached to"
+272485,Ice Rider Calyrex V,Ice Rider Calyrex V,https://tcgplayer-cdn.tcgplayer.com/product/272485_200w.jpg,3,3068,https://cpt.tcgcsv.com/K_b3,2024-06-07T15:49:55.75,1,TG14/TG30,Ultra Rare,Water,210,Basic,,[W] Pierce (40),Mx2,2,5.99,7.99,100.0,7.52,7.52,Holofoil,,"[1WW] Glacial Lance (200)
+<br>Discard 2 Energy from this Pokémon."
+272486,Ice Rider Calyrex VMAX,Ice Rider Calyrex VMAX,https://tcgplayer-cdn.tcgplayer.com/product/272486_200w.jpg,3,3068,https://cpt.tcgcsv.com/L_b3,2022-05-27T04:03:19.25,1,TG15/TG30,Ultra Rare,Water,320,VMAX,,"[2] Ride of the High King (10+)
+<Br>This attack does 30 more damage for each of your opponent's Benched Pokémon.",Mx2,2,4.73,7.0,999.99,6.01,7.89,Holofoil,,"[WW] Max Lance (10+)
+<br>You may discard up to 2 Energy from this Pokémon. If you do, this attack does 120-more damage for each card discarded you in this way"
+272487,Galarian Articuno V,Galarian Articuno V,https://tcgplayer-cdn.tcgplayer.com/product/272487_200w.jpg,3,3068,https://cpt.tcgcsv.com/M_b3,2022-05-27T04:03:19.25,1,TG16/TG30,Ultra Rare,Psychic,210,Basic,"<strong>Ability — Reconstitute</strong>
+<br>You must discard 2 cards from your hand in order to use this Ability. Once during your turn, you may draw a card.","[2P] Psyray (11)
+<br>Your opponent's Active Pokémon is now Confused.",Dx2,2,8.42,12.55,999.99,10.62,12.48,Holofoil,F-30,
+272488,Shadow Rider Calyrex V,Shadow Rider Calyrex V,https://tcgplayer-cdn.tcgplayer.com/product/272488_200w.jpg,3,3068,https://cpt.tcgcsv.com/N_b3,2023-12-11T20:56:20.65,1,TG17/TG30,Ultra Rare,Psychic,210,Basic,,"[P] Shadow Mist (10)
+<br>During your opponent's next turn, they can't play any Special Energy or Stadium cards from their hand.",Dx2,1,6.91,8.7,49.99,8.12,8.24,Holofoil,F-30,"[3] Astral Barrage
+<br>Choose 2 of your opponent's Pokémon and put 5 damage counters on each of them."
+272489,Shadow Rider Calyrex VMAX,Shadow Rider Calyrex VMAX,https://tcgplayer-cdn.tcgplayer.com/product/272489_200w.jpg,3,3068,https://cpt.tcgcsv.com/P_b3,2022-05-27T04:03:19.25,1,TG18/TG30,Ultra Rare,Psychic,320,VMAX,"<strong>Ability — Underworld Door</strong>
+<br>Once during your turn, you may attach a Psychic Energy card from your hand to 1 of your Benched Psychic Pokémon. If you attached Energy to a Pokémon in this way, draw 2 cards.","[3] Max Geist (10+)
+<br>This attack does 30 more damage for each Psychic Energy attached to all of your Pokémon.",Dx2,2,6.5,9.23,39.26,7.93,9.13,Holofoil,F-30,
+272491,Galarian Zapdos V,Galarian Zapdos V,https://tcgplayer-cdn.tcgplayer.com/product/272491_200w.jpg,3,3068,https://cpt.tcgcsv.com/R_b3,2022-05-27T04:03:19.25,1,TG19/TG30,Ultra Rare,Fighting,200,Basic,"<strong>Ability — Fighting Instinct</strong>
+<br>This Pokémon's attacks cost less for each of opponent's Pokémon V in play.","[3F] Thunderous Kick (170)
+<br>Before doing damage, discard a Special Energy from your opponent's Active Pokémon.",Px2,1,8.75,12.52,33.34,10.94,10.94,Holofoil,,
+272492,Galarian Moltres V,Galarian Moltres V,https://tcgplayer-cdn.tcgplayer.com/product/272492_200w.jpg,3,3068,https://cpt.tcgcsv.com/S_b3,2022-05-27T12:39:07.367,1,TG20/TG30,Ultra Rare,Darkness,220,Basic,"<strong>Ability — Direflame Wings</strong>
+<br>Once during your turn, you may attach a Darkness Energy card from your discard pile to this Pokémon. You can't use more than 1 Direflame Wings Ability each turn.","[1DD] Aura Burn (190)
+<br>This Pokémon also does 30 damage to itself.",Gx2,2,16.48,23.38,35.0,19.12,24.89,Holofoil,,
+272493,Zacian V,Zacian V,https://tcgplayer-cdn.tcgplayer.com/product/272493_200w.jpg,3,3068,https://cpt.tcgcsv.com/T_b3,2022-05-27T04:03:19.25,1,TG21/TG30,Ultra Rare,Metal,220,Basic,"<strong>Ability — Intrepid Sword</strong>
+<br>Once during your turn, you may look at the top 3 cards of your deck and attach any number of Metal Energy cards you find there to this Pokémon. Put the other cards into your hand. If you use this Ability, your turn ends.","[MMM] Brave Blade (230)
+<br>During your next turn, this Pokémon can't attack.",Rx2,2,13.37,18.88,100.0,16.41,18.23,Holofoil,G-30,
+272494,Zamazenta V,Zamazenta V,https://tcgplayer-cdn.tcgplayer.com/product/272494_200w.jpg,3,3068,https://cpt.tcgcsv.com/V_b3,2022-05-27T04:03:19.25,1,TG22/TG30,Ultra Rare,Metal,230,Basic,"<strong>Ability — Dauntless Shield</strong>
+<br>Prevent all damage done to this Pokémon by attacks from your opponent's Pokémon VMAX","[1MM] Assault Tackle (130)
+<br>Discard a Special Energy from your opponent's Active Pokémon.",Rx2,2,5.4,6.99,22.9,6.74,7.68,Holofoil,G-30,
+272495,Garchomp V,Garchomp V,https://tcgplayer-cdn.tcgplayer.com/product/272495_200w.jpg,3,3068,https://cpt.tcgcsv.com/W_b3,2024-08-25T10:14:58.423,1,TG23/TG30,Ultra Rare,Dragon,200,Basic,,[1WF] Dragon Claw (120),,,54.18,69.99,250.0,61.91,66.22,Holofoil,,"[1WFF] Sonic Strike
+<br>Discard 3 Energy from this Pokémon. This attack does 220 damage to 1 of your opponent's Pokémon. <em<(Don't apply Weakness and Resistance for Benched Pokémon.)</em>"
+272496,Allister,Allister,https://tcgplayer-cdn.tcgplayer.com/product/272496_200w.jpg,3,3068,https://cpt.tcgcsv.com/X_b3,2024-02-08T14:02:24.24,1,TG24/TG30,Ultra Rare,Supporter,,,"Draw 3 cards. If you drew any cards in this way, discard up to 3 cards from your hand. <em>(You must discard at least 1 card.)</em>",,,,3.5,4.6,999.99,4.28,5.44,Holofoil,,
+272497,Bea,Bea,https://tcgplayer-cdn.tcgplayer.com/product/272497_200w.jpg,3,3068,https://cpt.tcgcsv.com/Z_b3,2022-05-27T04:03:19.25,1,TG25/TG30,Ultra Rare,Supporter,,,"Discard the top 5 cards of your deck, and attach any Energy cards you discarded in this way to your Benched Fighting Pokémon in any way you like.",,,,3.99,5.0,29.0,4.68,5.58,Holofoil,,
+272498,Melony,Melony,https://tcgplayer-cdn.tcgplayer.com/product/272498_200w.jpg,3,3068,https://cpt.tcgcsv.com/-_b3,2022-05-27T04:03:19.25,1,TG26/TG30,Ultra Rare,Supporter,,,"Attach a Water Energy card from your discard pile to 1 of your Pokémon V. If you do, draw 3 cards",,,,2.5,3.97,999.99,3.89,5.72,Holofoil,,
+272499,Milo,Milo,https://tcgplayer-cdn.tcgplayer.com/product/272499_200w.jpg,3,3068,https://cpt.tcgcsv.com/__b3,2023-06-27T14:31:15.54,1,TG27/TG30,Ultra Rare,Supporter,,,"Discard up to 2 cards from your hand, and draw 2 cards for each card you discarded in this way",,,,1.0,2.06,20.0,2.06,2.66,Holofoil,,
+272500,Piers,Piers,https://tcgplayer-cdn.tcgplayer.com/product/272500_200w.jpg,3,3068,https://cpt.tcgcsv.com/00c3,2025-04-30T18:00:24.323,1,TG28/TG30,Ultra Rare,Supporter,,,"Search your deck for an Energy card and a Darkness Pokémon, reveal them, and put them into your hand. Then, shuffle your deck.",,,,2.1,3.14,20.0,3.12,19.99,Holofoil,,
+272501,Ice Rider Calyrex VMAX (Secret),Ice Rider Calyrex VMAX Secret,https://tcgplayer-cdn.tcgplayer.com/product/272501_200w.jpg,3,3068,https://cpt.tcgcsv.com/20c3,2025-01-26T09:19:30.637,1,TG29/TG30,Secret Rare,Water,320,VMAX,,"[2] Ride of the High King (10+)
+<Br>This attack does 30 more damage for each of your opponent's Benched Pokémon.",Mx2,2,3.3,4.99,999.99,4.32,3.75,Holofoil,,"[WW] Max Lance (10+)
+<br>You may discard up to 2 Energy from this Pokémon. If you do, this attack does 120-more damage for each card discarded you in this way"
+272502,Shadow Rider Calyrex VMAX (Secret),Shadow Rider Calyrex VMAX Secret,https://tcgplayer-cdn.tcgplayer.com/product/272502_200w.jpg,3,3068,https://cpt.tcgcsv.com/30c3,2023-09-04T09:50:14.77,1,TG30/TG30,Secret Rare,Psychic,320,VMAX,"<strong>Ability — Underworld Door</strong>
+<br>Once during your turn, you may attach a Psychic Energy card from your hand to 1 of your Benched Psychic Pokémon. If you attached Energy to a Pokémon in this way, draw 2 cards.","[3] Max Geist (10+)
+<br>This attack does 30 more damage for each Psychic Energy attached to all of your Pokémon.",Mx2,2,3.23,4.99,999.99,4.16,5.22,Holofoil,,

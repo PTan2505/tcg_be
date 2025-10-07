@@ -1,0 +1,24 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extAttack2,extWeakness,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extResistance
+275057,Vulpix - 1/12,Vulpix 1 12,https://tcgplayer-cdn.tcgplayer.com/product/275057_200w.jpg,3,3087,https://cpt.tcgcsv.com/92d3,2022-09-23T15:17:17.74,1,001/012,Promo,Fire,60,Basic,"[1] Roar
+<br>Your opponent switches his or her Active Pokémon with 1 of his or her Benched Pokémon.",[R] Gnaw (10),Wx2,1,19.0,19.0,19.0,17.65,,Holofoil,
+275058,Torchic - 2/12,Torchic 2 12,https://tcgplayer-cdn.tcgplayer.com/product/275058_200w.jpg,3,3087,https://cpt.tcgcsv.com/b2d3,2022-09-23T15:12:40.397,1,002/012,Promo,Fire,60,Basic,"[R] Ember (20)
+<br>Flip a coin. If tails, discard a Fire Energy attached to this Pokémon.",,Wx2,1,9.0,12.0,15.0,3.99,,Holofoil,
+275059,Fennekin - 3/12,Fennekin 3 12,https://tcgplayer-cdn.tcgplayer.com/product/275059_200w.jpg,3,3087,https://cpt.tcgcsv.com/c2d3,2022-09-22T20:55:09.03,1,003/012,Promo,Fire,50,Basic,[R] Will-O-Wisp (20),,Wx2,1,,,,,,,
+275060,Magikarp - 4/12,Magikarp 4 12,https://tcgplayer-cdn.tcgplayer.com/product/275060_200w.jpg,3,3087,https://cpt.tcgcsv.com/d2d3,2022-09-23T15:07:18.107,1,004/012,Promo,Water,30,Basic,"[W] Epic Splash (30)
+<br>Flip 2 coins. If either of them are tails, this attack does nothing.",,Lx2,1,,,,,,,
+275061,Totodile - 5/12,Totodile 5 12,https://tcgplayer-cdn.tcgplayer.com/product/275061_200w.jpg,3,3087,https://cpt.tcgcsv.com/f2d3,2022-09-23T15:16:03.173,1,005/012,Promo,Water,60,Basic,"[W] Fury Strikes (10x)
+<br>Flip 3 coins. This attack does 10 damage times the number of heads.",,Gx2,1,,,,,,,
+275062,Pikachu - 6/12,Pikachu 6 12,https://tcgplayer-cdn.tcgplayer.com/product/275062_200w.jpg,3,3087,https://cpt.tcgcsv.com/g2d3,2022-09-23T15:09:33.42,1,006/012,Promo,Lightning,60,Basic,"[1] Tail Whip
+<br>Flip a coin. If heads, the Defending Pokémon can't attack during your opponent's next turn.",[1L] Electro Ball (30),Fx2,1,,,,,,,M-20
+275063,Scraggy - 7/12,Scraggy 7 12,https://tcgplayer-cdn.tcgplayer.com/product/275063_200w.jpg,3,3087,https://cpt.tcgcsv.com/h2d3,2022-09-23T15:10:39.573,1,007/012,Promo,Darkness,60,Basic,[DD] Corkscrew Punch (30),,Fx2,2,19.0,24.5,29.99,28.0,,Holofoil,P-20
+275064,Jigglypuff - 8/12,Jigglypuff 8 12,https://tcgplayer-cdn.tcgplayer.com/product/275064_200w.jpg,3,3087,https://cpt.tcgcsv.com/j2d3,2022-09-22T20:58:15.193,1,008/012,Promo,Fairy,60,Basic,[1] Rollout (10),"[Y] Heartfelt Song  
+<br>Discard a D Energy attached to your opponent's Active Pokémon.",Mx2,1,10.0,10.0,10.0,10.0,,Holofoil,D-20
+275065,Togepi - 9/12,Togepi 9 12,https://tcgplayer-cdn.tcgplayer.com/product/275065_200w.jpg,3,3087,https://cpt.tcgcsv.com/k2d3,2022-09-23T15:11:38.717,1,009/012,Promo,Fairy,40,Basic,"[1] Sweet Kiss (10)
+<br>Your opponent draws a card.",,Mx2,1,,,,,,,D-20
+275066,Dedenne - 10/12,Dedenne 10 12,https://tcgplayer-cdn.tcgplayer.com/product/275066_200w.jpg,3,3087,https://cpt.tcgcsv.com/l2d3,2022-09-22T20:52:06.077,1,010/012,Promo,Fairy,70,Basic,"[1] Nuzzle
+<br>Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.","[2Y] Spiral Drain (60)
+<br>Heal 20 damage from this Pokémon.",Mx2,1,,,,,,,D-20
+275067,Meowth - 11/12,Meowth 11 12,https://tcgplayer-cdn.tcgplayer.com/product/275067_200w.jpg,3,3087,https://cpt.tcgcsv.com/m2d3,2022-09-23T15:08:36.553,1,011/012,Promo,Colorless,60,Basic,"[1] Act Tough (10+)
+<br>If this Pokémon has any Darkness Energy attached to it, this attack does 20 more damage.",,Fx2,1,,,,,,,
+275069,Eevee - 12/12,Eevee 12 12,https://tcgplayer-cdn.tcgplayer.com/product/275069_200w.jpg,3,3087,https://cpt.tcgcsv.com/p2d3,2022-09-22T20:53:46.26,1,012/012,Promo,Colorless,60,Basic,[1] Tackle (10),"[2] Lunge (30)
+<br>Flip a coin. If tails, this attack does nothing.",Fx2,1,,,,,,,

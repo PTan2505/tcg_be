@@ -1,0 +1,44 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extAttack1,extWeakness,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extCardText,extAttack2,extResistance
+159115,______'s Pikachu,______s Pikachu,https://tcgplayer-cdn.tcgplayer.com/product/159115_200w.jpg,3,2205,https://cpt.tcgcsv.com/kGh2,2021-12-10T14:04:09.17,1,24,Promo,Lightning,50,Basic,"[LL] Birthday Surprise (30+) If it's not your birthday, this attack does 30 damage.  If it is your birthday, flip a coin.  If heads, this attack does 30 damage plus 50 more damage; if tails, this attack does 30 damage.",F,1,85.98,113.37,125.0,112.48,,Normal,,,
+161747,Pikachu (Baby),Pikachu Baby,https://tcgplayer-cdn.tcgplayer.com/product/161747_200w.jpg,3,2205,https://cpt.tcgcsv.com/ZJj2,2020-07-13T15:59:02.697,1,27,Promo,Lightning,,,,,,15.16,15.16,15.16,19.0,,Normal,"<em><span style=""color:red"">This promotional card is printed in Italian.</span></em>",,
+161748,Pikachu (Base Set),Pikachu Base Set,https://tcgplayer-cdn.tcgplayer.com/product/161748_200w.jpg,3,2205,https://cpt.tcgcsv.com/-Jj2,2020-07-13T15:59:25.447,1,58,Promo,Lightning,,,,,,28.99,28.99,28.99,35.0,,Normal,"<em><span style=""color:red"">This promotional card is printed in Korean.</span></em>",,
+161749,Pikachu (Flying),Pikachu Flying,https://tcgplayer-cdn.tcgplayer.com/product/161749_200w.jpg,3,2205,https://cpt.tcgcsv.com/_Jj2,2020-07-13T16:00:05.09,1,25,Promo,Lightning,,,,,,14.99,19.99,26.27,20.21,,Normal,"<em><span style=""color:red"">This promotional card is printed in German.</span></em>",,
+161750,Pikachu (Ivy),Pikachu Ivy,https://tcgplayer-cdn.tcgplayer.com/product/161750_200w.jpg,3,2205,https://cpt.tcgcsv.com/0Kj2,2020-07-13T16:00:12.48,1,1,Promo,Lightning,,,,,,19.34,308.66,597.98,14.88,,Normal,"<em><span style=""color:red"">This promotional card is printed in Portuguese.</span></em>",,
+161751,Pikachu (Jungle),Pikachu Jungle,https://tcgplayer-cdn.tcgplayer.com/product/161751_200w.jpg,3,2205,https://cpt.tcgcsv.com/2Kj2,2018-03-02T14:29:54.04,1,60,Promo,Lightning,,,,,,39.9,39.99,40.0,,,Normal,"<em><span style=""color:red"">This promotional card is printed in Chinese.</span></em>",,
+161752,Pikachu (Movie),Pikachu Movie,https://tcgplayer-cdn.tcgplayer.com/product/161752_200w.jpg,3,2205,https://cpt.tcgcsv.com/3Kj2,2018-03-02T14:30:35.983,1,4,Promo,Lightning,,,,,,19.4,22.76,27.7,19.2,14.75,Normal,"<em><span style=""color:red"">This promotional card is printed in Dutch.</span></em>",,
+161753,Pikachu (Snap),Pikachu Snap,https://tcgplayer-cdn.tcgplayer.com/product/161753_200w.jpg,3,2205,https://cpt.tcgcsv.com/5Kj2,2020-07-13T16:03:48.207,1,4,Promo,Lightning,,,,,,31.17,31.17,31.17,28.34,,Normal,"<em><span style=""color:red"">This promotional card is printed in Spanish.</span></em>",,
+161754,Pikachu (Surfing),Pikachu Surfing,https://tcgplayer-cdn.tcgplayer.com/product/161754_200w.jpg,3,2205,https://cpt.tcgcsv.com/6Kj2,2020-07-13T15:59:59.013,1,28,Promo,Lightning,,,,,,25.71,30.0,39.99,23.37,,Normal,"<em><span style=""color:red"">This promotional card is printed in French.</span></em>",,
+161757,Pikachu World Collection Promo Set,Pikachu World Collection Promo Set,https://tcgplayer-cdn.tcgplayer.com/product/161757_200w.jpg,3,2205,https://cpt.tcgcsv.com/9Kj2,2018-03-02T14:43:40.667,1,,,,,,,,,,,,,,,"This sealed product contains 9 promotional cards of Pikachu, printed in various languages.",,
+215153,Pikachu (English),Pikachu English,https://tcgplayer-cdn.tcgplayer.com/product/215153_200w.jpg,3,2205,https://cpt.tcgcsv.com/55L2,2020-05-29T21:43:52.27,1,PW 1,Promo,Lightning,50,Basic,"[1] Hello!
+<br>Greet your opponent. Then, each player draws a card.",Fx2,1,29.99,30.68,31.37,99.99,,Holofoil,,"[1LL] Thunderbolt: (60)
+Discard all Energy attached to Pikachu.",M-20
+215154,Pikachu (Italian),Pikachu Italian,https://tcgplayer-cdn.tcgplayer.com/product/215154_200w.jpg,3,2205,https://cpt.tcgcsv.com/65L2,2020-05-29T21:45:05.26,1,PW 2,Promo,Lightning,50,Basic,"[1] Hello!
+<br>Greet your opponent. Then, each player draws a card.",Fx2,1,40.0,40.0,40.0,99.99,,Holofoil,"<em><span style=""color:red"">This promotional card is printed in Italian.</span></em>","[1LL] Thunderbolt: (60)
+Discard all Energy attached to Pikachu.",M-20
+215155,Pikachu (Korean),Pikachu Korean,https://tcgplayer-cdn.tcgplayer.com/product/215155_200w.jpg,3,2205,https://cpt.tcgcsv.com/75L2,2020-05-29T21:45:56.81,1,PW 3,Promo,Lightning,50,Basic,"[1] Hello!
+<br>Greet your opponent. Then, each player draws a card.",Fx2,1,74.95,87.47,99.99,22.44,,Holofoil,"<em><span style=""color:red"">This promotional card is printed in Korean.</span></em>","[1LL] Thunderbolt: (60)
+Discard all Energy attached to Pikachu.",M-20
+215156,Pikachu (Spanish),Pikachu Spanish,https://tcgplayer-cdn.tcgplayer.com/product/215156_200w.jpg,3,2205,https://cpt.tcgcsv.com/85L2,2020-05-29T21:46:58.197,1,PW 4,Promo,Lightning,50,Basic,"[1] Hello!
+<br>Greet your opponent. Then, each player draws a card.",Fx2,1,24.99,42.75,53.02,99.99,,Holofoil,"<em><span style=""color:red"">This promotional card is printed in Spanish.</span></em>","[1LL] Thunderbolt: (60)
+Discard all Energy attached to Pikachu.",M-20
+215157,Pikachu (Japanese),Pikachu Japanese,https://tcgplayer-cdn.tcgplayer.com/product/215157_200w.jpg,3,2205,https://cpt.tcgcsv.com/95L2,2020-05-29T21:48:16.253,1,PW 5,Promo,Lightning,50,Basic,"[1] Hello!
+<br>Greet your opponent. Then, each player draws a card.",Fx2,1,34.95,65.39,69.99,99.99,,Holofoil,"<em><span style=""color:red"">This promotional card is printed in Japanese.</span></em>","[1LL] Thunderbolt: (60)
+Discard all Energy attached to Pikachu.",M-20
+215158,Pikachu (German),Pikachu German,https://tcgplayer-cdn.tcgplayer.com/product/215158_200w.jpg,3,2205,https://cpt.tcgcsv.com/b5L2,2020-05-29T21:48:27.957,1,PW 6,Promo,Lightning,50,Basic,"[1] Hello!
+<br>Greet your opponent. Then, each player draws a card.",Fx2,1,14.21,25.49,25.99,99.99,,Holofoil,"<em><span style=""color:red"">This promotional card is printed in German.</span></em>","[1LL] Thunderbolt: (60)
+Discard all Energy attached to Pikachu.",M-20
+215159,Pikachu (French),Pikachu French,https://tcgplayer-cdn.tcgplayer.com/product/215159_200w.jpg,3,2205,https://cpt.tcgcsv.com/c5L2,2020-05-29T21:49:03.627,1,PW 7,Promo,Lightning,50,Basic,"[1] Hello!
+<br>Greet your opponent. Then, each player draws a card.",Fx2,1,37.0,110.98,120.0,99.99,,Holofoil,"<em><span style=""color:red"">This promotional card is printed in French.</span></em>","[1LL] Thunderbolt: (60)
+Discard all Energy attached to Pikachu.",M-20
+215160,Pikachu (Polish),Pikachu Polish,https://tcgplayer-cdn.tcgplayer.com/product/215160_200w.jpg,3,2205,https://cpt.tcgcsv.com/d5L2,2020-05-29T21:49:51.973,1,PW 8,Promo,Lightning,50,Basic,"[1] Hello!
+<br>Greet your opponent. Then, each player draws a card.",Fx2,1,,,,,,,"<em><span style=""color:red"">This promotional card is printed in Polish.</span></em>","[1LL] Thunderbolt: (60)
+Discard all Energy attached to Pikachu.",M-20
+215161,Pikachu (Portuguese),Pikachu Portuguese,https://tcgplayer-cdn.tcgplayer.com/product/215161_200w.jpg,3,2205,https://cpt.tcgcsv.com/f5L2,2020-05-29T21:50:31.53,1,PW 9,Promo,Lightning,50,Basic,"[1] Hello!
+<br>Greet your opponent. Then, each player draws a card.",Fx2,1,20.77,60.38,99.99,20.3,,Holofoil,"<em><span style=""color:red"">This promotional card is printed in Portuguese.</span></em>","[1LL] Thunderbolt: (60)
+Discard all Energy attached to Pikachu.",M-20
+215162,Pikachu World Collection Promo Set (2010),Pikachu World Collection Promo Set 2010,https://tcgplayer-cdn.tcgplayer.com/product/215162_200w.jpg,3,2205,https://cpt.tcgcsv.com/g5L2,2020-05-29T22:01:28.757,1,,,,,,,,,,,,,,,"This sealed product contains 9 promotional cards of Pikachu, printed in various languages.",,
+215163,Pikachu (Japanese) (Green),Pikachu Japanese Green,https://tcgplayer-cdn.tcgplayer.com/product/215163_200w.jpg,3,2205,https://cpt.tcgcsv.com/h5L2,2020-05-29T22:11:21.75,1,PW 5,Promo,Lightning,50,Basic,"[1] Hello!
+<br>Greet your opponent. Then, each player draws a card.",Fx2,1,,,,,,,"<em><span style=""color:red"">This promotional card is printed in Japanese.</span></em>
+<br><em>The green background variant could be found only in Pokémon Centers and 7-11 stores.</em>","[1LL] Thunderbolt: (60)
+Discard all Energy attached to Pikachu.",M-20
+215164,Pikachu World Collection Promo Set (2010) (Green),Pikachu World Collection Promo Set 2010 Green,https://tcgplayer-cdn.tcgplayer.com/product/215164_200w.jpg,3,2205,https://cpt.tcgcsv.com/j5L2,2020-05-29T22:10:25.88,1,,,,,,,,,,,,,,,"This sealed product contains 9 promotional cards of Pikachu, printed in various languages. <em>The green background variant could be found only in Pokémon Centers and 7-11 stores.</em>",,

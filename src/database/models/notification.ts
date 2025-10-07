@@ -4,7 +4,7 @@ export interface Notification extends Document {
   _id: Types.ObjectId;
   recipient: Types.ObjectId;
   sender: Types.ObjectId;
-  type: 'post_like' | 'post_dislike' | 'post_comment' | 'comment_like' | 'comment_dislike' | 'comment_reply' | 'post_tag' | 'comment_tag' | 'friend_request' | 'friend_accept';
+  type: 'post_like' | 'post_comment' | 'comment_like' | 'comment_reply' | 'post_tag' | 'comment_tag' | 'friend_request' | 'friend_accept';
   post?: Types.ObjectId;
   comment?: Types.ObjectId;
   isRead: boolean;
@@ -26,7 +26,7 @@ const notificationSchema = new Schema<Notification>(
     },
     type: {
       type: String,
-      enum: ['post_like', 'post_dislike', 'post_comment', 'comment_like', 'comment_dislike', 'comment_reply', 'post_tag', 'comment_tag', 'friend_request', 'friend_accept'],
+      enum: ['post_like', 'post_comment', 'comment_like', 'comment_reply', 'post_tag', 'comment_tag', 'friend_request', 'friend_accept'],
       required: true,
     },
     post: {

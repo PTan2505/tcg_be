@@ -1,0 +1,128 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extCardType,extHP,extStage,extCardText,extAttack1,extAttack2,extWeakness,extRetreatCost,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName,extResistance
+450295,Mawile V,Mawile V,https://tcgplayer-cdn.tcgplayer.com/product/450295_200w.jpg,3,17674,https://cpt.tcgcsv.com/W7D5,2022-11-11T05:03:12.28,1,TG17/TG30,Ultra Rare,Psychic,200,Basic,"<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>","[P] Pouty Slap (30)
+<br>
+Flip a coin. If heads, discard an Energy from your opponent's Active Pokémon.","[3] Chomp Down (100)
+<br>
+Discard a random card from your opponent's hand.",Mx2,1,6.08,9.66,25.09,9.66,13.41,Holofoil,
+451398,Zeraora V,Zeraora V,https://tcgplayer-cdn.tcgplayer.com/product/451398_200w.jpg,3,17674,https://cpt.tcgcsv.com/-zD5,2022-11-11T05:03:12.28,1,TG16/TG30,Ultra Rare,Lightning,210,Basic,"<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>","[2L] Cross Fist (100)
+<br>
+If 1 of your other Rapid Strike Pokémon used an attack during your last turn, this attack also does 160 damage to 1 of your opponent's Benched Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",,Fx2,2,6.88,9.76,40.0,8.6,8.98,Holofoil,
+452015,Braixen,Braixen,https://tcgplayer-cdn.tcgplayer.com/product/452015_200w.jpg,3,17674,https://cpt.tcgcsv.com/kQD5,2025-01-26T11:51:51.943,1,TG01/TG30,Ultra Rare,Fire,90,Stage 1,,[R] Combustion (30),"[2] Flare Parade (60x)
+<br>
+This attack does 60 damage for each Serena card in your discard pile.",Wx2,1,2.15,3.47,999.99,3.47,,Holofoil,
+452016,Milotic,Milotic,https://tcgplayer-cdn.tcgplayer.com/product/452016_200w.jpg,3,17674,https://cpt.tcgcsv.com/lQD5,2024-11-09T04:07:29.757,1,TG02/TG30,Ultra Rare,Water,130,Stage 1,,"[W] Water Arrow
+<br>
+This attack does 50 damage to 1 of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>","[1W] Mellow Wave (60)
+<br>
+Your opponent's Active Pokémon is now Asleep.",Lx2,2,4.0,5.81,30.0,5.49,,Holofoil,
+452017,Flaaffy,Flaaffy,https://tcgplayer-cdn.tcgplayer.com/product/452017_200w.jpg,3,17674,https://cpt.tcgcsv.com/mQD5,2022-11-11T05:03:12.28,1,TG03/TG30,Ultra Rare,Lightning,90,Stage 1,"<strong>Ability — Dynamotor</strong>
+<br>
+Once during your turn, you may attach a Lightning Energy card from your discard pile to 1 of your Benched Pokémon.",[1LL] Electro Ball (50),,Fx2,2,2.0,3.38,19.5,3.5,3.17,Holofoil,
+452018,Jynx,Jynx,https://tcgplayer-cdn.tcgplayer.com/product/452018_200w.jpg,3,17674,https://cpt.tcgcsv.com/nQD5,2025-02-07T20:17:12.777,1,TG04/TG30,Ultra Rare,Psychic,100,Basic,"<strong>Ability — Selfish Lips</strong>
+<br>
+If this Pokémon is Knocked Out by damage from an attack from your opponent's Pokémon V, your opponent can't take any Prize cards for it.","[2] Psychic Assault (10+)
+<br>
+This attack does 10 more damage for each damage counter on your opponent's Active Pokémon.",,Dx2,2,0.9,1.99,999.99,1.75,2.29,Holofoil,F-30
+452019,Gardevoir,Gardevoir,https://tcgplayer-cdn.tcgplayer.com/product/452019_200w.jpg,3,17674,https://cpt.tcgcsv.com/pQD5,2025-04-17T09:07:01.777,1,TG05/TG30,Ultra Rare,Psychic,150,Stage 2,"<strong>Ability — Refinement</strong>
+<br>
+You must discard a card from your hand in order to use this Ability. Once during your turn, you may draw 2 cards.",[1P] Magical Shot (120),,Mx2,2,3.62,6.99,30.0,5.98,4.49,Holofoil,
+452020,Malamar,Malamar,https://tcgplayer-cdn.tcgplayer.com/product/452020_200w.jpg,3,17674,https://cpt.tcgcsv.com/qQD5,2024-10-23T15:43:33.44,1,TG06/TG30,Ultra Rare,Psychic,120,Stage 1,,"[P] Rapid Strike Tentacles (40x)
+<br>
+Reveal any number of Rapid Strike cards from your hand. This attack does 40 damage for each card you revealed in this way. Then, shuffle those cards into your deck.",,Dx2,3,0.75,1.49,999.99,1.1,1.4,Holofoil,F-30
+452021,Rockruff,Rockruff,https://tcgplayer-cdn.tcgplayer.com/product/452021_200w.jpg,3,17674,https://cpt.tcgcsv.com/rQD5,2025-02-07T20:17:12.887,1,TG07/TG30,Ultra Rare,Fighting,70,Basic,,"[FF] Crunch (30)
+<br>
+Flip a coin. If heads, discard an Energy from your opponent's Active Pokémon.",,Gx2,1,1.75,2.9,14.99,2.65,3.41,Holofoil,
+452022,Passimian,Passimian,https://tcgplayer-cdn.tcgplayer.com/product/452022_200w.jpg,3,17674,https://cpt.tcgcsv.com/sQD5,2024-10-23T15:44:19.377,1,TG08/TG30,Ultra Rare,Fighting,110,Basic,"<strong>Ability — Throwing Coach</strong>
+<br>
+Your Rapid Strike Pokémon's attacks do 30 more damage to your opponent's Benched Pokémon V and Benched Pokémon-GX <em>(before applying Weakness and Resistance)</em>. You can't apply more than 1 Throwing Coach ability at a time.","[F] Fling
+<br>
+This attack does 20 damage to 1 of your opponent's Pokémon. <em>(Don't apply Weakness and Resistance for Benched Pokémon.)</em>",,Px2,1,0.4,1.26,999.99,1.1,,Holofoil,
+452023,Druddigon,Druddigon,https://tcgplayer-cdn.tcgplayer.com/product/452023_200w.jpg,3,17674,https://cpt.tcgcsv.com/tQD5,2024-10-23T17:22:47.253,1,TG09/TG30,Ultra Rare,Dragon,120,Basic,,"[RW] Revenge (40+)
+<br>
+If any of your Pokémon were Knocked Out by damage from an attack from your opponent's Pokémon during their last turn, this attack does 120 more damage.",[1RW] Dragon Claw (120),,2,0.75,2.67,999.99,2.67,,Holofoil,
+452025,Smeargle,Smeargle,https://tcgplayer-cdn.tcgplayer.com/product/452025_200w.jpg,3,17674,https://cpt.tcgcsv.com/wQD5,2023-06-21T11:06:20.09,1,TG10/TG30,Ultra Rare,Colorless,70,Basic,,"[1] Colorful Palette
+<br>
+Look at the top 5 cards of your deck. You may attach any number of basic Energy cards you find there to 1 of your Pokémon. Shuffle the other cards back into your deck.",[2] Ram (30),Fx2,1,1.74,3.0,999.99,2.82,0.55,Holofoil,
+452027,Altaria,Altaria,https://tcgplayer-cdn.tcgplayer.com/product/452027_200w.jpg,3,17674,https://cpt.tcgcsv.com/zQD5,2022-11-11T05:03:12.28,1,TG11/TG30,Ultra Rare,Colorless,110,Stage 1,,"[2] Magical Echo
+<br>
+Move all damage counters from 1 of your Benched Pokémon to your opponent's Active Pokémon.",[3] Blasting Wind (90),Lx2,1,3.27,6.04,17.99,6.3,,Holofoil,F-30
+452028,Kricketune V,Kricketune V,https://tcgplayer-cdn.tcgplayer.com/product/452028_200w.jpg,3,17674,https://cpt.tcgcsv.com/BQD5,2022-11-11T05:03:12.28,1,TG12/TG30,Ultra Rare,Grass,180,Basic,"<strong>Ability — Exciting Stage</strong>
+<br>Once during your turn, you may draw cards until you have 3 cards in your hand. If this Pokémon is in the Active Spot, you may draw cards until you have 4 cards in your hand instead. You can't use more than 1 Exciting Stage Ability each turn.
+<br><br>
+<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>","[2G] X-Scissor (80+)
+<br>
+Flip a coin. If heads, this attack does 80 more damage.",,Rx2,1,2.0,3.93,20.0,3.22,4.09,Holofoil,
+452029,Serperior V,Serperior V,https://tcgplayer-cdn.tcgplayer.com/product/452029_200w.jpg,3,17674,https://cpt.tcgcsv.com/CQD5,2024-12-26T22:17:08.61,1,TG13/TG30,Ultra Rare,Grass,210,Basic,"<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>","[1] Noble Light
+<br>
+Heal 30 damage from each Pokémon <em>(both yours and your opponent's)</em>.",[2G] Solar Beam (120),Rx2,1,12.0,18.0,49.0,16.36,17.97,Holofoil,
+452030,Blaziken V,Blaziken V,https://tcgplayer-cdn.tcgplayer.com/product/452030_200w.jpg,3,17674,https://cpt.tcgcsv.com/DQD5,2022-11-11T05:03:12.28,1,TG14/TG30,Ultra Rare,Fire,210,Basic,"<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>",[2] High Jump Kick (50),"[2RR] Fire Spin (210)
+<br>Discard 2 Energy from this Pokemon.",Wx2,2,21.4,27.38,100.0,24.64,29.45,Holofoil,None
+452031,Blaziken VMAX,Blaziken VMAX,https://tcgplayer-cdn.tcgplayer.com/product/452031_200w.jpg,3,17674,https://cpt.tcgcsv.com/FQD5,2022-11-11T05:03:12.28,1,TG15/TG30,Ultra Rare,Fire,320,VMAX,"<em>VMAX rule — When your Pokémon VMAX is Knocked Out, your opponent takes 3 Prize cards.</em>","[F] Clutch (60)
+<br>
+During your opponent's next turn, the Defending Pokémon can't retreat.","[2] Max Blaze (130)
+<br>
+Choose up to 2 of your Benched Rapid Strike Pokémon and attach an Energy card from your discard pile to each of them.",Wx2,2,28.0,38.98,79.95,32.63,37.98,Holofoil,
+452032,Corviknight V,Corviknight V,https://tcgplayer-cdn.tcgplayer.com/product/452032_200w.jpg,3,17674,https://cpt.tcgcsv.com/GQD5,2022-11-11T05:03:12.28,1,TG18/TG30,Ultra Rare,Metal,210,Basic,"<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>","[M] Clutch (30)
+<br>
+During your opponent's next turn, the Defending Pokémon can't retreat.","[1MM] Sky Hurricane (190)
+<br>
+During your next turn, this Pokémon can't use Sky Hurricane.",Rx2,1,6.0,9.42,34.99,9.4,8.56,Holofoil,G-30
+452033,Corviknight VMAX,Corviknight VMAX,https://tcgplayer-cdn.tcgplayer.com/product/452033_200w.jpg,3,17674,https://cpt.tcgcsv.com/HQD5,2022-11-17T13:35:04.887,1,TG19/TG30,Ultra Rare,Metal,320,VMAX,"<strong>Ability — Lustrous Body</strong>
+<br>
+Prevent all effects of your opponent's Pokémon's Abilities done to this Pokémon.
+<br><br>
+<em>VMAX rule — When your Pokémon VMAX is Knocked Out, your opponent takes 3 Prize cards.</em>","[1MM] G-Max Hurricane (240)
+<br>
+During your next turn, this Pokémon can't use G-Max Hurricane.",,Rx2,,5.44,7.57,26.61,6.74,8.76,Holofoil,G-30
+452034,Rayquaza VMAX,Rayquaza VMAX,https://tcgplayer-cdn.tcgplayer.com/product/452034_200w.jpg,3,17674,https://cpt.tcgcsv.com/JQD5,2024-12-08T11:49:46.76,1,TG20/TG30,Ultra Rare,Dragon,320,VMAX,"<strong>Ability — Azure Pulse</strong>
+<br>Once during your turn, you may discard your hand and draw 3 cards.
+<br><br>
+<em>VMAX rule — When your Pokémon VMAX is Knocked Out, your opponent takes 3 Prize cards.</em>","[RL] Max Burst (20+)
+<br>You may discard any amount of basic R Energy or any amount of basic L Energy from this Pokemon. This attack does 80 more damage for each card you discarded in this way.",,None,2,139.95,169.39,220.95,147.08,166.0,Holofoil,None
+452035,Duraludon VMAX,Duraludon VMAX,https://tcgplayer-cdn.tcgplayer.com/product/452035_200w.jpg,3,17674,https://cpt.tcgcsv.com/KQD5,2022-11-11T05:03:12.28,1,TG21/TG30,Ultra Rare,Dragon,330,VMAX,"<strong>Ability — Skyscraper</strong>
+<br>Prevent all damage done to this Pokémon by attacks from your opponent's Pokémon that have Special Energy attached.
+<br><br>
+<em>VMAX rule — When your Pokémon VMAX is Knocked Out, your opponent takes 3 Prize cards.</em>","[FMM] G-Max Pulverization (220)
+<br>
+This attack's damage isn't affected by any effects on your opponent's Active Pokémon.",,,3,7.0,9.07,28.99,8.1,9.17,Holofoil,
+452037,Blissey V,Blissey V,https://tcgplayer-cdn.tcgplayer.com/product/452037_200w.jpg,3,17674,https://cpt.tcgcsv.com/MQD5,2024-09-08T14:27:01.16,1,TG22/TG30,Ultra Rare,Colorless,250,Basic,"<strong>Ability — Natural Cure</strong>
+<br>
+Whenever you attach an Energy card from your hand to this Pokémon, it recovers from all Special Conditions.
+<br><br>
+<em>V rule — When your Pokémon V is Knocked Out, your opponent takes 2 Prize cards.</em>","[1] Blissful Blast (10+)
+<br>
+This attack does 30 more damage for each Energy attached to this Pokémon. If you did any damage with this attack, you may attach up to 3 Energy cards from your discard pile to this Pokémon.",,Fx2,4,9.0,13.49,39.99,11.18,11.24,Holofoil,
+452039,Friends in Galar,Friends in Galar,https://tcgplayer-cdn.tcgplayer.com/product/452039_200w.jpg,3,17674,https://cpt.tcgcsv.com/PQD5,2022-11-11T05:03:12.28,1,TG23/TG30,Ultra Rare,Supporter,,,"Draw 3 cards.
+<br><br>
+<em>You may play only 1 Supporter card during your turn.</em>",,,,,6.0,8.19,711.0,7.92,8.87,Holofoil,
+452040,Gordie,Gordie,https://tcgplayer-cdn.tcgplayer.com/product/452040_200w.jpg,3,17674,https://cpt.tcgcsv.com/QQD5,2022-11-11T05:03:12.28,1,TG24/TG30,Ultra Rare,Supporter,,,"Look at the top 7 cards of your deck. You may reveal any number of Energy cards you find there and put them into your hand. Shuffle the other cards back into your deck.
+<br><br>
+<em>You may play only 1 Supporter card during your turn.</em>",,,,,0.97,1.81,14.99,1.64,,Holofoil,
+452042,Judge,Judge,https://tcgplayer-cdn.tcgplayer.com/product/452042_200w.jpg,3,17674,https://cpt.tcgcsv.com/SQD5,2024-10-03T21:16:12.697,1,TG25/TG30,Ultra Rare,Supporter,,,"Each player shuffles their hand into their deck and draws 4 cards.
+<br><br>
+<em>You may play only 1 Supporter card during your turn.</em>",,,,,1.75,3.0,25.99,2.77,3.56,Holofoil,
+452044,Professor Burnet,Professor Burnet,https://tcgplayer-cdn.tcgplayer.com/product/452044_200w.jpg,3,17674,https://cpt.tcgcsv.com/VQD5,2022-11-11T05:03:12.28,1,TG26/TG30,Ultra Rare,Supporter,,,"Search your deck for up to 2 cards and discard them. Then, shuffle your deck.
+<br><br>
+<em>You may play only 1 Supporter card during your turn.</em>",,,,,2.0,3.83,20.0,3.39,4.31,Holofoil,
+452045,Raihan,Raihan,https://tcgplayer-cdn.tcgplayer.com/product/452045_200w.jpg,3,17674,https://cpt.tcgcsv.com/WQD5,2025-03-07T16:10:38.303,1,TG27/TG30,Ultra Rare,Supporter,,,"You can play this card only if any of your Pokémon were Knocked Out during your opponent's last turn.
+<br>
+Attach a basic Energy card from your discard pile to 1 of your Pokémon. If you do, search your deck for a card and put it into your hand. Then, shuffle your deck.
+<br><br>
+<em>You may play only 1 Supporter card during your turn.</em>",,,,,1.99,3.06,15.0,2.88,2.85,Holofoil,
+452047,Sordward & Shielbert,Sordward and Shielbert,https://tcgplayer-cdn.tcgplayer.com/product/452047_200w.jpg,3,17674,https://cpt.tcgcsv.com/ZQD5,2022-11-11T05:03:12.28,1,TG28/TG30,Ultra Rare,Supporter,,,"Choose a Trainer card from your discard pile. Then, ask your opponent if you may put it into your hand. If yes, put that card into your hand. If no, draw 3 cards.
+<br><br>
+<em>You may play only 1 Supporter card during your turn.</em>",,,,,1.0,1.99,20.0,1.75,2.31,Holofoil,
+452048,Rayquaza VMAX (Secret),Rayquaza VMAX Secret,https://tcgplayer-cdn.tcgplayer.com/product/452048_200w.jpg,3,17674,https://cpt.tcgcsv.com/-QD5,2022-11-11T05:03:12.28,1,TG29/TG30,Secret Rare,Dragon,320,VMAX,"<strong>Ability — Azure Pulse</strong>
+<br>
+Once during your turn, you may discard your hand and draw 3 cards.
+<br><br>
+<em>VMAX rule — When your Pokémon VMAX is Knocked Out, your opponent takes 3 Prize cards.</em>","[RL] Max Burst (20+)
+<br>
+You may discard any amount of basic Fire Energy or any amount of basic Lightning Energy from this Pokémon. This attack does 80 more damage for each card you discarded in this way.",,,2,20.53,32.75,53.0,25.14,33.98,Holofoil,
+452049,Duraludon VMAX (Secret),Duraludon VMAX Secret,https://tcgplayer-cdn.tcgplayer.com/product/452049_200w.jpg,3,17674,https://cpt.tcgcsv.com/_QD5,2024-09-26T15:27:08.053,1,TG30/TG30,Secret Rare,Dragon,330,VMAX,"<strong>Ability — Skyscraper</strong>
+<br>
+Prevent all damage done to this Pokémon by attacks from your opponent's Pokémon that have Special Energy attached.
+<br><br>
+<em>VMAX rule — When your Pokémon VMAX is Knocked Out, your opponent takes 3 Prize cards.</em>","[FMM] G-Max Pulverization (220)
+<br>
+This attack's damage isn't affected by any effects on your opponent's Active Pokémon.",,,3,2.0,4.21,20.0,3.87,,Holofoil,

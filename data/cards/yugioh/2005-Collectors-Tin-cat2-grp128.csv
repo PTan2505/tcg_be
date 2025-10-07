@@ -1,0 +1,55 @@
+productId,name,cleanName,imageUrl,categoryId,groupId,url,modifiedOn,imageCount,extNumber,extRarity,extAttribute,extMonsterType,extCardType,extAttack,extDefense,extDescription,lowPrice,midPrice,highPrice,marketPrice,directLowPrice,subTypeName
+24511,Gilford the Lightning,Gilford the Lightning,https://tcgplayer-cdn.tcgplayer.com/product/24511_200w.jpg,2,128,https://cpt.tcgcsv.com/fQc,2025-03-20T19:07:31.777,1,CT2-EN001,Secret Rare,LIGHT,Warrior,Effect Monster,2800,1400,"If you Tribute Summon this card by Tributing 3 monsters, destroy all monsters on your opponent's side of the field.",3.42,6.99,15.98,8.12,,Limited
+24512,Exarion Universe,Exarion Universe,https://tcgplayer-cdn.tcgplayer.com/product/24512_200w.jpg,2,128,https://cpt.tcgcsv.com/gQc,2025-03-20T19:01:51.067,1,CT2-EN002,Secret Rare,DARK,Beast-Warrior,Effect Monster,1800,1900,"You can only activate this effect during a Battle Step of your turn. Decrease the ATK of this card by 400 points, then during battle between this attacking card and a Defense Position monster whose DEF is lower than the ATK of this card, inflict the difference as Battle Damage to your opponent's Life Points. This effect continues until the End Phase of the turn this effect is activated.",0.5,1.33,3.8,1.38,,Limited
+24513,Vorse Raider,Vorse Raider,https://tcgplayer-cdn.tcgplayer.com/product/24513_200w.jpg,2,128,https://cpt.tcgcsv.com/hQc,2025-03-20T19:04:24.96,1,CT2-EN003,Secret Rare,DARK,Beast-Warrior,Normal Monster,1900,1200,<em>This wicked Beast-Warrior does every horrid thing imaginable and loves it! His axe bears the marks of his countless victims.</em>,4.01,7.66,14.95,7.78,,Limited
+24514,Dark Magician Girl,Dark Magician Girl,https://tcgplayer-cdn.tcgplayer.com/product/24514_200w.jpg,2,128,https://cpt.tcgcsv.com/jQc,2024-03-28T15:38:42.507,1,CT2-EN004,Secret Rare,DARK,Spellcaster,Effect Monster,2000,1700,"Increase the ATK of this card by 300 for each ""Dark Magician"" or ""Magician of Black Chaos"" in either player's Graveyard.",11.68,23.14,125.0,24.98,11.68,Limited
+24515,Rocket Warrior,Rocket Warrior,https://tcgplayer-cdn.tcgplayer.com/product/24515_200w.jpg,2,128,https://cpt.tcgcsv.com/kQc,2025-03-20T19:03:50.207,1,CT2-EN005,Secret Rare,LIGHT,Warrior,Effect Monster,1500,1300,"This effect is only active during the Battle Phase of your turn. Battle Damage to this card and this card's controller that they take from a battle involving this card becomes 0. After damage calculation, decrease the ATK of the monster that was attacked by this card by 500 points until the end of this turn.",4.49,7.78,18.0,8.07,,Limited
+24516,Panther Warrior,Panther Warrior,https://tcgplayer-cdn.tcgplayer.com/product/24516_200w.jpg,2,128,https://cpt.tcgcsv.com/lQc,2025-03-20T19:03:31.09,1,CT2-EN006,Secret Rare,EARTH,Beast-Warrior,Effect Monster,2000,1600,The card cannot attack unless you Tribute 1 monster on your side of the field.,4.99,9.01,49.99,10.52,,Limited
+206894,2005 Collectors Tin: Dark Magician Girl,2005 Collectors Tin Dark Magician Girl,https://tcgplayer-cdn.tcgplayer.com/product/206894_200w.jpg,2,128,https://cpt.tcgcsv.com/VMG2,2020-01-07T14:50:30.14,1,,,,,,,,"Each Collectible Tin 2005 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Soul of the Duelist
+<br><span style=""color:white"">____</span> • 1 Rise of Destiny
+<br><span style=""color:white"">____</span> • 1 Flaming Eternity
+<br><span style=""color:white"">____</span> • 1 Dark Beginning 1
+<br><span style=""color:white"">____</span> • 1 Dark Revelation Volume 1
+<br>• 1 Secret Rare promotional card",1299.99,1299.99,1299.99,,,Normal
+206897,2005 Collectors Tin: Gilford the Lightning,2005 Collectors Tin Gilford the Lightning,https://tcgplayer-cdn.tcgplayer.com/product/206897_200w.jpg,2,128,https://cpt.tcgcsv.com/ZMG2,2020-01-07T15:00:19.03,1,,,,,,,,"Each Collectible Tin 2005 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Soul of the Duelist
+<br><span style=""color:white"">____</span> • 1 Rise of Destiny
+<br><span style=""color:white"">____</span> • 1 Flaming Eternity
+<br><span style=""color:white"">____</span> • 1 Dark Beginning 1
+<br><span style=""color:white"">____</span> • 1 Dark Revelation Volume 1
+<br>• 1 Secret Rare promotional card",,,,,,
+206899,2005 Collectors Tin: Exarion Universe,2005 Collectors Tin Exarion Universe,https://tcgplayer-cdn.tcgplayer.com/product/206899_200w.jpg,2,128,https://cpt.tcgcsv.com/_MG2,2020-01-07T15:00:41.513,1,,,,,,,,"Each Collectible Tin 2005 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Soul of the Duelist
+<br><span style=""color:white"">____</span> • 1 Rise of Destiny
+<br><span style=""color:white"">____</span> • 1 Flaming Eternity
+<br><span style=""color:white"">____</span> • 1 Dark Beginning 1
+<br><span style=""color:white"">____</span> • 1 Dark Revelation Volume 1
+<br>• 1 Secret Rare promotional card",299.99,399.95,448.49,,,Normal
+206900,2005 Collectors Tin: Vorse Raider,2005 Collectors Tin Vorse Raider,https://tcgplayer-cdn.tcgplayer.com/product/206900_200w.jpg,2,128,https://cpt.tcgcsv.com/0NG2,2020-01-07T15:01:10.417,1,,,,,,,,"Each Collectible Tin 2005 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Soul of the Duelist
+<br><span style=""color:white"">____</span> • 1 Rise of Destiny
+<br><span style=""color:white"">____</span> • 1 Flaming Eternity
+<br><span style=""color:white"">____</span> • 1 Dark Beginning 1
+<br><span style=""color:white"">____</span> • 1 Dark Revelation Volume 1
+<br>• 1 Secret Rare promotional card",,,,,,
+206901,2005 Collectors Tin: Rocket Warrior,2005 Collectors Tin Rocket Warrior,https://tcgplayer-cdn.tcgplayer.com/product/206901_200w.jpg,2,128,https://cpt.tcgcsv.com/2NG2,2020-01-07T15:01:34.257,1,,,,,,,,"Each Collectible Tin 2005 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Soul of the Duelist
+<br><span style=""color:white"">____</span> • 1 Rise of Destiny
+<br><span style=""color:white"">____</span> • 1 Flaming Eternity
+<br><span style=""color:white"">____</span> • 1 Dark Beginning 1
+<br><span style=""color:white"">____</span> • 1 Dark Revelation Volume 1
+<br>• 1 Secret Rare promotional card",,,,,,
+206902,2005 Collectors Tin: Panther Warrior,2005 Collectors Tin Panther Warrior,https://tcgplayer-cdn.tcgplayer.com/product/206902_200w.jpg,2,128,https://cpt.tcgcsv.com/3NG2,2020-01-07T15:01:50.433,1,,,,,,,,"Each Collectible Tin 2005 contains:
+<br>• 5 Booster Packs
+<br><span style=""color:white"">____</span> • 1 Soul of the Duelist
+<br><span style=""color:white"">____</span> • 1 Rise of Destiny
+<br><span style=""color:white"">____</span> • 1 Flaming Eternity
+<br><span style=""color:white"">____</span> • 1 Dark Beginning 1
+<br><span style=""color:white"">____</span> • 1 Dark Revelation Volume 1
+<br>• 1 Secret Rare promotional card",299.99,349.94,399.88,,,Normal
