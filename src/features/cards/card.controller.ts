@@ -16,7 +16,21 @@ export class CardController {
         rarity,
         setId,
         minPrice,
-        maxPrice
+        maxPrice,
+        // New enhanced filtering parameters
+        cardType,
+        color,
+        attribute,
+        subtype,
+        cost,
+        power,
+        life,
+        hp,
+        stage,
+        monsterType,
+        defense,
+        level,
+        description
       } = c.req.query();
 
       const options: GetCardsOptions = {
@@ -28,7 +42,21 @@ export class CardController {
         rarity,
         setId,
         minPrice: minPrice ? parseFloat(minPrice) : undefined,
-        maxPrice: maxPrice ? parseFloat(maxPrice) : undefined
+        maxPrice: maxPrice ? parseFloat(maxPrice) : undefined,
+        // Enhanced filtering options
+        cardType,
+        color,
+        attribute,
+        subtype,
+        cost: cost ? parseInt(cost) : undefined,
+        power: power ? parseInt(power) : undefined,
+        life: life ? parseInt(life) : undefined,
+        hp: hp ? parseInt(hp) : undefined,
+        stage,
+        monsterType,
+        defense: defense ? parseInt(defense) : undefined,
+        level: level ? parseInt(level) : undefined,
+        description
       };
 
       // Validate pagination parameters
@@ -85,7 +113,21 @@ export class CardController {
         rarity,
         setId,
         minPrice,
-        maxPrice
+        maxPrice,
+        // New enhanced filtering parameters
+        cardType,
+        color,
+        attribute,
+        subtype,
+        cost,
+        power,
+        life,
+        hp,
+        stage,
+        monsterType,
+        defense,
+        level,
+        description
       } = c.req.query();
 
       // Validate game type
@@ -109,7 +151,21 @@ export class CardController {
         rarity,
         setId,
         minPrice: minPrice ? parseFloat(minPrice) : undefined,
-        maxPrice: maxPrice ? parseFloat(maxPrice) : undefined
+        maxPrice: maxPrice ? parseFloat(maxPrice) : undefined,
+        // Enhanced filtering options
+        cardType,
+        color,
+        attribute,
+        subtype,
+        cost: cost ? parseInt(cost) : undefined,
+        power: power ? parseInt(power) : undefined,
+        life: life ? parseInt(life) : undefined,
+        hp: hp ? parseInt(hp) : undefined,
+        stage,
+        monsterType,
+        defense: defense ? parseInt(defense) : undefined,
+        level: level ? parseInt(level) : undefined,
+        description
       };
 
       // Validate pagination parameters
@@ -237,6 +293,20 @@ export class CardController {
         rarity,
         minPrice,
         maxPrice,
+        // New enhanced filtering parameters
+        cardType,
+        color,
+        attribute,
+        subtype,
+        cost,
+        power,
+        life,
+        hp,
+        stage,
+        monsterType,
+        defense,
+        level,
+        description
       } = c.req.query();
 
       // Validate game type
@@ -271,6 +341,20 @@ export class CardController {
         rarity,
         minPrice: minPrice ? parseFloat(minPrice) : undefined,
         maxPrice: maxPrice ? parseFloat(maxPrice) : undefined,
+        // Enhanced filtering options
+        cardType,
+        color,
+        attribute,
+        subtype,
+        cost: cost ? parseInt(cost) : undefined,
+        power: power ? parseInt(power) : undefined,
+        life: life ? parseInt(life) : undefined,
+        hp: hp ? parseInt(hp) : undefined,
+        stage,
+        monsterType,
+        defense: defense ? parseInt(defense) : undefined,
+        level: level ? parseInt(level) : undefined,
+        description
       };
 
       const result = await this.cardService.searchCards(type as GameType, query, options);
@@ -296,7 +380,21 @@ export class CardController {
         limit,
         search,
         sortBy,
-        sortOrder
+        sortOrder,
+        // Enhanced filtering parameters for set-specific queries
+        cardType,
+        color,
+        attribute,
+        subtype,
+        cost,
+        power,
+        life,
+        hp,
+        stage,
+        monsterType,
+        defense,
+        level,
+        description
       } = c.req.query();
 
       // Validate set identifier
@@ -316,7 +414,21 @@ export class CardController {
         limit: limit ? parseInt(limit) : undefined,
         search,
         sortBy,
-        sortOrder: sortOrder as 'asc' | 'desc'
+        sortOrder: sortOrder as 'asc' | 'desc',
+        // Enhanced filtering options
+        cardType,
+        color,
+        attribute,
+        subtype,
+        cost: cost ? parseInt(cost) : undefined,
+        power: power ? parseInt(power) : undefined,
+        life: life ? parseInt(life) : undefined,
+        hp: hp ? parseInt(hp) : undefined,
+        stage,
+        monsterType,
+        defense: defense ? parseInt(defense) : undefined,
+        level: level ? parseInt(level) : undefined,
+        description
       };
 
       // Validate pagination parameters

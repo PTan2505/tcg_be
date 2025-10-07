@@ -2989,7 +2989,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
     "/cards/public/{type}": {
       get: {
         tags: ["Cards - Public"],
-        summary: "Get cards by game type (public endpoint - no auth required)",
+        summary: "Get cards by game type with game-specific filtering (public endpoint - no auth required)",
+        description: "Search and filter cards with fuzzy name search and game-specific attributes. Parameters are organized by game type for easier frontend integration.",
         parameters: [
           {
             in: "path",
@@ -2999,8 +3000,9 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "string",
               enum: ["pokemon", "yugioh", "onepiece"],
             },
-            description: "Game type (pokemon, yugioh, or onepiece)",
+            description: "Game type determines which game-specific parameters are applicable",
           },
+          // ===== COMMON PARAMETERS (All Game Types) =====
           {
             in: "query",
             name: "page",
@@ -3009,7 +3011,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
               minimum: 1,
               default: 1,
             },
-            description: "Page number",
+            description: "📄 [ALL GAMES] Page number for pagination",
           },
           {
             in: "query",
@@ -3020,7 +3022,180 @@ export const swaggerDoc: OpenAPIV3.Document = {
               maximum: 100,
               default: 20,
             },
-            description: "Number of cards per page",
+            description: "📄 [ALL GAMES] Number of cards per page",
+          },
+          {
+            in: "query",
+            name: "search",
+            schema: {
+              type: "string",
+            },
+            description: "🔍 [ALL GAMES] Fuzzy search for card names. Example: 'zoro' finds 'Roronoa Zoro'",
+          },
+          {
+            in: "query",
+            name: "sortBy",
+            schema: {
+              type: "string",
+              enum: ["name", "price", "number", "createdAt"],
+            },
+            description: "📊 [ALL GAMES] Sort field. Use game-specific sortBy values for advanced sorting",
+          },
+          {
+            in: "query",
+            name: "sortOrder",
+            schema: {
+              type: "string",
+              enum: ["asc", "desc"],
+            },
+            description: "📊 [ALL GAMES] Sort order",
+          },
+          {
+            in: "query",
+            name: "rarity",
+            schema: {
+              type: "string",
+            },
+            description: "💎 [ALL GAMES] Filter by card rarity (e.g., 'Common', 'Rare', 'Ultra Rare')",
+          },
+          {
+            in: "query",
+            name: "setId",
+            schema: {
+              type: "string",
+            },
+            description: "📦 [ALL GAMES] Filter by card set ID",
+          },
+          {
+            in: "query",
+            name: "minPrice",
+            schema: {
+              type: "number",
+              minimum: 0,
+            },
+            description: "💰 [ALL GAMES] Minimum price filter (TCGPlayer market price)",
+          },
+          {
+            in: "query",
+            name: "maxPrice",
+            schema: {
+              type: "number",
+              minimum: 0,
+            },
+            description: "💰 [ALL GAMES] Maximum price filter (TCGPlayer market price)",
+          },
+          {
+            in: "query",
+            name: "description",
+            schema: {
+              type: "string",
+            },
+            description: "📝 [ALL GAMES] Search in card description/effect text",
+          },
+          // ===== ONE PIECE SPECIFIC PARAMETERS =====
+          {
+            in: "query",
+            name: "cardType",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE] Card type: 'Leader', 'Character', 'Event', 'Stage' | 🎮 [POKEMON] Type/Color: 'Fire', 'Water', 'Lightning', 'Grass', etc. | 🃏 [YU-GI-OH] Card type: 'Monster', 'Spell', 'Trap'",
+          },
+          {
+            in: "query",
+            name: "color",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Card color: 'Red', 'Green', 'Blue', 'Purple', 'Black', 'Yellow'",
+          },
+          {
+            in: "query",
+            name: "cost",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Energy cost to play the card (0-10)",
+          },
+          {
+            in: "query",
+            name: "power",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Character power/attack value",
+          },
+          {
+            in: "query",
+            name: "life",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Leader life points (typically 4-5)",
+          },
+          {
+            in: "query",
+            name: "attribute",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE] Combat attribute: 'Strike', 'Slash', 'Ranged', 'Special' | 🃏 [YU-GI-OH] Monster attribute: 'FIRE', 'WATER', 'EARTH', 'WIND', 'LIGHT', 'DARK'",
+          },
+          {
+            in: "query",
+            name: "subtype",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE] Character faction: 'Straw Hat Crew', 'Marine', 'Whitebeard Pirates', etc. | 🃏 [YU-GI-OH] Monster type: 'Warrior', 'Spellcaster', 'Dragon', etc.",
+          },
+          // ===== POKEMON SPECIFIC PARAMETERS =====
+          {
+            in: "query",
+            name: "hp",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🎮 [POKEMON ONLY] Pokemon HP/health points (10-340)",
+          },
+          {
+            in: "query",
+            name: "stage",
+            schema: {
+              type: "string",
+            },
+            description: "🎮 [POKEMON ONLY] Evolution stage: 'Basic', 'Stage 1', 'Stage 2', 'BREAK', 'GX', 'V', 'VMAX'",
+          },
+          // ===== YU-GI-OH SPECIFIC PARAMETERS =====
+          {
+            in: "query",
+            name: "defense",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🃏 [YU-GI-OH ONLY] Monster defense points (0-5000)",
+          },
+          {
+            in: "query",
+            name: "level",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🃏 [YU-GI-OH ONLY] Monster level/rank (1-12)",
+          },
+          {
+            in: "query",
+            name: "monsterType",
+            schema: {
+              type: "string",
+            },
+            description: "🃏 [YU-GI-OH ONLY] Monster type: 'Warrior', 'Spellcaster', 'Dragon', 'Machine', etc. (same as subtype but more specific for monsters)",
           },
         ],
         responses: {
@@ -3055,8 +3230,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
     "/cards/public/{type}/search": {
       get: {
         tags: ["Cards - Public"],
-        summary:
-          "Search cards by game type (public endpoint - no auth required)",
+        summary: "Search cards by game type with game-specific filtering (public endpoint - no auth required)",
+        description: "Advanced search with fuzzy name matching and game-specific filtering. Parameters are clearly categorized by game type for easier frontend development.",
         parameters: [
           {
             in: "path",
@@ -3066,7 +3241,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "string",
               enum: ["pokemon", "yugioh", "onepiece"],
             },
-            description: "Game type (pokemon, yugioh, or onepiece)",
+            description: "Game type determines which game-specific parameters are applicable",
           },
           {
             in: "query",
@@ -3076,8 +3251,9 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "string",
               minLength: 1,
             },
-            description: "Search query",
+            description: "🔍 [ALL GAMES] Search query with fuzzy matching. Supports partial names and splits terms for better results.",
           },
+          // ===== COMMON PARAMETERS =====
           {
             in: "query",
             name: "page",
@@ -3086,7 +3262,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
               minimum: 1,
               default: 1,
             },
-            description: "Page number",
+            description: "📄 [ALL GAMES] Page number",
           },
           {
             in: "query",
@@ -3097,7 +3273,162 @@ export const swaggerDoc: OpenAPIV3.Document = {
               maximum: 100,
               default: 20,
             },
-            description: "Number of cards per page",
+            description: "📄 [ALL GAMES] Number of cards per page",
+          },
+          {
+            in: "query",
+            name: "sortBy",
+            schema: {
+              type: "string",
+              enum: ["name", "price", "number"],
+            },
+            description: "📊 [ALL GAMES] Sort field",
+          },
+          {
+            in: "query",
+            name: "sortOrder",
+            schema: {
+              type: "string",
+              enum: ["asc", "desc"],
+            },
+            description: "📊 [ALL GAMES] Sort order",
+          },
+          {
+            in: "query",
+            name: "rarity",
+            schema: {
+              type: "string",
+            },
+            description: "💎 [ALL GAMES] Filter by card rarity",
+          },
+          {
+            in: "query",
+            name: "minPrice",
+            schema: {
+              type: "number",
+              minimum: 0,
+            },
+            description: "💰 [ALL GAMES] Minimum price filter",
+          },
+          {
+            in: "query",
+            name: "maxPrice",
+            schema: {
+              type: "number",
+              minimum: 0,
+            },
+            description: "💰 [ALL GAMES] Maximum price filter",
+          },
+          {
+            in: "query",
+            name: "description",
+            schema: {
+              type: "string",
+            },
+            description: "📝 [ALL GAMES] Search in card description/effect text",
+          },
+          // ===== GAME-SPECIFIC PARAMETERS =====
+          {
+            in: "query",
+            name: "cardType",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE] 'Leader', 'Character', 'Event' | 🎮 [POKEMON] 'Fire', 'Water', 'Lightning' | 🃏 [YU-GI-OH] 'Monster', 'Spell', 'Trap'",
+          },
+          {
+            in: "query",
+            name: "color",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Card color: 'Red', 'Green', 'Blue', 'Purple', 'Black', 'Yellow'",
+          },
+          {
+            in: "query",
+            name: "cost",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Energy cost (0-10)",
+          },
+          {
+            in: "query",
+            name: "power",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Character power value",
+          },
+          {
+            in: "query",
+            name: "life",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Leader life points",
+          },
+          {
+            in: "query",
+            name: "attribute",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE] 'Strike', 'Slash', 'Ranged' | 🃏 [YU-GI-OH] 'FIRE', 'WATER', 'EARTH', 'WIND'",
+          },
+          {
+            in: "query",
+            name: "subtype",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE] 'Straw Hat Crew', 'Marine' | 🃏 [YU-GI-OH] 'Warrior', 'Dragon', 'Spellcaster'",
+          },
+          {
+            in: "query",
+            name: "hp",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🎮 [POKEMON ONLY] Pokemon HP (10-340)",
+          },
+          {
+            in: "query",
+            name: "stage",
+            schema: {
+              type: "string",
+            },
+            description: "🎮 [POKEMON ONLY] Evolution stage: 'Basic', 'Stage 1', 'Stage 2', 'GX', 'V', 'VMAX'",
+          },
+          {
+            in: "query",
+            name: "defense",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🃏 [YU-GI-OH ONLY] Monster defense points (0-5000)",
+          },
+          {
+            in: "query",
+            name: "level",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🃏 [YU-GI-OH ONLY] Monster level/rank (1-12)",
+          },
+          {
+            in: "query",
+            name: "monsterType",
+            schema: {
+              type: "string",
+            },
+            description: "🃏 [YU-GI-OH ONLY] Monster type: 'Warrior', 'Spellcaster', 'Dragon', 'Machine'",
           },
         ],
         responses: {
@@ -3271,8 +3602,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
     "/cards": {
       get: {
         tags: ["Cards"],
-        summary:
-          "Get all cards from all game types with pagination and filtering",
+        summary: "Get all cards from all game types with enhanced filtering and pagination",
+        description: "Search and filter cards across all game types with fuzzy name matching and game-specific attributes. Requires authentication.",
         security: [{ bearerAuth: [] }],
         parameters: [
           {
@@ -3298,12 +3629,20 @@ export const swaggerDoc: OpenAPIV3.Document = {
           },
           {
             in: "query",
+            name: "search",
+            schema: {
+              type: "string",
+            },
+            description: "Fuzzy search for card names across all game types",
+          },
+          {
+            in: "query",
             name: "sortBy",
             schema: {
               type: "string",
-              enum: ["name", "gameType", "createdAt"],
+              enum: ["name", "gameType", "price", "number", "cost", "power", "hp", "defense", "createdAt"],
             },
-            description: "Sort field",
+            description: "Sort field including game-specific attributes",
           },
           {
             in: "query",
@@ -3313,6 +3652,150 @@ export const swaggerDoc: OpenAPIV3.Document = {
               enum: ["asc", "desc"],
             },
             description: "Sort order",
+          },
+          {
+            in: "query",
+            name: "rarity",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card rarity",
+          },
+          {
+            in: "query",
+            name: "setId",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card set ID",
+          },
+          {
+            in: "query",
+            name: "minPrice",
+            schema: {
+              type: "number",
+              minimum: 0,
+            },
+            description: "Minimum price filter",
+          },
+          {
+            in: "query",
+            name: "maxPrice",
+            schema: {
+              type: "number",
+              minimum: 0,
+            },
+            description: "Maximum price filter",
+          },
+          {
+            in: "query",
+            name: "cardType",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card type",
+          },
+          {
+            in: "query",
+            name: "color",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card color/type",
+          },
+          {
+            in: "query",
+            name: "attribute",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card attribute",
+          },
+          {
+            in: "query",
+            name: "subtype",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card subtype",
+          },
+          {
+            in: "query",
+            name: "cost",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact cost value",
+          },
+          {
+            in: "query",
+            name: "power",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact power value",
+          },
+          {
+            in: "query",
+            name: "life",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact life value",
+          },
+          {
+            in: "query",
+            name: "hp",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact HP value",
+          },
+          {
+            in: "query",
+            name: "stage",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by Pokemon stage",
+          },
+          {
+            in: "query",
+            name: "monsterType",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by Yu-Gi-Oh monster type",
+          },
+          {
+            in: "query",
+            name: "defense",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact defense value",
+          },
+          {
+            in: "query",
+            name: "level",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact level value",
+          },
+          {
+            in: "query",
+            name: "description",
+            schema: {
+              type: "string",
+            },
+            description: "Search in card description/effect text",
           },
         ],
         responses: {
@@ -3357,7 +3840,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
     "/cards/{type}": {
       get: {
         tags: ["Cards"],
-        summary: "Get cards by game type with pagination and filtering",
+        summary: "Get cards by game type with game-specific filtering (requires authentication)",
+        description: "Advanced card search with game-specific parameters organized by game type. Requires JWT authentication for access.",
         security: [{ bearerAuth: [] }],
         parameters: [
           {
@@ -3368,8 +3852,9 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "string",
               enum: ["pokemon", "yugioh", "onepiece"],
             },
-            description: "Game type (pokemon, yugioh, or onepiece)",
+            description: "Game type - determines which game-specific parameters are available",
           },
+          // ===== COMMON PARAMETERS (All Game Types) =====
           {
             in: "query",
             name: "page",
@@ -3378,7 +3863,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
               minimum: 1,
               default: 1,
             },
-            description: "Page number",
+            description: "📄 [ALL GAMES] Page number for pagination",
           },
           {
             in: "query",
@@ -3389,16 +3874,24 @@ export const swaggerDoc: OpenAPIV3.Document = {
               maximum: 100,
               default: 20,
             },
-            description: "Number of cards per page",
+            description: "📄 [ALL GAMES] Number of cards per page",
+          },
+          {
+            in: "query",
+            name: "search",
+            schema: {
+              type: "string",
+            },
+            description: "🔍 [ALL GAMES] Fuzzy search for card names with partial matching",
           },
           {
             in: "query",
             name: "sortBy",
             schema: {
               type: "string",
-              enum: ["name", "cleanName", "createdAt"],
+              enum: ["name", "price", "number", "createdAt"],
             },
-            description: "Sort field",
+            description: "📊 [ALL GAMES] Sort field including game-specific attributes",
           },
           {
             in: "query",
@@ -3407,7 +3900,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "string",
               enum: ["asc", "desc"],
             },
-            description: "Sort order",
+            description: "📊 [ALL GAMES] Sort order",
           },
           {
             in: "query",
@@ -3415,7 +3908,15 @@ export const swaggerDoc: OpenAPIV3.Document = {
             schema: {
               type: "string",
             },
-            description: "Filter by card rarity",
+            description: "💎 [ALL GAMES] Filter by card rarity",
+          },
+          {
+            in: "query",
+            name: "setId",
+            schema: {
+              type: "string",
+            },
+            description: "📦 [ALL GAMES] Filter by card set ID",
           },
           {
             in: "query",
@@ -3424,7 +3925,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "number",
               minimum: 0,
             },
-            description: "Minimum price filter",
+            description: "💰 [ALL GAMES] Minimum price filter",
           },
           {
             in: "query",
@@ -3433,7 +3934,118 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "number",
               minimum: 0,
             },
-            description: "Maximum price filter",
+            description: "💰 [ALL GAMES] Maximum price filter",
+          },
+          {
+            in: "query",
+            name: "description",
+            schema: {
+              type: "string",
+            },
+            description: "📝 [ALL GAMES] Search in card description/effect text",
+          },
+          // ===== GAME-SPECIFIC PARAMETERS =====
+          {
+            in: "query",
+            name: "cardType",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE] Card type: 'Leader', 'Character', 'Event', 'Stage' | 🎮 [POKEMON] Pokemon type/color: 'Fire', 'Water', 'Lightning', 'Grass', 'Fighting', 'Psychic', 'Colorless', 'Metal', 'Fairy', 'Darkness' | 🃏 [YU-GI-OH] Card type: 'Monster', 'Spell', 'Trap'",
+          },
+          {
+            in: "query",
+            name: "color",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Card color: 'Red', 'Green', 'Blue', 'Purple', 'Black', 'Yellow' (not used for other games)",
+          },
+          {
+            in: "query",
+            name: "attribute",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE] Combat attribute: 'Strike', 'Slash', 'Ranged', 'Special' | 🃏 [YU-GI-OH] Monster attribute: 'FIRE', 'WATER', 'EARTH', 'WIND', 'LIGHT', 'DARK', 'DIVINE' (not used for Pokemon)",
+          },
+          {
+            in: "query",
+            name: "subtype",
+            schema: {
+              type: "string",
+            },
+            description: "🏴‍☠️ [ONE PIECE] Character faction: 'Straw Hat Crew', 'Marine', 'Whitebeard Pirates', 'Big Mom Pirates', etc. | 🃏 [YU-GI-OH] Monster type: 'Warrior', 'Spellcaster', 'Dragon', 'Machine', 'Beast', 'Zombie', etc. (not used for Pokemon)",
+          },
+          {
+            in: "query",
+            name: "cost",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Energy cost to play the card (typically 0-10, not used for other games)",
+          },
+          {
+            in: "query",
+            name: "power",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Character power/attack value (typically 1000-12000, not used for other games)",
+          },
+          {
+            in: "query",
+            name: "life",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🏴‍☠️ [ONE PIECE ONLY] Leader life points (typically 4-5, not used for other games)",
+          },
+          {
+            in: "query",
+            name: "hp",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🎮 [POKEMON ONLY] Pokemon HP/health points (typically 10-340, not used for other games)",
+          },
+          {
+            in: "query",
+            name: "stage",
+            schema: {
+              type: "string",
+            },
+            description: "🎮 [POKEMON ONLY] Evolution stage: 'Basic', 'Stage 1', 'Stage 2', 'BREAK', 'GX', 'V', 'VMAX', 'VSTAR' (not used for other games)",
+          },
+          {
+            in: "query",
+            name: "monsterType",
+            schema: {
+              type: "string",
+            },
+            description: "🃏 [YU-GI-OH ONLY] Monster type (same as subtype but more specific): 'Warrior', 'Spellcaster', 'Dragon', 'Machine', 'Beast', 'Zombie', 'Fiend', etc. (not used for other games)",
+          },
+          {
+            in: "query",
+            name: "defense",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🃏 [YU-GI-OH ONLY] Monster defense points (typically 0-5000, not used for other games)",
+          },
+          {
+            in: "query",
+            name: "level",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "🃏 [YU-GI-OH ONLY] Monster level/rank (typically 1-12, not used for other games)",
           },
         ],
         responses: {
@@ -3620,7 +4232,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
     "/cards/sets/{setId}": {
       get: {
         tags: ["Cards"],
-        summary: "Get cards by set ID",
+        summary: "Get cards by set ID with enhanced filtering",
+        description: "Get all cards from a specific set with advanced filtering options by game-specific attributes.",
         security: [{ bearerAuth: [] }],
         parameters: [
           {
@@ -3652,6 +4265,142 @@ export const swaggerDoc: OpenAPIV3.Document = {
               default: 20,
             },
             description: "Number of cards per page",
+          },
+          {
+            in: "query",
+            name: "search",
+            schema: {
+              type: "string",
+            },
+            description: "Search card names within the set",
+          },
+          {
+            in: "query",
+            name: "sortBy",
+            schema: {
+              type: "string",
+              enum: ["name", "number", "cost", "power", "hp", "defense"],
+            },
+            description: "Sort field",
+          },
+          {
+            in: "query",
+            name: "sortOrder",
+            schema: {
+              type: "string",
+              enum: ["asc", "desc"],
+            },
+            description: "Sort order",
+          },
+          {
+            in: "query",
+            name: "cardType",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card type",
+          },
+          {
+            in: "query",
+            name: "color",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card color/type",
+          },
+          {
+            in: "query",
+            name: "attribute",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card attribute",
+          },
+          {
+            in: "query",
+            name: "subtype",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card subtype",
+          },
+          {
+            in: "query",
+            name: "cost",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact cost value",
+          },
+          {
+            in: "query",
+            name: "power",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact power value",
+          },
+          {
+            in: "query",
+            name: "life",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact life value",
+          },
+          {
+            in: "query",
+            name: "hp",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact HP value",
+          },
+          {
+            in: "query",
+            name: "stage",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by Pokemon stage",
+          },
+          {
+            in: "query",
+            name: "monsterType",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by Yu-Gi-Oh monster type",
+          },
+          {
+            in: "query",
+            name: "defense",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact defense value",
+          },
+          {
+            in: "query",
+            name: "level",
+            schema: {
+              type: "integer",
+              minimum: 0,
+            },
+            description: "Filter by exact level value",
+          },
+          {
+            in: "query",
+            name: "description",
+            schema: {
+              type: "string",
+            },
+            description: "Search in card description/effect text",
           },
         ],
         responses: {
@@ -3910,7 +4659,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
             name: "sortBy",
             schema: {
               type: "string",
-              enum: ["name", "groupId", "createdAt"],
+              enum: ["name", "groupId", "publishedOn"],
             },
             description: "Sort field",
           },
@@ -4852,7 +5601,165 @@ export const swaggerDoc: OpenAPIV3.Document = {
           },
           extendedData: {
             type: "object",
-            description: "Game-specific extended data (varies by game type)",
+            description: "Game-specific extended data containing detailed card attributes organized by game type",
+            properties: {
+              extNumber: {
+                type: "string",
+                description: "[ALL GAMES] Card number/ID within set",
+                example: "ST12-001",
+              },
+              extRarity: {
+                type: "string",
+                description: "[ALL GAMES] Card rarity",
+                example: "Super Rare",
+              },
+              extCardType: {
+                type: "string",
+                description: "[ALL GAMES] Card type - varies by game",
+                example: "Leader",
+              },
+              extDescription: {
+                type: "string",
+                description: "[ALL GAMES] Card effect text/description",
+                example: "[DON!! x1][When Attacking][Once Per Turn] You may return 1 of your Characters...",
+              },
+              // ONE PIECE SPECIFIC FIELDS
+              extColor: {
+                type: "string",
+                description: "[ONE PIECE ONLY] Card color(s): Red, Green, Blue, Purple, Black, Yellow",
+                example: "Blue;Green",
+              },
+              extAttribute: {
+                type: "string",
+                description: "[ONE PIECE] Combat attribute: Strike, Slash, Ranged, Special | [YU-GI-OH] Monster attribute: FIRE, WATER, EARTH, WIND, LIGHT, DARK",
+                example: "Strike;Slash",
+              },
+              extLife: {
+                type: "integer",
+                description: "[ONE PIECE ONLY] Life points for Leader cards (typically 4-5)",
+                example: 4,
+              },
+              extPower: {
+                type: "integer",
+                description: "[ONE PIECE ONLY] Character power/attack value (typically 1000-12000)",
+                example: 5000,
+              },
+              extCost: {
+                type: "integer",
+                description: "[ONE PIECE ONLY] Energy cost to play the card (0-10)",
+                example: 3,
+              },
+              extSubtypes: {
+                type: "string",
+                description: "[ONE PIECE] Character faction: Straw Hat Crew, Marine, etc. | [YU-GI-OH] Monster type: Warrior, Dragon, etc.",
+                example: "Straw Hat Crew",
+              },
+              // POKEMON SPECIFIC FIELDS
+              extHP: {
+                type: "integer",
+                description: "[POKEMON ONLY] Pokemon HP/health points (typically 10-340)",
+                example: 110,
+              },
+              extStage: {
+                type: "string",
+                description: "[POKEMON ONLY] Evolution stage: Basic, Stage 1, Stage 2, GX, V, VMAX, etc.",
+                example: "Stage 1",
+              },
+              extAttack1: {
+                type: "string",
+                description: "[POKEMON ONLY] First attack description with damage and effects",
+                example: "[L] Quick Attack (10+) - Flip a coin. If heads, this attack does 30 more damage.",
+              },
+              extAttack2: {
+                type: "string",
+                description: "[POKEMON ONLY] Second attack description (if any)",
+                example: "[2L] Electric Surfer (70)",
+              },
+              extWeakness: {
+                type: "string",
+                description: "[POKEMON ONLY] Pokemon weakness (e.g., Fx2 means Fire x2 damage)",
+                example: "Fx2",
+              },
+              extResistance: {
+                type: "string",
+                description: "[POKEMON ONLY] Pokemon resistance (e.g., M-20 means Metal -20 damage)",
+                example: "M-20",
+              },
+              extRetreatCost: {
+                type: "integer",
+                description: "[POKEMON ONLY] Energy cost to retreat this Pokemon",
+                example: 1,
+              },
+              // YU-GI-OH SPECIFIC FIELDS
+              extDefense: {
+                type: "integer",
+                description: "[YU-GI-OH ONLY] Monster defense points (typically 0-5000)",
+                example: 1500,
+              },
+              extLevel: {
+                type: "integer",
+                description: "[YU-GI-OH ONLY] Monster level/rank (typically 1-12)",
+                example: 4,
+              },
+              extMonsterType: {
+                type: "string",
+                description: "[YU-GI-OH ONLY] Monster type: Warrior, Spellcaster, Dragon, Machine, etc.",
+                example: "Warrior",
+              },
+            },
+            example: {
+              // One Piece Leader example
+              extNumber: "ST12-001",
+              extRarity: "L",
+              extCardType: "Leader",
+              extDescription: "[DON!! x1][When Attacking][Once Per Turn] You may return 1 of your Characters with a cost of 2 or more to the owner's hand",
+              extAttribute: "Slash;Strike",
+              extColor: "Blue;Green",
+              extLife: 4,
+              extPower: 5000,
+              extSubtypes: "Straw Hat Crew",
+              extCost: 0,
+            },
+            additionalProperties: {
+              oneOf: [
+                {
+                  title: "One Piece Card Extended Data",
+                  type: "object",
+                  properties: {
+                    extColor: { type: "string", description: "Card color: Red, Green, Blue, Purple, Black, Yellow" },
+                    extCost: { type: "integer", description: "Energy cost (0-10)" },
+                    extPower: { type: "integer", description: "Character power" },
+                    extLife: { type: "integer", description: "Leader life points" },
+                    extAttribute: { type: "string", description: "Combat attribute: Strike, Slash, Ranged" },
+                    extSubtypes: { type: "string", description: "Character faction" },
+                  }
+                },
+                {
+                  title: "Pokemon Card Extended Data",
+                  type: "object",
+                  properties: {
+                    extHP: { type: "integer", description: "Pokemon HP (10-340)" },
+                    extStage: { type: "string", description: "Evolution stage" },
+                    extAttack1: { type: "string", description: "First attack" },
+                    extAttack2: { type: "string", description: "Second attack" },
+                    extWeakness: { type: "string", description: "Pokemon weakness" },
+                    extResistance: { type: "string", description: "Pokemon resistance" },
+                    extRetreatCost: { type: "integer", description: "Retreat cost" },
+                  }
+                },
+                {
+                  title: "Yu-Gi-Oh Card Extended Data",
+                  type: "object",
+                  properties: {
+                    extAttribute: { type: "string", description: "Monster attribute: FIRE, WATER, EARTH, etc." },
+                    extDefense: { type: "integer", description: "Monster defense points" },
+                    extLevel: { type: "integer", description: "Monster level/rank" },
+                    extMonsterType: { type: "string", description: "Monster type: Warrior, Dragon, etc." },
+                    extSubtypes: { type: "string", description: "Monster type classification" },
+                  }
+                }
+              ]
+            }
           },
           isActive: {
             type: "boolean",

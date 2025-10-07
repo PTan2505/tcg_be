@@ -1,6 +1,5 @@
-import { Card, ICard } from '../../database/models/card';
-import { CardSet } from '../../database/models/cardSet';
 import mongoose from 'mongoose';
+import { Card, ICard } from '../../database/models/card';
 
 export type GameType = 'pokemon' | 'yugioh' | 'onepiece';
 
@@ -14,6 +13,20 @@ export interface GetCardsOptions {
   setId?: string;
   minPrice?: number;
   maxPrice?: number;
+  // New fields for enhanced filtering
+  cardType?: string;        // extCardType: Character, Leader, Event, etc.
+  color?: string;          // extColor: Red, Green, Blue, etc.
+  attribute?: string;      // extAttribute: Strike, Slash, etc.
+  subtype?: string;        // extSubtypes: Straw Hat Crew, etc.
+  cost?: number;           // extCost: Energy/mana cost
+  power?: number;          // extPower: Attack power
+  life?: number;           // extLife: Life points for leaders
+  hp?: number;             // extHP: Health points for Pokemon
+  stage?: string;          // extStage: Basic, Stage 1, Stage 2 for Pokemon
+  monsterType?: string;    // extMonsterType: for Yu-Gi-Oh
+  defense?: number;        // extDefense: for Yu-Gi-Oh
+  level?: number;          // extLevel: for Yu-Gi-Oh
+  description?: string;    // extDescription: Card text search
 }
 
 export interface CardsResult {
@@ -65,21 +78,53 @@ export class CardService implements ICardService {
       rarity,
       setId,
       minPrice,
-      maxPrice
+      maxPrice,
+      cardType,
+      color,
+      attribute,
+      subtype,
+      cost,
+      power,
+      life,
+      hp,
+      stage,
+      monsterType,
+      defense,
+      level,
+      description
     } = options;
 
     // Build filter
     const filter: any = { isActive: true };
 
+    // Enhanced fuzzy search for name
     if (search) {
-      filter.$or = [
+      const searchTerms = search.trim().split(/\s+/);
+      const searchConditions = [];
+      
+      // Create fuzzy search patterns for each term
+      for (const term of searchTerms) {
+        const fuzzyPattern = term.split('').join('.*');
+        searchConditions.push(
+          { name: { $regex: fuzzyPattern, $options: 'i' } },
+          { cleanName: { $regex: fuzzyPattern, $options: 'i' } },
+          { name: { $regex: term, $options: 'i' } },
+          { cleanName: { $regex: term, $options: 'i' } }
+        );
+      }
+      
+      // Also include exact phrase search
+      searchConditions.push(
         { name: { $regex: search, $options: 'i' } },
         { cleanName: { $regex: search, $options: 'i' } }
-      ];
+      );
+
+      filter.$or = searchConditions;
     }
 
+    // Enhanced filtering options
     if (rarity) {
-      filter.rarity = { $regex: rarity, $options: 'i' };
+      filter['extendedData.extRarity'] = { $regex: rarity, $options: 'i' };
     }
 
     if (setId) {
@@ -96,7 +141,60 @@ export class CardService implements ICardService {
       }
     }
 
-    // Build sort
+    // Game-specific filtering
+    if (cardType) {
+      filter['extendedData.extCardType'] = { $regex: cardType, $options: 'i' };
+    }
+
+    if (color) {
+      filter['extendedData.extColor'] = { $regex: color, $options: 'i' };
+    }
+
+    if (attribute) {
+      filter['extendedData.extAttribute'] = { $regex: attribute, $options: 'i' };
+    }
+
+    if (subtype) {
+      filter['extendedData.extSubtypes'] = { $regex: subtype, $options: 'i' };
+    }
+
+    if (cost !== undefined) {
+      filter['extendedData.extCost'] = cost;
+    }
+
+    if (power !== undefined) {
+      filter['extendedData.extPower'] = power;
+    }
+
+    if (life !== undefined) {
+      filter['extendedData.extLife'] = life;
+    }
+
+    if (hp !== undefined) {
+      filter['extendedData.extHP'] = hp;
+    }
+
+    if (stage) {
+      filter['extendedData.extStage'] = { $regex: stage, $options: 'i' };
+    }
+
+    if (monsterType) {
+      filter['extendedData.extMonsterType'] = { $regex: monsterType, $options: 'i' };
+    }
+
+    if (defense !== undefined) {
+      filter['extendedData.extDefense'] = defense;
+    }
+
+    if (level !== undefined) {
+      filter['extendedData.extLevel'] = level;
+    }
+
+    if (description) {
+      filter['extendedData.extDescription'] = { $regex: description, $options: 'i' };
+    }
+
+    // Build sort with enhanced options
     const sort: any = {};
     if (sortBy === 'price') {
       sort['tcgPlayerPrice.marketPrice'] = sortOrder === 'desc' ? -1 : 1;
@@ -104,6 +202,14 @@ export class CardService implements ICardService {
       sort.name = sortOrder === 'desc' ? -1 : 1;
     } else if (sortBy === 'number') {
       sort.number = sortOrder === 'desc' ? -1 : 1;
+    } else if (sortBy === 'cost') {
+      sort['extendedData.extCost'] = sortOrder === 'desc' ? -1 : 1;
+    } else if (sortBy === 'power') {
+      sort['extendedData.extPower'] = sortOrder === 'desc' ? -1 : 1;
+    } else if (sortBy === 'hp') {
+      sort['extendedData.extHP'] = sortOrder === 'desc' ? -1 : 1;
+    } else if (sortBy === 'defense') {
+      sort['extendedData.extDefense'] = sortOrder === 'desc' ? -1 : 1;
     } else {
       sort[sortBy] = sortOrder === 'desc' ? -1 : 1;
     }
@@ -149,18 +255,50 @@ export class CardService implements ICardService {
       rarity,
       setId,
       minPrice,
-      maxPrice
+      maxPrice,
+      cardType,
+      color,
+      attribute,
+      subtype,
+      cost,
+      power,
+      life,
+      hp,
+      stage,
+      monsterType,
+      defense,
+      level,
+      description
     } = options;
 
+    // Enhanced fuzzy search for name
     if (search) {
-      filter.$or = [
+      const searchTerms = search.trim().split(/\s+/);
+      const searchConditions = [];
+      
+      // Create fuzzy search patterns for each term
+      for (const term of searchTerms) {
+        const fuzzyPattern = term.split('').join('.*');
+        searchConditions.push(
+          { name: { $regex: fuzzyPattern, $options: 'i' } },
+          { cleanName: { $regex: fuzzyPattern, $options: 'i' } },
+          { name: { $regex: term, $options: 'i' } },
+          { cleanName: { $regex: term, $options: 'i' } }
+        );
+      }
+      
+      // Also include exact phrase search
+      searchConditions.push(
         { name: { $regex: search, $options: 'i' } },
         { cleanName: { $regex: search, $options: 'i' } }
-      ];
+      );
+
+      filter.$or = searchConditions;
     }
 
+    // Enhanced filtering options
     if (rarity) {
-      filter.rarity = { $regex: rarity, $options: 'i' };
+      filter['extendedData.extRarity'] = { $regex: rarity, $options: 'i' };
     }
 
     if (setId) {
@@ -177,7 +315,60 @@ export class CardService implements ICardService {
       }
     }
 
-    // Build sort
+    // New filtering options based on game-specific fields
+    if (cardType) {
+      filter['extendedData.extCardType'] = { $regex: cardType, $options: 'i' };
+    }
+
+    if (color) {
+      filter['extendedData.extColor'] = { $regex: color, $options: 'i' };
+    }
+
+    if (attribute) {
+      filter['extendedData.extAttribute'] = { $regex: attribute, $options: 'i' };
+    }
+
+    if (subtype) {
+      filter['extendedData.extSubtypes'] = { $regex: subtype, $options: 'i' };
+    }
+
+    if (cost !== undefined) {
+      filter['extendedData.extCost'] = cost;
+    }
+
+    if (power !== undefined) {
+      filter['extendedData.extPower'] = power;
+    }
+
+    if (life !== undefined) {
+      filter['extendedData.extLife'] = life;
+    }
+
+    if (hp !== undefined) {
+      filter['extendedData.extHP'] = hp;
+    }
+
+    if (stage) {
+      filter['extendedData.extStage'] = { $regex: stage, $options: 'i' };
+    }
+
+    if (monsterType) {
+      filter['extendedData.extMonsterType'] = { $regex: monsterType, $options: 'i' };
+    }
+
+    if (defense !== undefined) {
+      filter['extendedData.extDefense'] = defense;
+    }
+
+    if (level !== undefined) {
+      filter['extendedData.extLevel'] = level;
+    }
+
+    if (description) {
+      filter['extendedData.extDescription'] = { $regex: description, $options: 'i' };
+    }
+
+    // Build sort with enhanced options
     const sort: any = {};
     if (sortBy === 'price') {
       sort['tcgPlayerPrice.marketPrice'] = sortOrder === 'desc' ? -1 : 1;
@@ -185,6 +376,14 @@ export class CardService implements ICardService {
       sort.name = sortOrder === 'desc' ? -1 : 1;
     } else if (sortBy === 'number') {
       sort.number = sortOrder === 'desc' ? -1 : 1;
+    } else if (sortBy === 'cost') {
+      sort['extendedData.extCost'] = sortOrder === 'desc' ? -1 : 1;
+    } else if (sortBy === 'power') {
+      sort['extendedData.extPower'] = sortOrder === 'desc' ? -1 : 1;
+    } else if (sortBy === 'hp') {
+      sort['extendedData.extHP'] = sortOrder === 'desc' ? -1 : 1;
+    } else if (sortBy === 'defense') {
+      sort['extendedData.extDefense'] = sortOrder === 'desc' ? -1 : 1;
     } else {
       sort[sortBy] = sortOrder === 'desc' ? -1 : 1;
     }
