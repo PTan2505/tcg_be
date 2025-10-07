@@ -5,6 +5,7 @@
 
 import Fuse from 'fuse.js';
 import { Card } from '../../database/models/card';
+import { cardNumberFuzzySearch } from './cardNumberFuzzySearch.service';
 
 const logger = {
   error: (...args: any[]) => console.error('[SEARCH]', ...args),
@@ -21,10 +22,12 @@ export interface CardMatch {
 }
 
 export interface SearchResult {
-  matches: CardMatch[];
+  topMatch: CardMatch | null;
+  candidates: CardMatch[];
   searchStrategy: string;
   totalCandidates: number;
   processingTime: number;
+  hasExtractedName: boolean;
 }
 
 export class SmartCardSearchService {
@@ -41,74 +44,175 @@ export class SmartCardSearchService {
   async findBestMatches(
     gameType: 'pokemon' | 'yugioh' | 'onepiece',
     extractedText: any,
-    limit: number = 20  // Increased default limit for more candidates
+    limit: number = 20
   ): Promise<SearchResult> {
     const startTime = Date.now();
     
     try {
       logger.info(`🔍 Searching for ${gameType} card: "${extractedText.cardName}"`);
 
+      // Check if we have a valid extracted name
+      const hasValidName = extractedText.cardName && 
+                          extractedText.cardName !== 'Unknown Card' && 
+                          extractedText.cardName.length > 2;
+
       // Get all cards for the game type
       const allCards = await Card.find({ gameType }).lean();
       
       if (allCards.length === 0) {
         return {
-          matches: [],
+          topMatch: null,
+          candidates: [],
           searchStrategy: 'no_cards_found',
           totalCandidates: 0,
-          processingTime: Date.now() - startTime
+          processingTime: Date.now() - startTime,
+          hasExtractedName: hasValidName
         };
       }
 
-      // Try multiple search strategies
-      const strategies = [
-        () => this.exactNameMatch(allCards, extractedText.cardName),
-        () => this.fuzzyNameMatchWithCache(allCards, extractedText.cardName, gameType),
-        () => this.statBasedMatch(allCards, extractedText.primaryStats, gameType),
-        () => this.combinedTextMatch(allCards, extractedText.allText, gameType),
-        () => this.partialNameMatch(allCards, extractedText.cardName)
-      ];
-
-      let bestMatches: CardMatch[] = [];
-      let usedStrategy = '';
-
-      // Try each strategy until we get good results
-      for (const [index, strategy] of strategies.entries()) {
-        const matches = strategy();
-        
-        if (matches.length > 0 && matches[0].confidence > 70) {
-          bestMatches = matches.slice(0, limit);
-          usedStrategy = this.getStrategyName(index);
-          break;
-        }
-        
-        // Keep the best results so far
-        if (matches.length > 0 && bestMatches.length === 0) {
-          bestMatches = matches.slice(0, limit);
-          usedStrategy = this.getStrategyName(index);
-        }
+      if (hasValidName) {
+        // Name-based search: Find exact matches and candidates
+        return this.searchByExtractedName(allCards, extractedText, startTime, limit);
+      } else {
+        // Visual-based search: Use fuzzy matching and stats
+        return this.searchByVisualMatching(allCards, extractedText, startTime, limit);
       }
-
-      // If still no good matches, try broader search
-      if (bestMatches.length === 0 || bestMatches[0].confidence < 50) {
-        bestMatches = this.broadTextSearch(allCards, extractedText.allText).slice(0, limit);
-        usedStrategy = 'broad_text_search';
-      }
-
-      const processingTime = Date.now() - startTime;
-      logger.info(`🔍 Search complete: ${bestMatches.length} matches found in ${processingTime}ms`);
-
-      return {
-        matches: bestMatches,
-        searchStrategy: usedStrategy,
-        totalCandidates: allCards.length,
-        processingTime
-      };
 
     } catch (error) {
-      logger.error('Error in card search:', error);
-      throw error;
+      logger.error('Search error:', error);
+      return {
+        topMatch: null,
+        candidates: [],
+        searchStrategy: 'error',
+        totalCandidates: 0,
+        processingTime: Date.now() - startTime,
+        hasExtractedName: false
+      };
     }
+  }
+
+  /**
+   * Search when we have extracted Pokemon name
+   * Top match: Best set context match, Candidates: Same name different sets
+   */
+  private searchByExtractedName(
+    allCards: any[], 
+    extractedText: any, 
+    startTime: number, 
+    limit: number
+  ): SearchResult {
+    const cardName = extractedText.cardName;
+    logger.info(`🔍 Name-based search for: "${cardName}"`);
+
+    // Find all cards with the same name (exact match)
+    const sameNameCards = allCards.filter(card => 
+      card.name.toLowerCase() === cardName.toLowerCase()
+    );
+
+    if (sameNameCards.length === 0) {
+      // Fallback to fuzzy search if no exact matches
+      const fuzzyMatches = this.fuzzyNameMatchWithCache(allCards, cardName, extractedText.gameType || 'pokemon');
+      
+      return {
+        topMatch: fuzzyMatches[0] || null,
+        candidates: fuzzyMatches.slice(1, limit),
+        searchStrategy: 'fuzzy_name_fallback',
+        totalCandidates: fuzzyMatches.length,
+        processingTime: Date.now() - startTime,
+        hasExtractedName: true
+      };
+    }
+
+    // Use set context to find the best match
+    const setContextMatches = this.exactNameMatchWithSetPriority(
+      sameNameCards, 
+      cardName, 
+      extractedText.allText
+    );
+
+    // Top match is the best set context match
+    const topMatch = setContextMatches[0] || null;
+
+    // Candidates are other cards with the same name
+    const candidates = sameNameCards
+      .filter(card => !topMatch || card._id.toString() !== topMatch.card._id.toString())
+      .map(card => ({
+        card,
+        confidence: 85, // Good confidence for same name different set
+        matchReason: 'Same name, different set',
+        score: 85,
+        matchedFields: ['name']
+      }))
+      .slice(0, limit - 1); // Reserve space for top match
+
+    logger.info(`🔍 Found top match: ${topMatch?.card.name} | ${candidates.length} candidates`);
+
+    return {
+      topMatch,
+      candidates,
+      searchStrategy: 'exact_name_with_candidates',
+      totalCandidates: sameNameCards.length,
+      processingTime: Date.now() - startTime,
+      hasExtractedName: true
+    };
+  }
+
+  /**
+   * Search when we don't have extracted name - use visual/statistical matching
+   */
+  private searchByVisualMatching(
+    allCards: any[], 
+    extractedText: any, 
+    startTime: number, 
+    limit: number
+  ): SearchResult {
+    logger.info(`🔍 Visual-based search (no extracted name)`);
+
+    // Try multiple visual/statistical strategies
+    const strategies = [
+      () => this.statBasedMatch(allCards, extractedText.primaryStats, extractedText.gameType || 'pokemon'),
+      () => this.combinedTextMatch(allCards, extractedText.allText, extractedText.gameType || 'pokemon'),
+      () => this.broadTextSearch(allCards, extractedText.allText),
+    ];
+
+    let bestMatches: CardMatch[] = [];
+    let usedStrategy = '';
+
+    // Try each strategy until we get good results
+    for (const [index, strategy] of strategies.entries()) {
+      const matches = strategy();
+      
+      if (matches.length > 0 && matches[0].confidence > 60) {
+        bestMatches = matches.slice(0, limit);
+        usedStrategy = `visual_${this.getVisualStrategyName(index)}`;
+        break;
+      }
+      
+      // Keep the best results so far
+      if (matches.length > 0 && bestMatches.length === 0) {
+        bestMatches = matches.slice(0, limit);
+        usedStrategy = `visual_${this.getVisualStrategyName(index)}`;
+      }
+    }
+
+    const topMatch = bestMatches[0] || null;
+    const candidates = bestMatches.slice(1);
+
+    logger.info(`🔍 Visual search found: ${topMatch?.card.name} | ${candidates.length} candidates`);
+
+    return {
+      topMatch,
+      candidates,
+      searchStrategy: usedStrategy,
+      totalCandidates: bestMatches.length,
+      processingTime: Date.now() - startTime,
+      hasExtractedName: false
+    };
+  }
+
+  private getVisualStrategyName(index: number): string {
+    const names = ['stat_based', 'text_combined', 'broad_text'];
+    return names[index] || 'unknown';
   }
 
   /**
@@ -136,10 +240,12 @@ export class SmartCardSearchService {
       if (!cardSet) {
         logger.info(`🎯 CardSet not found for abbreviation: ${setCode} and gameType: ${gameType}`);
         return {
-          matches: [],
+          topMatch: null,
+          candidates: [],
           searchStrategy: 'set_not_found',
           totalCandidates: 0,
-          processingTime: Date.now() - startTime
+          processingTime: Date.now() - startTime,
+          hasExtractedName: Boolean(extractedText.cardName && extractedText.cardName !== 'Unknown Card')
         };
       }
       
@@ -155,10 +261,12 @@ export class SmartCardSearchService {
       
       if (setCards.length === 0) {
         return {
-          matches: [],
+          topMatch: null,
+          candidates: [],
           searchStrategy: 'set_specific_no_cards',
           totalCandidates: 0,
-          processingTime: Date.now() - startTime
+          processingTime: Date.now() - startTime,
+          hasExtractedName: Boolean(extractedText.cardName && extractedText.cardName !== 'Unknown Card')
         };
       }
 
@@ -213,11 +321,16 @@ export class SmartCardSearchService {
         });
       }
 
+      const topMatch = bestMatches[0] || null;
+      const candidates = bestMatches.slice(1);
+
       return {
-        matches: bestMatches,
+        topMatch,
+        candidates,
         searchStrategy: usedStrategy,
         totalCandidates: setCards.length,
-        processingTime
+        processingTime,
+        hasExtractedName: Boolean(extractedText.cardName && extractedText.cardName !== 'Unknown Card')
       };
 
     } catch (error) {
@@ -227,14 +340,169 @@ export class SmartCardSearchService {
   }
 
   /**
-   * Strategy 1: Exact name matching
+   * Strategy 1: Exact name match with set context priority
+   */
+  private exactNameMatchWithSetPriority(cards: any[], cardName: string, fullText: string): CardMatch[] {
+    if (!cardName || cardName === 'Unknown Card') return [];
+
+    console.log(`🔍 DEBUG: Searching for exact match of "${cardName}"`);
+
+    // Clean the card name - remove common prefixes and suffixes
+    let cleanCardName = cardName.trim();
+    
+    // Remove "Pok mon" or "Pokemon" prefix
+    cleanCardName = cleanCardName.replace(/^(?:Pok[eé]?mon\s+|Pokemon\s+)/i, '');
+    
+    // Don't remove variant numbers for cards like "Clefable (1)"
+    if (!cleanCardName.includes('(')) {
+      // Remove common suffixes only if no variant number
+      cleanCardName = cleanCardName.replace(/\s+(?:HP|ex|EX|GX|V|VMAX).*$/i, '');
+      cleanCardName = cleanCardName.replace(/\s+\d+.*$/i, '');
+    }
+    
+    console.log(`🔍 DEBUG: Cleaned name: "${cleanCardName}"`);
+    
+    // Extract set clues from the full text
+    const setClues = this.extractSetClues(fullText);
+    
+    // Try exact match with cleaned name first
+    let matches = cards.filter(card => 
+      card.name.toLowerCase() === cleanCardName.toLowerCase()
+    );
+
+    console.log(`🔍 DEBUG: Found ${matches.length} exact matches for "${cleanCardName}"`);
+    if (matches.length > 0) {
+      console.log(`🔍 DEBUG: First match: ${matches[0].name} (${matches[0].number})`);
+    }
+
+    // If no exact match, try the original name
+    if (matches.length === 0) {
+      matches = cards.filter(card => 
+        card.name.toLowerCase() === cardName.toLowerCase()
+      );
+      console.log(`🔍 DEBUG: Found ${matches.length} matches for original name "${cardName}"`);
+    }
+
+    // If still no match, try partial matching for cases like "Clefable (1)"
+    if (matches.length === 0) {
+      matches = cards.filter(card => 
+        card.name.toLowerCase().includes(cleanCardName.toLowerCase()) ||
+        cleanCardName.toLowerCase().includes(card.name.toLowerCase())
+      );
+      console.log(`🔍 DEBUG: Found ${matches.length} partial matches`);
+    }
+
+    // Score and sort matches based on set context and card number patterns
+    const scoredMatches = matches.map(card => {
+      let contextScore = 95; // Base confidence
+      
+      // Boost score if card number appears in text
+      if (card.number && fullText.includes(card.number)) {
+        contextScore += 20;
+      }
+      
+      // Boost score based on set indicators
+      setClues.forEach(clue => {
+        if (card.setCode && card.setCode.toLowerCase().includes(clue.toLowerCase())) {
+          contextScore += 15;
+        }
+      });
+      
+      // Special handling for Jungle set cards - prioritize "(1)" variants
+      if (fullText.includes('1/64') || fullText.includes('1 64')) {
+        if (card.setCode === 'JU' || card.setName?.toLowerCase().includes('jungle')) {
+          if (card.name.includes('(1)')) {
+            contextScore += 50; // Strong boost for "(1)" variant in Jungle set
+          } else if (card.number === '01/64' || card.number === '1/64') {
+            contextScore += 30; // Boost for matching card number
+          }
+        }
+      }
+      
+      // General variant prioritization based on context
+      if (card.name.includes('(1)') && (fullText.includes('1 64') || fullText.includes('01/64'))) {
+        contextScore += 40;
+      }
+      
+      // Cap the confidence at 100
+      contextScore = Math.min(contextScore, 100);
+      
+      return {
+        card,
+        confidence: contextScore,
+        matchReason: 'Exact name match with set context',
+        score: contextScore,
+        matchedFields: ['name', 'context']
+      };
+    });
+
+    // Sort by confidence score
+    return scoredMatches.sort((a, b) => b.confidence - a.confidence);
+  }
+
+  /**
+   * Extract set clues from OCR text
+   */
+  private extractSetClues(fullText: string): string[] {
+    const clues: string[] = [];
+    
+    // Look for set codes
+    const setCodes = fullText.match(/\b(JU|BS|FO|TR|G1|G2|N1|N2|N3|N4|LC|AQ|SK|EX|DP|PL|HS|BW|XY|SM|SW)\b/gi);
+    if (setCodes) {
+      clues.push(...setCodes);
+    }
+    
+    // Look for card numbers that indicate specific sets
+    const cardNumbers = fullText.match(/\b(\d{1,3}\/\d{1,3})\b/g);
+    if (cardNumbers) {
+      clues.push(...cardNumbers);
+    }
+    
+    // Look for year indicators
+    const years = fullText.match(/\b(199[8-9]|20[0-2][0-9])\b/g);
+    if (years) {
+      clues.push(...years);
+    }
+    
+    return clues;
+  }
+
+  /**
+   * Strategy 2: Exact name matching (fallback)
    */
   private exactNameMatch(cards: any[], cardName: string): CardMatch[] {
     if (!cardName || cardName === 'Unknown Card') return [];
 
-    const matches = cards.filter(card => 
-      card.name.toLowerCase() === cardName.toLowerCase()
+    // Clean the card name - remove common prefixes and suffixes
+    let cleanCardName = cardName.trim();
+    
+    // Remove "Pok mon" or "Pokemon" prefix
+    cleanCardName = cleanCardName.replace(/^(?:Pok[eé]?mon\s+|Pokemon\s+)/i, '');
+    
+    // Remove common suffixes
+    cleanCardName = cleanCardName.replace(/\s+(?:HP|ex|EX|GX|V|VMAX).*$/i, '');
+    cleanCardName = cleanCardName.replace(/\s+\d+.*$/i, '');
+    cleanCardName = cleanCardName.replace(/\s+\(\d+\).*$/i, '');
+    
+    // Try exact match with cleaned name first
+    let matches = cards.filter(card => 
+      card.name.toLowerCase() === cleanCardName.toLowerCase()
     );
+
+    // If no exact match, try the original name
+    if (matches.length === 0) {
+      matches = cards.filter(card => 
+        card.name.toLowerCase() === cardName.toLowerCase()
+      );
+    }
+
+    // If still no match, try partial matching for cases like "Clefable (1)"
+    if (matches.length === 0) {
+      matches = cards.filter(card => 
+        card.name.toLowerCase().includes(cleanCardName.toLowerCase()) ||
+        cleanCardName.toLowerCase().includes(card.name.toLowerCase())
+      );
+    }
 
     return matches.map(card => ({
       card,
@@ -706,8 +974,338 @@ export class SmartCardSearchService {
     return [...new Set(variations)].filter(v => v.length > 0);
   }
 
+  /**
+   * Find cards by exact card numbers with name validation
+   * This is the NEW PRIORITY method for card scanning
+   */
+  async findByCardNumbers(
+    gameType: 'pokemon' | 'yugioh' | 'onepiece',
+    cardNumbers: string[],
+    extractedCardName: string = '',
+    limit: number = 20
+  ): Promise<SearchResult> {
+    const startTime = Date.now();
+    
+    try {
+      logger.info(`🎯 Searching by card numbers: ${cardNumbers.join(', ')}`);
+      
+      // Query cards by extNumber (exact match)
+      const exactMatches = await Card.find({
+        gameType,
+        $or: cardNumbers.map(number => ({
+          'extendedData.extNumber': number
+        }))
+      }).lean();
+
+      logger.info(`🔍 Found ${exactMatches.length} exact card number matches`);
+
+      if (exactMatches.length === 0) {
+        return {
+          topMatch: null,
+          candidates: [],
+          searchStrategy: 'card_number_exact',
+          totalCandidates: 0,
+          processingTime: Date.now() - startTime,
+          hasExtractedName: Boolean(extractedCardName && extractedCardName.trim().length > 0)
+        };
+      }
+
+      // Score matches based on name similarity (if name provided)
+      const matches: CardMatch[] = exactMatches.map((card: any) => {
+        let confidence = 95; // High base confidence for exact number match
+        let matchReason = `Exact card number match: ${card.extendedData?.extNumber}`;
+        let matchedFields = ['cardNumber'];
+
+        // Add name validation if card name was extracted from OCR
+        if (extractedCardName && extractedCardName.trim().length > 0) {
+          const nameSimilarity = this.calculateStringSimilarity(
+            extractedCardName.toLowerCase().trim(),
+            card.name.toLowerCase().trim()
+          );
+          
+          logger.info(`📝 Name comparison: "${extractedCardName}" vs "${card.name}" = ${(nameSimilarity * 100).toFixed(1)}%`);
+          
+          if (nameSimilarity >= 0.8) {
+            confidence = Math.min(98, confidence + (nameSimilarity * 10)); // Boost for name match
+            matchReason += ` + High name similarity (${(nameSimilarity * 100).toFixed(1)}%)`;
+            matchedFields.push('cardName');
+          } else if (nameSimilarity >= 0.5) {
+            confidence = Math.min(90, confidence + (nameSimilarity * 5)); // Moderate boost
+            matchReason += ` + Partial name similarity (${(nameSimilarity * 100).toFixed(1)}%)`;
+            matchedFields.push('partialName');
+          } else {
+            confidence -= 15; // Penalize poor name match
+            matchReason += ` - Name mismatch (${(nameSimilarity * 100).toFixed(1)}%)`;
+          }
+        }
+
+        return {
+          card,
+          confidence,
+          matchReason,
+          score: confidence,
+          matchedFields
+        };
+      });
+
+      // Sort by confidence (highest first)
+      matches.sort((a, b) => b.confidence - a.confidence);
+
+      const topMatches = matches.slice(0, limit);
+      
+      logger.info(`✅ Card number search completed: ${topMatches.length} validated matches`);
+      if (topMatches.length > 0) {
+        logger.info(`🏆 Top match: ${topMatches[0].card.name} (${topMatches[0].confidence.toFixed(1)}% confidence)`);
+      }
+
+      const topMatch = topMatches[0] || null;
+      const candidates = topMatches.slice(1);
+
+      return {
+        topMatch,
+        candidates,
+        searchStrategy: 'card_number_with_name_validation',
+        totalCandidates: exactMatches.length,
+        processingTime: Date.now() - startTime,
+        hasExtractedName: Boolean(extractedCardName && extractedCardName.trim().length > 0)
+      };
+
+    } catch (error: any) {
+      logger.error('Card number search failed:', error);
+      return {
+        topMatch: null,
+        candidates: [],
+        searchStrategy: 'card_number_search_failed',
+        totalCandidates: 0,
+        processingTime: Date.now() - startTime,
+        hasExtractedName: Boolean(extractedCardName && extractedCardName.trim().length > 0)
+      };
+    }
+  }
+
+  /**
+   * Enhanced card number search with fuzzy matching and OCR error correction
+   */
+  async findByCardNumbersFuzzy(
+    gameType: 'pokemon' | 'yugioh' | 'onepiece',
+    ocrText: string,
+    extractedCardName?: string,
+    limit: number = 20
+  ): Promise<SearchResult> {
+    const startTime = Date.now();
+    
+    try {
+      logger.info(`🔍 Fuzzy card number search for ${gameType}`);
+      logger.info(`📝 OCR Text: "${ocrText}"`);
+      if (extractedCardName) {
+        logger.info(`📝 Extracted Name: "${extractedCardName}"`);
+      }
+
+      // Use fuzzy search service to find potential card numbers
+      const cardNumberMatches = await cardNumberFuzzySearch.findCardNumbers(
+        ocrText,
+        gameType,
+        limit * 2 // Get more candidates for better filtering
+      );
+
+      if (cardNumberMatches.length === 0) {
+        logger.info('❌ No card number matches found via fuzzy search');
+        return {
+          topMatch: null,
+          candidates: [],
+          searchStrategy: 'fuzzy_card_number_no_matches',
+          totalCandidates: 0,
+          processingTime: Date.now() - startTime,
+          hasExtractedName: Boolean(extractedCardName && extractedCardName.trim().length > 0)
+        };
+      }
+
+      logger.info(`🎯 Found ${cardNumberMatches.length} potential card number matches`);
+
+      // Get full card data for matched card numbers
+      const validMatches: Array<{cardId: string, match: any}> = [];
+      
+      for (const match of cardNumberMatches) {
+        const cardData = await cardNumberFuzzySearch.getCardByNumber(match.cardNumber);
+        if (cardData?.cardId) {
+          validMatches.push({
+            cardId: cardData.cardId.toString(),
+            match: match
+          });
+        }
+      }
+
+      if (validMatches.length === 0) {
+        logger.info('❌ No valid card IDs found for matched card numbers');
+        return {
+          topMatch: null,
+          candidates: [],
+          searchStrategy: 'fuzzy_card_number_no_valid_ids',
+          totalCandidates: cardNumberMatches.length,
+          processingTime: Date.now() - startTime,
+          hasExtractedName: Boolean(extractedCardName && extractedCardName.trim().length > 0)
+        };
+      }
+
+      const cardIds = validMatches.map(vm => vm.cardId);
+      const fullCards = await Card.find({
+        _id: { $in: cardIds },
+        gameType
+      }).lean();
+
+      if (fullCards.length === 0) {
+        logger.info('❌ No full card data found for matched card numbers');
+        return {
+          topMatch: null,
+          candidates: [],
+          searchStrategy: 'fuzzy_card_number_no_cards',
+          totalCandidates: cardNumberMatches.length,
+          processingTime: Date.now() - startTime,
+          hasExtractedName: Boolean(extractedCardName && extractedCardName.trim().length > 0)
+        };
+      }
+
+      // Create enhanced matches with fuzzy search confidence
+      const matches = fullCards.map(card => {
+        // Find corresponding card number match
+        const validMatch = validMatches.find(vm => 
+          vm.cardId === card._id.toString()
+        );
+
+        if (!validMatch) return null;
+        
+        const cardNumberMatch = validMatch.match;
+
+        let confidence = cardNumberMatch.confidence;
+        let matchReason = `Fuzzy card number match: ${cardNumberMatch.cardNumber}`;
+        let matchedFields = ['cardNumber'];
+
+        // Add match type information
+        switch (cardNumberMatch.matchType) {
+          case 'exact':
+            matchReason += ' (exact)';
+            break;
+          case 'ocr_correction':
+            matchReason += ` (OCR corrected: ${cardNumberMatch.corrections.join(', ')})`;
+            confidence = Math.min(confidence, 95); // Cap confidence for corrected matches
+            break;
+          case 'fuzzy':
+            matchReason += ` (fuzzy, edit distance: ${cardNumberMatch.editDistance})`;
+            confidence = Math.min(confidence, 85); // Cap confidence for fuzzy matches
+            break;
+        }
+
+        // Add name validation if available
+        if (extractedCardName && extractedCardName.trim().length > 0) {
+          const nameSimilarity = this.calculateStringSimilarity(
+            extractedCardName.toLowerCase().trim(),
+            card.name.toLowerCase().trim()
+          );
+          
+          logger.info(`📝 Name validation: "${extractedCardName}" vs "${card.name}" = ${(nameSimilarity * 100).toFixed(1)}%`);
+          
+          if (nameSimilarity >= 0.8) {
+            confidence = Math.min(98, confidence + (nameSimilarity * 8)); // Boost for name match
+            matchReason += ` + High name similarity (${(nameSimilarity * 100).toFixed(1)}%)`;
+            matchedFields.push('cardName');
+          } else if (nameSimilarity >= 0.5) {
+            confidence = Math.min(90, confidence + (nameSimilarity * 4)); // Moderate boost
+            matchReason += ` + Partial name similarity (${(nameSimilarity * 100).toFixed(1)}%)`;
+            matchedFields.push('partialName');
+          } else if (nameSimilarity < 0.3) {
+            confidence -= 20; // Penalize poor name match more heavily
+            matchReason += ` - Poor name match (${(nameSimilarity * 100).toFixed(1)}%)`;
+          }
+        }
+
+        return {
+          card,
+          confidence,
+          matchReason,
+          score: confidence,
+          matchedFields
+        };
+      }).filter((match): match is CardMatch => match !== null);
+
+      // Sort by confidence
+      matches.sort((a, b) => b.confidence - a.confidence);
+
+      const topMatches = matches.slice(0, limit);
+      
+      logger.info(`✅ Fuzzy card number search completed: ${topMatches.length} matches`);
+      if (topMatches.length > 0) {
+        logger.info(`🏆 Top match: ${topMatches[0].card.name} (${topMatches[0].confidence.toFixed(1)}% confidence)`);
+        logger.info(`🔢 Card number: ${topMatches[0].card.extendedData?.extNumber || 'N/A'}`);
+      }
+
+      const topMatch = topMatches[0] || null;
+      const candidates = topMatches.slice(1);
+
+      return {
+        topMatch,
+        candidates,
+        searchStrategy: 'fuzzy_card_number_with_validation',
+        totalCandidates: cardNumberMatches.length,
+        processingTime: Date.now() - startTime,
+        hasExtractedName: Boolean(extractedCardName && extractedCardName.trim().length > 0)
+      };
+
+    } catch (error: any) {
+      logger.error('Fuzzy card number search failed:', error);
+      return {
+        topMatch: null,
+        candidates: [],
+        searchStrategy: 'card_number_error',
+        totalCandidates: 0,
+        processingTime: Date.now() - startTime,
+        hasExtractedName: Boolean(extractedCardName && extractedCardName.trim().length > 0)
+      };
+    }
+  }
+
+  /**
+   * Calculate string similarity using Levenshtein distance
+   */
+  private calculateStringSimilarity(str1: string, str2: string): number {
+    if (!str1 || !str2) return 0;
+    if (str1 === str2) return 1;
+
+    const distance = this.levenshteinDistance(str1, str2);
+    const maxLength = Math.max(str1.length, str2.length);
+    return maxLength === 0 ? 1 : (maxLength - distance) / maxLength;
+  }
+
+  /**
+   * Calculate Levenshtein distance between two strings
+   */
+  private levenshteinDistance(str1: string, str2: string): number {
+    const matrix = Array(str2.length + 1).fill(null).map(() => Array(str1.length + 1).fill(null));
+
+    for (let i = 0; i <= str1.length; i += 1) {
+      matrix[0][i] = i;
+    }
+
+    for (let j = 0; j <= str2.length; j += 1) {
+      matrix[j][0] = j;
+    }
+
+    for (let j = 1; j <= str2.length; j += 1) {
+      for (let i = 1; i <= str1.length; i += 1) {
+        const indicator = str1[i - 1] === str2[j - 1] ? 0 : 1;
+        matrix[j][i] = Math.min(
+          matrix[j][i - 1] + 1, // deletion
+          matrix[j - 1][i] + 1, // insertion
+          matrix[j - 1][i - 1] + indicator, // substitution
+        );
+      }
+    }
+
+    return matrix[str2.length][str1.length];
+  }
+
   private getStrategyName(index: number): string {
     const names = [
+      'exact_name_match_with_set_priority',
       'exact_name_match',
       'fuzzy_name_match', 
       'stats_based_match',

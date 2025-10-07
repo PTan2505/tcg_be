@@ -14,6 +14,39 @@ const logger = {
   warn: (...args: any[]) => console.warn('[SCAN_CONTROLLER]', ...args)
 };
 
+// Helper function to handle SearchResult interface compatibility
+function getSearchResultMatches(searchResults: any): any[] {
+  if (searchResults.matches) {
+    return searchResults.matches; // Old interface
+  }
+  
+  // New interface - combine topMatch and candidates
+  const allMatches = [];
+  if (searchResults.topMatch) {
+    allMatches.push(searchResults.topMatch);
+  }
+  if (searchResults.candidates && Array.isArray(searchResults.candidates)) {
+    allMatches.push(...searchResults.candidates);
+  }
+  return allMatches;
+}
+
+function getMatchesLength(searchResults: any): number {
+  const matches = getSearchResultMatches(searchResults);
+  return matches.length;
+}
+
+function getTopMatch(searchResults: any): any {
+  if (searchResults.topMatch) {
+    return searchResults.topMatch; // New interface
+  }
+  const matches = getSearchResultMatches(searchResults);
+  if (matches.length > 0) {
+    return matches[0]; // Old interface
+  }
+  return null;
+}
+
 export class EnhancedCardScanController {
   private userCardService: UserCardService;
 
@@ -106,80 +139,198 @@ export class EnhancedCardScanController {
         logger.info('🎯 No set codes detected in OCR text');
       }
 
-      // 🔍 STEP 3: Smart Set-Based Search Strategy
+      // 🔍 STEP 3: Smart Card Number + Set-Based Search Strategy
       logger.info('🔍 Step 3: Implementing smart search strategy...');
       
       let searchResults: any;
       let isSetBasedSearch = false;
+      let isCardNumberSearch = false;
       
-      // Check if we have high-confidence set detection
-      if (detectedSetCodes.length > 0) {
-        const topSetCode = detectedSetCodes[0];
-        const setConfidence = topSetCode.confidence * 100;
+      // 🎯 PRIORITY 1: Check if we have card numbers (full codes like OP09-001)
+      const cardNumbers = setCodeExtraction.extractedCodes.filter(code => code.includes('-'));
+      if (cardNumbers.length > 0) {
+        logger.info(`🎯 Found ${cardNumbers.length} card numbers: ${cardNumbers.join(', ')}`);
         
-        logger.info(`🎯 Top detected set: ${topSetCode.setCode} - ${topSetCode.setName} (${setConfidence.toFixed(1)}%)`);
+        // First try exact card number search with name validation
+        searchResults = await smartCardSearch.findByCardNumbers(
+          gameType as any,
+          cardNumbers,
+          ocrData.extractedText.cardName, // Pass extracted card name for validation
+          20  // Max results
+        );
         
-        if (setConfidence >= 70) {
-          // High confidence - search only in this set
-          logger.info(`🎯 High confidence (${setConfidence.toFixed(1)}% >= 70%), searching within set: ${topSetCode.setCode}`);
+        isCardNumberSearch = true;
+        logger.info(`🔍 Exact card number search found ${getMatchesLength(searchResults)} matches`);
+        
+        // If exact search didn't yield good results, try fuzzy card number search
+        if (getMatchesLength(searchResults) === 0 || 
+            (getMatchesLength(searchResults) > 0 && getTopMatch(searchResults)?.confidence < 70)) {
           
-          searchResults = await smartCardSearch.findBestMatchesInSet(
+          logger.info(`🔄 Exact card number search yielded poor results, trying fuzzy search...`);
+          
+          const fuzzySearchResults = await smartCardSearch.findByCardNumbersFuzzy(
             gameType as any,
-            ocrData.extractedText,
-            topSetCode.setCode,
-            15  // Limit for set-specific search
+            ocrData.extractedText.allText, // Pass full OCR text for better pattern matching
+            ocrData.extractedText.cardName,
+            15  // Max results for fuzzy search
           );
           
-          isSetBasedSearch = true;
-          logger.info(`🔍 Set-based search found ${searchResults.matches.length} matches in ${topSetCode.setCode}`);
+          logger.info(`🔍 Fuzzy card number search found ${getMatchesLength(fuzzySearchResults)} matches`);
           
-          // Fallback if no good results in the specific set
-          if (searchResults.matches.length === 0 ) {
-            logger.info('⚠️ Set-based search yielded poor results, expanding to full search...');
+          // If fuzzy search found better results, use them
+          if (getMatchesLength(fuzzySearchResults) > 0 && 
+              (getMatchesLength(searchResults) === 0 || 
+               getTopMatch(fuzzySearchResults)?.confidence > getTopMatch(searchResults)?.confidence)) {
+            
+            logger.info(`✅ Fuzzy search found better results, using fuzzy matches`);
+            searchResults = fuzzySearchResults;
+            searchResults.searchStrategy = 'fuzzy_card_number_primary';
+          }
+        }
+        
+        // If we found high-confidence matches, we're likely done!
+        const allMatches = getSearchResultMatches(searchResults);
+        const highConfidenceMatches = allMatches.filter((m: any) => m.confidence >= 80);
+        if (highConfidenceMatches.length > 0) {
+          logger.info(`✅ Found ${highConfidenceMatches.length} high-confidence card number matches, skipping set search`);
+          // Update searchResults to use new interface
+          searchResults.topMatch = highConfidenceMatches[0];
+          searchResults.candidates = highConfidenceMatches.slice(1);
+          searchResults.matches = highConfidenceMatches; // Keep for backward compatibility
+          // Skip set-based search entirely
+        } else if (getMatchesLength(searchResults) > 0) {
+          logger.info(`⚠️ Found card number matches but low confidence, will combine with set search`);
+          // Continue to set-based search for additional validation
+        }
+      } else {
+        // No card numbers extracted, but try fuzzy search on the full OCR text anyway
+        logger.info(`🔄 No card numbers extracted, trying fuzzy search on full OCR text...`);
+        
+        const fuzzySearchResults = await smartCardSearch.findByCardNumbersFuzzy(
+          gameType as any,
+          ocrData.extractedText.allText,
+          ocrData.extractedText.cardName,
+          10  // Fewer results for OCR-only fuzzy search
+        );
+        
+        if (getMatchesLength(fuzzySearchResults) > 0 && getTopMatch(fuzzySearchResults)?.confidence >= 75) {
+          logger.info(`✅ Fuzzy search found good matches from OCR text, using as primary search`);
+          searchResults = fuzzySearchResults;
+          searchResults.searchStrategy = 'fuzzy_card_number_from_ocr';
+          isCardNumberSearch = true;
+        }
+      }
+      
+      // 🎯 PRIORITY 2: Set-based search (either as primary or fallback)
+      const shouldDoSetSearch = !isCardNumberSearch || 
+        getMatchesLength(searchResults) === 0 || 
+        (getMatchesLength(searchResults) > 0 && getTopMatch(searchResults)?.confidence < 85);
+        
+        if (shouldDoSetSearch) {
+        logger.info(isCardNumberSearch ? '🔄 Adding set-based search for validation...' : '🔄 Using set-based search as primary method...');
+      
+        // Check if we have high-confidence set detection
+        if (detectedSetCodes.length > 0) {
+          const topSetCode = detectedSetCodes[0];
+          const setConfidence = topSetCode.confidence * 100;
+          
+          logger.info(`🎯 Top detected set: ${topSetCode.setCode} - ${topSetCode.setName} (${setConfidence.toFixed(1)}%)`);
+          
+          if (setConfidence >= 70) {
+            // High confidence - search only in this set
+            logger.info(`🎯 High confidence (${setConfidence.toFixed(1)}% >= 70%), searching within set: ${topSetCode.setCode}`);
+            
+            searchResults = await smartCardSearch.findBestMatchesInSet(
+              gameType as any,
+              ocrData.extractedText,
+              topSetCode.setCode,
+              15  // Limit for set-specific search
+            );
+            
+            isSetBasedSearch = true;
+            logger.info(`🔍 Set-based search found ${getMatchesLength(searchResults)} matches in ${topSetCode.setCode}`);
+            
+            // Fallback if no good results in the specific set
+            if (getMatchesLength(searchResults) === 0 ) {
+              logger.info('⚠️ Set-based search yielded poor results, expanding to full search...');
+              
+              searchResults = await smartCardSearch.findBestMatches(
+                gameType as any,
+                ocrData.extractedText,
+                20  // Increased limit for fallback search
+              );
+              isSetBasedSearch = false;
+              logger.info(`🔍 Fallback search found ${getMatchesLength(searchResults)} matches`);
+            }
+          } else {
+            // Lower confidence - do normal search but boost set matches
+            logger.info(`🎯 Moderate confidence (${setConfidence.toFixed(1)}% < 70%), doing full search with set boosting`);
             
             searchResults = await smartCardSearch.findBestMatches(
               gameType as any,
               ocrData.extractedText,
-              20  // Increased limit for fallback search
+              20
             );
-            isSetBasedSearch = false;
-            logger.info(`🔍 Fallback search found ${searchResults.matches.length} matches`);
+            
+            // Boost confidence for cards from detected set
+            const allMatches = getSearchResultMatches(searchResults);
+            const boostedMatches = allMatches.map((match: any) => {
+              if (match.card?.setCode === topSetCode.setCode || 
+                  (match.card?.setName && match.card.setName.includes(topSetCode.setName))) {
+                return {
+                  ...match,
+                  confidence: Math.min(95, match.confidence + 15), // Boost by 15%
+                  matchReason: `${match.matchReason} + Set Match Bonus`
+                };
+              }
+              return match;
+            }).sort((a: any, b: any) => b.confidence - a.confidence);
+            
+            // Update searchResults with boosted matches
+            if (boostedMatches.length > 0) {
+              searchResults.topMatch = boostedMatches[0];
+              searchResults.candidates = boostedMatches.slice(1);
+              searchResults.matches = boostedMatches; // Keep for backward compatibility
+            }
+            
+            logger.info(`🔍 Full search with set boosting found ${boostedMatches.length} matches`);
+          }
+          
+          // Combine card number results with set results if both exist
+          if (isCardNumberSearch && getMatchesLength(searchResults) > 0) {
+            // Merge and deduplicate results, prioritizing card number matches
+            const setSearchMatches = getSearchResultMatches(searchResults);
+            const existingCardIds = new Set(
+              getSearchResultMatches(searchResults).map((m: any) => m.card?._id?.toString() || m.cardId)
+            );
+            
+            const additionalMatches = setSearchMatches.filter((match: any) => 
+              !existingCardIds.has(match.card?._id?.toString() || match.cardId)
+            );
+            
+            if (additionalMatches.length > 0) {
+              searchResults.matches = [
+                ...searchResults.matches,
+                ...additionalMatches
+              ].slice(0, 20);
+              searchResults.searchStrategy = 'card_number_plus_set_validation';
+              logger.info(`🔗 Combined card number + set search: ${getMatchesLength(searchResults)} total matches`);
+            }
           }
         } else {
-          // Lower confidence - do normal search but boost set matches
-          logger.info(`🎯 Moderate confidence (${setConfidence.toFixed(1)}% < 70%), doing full search with set boosting`);
-          
+          // No set detected - normal search
+          logger.info('🔍 No reliable set detected, performing standard search...');
           searchResults = await smartCardSearch.findBestMatches(
             gameType as any,
             ocrData.extractedText,
             20
           );
-          
-          // Boost confidence for cards from detected set
-          searchResults.matches = searchResults.matches.map((match: any) => {
-            if (match.card.setCode === topSetCode.setCode || 
-                (match.card.setName && match.card.setName.includes(topSetCode.setName))) {
-              return {
-                ...match,
-                confidence: Math.min(95, match.confidence + 15), // Boost by 15%
-                matchReason: `${match.matchReason} + Set Match Bonus`
-              };
-            }
-            return match;
-          }).sort((a: any, b: any) => b.confidence - a.confidence);
-          
-          logger.info(`🔍 Full search with set boosting found ${searchResults.matches.length} matches`);
+          // Handle both old and new SearchResult interface
+          const totalMatches = searchResults.matches?.length || 
+                              (searchResults.topMatch ? 1 : 0) + (searchResults.candidates?.length || 0);
+          logger.info(`🔍 Standard search found ${totalMatches} matches`);
         }
-      } else {
-        // No set detected - normal search
-        logger.info('🔍 No reliable set detected, performing standard search...');
-        searchResults = await smartCardSearch.findBestMatches(
-          gameType as any,
-          ocrData.extractedText,
-          20
-        );
-        logger.info(`🔍 Standard search found ${searchResults.matches.length} matches`);
-      }
+      } // Close the shouldDoSetSearch block
       
       logger.info(`🔍 Search strategy: ${isSetBasedSearch ? 'Set-based' : 'Full'} search completed`);
 
@@ -197,7 +348,7 @@ export class EnhancedCardScanController {
           logger.info(`🎯 High confidence set detection (${setConfidence.toFixed(1)}%), limiting visual matching to set: ${topSetCode.setCode}`);
           
           // Get variants from the set-based search results only
-          cardVariants = searchResults.matches.map((match: any) => ({
+          cardVariants = getSearchResultMatches(searchResults).map((match: any) => ({
             cardId: match.card._id.toString(),
             name: match.card.name,
             imageUrl: match.card.imageUrl,
@@ -240,7 +391,7 @@ export class EnhancedCardScanController {
         // Combine visual results with text search results
         visualMatches = visualResults.map(visualMatch => {
           // Find the corresponding card data from our search results or database
-          const matchingTextResult = searchResults.matches.find(
+          const matchingTextResult = getSearchResultMatches(searchResults).find(
             (textMatch: any) => textMatch.card._id.toString() === visualMatch.cardId
           );
           
@@ -266,7 +417,7 @@ export class EnhancedCardScanController {
       const processingTime = Date.now() - startTime;
       
       // Create initial candidates from search results
-      let candidates = searchResults.matches.map((match: any) => ({
+      let candidates = getSearchResultMatches(searchResults).map((match: any) => ({
         cardId: match.card._id,
         name: match.card.name,
         setName: match.card.setName,
@@ -425,7 +576,7 @@ export class EnhancedCardScanController {
             },
             step3_search: {
               strategy: searchResults.searchStrategy,
-              candidatesFound: searchResults.matches.length,
+              candidatesFound: getMatchesLength(searchResults),
               candidatesAfterSetCodeFiltering: candidates.length,
               totalCardsSearched: searchResults.totalCandidates,
               searchTime: searchResults.processingTime

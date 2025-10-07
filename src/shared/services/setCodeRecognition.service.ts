@@ -326,7 +326,7 @@ export class SetCodeRecognitionService {
   }
 
   /**
-   * Extract One Piece set codes with comprehensive OCR error handling
+   * Extract One Piece card numbers and set codes with comprehensive OCR error handling
    */
   private extractOnePieceSetCodes(text: string): string[] {
     const codes: string[] = [];
@@ -334,28 +334,31 @@ export class SetCodeRecognitionService {
     // Generate all possible OCR variations of the input text
     const textVariations = this.generateOCRVariations(text);
     
-    // Patterns for One Piece cards - enhanced to handle more variations
+    // Patterns for One Piece cards - differentiate CARD NUMBERS vs SET CODES
     const opPatterns = [
-      // Full card codes: OP01-002, 0P01-002, OPO1-OO2 (handle O/0 variations)
-      /\b([O0]P[O0]\d{1})-[O0]\d{2,3}\b/gi,
-      /\b([O0]P\d{2})-[O0]\d{2,3}\b/gi,
-      /\b(ST\d{2})-[O0]\d{2,3}\b/gi,
-      /\b(ST-\d{2})-[O0]\d{2,3}\b/gi,
-      /\b(PRB\d{2})-[O0]\d{2,3}\b/gi,
-      /\b(EB[O0]?\d{1,2})-[O0][A-Z]\d{1,2}\b/gi, // EBO1-OS6, EB01-OS6
-      /\b(EBO\d{1})-[O0][A-Z]\d{1,2}\b/gi, // Specific for EBO1-OS6 pattern
+      // FULL CARD NUMBERS: OP09-001, OPO1-O24, 0P01-024, etc.
+      /\b([O0]P[O0]?\d{1,2})-[O0]\d{2}\b/gi,        // OP09-001, OPO1-O24, 0P01-024
+      /\b([O0]P[O0]?\d{1,2})-\d{3}\b/gi,            // OP09-001, OP01-024  
+      /\b(ST\d{2})-[O0]\d{2}\b/gi,                  // ST12-O01
+      /\b(ST\d{2})-\d{3}\b/gi,                      // ST12-001
+      /\b(PRB\d{2})-[O0]\d{2}\b/gi,                 // PRB01-O01
+      /\b(PRB\d{2})-\d{3}\b/gi,                     // PRB01-001
+      /\b(EB[O0]?\d{1,2})-[O0A-Z]\d{1,3}\b/gi,      // EB01-001, EBO1-OS6
       
-      // Set codes only: OP01, 0P01, OPO1 (handle O/0 at start and middle)
-      /\b([O0]P[O0]?\d{1,2})(?=\s|$|-)/gi,
-      /\b(ST-?\d{2})(?=\s|$|-)/gi,
-      /\b(PRB\d{2})(?=\s|$|-)/gi,
-      /\b(EB[O0]?\d{1,2})(?=\s|$|-)/gi,
-      /\b(EBO\d{1})(?=\s|$|-)/gi, // EBO1 pattern
+      // SET CODES from full card numbers: OP09 from OP09-001, OPO1 from OPO1-O24
+      /\b([O0]P[O0]?\d{1,2})(?=-[O0]\d{2})/gi,      // OP09 from OP09-001, OPO1 from OPO1-O24
+      /\b([O0]P[O0]?\d{1,2})(?=-\d{3})/gi,          // OP09 from OP09-001
+      /\b(ST\d{2})(?=-[O0]\d{2})/gi,                // ST12 from ST12-O01
+      /\b(ST\d{2})(?=-\d{3})/gi,                    // ST12 from ST12-001
+      /\b(PRB\d{2})(?=-[O0]\d{2})/gi,               // PRB01 from PRB01-O01
+      /\b(PRB\d{2})(?=-\d{3})/gi,                   // PRB01 from PRB01-001
+      /\b(EB[O0]?\d{1,2})(?=-[O0A-Z])/gi,           // EB01 from EB01-001
       
-      // Handle underscore variants: OP01_002, EBO1_OS6
-      /\b([O0]P\d{2})_[O0]\d{2,3}\b/gi,
-      /\b(ST\d{2})_[O0]\d{2,3}\b/gi,
-      /\b(EBO\d{1})_[O0][A-Z]\d{1,2}\b/gi
+      // STANDALONE SET CODES: OP09, ST12 (without card numbers)
+      /\b([O0]P[O0]?\d{1,2})(?=\s|$|[^-\d])/gi,    // Allow 1-2 digits after OP
+      /\b(ST\d{2})(?=\s|$|[^-])/gi,
+      /\b(PRB\d{2})(?=\s|$|[^-])/gi,
+      /\b(EB[O0]?\d{1,2})(?=\s|$|[^-])/gi
     ];
 
     // Try each variation of the text
@@ -364,14 +367,22 @@ export class SetCodeRecognitionService {
         const matches = variation.match(pattern);
         if (matches) {
           for (const match of matches) {
-            // Extract just the set part (before card number or separator)
-            let setCode = match.replace(/[-_]\d{3,4}$/, '').trim().toUpperCase();
+            let code = match.trim().toUpperCase();
             
-            // Normalize O/0 confusion: 0P01 → OP01
-            setCode = setCode.replace(/^0P/, 'OP');
-            
-            if (setCode.length >= 3 && setCode.length <= 5) {
-              codes.push(setCode);
+            // If this is a FULL CARD NUMBER (contains dash), extract BOTH
+            if (code.includes('-')) {
+              // Add the full card number
+              const normalizedCardNumber = this.normalizeOnePieceCardNumber(code);
+              if (normalizedCardNumber) codes.push(normalizedCardNumber);
+              
+              // Also extract just the SET CODE part
+              const setCodePart = code.split('-')[0];
+              const normalizedSetCode = this.normalizeOnePieceSetCode(setCodePart);
+              if (normalizedSetCode) codes.push(normalizedSetCode);
+            } else {
+              // This is just a SET CODE
+              const normalizedSetCode = this.normalizeOnePieceSetCode(code);
+              if (normalizedSetCode) codes.push(normalizedSetCode);
             }
           }
         }
@@ -379,6 +390,55 @@ export class SetCodeRecognitionService {
     }
 
     return [...new Set(codes)]; // Remove duplicates
+  }
+
+  /**
+   * Normalize One Piece card numbers (OP09-001, ST12-001, etc.)
+   */
+  private normalizeOnePieceCardNumber(cardNumber: string): string | null {
+    if (!cardNumber || !cardNumber.includes('-')) return null;
+    
+    const [setCode, cardNum] = cardNumber.split('-');
+    const normalizedSet = this.normalizeOnePieceSetCode(setCode);
+    
+    if (!normalizedSet) return null;
+    
+    // Fix card number part: OO1 → 001, O07 → 007
+    let normalizedCardNum = cardNum.toUpperCase()
+      .replace(/^OO(\d)$/, '00$1')    // OO1 → 001
+      .replace(/^O(\d{2})$/, '0$1')   // O07 → 007  
+      .replace(/^(\d)O(\d)$/, '$10$2'); // 1O1 → 101
+    
+    // Ensure 3-digit format
+    if (/^\d{1,2}$/.test(normalizedCardNum)) {
+      normalizedCardNum = normalizedCardNum.padStart(3, '0');
+    }
+    
+    return `${normalizedSet}-${normalizedCardNum}`;
+  }
+
+  /**
+   * Normalize One Piece set codes (OP09, ST12, etc.)
+   */
+  private normalizeOnePieceSetCode(setCode: string): string | null {
+    if (!setCode) return null;
+    
+    let normalized = setCode.toUpperCase()
+      // Fix O/0 confusion: 0P09 → OP09, OPO9 → OP09
+      .replace(/^0P/, 'OP')
+      .replace(/^OPO(\d)$/, 'OP0$1')    // OPO9 → OP09 
+      .replace(/^OP(\d)$/, 'OP0$1');    // OP9 → OP09
+    
+    // Validate format
+    const validPatterns = [
+      /^OP\d{2}$/,     // OP01, OP02, ..., OP09
+      /^ST\d{2}$/,     // ST01, ST02, ..., ST20
+      /^EB\d{2}$/,     // EB01, EB02
+      /^PRB\d{2}$/     // PRB01, PRB02
+    ];
+    
+    const isValid = validPatterns.some(pattern => pattern.test(normalized));
+    return isValid ? normalized : null;
   }
 
   /**
@@ -460,6 +520,9 @@ export class SetCodeRecognitionService {
 
     // Enhanced patterns for Pokemon codes
     const pkmnPatterns = [
+      // Diamond & Pearl series: "43 D 11S 192" format (NEWLY ADDED)
+      /\b(\d+)\s+D\s+([O0-9S5]+)\s+(\d+)\b/gi,
+      
       // Scarlet/Violet series: SV1, SV10, SV12
       /\bSV(\d{1,2})\b/gi,
       
@@ -518,8 +581,20 @@ export class SetCodeRecognitionService {
               setCode = setCode.replace(/O/g, '0'); // Convert O to 0
             }
             
+            // Handle Diamond & Pearl series: "43 D 11S 192" format (NEWLY ADDED)
+            if (match.match(/^\d+\s+D\s+[O0-9S5]+\s+\d+$/)) {
+              // Extract card number and total from Diamond & Pearl format
+              const dpMatch = match.match(/^(\d+)\s+D\s+([O0-9S5]+)\s+(\d+)$/);
+              if (dpMatch) {
+                const cardNum = dpMatch[2].replace(/S/g, '5').replace(/O/g, '0'); // OCR correction: 11S → 115
+                const total = dpMatch[3]; // 192
+                const cardNumber = `${cardNum}/${total}`;
+                codes.push('DP'); // Diamond & Pearl set code
+                codes.push(cardNumber); // Card number: 115/192
+              }
+            }
             // Handle SV series - keep SV + number format
-            if (setCode.match(/^SV\d+$/)) {
+            else if (setCode.match(/^SV\d+$/)) {
               codes.push(setCode);
             }
             // Handle SWSH series
