@@ -386,8 +386,8 @@ export class EnhancedOCRService {
     
     // STRATEGY 5: Look for Pokemon name after card type (BASIC, STAGE 1, etc.)
     const cardTypePatterns = [
-      /(?:BASIC|STAGE\s+[I1-9]+)\s+([A-Za-z][A-Za-z\s\-'\.]*?)\s+(?:HP|ex|EX|GX|V|VMAX)/i,
-      /(?:BASIC|STAGE\s+[I1-9]+)\s+([A-Za-z][A-Za-z\s\-'\.]*?)\s+\d+/i, // followed by HP number
+      /(?:BASIC|STAGE\s+[I1-9]+)\s+([A-Za-z][A-Za-z\s\-'\.]*?(?:\s+ex|\s+EX|\s+GX|\s+V|\s+VMAX)?)\s+(?:HP|\d+)/i, // Include ex, EX, GX, etc. in name
+      /(?:BASIC|STAGE\s+[I1-9]+)\s+([A-Za-z][A-Za-z\s\-'\.]*?(?:\s+ex|\s+EX|\s+GX|\s+V|\s+VMAX)?)\s+\d+/i, // followed by HP number
     ];
     
     for (const pattern of cardTypePatterns) {
@@ -395,10 +395,14 @@ export class EnhancedOCRService {
       if (match) {
         const extractedName = match[1].trim();
         logger.info(`🔍 Card type pattern: "${extractedName}"`);
+        logger.info(`🔍 Full match: "${match[0]}"`);
+        logger.info(`🔍 Pattern used: ${pattern}`);
         
         if (this.isValidPokemonNameAdvanced(extractedName)) {
           logger.info(`✅ Card type pattern is valid Pokemon: "${extractedName}"`);
           return extractedName;
+        } else {
+          logger.info(`❌ Card type pattern rejected: "${extractedName}"`);
         }
       }
     }
@@ -611,12 +615,22 @@ export class EnhancedOCRService {
       'Scyther', 'Skuntank', 'Abomasnow', 'Aipom', 'Abra', 'Clefable', 'Alakazam', 'Mewtwo',
       'Pikachu', 'Charizard', 'Blastoise', 'Venusaur', 'Raichu', 'Mew', 'Kadabra', 'Clefairy',
       'Gyarados', 'Magikarp', 'Gengar', 'Gastly', 'Haunter', 'Machamp', 'Machoke', 'Machop',
-      'Butterfree', 'Caterpie', 'Metapod', 'Beedrill', 'Weedle', 'Kakuna', 'Scizor', 'Stunky'
+      'Butterfree', 'Caterpie', 'Metapod', 'Beedrill', 'Weedle', 'Kakuna', 'Scizor', 'Stunky',
+      'Lucario', 'Mega Lucario', 'Mega Charizard', 'Mega Blastoise', 'Mega Venusaur', 
+      'Mega Alakazam', 'Mega Gengar', 'Mega Gyarados', 'Mega Scizor', 'Greavard', 'Meganium'
     ];
     
     // Check if the base name is a known Pokemon name (case insensitive)
     if (knownPokemonNames.some(name => name.toLowerCase() === baseName.toLowerCase())) {
       return true;
+    }
+    
+    // Special handling for Mega Pokemon - check if it starts with "Mega " and the base Pokemon is known
+    if (baseName.toLowerCase().startsWith('mega ')) {
+      const basePokemon = baseName.substring(5).trim(); // Remove "Mega " prefix
+      if (knownPokemonNames.some(name => name.toLowerCase() === basePokemon.toLowerCase())) {
+        return true;
+      }
     }
     
     // Exclude obvious non-Pokemon text patterns
