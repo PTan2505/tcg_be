@@ -1,18 +1,5 @@
 import mongoose, { Document, Schema } from 'mongoose';
 
-export enum DeckFormat {
-  STANDARD = 'standard',
-  EXPANDED = 'expanded',
-  UNLIMITED = 'unlimited',
-  CUSTOM = 'custom'
-}
-
-export enum GameType {
-  POKEMON = 'pokemon',
-  YUGIOH = 'yugioh',
-  ONEPIECE = 'onepiece'
-}
-
 export interface IDeckCard {
   cardId: Schema.Types.ObjectId;
   quantity: number;
@@ -22,8 +9,7 @@ export interface IDeck extends Document {
   name: string;
   description?: string;
   userId: Schema.Types.ObjectId;
-  gameType: GameType;
-  format: DeckFormat;
+  gameType: string;
   cards: IDeckCard[];
   isPublic: boolean;
   tags: string[];
@@ -41,7 +27,6 @@ const DeckCardSchema = new Schema<IDeckCard>({
     type: Number,
     required: true,
     min: 1,
-    max: 4 // Standard card limit, can be adjusted per game rules
   }
 });
 
@@ -65,14 +50,8 @@ const DeckSchema = new Schema<IDeck>({
   },
   gameType: {
     type: String,
-    enum: Object.values(GameType),
+    enum: ['pokemon', 'yugioh', 'onepiece'],
     required: true
-  },
-  format: {
-    type: String,
-    enum: Object.values(DeckFormat),
-    required: true,
-    default: DeckFormat.STANDARD
   },
   cards: [DeckCardSchema],
   isPublic: {
@@ -90,7 +69,7 @@ const DeckSchema = new Schema<IDeck>({
 
 // Index for efficient queries
 DeckSchema.index({ userId: 1, name: 1 });
-DeckSchema.index({ gameType: 1, format: 1 });
+DeckSchema.index({ gameType: 1 });
 DeckSchema.index({ isPublic: 1 });
 
 // Virtual to get total card count

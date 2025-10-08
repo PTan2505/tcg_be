@@ -1,12 +1,12 @@
 import mongoose, { Schema } from 'mongoose';
 import { Card } from '../../database/models/card';
-import { Deck, DeckFormat, GameType, IDeck } from '../../database/models/deck';
+import { Deck, IDeck } from '../../database/models/deck';
+import { GameType } from '../cards/card.service';
 
 export interface CreateDeckOptions {
   name: string;
   description?: string;
   gameType: GameType;
-  format: DeckFormat;
   isPublic?: boolean;
   tags?: string[];
 }
@@ -15,7 +15,6 @@ export interface UpdateDeckOptions {
   name?: string;
   description?: string;
   gameType?: GameType;
-  format?: DeckFormat;
   isPublic?: boolean;
   tags?: string[];
 }
@@ -24,7 +23,6 @@ export interface GetDecksOptions {
   page?: number;
   limit?: number;
   gameType?: GameType;
-  format?: DeckFormat;
   search?: string;
   sortBy?: 'name' | 'createdAt' | 'updatedAt' | 'cardCount';
   sortOrder?: 'asc' | 'desc';
@@ -49,7 +47,6 @@ export class DeckService {
       page = 1,
       limit = 20,
       gameType,
-      format,
       search,
       sortBy = 'updatedAt',
       sortOrder = 'desc'
@@ -59,10 +56,6 @@ export class DeckService {
 
     if (gameType) {
       filter.gameType = gameType;
-    }
-
-    if (format) {
-      filter.format = format;
     }
 
     if (search) {
@@ -101,7 +94,6 @@ export class DeckService {
       page = 1,
       limit = 20,
       gameType,
-      format,
       search,
       sortBy = 'updatedAt',
       sortOrder = 'desc'
@@ -111,10 +103,6 @@ export class DeckService {
 
     if (gameType) {
       filter.gameType = gameType;
-    }
-
-    if (format) {
-      filter.format = format;
     }
 
     if (search) {
@@ -239,9 +227,7 @@ export class DeckService {
       uniqueCards,
       totalValue: totalValue > 0 ? totalValue : null,
       cardTypeDistribution,
-      format: deck.format,
       gameType: deck.gameType,
-      isLegal: this.validateDeckFormat(deck)
     };
   }
 
@@ -329,7 +315,6 @@ export class DeckService {
       name: newName || `${originalDeck.name} (Copy)`,
       description: originalDeck.description,
       gameType: originalDeck.gameType,
-      format: originalDeck.format,
       userId: new Schema.Types.ObjectId(userId),
       cards: [...originalDeck.cards],
       tags: [...(originalDeck.tags || [])],
@@ -337,23 +322,6 @@ export class DeckService {
     });
 
     return await duplicatedDeck.save();
-  }
-
-  private validateDeckFormat(deck: IDeck): boolean {
-    const totalCards = deck.cards.reduce((sum, card) => sum + card.quantity, 0);
-
-    switch (deck.format) {
-      case DeckFormat.STANDARD:
-        return totalCards >= 40 && totalCards <= 60;
-      case DeckFormat.EXPANDED:
-        return totalCards >= 40;
-      case DeckFormat.UNLIMITED:
-        return totalCards >= 1;
-      case DeckFormat.CUSTOM:
-        return totalCards >= 1;
-      default:
-        return true;
-    }
   }
 
   async searchDecks(query: string, options: GetDecksOptions = {}): Promise<DecksResult> {

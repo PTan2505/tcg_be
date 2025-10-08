@@ -16,7 +16,6 @@ export class DeckController {
         page: parseInt(c.req.query('page') || '1'),
         limit: parseInt(c.req.query('limit') || '20'),
         gameType: c.req.query('gameType') as any,
-        format: c.req.query('format') as any,
         search: c.req.query('search') as string,
         sortBy: c.req.query('sortBy') as any || 'updatedAt',
         sortOrder: c.req.query('sortOrder') as any || 'desc'
@@ -42,7 +41,6 @@ export class DeckController {
         page: parseInt(c.req.query('page') || '1'),
         limit: parseInt(c.req.query('limit') || '20'),
         gameType: c.req.query('gameType') as any,
-        format: c.req.query('format') as any,
         search: c.req.query('search') as string,
         sortBy: c.req.query('sortBy') as any || 'updatedAt',
         sortOrder: c.req.query('sortOrder') as any || 'desc'
@@ -257,7 +255,6 @@ export class DeckController {
         page: parseInt(c.req.query('page') || '1'),
         limit: parseInt(c.req.query('limit') || '20'),
         gameType: c.req.query('gameType') as any,
-        format: c.req.query('format') as any,
         sortBy: c.req.query('sortBy') as any || 'updatedAt',
         sortOrder: c.req.query('sortOrder') as any || 'desc'
       };
@@ -277,7 +274,6 @@ export class DeckController {
         page: parseInt(c.req.query('page') || '1'),
         limit: parseInt(c.req.query('limit') || '20'),
         gameType: c.req.query('gameType') as any,
-        format: c.req.query('format') as any,
         sortBy: 'updatedAt',
         sortOrder: 'desc'
       };
