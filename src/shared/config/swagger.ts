@@ -936,16 +936,12 @@ export const swaggerDoc: OpenAPIV3.Document = {
             "application/json": {
               schema: {
                 type: "object",
-                required: ["cardId", "category"],
+                required: ["cardId"],
                 properties: {
                   cardId: {
                     type: "string",
-                    description: "ID of the card to add",
-                  },
-                  category: {
-                    type: "string",
-                    enum: ["PokemonCard", "YugiohCard", "OnePieceCard"],
-                    description: "Card category",
+                    description:
+                      "ID of the card to add (from unified Card collection)",
                   },
                 },
               },
@@ -982,19 +978,19 @@ export const swaggerDoc: OpenAPIV3.Document = {
         parameters: [
           {
             in: "query",
-            name: "category",
+            name: "gameType",
             schema: {
               type: "string",
-              enum: ["PokemonCard", "YugiohCard", "OnePieceCard"],
+              enum: ["pokemon", "yugioh", "onepiece"],
             },
-            description: "Filter by card category",
+            description: "Filter by game type",
           },
           {
             in: "query",
             name: "sortBy",
             schema: {
               type: "string",
-              enum: ["name", "addedAt", "rarity", "type"],
+              enum: ["name", "addedAt", "rarity", "gameType"],
             },
             description: "Sort field",
           },
@@ -1014,17 +1010,19 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "integer",
               minimum: 1,
               maximum: 100,
+              default: 20,
             },
             description: "Number of cards per page",
           },
           {
             in: "query",
-            name: "offset",
+            name: "page",
             schema: {
               type: "integer",
-              minimum: 0,
+              minimum: 1,
+              default: 1,
             },
-            description: "Pagination offset",
+            description: "Pagination page",
           },
           {
             in: "query",
@@ -1033,6 +1031,40 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "string",
             },
             description: "Search query",
+          },
+          {
+            in: "query",
+            name: "rarity",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card rarity",
+          },
+          {
+            in: "query",
+            name: "setId",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card set ID",
+          },
+          {
+            in: "query",
+            name: "minPrice",
+            schema: {
+              type: "number",
+              minimum: 0,
+            },
+            description: "Minimum price filter",
+          },
+          {
+            in: "query",
+            name: "maxPrice",
+            schema: {
+              type: "number",
+              minimum: 0,
+            },
+            description: "Maximum price filter",
           },
         ],
         responses: {
@@ -1072,16 +1104,6 @@ export const swaggerDoc: OpenAPIV3.Document = {
             },
             description: "Card ID",
           },
-          {
-            in: "query",
-            name: "category",
-            required: true,
-            schema: {
-              type: "string",
-              enum: ["PokemonCard", "YugiohCard", "OnePieceCard"],
-            },
-            description: "Card category",
-          },
         ],
         responses: {
           "200": {
@@ -1097,21 +1119,102 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/user-cards/category/{category}": {
+    "/user-cards/cards/{gameType}": {
       get: {
         tags: ["User Cards"],
-        summary: "Get user cards by category",
+        summary: "Get user cards by game type",
         security: [{ bearerAuth: [] }],
         parameters: [
           {
             in: "path",
-            name: "category",
+            name: "gameType",
             required: true,
             schema: {
               type: "string",
-              enum: ["PokemonCard", "YugiohCard", "OnePieceCard"],
+              enum: ["pokemon", "yugioh", "onepiece"],
             },
-            description: "Card category",
+            description: "Game type",
+          },
+          {
+            in: "query",
+            name: "sortBy",
+            schema: {
+              type: "string",
+              enum: ["name", "addedAt", "rarity", "gameType"],
+            },
+            description: "Sort field",
+          },
+          {
+            in: "query",
+            name: "sortOrder",
+            schema: {
+              type: "string",
+              enum: ["asc", "desc"],
+            },
+            description: "Sort order",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              maximum: 100,
+              default: 20,
+            },
+            description: "Number of cards per page",
+          },
+          {
+            in: "query",
+            name: "page",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              default: 1,
+            },
+            description: "Pagination page",
+          },
+          {
+            in: "query",
+            name: "search",
+            schema: {
+              type: "string",
+            },
+            description: "Search query",
+          },
+          {
+            in: "query",
+            name: "rarity",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card rarity",
+          },
+          {
+            in: "query",
+            name: "setId",
+            schema: {
+              type: "string",
+            },
+            description: "Filter by card set ID",
+          },
+          {
+            in: "query",
+            name: "minPrice",
+            schema: {
+              type: "number",
+              minimum: 0,
+            },
+            description: "Minimum price filter",
+          },
+          {
+            in: "query",
+            name: "maxPrice",
+            schema: {
+              type: "number",
+              minimum: 0,
+            },
+            description: "Maximum price filter",
           },
         ],
         responses: {
@@ -1135,25 +1238,77 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/user-cards/search": {
+    "/user-cards/sets/{gameType}": {
       get: {
         tags: ["User Cards"],
-        summary: "Search user cards",
+        summary: "Get card sets from user collection by game type",
+        description:
+          "Get card sets that the user actually has cards for in their collection, organized by game type. This shows only sets where the user owns at least one card.",
         security: [{ bearerAuth: [] }],
         parameters: [
           {
-            in: "query",
-            name: "q",
+            in: "path",
+            name: "gameType",
             required: true,
             schema: {
               type: "string",
+              enum: ["pokemon", "yugioh", "onepiece"],
             },
-            description: "Search query",
+            description: "Game type",
+          },
+          {
+            in: "query",
+            name: "page",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              default: 1,
+            },
+            description: "Page number for pagination",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: {
+              type: "integer",
+              minimum: 1,
+              maximum: 100,
+              default: 20,
+            },
+            description: "Number of sets per page",
+          },
+          {
+            in: "query",
+            name: "search",
+            schema: {
+              type: "string",
+            },
+            description: "Search query for set names or abbreviations",
+          },
+          {
+            in: "query",
+            name: "sortBy",
+            schema: {
+              type: "string",
+              enum: ["name", "publishedOn", "cardCount"],
+              default: "name",
+            },
+            description: "Sort field",
+          },
+          {
+            in: "query",
+            name: "sortOrder",
+            schema: {
+              type: "string",
+              enum: ["asc", "desc"],
+              default: "asc",
+            },
+            description: "Sort order",
           },
         ],
         responses: {
           "200": {
-            description: "Search results",
+            description: "User collection sets retrieved successfully",
             content: {
               "application/json": {
                 schema: {
@@ -1162,53 +1317,44 @@ export const swaggerDoc: OpenAPIV3.Document = {
                     success: { type: "boolean" },
                     data: {
                       type: "array",
-                      items: { $ref: "#/components/schemas/UserCard" },
+                      items: {
+                        type: "object",
+                        properties: {
+                          _id: { type: "string" },
+                          name: { type: "string" },
+                          abbreviation: { type: "string" },
+                          gameType: { type: "string" },
+                          publishedOn: {
+                            type: "string",
+                            format: "date-time",
+                          },
+                          cardCount: {
+                            type: "integer",
+                            description:
+                              "Number of cards user owns from this set",
+                          },
+                        },
+                      },
+                    },
+                    meta: {
+                      type: "object",
+                      properties: {
+                        pagination: {
+                          $ref: "#/components/schemas/PaginationInfo",
+                        },
+                      },
                     },
                   },
                 },
               },
             },
           },
-        },
-      },
-    },
-    "/user-cards/details/{cardId}": {
-      get: {
-        tags: ["User Cards"],
-        summary: "Get card details",
-        security: [{ bearerAuth: [] }],
-        parameters: [
-          {
-            in: "path",
-            name: "cardId",
-            required: true,
-            schema: {
-              type: "string",
-            },
-            description: "Card ID",
-          },
-          {
-            in: "query",
-            name: "category",
-            required: true,
-            schema: {
-              type: "string",
-              enum: ["PokemonCard", "YugiohCard", "OnePieceCard"],
-            },
-            description: "Card category",
-          },
-        ],
-        responses: {
-          "200": {
-            description: "Card details retrieved",
+          "400": {
+            description: "Invalid game type",
             content: {
               "application/json": {
                 schema: {
-                  type: "object",
-                  properties: {
-                    success: { type: "boolean" },
-                    data: { $ref: "#/components/schemas/CardDetails" },
-                  },
+                  $ref: "#/components/schemas/ValidationError",
                 },
               },
             },
@@ -1227,7 +1373,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
             "application/json": {
               schema: {
                 type: "object",
-                required: ["name", "category", "format"],
+                required: ["name", "gameType", "format"],
                 properties: {
                   name: {
                     type: "string",
@@ -1239,10 +1385,10 @@ export const swaggerDoc: OpenAPIV3.Document = {
                     maxLength: 500,
                     description: "Deck description",
                   },
-                  category: {
+                  gameType: {
                     type: "string",
-                    enum: ["PokemonCard", "YugiohCard", "OnePieceCard"],
-                    description: "Card category",
+                    enum: ["pokemon", "yugioh", "onepiece"],
+                    description: "Game type",
                   },
                   format: {
                     type: "string",
@@ -1444,17 +1590,17 @@ export const swaggerDoc: OpenAPIV3.Document = {
             "application/json": {
               schema: {
                 type: "object",
-                required: ["cardId", "category", "quantity"],
+                required: ["cardId", "quantity"],
                 properties: {
-                  cardId: { type: "string" },
-                  category: {
+                  cardId: {
                     type: "string",
-                    enum: ["PokemonCard", "YugiohCard", "OnePieceCard"],
+                    description: "Card ID from unified Card collection",
                   },
                   quantity: {
                     type: "integer",
                     minimum: 1,
                     maximum: 4,
+                    description: "Number of copies to add",
                   },
                 },
               },
@@ -4988,21 +5134,44 @@ export const swaggerDoc: OpenAPIV3.Document = {
           },
           cardId: {
             type: "string",
-            description: "Card ID",
+            description: "Card ID (references unified Card collection)",
           },
-          category: {
-            type: "string",
-            enum: ["PokemonCard", "YugiohCard", "OnePieceCard"],
-            description: "Card category",
-          },
-          addedAt: {
+          createdAt: {
             type: "string",
             format: "date-time",
             description: "Date added to collection",
           },
+          updatedAt: {
+            type: "string",
+            format: "date-time",
+            description: "Last updated date",
+          },
           cardDetails: {
             type: "object",
-            description: "Full card information",
+            description: "Full card information from unified Card model",
+            properties: {
+              _id: { type: "string" },
+              name: { type: "string" },
+              gameType: {
+                type: "string",
+                enum: ["pokemon", "yugioh", "onepiece"],
+                description: "Game type",
+              },
+              rarity: { type: "string" },
+              cardSet: {
+                type: "object",
+                properties: {
+                  name: { type: "string" },
+                  gameType: { type: "string" },
+                },
+              },
+              tcgPlayerPrice: {
+                type: "object",
+                properties: {
+                  marketPrice: { type: "number" },
+                },
+              },
+            },
           },
         },
       },
@@ -5078,10 +5247,10 @@ export const swaggerDoc: OpenAPIV3.Document = {
             type: "string",
             description: "Owner user ID",
           },
-          category: {
+          gameType: {
             type: "string",
-            enum: ["PokemonCard", "YugiohCard", "OnePieceCard"],
-            description: "Card category",
+            enum: ["pokemon", "yugioh", "onepiece"],
+            description: "Game type",
           },
           format: {
             type: "string",

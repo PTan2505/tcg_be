@@ -229,8 +229,7 @@ export class CardScanController {
 
       const userCard = await this.userCardService.addCardToCollection(
         user._id,
-        selectedCardId,
-        category as any
+        selectedCardId
       );
 
       // Update scan history with the selected card

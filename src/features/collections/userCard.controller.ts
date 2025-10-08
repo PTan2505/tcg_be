@@ -1,20 +1,20 @@
 import { Context } from 'hono';
-import { CardCategory } from '../../database/models/userCard';
 import { MESSAGES, createSuccessResponse } from '../../shared/constants/messages';
+import { GameType } from '../cards/card.service';
 import { GetUserCardsOptions, IUserCardService } from './userCard.service';
 
 export class UserCardController {
-  constructor(private userCardService: IUserCardService) {}
+  constructor(private userCardService: IUserCardService) {
+  }
 
   addCard = async (c: Context) => {
     try {
       const user = c.get('user');
-      const { cardId, category } = c.get('validatedData');
+      const { cardId } = c.get('validatedData');
 
       const userCard = await this.userCardService.addCardToCollection(
         user.id,
-        cardId,
-        category
+        cardId
       );
 
       return c.json(createSuccessResponse(userCard, MESSAGES.COLLECTIONS.ADD_CARD_SUCCESS), 201);
@@ -44,23 +44,10 @@ export class UserCardController {
     try {
       const user = c.get('user');
       const { cardId } = c.req.param();
-      const { category } = c.req.query();
-
-      if (!category || !Object.values(CardCategory).includes(category as CardCategory)) {
-        return c.json({
-          success: false,
-          error: {
-            name: 'ValidationError',
-            field: 'category',
-            message: MESSAGES.VALIDATION.REQUIRED_FIELD('category')
-          }
-        }, 400);
-      }
 
       await this.userCardService.removeCardFromCollection(
         user.id,
         cardId,
-        category as CardCategory
       );
 
       return c.json({
@@ -83,28 +70,30 @@ export class UserCardController {
     try {
       const user = c.get('user');
       const {
-        category,
         sortBy,
         sortOrder,
         limit,
-        offset,
+        page,
         search,
-        type,
-        set,
-        rarity
+        gameType,
+        rarity,
+        setId,
+        minPrice,
+        maxPrice
       } = c.req.query();
 
       const options: GetUserCardsOptions = {
-        category: category as CardCategory,
         sortBy: sortBy as any,
         sortOrder: sortOrder as any,
         limit: limit ? parseInt(limit) : undefined,
-        offset: offset ? parseInt(offset) : undefined,
+        page: page ? parseInt(page) : undefined,
         search,
+        gameType: gameType as GameType,
         filters: {
-          type,
-          set,
-          rarity
+          rarity,
+          setId,
+          minPrice: minPrice ? parseFloat(minPrice) : undefined,
+          maxPrice: maxPrice ? parseFloat(maxPrice) : undefined
         }
       };
 
@@ -123,25 +112,56 @@ export class UserCardController {
     }
   };
 
-  getUserCardsByCategory = async (c: Context) => {
+  getUserCardsByGameType = async (c: Context) => {
     try {
       const user = c.get('user');
-      const { category } = c.req.param();
+      const { gameType } = c.req.param();
+         const {
+           sortBy,
+           sortOrder,
+           limit,
+           page,
+           search,
+           rarity,
+           setId,
+           minPrice,
+           maxPrice,
+         } = c.req.query();
 
-      if (!Object.values(CardCategory).includes(category as CardCategory)) {
-        return c.json({
-          success: false,
-          error: {
-            name: 'ValidationError',
-            field: 'category',
-            message: MESSAGES.VALIDATION.REQUIRED_FIELD('category')
-          }
-        }, 400);
+         const options: GetUserCardsOptions = {
+           sortBy: sortBy as any,
+           sortOrder: sortOrder as any,
+           limit: limit ? parseInt(limit) : undefined,
+           page: page ? parseInt(page) : undefined,
+           search,
+           gameType: gameType as GameType,
+           filters: {
+             rarity,
+             setId,
+             minPrice: minPrice ? parseFloat(minPrice) : undefined,
+             maxPrice: maxPrice ? parseFloat(maxPrice) : undefined,
+           },
+         };
+
+
+      if (!["pokemon", "yugioh", "onepiece"].includes(gameType)) {
+        return c.json(
+          {
+            success: false,
+            error: {
+              name: "ValidationError",
+              field: "gameType",
+              message: MESSAGES.VALIDATION.GAME_TYPE_INVALID,
+            },
+          },
+          400
+        );
       }
 
-      const userCards = await this.userCardService.getUserCardsByCategory(
+      const userCards = await this.userCardService.getUserCardsByGameType(
         user.id,
-        category as CardCategory
+        gameType as GameType,
+        options,
       );
 
       return c.json(createSuccessResponse(userCards, MESSAGES.COLLECTIONS.GET_SUCCESS));
@@ -191,23 +211,8 @@ export class UserCardController {
   getCardDetails = async (c: Context) => {
     try {
       const { cardId } = c.req.param();
-      const { category } = c.req.query();
 
-      if (!category || !Object.values(CardCategory).includes(category as CardCategory)) {
-        return c.json({
-          success: false,
-          error: {
-            name: 'ValidationError',
-            field: 'category',
-            message: MESSAGES.VALIDATION.REQUIRED_FIELD('category')
-          }
-        }, 400);
-      }
-
-      const cardDetails = await this.userCardService.getCardDetails(
-        cardId,
-        category as CardCategory
-      );
+      const cardDetails = await this.userCardService.getCardDetails(cardId);
 
       return c.json(createSuccessResponse(cardDetails));
     } catch (error: any) {
@@ -221,6 +226,62 @@ export class UserCardController {
           }
         }, 404);
       }
+      return c.json({
+        success: false,
+        error: {
+          name: 'Error',
+          field: 'general',
+          message: error.message || MESSAGES.COLLECTIONS.GET_FAILED
+        }
+      }, 500);
+    }
+  };
+
+  getSetsByGameType = async (c: Context) => {
+    try {
+      const user = c.get('user');
+      const { gameType } = c.req.param();
+
+      if (!["pokemon", "yugioh", "onepiece"].includes(gameType)) {
+        return c.json(
+          {
+            success: false,
+            error: {
+              name: "ValidationError",
+              field: "gameType",
+              message: MESSAGES.VALIDATION.GAME_TYPE_INVALID,
+            },
+          },
+          400
+        );
+      }
+
+      const {
+        page,
+        limit,
+        search,
+        sortBy,
+        sortOrder
+      } = c.req.query();
+
+      const options = {
+        page: page ? parseInt(page) : 1,
+        limit: limit ? parseInt(limit) : 20,
+        search,
+        sortBy: sortBy as 'name' | 'publishedOn' | 'cardCount',
+        sortOrder: sortOrder as 'asc' | 'desc'
+      };
+
+      const result = await this.userCardService.getUserCollectionSets(
+        user.id, 
+        gameType as GameType, 
+        options
+      );
+
+      return c.json(createSuccessResponse(result.sets, MESSAGES.COLLECTIONS.GET_SUCCESS, {
+        pagination: result.pagination
+      }));
+    } catch (error: any) {
       return c.json({
         success: false,
         error: {
