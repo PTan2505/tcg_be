@@ -785,8 +785,24 @@ export class SetCodeRecognitionService {
       }
     }
 
-    // Sort by confidence
-    matches.sort((a, b) => b.confidence - a.confidence);
+    // Sort by confidence and context priority
+    matches.sort((a, b) => {
+      // Special boost for set codes that appear with card numbers (better context)
+      const aHasCardContext = extractedCodes.some(code => 
+        code.toUpperCase().includes(a.setCode.toUpperCase()) && /\d/.test(code)
+      );
+      const bHasCardContext = extractedCodes.some(code => 
+        code.toUpperCase().includes(b.setCode.toUpperCase()) && /\d/.test(code)
+      );
+      
+      logger.info(`🔍 Context check: ${a.setCode} has context: ${aHasCardContext}, ${b.setCode} has context: ${bHasCardContext}`);
+      
+      if (aHasCardContext && !bHasCardContext) return -1;
+      if (!aHasCardContext && bHasCardContext) return 1;
+      
+      // Then sort by confidence
+      return b.confidence - a.confidence;
+    });
 
     logger.info(`🎯 Found ${matches.length} set code matches`);
     if (matches.length > 0) {
