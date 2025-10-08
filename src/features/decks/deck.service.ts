@@ -1,12 +1,11 @@
 import mongoose, { Schema } from 'mongoose';
 import { Card } from '../../database/models/card';
-import { Deck, DeckFormat, IDeck } from '../../database/models/deck';
-import { CardCategory } from '../../database/models/userCard';
+import { Deck, DeckFormat, GameType, IDeck } from '../../database/models/deck';
 
 export interface CreateDeckOptions {
   name: string;
   description?: string;
-  category: CardCategory;
+  gameType: GameType;
   format: DeckFormat;
   isPublic?: boolean;
   tags?: string[];
@@ -15,7 +14,7 @@ export interface CreateDeckOptions {
 export interface UpdateDeckOptions {
   name?: string;
   description?: string;
-  category?: CardCategory;
+  gameType?: GameType;
   format?: DeckFormat;
   isPublic?: boolean;
   tags?: string[];
@@ -24,7 +23,7 @@ export interface UpdateDeckOptions {
 export interface GetDecksOptions {
   page?: number;
   limit?: number;
-  category?: CardCategory;
+  gameType?: GameType;
   format?: DeckFormat;
   search?: string;
   sortBy?: 'name' | 'createdAt' | 'updatedAt' | 'cardCount';
@@ -49,7 +48,7 @@ export class DeckService {
     const {
       page = 1,
       limit = 20,
-      category,
+      gameType,
       format,
       search,
       sortBy = 'updatedAt',
@@ -58,8 +57,8 @@ export class DeckService {
 
     const filter: any = { userId: new mongoose.Types.ObjectId(userId) };
 
-    if (category) {
-      filter.category = category;
+    if (gameType) {
+      filter.gameType = gameType;
     }
 
     if (format) {
@@ -101,7 +100,7 @@ export class DeckService {
     const {
       page = 1,
       limit = 20,
-      category,
+      gameType,
       format,
       search,
       sortBy = 'updatedAt',
@@ -110,8 +109,8 @@ export class DeckService {
 
     const filter: any = { isPublic: true };
 
-    if (category) {
-      filter.category = category;
+    if (gameType) {
+      filter.gameType = gameType;
     }
 
     if (format) {
@@ -241,7 +240,7 @@ export class DeckService {
       totalValue: totalValue > 0 ? totalValue : null,
       cardTypeDistribution,
       format: deck.format,
-      category: deck.category,
+      gameType: deck.gameType,
       isLegal: this.validateDeckFormat(deck)
     };
   }
@@ -276,7 +275,6 @@ export class DeckService {
       // Add new card
       deck.cards.push({
         cardId: new Schema.Types.ObjectId(cardId),
-        category: card.gameType as CardCategory, // Map gameType to category
         quantity
       });
     }
@@ -330,7 +328,7 @@ export class DeckService {
     const duplicatedDeck = new Deck({
       name: newName || `${originalDeck.name} (Copy)`,
       description: originalDeck.description,
-      category: originalDeck.category,
+      gameType: originalDeck.gameType,
       format: originalDeck.format,
       userId: new Schema.Types.ObjectId(userId),
       cards: [...originalDeck.cards],
