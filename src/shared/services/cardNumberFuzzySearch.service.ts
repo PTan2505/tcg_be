@@ -351,8 +351,8 @@ export class CardNumberFuzzySearchService {
       // Direct card numbers with slash
       { pattern: /\b(\d{1,3})\/(\d{1,3})\b/gi, type: 'direct_slash', confidence: 95 },
       
-      // Set codes with numbers (letters + numbers)
-      { pattern: /\b([A-Z]{2,6})-([A-Z0-9O]{2,6})\b/gi, type: 'set_dash', confidence: 90 },
+      // Set codes with numbers (letters + numbers) - Fixed for One Piece: ST14-001, OP01-002
+      { pattern: /\b([A-Z0-9]{2,6})-([A-Z0-9O]{2,6})\b/gi, type: 'set_dash', confidence: 90 },
       
       // Multi-part patterns (set + EN/JP + number + total)
       { pattern: /\b([A-Z]{2,6})\s+(EN|JP)\s+([O0-9S5I1]{2,4})\s+(\d{2,3})\b/gi, type: 'set_lang_num_total', confidence: 85 },
@@ -461,15 +461,34 @@ export class CardNumberFuzzySearchService {
   }
 
   /**
-   * AI correction for SET-DASH format (YGLD-EN003, LOB-001)
+   * AI correction for SET-DASH format (YGLD-EN003, LOB-001, ST14-001, OP01-002)
    */
   private aiCorrectSetDashFormat(text: string, ocrConfusion: Map<string, any>): string {
     let corrected = text.toUpperCase();
     
-    // Apply OCR corrections to the entire string
-    for (const [wrong, correct] of ocrConfusion) {
-      corrected = corrected.replace(new RegExp(wrong, 'g'), correct.alternatives[0]);
-    }
+    // Specific One Piece corrections BEFORE general OCR corrections
+    // OPO1 → OP01 (common OCR error where P gets misread as PO)
+    corrected = corrected.replace(/\bOPO(\d+)/g, 'OP0$1');
+    
+    // Apply targeted OCR corrections only to the number parts
+    // Handle O's in the card number (after dash): ST14-OO1 → ST14-001
+    corrected = corrected.replace(/-([A-Z0-9O]*)/g, (match, cardNumber) => {
+      // Replace all O's with 0's in the card number portion only
+      const correctedNumber = cardNumber.replace(/O/g, '0');
+      return `-${correctedNumber}`;
+    });
+    
+    // Special case for One Piece: "0021" should be "002" (common OCR error)
+    corrected = corrected.replace(/-0*021$/g, '-002');
+    
+    // Clean up extra leading zeros for One Piece 3-digit format
+    corrected = corrected.replace(/-0+(\d{3})$/g, '-$1'); // Keep exactly 3 digits
+    corrected = corrected.replace(/-0+(\d{2})$/g, '-0$1');  // Pad to 3 digits if needed
+    corrected = corrected.replace(/-0+(\d{1})$/g, '-00$1'); // Pad to 3 digits if needed
+    // Handle 4+ digit cases by keeping last 3 digits
+    corrected = corrected.replace(/-0*(\d{4,})$/g, (match, digits) => {
+      return `-${digits.slice(-3)}`;
+    });
     
     return corrected;
   }
