@@ -576,7 +576,16 @@ export class EnhancedCardScanController {
             ...candidate,
             combinedScore: candidate.textConfidence / 100
           };
-        }).sort((a: any, b: any) => (b.combinedScore || 0) - (a.combinedScore || 0)); // Sort by combined score
+        }).sort((a: any, b: any) => {
+          // For card number searches, preserve the original ranking from cardNumberFuzzySearch
+          // which already considers card number + name similarity correctly
+          if (isCardNumberSearch) {
+            // Don't re-sort - preserve the original card number + name similarity ranking
+            return 0;
+          }
+          // For other searches, sort by combined score (visual + text)
+          return (b.combinedScore || 0) - (a.combinedScore || 0);
+        }); // Sort by combined score or preserve card number ranking
 
         const topSetCode = detectedSetCodes.length > 0 ? detectedSetCodes[0] : null;
         const setConfidence = topSetCode ? topSetCode.confidence * 100 : 0;
