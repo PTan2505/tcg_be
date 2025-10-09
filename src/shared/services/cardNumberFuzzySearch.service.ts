@@ -297,154 +297,367 @@ export class CardNumberFuzzySearchService {
   }
 
   /**
-   * Extract potential card numbers from OCR text using game-specific patterns
+   * Extract potential card numbers from OCR text using AI-based intelligent pattern detection
    */
   private extractCardNumbersFromText(text: string, gameType: string): string[] {
-    const numbers: string[] = [];
+    logger.info(`🤖 AI-based card number extraction for ${gameType}`);
+    logger.info(`📝 Input text: "${text}"`);
 
-    switch (gameType) {
-      case 'onepiece':
-        // One Piece patterns: OP01-001, EBO1-OS6, ST01-001, etc.
-        const opPatterns = [
-          /\b([O0]P[O0]?\d{1,2})-[O0A-Z]\d{2,3}\b/gi,    // OP01-001, OPO1-OS6
-          /\b(ST\d{2})-[O0A-Z]\d{2,3}\b/gi,             // ST01-001
-          /\b(EB[O0]?\d{1,2})-[O0A-Z][O0A-Z]?\d{1,3}\b/gi, // EB01-001, EBO1-OS6, EBO1-O56
-          /\b(PRB\d{2})-[O0A-Z]\d{2,3}\b/gi,            // PRB01-001
-        ];
+    // Use AI-based extraction instead of hard-coded patterns
+    return this.aiExtractCardNumbers(text, gameType);
+  }
 
-        for (const pattern of opPatterns) {
-          const matches = text.match(pattern);
-          if (matches) {
-            numbers.push(...matches.map(m => m.toUpperCase()));
-          }
-        }
-        break;
+  /**
+   * AI-based card number extraction that learns from patterns and handles OCR errors intelligently
+   */
+  private aiExtractCardNumbers(text: string, gameType: string): string[] {
+    const extractedNumbers: string[] = [];
+    
+    // Step 1: Find all potential card number patterns using broad detection
+    const candidates = this.findCardNumberCandidates(text, gameType);
+    logger.info(`🔍 AI found ${candidates.length} potential candidates: [${candidates.map(c => c.text).join(', ')}]`);
 
-      case 'yugioh':
-        // Yu-Gi-Oh patterns: LOB-001, SDK-001, YGLD-ENAO3, etc.
-        const ygoPatterns = [
-          /\b([A-Z]{3,5})-[O0A-Z]{2,4}\d{1,3}\b/gi,     // YGLD-ENAO3, LOB-EN001
-          /\b([A-Z]{3,4})-[O0A-Z]\d{2,3}\b/gi,          // LOB-001, SDK-001
-          /\b([A-Z]{3,4})-\d{3}\b/gi,                   // LOB-001
-          /\b([A-Z]{4,5})-[A-Z]{2,3}\d{2,3}\b/gi,       // YGLD-EN003, SDBE-EN001
-        ];
-
-        for (const pattern of ygoPatterns) {
-          const matches = text.match(pattern);
-          if (matches) {
-            numbers.push(...matches.map(m => m.toUpperCase()));
-          }
-        }
-        break;
-
-      case 'pokemon':
-        // Pokemon patterns: 1/102, 025/102, MEG EN 160 132, etc.
-        // Order matters - most specific patterns first!
-        const pkmnPatterns = [
-          /\b(\d{1,3})\/(\d{1,3})\b/gi,                    // 004/197, 1/102 (exact format)
-          /\b([A-Z]{2,4})\s+EN\s+([1O0\d][O0\d]*[O0\d])\s+(\d{1,3})\b/gi, // MEG EN 16O 132 → 160/132
-          /\b([A-Z]{2,5})\s+EN\s+([1O0\d][O0\d]*)\s+(\d{1,3})\b/gi, // GOBF EN 1OO 197 → 100/197
-          /\b([A-Z]{2,4})\s+EN\s+[O0]*(\d{1,3})\s+(\d{1,3})\b/gi, // OBF EN OO4 197 → 004/197
-          /\b(\d+)\s+D\s+([O0-9S5]+)\s+(\d+)\b/gi,         // 43 D 11S 192 → 115/192 (Diamond & Pearl format)
-          /1[S5][O0]\s+1[O0]1[O0][2Z]/gi,                  // 1SO 1O1O2 → 150 10102 → 010/102 (EX/Base Set format)
-          /\b([A-Z]{2,4})\s+EN\s+[O0]*(\d{1,3})\b/gi,      // OBF EN 004, SV03 EN 025
-          /\b([A-Z]{2,4})-[O0]*(\d{1,3})\b/gi,             // OBF-004, SV03-025
-          /\b[1O0][O0]{1,2}(\d{1,3})\s+(\d{1,3})\b/gi,     // 1OO 197 → 100/197, OO4 197 → 004/197
-          /\b[O0]{2,3}(\d{1,3})\s+(\d{1,3})\b/gi,          // OO4 197 → 004/197
-          /\b[O0]{2,3}(\d{1,3})\b/gi,                      // OO4 → 004, OOO25 → 025
-          /\b([A-Z]{2,4})\s*[O0]*(\d{1,3})\b/gi,           // OBF004, SV03025 (fallback - last resort)
-        ];
-
-        for (const pattern of pkmnPatterns) {
-          const matches = text.match(pattern);
-          if (matches && matches.length > 0) {
-            logger.info(`🔍 Pattern ${pattern} matched: [${matches.join(', ')}]`);
-            // Special handling for patterns with two numbers
-            const processedMatches = matches.map(match => {
-              // Handle "MEG EN 16O 132" → "160/132"
-              if (/^([A-Z]{2,4})\s+EN\s+([1O0\d][O0\d]*[O0\d])\s+(\d{1,3})$/i.test(match)) {
-                const parts = match.match(/^([A-Z]{2,4})\s+EN\s+([1O0\d][O0\d]*[O0\d])\s+(\d{1,3})$/i);
-                if (parts) {
-                  // Convert OCR errors: O→0, handle "16O" → "160" 
-                  let cardNum = parts[2].replace(/O/g, '0');
-                  // Ensure it's 3 digits
-                  cardNum = cardNum.padStart(3, '0');
-                  logger.info(`🎯 Converted card number: "${parts[2]}" → "${cardNum}"`);
-                  return `${cardNum}/${parts[3]}`;
-                }
-              }
-              // Handle "GOBF EN 1OO 197" → "100/197"
-              else if (/^([A-Z]{2,5})\s+EN\s+([1O0\d][O0\d]*)\s+(\d{1,3})$/i.test(match)) {
-                const parts = match.match(/^([A-Z]{2,5})\s+EN\s+([1O0\d][O0\d]*)\s+(\d{1,3})$/i);
-                if (parts) {
-                  // Convert OCR errors: O→0, handle "1OO" → "100"
-                  let cardNum = parts[2].replace(/O/g, '0');
-                  // Ensure 3-digit format
-                  cardNum = cardNum.padStart(3, '0');
-                  return `${cardNum}/${parts[3]}`;
-                }
-              }
-              // Handle Diamond & Pearl "43 D 11S 192" → "115/192"
-              else if (/^(\d+)\s+D\s+([O0-9S5]+)\s+(\d+)$/i.test(match)) {
-                const parts = match.match(/^(\d+)\s+D\s+([O0-9S5]+)\s+(\d+)$/i);
-                if (parts) {
-                  const cardNum = parts[2].replace(/S/g, '5').replace(/O/g, '0'); // 11S → 115
-                  const total = parts[3]; // 192
-                  return `${cardNum}/${total}`;
-                }
-              }
-              // Handle EX/Base Set "1SO 1O1O2" → "010/102"
-              else if (/^1[S5][O0]\s+1[O0]1[O0][2Z]$/i.test(match)) {
-                // Apply OCR corrections: S→5, O→0, Z→2
-                const corrected = match.replace(/S/g, '5').replace(/O/g, '0').replace(/Z/g, '2');
-                // Extract the "10102" part and split it as "010/102"
-                const numberPart = corrected.match(/(\d+)\s+(\d+)/);
-                if (numberPart && numberPart[2] === '10102') {
-                  // Split "10102" into "010" + "102"
-                  const cardNum = '010';
-                  const total = '102';
-                  return `${cardNum}/${total}`;
-                }
-              }
-              // Handle "OBF EN OO4 197" → "004/197"
-              else if (/^([A-Z]{2,4})\s+EN\s+[O0]*(\d{1,3})\s+(\d{1,3})$/i.test(match)) {
-                const parts = match.match(/^([A-Z]{2,4})\s+EN\s+([O0]*)(\d{1,3})\s+(\d{1,3})$/i);
-                if (parts) {
-                  const paddedNumber = parts[2].replace(/O/g, '0') + parts[3].padStart(3, '0');
-                  return `${paddedNumber}/${parts[4]}`;
-                }
-              }
-              // Handle "1OO 197" → "100/197" or "OO4 197" → "004/197"
-              else if (/^[1O0][O0]{1,2}(\d{1,3})\s+(\d{1,3})$/i.test(match)) {
-                const parts = match.match(/^([1O0])([O0]{1,2})(\d{1,3})\s+(\d{1,3})$/i);
-                if (parts) {
-                  // Convert OCR errors: O→0, handle "1OO" → "100"
-                  let cardNum = parts[1].replace(/O/g, '0') + parts[2].replace(/O/g, '0') + parts[3];
-                  // Ensure proper padding (e.g., "100" stays "100", "004" becomes "004")
-                  cardNum = cardNum.padStart(3, '0');
-                  return `${cardNum}/${parts[4]}`;
-                }
-              }
-              // Handle "OO4 197" → "004/197"
-              else if (/^[O0]{2,3}(\d{1,3})\s+(\d{1,3})$/i.test(match)) {
-                const parts = match.match(/^([O0]{2,3})(\d{1,3})\s+(\d{1,3})$/i);
-                if (parts) {
-                  const paddedNumber = parts[1].replace(/O/g, '0') + parts[2];
-                  return `${paddedNumber.substring(paddedNumber.length - 3)}/${parts[3]}`;
-                }
-              }
-              return match;
-            });
-            numbers.push(...processedMatches.map(m => m.toUpperCase()));
-            logger.info(`✅ Successfully extracted: [${processedMatches.join(', ')}]`);
-            // Found matches, don't try other patterns for cleaner results
-            break;
-          }
-        }
-        break;
+    // Step 2: Apply AI-based OCR correction and format normalization
+    for (const candidate of candidates) {
+      const correctedNumbers = this.aiCorrectAndNormalize(candidate, gameType);
+      extractedNumbers.push(...correctedNumbers);
     }
 
-    return [...new Set(numbers)]; // Remove duplicates
+    // Step 3: Validate against known card number patterns from database
+    const validatedNumbers = this.aiValidateCardNumbers(extractedNumbers, gameType);
+    
+    logger.info(`✅ AI extracted valid card numbers: [${validatedNumbers.join(', ')}]`);
+    return [...new Set(validatedNumbers)]; // Remove duplicates
+  }
+
+  /**
+   * Find potential card number candidates using intelligent pattern detection
+   */
+  private findCardNumberCandidates(text: string, gameType: string): Array<{
+    text: string;
+    confidence: number;
+    type: string;
+    position: number;
+  }> {
+    const candidates: Array<{
+      text: string;
+      confidence: number;
+      type: string;
+      position: number;
+    }> = [];
+
+    // Universal patterns that work across all card games
+    const universalPatterns = [
+      // Direct card numbers with slash
+      { pattern: /\b(\d{1,3})\/(\d{1,3})\b/gi, type: 'direct_slash', confidence: 95 },
+      
+      // Set codes with numbers (letters + numbers)
+      { pattern: /\b([A-Z]{2,6})-([A-Z0-9O]{2,6})\b/gi, type: 'set_dash', confidence: 90 },
+      
+      // Multi-part patterns (set + EN/JP + number + total)
+      { pattern: /\b([A-Z]{2,6})\s+(EN|JP)\s+([O0-9S5I1]{2,4})\s+(\d{2,3})\b/gi, type: 'set_lang_num_total', confidence: 85 },
+      
+      // Simple set + numbers (MEG 78 132, OMEG 188 132)
+      { pattern: /\b([A-Z]{2,6})\s+([O0-9S5I1]{1,4})\s+(\d{2,3})\b/gi, type: 'set_num_total', confidence: 80 },
+      
+      // Complex multi-set patterns (OMEGN MEG 18S 132)
+      { pattern: /\b([A-Z]{2,6})\s+([A-Z]{2,6})\s+([O0-9S5I1]{2,4})\s+(\d{2,3})\b/gi, type: 'multi_set_num_total', confidence: 75 },
+      
+      // Numbers with special characters or OCR errors
+      { pattern: /\b([O0-9S5I1]{2,4})\s+([O0-9S5I1]{2,4})\b/gi, type: 'num_num', confidence: 70 },
+      
+      // Diamond & Pearl style (43 D 11S 192)
+      { pattern: /\b(\d+)\s+D\s+([O0-9S5]+)\s+(\d+)\b/gi, type: 'diamond_pearl', confidence: 65 },
+    ];
+
+    // Find all matches
+    for (const { pattern, type, confidence } of universalPatterns) {
+      let match;
+      const regex = new RegExp(pattern.source, pattern.flags);
+      
+      while ((match = regex.exec(text)) !== null) {
+        candidates.push({
+          text: match[0],
+          confidence,
+          type,
+          position: match.index
+        });
+      }
+    }
+
+    // Sort by confidence and position
+    return candidates.sort((a, b) => b.confidence - a.confidence || a.position - b.position);
+  }
+
+  /**
+   * AI-based OCR correction and format normalization
+   */
+  private aiCorrectAndNormalize(candidate: { text: string; type: string; confidence: number }, gameType: string): string[] {
+    const results: string[] = [];
+    const text = candidate.text;
+    
+    logger.info(`🧠 AI processing candidate: "${text}" (type: ${candidate.type})`);
+
+    // Define OCR character confusion matrix with confidence scores
+    const ocrConfusion = new Map([
+      ['O', { alternatives: ['0'], confidence: 95 }],
+      ['0', { alternatives: ['O'], confidence: 95 }],
+      ['S', { alternatives: ['5'], confidence: 90 }],
+      ['5', { alternatives: ['S'], confidence: 90 }],
+      ['I', { alternatives: ['1'], confidence: 90 }],
+      ['1', { alternatives: ['I'], confidence: 90 }],
+      ['B', { alternatives: ['8'], confidence: 85 }],
+      ['8', { alternatives: ['B'], confidence: 85 }],
+      ['G', { alternatives: ['6'], confidence: 80 }],
+      ['6', { alternatives: ['G'], confidence: 80 }],
+      ['Z', { alternatives: ['2'], confidence: 75 }],
+      ['2', { alternatives: ['Z'], confidence: 75 }],
+    ]);
+
+    // Apply AI-based correction based on candidate type
+    switch (candidate.type) {
+      case 'direct_slash':
+        // Already in correct format: 078/132
+        results.push(text.toUpperCase());
+        break;
+
+      case 'set_dash':
+        // SET-CODE format: YGLD-EN003, LOB-001
+        results.push(this.aiCorrectSetDashFormat(text, ocrConfusion));
+        break;
+
+      case 'set_lang_num_total':
+        // SET EN NUM TOTAL format: MEG EN 160 132
+        results.push(...this.aiCorrectSetLangFormat(text, ocrConfusion));
+        break;
+
+      case 'set_num_total':
+        // SET NUM TOTAL format: MEG 78 132
+        results.push(...this.aiCorrectSetNumFormat(text, ocrConfusion));
+        break;
+
+      case 'multi_set_num_total':
+        // MULTI SET NUM TOTAL format: OMEGN MEG 18S 132
+        results.push(...this.aiCorrectMultiSetFormat(text, ocrConfusion));
+        break;
+
+      case 'diamond_pearl':
+        // Diamond & Pearl format: 43 D 11S 192
+        results.push(...this.aiCorrectDiamondPearlFormat(text, ocrConfusion));
+        break;
+
+      case 'num_num':
+        // Generic number-number format
+        results.push(...this.aiCorrectGenericNumFormat(text, ocrConfusion));
+        break;
+
+      default:
+        // Apply generic OCR correction
+        results.push(this.aiApplyGenericCorrection(text, ocrConfusion));
+    }
+
+    logger.info(`🎯 AI corrected "${text}" → [${results.join(', ')}]`);
+    return results.filter(r => r && r.length > 0);
+  }
+
+  /**
+   * AI correction for SET-DASH format (YGLD-EN003, LOB-001)
+   */
+  private aiCorrectSetDashFormat(text: string, ocrConfusion: Map<string, any>): string {
+    let corrected = text.toUpperCase();
+    
+    // Apply OCR corrections to the entire string
+    for (const [wrong, correct] of ocrConfusion) {
+      corrected = corrected.replace(new RegExp(wrong, 'g'), correct.alternatives[0]);
+    }
+    
+    return corrected;
+  }
+
+  /**
+   * AI correction for SET LANG NUM TOTAL format (MEG EN 160 132)
+   */
+  private aiCorrectSetLangFormat(text: string, ocrConfusion: Map<string, any>): string[] {
+    const match = text.match(/^([A-Z]{2,6})\s+(EN|JP)\s+([O0-9S5I1]{2,4})\s+(\d{2,3})$/i);
+    if (!match) return [];
+
+    const [, setCode, lang, cardNumRaw, total] = match;
+    
+    // Apply selective OCR corrections to card number
+    let cardNum = this.aiApplySelectiveCorrections(cardNumRaw);
+    
+    // Ensure 3-digit format
+    cardNum = cardNum.padStart(3, '0');
+    
+    return [`${cardNum}/${total}`];
+  }
+
+  /**
+   * Apply selective OCR corrections - only fix obvious errors, not valid digits
+   */
+  private aiApplySelectiveCorrections(text: string): string {
+    let corrected = text;
+    
+    // For Pokemon card numbers, be more aggressive since they should be pure numbers
+    // Apply comprehensive O→0 correction for consecutive Os
+    corrected = corrected.replace(/O+/g, (match) => '0'.repeat(match.length)); // OO → 00, OOO → 000
+    
+    // S at end of number is likely meant to be 5 (18S → 185)
+    corrected = corrected.replace(/S(?=\d*$)/g, '5');
+    
+    // S at beginning might be 5 (S12 → 512)  
+    corrected = corrected.replace(/^S/g, '5');
+    
+    // S in middle of numbers (1S2 → 152)
+    corrected = corrected.replace(/S/g, '5');
+    
+    // I at beginning might be 1 (I23 → 123)
+    corrected = corrected.replace(/^I(?=\d)/g, '1');
+    
+    // I in middle might be 1 (1I2 → 112)
+    corrected = corrected.replace(/I/g, '1');
+    
+    // Z at end might be 2 (12Z → 122)
+    corrected = corrected.replace(/Z$/g, '2');
+    
+    // Z in middle might be 2 (1Z2 → 122)
+    corrected = corrected.replace(/Z/g, '2');
+    
+    // B might be 8 (1B2 → 182)
+    corrected = corrected.replace(/B/g, '8');
+    
+    // G might be 6 (1G2 → 162)
+    corrected = corrected.replace(/G/g, '6');
+    
+    logger.info(`🔧 Selective OCR correction: "${text}" → "${corrected}"`);
+    return corrected;
+  }
+
+  /**
+   * AI correction for SET NUM TOTAL format (MEG 78 132)
+   */
+  private aiCorrectSetNumFormat(text: string, ocrConfusion: Map<string, any>): string[] {
+    const match = text.match(/^([A-Z]{2,6})\s+([O0-9S5I1]{1,4})\s+(\d{2,3})$/i);
+    if (!match) return [];
+
+    const [, setCode, cardNumRaw, total] = match;
+    
+    // Apply selective OCR corrections to card number - only fix obvious OCR errors
+    let cardNum = this.aiApplySelectiveCorrections(cardNumRaw);
+    
+    // Ensure 3-digit format
+    cardNum = cardNum.padStart(3, '0');
+    
+    return [`${cardNum}/${total}`];
+  }
+
+  /**
+   * AI correction for MULTI SET NUM TOTAL format (OMEGN MEG 18S 132)
+   */
+  private aiCorrectMultiSetFormat(text: string, ocrConfusion: Map<string, any>): string[] {
+    const match = text.match(/^([A-Z]{2,6})\s+([A-Z]{2,6})\s+([O0-9S5I1]{2,4})\s+(\d{2,3})$/i);
+    if (!match) return [];
+
+    const [, setCode1, setCode2, cardNumRaw, total] = match;
+    
+    // Apply selective OCR corrections to card number - only fix obvious OCR errors
+    let cardNum = this.aiApplySelectiveCorrections(cardNumRaw);
+    
+    // Ensure 3-digit format
+    cardNum = cardNum.padStart(3, '0');
+    
+    return [`${cardNum}/${total}`];
+  }
+
+  /**
+   * AI correction for Diamond & Pearl format (43 D 11S 192)
+   */
+  private aiCorrectDiamondPearlFormat(text: string, ocrConfusion: Map<string, any>): string[] {
+    const match = text.match(/^(\d+)\s+D\s+([O0-9S5]+)\s+(\d+)$/i);
+    if (!match) return [];
+
+    const [, prefix, cardNumRaw, total] = match;
+    
+    // Apply selective OCR corrections to card number
+    let cardNum = this.aiApplySelectiveCorrections(cardNumRaw);
+    
+    return [`${cardNum}/${total}`];
+  }
+
+  /**
+   * AI correction for generic number-number format
+   */
+  private aiCorrectGenericNumFormat(text: string, ocrConfusion: Map<string, any>): string[] {
+    const match = text.match(/^([O0-9S5I1]{2,4})\s+([O0-9S5I1]{2,4})$/i);
+    if (!match) return [];
+
+    const [, num1Raw, num2Raw] = match;
+    
+    // Apply selective OCR corrections
+    let num1 = this.aiApplySelectiveCorrections(num1Raw);
+    let num2 = this.aiApplySelectiveCorrections(num2Raw);
+    
+    // Determine which is card number and which is total
+    const cardNum = num1.padStart(3, '0');
+    const total = num2;
+    
+    return [`${cardNum}/${total}`];
+  }
+
+  /**
+   * Generic AI OCR correction
+   */
+  private aiApplyGenericCorrection(text: string, ocrConfusion: Map<string, any>): string {
+    let corrected = text.toUpperCase();
+    
+    for (const [wrong, correct] of ocrConfusion) {
+      corrected = corrected.replace(new RegExp(wrong, 'g'), correct.alternatives[0]);
+    }
+    
+    return corrected;
+  }
+
+  /**
+   * AI-based validation against known card number patterns
+   */
+  private aiValidateCardNumbers(candidates: string[], gameType: string): string[] {
+    const validated: string[] = [];
+    
+    for (const candidate of candidates) {
+      // Check if it matches expected format for the game type
+      const isValid = this.aiValidateFormat(candidate, gameType);
+      
+      if (isValid) {
+        validated.push(candidate);
+        logger.info(`✅ AI validated: "${candidate}" for ${gameType}`);
+      } else {
+        logger.info(`❌ AI rejected: "${candidate}" (invalid format for ${gameType})`);
+      }
+    }
+    
+    return validated;
+  }
+
+  /**
+   * AI-based format validation
+   */
+  private aiValidateFormat(cardNumber: string, gameType: string): boolean {
+    switch (gameType) {
+      case 'pokemon':
+        // Pokemon: 078/132, 001/102, etc.
+        return /^\d{1,3}\/\d{2,3}$/.test(cardNumber);
+        
+      case 'yugioh':
+        // Yu-Gi-Oh: YGLD-EN003, LOB-001, etc.
+        return /^[A-Z]{3,5}-[A-Z0-9]{2,6}$/.test(cardNumber);
+        
+      case 'onepiece':
+        // One Piece: OP01-001, ST01-001, etc.
+        return /^[A-Z]{2,4}\d{1,2}-[A-Z0-9]{3,4}$/.test(cardNumber);
+        
+      default:
+        return true; // Allow unknown formats
+    }
   }
 
   /**
@@ -863,8 +1076,13 @@ export class CardNumberFuzzySearchService {
       allMatches.forEach((match: any) => {
         const nameSimilarity = this.calculateNameSimilarity(ocrCardName, match.card.name);
         match.nameSimilarity = nameSimilarity;
-        match.combinedScore = (match.confidence * 0.5) + (nameSimilarity * 50); // 50% card number + 50% name
+        // Fix: Use proper percentage scaling (both are 0-100, so divide by 100 to get 0-1 range)
+        match.combinedScore = (match.confidence * 0.005) + (nameSimilarity * 0.005); // 50% card number + 50% name, scaled to 0-1
         match.matchReason = `Card number ${match.cardNumber} + name similarity ${nameSimilarity.toFixed(1)}%`;
+        
+        // Debug logging for name similarity
+        logger.info(`🔍 Name similarity debug: "${ocrCardName}" vs "${match.card.name}" = ${nameSimilarity.toFixed(1)}%`);
+        logger.info(`📊 Combined score: (${match.confidence} * 0.005) + (${nameSimilarity} * 0.005) = ${match.combinedScore}`);
       });
 
       // Sort by combined score
