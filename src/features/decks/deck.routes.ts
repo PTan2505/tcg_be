@@ -8,7 +8,7 @@ const deck = new Hono();
 deck.get('/user', authMiddleware, deckController.getUserDecks);
 deck.post('/user', authMiddleware, deckController.createDeck);
 deck.get('/user/:id', authMiddleware, deckController.getDeckById);
-deck.put('/user/:id', authMiddleware, deckController.updateDeck);
+deck.patch('/user/:id', authMiddleware, deckController.updateDeck);
 deck.delete('/user/:id', authMiddleware, deckController.deleteDeck);
 
 // User deck card management
