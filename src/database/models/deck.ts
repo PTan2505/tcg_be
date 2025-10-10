@@ -12,7 +12,6 @@ export interface IDeck extends Document {
   gameType: string;
   cards: IDeckCard[];
   isPublic: boolean;
-  tags: string[];
   createdAt: Date;
   updatedAt: Date;
 }
@@ -58,11 +57,6 @@ const DeckSchema = new Schema<IDeck>({
     type: Boolean,
     default: false
   },
-  tags: [{
-    type: String,
-    trim: true,
-    maxlength: 50
-  }]
 }, {
   timestamps: true
 });

@@ -1399,11 +1399,6 @@ export const swaggerDoc: OpenAPIV3.Document = {
                     type: "boolean",
                     description: "Make deck public",
                   },
-                  tags: {
-                    type: "array",
-                    items: { type: "string" },
-                    description: "Deck tags",
-                  },
                 },
               },
             },
@@ -1513,9 +1508,25 @@ export const swaggerDoc: OpenAPIV3.Document = {
                     enum: ["standard", "expanded", "unlimited", "custom"],
                   },
                   isPublic: { type: "boolean" },
-                  tags: {
+                  cards: {
                     type: "array",
-                    items: { type: "string" },
+                    items: {
+                      type: "object",
+                      properties: {
+                        cardId: {
+                          type: "string",
+                          description: "Card ID from unified Card collection",
+                        },
+                        quantity: {
+                          type: "integer",
+                          minimum: 1,
+                          maximum: 4,
+                          description: "Number of copies",
+                        },
+                      },
+                      required: ["cardId", "quantity"],
+                    },
+                    description: "List of cards to update in the deck",
                   },
                 },
               },
