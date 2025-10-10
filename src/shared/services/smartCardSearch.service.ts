@@ -56,8 +56,8 @@ export class SmartCardSearchService {
                           extractedText.cardName !== 'Unknown Card' && 
                           extractedText.cardName.length > 2;
 
-      // Get all cards for the game type
-      const allCards = await Card.find({ gameType }).lean();
+      // Get all cards for the game type with populated cardSet for setName
+      const allCards = await Card.find({ gameType }).populate('cardSet', 'name abbreviation').lean();
       
       if (allCards.length === 0) {
         return {
@@ -747,7 +747,7 @@ export class SmartCardSearchService {
     
     for (const gameType of gameTypes) {
       try {
-        const cards = await Card.find({ gameType }).lean();
+        const cards = await Card.find({ gameType }).populate('cardSet', 'name abbreviation').lean();
         const fuse = new Fuse(cards, {
           keys: [
             { name: 'name', weight: 0.8 },
