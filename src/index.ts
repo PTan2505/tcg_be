@@ -64,7 +64,7 @@ connectDB()
 
     const port = Number(process.env.PORT) || 3000;
     console.log(`🚀 Server running on port ${port}`);
-    console.log(`📖 API documentation available at http://localhost:${port}/doc`);
+    console.log(`📖 API documentation available at http://localhost:${port}/docs`);
     console.log(`📊 Cache stats available at http://localhost:${port}/cache-stats`);
 
     return { fetch: app.fetch, port };

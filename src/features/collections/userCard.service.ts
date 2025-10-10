@@ -318,6 +318,12 @@ export class UserCardService implements IUserCardService {
         return null;
       }
 
+      // Apply search filter
+      if (search && !this.matchesSearch(cardDetails, search)) {
+        return null;
+      }
+
+      // Apply filters
       if (!this.matchesFilters(cardDetails, filters)) {
         return null;
       }
