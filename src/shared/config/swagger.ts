@@ -61,11 +61,72 @@ export const swaggerDoc: OpenAPIV3.Document = {
       description: "Real-time notifications",
     },
     {
+      name: "WebSocket",
+      description: "WebSocket / realtime related endpoints and testing helpers",
+    },
+    {
       name: "Card Scanning",
       description: "AI-powered card scanning with OCR and recognition",
     },
   ],
   paths: {
+    "/test/emit-notification": {
+      post: {
+        tags: ["WebSocket", "Notifications"],
+        summary: "(Testing) Emit a fake notification to a user via WebSocket",
+        description:
+          "Test helper route that creates a transient notification object and emits it over WebSocket to the specified userId. For development only.",
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                required: ["recipientId", "type"],
+                properties: {
+                  recipientId: {
+                    type: "string",
+                    description: "User id who will receive the notification",
+                    example: "64f7b2a3e1d2f3c4b5a6d7e8",
+                  },
+                  type: {
+                    type: "string",
+                    description: "Notification type (eg. market:shipped)",
+                    example: "market:shipped",
+                  },
+                  data: {
+                    type: "object",
+                    description: "Optional payload data",
+                    example: { transactionId: "tx_123" },
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "200": {
+            description: "Notification emitted (development only)",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean", example: true },
+                    message: {
+                      type: "string",
+                      example: "Notification emitted to recipientId",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "400": { $ref: "#/components/responses/BadRequest" },
+          "401": { $ref: "#/components/responses/Unauthorized" },
+        },
+      },
+    },
     "/auth/register": {
       post: {
         tags: ["Authentication"],
@@ -2687,7 +2748,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/posts/notifications": {
+  "/notifications": {
       get: {
         tags: ["Notifications"],
         summary: "Get user notifications",
@@ -2734,7 +2795,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/posts/notifications/unread-count": {
+  "/notifications/unread-count": {
       get: {
         tags: ["Notifications"],
         summary: "Get unread notifications count",
@@ -2762,7 +2823,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/posts/notifications/{id}/read": {
+  "/notifications/{id}/read": {
       put: {
         tags: ["Notifications"],
         summary: "Mark notification as read",
@@ -2794,7 +2855,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/posts/notifications/read-all": {
+  "/notifications/read-all": {
       put: {
         tags: ["Notifications"],
         summary: "Mark all notifications as read",
@@ -2823,7 +2884,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/posts/notifications/{id}": {
+  "/notifications/{id}": {
       delete: {
         tags: ["Notifications"],
         summary: "Delete a notification",
@@ -5029,6 +5090,149 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
+    "/market": {
+      post: {
+        tags: ["Market"],
+        summary: "Create a market listing",
+        security: [{ bearerAuth: [] }],
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: { $ref: "#/components/schemas/MarketListingCreate" },
+            },
+          },
+        },
+        responses: {
+          "201": {
+            description: "Listing created",
+            content: {
+              "application/json": {
+                schema: { $ref: "#/components/schemas/MarketListing" },
+              },
+            },
+          },
+        },
+      },
+      get: {
+        tags: ["Market"],
+        summary: "List available market listings",
+        parameters: [
+          {
+            name: "gameType",
+            in: "query",
+            schema: { type: "string" },
+            description: "Filter by game type (pokemon, yugioh, onepiece)",
+          },
+          {
+            name: "cardName",
+            in: "query",
+            schema: { type: "string" },
+            description: "Search by card name",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "List of market listings",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "array",
+                      items: { $ref: "#/components/schemas/MarketListing" },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/market/{id}": {
+      get: {
+        tags: ["Market"],
+        summary: "Get a market listing by ID",
+        parameters: [
+          {
+            in: "path",
+            name: "id",
+            required: true,
+            schema: { type: "string" },
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Market listing",
+            content: {
+              "application/json": { schema: { $ref: "#/components/schemas/MarketListing" } },
+            },
+          },
+        },
+      },
+      put: {
+        tags: ["Market"],
+        summary: "Update a market listing",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          { in: "path", name: "id", required: true, schema: { type: "string" } },
+        ],
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": { schema: { $ref: "#/components/schemas/MarketListingCreate" } },
+          },
+        },
+        responses: { "200": { description: "Updated", content: { "application/json": { schema: { $ref: "#/components/schemas/MarketListing" } } } } },
+      },
+      delete: {
+        tags: ["Market"],
+        summary: "Remove a market listing",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          { in: "path", name: "id", required: true, schema: { type: "string" } },
+        ],
+        responses: { "200": { description: "Removed", content: { "application/json": { schema: { type: "object", properties: { success: { type: "boolean" } } } } } } },
+      },
+    },
+    "/market/{id}/buy": {
+      post: {
+        tags: ["Market"],
+        summary: "Buy a market listing (create transaction)",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          { in: "path", name: "id", required: true, schema: { type: "string" } },
+        ],
+        responses: {
+          "201": {
+            description: "Transaction created",
+            content: { "application/json": { schema: { $ref: "#/components/schemas/MarketTransaction" } } },
+          },
+          "400": { description: "Bad Request" },
+        },
+      },
+    },
+    "/market/tx/{id}/ship": {
+      post: {
+        tags: ["Market"],
+        summary: "Seller marks transaction as shipped",
+        security: [{ bearerAuth: [] }],
+        parameters: [ { in: "path", name: "id", required: true, schema: { type: "string" } } ],
+        responses: { "200": { description: "Marked shipped", content: { "application/json": { schema: { $ref: "#/components/schemas/MarketTransaction" } } } } },
+      },
+    },
+    "/market/tx/{id}/deliver": {
+      post: {
+        tags: ["Market"],
+        summary: "Buyer confirms delivery (settles transaction)",
+        security: [{ bearerAuth: [] }],
+        parameters: [ { in: "path", name: "id", required: true, schema: { type: "string" } } ],
+        responses: { "200": { description: "Delivered", content: { "application/json": { schema: { $ref: "#/components/schemas/MarketTransaction" } } } } },
+      },
+    },
   },
   components: {
     securitySchemes: {
@@ -6214,6 +6418,45 @@ export const swaggerDoc: OpenAPIV3.Document = {
           },
         },
         description: "Result from card scanning operation",
+      },
+      MarketListing: {
+        type: "object",
+        properties: {
+          _id: { type: "string" },
+          sellerId: { type: "string" },
+          gameType: { type: "string", enum: ["pokemon","yugioh","onepiece"] },
+          cardName: { type: "string" },
+          setCode: { type: "string" },
+          priceTokens: { type: "number" },
+          images: { type: "array", items: { type: "string" } },
+          status: { type: "string", enum: ["available","reserved","sold","removed"] },
+          createdAt: { type: "string", format: "date-time" },
+          updatedAt: { type: "string", format: "date-time" },
+        },
+      },
+      MarketListingCreate: {
+        type: "object",
+        required: ["gameType","cardName","priceTokens"],
+        properties: {
+          gameType: { type: "string", enum: ["pokemon","yugioh","onepiece"] },
+          cardName: { type: "string" },
+          setCode: { type: "string" },
+          priceTokens: { type: "number", minimum: 0 },
+          images: { type: "array", items: { type: "string" } },
+        },
+      },
+      MarketTransaction: {
+        type: "object",
+        properties: {
+          _id: { type: "string" },
+          listingId: { type: "string" },
+          buyerId: { type: "string" },
+          sellerId: { type: "string" },
+          priceTokens: { type: "number" },
+          status: { type: "string", enum: ["processing","shipped","delivered","cancelled"] },
+          createdAt: { type: "string", format: "date-time" },
+          updatedAt: { type: "string", format: "date-time" },
+        },
       },
     },
   },
