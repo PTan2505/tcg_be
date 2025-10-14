@@ -32,11 +32,8 @@ postRoutes.get("/taggable-users", postController.getTaggableUsers);
 postRoutes.get("/user/:userId", postController.getUserPosts);
 
 // Notification routes (must come before /:id route)
-postRoutes.get("/notifications", notificationController.getNotifications);
-postRoutes.get("/notifications/unread-count", notificationController.getUnreadCount);
-postRoutes.put("/notifications/:id/read", notificationController.markAsRead);
-postRoutes.put("/notifications/read-all", notificationController.markAllAsRead);
-postRoutes.delete("/notifications/:id", notificationController.deleteNotification);
+// Notification routes moved to a dedicated notifications router mounted at /notification
+// ...existing notification routes removed from post routes
 
 postRoutes.get("/:id", postController.getPost);
 postRoutes.put("/:id", validateRequest(updatePostSchema), postController.updatePost);

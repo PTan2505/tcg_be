@@ -2658,7 +2658,7 @@ async function testNotifications() {
 
   // Test 10.1: Get Notifications
   console.log('📋 Test 10.1: Get Notifications');
-  const { data: notificationsData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/notifications?page=1&limit=10`);
+  const { data: notificationsData } = await makeAuthenticatedRequest(`${BASE_URL}/notifications?page=1&limit=10`);
   
   assert(
     notificationsData.success && notificationsData.data && Array.isArray(notificationsData.data.notifications),
@@ -2669,7 +2669,7 @@ async function testNotifications() {
 
   // Test 10.2: Get Unread Count
   console.log('📋 Test 10.2: Get Unread Count');
-  const { data: unreadData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/notifications/unread-count`);
+  const { data: unreadData } = await makeAuthenticatedRequest(`${BASE_URL}/notifications/unread-count`);
   
   assert(
     unreadData.success && typeof unreadData.data.unreadCount === 'number',
@@ -2680,7 +2680,7 @@ async function testNotifications() {
 
   // Test 10.3: Mark All as Read
   console.log('📋 Test 10.3: Mark All as Read');
-  const { data: markAllData } = await makeAuthenticatedRequest(`${BASE_URL}/posts/notifications/read-all`, {
+  const { data: markAllData } = await makeAuthenticatedRequest(`${BASE_URL}/notifications/read-all`, {
     method: 'PUT'
   });
   

@@ -1,5 +1,6 @@
 import { Types } from "mongoose";
 import NotificationModel, { Notification } from "../../database/models/notification";
+import { socketService } from "./socket.service";
 
 export class NotificationService {
   async createNotification(data: {
@@ -9,9 +10,30 @@ export class NotificationService {
     post?: Types.ObjectId;
     comment?: Types.ObjectId;
   }): Promise<Notification> {
-    // Don't create notification for self-actions
-    if (data.recipient.toString() === data.sender.toString()) {
+    try {
+      console.log('🔔 createNotification called', {
+        recipient: data.recipient && data.recipient.toString ? data.recipient.toString() : data.recipient,
+        sender: data.sender && data.sender.toString ? data.sender.toString() : data.sender,
+        type: data.type
+      });
+    } catch (e) {
+      console.warn('🔔 createNotification - failed to stringify input', e);
+    }
+
+    // Defensive: ensure recipient and sender exist
+    if (!data || !data.recipient || !data.sender) {
+      console.warn('🔔 createNotification - missing recipient or sender, skipping creation', { data });
       return null as any;
+    }
+
+    // Don't create notification for self-actions
+    try {
+      if (data.recipient.toString() === data.sender.toString()) {
+        console.log('🔔 createNotification - recipient equals sender, ignoring');
+        return null as any;
+      }
+    } catch (e) {
+      console.warn('🔔 createNotification - error comparing recipient and sender', e);
     }
 
     // Check if similar notification already exists (to avoid spam)
@@ -28,11 +50,22 @@ export class NotificationService {
       // Update timestamp instead of creating new notification
       existingNotification.createdAt = new Date();
       existingNotification.isRead = false;
-      return await existingNotification.save();
+      const saved = await existingNotification.save();
+      // Emit realtime update to recipient via WebSocket
+      try {
+        socketService.emitToUser(data.recipient.toString(), 'notification', saved);
+      } catch (e) {}
+      console.log('🔔 createNotification - updated existing notification', { id: saved._id.toString() });
+      return saved;
     }
 
     const notification = new NotificationModel(data);
-    return await notification.save();
+    const saved = await notification.save();
+    try {
+      socketService.emitToUser(data.recipient.toString(), 'notification', saved);
+    } catch (e) {}
+    console.log('🔔 createNotification - saved new notification', { id: saved._id.toString() });
+    return saved;
   }
 
   async getNotifications(userId: Types.ObjectId, page: number = 1, limit: number = 20): Promise<{
@@ -74,6 +107,11 @@ export class NotificationService {
       { recipient: userId, isRead: false },
       { isRead: true }
     );
+    // Emit realtime update for unread count / list refresh
+    try {
+      const unread = await this.getUnreadCount(userId);
+  socketService.emitToUser(userId.toString(), 'notifications:readAll', { unread });
+    } catch (e) {}
     return result.modifiedCount;
   }
 
