@@ -85,12 +85,32 @@ export class DeckController {
       const deckId = c.req.param('id');
       const options: UpdateDeckOptions = await c.req.json();
 
+      // Validation of provided cards (gameType, existence) is handled in the service
+
       const deck = await deckService.updateDeck(deckId, userId, options);
-      return c.json(deck);
+      return c.json(createSuccessResponse(deck, MESSAGES.DECKS.UPDATE_SUCCESS));
     } catch (error) {
       console.error('Error updating deck:', error);
-      if (error instanceof Error && error.message === 'Deck not found or access denied') {
-        return c.json(createErrorResponse(MESSAGES.DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED), 404);
+      if (error instanceof Error) {
+        // Map known service errors to proper HTTP responses and localized messages
+        if (error.message === 'Deck not found or access denied') {
+          return c.json(createErrorResponse(MESSAGES.DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED), 404);
+        }
+
+        if (error.message === MESSAGES.VALIDATION.CARD_ID_REQUIRED) {
+          return c.json(createErrorResponse(MESSAGES.VALIDATION.CARD_ID_REQUIRED), 400);
+        }
+
+        if (error.message === MESSAGES.CARDS.CARD_NOT_FOUND) {
+          return c.json(createErrorResponse(MESSAGES.CARDS.CARD_NOT_FOUND), 404);
+        }
+
+        if (error.message === MESSAGES.VALIDATION.GAME_TYPE_INVALID) {
+          return c.json(createErrorResponse(MESSAGES.VALIDATION.GAME_TYPE_INVALID), 400);
+        }
+
+        // For other known string errors thrown by service, return 400
+        return c.json(createErrorResponse(error.message), 400);
       } else {
         return c.json(createErrorResponse(MESSAGES.DECKS.UPDATE_FAILED), 500);
       }
