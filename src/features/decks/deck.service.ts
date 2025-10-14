@@ -1,6 +1,7 @@
-import mongoose, { Schema } from 'mongoose';
+import mongoose from 'mongoose';
 import { Card } from '../../database/models/card';
 import { Deck, IDeck } from '../../database/models/deck';
+import { MESSAGES } from '../../shared/constants/messages';
 import { GameType } from '../cards/card.service';
 
 export interface CreateDeckOptions {
@@ -163,6 +164,33 @@ export class DeckService {
       throw new Error("Deck not found or access denied");
     }
 
+    // If caller supplies cards, ensure all cards belong to same gameType as the deck
+    if (options.cards && Array.isArray(options.cards) && options.cards.length > 0) {
+      const cardIds = options.cards.map((it: AddCardToDeckOptions) => it.cardId).filter(Boolean);
+      // Detect duplicate cardIds in payload
+      const seen = new Set<string>();
+      for (const id of cardIds) {
+        if (seen.has(id)) {
+          throw new Error(MESSAGES.VALIDATION.DUPLICATE_CARD_IN_PAYLOAD);
+        }
+        seen.add(id);
+      }
+      if (cardIds.length !== options.cards.length) {
+        throw new Error(MESSAGES.VALIDATION.CARD_ID_REQUIRED);
+      }
+
+      const cards = await Card.find({ _id: { $in: cardIds } }).select('gameType').lean();
+      if (cards.length !== cardIds.length) {
+        throw new Error(MESSAGES.CARDS.CARD_NOT_FOUND);
+      }
+
+      const deckGameType = deck.gameType;
+      const mismatch = cards.some((card: any) => String(card.gameType) !== String(deckGameType));
+      if (mismatch) {
+        throw new Error(MESSAGES.VALIDATION.GAME_TYPE_INVALID);
+      }
+    }
+
     Object.assign(deck, options);
     return await deck.save();
   }
@@ -184,7 +212,7 @@ export class DeckService {
     // If userId is provided, check ownership or public status
     if (userId) {
       filter.$or = [
-        { userId: new Schema.Types.ObjectId(userId) },
+        { userId: new mongoose.Types.ObjectId(userId) },
         { isPublic: true },
       ];
     } else {

@@ -31,11 +31,12 @@ export const MESSAGES = {
   VALIDATION: {
     PAGE_GREATER_THAN_ZERO: "Trang phải lớn hơn 0",
     LIMIT_BETWEEN_1_100: "Giới hạn phải từ 1 đến 100",
-    GAME_TYPE_INVALID: "Loại game phải là 'pokemon', 'yugioh', hoặc 'onepiece'",
+    GAME_TYPE_INVALID: "Có card không cùng thể loại của deck này",
     SEARCH_QUERY_REQUIRED: "Từ khóa tìm kiếm là bắt buộc",
     SEARCH_QUERY_EMPTY: "Từ khóa tìm kiếm không được để trống",
     SET_ID_REQUIRED: "ID set là bắt buộc",
     CARD_ID_REQUIRED: "ID card là bắt buộc",
+  DUPLICATE_CARD_IN_PAYLOAD: "Payload chứa card trùng lặp (cùng cardId)",
     PRODUCT_ID_REQUIRED: "ID sản phẩm hợp lệ là bắt buộc",
     GROUP_ID_REQUIRED: "ID nhóm hợp lệ là bắt buộc",
     INVALID_REQUEST_PARAMETERS: "Tham số yêu cầu không hợp lệ",
