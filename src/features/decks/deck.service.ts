@@ -142,7 +142,7 @@ export class DeckService {
   async createDeck(userId: string, options: CreateDeckOptions): Promise<IDeck> {
     const deck = new Deck({
       ...options,
-      userId: new Schema.Types.ObjectId(userId),
+      userId: new mongoose.Types.ObjectId(userId),
       cards: [],
     });
 
@@ -156,7 +156,7 @@ export class DeckService {
   ): Promise<IDeck> {
     const deck = await Deck.findOne({
       _id: deckId,
-      userId: new Schema.Types.ObjectId(userId),
+      userId: new mongoose.Types.ObjectId(userId),
     });
 
     if (!deck) {
@@ -170,7 +170,7 @@ export class DeckService {
   async deleteDeck(deckId: string, userId: string): Promise<void> {
     const result = await Deck.deleteOne({
       _id: deckId,
-      userId: new Schema.Types.ObjectId(userId),
+      userId: new mongoose.Types.ObjectId(userId),
     });
 
     if (result.deletedCount === 0) {
@@ -255,7 +255,7 @@ export class DeckService {
 
     const deck = await Deck.findOne({
       _id: deckId,
-      userId: new Schema.Types.ObjectId(userId),
+      userId: new mongoose.Types.ObjectId(userId),
     });
 
     if (!deck) {
@@ -278,8 +278,9 @@ export class DeckService {
       deck.cards[existingCardIndex].quantity += quantity;
     } else {
       // Add new card
+      // push string id directly and let Mongoose cast it to ObjectId on save
       deck.cards.push({
-        cardId: new Schema.Types.ObjectId(cardId),
+        cardId: cardId as any,
         quantity,
       });
     }
@@ -295,7 +296,7 @@ export class DeckService {
   ): Promise<IDeck> {
     const deck = await Deck.findOne({
       _id: deckId,
-      userId: new Schema.Types.ObjectId(userId),
+      userId: new mongoose.Types.ObjectId(userId),
     });
 
     if (!deck) {
@@ -330,7 +331,7 @@ export class DeckService {
   ): Promise<IDeck> {
     const originalDeck = await Deck.findOne({
       $or: [
-        { _id: deckId, userId: new Schema.Types.ObjectId(userId) },
+        { _id: deckId, userId: new mongoose.Types.ObjectId(userId) },
         { _id: deckId, isPublic: true },
       ],
     });
@@ -343,7 +344,7 @@ export class DeckService {
       name: newName || `${originalDeck.name} (Copy)`,
       description: originalDeck.description,
       gameType: originalDeck.gameType,
-      userId: new Schema.Types.ObjectId(userId),
+  userId: new mongoose.Types.ObjectId(userId),
       cards: [...originalDeck.cards],
       isPublic: false, // Duplicated decks are private by default
     });
