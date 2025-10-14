@@ -53,11 +53,13 @@ export class AuthService implements IAuthService {
     }).exec();
 
     if (existingUser) {
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
       if (existingUser.email === data.email) {
-        throw new Error("Email already exists");
+        throw new AppError(getMessage('AUTH_EXTRAS.EMAIL_ALREADY_EXISTS'), 400);
       }
       if (existingUser.username === data.username) {
-        throw new Error("Username already exists");
+        throw new AppError(getMessage('AUTH_EXTRAS.USERNAME_ALREADY_EXISTS'), 400);
       }
     }
 
@@ -98,7 +100,9 @@ export class AuthService implements IAuthService {
     // Find user
     const user = await UserModel.findOne({ email: data.email });
     if (!user) {
-      throw new Error("Invalid credentials");
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('AUTH_EXTRAS.INVALID_CREDENTIALS'), 401);
     }
 
     // Verify password
@@ -107,12 +111,16 @@ export class AuthService implements IAuthService {
       user.get("password")
     );
     if (!isValidPassword) {
-      throw new Error("Invalid credentials");
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('AUTH_EXTRAS.INVALID_CREDENTIALS'), 401);
     }
 
     // Check email verification
     if (!user.get("isEmailVerified")) {
-      throw new Error("Please verify your email first");
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('AUTH.EMAIL_VERIFICATION_FAILED'), 403);
     }
 
     // Generate tokens
@@ -122,27 +130,35 @@ export class AuthService implements IAuthService {
   async verifyEmailWithOTP(email: string, otp: string): Promise<void> {
     const user = await UserModel.findOne({ email });
     if (!user) {
-      throw new Error("User not found");
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('AUTH.USER_NOT_FOUND'), 404);
     }
 
     // Get HOTP secret
     const secret = user.get("emailVerificationSecret") as string;
 
     if (!secret) {
-      throw new Error("Invalid verification setup");
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('AUTH.EMAIL_VERIFICATION_FAILED'), 400);
     }
 
     // Check if OTP has expired
     const otpExpires = user.get("emailVerificationOTPExpires") as Date;
     if (!otpExpires || new Date() > otpExpires) {
-      throw new Error("OTP has expired");
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('AUTH.OTP_RESEND_FAILED') || 'OTP has expired', 400);
     }
 
     // Verify HOTP using the stored timestamp from otpExpires
     const timestampWhenGenerated = otpExpires.getTime() - (15 * 60 * 1000); // Subtract 15 minutes to get generation time
     const isValidOTP = this.emailService.verifyHOTPWithTimestamp(otp, secret, timestampWhenGenerated, 15);
     if (!isValidOTP) {
-      throw new Error("Invalid OTP code");
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('AUTH.INVALID_TOKEN') || 'Invalid OTP code', 400);
     }
 
     // Verify email and clear HOTP data
@@ -155,11 +171,15 @@ export class AuthService implements IAuthService {
   async resendEmailVerificationOTP(email: string): Promise<void> {
     const user = await UserModel.findOne({ email });
     if (!user) {
-      throw new Error("User not found");
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('AUTH.USER_NOT_FOUND'), 404);
     }
 
     if (user.get("isEmailVerified")) {
-      throw new Error("Email already verified");
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('AUTH.EMAIL_VERIFICATION_SUCCESS') || 'Email already verified', 400);
     }
 
     // Always generate a new secret for each OTP request
@@ -202,27 +222,35 @@ export class AuthService implements IAuthService {
   async resetPasswordWithOTP(email: string, otp: string, newPassword: string): Promise<void> {
     const user = await UserModel.findOne({ email });
     if (!user) {
-      throw new Error("User not found");
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('AUTH.USER_NOT_FOUND'), 404);
     }
 
     // Get HOTP secret
     const secret = user.get("passwordResetSecret") as string;
 
     if (!secret) {
-      throw new Error("No password reset request found");
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('AUTH.FORGOT_PASSWORD_FAILED') || 'No password reset request found', 400);
     }
 
     // Check if OTP has expired
     const otpExpires = user.get("passwordResetOTPExpires") as Date;
     if (!otpExpires || new Date() > otpExpires) {
-      throw new Error("OTP has expired");
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('AUTH.OTP_RESEND_FAILED') || 'OTP has expired', 400);
     }
 
     // Verify HOTP using the stored timestamp from otpExpires
     const timestampWhenGenerated = otpExpires.getTime() - (10 * 60 * 1000); // Subtract 10 minutes to get generation time
     const isValidOTP = this.emailService.verifyHOTPWithTimestamp(otp, secret, timestampWhenGenerated, 10);
     if (!isValidOTP) {
-      throw new Error("Invalid OTP code");
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('AUTH.INVALID_TOKEN') || 'Invalid OTP code', 400);
     }
 
     // Hash new password
@@ -249,19 +277,25 @@ export class AuthService implements IAuthService {
       // Find the user
       const user = await UserModel.findById(decoded.userId);
       if (!user) {
-        throw new Error("User not found");
+        const { getMessage } = require('../../shared/constants/messages');
+        const AppError = require('../../shared/errors/AppError').default;
+        throw new AppError(getMessage('AUTH.USER_NOT_FOUND'), 404);
       }
 
       // Check if user is still verified
       if (!user.get("isEmailVerified")) {
-        throw new Error("Email not verified");
+        const { getMessage } = require('../../shared/constants/messages');
+        const AppError = require('../../shared/errors/AppError').default;
+        throw new AppError(getMessage('AUTH.EMAIL_VERIFICATION_FAILED'), 403);
       }
 
       // Generate only new access token
       const accessToken = this.generateAccessToken(user.id);
       return { accessToken };
     } catch (error) {
-      throw new Error("Invalid or expired refresh token");
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('AUTH.INVALID_TOKEN') || 'Invalid or expired refresh token', 401);
     }
   }
 
@@ -275,13 +309,17 @@ export class AuthService implements IAuthService {
       // Find user
       const user = await UserModel.findById(decoded.userId);
       if (!user) {
-        throw new Error("User not found");
+        const { getMessage } = require('../../shared/constants/messages');
+        const AppError = require('../../shared/errors/AppError').default;
+        throw new AppError(getMessage('AUTH.USER_NOT_FOUND'), 404);
       }
 
       return user;
     } catch (error) {
       if (error instanceof jwt.JsonWebTokenError) {
-        throw new Error("Invalid or expired token");
+        const { getMessage } = require('../../shared/constants/messages');
+        const AppError = require('../../shared/errors/AppError').default;
+        throw new AppError(getMessage('AUTH.INVALID_TOKEN') || 'Invalid or expired token', 401);
       }
       throw error;
     }
@@ -301,7 +339,9 @@ export class AuthService implements IAuthService {
       // Find user
       const user = await UserModel.findById(decoded.userId);
       if (!user) {
-        throw new Error("User not found");
+        const { getMessage } = require('../../shared/constants/messages');
+        const AppError = require('../../shared/errors/AppError').default;
+        throw new AppError(getMessage('AUTH.USER_NOT_FOUND'), 404);
       }
 
       // Verify current password
@@ -310,7 +350,9 @@ export class AuthService implements IAuthService {
         user.get("password")
       );
       if (!isValidPassword) {
-        throw new Error("Current password is incorrect");
+        const { getMessage } = require('../../shared/constants/messages');
+        const AppError = require('../../shared/errors/AppError').default;
+        throw new AppError(getMessage('USERS.CURRENT_PASSWORD_INCORRECT') || 'Current password is incorrect', 400);
       }
 
       // Hash and save new password
@@ -320,7 +362,9 @@ export class AuthService implements IAuthService {
       await user.save();
     } catch (error) {
       if (error instanceof jwt.JsonWebTokenError) {
-        throw new Error("Invalid or expired token");
+        const { getMessage } = require('../../shared/constants/messages');
+        const AppError = require('../../shared/errors/AppError').default;
+        throw new AppError(getMessage('AUTH.INVALID_TOKEN') || 'Invalid or expired token', 401);
       }
       throw error;
     }

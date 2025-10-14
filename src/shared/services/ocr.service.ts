@@ -78,7 +78,9 @@ export class OCRService {
         console.warn('⚠️ Tesseract initialization failed, Google Vision only mode:', tesseractError);
         // Continue without Tesseract if Google Vision is available
         if (!this.googleVisionClient) {
-          throw new Error('Both Google Vision and Tesseract failed to initialize');
+          const { getMessage } = require('../constants/messages');
+          const AppError = require('../errors/AppError').default;
+          throw new AppError(getMessage('OCR.INIT_FAILED'), 500);
         }
       }
       
@@ -130,23 +132,29 @@ export class OCRService {
         } catch (googleError) {
           console.warn('⚠️ Google Vision failed, falling back to Tesseract:', googleError);
           
-          if (this.tesseractWorker) {
+            if (this.tesseractWorker) {
             result = await this.extractTextWithTesseract(processedBuffer);
           } else {
-            throw new Error('Google Vision failed and no Tesseract fallback available');
+            const { getMessage } = require('../constants/messages');
+            const AppError = require('../errors/AppError').default;
+            throw new AppError(getMessage('OCR.NO_SERVICE'), 500);
           }
         }
       } else if (this.tesseractWorker) {
         console.log('🔄 Using Tesseract OCR (offline mode)');
         result = await this.extractTextWithTesseract(processedBuffer);
       } else {
-        throw new Error('No OCR service available');
+        const { getMessage } = require('../constants/messages');
+        const AppError = require('../errors/AppError').default;
+        throw new AppError(getMessage('OCR.NO_SERVICE'), 500);
       }
 
       return result;
     } catch (error: any) {
       console.error('❌ OCR extraction failed:', error);
-      throw new Error(`Failed to extract text from image: ${error?.message || 'Unknown error'}`);
+      const { getMessage } = require('../constants/messages');
+      const AppError = require('../errors/AppError').default;
+      throw new AppError(getMessage('OCR.EXTRACT_TEXT_FAILED') + `: ${error?.message || 'Unknown error'}`, 500);
     }
   }
 
@@ -249,7 +257,9 @@ export class OCRService {
    */
   private async extractTextWithTesseract(imageBuffer: Buffer): Promise<OCRResult> {
     if (!this.tesseractWorker) {
-      throw new Error('Tesseract worker not initialized. Please wait for initialization to complete.');
+      const { getMessage } = require('../constants/messages');
+      const AppError = require('../errors/AppError').default;
+      throw new AppError(getMessage('OCR.TESSERACT_NOT_INITIALIZED'), 500);
     }
 
     try {
@@ -277,7 +287,9 @@ export class OCRService {
       };
     } catch (error: any) {
       console.error('Tesseract recognition failed:', error);
-      throw new Error(`Tesseract OCR failed: ${error?.message || 'Unknown error'}`);
+      const { getMessage } = require('../constants/messages');
+      const AppError = require('../errors/AppError').default;
+      throw new AppError(getMessage('OCR.TESSERACT_FAILED') + `: ${error?.message || 'Unknown error'}`, 500);
     }
   }
 

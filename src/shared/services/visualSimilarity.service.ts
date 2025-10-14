@@ -98,7 +98,9 @@ export class VisualSimilarityService {
 
     } catch (error) {
       console.error('❌ Error extracting image features:', error);
-      throw new Error('Failed to extract image features');
+      const { getMessage } = require('../constants/messages');
+      const AppError = require('../errors/AppError').default;
+      throw new AppError(getMessage('VISUAL.FAILED_EXTRACT_FEATURES'), 500);
     }
   }
 

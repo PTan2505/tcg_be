@@ -243,7 +243,9 @@ export class CardScanService {
         console.error('Failed to save failed scan history enforcement check:', e);
       }
 
-      throw new Error(`Failed to scan card: ${error?.message || 'Unknown error'}`);
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('ERRORS.GENERAL_ERROR') + `: ${error?.message || 'Unknown error'}`, 500);
     }
   }
 
@@ -445,7 +447,9 @@ export class CardScanService {
 
     } catch (error) {
       console.error('❌ Visual similarity scan failed:', error);
-      throw new Error(`Visual similarity scan failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('ERRORS.GENERAL_ERROR') + `: ${error instanceof Error ? error.message : 'Unknown error'}`, 500);
     }
   }
 

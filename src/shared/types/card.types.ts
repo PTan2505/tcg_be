@@ -12,7 +12,9 @@ export function getCardCategory(input: string): CardCategory {
     case 'yugioh':
       return CardCategory.YUGIOH;
     default:
-      throw new Error(`Invalid card category: ${input}`);
+      const { getMessage } = require('../constants/messages');
+      const AppError = require('../errors/AppError').default;
+      throw new AppError(getMessage('CARDS.UNSUPPORTED_GAME_TYPE') + `: ${input}`, 400);
   }
 }
 

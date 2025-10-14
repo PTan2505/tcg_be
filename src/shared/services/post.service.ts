@@ -180,7 +180,9 @@ export class PostService {
     likesCount: number;
   }> {
     const post = await PostModel.findById(postId);
-    if (!post) throw new Error('Post not found');
+    if (!post) {
+      throw new AppError(getMessage('POSTS.POST_NOT_FOUND'), 404);
+    }
 
     const existingReaction = await PostReactionModel.findOne({
       post: postId,

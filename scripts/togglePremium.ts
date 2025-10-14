@@ -3,16 +3,16 @@ import UserModel from '../src/database/models/user';
 
 async function main() {
   const mongo = process.env.MONGO_URI || 'mongodb://localhost:27017/tcg_be';
-  if (!process.env.ADMIN_EMAIL) {
-    console.error('Please set ADMIN_EMAIL env var to run this script');
+  if (!process.env.SUPERUSER_EMAIL) {
+    console.error('Please set SUPERUSER_EMAIL env var to run this script');
     process.exit(1);
   }
 
   await mongoose.connect(mongo, { } as any);
 
-  const admin = await UserModel.findOne({ email: process.env.ADMIN_EMAIL });
+  const admin = await UserModel.findOne({ email: process.env.SUPERUSER_EMAIL });
   if (!admin || !admin.isAdmin) {
-    console.error('Admin user (ADMIN_EMAIL) not found in DB or is not an admin. Make sure the admin user exists and has isAdmin=true');
+    console.error('Admin user (SUPERUSER_EMAIL) not found in DB or is not an admin. Make sure the admin user exists and has isAdmin=true');
     process.exit(2);
   }
 

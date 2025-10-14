@@ -96,13 +96,13 @@ export class UserCardService implements IUserCardService {
     // Verify user exists
     const foundUser = await UserModel.findById(userId);
     if (!foundUser) {
-      throw new Error("User not found");
+      throw new AppError(getMessage('AUTH.USER_NOT_FOUND'), 404);
     }
 
     // Verify card exists and get card details
     const cardDetails = await this.getCardDetails(cardId);
     if (!cardDetails) {
-      throw new Error("Card not found");
+      throw new AppError(getMessage('CARDS.CARD_NOT_FOUND'), 404);
     }
 
     // Check if card is already in user's collection
@@ -112,7 +112,7 @@ export class UserCardService implements IUserCardService {
     });
 
     if (existingCard) {
-      throw new Error("Card is already in your collection");
+      throw new AppError(getMessage('COLLECTIONS.CARD_ALREADY_EXISTS'), 400);
     }
 
     // Enforce freemium collection limit: max 30 cards per game type
@@ -144,7 +144,7 @@ export class UserCardService implements IUserCardService {
     });
 
     if (!result) {
-      throw new Error("Card not found in your collection");
+      throw new AppError(getMessage('COLLECTIONS.CARD_NOT_FOUND_IN_COLLECTION'), 404);
     }
   }
 
@@ -414,7 +414,7 @@ export class UserCardService implements IUserCardService {
     // With the unified model, we just need to find the card by ID
     const card = await Card.findById(cardId).populate("cardSet");
     if (!card) {
-      throw new Error("Card not found");
+      throw new AppError(getMessage('CARDS.CARD_NOT_FOUND'), 404);
     }
     return card.toObject();
   }
@@ -508,7 +508,7 @@ export class UserCardService implements IUserCardService {
   private async verifyCardExists(cardId: string): Promise<void> {
     const cardDetails = await this.getCardDetails(cardId);
     if (!cardDetails) {
-      throw new Error(`Card not found`);
+      throw new AppError(getMessage('CARDS.CARD_NOT_FOUND'), 404);
     }
   }
 

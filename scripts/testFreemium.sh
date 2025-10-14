@@ -66,14 +66,38 @@ fi
 # Collection test (freemium limit: 30 per game)
 # Legacy collections route is mounted at /collections and accepts { gameType, cardId } on POST /
 COLLECTION_URL="$BASE/collections"
+CARD_IDS_FILE=${CARD_IDS_FILE:-}
+
 if curl -s --head "$COLLECTION_URL" >/dev/null 2>&1; then
   echo "\n=== Collection add test (30 allowed, 31st blocked) ==="
-  for i in $(seq 1 31); do
-    cardId="test-card-$(date +%s)-$i"
-    payload=$(jq -n --arg g "pokemon" --arg id "$cardId" '{gameType:$g, cardId:$id}')
-    echo "Adding card #$i -> $cardId"
-    run_req POST "$COLLECTION_URL" "$payload"
-  done
+
+  # If user provided a CARD_IDS_FILE (JSON with arrays per gameType), use it; otherwise generate synthetic ids
+  if [[ -n "$CARD_IDS_FILE" && -f "$CARD_IDS_FILE" ]]; then
+    echo "Using card ids from $CARD_IDS_FILE"
+    # Extract up to 31 card ids for pokemon (jq returns array)
+    mapfile -t cardIds < <(jq -r '.pokemon[]' "$CARD_IDS_FILE" | sed -n '1,31p')
+    # If less than 31, pad with synthetic ids
+    idx=1
+    while [[ ${#cardIds[@]} -lt 31 ]]; do
+      cardIds+=("test-card-$(date +%s)-pad-$idx")
+      idx=$((idx+1))
+    done
+
+    i=1
+    for cid in "${cardIds[@]}"; do
+      payload=$(jq -n --arg g "pokemon" --arg id "$cid" '{gameType:$g, cardId:$id}')
+      echo "Adding card #$i -> $cid"
+      run_req POST "$COLLECTION_URL" "$payload"
+      i=$((i+1))
+    done
+  else
+    for i in $(seq 1 31); do
+      cardId="test-card-$(date +%s)-$i"
+      payload=$(jq -n --arg g "pokemon" --arg id "$cardId" '{gameType:$g, cardId:$id}')
+      echo "Adding card #$i -> $cardId"
+      run_req POST "$COLLECTION_URL" "$payload"
+    done
+  fi
 else
   echo "\n=== Skipping collection tests: $COLLECTION_URL not reachable. Adjust COLLECTION_URL if your API differs ==="
 fi

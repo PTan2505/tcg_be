@@ -1,5 +1,7 @@
 import { Types } from "mongoose";
 import FriendshipModel, { Friendship } from "../../database/models/friendship";
+import { getMessage } from '../constants/messages';
+import AppError from '../errors/AppError';
 import { NotificationService } from "./notification.service";
 
 export class FriendshipService {
@@ -14,16 +16,15 @@ export class FriendshipService {
     try {
       const requester = await (await import('../../database/models/user')).default.findById(requesterId.toString());
       if (requester && !requester.isPremium) {
-        const { getMessage } = await import('../../shared/constants/messages');
-        const AppErrorMod = await import('../../shared/errors/AppError');
-        throw new AppErrorMod.default(getMessage('PREMIUM.SOCIAL_DISABLED'), 403);
+        throw new AppError(getMessage('PREMIUM.SOCIAL_DISABLED'), 403);
       }
     } catch (e: any) {
+      if (e instanceof AppError) throw e;
       if (e instanceof Error) throw e;
     }
     // Check if trying to send request to self
     if (requesterId.toString() === recipientId.toString()) {
-      throw new Error('Cannot send friend request to yourself');
+      throw new AppError('Không thể gửi lời mời kết bạn tới chính mình', 400);
     }
 
     // Check if they're already friends or have pending request
@@ -36,13 +37,13 @@ export class FriendshipService {
 
     if (existingFriendship) {
       if (existingFriendship.status === 'accepted') {
-        throw new Error('Already friends');
+        throw new AppError('Đã là bạn bè', 400);
       }
       if (existingFriendship.status === 'pending') {
-        throw new Error('Friend request already sent');
+        throw new AppError('Đã gửi lời mời kết bạn trước đó', 400);
       }
       if (existingFriendship.status === 'blocked') {
-        throw new Error('Cannot send friend request');
+        throw new AppError('Không thể gửi lời mời kết bạn', 400);
       }
     }
 
@@ -97,7 +98,9 @@ export class FriendshipService {
   async blockUser(blockerId: Types.ObjectId, blockedId: Types.ObjectId): Promise<boolean> {
     // Check if trying to block self
     if (blockerId.toString() === blockedId.toString()) {
-      throw new Error('Cannot block yourself');
+  const { getMessage } = require('../constants/messages');
+  const AppError = require('../errors/AppError').default;
+  throw new AppError(getMessage('VALIDATION.CANNOT_BLOCK_SELF'), 400);
     }
 
     // Remove any existing friendship

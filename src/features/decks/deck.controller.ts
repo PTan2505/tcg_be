@@ -1,5 +1,6 @@
 import { Context } from 'hono';
 import { createErrorResponse, createSuccessResponse, MESSAGES } from '../../shared/constants/messages';
+import AppError from '../../shared/errors/AppError';
 import { AddCardToDeckOptions, CreateDeckOptions, deckService, GetDecksOptions, UpdateDeckOptions } from './deck.service';
 
 export class DeckController {
@@ -57,6 +58,7 @@ export class DeckController {
   // Create a new deck
   createDeck = async (c: Context) => {
     try {
+      console.log('DEBUG: Entering DeckController.createDeck');
       const user = c.get('user');
       if (!user) {
         return c.json(createErrorResponse(MESSAGES.AUTH.AUTHENTICATION_REQUIRED), 401);
@@ -64,12 +66,16 @@ export class DeckController {
 
       const userId = user._id.toString();
       const options: CreateDeckOptions = await c.req.json();
-
       const deck = await deckService.createDeck(userId, options);
       return c.json(createSuccessResponse(deck, MESSAGES.DECKS.CREATE_SUCCESS), 201);
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error creating deck:', error);
-      return c.json(createErrorResponse(MESSAGES.DECKS.CREATE_FAILED), 500);
+      if (error instanceof AppError) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: error.statusCode, headers: { 'Content-Type': 'application/json' } });
+      }
+      const body = createErrorResponse(error?.message || MESSAGES.DECKS.CREATE_FAILED);
+      return new Response(JSON.stringify(body), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
   };
 
@@ -193,17 +199,23 @@ export class DeckController {
 
       const deck = await deckService.addCardToDeck(deckId, userId, options);
       return c.json(deck);
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error adding card to deck:', error);
-      if (error instanceof Error) {
-        if (error.message === 'Deck not found or access denied' || error.message === 'Card not found') {
-          return c.json(createErrorResponse(error.message), 404);
-        } else {
-          return c.json(createErrorResponse(error.message), 400);
-        }
-      } else {
-        return c.json(createErrorResponse(MESSAGES.DECKS.UPDATE_FAILED), 500);
+      if (error instanceof AppError) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: error.statusCode, headers: { 'Content-Type': 'application/json' } });
       }
+      // Map some known service string errors to reasonable statuses
+      if (error instanceof Error && (error.message === 'Deck not found or access denied' || error.message === 'Card not found')) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: 404, headers: { 'Content-Type': 'application/json' } });
+      }
+      if (error instanceof Error) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: 400, headers: { 'Content-Type': 'application/json' } });
+      }
+      const body = createErrorResponse(MESSAGES.DECKS.UPDATE_FAILED);
+      return new Response(JSON.stringify(body), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
   };
 
