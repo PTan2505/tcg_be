@@ -1,6 +1,9 @@
 import { Card } from '../../database/models/card';
 import UserModel from '../../database/models/user';
 import { IUserCard, UserCard } from '../../database/models/userCard';
+import PREMIUM_CONFIG from '../../shared/config/premium.config';
+import { getMessage } from '../../shared/constants/messages';
+import AppError from '../../shared/errors/AppError';
 import { GameType } from '../cards/card.service';
 
 export interface IUserCardService {
@@ -91,8 +94,8 @@ export class UserCardService implements IUserCardService {
     cardId: string
   ): Promise<IUserCard> {
     // Verify user exists
-    const user = await UserModel.findById(userId);
-    if (!user) {
+    const foundUser = await UserModel.findById(userId);
+    if (!foundUser) {
       throw new Error("User not found");
     }
 
@@ -110,6 +113,14 @@ export class UserCardService implements IUserCardService {
 
     if (existingCard) {
       throw new Error("Card is already in your collection");
+    }
+
+    // Enforce freemium collection limit: max 30 cards per game type
+    if (foundUser && !foundUser.isPremium) {
+      const count = await UserCard.countDocuments({ userId, gameType: cardDetails.gameType });
+      if (count >= PREMIUM_CONFIG.COLLECTION_LIMIT_PER_GAME_FREEMIUM) {
+        throw new AppError(getMessage('PREMIUM.COLLECTION_LIMIT_REACHED'), 403);
+      }
     }
 
     // Add card to collection with gameType and setId

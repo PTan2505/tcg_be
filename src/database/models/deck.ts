@@ -1,14 +1,14 @@
 import mongoose, { Document, Schema } from 'mongoose';
 
 export interface IDeckCard {
-  cardId: Schema.Types.ObjectId;
+  cardId: mongoose.Types.ObjectId;
   quantity: number;
 }
 
 export interface IDeck extends Document {
   name: string;
   description?: string;
-  userId: Schema.Types.ObjectId;
+  userId: mongoose.Types.ObjectId;
   gameType: string;
   cards: IDeckCard[];
   isPublic: boolean;

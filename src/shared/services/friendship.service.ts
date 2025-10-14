@@ -10,6 +10,17 @@ export class FriendshipService {
   }
 
   async sendFriendRequest(requesterId: Types.ObjectId, recipientId: Types.ObjectId): Promise<Friendship> {
+    // Disallow friendship actions for freemium users
+    try {
+      const requester = await (await import('../../database/models/user')).default.findById(requesterId.toString());
+      if (requester && !requester.isPremium) {
+        const { getMessage } = await import('../../shared/constants/messages');
+        const AppErrorMod = await import('../../shared/errors/AppError');
+        throw new AppErrorMod.default(getMessage('PREMIUM.SOCIAL_DISABLED'), 403);
+      }
+    } catch (e: any) {
+      if (e instanceof Error) throw e;
+    }
     // Check if trying to send request to self
     if (requesterId.toString() === recipientId.toString()) {
       throw new Error('Cannot send friend request to yourself');

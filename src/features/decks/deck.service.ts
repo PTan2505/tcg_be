@@ -1,6 +1,10 @@
 import mongoose, { Schema } from 'mongoose';
 import { Card } from '../../database/models/card';
 import { Deck, IDeck } from '../../database/models/deck';
+import UserModel from '../../database/models/user';
+import PREMIUM_CONFIG from '../../shared/config/premium.config';
+import { getMessage } from '../../shared/constants/messages';
+import AppError from '../../shared/errors/AppError';
 import { GameType } from '../cards/card.service';
 
 export interface CreateDeckOptions {
@@ -140,9 +144,18 @@ export class DeckService {
   }
 
   async createDeck(userId: string, options: CreateDeckOptions): Promise<IDeck> {
+    // Enforce freemium deck limit (3 decks)
+    const user = await UserModel.findById(userId);
+    if (user && !user.isPremium) {
+      const existing = await Deck.countDocuments({ userId: new mongoose.Types.ObjectId(userId) });
+      if (existing >= PREMIUM_CONFIG.DECK_LIMIT_FREEMIUM) {
+        throw new AppError(getMessage('PREMIUM.DECK_LIMIT_REACHED'), 403);
+      }
+    }
+
     const deck = new Deck({
       ...options,
-      userId: new Schema.Types.ObjectId(userId),
+      userId: new mongoose.Types.ObjectId(userId),
       cards: [],
     });
 
@@ -156,7 +169,7 @@ export class DeckService {
   ): Promise<IDeck> {
     const deck = await Deck.findOne({
       _id: deckId,
-      userId: new Schema.Types.ObjectId(userId),
+      userId: new mongoose.Types.ObjectId(userId),
     });
 
     if (!deck) {
@@ -170,7 +183,7 @@ export class DeckService {
   async deleteDeck(deckId: string, userId: string): Promise<void> {
     const result = await Deck.deleteOne({
       _id: deckId,
-      userId: new Schema.Types.ObjectId(userId),
+      userId: new mongoose.Types.ObjectId(userId),
     });
 
     if (result.deletedCount === 0) {
@@ -184,7 +197,7 @@ export class DeckService {
     // If userId is provided, check ownership or public status
     if (userId) {
       filter.$or = [
-        { userId: new Schema.Types.ObjectId(userId) },
+        { userId: new mongoose.Types.ObjectId(userId) },
         { isPublic: true },
       ];
     } else {
@@ -255,7 +268,7 @@ export class DeckService {
 
     const deck = await Deck.findOne({
       _id: deckId,
-      userId: new Schema.Types.ObjectId(userId),
+      userId: new mongoose.Types.ObjectId(userId),
     });
 
     if (!deck) {
@@ -279,7 +292,7 @@ export class DeckService {
     } else {
       // Add new card
       deck.cards.push({
-        cardId: new Schema.Types.ObjectId(cardId),
+        cardId: new mongoose.Types.ObjectId(cardId),
         quantity,
       });
     }
@@ -295,7 +308,7 @@ export class DeckService {
   ): Promise<IDeck> {
     const deck = await Deck.findOne({
       _id: deckId,
-      userId: new Schema.Types.ObjectId(userId),
+      userId: new mongoose.Types.ObjectId(userId),
     });
 
     if (!deck) {
@@ -339,11 +352,20 @@ export class DeckService {
       throw new Error("Deck not found or access denied");
     }
 
+    // Enforce freemium deck limit (3 decks) for duplication
+    const user = await UserModel.findById(userId);
+    if (user && !user.isPremium) {
+      const existing = await Deck.countDocuments({ userId: new Schema.Types.ObjectId(userId) });
+      if (existing >= PREMIUM_CONFIG.DECK_LIMIT_FREEMIUM) {
+        throw new AppError(getMessage('PREMIUM.DECK_LIMIT_REACHED'), 403);
+      }
+    }
+
     const duplicatedDeck = new Deck({
       name: newName || `${originalDeck.name} (Copy)`,
       description: originalDeck.description,
       gameType: originalDeck.gameType,
-      userId: new Schema.Types.ObjectId(userId),
+      userId: new mongoose.Types.ObjectId(userId),
       cards: [...originalDeck.cards],
       isPublic: false, // Duplicated decks are private by default
     });

@@ -54,4 +54,7 @@ userRoutes.patch(
 );
 userRoutes.delete("/:id", userController.deleteUser);
 
+// Admin endpoint to toggle premium status for a user
+userRoutes.patch('/:id/premium', userController.setPremium);
+
 export default userRoutes;

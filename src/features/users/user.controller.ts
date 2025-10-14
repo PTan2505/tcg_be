@@ -192,4 +192,30 @@ export class UserController {
       );
     }
   };
+
+  // Admin-only: toggle a user's premium status
+  setPremium = async (c: Context) => {
+    try {
+      const admin = c.get('user');
+      // Only allow users with isAdmin === true or matching SUPERUSER_EMAIL/ADMIN_EMAIL env var
+      const adminEmails = [process.env.SUPERUSER_EMAIL, process.env.ADMIN_EMAIL].filter(Boolean);
+      if (!admin.isAdmin && !(admin.email && adminEmails.includes(admin.email))) {
+        return c.json(createErrorResponse(MESSAGES.AUTH.ACCESS_DENIED), 403);
+      }
+
+      const { id } = c.req.param();
+  const body = await c.req.json();
+  const flags: { isPremium?: boolean; isAdmin?: boolean } = {};
+  if (typeof body.isPremium !== 'undefined') flags.isPremium = Boolean(body.isPremium);
+  if (typeof body.isAdmin !== 'undefined') flags.isAdmin = Boolean(body.isAdmin);
+
+  const user = await this.userService.setPremiumStatus(id, flags);
+  return c.json(createSuccessResponse(user, `User updated (isPremium=${flags.isPremium} isAdmin=${flags.isAdmin})`));
+    } catch (error: any) {
+      if (error.message === 'User not found') {
+        return c.json(createErrorResponse(MESSAGES.AUTH.USER_NOT_FOUND), 404);
+      }
+      return c.json(createErrorResponse(error.message || 'Unable to update premium status'), 400);
+    }
+  };
 }

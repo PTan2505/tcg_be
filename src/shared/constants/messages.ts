@@ -125,6 +125,24 @@ export const MESSAGES = {
     DECK_NOT_FOUND_OR_ACCESS_DENIED: "Không tìm thấy deck hoặc không có quyền truy cập"
   },
 
+  // Premium / Freemium Messages
+  PREMIUM: {
+    DECK_LIMIT_REACHED: "Giới hạn deck cho tài khoản freemium đã đạt (tối đa 3). Vui lòng nâng cấp lên Premium để tạo thêm.",
+    SCAN_LIMIT_REACHED: "Giới hạn quét thẻ cho tài khoản freemium đã đạt (tối đa 10). Vui lòng nâng cấp lên Premium để quét thêm.",
+    COLLECTION_LIMIT_REACHED: "Giới hạn bộ sưu tập cho tài khoản freemium đã đạt (tối đa 30 cho mỗi game). Vui lòng nâng cấp lên Premium để thêm thẻ.",
+    SOCIAL_DISABLED: "Tính năng mạng xã hội bị vô hiệu cho tài khoản freemium. Vui lòng nâng cấp lên Premium để sử dụng.",
+    MARKET_DISABLED: "Tính năng thị trường bị vô hiệu cho tài khoản freemium. Vui lòng nâng cấp lên Premium để sử dụng.",
+  },
+
+  // Market-specific error messages
+  MARKET: {
+    LISTING_NOT_FOUND: "Không tìm thấy tin rao hoặc không có quyền truy cập",
+    LISTING_NOT_AVAILABLE: "Tin rao không khả dụng",
+    INSUFFICIENT_TOKENS: "Số dư token không đủ",
+    TRANSACTION_NOT_SHIPPED: "Giao dịch chưa được gửi (chưa shipped)",
+    SELLER_NOT_FOUND: "Người bán không tồn tại"
+  },
+
   // User Messages
   USERS: {
     PROFILE_SUCCESS: "Lấy thông tin hồ sơ thành công",

@@ -15,6 +15,7 @@ export interface IUserService {
   ): Promise<void>;
   changeAvatar(userId: string, imageUrl: string): Promise<void>;
   getProfile(userId: string): Promise<Document & User>;
+  setPremiumStatus(id: string, flags: { isPremium?: boolean; isAdmin?: boolean }): Promise<Document & User>;
 }
 
 export class UserService implements IUserService {
@@ -103,6 +104,15 @@ export class UserService implements IUserService {
     if (!user) {
       throw new Error("User not found");
     }
+    return user;
+  }
+
+  async setPremiumStatus(id: string, flags: { isPremium?: boolean; isAdmin?: boolean }): Promise<Document & User> {
+    const user = await UserModel.findById(id);
+    if (!user) throw new Error("User not found");
+    if (typeof flags.isPremium !== 'undefined') user.isPremium = !!flags.isPremium;
+    if (typeof flags.isAdmin !== 'undefined') user.isAdmin = !!flags.isAdmin;
+    await user.save();
     return user;
   }
 }

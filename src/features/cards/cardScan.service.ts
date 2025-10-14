@@ -148,7 +148,26 @@ export class CardScanService {
       // 5. Determine if set selection is needed
       const requiresSetSelection = this.shouldRequireSetSelection(rankedMatches);
       
-      // 6. Save scan history
+      // 6. Save scan history (enforce freemium limit)
+      try {
+        const UserModel = (await import('../../database/models/user')).default;
+        const ScanHistory = (await import('../../database/models/scanHistory')).ScanHistory;
+        const PREMIUM = (await import('../../shared/config/premium.config')).default;
+        const { getMessage } = await import('../../shared/constants/messages');
+        const AppErrorMod = await import('../../shared/errors/AppError');
+
+        const user = await UserModel.findById(userId);
+        if (user && !user.isPremium) {
+          const existing = await ScanHistory.countDocuments({ userId: new Types.ObjectId(userId) });
+          if (existing >= PREMIUM.SCAN_LIMIT_FREEMIUM) {
+            throw new AppErrorMod.default(getMessage('PREMIUM.SCAN_LIMIT_REACHED'), 403);
+          }
+        }
+      } catch (e) {
+        // propagate AppError or other errors
+        throw e;
+      }
+
       await this.saveScanHistory({
         userId: new Types.ObjectId(userId),
         gameType: gameType as 'pokemon' | 'yugioh' | 'onepiece',
@@ -180,22 +199,50 @@ export class CardScanService {
     } catch (error: any) {
       console.error('Card scanning error:', error);
       
-      // Save failed scan history
-      await this.saveScanHistory({
-        userId: new Types.ObjectId(userId),
-        gameType: gameType as 'pokemon' | 'yugioh' | 'onepiece',
-        extractedText: [],
-        ocrConfidence: 0,
-        potentialMatches: [],
-        wasAutoSelected: false,
-        scanDuration: Date.now() - startTime,
-        processingSteps: timings,
-        imageHash: '',
-        imageSize: { width: 0, height: 0, fileSize: imageBuffer.length },
-        errorMessage: error?.message || 'Unknown error',
-        errorStep: 'ocr'
-      });
-      
+      // Save failed scan history (if limit not exceeded)
+      try {
+        const user = await (await import('../../database/models/user')).default.findById(userId);
+        if (user && !user.isPremium) {
+          const existing = await (await import('../../database/models/scanHistory')).ScanHistory.countDocuments({ userId: new Types.ObjectId(userId) });
+          if (existing >= 10) {
+            // Don't save additional failed scan history for freemium users beyond limit
+            console.warn('Not saving failed scan history because freemium scan limit reached');
+          } else {
+            await this.saveScanHistory({
+              userId: new Types.ObjectId(userId),
+              gameType: gameType as 'pokemon' | 'yugioh' | 'onepiece',
+              extractedText: [],
+              ocrConfidence: 0,
+              potentialMatches: [],
+              wasAutoSelected: false,
+              scanDuration: Date.now() - startTime,
+              processingSteps: timings,
+              imageHash: '',
+              imageSize: { width: 0, height: 0, fileSize: imageBuffer.length },
+              errorMessage: error?.message || 'Unknown error',
+              errorStep: 'ocr'
+            });
+          }
+        } else {
+          await this.saveScanHistory({
+            userId: new Types.ObjectId(userId),
+            gameType: gameType as 'pokemon' | 'yugioh' | 'onepiece',
+            extractedText: [],
+            ocrConfidence: 0,
+            potentialMatches: [],
+            wasAutoSelected: false,
+            scanDuration: Date.now() - startTime,
+            processingSteps: timings,
+            imageHash: '',
+            imageSize: { width: 0, height: 0, fileSize: imageBuffer.length },
+            errorMessage: error?.message || 'Unknown error',
+            errorStep: 'ocr'
+          });
+        }
+      } catch (e) {
+        console.error('Failed to save failed scan history enforcement check:', e);
+      }
+
       throw new Error(`Failed to scan card: ${error?.message || 'Unknown error'}`);
     }
   }

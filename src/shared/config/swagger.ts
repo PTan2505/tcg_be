@@ -70,6 +70,23 @@ export const swaggerDoc: OpenAPIV3.Document = {
     },
   ],
   paths: {
+    "/freemium/limits": {
+      get: {
+        tags: ["Users"],
+        summary: "Get current freemium limits",
+        description: "Returns server-configured freemium limits such as deck, scan and collection caps",
+        responses: {
+          "200": {
+            description: "Freemium limits",
+            content: {
+              "application/json": {
+                schema: { $ref: "#/components/schemas/FreemiumLimits" }
+              }
+            }
+          }
+        }
+      }
+    },
     "/test/emit-notification": {
       post: {
         tags: ["WebSocket", "Notifications"],
@@ -6457,6 +6474,17 @@ export const swaggerDoc: OpenAPIV3.Document = {
           createdAt: { type: "string", format: "date-time" },
           updatedAt: { type: "string", format: "date-time" },
         },
+      },
+      FreemiumLimits: {
+        type: "object",
+        properties: {
+          deckLimitPerUser: { type: "integer", description: "Maximum number of decks for freemium users", example: 3 },
+          scanLimitPerUser: { type: "integer", description: "Maximum number of scans for freemium users", example: 10 },
+          collectionLimitPerGame: { type: "integer", description: "Maximum number of cards per game in collection for freemium users", example: 30 },
+          socialDisabled: { type: "boolean", description: "Whether social features are disabled for freemium users", example: true },
+          marketDisabled: { type: "boolean", description: "Whether market features are disabled for freemium users", example: true }
+        },
+        description: "Server-configured freemium limits and feature toggles",
       },
     },
   },
