@@ -1,9 +1,9 @@
-import mongoose, { Schema } from 'mongoose';
+import mongoose from 'mongoose';
 import { Card } from '../../database/models/card';
 import { Deck, IDeck } from '../../database/models/deck';
 import UserModel from '../../database/models/user';
 import PREMIUM_CONFIG from '../../shared/config/premium.config';
-import { getMessage } from '../../shared/constants/messages';
+import { getMessage, MESSAGES } from '../../shared/constants/messages';
 import AppError from '../../shared/errors/AppError';
 import { GameType } from '../cards/card.service';
 
@@ -176,6 +176,33 @@ export class DeckService {
       throw new Error("Deck not found or access denied");
     }
 
+    // If caller supplies cards, ensure all cards belong to same gameType as the deck
+    if (options.cards && Array.isArray(options.cards) && options.cards.length > 0) {
+      const cardIds = options.cards.map((it: AddCardToDeckOptions) => it.cardId).filter(Boolean);
+      // Detect duplicate cardIds in payload
+      const seen = new Set<string>();
+      for (const id of cardIds) {
+        if (seen.has(id)) {
+          throw new Error(MESSAGES.VALIDATION.DUPLICATE_CARD_IN_PAYLOAD);
+        }
+        seen.add(id);
+      }
+      if (cardIds.length !== options.cards.length) {
+        throw new Error(MESSAGES.VALIDATION.CARD_ID_REQUIRED);
+      }
+
+      const cards = await Card.find({ _id: { $in: cardIds } }).select('gameType').lean();
+      if (cards.length !== cardIds.length) {
+        throw new Error(MESSAGES.CARDS.CARD_NOT_FOUND);
+      }
+
+      const deckGameType = deck.gameType;
+      const mismatch = cards.some((card: any) => String(card.gameType) !== String(deckGameType));
+      if (mismatch) {
+        throw new Error(MESSAGES.VALIDATION.GAME_TYPE_INVALID);
+      }
+    }
+
     Object.assign(deck, options);
     return await deck.save();
   }
@@ -291,6 +318,7 @@ export class DeckService {
       deck.cards[existingCardIndex].quantity += quantity;
     } else {
       // Add new card
+      // push string id directly and let Mongoose cast it to ObjectId on save
       deck.cards.push({
         cardId: new mongoose.Types.ObjectId(cardId),
         quantity,
@@ -343,7 +371,7 @@ export class DeckService {
   ): Promise<IDeck> {
     const originalDeck = await Deck.findOne({
       $or: [
-        { _id: deckId, userId: new Schema.Types.ObjectId(userId) },
+        { _id: deckId, userId: new mongoose.Types.ObjectId(userId) },
         { _id: deckId, isPublic: true },
       ],
     });
@@ -355,7 +383,7 @@ export class DeckService {
     // Enforce freemium deck limit (3 decks) for duplication
     const user = await UserModel.findById(userId);
     if (user && !user.isPremium) {
-      const existing = await Deck.countDocuments({ userId: new Schema.Types.ObjectId(userId) });
+      const existing = await Deck.countDocuments({ userId: new mongoose.Types.ObjectId(userId) });
       if (existing >= PREMIUM_CONFIG.DECK_LIMIT_FREEMIUM) {
         throw new AppError(getMessage('PREMIUM.DECK_LIMIT_REACHED'), 403);
       }
