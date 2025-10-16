@@ -12,18 +12,26 @@ import "./database/models/friendship"; // Import Friendship model
 import "./database/models/notification"; // Import Notification model
 import "./database/models/post"; // Import Post model
 import "./database/models/postReaction"; // Import PostReaction model
+import "./database/models/scanHistory"; // Import ScanHistory model
 import "./database/models/user"; // Import User model to ensure it's registered
 import "./database/models/userCard"; // Import UserCard model
 import authRoutes from "./features/auth/auth.routes";
+import aiEnhancedScanRoutes from "./features/cards/aiEnhancedCardScan.routes";
 import cardRoutes from "./features/cards/card.routes";
+import enhancedScanRoutes from "./features/cards/enhancedCardScan.routes";
+import testRoutes from "./features/cards/test.routes";
 import userCardRoutes from "./features/collections/userCard.routes";
 import deckRoutes from "./features/decks/deck.routes";
+import marketRoutes from "./features/market/market.routes";
+import notificationsRoutes from "./features/notifications/notifications.routes";
 import postRoutes from "./features/posts/post.routes";
 import setRoutes from "./features/sets/set.routes";
 import userRoutes from "./features/users/user.routes";
 import { initializeSuperuser } from "./scripts/initSuperuser";
 import { swaggerDoc } from "./shared/config/swagger";
 import { getCacheStats } from "./shared/middlewares/cache.middleware";
+import { aiCardMemoryService } from "./shared/services/aiCardMemory.service";
+import { socketService } from './shared/services/socket.service';
 
 // Create Hono app
 const app = new Hono();
@@ -40,11 +48,42 @@ app.use("/*", cors({
 const port = Number(process.env.PORT) || 3000;
 const host = "0.0.0.0";
 
-// Connect to database
-await connectDB();
+// Connect to the database and start the server
+connectDB()
+  .then(async () => {
+    console.log("✅ Database connected successfully");
+    
+    // Initialize AI Memory with card data at startup
+    console.log("🚀 Initializing AI memory with card data...");
+    try {
+      await aiCardMemoryService.initializeAIMemory();
+      console.log("✅ AI memory initialized successfully");
+    } catch (error) {
+      console.error("❌ Failed to initialize AI memory:", error);
+    }
+    
+    // Initialize superuser
+    await initializeSuperuser();
 
-// Initialize superuser for testing and administration
-await initializeSuperuser();
+    const port = Number(process.env.PORT) || 3000;
+    console.log(`🚀 Server running on port ${port}`);
+    console.log(`📖 API documentation available at http://localhost:${port}/docs`);
+    console.log(`📊 Cache stats available at http://localhost:${port}/cache-stats`);
+
+    // Start WebSocket server for realtime notifications
+    try {
+      const wsPort = Number(process.env.WEBSOCKET_PORT) || 8080;
+      socketService.start(wsPort);
+    } catch (e) {
+      console.warn('Failed to start WebSocket server', e);
+    }
+
+    return { fetch: app.fetch, port };
+  })
+  .catch((error) => {
+    console.error("❌ Database connection failed:", error);
+    process.exit(1);
+  });
 
 // Swagger documentation
 app.get("/swagger.json", (c) => c.json(swaggerDoc));
@@ -72,9 +111,18 @@ app.route("/api/users", userRoutes);
 app.route("/api/user-cards", userCardRoutes);
 app.route("/api/collections", userCardRoutes);
 app.route("/api/cards", cardRoutes);
+app.route("/api/cards/scan", enhancedScanRoutes);
+app.route("/api/cards/ai-scan", aiEnhancedScanRoutes);
 app.route("/api/sets", setRoutes);
 app.route("/api/decks", deckRoutes);
 app.route("/api/posts", postRoutes);
+app.route("/api/market", marketRoutes);
+app.route("/api/notification", notificationsRoutes);
+app.route("/api/notifications", notificationsRoutes);
+// WebSocket used for realtime notifications (see src/shared/services/socket.service.ts)
+
+// Mount test routes (no authentication required)
+app.route("/test", testRoutes);
 
 // Mount legacy routes (for backward compatibility and tests)
 app.route("/auth", authRoutes);
@@ -82,9 +130,13 @@ app.route("/users", userRoutes);
 app.route("/user-cards", userCardRoutes);
 app.route("/collections", userCardRoutes); // Legacy collections route
 app.route("/cards", cardRoutes);
+app.route("/cards/scan", enhancedScanRoutes);
+app.route("/cards/ai-scan", aiEnhancedScanRoutes);
 app.route("/sets", setRoutes);
 app.route("/decks", deckRoutes);
 app.route("/posts", postRoutes);
+app.route("/market", marketRoutes);
+app.route("/notifications", notificationsRoutes);
 
 // Export the app for production environments
 export default app;

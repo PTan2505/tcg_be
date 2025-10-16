@@ -1,5 +1,5 @@
 // Server startup file - matches your other PC setup
-import app from './src/index.ts';
+import app from "./src/index.ts";
 
 const port = Number(process.env.PORT) || 3000;
 const host = "0.0.0.0";

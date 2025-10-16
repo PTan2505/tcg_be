@@ -4,17 +4,20 @@ import { cacheMiddleware } from '../../shared/middlewares/cache.middleware';
 import { rateLimitMiddleware, validateParamsMiddleware } from '../../shared/middlewares/security.middleware';
 import { CardController } from './card.controller';
 import { CardService } from './card.service';
+import cardScanRoutes from './cardScan.routes';
 
 const cardService = new CardService();
 const cardController = new CardController(cardService);
 
 export const cardRoutes = new Hono();
 
+// Mount card scanning routes (must be before other routes to avoid conflicts)
+cardRoutes.route('/scan', cardScanRoutes);
+
 // Public routes for testing (no auth required)
 cardRoutes.get('/public/stats', cardController.getCardStats);
 cardRoutes.get('/public/:type/stats', cardController.getCardStats);
 cardRoutes.get('/public/:type', cacheMiddleware(15 * 60 * 1000), cardController.getCardsByGameType);
-cardRoutes.get('/public/:type/search', cacheMiddleware(10 * 60 * 1000), cardController.searchCards);
 cardRoutes.get('/public/product/:productId', cardController.getCardByProductId);
 
 // All authenticated routes require authentication and rate limiting
@@ -34,13 +37,6 @@ cardRoutes.get(
   validateParamsMiddleware(['type']),
   cacheMiddleware(10 * 60 * 1000), // Cache for 10 minutes
   cardController.getCardsByGameType
-);
-
-// Search cards by game type (must come before /:type/:cardId)
-cardRoutes.get(
-  '/:type/search',
-  validateParamsMiddleware(['type']),
-  cardController.searchCards
 );
 
 // Get cards by set (must come before /:cardId)

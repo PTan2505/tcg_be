@@ -1,15 +1,12 @@
 import mongoose, { Document, Schema } from 'mongoose';
 
-export enum CardCategory {
-  POKEMON = "PokemonCard",
-  YUGIOH = "YugiohCard",
-}
-
 export interface IUserCard extends Document {
   userId: Schema.Types.ObjectId;
   cardId: Schema.Types.ObjectId;
-  category: CardCategory;
-  addedAt: Date;
+  gameType: string;
+  setId: Schema.Types.ObjectId;
+  createdAt: Date;
+  updatedAt: Date;
   // You can add more fields like quantity, condition, etc. if needed
 }
 
@@ -23,16 +20,17 @@ const UserCardSchema = new Schema<IUserCard>({
     type: Schema.Types.ObjectId,
     required: true,
     // We'll use refPath to dynamically reference different card collections
-    refPath: 'category'
+    ref: 'Card'
   },
-  category: {
+  gameType: {
     type: String,
-    enum: Object.values(CardCategory),
-    required: true
+    required: true,
+    enum: ['pokemon', 'yugioh', 'onepiece']
   },
-  addedAt: {
-    type: Date,
-    default: Date.now
+  setId: {
+    type: Schema.Types.ObjectId,
+    ref: 'CardSet',
+    required: true
   }
 }, {
   timestamps: true
@@ -40,8 +38,13 @@ const UserCardSchema = new Schema<IUserCard>({
 
 // Create compound unique index
 UserCardSchema.index(
-  { userId: 1, cardId: 1, category: 1 },
+  { userId: 1, cardId: 1 },
   { unique: true }
 );
+
+// Add indexes for filtering
+UserCardSchema.index({ userId: 1, gameType: 1 });
+UserCardSchema.index({ userId: 1, setId: 1 });
+UserCardSchema.index({ userId: 1, gameType: 1, setId: 1 });
 
 export const UserCard = mongoose.model<IUserCard>('UserCard', UserCardSchema);

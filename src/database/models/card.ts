@@ -165,7 +165,7 @@ const CardSchema = new Schema<ICard>({
 });
 
 // Create compound indexes for common queries
-CardSchema.index({ name: 'text' }); // Text search
+CardSchema.index({ name: 'text', cleanName: 'text' }); // Enhanced text search
 CardSchema.index({ gameType: 1, rarity: 1 }); // Filter by game and rarity
 CardSchema.index({ gameType: 1, cardSet: 1 }); // Cards in specific game/set
 CardSchema.index({ categoryId: 1, groupId: 1 }); // TCGPlayer category/group
@@ -173,5 +173,26 @@ CardSchema.index({ gameType: 1, name: 1 }); // Game-specific name search
 CardSchema.index({ cardSet: 1, number: 1 }); // Set and card number
 CardSchema.index({ 'tcgPlayerPrice.marketPrice': 1 }); // Price sorting
 CardSchema.index({ lastPriceUpdate: 1 }); // Find cards needing price updates
+
+// Enhanced indexes for extended data fields
+CardSchema.index({ 'extendedData.extRarity': 1 }); // Rarity filtering
+CardSchema.index({ 'extendedData.extCardType': 1 }); // Card type filtering
+CardSchema.index({ 'extendedData.extColor': 1 }); // Color filtering
+CardSchema.index({ 'extendedData.extAttribute': 1 }); // Attribute filtering
+CardSchema.index({ 'extendedData.extSubtypes': 1 }); // Subtype filtering
+CardSchema.index({ 'extendedData.extCost': 1 }); // Cost filtering/sorting
+CardSchema.index({ 'extendedData.extPower': 1 }); // Power filtering/sorting
+CardSchema.index({ 'extendedData.extLife': 1 }); // Life filtering/sorting
+CardSchema.index({ 'extendedData.extHP': 1 }); // HP filtering/sorting
+CardSchema.index({ 'extendedData.extStage': 1 }); // Stage filtering
+CardSchema.index({ 'extendedData.extMonsterType': 1 }); // Monster type filtering
+CardSchema.index({ 'extendedData.extDefense': 1 }); // Defense filtering/sorting
+CardSchema.index({ 'extendedData.extLevel': 1 }); // Level filtering/sorting
+
+// Compound indexes for common filter combinations
+CardSchema.index({ gameType: 1, 'extendedData.extCardType': 1 }); // Game + card type
+CardSchema.index({ gameType: 1, 'extendedData.extColor': 1 }); // Game + color
+CardSchema.index({ gameType: 1, 'extendedData.extRarity': 1 }); // Game + rarity
+CardSchema.index({ 'extendedData.extCardType': 1, 'extendedData.extCost': 1 }); // Type + cost
 
 export const Card = mongoose.model<ICard>('Card', CardSchema);
