@@ -5115,8 +5115,22 @@ export const swaggerDoc: OpenAPIV3.Document = {
         requestBody: {
           required: true,
           content: {
-            "application/json": {
-              schema: { $ref: "#/components/schemas/MarketListingCreate" },
+            "multipart/form-data": {
+              schema: {
+                type: "object",
+                required: ["gameType", "cardName", "priceTokens"],
+                properties: {
+                  gameType: { type: "string", enum: ["pokemon", "yugioh", "onepiece"] },
+                  cardName: { type: "string" },
+                  setCode: { type: "string" },
+                  priceTokens: { type: "number", format: "float" },
+                  images: {
+                    type: "array",
+                    items: { type: "string", format: "binary" },
+                    description: "Image files to upload (max 5MB each)",
+                  },
+                },
+              },
             },
           },
         },
