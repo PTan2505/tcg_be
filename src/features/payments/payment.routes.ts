@@ -14,6 +14,6 @@ const paymentController = new PaymentController();
 paymentRoutes.post('/create-order', authMiddleware, paymentController.createOrder);
 
 // MoMo notify callback (public)
-paymentRoutes.post('/notify', paymentController.notify);
+paymentRoutes.get('/notify', paymentController.paymentReturn);
 
 export default paymentRoutes;

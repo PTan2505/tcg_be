@@ -58,8 +58,8 @@ export class PaymentController {
         return c.json(createErrorResponse(MESSAGES.ERRORS.INTERNAL_SERVER_ERROR), 500);
       }
 
-      const requestId = `${partnerCode}${Date.now()}`;
       const orderId = order.id.toString();
+      const requestId = orderId;
       const orderInfo = metadata.description;
       const amountStr = amount.toString();
       const requestType = 'captureWallet';
@@ -148,4 +148,15 @@ export class PaymentController {
       return c.text('ERROR');
     }
   };
+
+  paymentReturn = async (c: Context) => {
+    // User is redirected here after payment
+    console.log("aaaa");
+
+    const data =  c.req.query();
+    console.log(data);
+    
+
+    return c.text('Cảm ơn bạn đã thanh toán! Bạn có thể đóng trang này và quay lại ứng dụng.');
+  }
 }
