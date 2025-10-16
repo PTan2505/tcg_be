@@ -24,6 +24,7 @@ import userCardRoutes from "./features/collections/userCard.routes";
 import deckRoutes from "./features/decks/deck.routes";
 import marketRoutes from "./features/market/market.routes";
 import notificationsRoutes from "./features/notifications/notifications.routes";
+import paymentRoutes from "./features/payments/payment.routes";
 import postRoutes from "./features/posts/post.routes";
 import setRoutes from "./features/sets/set.routes";
 import userRoutes from "./features/users/user.routes";
@@ -137,6 +138,7 @@ app.route("/decks", deckRoutes);
 app.route("/posts", postRoutes);
 app.route("/market", marketRoutes);
 app.route("/notifications", notificationsRoutes);
+app.route("/payments", paymentRoutes);
 
 // Export the app for production environments
 export default app;

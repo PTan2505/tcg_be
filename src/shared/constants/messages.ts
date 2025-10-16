@@ -172,6 +172,16 @@ export const MESSAGES = {
     POST_NOT_FOUND_OR_ACCESS_DENIED: "Không tìm thấy bài viết hoặc không có quyền truy cập"
   },
 
+  PAYMENTS:{
+    PAYMENT_SUCCESS: "Thanh toán thành công",
+    PAYMENT_FAILED: "Thanh toán thất bại",
+    INVALID_PAYMENT_METHOD: "Phương thức thanh toán không hợp lệ",
+    INSUFFICIENT_FUNDS: "Không đủ tiền trong tài khoản",
+    ORDER_NOT_FOUND: "Không tìm thấy đơn hàng",
+    REFUND_SUCCESS: "Hoàn tiền thành công",
+    REFUND_FAILED: "Hoàn tiền thất bại"
+  },
+
   // Rate Limiting Messages
   RATE_LIMIT: {
     TOO_MANY_REQUESTS: "Quá nhiều yêu cầu. Vui lòng thử lại sau."
