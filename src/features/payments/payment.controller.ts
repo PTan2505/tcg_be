@@ -24,7 +24,7 @@ export class PaymentController {
 
       if (orderType === 'premium') {
         amount = Number(process.env.PREMIUM_PRICE_VND || '99000');
-        metadata.description = 'Premium subscription';
+        metadata.description = 'Thanh toán gói Premium';
       } else {
         const count = Number(tokenCount || 0);
         if (!count || count <= 0) return c.json(createErrorResponse(MESSAGES.ERRORS.BAD_REQUEST), 400);
@@ -46,6 +46,7 @@ export class PaymentController {
       });
 
       // Build MoMo request
+      
       const partnerCode = process.env.MOMO_PARTNER_CODE || '';
       const accessKey = process.env.MOMO_ACCESS_KEY || '';
       const secretkey = process.env.MOMO_SECRET_KEY || '';
@@ -62,7 +63,9 @@ export class PaymentController {
       const orderInfo = metadata.description;
       const amountStr = amount.toString();
       const requestType = 'captureWallet';
-      const extraData = '';
+      const extraData = "";
+      
+
 
       const rawSignature = `accessKey=${accessKey}&amount=${amountStr}&extraData=${extraData}&ipnUrl=${ipnUrl}&orderId=${orderId}&orderInfo=${orderInfo}&partnerCode=${partnerCode}&redirectUrl=${redirectUrl}&requestId=${requestId}&requestType=${requestType}`;
       const signature = crypto.createHmac('sha256', secretkey).update(rawSignature).digest('hex');
