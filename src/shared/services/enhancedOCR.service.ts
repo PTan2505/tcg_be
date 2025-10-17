@@ -4,6 +4,8 @@
  */
 
 import { ImageAnnotatorClient } from '@google-cloud/vision';
+import fs from 'fs';
+import { GoogleAuth } from 'google-auth-library';
 import sharp from 'sharp';
 
 const logger = {
@@ -32,9 +34,21 @@ export class EnhancedOCRService {
   private visionClient: ImageAnnotatorClient;
 
   constructor() {
-    this.visionClient = new ImageAnnotatorClient({
-      keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS
-    });
+    const credPath = process.env.GOOGLE_APPLICATION_CREDENTIALS;
+    let clientOptions: any = {};
+    if (credPath) {
+      try {
+        const raw = fs.readFileSync(credPath, 'utf8');
+        const parsed = JSON.parse(raw);
+        // Use GoogleAuth constructed with credentials so the auth object
+        // exposes methods expected by google-gax (eg. getUniverseDomain)
+        clientOptions.auth = new GoogleAuth({ credentials: parsed });
+      } catch (err) {
+        logger.warn('Failed to load GOOGLE_APPLICATION_CREDENTIALS, falling back to default application credentials', err);
+      }
+    }
+
+    this.visionClient = new ImageAnnotatorClient(clientOptions);
   }
 
   /**
