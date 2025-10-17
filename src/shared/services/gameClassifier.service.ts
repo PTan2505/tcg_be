@@ -4,6 +4,8 @@
  */
 
 import { ImageAnnotatorClient } from '@google-cloud/vision';
+import fs from 'fs';
+import { GoogleAuth } from 'google-auth-library';
 import sharp from 'sharp';
 
 // Simple logger
@@ -28,9 +30,22 @@ export class GameClassifierService {
   private visionClient: ImageAnnotatorClient;
 
   constructor() {
-    this.visionClient = new ImageAnnotatorClient({
-      keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS
-    });
+    // Prefer explicit credentials object when GOOGLE_APPLICATION_CREDENTIALS points to a file
+    const credPath = process.env.GOOGLE_APPLICATION_CREDENTIALS;
+    let clientOptions: any = {};
+    if (credPath) {
+      try {
+        const raw = fs.readFileSync(credPath, 'utf8');
+        const parsed = JSON.parse(raw);
+        // Construct a GoogleAuth instance with the parsed credentials so
+        // google-gax receives an auth object that implements required helpers
+        clientOptions.auth = new GoogleAuth({ credentials: parsed });
+      } catch (err) {
+        logger.warn('Failed to load GOOGLE_APPLICATION_CREDENTIALS, falling back to default application credentials', err);
+      }
+    }
+
+    this.visionClient = new ImageAnnotatorClient(clientOptions);
   }
 
   /**
