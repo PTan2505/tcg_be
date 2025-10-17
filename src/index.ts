@@ -20,6 +20,7 @@ import aiEnhancedScanRoutes from "./features/cards/aiEnhancedCardScan.routes";
 import cardRoutes from "./features/cards/card.routes";
 import enhancedScanRoutes from "./features/cards/enhancedCardScan.routes";
 import testRoutes from "./features/cards/test.routes";
+import chatbotRoutes from './features/chatbot/chatbot.routes';
 import userCardRoutes from "./features/collections/userCard.routes";
 import deckRoutes from "./features/decks/deck.routes";
 import marketRoutes from "./features/market/market.routes";
@@ -124,7 +125,11 @@ app.route("/api/posts", postRoutes);
 app.route("/api/market", marketRoutes);
 app.route("/api/notification", notificationsRoutes);
 app.route("/api/notifications", notificationsRoutes);
+app.route('/api/chatbot', chatbotRoutes);
 // WebSocket used for realtime notifications (see src/shared/services/socket.service.ts)
+
+// Chatbot routes
+app.route('/chatbot', chatbotRoutes);
 
 // Mount test routes (no authentication required)
 app.route("/test", testRoutes);
@@ -143,6 +148,7 @@ app.route("/posts", postRoutes);
 app.route("/market", marketRoutes);
 app.route("/notifications", notificationsRoutes);
 app.route("/payments", paymentRoutes);
+
 
 // Export the app for production environments
 export default app;

@@ -68,6 +68,10 @@ export const swaggerDoc: OpenAPIV3.Document = {
       name: "Card Scanning",
       description: "AI-powered card scanning with OCR and recognition",
     },
+    {
+      name: "Chatbot",
+      description: "AI chatbot for Trading Card Game (Vietnamese only, TCG-focused)",
+    },
   ],
   paths: {
     "/freemium/limits": {
@@ -141,6 +145,47 @@ export const swaggerDoc: OpenAPIV3.Document = {
           },
           "400": { $ref: "#/components/responses/BadRequest" },
           "401": { $ref: "#/components/responses/Unauthorized" },
+        },
+      },
+    },
+    "/chatbot/stream": {
+      post: {
+        tags: ["Chatbot"],
+        summary: "Stream chatbot answer (Vietnamese, TCG-only)",
+        description:
+          "Accepts a question in Vietnamese and streams back an answer in Vietnamese. The chatbot only answers questions related to Trading Card Games; for unrelated questions it returns a short apologetic message in Vietnamese.",
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                required: ["question"],
+                properties: {
+                  question: {
+                    type: "string",
+                    description: "User question in Vietnamese about TCG",
+                    example: "Hướng dẫn build deck Pokemon cho người mới",
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "200": {
+            description: "Streaming response via Server-Sent Events (text/event-stream). Each data: line contains a chunk of the answer. Final event 'done' indicates completion.",
+            content: {
+              "text/event-stream": {
+                schema: {
+                  type: "string",
+                  description: "SSE stream payload (data: <chunk>)",
+                },
+              },
+            },
+          },
+          "400": { $ref: "#/components/responses/BadRequest" },
+          "500": { $ref: "#/components/responses/InternalError" },
         },
       },
     },
