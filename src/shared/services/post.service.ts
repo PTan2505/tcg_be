@@ -69,6 +69,16 @@ export class PostService {
   }> {
     const skip = (page - 1) * limit;
 
+    // Disallow reactions (social interactions) for freemium users
+    try {
+      const user = await UserModel.findById(userId.toString());
+      if (user && !user.isPremium) {
+        throw new AppError(getMessage("PREMIUM.SOCIAL_DISABLED"), 403);
+      }
+    } catch (e: any) {
+      if (e instanceof AppError) throw e;
+    }
+
     // Get user's friends for privacy filtering
     const friendships = await FriendshipModel.find({
       $or: [
@@ -111,7 +121,10 @@ export class PostService {
     // Fetch all reactions by this user for the visible posts in one query for efficiency.
     const postIds = (posts as any[]).map((p) => p._id).filter(Boolean);
     if (postIds.length > 0) {
-      const reactions = await PostReactionModel.find({ post: { $in: postIds }, user: userId }).lean();
+      const reactions = await PostReactionModel.find({
+        post: { $in: postIds },
+        user: userId,
+      }).lean();
       const reactedSet = new Set(reactions.map((r: any) => r.post.toString()));
       const postsAny = posts as any[];
       for (const p of postsAny) {
