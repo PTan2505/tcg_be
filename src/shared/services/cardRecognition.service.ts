@@ -136,7 +136,9 @@ export class CardRecognitionService {
 
     } catch (error: any) {
       console.error('Card recognition failed:', error);
-      throw new Error(`Failed to recognize card: ${error?.message || 'Unknown error'}`);
+      const { getMessage } = require('../constants/messages');
+      const AppError = require('../errors/AppError').default;
+      throw new AppError(getMessage('CARDS.RECOGNITION_FAILED') + `: ${error?.message || 'Unknown error'}`, 500);
     }
   }
 
@@ -147,7 +149,9 @@ export class CardRecognitionService {
   ): CardRecognitionResult {
     const patterns = this.gamePatterns[gameType];
     if (!patterns) {
-      throw new Error(`Unsupported game type: ${gameType}`);
+      const { getMessage } = require('../constants/messages');
+      const AppError = require('../errors/AppError').default;
+      throw new AppError(getMessage('CARDS.UNSUPPORTED_GAME_TYPE') + `: ${gameType}`, 400);
     }
 
     const allText = extractedText.join(' ');

@@ -15,6 +15,7 @@ export interface User {
   passwordResetOTPExpires?: Date;
   tokenBalance: number;
   isPremium: boolean;
+  isAdmin: boolean;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -81,6 +82,10 @@ const userSchema = new Schema<User>(
       min: 0,
     },
     isPremium:{
+      type: Boolean,
+      default: false,
+    },
+    isAdmin: {
       type: Boolean,
       default: false,
     },

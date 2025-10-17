@@ -3,6 +3,9 @@ import CommentModel from "../../database/models/comment";
 import FriendshipModel from "../../database/models/friendship";
 import PostModel, { Post } from "../../database/models/post";
 import PostReactionModel from "../../database/models/postReaction";
+import UserModel from '../../database/models/user';
+import { getMessage } from "../constants/messages";
+import AppError from "../errors/AppError";
 import { NotificationService } from "./notification.service";
 import { S3Service } from "./s3.service";
 
@@ -27,6 +30,16 @@ export class PostService {
     privacy?: "public" | "friends" | "private";
     tags?: Types.ObjectId[];
   }): Promise<Post> {
+    // Disallow posting for freemium users
+    try {
+      const user = await UserModel.findById((data.author as any).toString());
+      if (user && !user.isPremium) {
+        throw new AppError(getMessage('PREMIUM.SOCIAL_DISABLED'), 403);
+      }
+    } catch (e: any) {
+      if (e instanceof AppError) throw e;
+    }
+
     const post = new PostModel(data);
     const savedPost = await post.save();
 
@@ -201,14 +214,26 @@ export class PostService {
     likesCount: number;
   }> {
     const post = await PostModel.findById(postId);
-    if (!post) throw new Error("Post not found");
+    if (!post) {
+      throw new AppError(getMessage('POSTS.POST_NOT_FOUND'), 404);
+    }
 
     const existingReaction = await PostReactionModel.findOne({
       post: postId,
       user: userId,
     });
 
-    let action: "added" | "removed";
+    let action: 'added' | 'removed';
+    
+    // Disallow reactions (social interactions) for freemium users
+    try {
+      const user = await UserModel.findById(userId.toString());
+      if (user && !user.isPremium) {
+        throw new AppError(getMessage('PREMIUM.SOCIAL_DISABLED'), 403);
+      }
+    } catch (e: any) {
+      if (e instanceof AppError) throw e;
+    }
 
     if (!existingReaction) {
       // Add new like reaction

@@ -123,7 +123,9 @@ class AICardMemoryService {
     await this.ensureLoaded();
 
     if (!this.memoryCache) {
-      throw new Error('AI Memory not initialized');
+      const { getMessage } = require('../constants/messages');
+      const AppError = require('../errors/AppError').default;
+      throw new AppError(getMessage('AI.MEMORY_NOT_INITIALIZED'), 500);
     }
 
     const gameMemory = this.memoryCache[gameType];

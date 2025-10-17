@@ -31,11 +31,15 @@ import userRoutes from "./features/users/user.routes";
 import { initializeSuperuser } from "./scripts/initSuperuser";
 import { swaggerDoc } from "./shared/config/swagger";
 import { getCacheStats } from "./shared/middlewares/cache.middleware";
+import { errorHandler } from './shared/middlewares/error.middleware';
 import { aiCardMemoryService } from "./shared/services/aiCardMemory.service";
 import { socketService } from './shared/services/socket.service';
 
 // Create Hono app
 const app = new Hono();
+
+// Global error handler
+app.use('*', errorHandler);
 
 // Configure CORS for React Native Expo - Allow all origins
 app.use("/*", cors({

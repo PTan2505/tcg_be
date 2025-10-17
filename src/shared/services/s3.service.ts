@@ -33,7 +33,9 @@ export class S3Service {
       return `https://${this.bucketName}.s3.${process.env.AWS_REGION || "us-east-1"}.amazonaws.com/${key}`;
     } catch (error) {
       console.error("Error uploading file to S3:", error);
-      throw new Error("Failed to upload file");
+      const { getMessage } = require('../constants/messages');
+      const AppError = require('../errors/AppError').default;
+      throw new AppError(getMessage('ERRORS.INTERNAL_SERVER_ERROR'), 500, { cause: error });
     }
   }
 
@@ -51,7 +53,9 @@ export class S3Service {
       await this.s3Client.send(command);
     } catch (error) {
       console.error("Error deleting file from S3:", error);
-      throw new Error("Failed to delete file");
+      const { getMessage } = require('../constants/messages');
+      const AppError = require('../errors/AppError').default;
+      throw new AppError(getMessage('ERRORS.INTERNAL_SERVER_ERROR'), 500, { cause: error });
     }
   }
 
@@ -72,7 +76,9 @@ export class S3Service {
       return { uploadUrl, fileUrl };
     } catch (error) {
       console.error("Error generating signed URL:", error);
-      throw new Error("Failed to generate upload URL");
+      const { getMessage } = require('../constants/messages');
+      const AppError = require('../errors/AppError').default;
+      throw new AppError(getMessage('ERRORS.INTERNAL_SERVER_ERROR'), 500, { cause: error });
     }
   }
 }

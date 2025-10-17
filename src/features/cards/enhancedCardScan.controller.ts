@@ -1,6 +1,7 @@
 import { Context } from "hono";
 import { Types } from "mongoose";
 import { ScanHistory } from "../../database/models/scanHistory";
+import { getMessage } from "../../shared/constants/messages";
 import { aiCardMemoryService } from "../../shared/services/aiCardMemory.service";
 import { cardNumberFuzzySearch } from "../../shared/services/cardNumberFuzzySearch.service";
 import { enhancedOCR } from "../../shared/services/enhancedOCR.service";
@@ -94,6 +95,18 @@ export class EnhancedCardScanController {
           success: false,
           error: "Image file is required"
         }, 400);
+      }
+
+      // Enforce freemium scan limit (10 scans)
+      try {
+        if (user && !user.isPremium) {
+          const scanCount = await (await import('../../database/models/scanHistory')).ScanHistory.countDocuments({ userId: user._id });
+          if (scanCount >= 10) {
+            return c.json({ success: false, error: getMessage('PREMIUM.SCAN_LIMIT_REACHED') }, 403);
+          }
+        }
+      } catch (e) {
+        console.warn('Could not enforce scan limit (continuing):', e);
       }
 
       // Convert image to buffer

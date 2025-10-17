@@ -162,7 +162,9 @@ export class SetService implements ISetService {
   async getSetById(setId: string): Promise<ICardSet> {
     const set = await CardSet.findById(setId).lean();
     if (!set) {
-      throw new Error(`Set with ID ${setId} not found`);
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('SETS.SET_NOT_FOUND') + `: ${setId}`, 404);
     }
     return set;
   }
@@ -170,7 +172,9 @@ export class SetService implements ISetService {
   async getSetByGroupId(groupId: number): Promise<ICardSet> {
     const set = await CardSet.findOne({ groupId }).lean();
     if (!set) {
-      throw new Error(`Set with group ID ${groupId} not found`);
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('SETS.SET_NOT_FOUND') + `: group ${groupId}`, 404);
     }
     return set;
   }

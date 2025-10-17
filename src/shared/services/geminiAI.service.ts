@@ -40,7 +40,9 @@ class GeminiAIService {
 
   constructor() {
     if (!process.env.GEMINI_API_KEY) {
-      throw new Error('GEMINI_API_KEY is required in environment variables');
+      const { getMessage } = require('../constants/messages');
+      const AppError = require('../errors/AppError').default;
+      throw new AppError(getMessage('ERRORS.INTERNAL_SERVER_ERROR') + ': GEMINI_API_KEY is required', 500);
     }
     
     this.genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
@@ -239,7 +241,9 @@ Analyze carefully and provide the JSON response:`;
       // Extract JSON from AI response (remove any markdown or extra text)
       const jsonMatch = aiResponse.match(/\{[\s\S]*\}/);
       if (!jsonMatch) {
-        throw new Error('No JSON found in AI response');
+        const { getMessage } = require('../constants/messages');
+        const AppError = require('../errors/AppError').default;
+        throw new AppError(getMessage('ERRORS.INTERNAL_SERVER_ERROR') + ': No JSON found in AI response', 502);
       }
       
       const parsed = JSON.parse(jsonMatch[0]);

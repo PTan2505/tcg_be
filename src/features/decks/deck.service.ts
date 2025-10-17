@@ -1,7 +1,10 @@
 import mongoose from 'mongoose';
 import { Card } from '../../database/models/card';
 import { Deck, IDeck } from '../../database/models/deck';
-import { MESSAGES } from '../../shared/constants/messages';
+import UserModel from '../../database/models/user';
+import PREMIUM_CONFIG from '../../shared/config/premium.config';
+import { getMessage } from '../../shared/constants/messages';
+import AppError from '../../shared/errors/AppError';
 import { GameType } from '../cards/card.service';
 
 export interface CreateDeckOptions {
@@ -141,6 +144,15 @@ export class DeckService {
   }
 
   async createDeck(userId: string, options: CreateDeckOptions): Promise<IDeck> {
+    // Enforce freemium deck limit (3 decks)
+    const user = await UserModel.findById(userId);
+    if (user && !user.isPremium) {
+      const existing = await Deck.countDocuments({ userId: new mongoose.Types.ObjectId(userId) });
+      if (existing >= PREMIUM_CONFIG.DECK_LIMIT_FREEMIUM) {
+        throw new AppError(getMessage('PREMIUM.DECK_LIMIT_REACHED'), 403);
+      }
+    }
+
     const deck = new Deck({
       ...options,
       userId: new mongoose.Types.ObjectId(userId),
@@ -161,7 +173,7 @@ export class DeckService {
     });
 
     if (!deck) {
-      throw new Error("Deck not found or access denied");
+      throw new AppError(getMessage('DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED'), 404);
     }
 
     // If caller supplies cards, ensure all cards belong to same gameType as the deck
@@ -171,23 +183,23 @@ export class DeckService {
       const seen = new Set<string>();
       for (const id of cardIds) {
         if (seen.has(id)) {
-          throw new Error(MESSAGES.VALIDATION.DUPLICATE_CARD_IN_PAYLOAD);
+          throw new AppError(getMessage('VALIDATION.DUPLICATE_CARD_IN_PAYLOAD'), 400);
         }
         seen.add(id);
       }
       if (cardIds.length !== options.cards.length) {
-        throw new Error(MESSAGES.VALIDATION.CARD_ID_REQUIRED);
+        throw new AppError(getMessage('VALIDATION.CARD_ID_REQUIRED'), 400);
       }
 
       const cards = await Card.find({ _id: { $in: cardIds } }).select('gameType').lean();
       if (cards.length !== cardIds.length) {
-        throw new Error(MESSAGES.CARDS.CARD_NOT_FOUND);
+        throw new AppError(getMessage('CARDS.CARD_NOT_FOUND'), 404);
       }
 
       const deckGameType = deck.gameType;
       const mismatch = cards.some((card: any) => String(card.gameType) !== String(deckGameType));
       if (mismatch) {
-        throw new Error(MESSAGES.VALIDATION.GAME_TYPE_INVALID);
+        throw new AppError(getMessage('VALIDATION.GAME_TYPE_INVALID'), 400);
       }
     }
 
@@ -202,7 +214,7 @@ export class DeckService {
     });
 
     if (result.deletedCount === 0) {
-      throw new Error("Deck not found or access denied");
+      throw new AppError(getMessage('DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED'), 404);
     }
   }
 
@@ -229,7 +241,7 @@ export class DeckService {
     const deck = await this.getDeckById(deckId, userId);
 
     if (!deck) {
-      throw new Error("Deck not found or access denied");
+      throw new AppError(getMessage('DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED'), 404);
     }
 
     const totalCards = deck.cards.reduce((sum, card) => sum + card.quantity, 0);
@@ -287,13 +299,13 @@ export class DeckService {
     });
 
     if (!deck) {
-      throw new Error("Deck not found or access denied");
+      throw new AppError(getMessage('DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED'), 404);
     }
 
     // Check if card exists
     const card = await Card.findById(cardId);
     if (!card) {
-      throw new Error("Card not found");
+      throw new AppError(getMessage('CARDS.CARD_NOT_FOUND'), 404);
     }
 
     // Check if card is already in deck
@@ -308,7 +320,7 @@ export class DeckService {
       // Add new card
       // push string id directly and let Mongoose cast it to ObjectId on save
       deck.cards.push({
-        cardId: cardId as any,
+        cardId: new mongoose.Types.ObjectId(cardId),
         quantity,
       });
     }
@@ -328,7 +340,7 @@ export class DeckService {
     });
 
     if (!deck) {
-      throw new Error("Deck not found or access denied");
+      throw new AppError(getMessage('DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED'), 404);
     }
 
     const cardIndex = deck.cards.findIndex(
@@ -336,7 +348,7 @@ export class DeckService {
     );
 
     if (cardIndex === -1) {
-      throw new Error("Card not found in deck");
+      throw new AppError(getMessage('VALIDATION.CARD_ID_REQUIRED') || getMessage('VALIDATION.CARD_ID_REQUIRED'), 404);
     }
 
     const currentQuantity = deck.cards[cardIndex].quantity;
@@ -365,14 +377,23 @@ export class DeckService {
     });
 
     if (!originalDeck) {
-      throw new Error("Deck not found or access denied");
+      throw new AppError(getMessage('DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED'), 404);
+    }
+
+    // Enforce freemium deck limit (3 decks) for duplication
+    const user = await UserModel.findById(userId);
+    if (user && !user.isPremium) {
+      const existing = await Deck.countDocuments({ userId: new mongoose.Types.ObjectId(userId) });
+      if (existing >= PREMIUM_CONFIG.DECK_LIMIT_FREEMIUM) {
+        throw new AppError(getMessage('PREMIUM.DECK_LIMIT_REACHED'), 403);
+      }
     }
 
     const duplicatedDeck = new Deck({
       name: newName || `${originalDeck.name} (Copy)`,
       description: originalDeck.description,
       gameType: originalDeck.gameType,
-  userId: new mongoose.Types.ObjectId(userId),
+      userId: new mongoose.Types.ObjectId(userId),
       cards: [...originalDeck.cards],
       isPublic: false, // Duplicated decks are private by default
     });

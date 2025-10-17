@@ -284,7 +284,9 @@ export class VisualMatchingService {
       return normalizedImage;
 
     } catch (error) {
-      throw new Error(`Failed to download image from ${imageUrl}: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      const { getMessage } = require('../constants/messages');
+      const AppError = require('../errors/AppError').default;
+      throw new AppError(getMessage('VISUAL.FAILED_DOWNLOAD') + `: ${imageUrl} - ${error instanceof Error ? error.message : 'Unknown error'}`, 400);
     }
   }
 

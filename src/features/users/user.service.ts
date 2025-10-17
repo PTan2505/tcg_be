@@ -15,6 +15,7 @@ export interface IUserService {
   ): Promise<void>;
   changeAvatar(userId: string, imageUrl: string): Promise<void>;
   getProfile(userId: string): Promise<Document & User>;
+  setPremiumStatus(id: string, flags: { isPremium?: boolean; isAdmin?: boolean }): Promise<Document & User>;
 }
 
 export class UserService implements IUserService {
@@ -31,7 +32,9 @@ export class UserService implements IUserService {
   async getUserById(id: string): Promise<Document & User> {
     const user = await UserModel.findById(id);
     if (!user) {
-      throw new Error("User not found");
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('AUTH.USER_NOT_FOUND'), 404);
     }
     return user;
   }
@@ -39,7 +42,9 @@ export class UserService implements IUserService {
   async updateUser(id: string, data: Partial<User>): Promise<Document & User> {
     const user = await UserModel.findById(id);
     if (!user) {
-      throw new Error("User not found");
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('AUTH.USER_NOT_FOUND'), 404);
     }
 
     // Don't allow updates to sensitive fields
@@ -55,7 +60,9 @@ export class UserService implements IUserService {
   async changeAvatar(userId: string, imageUrl: string): Promise<void> {
     const user = await UserModel.findById(userId);
     if (!user) {
-      throw new Error("User not found");
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('AUTH.USER_NOT_FOUND'), 404);
     }
 
     user.set("avatarUrl", imageUrl);
@@ -65,7 +72,9 @@ export class UserService implements IUserService {
   async deleteUser(id: string): Promise<Document & User> {
     const user = await UserModel.findByIdAndDelete(id);
     if (!user) {
-      throw new Error("User not found");
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('AUTH.USER_NOT_FOUND'), 404);
     }
     return user;
   }
@@ -77,7 +86,9 @@ export class UserService implements IUserService {
   ): Promise<void> {
     const user = await UserModel.findById(userId);
     if (!user) {
-      throw new Error("User not found");
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('AUTH.USER_NOT_FOUND'), 404);
     }
 
     // Verify current password
@@ -86,7 +97,9 @@ export class UserService implements IUserService {
       user.get("password")
     );
     if (!isValidPassword) {
-      throw new Error("Current password is incorrect");
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('USERS.CURRENT_PASSWORD_INCORRECT') || 'Current password is incorrect', 400);
     }
 
     // Hash new password
@@ -101,8 +114,23 @@ export class UserService implements IUserService {
   async getProfile(userId: string): Promise<Document & User> {
     const user = await UserModel.findById(userId);
     if (!user) {
-      throw new Error("User not found");
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('AUTH.USER_NOT_FOUND'), 404);
     }
+    return user;
+  }
+
+  async setPremiumStatus(id: string, flags: { isPremium?: boolean; isAdmin?: boolean }): Promise<Document & User> {
+    const user = await UserModel.findById(id);
+    if (!user) {
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('AUTH.USER_NOT_FOUND'), 404);
+    }
+    if (typeof flags.isPremium !== 'undefined') user.isPremium = !!flags.isPremium;
+    if (typeof flags.isAdmin !== 'undefined') user.isAdmin = !!flags.isAdmin;
+    await user.save();
     return user;
   }
 }

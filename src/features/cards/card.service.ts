@@ -426,7 +426,9 @@ export class CardService implements ICardService {
       .lean();
 
     if (!card) {
-      throw new Error(`Card with ID ${cardId} not found`);
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('CARDS.CARD_NOT_FOUND') + `: ${cardId}`, 404);
     }
 
     return card as ICard;
@@ -438,7 +440,9 @@ export class CardService implements ICardService {
       .lean();
 
     if (!card) {
-      throw new Error(`Card with ProductId ${productId} not found`);
+      const { getMessage } = require('../../shared/constants/messages');
+      const AppError = require('../../shared/errors/AppError').default;
+      throw new AppError(getMessage('CARDS.CARD_NOT_FOUND') + `: productId ${productId}`, 404);
     }
 
     return card as ICard;

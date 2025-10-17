@@ -41,6 +41,10 @@ export const MESSAGES = {
     GROUP_ID_REQUIRED: "ID nhóm hợp lệ là bắt buộc",
     INVALID_REQUEST_PARAMETERS: "Tham số yêu cầu không hợp lệ",
     REQUIRED_FIELD: (field: string) => `${field} là bắt buộc`,
+  CANNOT_BLOCK_SELF: "Không thể chặn chính bạn",
+  CARD_NOT_FOUND_IN_DECK: "Không tìm thấy thẻ trong deck",
+  INVALID_OBJECT_ID: "ID không hợp lệ",
+  CANNOT_CONVERT_TO_OBJECT_ID: "Không thể chuyển sang ObjectId",
     
     // Zod validation messages in Vietnamese
     ZOD_MESSAGES: {
@@ -85,6 +89,29 @@ export const MESSAGES = {
     STATS_FAILED: "Không thể lấy thống kê thẻ",
     CARDS_BY_SET_SUCCESS: "Lấy thẻ theo set thành công",
     CARDS_BY_SET_FAILED: "Không thể lấy thẻ theo set"
+    ,
+    RECOGNITION_FAILED: "Không thể nhận diện thẻ",
+    UNSUPPORTED_GAME_TYPE: "Loại game không được hỗ trợ"
+  },
+
+  // OCR specific messages
+  OCR: {
+    INIT_FAILED: "Khởi tạo dịch vụ OCR thất bại",
+    NO_SERVICE: "Không có dịch vụ OCR khả dụng",
+    EXTRACT_TEXT_FAILED: "Không thể trích xuất văn bản từ ảnh",
+    TESSERACT_NOT_INITIALIZED: "Tesseract chưa được khởi tạo. Vui lòng chờ",
+    TESSERACT_FAILED: "Tesseract OCR thất bại"
+  },
+
+  // Visual matching / similarity messages
+  VISUAL: {
+    FAILED_EXTRACT_FEATURES: "Không thể trích xuất đặc trưng ảnh",
+    FAILED_DOWNLOAD: "Không thể tải ảnh từ URL"
+  },
+
+  // AI memory messages
+  AI: {
+    MEMORY_NOT_INITIALIZED: "Bộ nhớ AI chưa được khởi tạo"
   },
 
   // Set Messages
@@ -126,6 +153,24 @@ export const MESSAGES = {
     DECK_NOT_FOUND_OR_ACCESS_DENIED: "Không tìm thấy deck hoặc không có quyền truy cập"
   },
 
+  // Premium / Freemium Messages
+  PREMIUM: {
+    DECK_LIMIT_REACHED: "Giới hạn deck cho tài khoản freemium đã đạt (tối đa 3). Vui lòng nâng cấp lên Premium để tạo thêm.",
+    SCAN_LIMIT_REACHED: "Giới hạn quét thẻ cho tài khoản freemium đã đạt (tối đa 10). Vui lòng nâng cấp lên Premium để quét thêm.",
+    COLLECTION_LIMIT_REACHED: "Giới hạn bộ sưu tập cho tài khoản freemium đã đạt (tối đa 30 cho mỗi game). Vui lòng nâng cấp lên Premium để thêm thẻ.",
+    SOCIAL_DISABLED: "Tính năng mạng xã hội bị vô hiệu cho tài khoản freemium. Vui lòng nâng cấp lên Premium để sử dụng.",
+    MARKET_DISABLED: "Tính năng thị trường bị vô hiệu cho tài khoản freemium. Vui lòng nâng cấp lên Premium để sử dụng.",
+  },
+
+  // Market-specific error messages
+  MARKET: {
+    LISTING_NOT_FOUND: "Không tìm thấy tin rao hoặc không có quyền truy cập",
+    LISTING_NOT_AVAILABLE: "Tin rao không khả dụng",
+    INSUFFICIENT_TOKENS: "Số dư token không đủ",
+    TRANSACTION_NOT_SHIPPED: "Giao dịch chưa được gửi (chưa shipped)",
+    SELLER_NOT_FOUND: "Người bán không tồn tại"
+  },
+
   // User Messages
   USERS: {
     PROFILE_SUCCESS: "Lấy thông tin hồ sơ thành công",
@@ -140,6 +185,12 @@ export const MESSAGES = {
     CHANGE_AVATAR_FAILED: "Không thể đổi ảnh đại diện",
     PASSWORD_MISMATCH: "Mật khẩu xác nhận không khớp",
     CURRENT_PASSWORD_INCORRECT: "Mật khẩu hiện tại không đúng"
+  },
+  // Authentication extras
+  AUTH_EXTRAS: {
+    EMAIL_ALREADY_EXISTS: "Email đã được sử dụng",
+    USERNAME_ALREADY_EXISTS: "Tên đăng nhập đã được sử dụng",
+    INVALID_CREDENTIALS: "Thông tin xác thực không hợp lệ"
   },
 
   // Comment Messages

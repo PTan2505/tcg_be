@@ -1,5 +1,7 @@
 import { Types } from 'mongoose';
 import UserModel from '../../database/models/user';
+import { getMessage } from '../../shared/constants/messages';
+import AppError from '../../shared/errors/AppError';
 import { NotificationService } from '../../shared/services/notification.service';
 import { socketService } from '../../shared/services/socket.service';
 import MarketListingModel from './market.model';
@@ -12,6 +14,12 @@ class MarketService {
     this.notificationService = new NotificationService();
   }
   async createListing(sellerId: string, payload: any) {
+    // Disallow market listings for freemium users
+    const seller = await UserModel.findById(sellerId);
+    if (seller && !seller.isPremium) {
+      throw new AppError(getMessage('PREMIUM.MARKET_DISABLED'), 403);
+    }
+
     const listing = await MarketListingModel.create({
       sellerId: new Types.ObjectId(sellerId),
       gameType: payload.gameType,
@@ -24,28 +32,34 @@ class MarketService {
   }
 
   async updateListing(listingId: string, sellerId: string, payload: any) {
-    const listing = await MarketListingModel.findOne({ _id: listingId, sellerId: new Types.ObjectId(sellerId) });
-    if (!listing) throw new Error('Listing not found or access denied');
+  const listing = await MarketListingModel.findOne({ _id: listingId, sellerId: new Types.ObjectId(sellerId) });
+  if (!listing) throw new AppError(getMessage('MARKET.LISTING_NOT_FOUND'), 404);
     Object.assign(listing, payload);
     return await listing.save();
   }
 
   async removeListing(listingId: string, sellerId: string) {
-    const listing = await MarketListingModel.findOne({ _id: listingId, sellerId: new Types.ObjectId(sellerId) });
-    if (!listing) throw new Error('Listing not found or access denied');
+  const listing = await MarketListingModel.findOne({ _id: listingId, sellerId: new Types.ObjectId(sellerId) });
+  if (!listing) throw new AppError(getMessage('MARKET.LISTING_NOT_FOUND'), 404);
     listing.status = 'removed';
     return await listing.save();
   }
 
   async buyListing(listingId: string, buyerId: string) {
     // Reserve listing and create transaction; hold tokens from buyer by decrementing balance (simple hold)
-    const listing = await MarketListingModel.findById(listingId);
-    if (!listing) throw new Error('Listing not found');
-    if (listing.status !== 'available') throw new Error('Listing not available');
+  const listing = await MarketListingModel.findById(listingId);
+  if (!listing) throw new AppError(getMessage('MARKET.LISTING_NOT_FOUND'), 404);
+  if (listing.status !== 'available') throw new AppError(getMessage('MARKET.LISTING_NOT_AVAILABLE'), 400);
 
     const buyer = await UserModel.findById(buyerId);
-    if (!buyer) throw new Error('Buyer not found');
-    if (buyer.tokenBalance < listing.priceTokens) throw new Error('Insufficient token balance');
+    if (!buyer) throw new AppError(getMessage('AUTH.USER_NOT_FOUND'), 404);
+
+    // Disallow marketplace purchases for freemium users
+    if (!buyer.isPremium) {
+      throw new AppError(getMessage('PREMIUM.MARKET_DISABLED'), 403);
+    }
+
+  if (buyer.tokenBalance < listing.priceTokens) throw new AppError(getMessage('MARKET.INSUFFICIENT_TOKENS'), 400);
 
     // decrement buyer balance (hold)
     buyer.tokenBalance -= listing.priceTokens;
@@ -81,8 +95,14 @@ class MarketService {
   }
 
   async markShipped(transactionId: string, sellerId: string) {
-    const tx = await MarketTransactionModel.findOne({ _id: transactionId, sellerId: new Types.ObjectId(sellerId) });
-    if (!tx) throw new Error('Transaction not found or access denied');
+    // Ensure seller is premium
+    const seller = await UserModel.findById(sellerId);
+    if (seller && !seller.isPremium) {
+      throw new AppError(getMessage('PREMIUM.MARKET_DISABLED'), 403);
+    }
+
+  const tx = await MarketTransactionModel.findOne({ _id: transactionId, sellerId: new Types.ObjectId(sellerId) });
+  if (!tx) throw new AppError(getMessage('MARKET.LISTING_NOT_FOUND'), 404);
     tx.status = 'shipped';
     await tx.save();
 
@@ -103,16 +123,22 @@ class MarketService {
   }
 
   async confirmDelivered(transactionId: string, buyerId: string) {
-    const tx = await MarketTransactionModel.findOne({ _id: transactionId, buyerId: new Types.ObjectId(buyerId) });
-    if (!tx) throw new Error('Transaction not found or access denied');
-    if (tx.status !== 'shipped') throw new Error('Transaction not shipped yet');
+    // Ensure buyer is premium
+    const buyer = await UserModel.findById(buyerId);
+    if (buyer && !buyer.isPremium) {
+      throw new AppError(getMessage('PREMIUM.MARKET_DISABLED'), 403);
+    }
+
+  const tx = await MarketTransactionModel.findOne({ _id: transactionId, buyerId: new Types.ObjectId(buyerId) });
+  if (!tx) throw new AppError(getMessage('MARKET.LISTING_NOT_FOUND'), 404);
+  if (tx.status !== 'shipped') throw new AppError(getMessage('MARKET.TRANSACTION_NOT_SHIPPED'), 400);
 
     tx.status = 'delivered';
     await tx.save();
 
     // transfer 95% to seller
-    const seller = await UserModel.findById(tx.sellerId);
-    if (!seller) throw new Error('Seller not found');
+  const seller = await UserModel.findById(tx.sellerId);
+  if (!seller) throw new AppError(getMessage('MARKET.SELLER_NOT_FOUND'), 404);
     const payout = Math.floor(tx.priceTokens * 0.95);
     seller.tokenBalance += payout;
     await seller.save();
