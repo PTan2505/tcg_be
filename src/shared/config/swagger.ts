@@ -1782,6 +1782,14 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "string",
             },
             description: "Card ID",
+          },  
+          {
+            in: "query",
+            name: "quantity",
+            schema: {
+              type: "number",
+            },
+            description: "Card quantity",
           },
         ],
         responses: {

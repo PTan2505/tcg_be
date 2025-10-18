@@ -14,12 +14,12 @@ export class DeckController {
 
       const userId = user._id.toString();
       const options: GetDecksOptions = {
-        page: parseInt(c.req.query('page') || '1'),
-        limit: parseInt(c.req.query('limit') || '20'),
-        gameType: c.req.query('gameType') as any,
-        search: c.req.query('search') as string,
-        sortBy: c.req.query('sortBy') as any || 'updatedAt',
-        sortOrder: c.req.query('sortOrder') as any || 'desc'
+  page: parseInt(c.req.query('page') ?? '1'),
+  limit: parseInt(c.req.query('limit') ?? '20'),
+  gameType: (c.req.query('gameType') ?? undefined) as any,
+  search: (c.req.query('search') ?? '') as string,
+  sortBy: (c.req.query('sortBy') ?? 'updatedAt') as any,
+  sortOrder: (c.req.query('sortOrder') ?? 'desc') as any
       };
 
       const result = await deckService.getUserDecks(userId, options);
@@ -39,12 +39,12 @@ export class DeckController {
   getPublicDecks = async (c: Context) => {
     try {
       const options: GetDecksOptions = {
-        page: parseInt(c.req.query('page') || '1'),
-        limit: parseInt(c.req.query('limit') || '20'),
-        gameType: c.req.query('gameType') as any,
-        search: c.req.query('search') as string,
-        sortBy: c.req.query('sortBy') as any || 'updatedAt',
-        sortOrder: c.req.query('sortOrder') as any || 'desc'
+  page: parseInt(c.req.query('page') ?? '1'),
+  limit: parseInt(c.req.query('limit') ?? '20'),
+  gameType: (c.req.query('gameType') ?? undefined) as any,
+  search: (c.req.query('search') ?? '') as string,
+  sortBy: (c.req.query('sortBy') ?? 'updatedAt') as any,
+  sortOrder: (c.req.query('sortOrder') ?? 'desc') as any
       };
 
       const result = await deckService.getPublicDecks(options);
@@ -219,6 +219,50 @@ export class DeckController {
     }
   };
 
+  // Update card in deck (set exact quantity)
+  updateCardInDeck = async (c: Context) => {
+    try {
+      const user = c.get('user');
+      if (!user) {
+        return c.json(createErrorResponse(MESSAGES.AUTH.AUTHENTICATION_REQUIRED), 401);
+      }
+
+      const userId = user._id.toString();
+      const deckId = c.req.param('id');
+      const cardId = c.req.param('cardId');
+
+      // Accept quantity from body or query param
+      let qty: number | undefined;
+      try {
+        const body = await c.req.json().catch(() => ({}));
+        if (body && typeof body.quantity !== 'undefined') qty = Number(body.quantity);
+      } catch (e) {
+        // ignore
+      }
+      if (typeof qty === 'undefined') {
+        const q = c.req.query('quantity');
+        if (q) qty = parseInt(q as string) || 0;
+      }
+
+      if (typeof qty === 'undefined') qty = 0;
+
+      const deck = await deckService.updateCardInDeck(deckId, userId, cardId, qty);
+      return c.json(deck);
+    } catch (error: any) {
+      console.error('Error updating card in deck:', error);
+      if (error instanceof AppError) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: error.statusCode || 400, headers: { 'Content-Type': 'application/json' } });
+      }
+      if (error instanceof Error) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: 400, headers: { 'Content-Type': 'application/json' } });
+      }
+      const body = createErrorResponse(MESSAGES.DECKS.UPDATE_FAILED);
+      return new Response(JSON.stringify(body), { status: 500, headers: { 'Content-Type': 'application/json' } });
+    }
+  };
+
   // Remove card from deck
   removeCardFromDeck = async (c: Context) => {
     try {
@@ -230,8 +274,7 @@ export class DeckController {
       const userId = user._id.toString();
       const deckId = c.req.param('id');
       const cardId = c.req.param('cardId');
-      const body = await c.req.json();
-      const quantity = parseInt(body.quantity) || 1;
+      const quantity = parseInt(c.req.query('quantity') ?? '1') || 1;
 
       const deck = await deckService.removeCardFromDeck(deckId, userId, cardId, quantity);
       return c.json(deck);
@@ -277,18 +320,18 @@ export class DeckController {
   // Search decks
   searchDecks = async (c: Context) => {
     try {
-      const query = c.req.query('q');
+  const query = c.req.query('q') ?? '';
       
       if (!query) {
         return c.json(createErrorResponse(MESSAGES.VALIDATION.SEARCH_QUERY_REQUIRED), 400);
       }
 
       const options: GetDecksOptions = {
-        page: parseInt(c.req.query('page') || '1'),
-        limit: parseInt(c.req.query('limit') || '20'),
-        gameType: c.req.query('gameType') as any,
-        sortBy: c.req.query('sortBy') as any || 'updatedAt',
-        sortOrder: c.req.query('sortOrder') as any || 'desc'
+  page: parseInt(c.req.query('page') ?? '1'),
+  limit: parseInt(c.req.query('limit') ?? '20'),
+  gameType: (c.req.query('gameType') ?? undefined) as any,
+  sortBy: (c.req.query('sortBy') ?? 'updatedAt') as any,
+  sortOrder: (c.req.query('sortOrder') ?? 'desc') as any
       };
 
       const result = await deckService.searchDecks(query, options);
@@ -303,8 +346,8 @@ export class DeckController {
   getPopularDecks = async (c: Context) => {
     try {
       const options: GetDecksOptions = {
-        page: parseInt(c.req.query('page') || '1'),
-        limit: parseInt(c.req.query('limit') || '20'),
+  page: parseInt(c.req.query('page') ?? '1'),
+  limit: parseInt(c.req.query('limit') ?? '20'),
         gameType: c.req.query('gameType') as any,
         sortBy: 'updatedAt',
         sortOrder: 'desc'
