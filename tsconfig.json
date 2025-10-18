@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
     "target": "es2020",
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "commonjs",
+    "outDir": "dist",
+    "rootDir": "src",
     "strict": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
-  }
+  },
+  "include": ["src"]
 }

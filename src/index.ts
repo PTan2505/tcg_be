@@ -34,6 +34,7 @@ import { swaggerDoc } from "./shared/config/swagger";
 import { getCacheStats } from "./shared/middlewares/cache.middleware";
 import { errorHandler } from './shared/middlewares/error.middleware';
 import { aiCardMemoryService } from "./shared/services/aiCardMemory.service";
+import { cardNumberFuzzySearch } from './shared/services/cardNumberFuzzySearch.service';
 import { socketService } from './shared/services/socket.service';
 
 // Create Hono app
@@ -59,14 +60,31 @@ connectDB()
   .then(async () => {
     console.log("✅ Database connected successfully");
     
-    // Initialize AI Memory with card data at startup
-    console.log("🚀 Initializing AI memory with card data...");
-    try {
-      await aiCardMemoryService.initializeAIMemory();
-      console.log("✅ AI memory initialized successfully");
-    } catch (error) {
-      console.error("❌ Failed to initialize AI memory:", error);
-    }
+      // Optionally preload heavy caches at startup. Disabled by default to reduce
+      // startup memory/IO. Set PRELOAD_CACHES=1 to enable (useful for warm servers).
+      const shouldPreload = (process.env.PRELOAD_CACHES === '1' || (process.env.PRELOAD_CACHES || '').toLowerCase() === 'true');
+      if (shouldPreload) {
+        // Initialize AI Memory with card data at startup
+        console.log("🚀 Preloading heavy caches (AI memory + card-number cache)...");
+        try {
+          console.log("🚀 Initializing AI memory with card data...");
+          await aiCardMemoryService.initializeAIMemory();
+          console.log("✅ AI memory initialized successfully");
+        } catch (error) {
+          console.error("❌ Failed to initialize AI memory:", error);
+        }
+
+        // Preload card number fuzzy search cache to avoid per-request file reads
+        try {
+          console.log('🚀 Preloading card number fuzzy search cache...');
+          await cardNumberFuzzySearch.initialize();
+          console.log('✅ Card number fuzzy search cache preloaded');
+        } catch (err) {
+          console.warn('⚠️ Failed to preload card number cache (continuing):', err);
+        }
+      } else {
+        console.log('ℹ️ PRELOAD_CACHES not set — skipping heavy cache preloads. Services will initialize lazily on first use.');
+      }
     
     // Initialize superuser
     await initializeSuperuser();

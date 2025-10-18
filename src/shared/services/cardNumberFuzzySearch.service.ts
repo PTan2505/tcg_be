@@ -1,4 +1,6 @@
-import { readFile, writeFile } from 'fs/promises';
+import { GetObjectCommand, S3Client } from '@aws-sdk/client-s3';
+import axios from 'axios';
+import { readFile, rename, writeFile } from 'fs/promises';
 import { Card } from '../../database/models/card';
 
 const logger = {
@@ -24,7 +26,69 @@ export class CardNumberFuzzySearchService {
   private cardNumberDatabase: Map<string, any> = new Map();
   private gameTypeIndex: Map<string, string[]> = new Map();
   private initialized = false;
+  // Prevent concurrent initializations (avoid multiple file reads/builds)
+  private initializingPromise: Promise<void> | null = null;
   private cacheFile = 'data/cache/card-numbers-cache.json';
+  // Optional remote cache URL (if provided, we'll fetch cache from remote instead of reading local file)
+  private cacheUrl: string | null = process.env.CARD_NUMBER_CACHE_URL || 'https://tcg-app-s3.s3.ap-southeast-1.amazonaws.com/caches/card-numbers-cache.json';
+  // Configuration via env
+  private cacheTtlHours = Number(process.env.CARD_NUMBER_CACHE_TTL_HOURS || '24');
+  private leanCache = (process.env.CARD_NUMBER_CACHE_LEAN === '1' || (process.env.CARD_NUMBER_CACHE_LEAN || '').toLowerCase() === 'true');
+  // If strictCache is true, once a cache file exists we will always use it and NOT rebuild based on TTL
+  private strictCache = (process.env.CARD_NUMBER_CACHE_STRICT === '1' || (process.env.CARD_NUMBER_CACHE_STRICT || '').toLowerCase() === 'true');
+
+  constructor() {
+    if (this.leanCache) {
+      logger.info('📦 CardNumberFuzzySearchService running in LEAN cache mode (store minimal data in memory)');
+    }
+    if (this.strictCache) {
+      logger.info('🔒 CardNumberFuzzySearchService running in STRICT cache mode (will not rebuild cache if file exists)');
+    }
+    logger.info(`⏱️ Card number cache TTL: ${this.cacheTtlHours} hour(s)`);
+    // Setup file watcher to auto-reload cache when local file is updated externally (debounced).
+    // If a remote cache URL is configured, skip local file watching and load from remote instead.
+    try {
+      if (this.cacheUrl) {
+        logger.info(`🌐 Using remote card-number cache URL: ${this.cacheUrl} (will fetch instead of reading local file)`);
+      } else {
+        const fs = require('fs');
+        const path = require('path');
+        const cacheDir = path.dirname(this.cacheFile);
+        // Ensure directory exists before watching
+        if (fs.existsSync(cacheDir)) {
+          let reloadTimer: NodeJS.Timeout | null = null;
+          const onChange = (eventType: string, filename: string) => {
+            if (reloadTimer) clearTimeout(reloadTimer);
+            reloadTimer = setTimeout(async () => {
+              try {
+                logger.info('📣 Detected external change to card number cache, reloading...');
+                await this.loadFromCache();
+                logger.info('✅ Card number cache reloaded from file');
+              } catch (err) {
+                logger.warn('⚠️ Failed to reload card number cache after change:', err);
+              }
+            }, 500);
+          };
+
+          try {
+            const watcher = fs.watch(this.cacheFile, { persistent: false }, onChange);
+            watcher.on('error', (e: any) => {
+              // ignore watcher errors (file might not exist yet)
+              logger.info('ℹ️ Cache file watcher error (ignored):', e && e.message ? e.message : e);
+            });
+            logger.info('👀 Watching card number cache file for external changes');
+          } catch (e) {
+            // If watch fails (file doesn't exist), ignore silently
+            logger.info('ℹ️ Cache file watcher not started (file may not exist yet)');
+          }
+        }
+      }
+    } catch (e) {
+      // Non-fatal - just log
+      const err: any = e;
+      logger.info('ℹ️ Could not start cache file watcher:', err && err.message ? err.message : err);
+    }
+  }
 
   /**
    * Initialize card number database from MongoDB and cache
@@ -32,25 +96,39 @@ export class CardNumberFuzzySearchService {
   async initialize(): Promise<void> {
     if (this.initialized) return;
 
-    try {
-      logger.info('🔧 Initializing Card Number Fuzzy Search Service...');
-
-      // Try to load from cache first
-      const cacheLoaded = await this.loadFromCache();
-      
-      if (!cacheLoaded) {
-        // Build from database if cache doesn't exist or is outdated
-        await this.buildCardNumberDatabase();
-        await this.saveToCache();
-      }
-
-      this.initialized = true;
-      logger.info('✅ Card Number Fuzzy Search Service initialized successfully');
-      logger.info(`📊 Loaded ${this.cardNumberDatabase.size} unique card numbers`);
-
-    } catch (error) {
-      logger.error('Failed to initialize Card Number Fuzzy Search Service:', error);
+    // If initialization already in progress, wait for it instead of starting a new one
+    if (this.initializingPromise) {
+      return this.initializingPromise;
     }
+
+    this.initializingPromise = (async () => {
+      try {
+        logger.info('🔧 Initializing Card Number Fuzzy Search Service...');
+
+        // Try to load from cache first
+        const cacheLoaded = await this.loadFromCache();
+        
+        if (!cacheLoaded) {
+          // Build from database if cache doesn't exist or is outdated
+          await this.buildCardNumberDatabase();
+          await this.saveToCache();
+        }
+
+        this.initialized = true;
+        logger.info('✅ Card Number Fuzzy Search Service initialized successfully');
+        logger.info(`📊 Loaded ${this.cardNumberDatabase.size} unique card numbers`);
+
+      } catch (error) {
+        logger.error('Failed to initialize Card Number Fuzzy Search Service:', error);
+        // Re-throw so callers know initialization failed
+        throw error;
+      } finally {
+        // Clear the promise so future refreshes can run
+        this.initializingPromise = null;
+      }
+    })();
+
+    return this.initializingPromise;
   }
 
   /**
@@ -80,23 +158,32 @@ export class CardNumberFuzzySearchService {
             });
           }
           
-          // Add this card to the array
+          // Add this card to the array (store minimal info in LEAN mode)
           const cardData = this.cardNumberDatabase.get(normalizedNumber)!;
-          cardData.cards.push({
-            _id: card._id,
-            name: card.name,
-            gameType: card.gameType,
-            setCode: card.setCode,
-            setName: (card as any).cardSet?.name || '',
-            rarity: card.rarity || '',
-            imageUrl: card.imageUrl || '',
-            // Include basic card data
-            hp: (card as any).hp,
-            attack: (card as any).attack,
-            defense: (card as any).defense,
-            power: (card as any).power,
-            cost: (card as any).cost
-          });
+          if (this.leanCache) {
+            cardData.cards.push({
+              _id: card._id.toString(),
+              name: card.name,
+              setCode: card.setCode,
+              setName: (card as any).cardSet?.name || ''
+            });
+          } else {
+            cardData.cards.push({
+              _id: card._id,
+              name: card.name,
+              gameType: card.gameType,
+              setCode: card.setCode,
+              setName: (card as any).cardSet?.name || '',
+              rarity: card.rarity || '',
+              imageUrl: card.imageUrl || '',
+              // Include basic card data
+              hp: (card as any).hp,
+              attack: (card as any).attack,
+              defense: (card as any).defense,
+              power: (card as any).power,
+              cost: (card as any).cost
+            });
+          }
 
           // Index by game type for faster searching
           if (!this.gameTypeIndex.has(card.gameType)) {
@@ -112,8 +199,7 @@ export class CardNumberFuzzySearchService {
         logger.info(`   ${gameType}: ${numbers.length} card numbers`);
       }
 
-      // Save to cache after building
-      await this.saveToCache();
+  // NOTE: Do not save here; initialize() will save once to avoid double writes
 
     } catch (error) {
       logger.error('Failed to build card number database:', error);
@@ -141,8 +227,11 @@ export class CardNumberFuzzySearchService {
         fs.mkdirSync(cacheDir, { recursive: true });
       }
 
-      await writeFile(this.cacheFile, JSON.stringify(cacheData, null, 2));
-      logger.info(`💾 Saved card number cache to ${this.cacheFile}`);
+  // Atomic write: write to tmp and rename
+  const tmpPath = `${this.cacheFile}.tmp`;
+  await writeFile(tmpPath, JSON.stringify(cacheData, null, 2));
+  await rename(tmpPath, this.cacheFile);
+  logger.info(`💾 Atomically saved card number cache to ${this.cacheFile}`);
 
     } catch (error) {
       logger.warn('Failed to save card number cache:', error);
@@ -154,28 +243,113 @@ export class CardNumberFuzzySearchService {
    */
   private async loadFromCache(): Promise<boolean> {
     try {
-      const fs = await import('fs');
-      if (!fs.existsSync(this.cacheFile)) {
-        logger.info('📄 No card number cache file found, will build from database');
-        return false;
+      let cacheData: any = null;
+
+      // If a remote cache URL is configured, fetch from it instead of reading local file
+      if (this.cacheUrl) {
+        try {
+          const resp = await axios.get(this.cacheUrl, { timeout: 10_000 });
+          cacheData = resp.data;
+          logger.info(`🌐 Fetched card number cache from ${this.cacheUrl}`);
+        } catch (err) {
+          const errMsg = err && (err as any).message ? (err as any).message : err;
+          logger.warn('⚠️ Failed to fetch remote card number cache (http):', errMsg);
+
+          // If we get a 403 (access denied), try to fallback to S3 GetObject using AWS credentials
+          const status = err && (err as any).response && (err as any).response.status;
+          if (status === 403) {
+            logger.info('🔐 HTTP 403 from S3 public URL — attempting AWS SDK GetObject fallback using credentials');
+
+            // Ensure AWS creds and region exist
+            const region = process.env.AWS_REGION;
+            const accessKey = process.env.AWS_ACCESS_KEY_ID;
+            const secretKey = process.env.AWS_SECRET_ACCESS_KEY;
+            if (!region || !accessKey || !secretKey) {
+              logger.warn('⚠️ Missing AWS credentials/region for S3 fallback');
+              return false;
+            }
+
+            try {
+              // parse bucket and key from URL
+              const parsed = new URL(this.cacheUrl!);
+              let bucket = '';
+              let key = '';
+
+              // Handle virtual-hosted style: bucket.s3.region.amazonaws.com/key
+              const hostParts = parsed.hostname.split('.');
+              if (hostParts.length > 3 && hostParts[1] === 's3') {
+                bucket = hostParts[0];
+                key = parsed.pathname.replace(/^\//, '');
+              } else {
+                // path-style: s3.region.amazonaws.com/bucket/key
+                const pathParts = parsed.pathname.replace(/^\//, '').split('/');
+                bucket = pathParts.shift() || '';
+                key = pathParts.join('/');
+              }
+
+              if (!bucket || !key) {
+                logger.warn('⚠️ Could not extract bucket/key from URL for S3 fallback');
+                return false;
+              }
+
+              const s3 = new S3Client({ region, credentials: { accessKeyId: accessKey, secretAccessKey: secretKey } });
+              const getCmd = new GetObjectCommand({ Bucket: bucket, Key: key });
+              const getResp = await s3.send(getCmd);
+
+              // helper to convert stream to string
+              const streamToString = async (readable: any) => {
+                if (!readable) return '';
+                const chunks: any[] = [];
+                for await (const chunk of readable) {
+                  chunks.push(typeof chunk === 'string' ? Buffer.from(chunk) : chunk);
+                }
+                return Buffer.concat(chunks).toString('utf-8');
+              };
+
+              const bodyString = await streamToString(getResp.Body as any);
+              cacheData = JSON.parse(bodyString);
+              logger.info(`☁️ Downloaded card number cache from S3 via SDK: s3://${bucket}/${key}`);
+            } catch (s3err) {
+              logger.warn('⚠️ S3 SDK fallback failed:', s3err && (s3err as any).message ? (s3err as any).message : s3err);
+              return false;
+            }
+          } else {
+            return false;
+          }
+        }
+      } else {
+        const fs = await import('fs');
+        if (!fs.existsSync(this.cacheFile)) {
+          logger.info('📄 No card number cache file found, will build from database');
+          return false;
+        }
+
+        cacheData = JSON.parse(await readFile(this.cacheFile, 'utf-8'));
+      }
+      
+      // If strictCache is enabled, always use existing cache file (don't rebuild)
+      if (!this.strictCache) {
+        // Check if cache is not too old (configurable hours)
+        const cacheAge = Date.now() - cacheData.timestamp;
+        const maxAge = this.cacheTtlHours * 60 * 60 * 1000;
+        
+        if (cacheAge > maxAge) {
+          logger.info('📄 Card number cache is outdated, will rebuild from database');
+          return false;
+        }
+      } else {
+        logger.info('🔒 Strict cache mode enabled - using existing cache file regardless of age');
       }
 
-      const cacheData = JSON.parse(await readFile(this.cacheFile, 'utf-8'));
-      
-      // Check if cache is not too old (24 hours)
-      const cacheAge = Date.now() - cacheData.timestamp;
-      const maxAge = 24 * 60 * 60 * 1000; // 24 hours
-      
-      if (cacheAge > maxAge) {
-        logger.info('📄 Card number cache is outdated, will rebuild from database');
-        return false;
+  // Load from cache
+  this.cardNumberDatabase = new Map(Object.entries(cacheData.cardNumbers));
+  this.gameTypeIndex = new Map(Object.entries(cacheData.gameTypeIndex));
+
+      if (this.cacheUrl) {
+        logger.info(`📄 Loaded card number cache from remote URL: ${this.cacheUrl}`);
+      } else {
+        logger.info(`📄 Loaded card number cache from ${this.cacheFile}`);
       }
-
-      // Load from cache
-      this.cardNumberDatabase = new Map(Object.entries(cacheData.cardNumbers));
-      this.gameTypeIndex = new Map(Object.entries(cacheData.gameTypeIndex));
-
-      logger.info(`📄 Loaded card number cache from ${this.cacheFile}`);
       return true;
 
     } catch (error) {
@@ -950,7 +1124,22 @@ export class CardNumberFuzzySearchService {
    */
   async getCardByNumber(cardNumber: string): Promise<any | null> {
     await this.initialize();
-    return this.cardNumberDatabase.get(cardNumber.toUpperCase()) || null;
+    const stored = this.cardNumberDatabase.get(cardNumber.toUpperCase());
+    if (!stored) return null;
+
+    // If lean cache stores minimal info (ids), fetch full card details on demand
+    if (this.leanCache && Array.isArray(stored.cards) && stored.cards.length > 0) {
+      try {
+        const ids = stored.cards.map((c: any) => c._id);
+        const cards = await Card.find({ _id: { $in: ids } }).lean();
+        return { cardNumber: stored.cardNumber || cardNumber.toUpperCase(), cards };
+      } catch (err) {
+        logger.warn('Failed to fetch full card details in lean mode:', err);
+        return stored; // Fallback to minimal stored data
+      }
+    }
+
+    return stored || null;
   }
 
   /**

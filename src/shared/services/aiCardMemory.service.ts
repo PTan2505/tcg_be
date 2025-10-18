@@ -1,3 +1,6 @@
+import axios from 'axios';
+import fs from 'fs/promises';
+import path from 'path';
 import { cardDataService } from './cardData.service';
 
 export interface CardMemoryCache {
@@ -43,31 +46,92 @@ class AICardMemoryService {
     const startTime = Date.now();
 
     try {
-      // Load raw card data from CSV
-      await cardDataService.loadCardData();
-      
-      // Create optimized memory structure
-      this.memoryCache = {
-        onepiece: this._buildGameMemoryCache('onepiece'),
-        pokemon: this._buildGameMemoryCache('pokemon'),
-        yugioh: this._buildGameMemoryCache('yugioh')
-      };
+      // Try to load serialized AI memory artifact from local cache or remote URL
+      const cacheDir = path.resolve('data', 'cache');
+      const localFile = path.join(cacheDir, 'ai-memory.json');
+      let loadedFromArtifact = false;
 
-      const loadTime = Date.now() - startTime;
-      const totalNames = this.memoryCache.onepiece.names.length + 
-                        this.memoryCache.pokemon.names.length + 
-                        this.memoryCache.yugioh.names.length;
+      // First try local file
+      try {
+        const raw = await fs.readFile(localFile, 'utf-8');
+        const ai = JSON.parse(raw);
+        this.memoryCache = this._loadMemoryFromArtifact(ai);
+        loadedFromArtifact = true;
+        console.log(`✅ Loaded AI memory from local cache: ${localFile}`);
+      } catch (localErr) {
+        // Local file missing or unreadable — try remote URL if provided
+        const url = process.env.AI_MEMORY_CACHE_URL;
+        if (url) {
+          try {
+            const resp = await axios.get(url, { timeout: 10000 });
+            const ai = resp.data;
+            this.memoryCache = this._loadMemoryFromArtifact(ai);
+            loadedFromArtifact = true;
+            console.log(`🌐 Fetched AI memory from ${url}`);
+          } catch (remoteErr) {
+            console.warn('⚠️ Failed to fetch AI memory from URL, will fallback to CSV/DB build', (remoteErr as any)?.message || remoteErr);
+          }
+        }
+      }
 
-      console.log(`✅ AI Memory Cache loaded: ${totalNames} card names in ${loadTime}ms`);
-      console.log(`   - One Piece: ${this.memoryCache.onepiece.names.length} names`);
-      console.log(`   - Pokemon: ${this.memoryCache.pokemon.names.length} names`);
-      console.log(`   - Yu-Gi-Oh: ${this.memoryCache.yugioh.names.length} names`);
+      if (!loadedFromArtifact) {
+        // Load raw card data from CSV and build memory
+        await cardDataService.loadCardData();
+        this.memoryCache = {
+          onepiece: this._buildGameMemoryCache('onepiece'),
+          pokemon: this._buildGameMemoryCache('pokemon'),
+          yugioh: this._buildGameMemoryCache('yugioh')
+        };
+      }
+
+  const loadTime = Date.now() - startTime;
+  const totalNames = this.memoryCache!.onepiece.names.length + 
+        this.memoryCache!.pokemon.names.length + 
+        this.memoryCache!.yugioh.names.length;
+
+  console.log(`✅ AI Memory Cache loaded: ${totalNames} card names in ${loadTime}ms`);
+  console.log(`   - One Piece: ${this.memoryCache!.onepiece.names.length} names`);
+  console.log(`   - Pokemon: ${this.memoryCache!.pokemon.names.length} names`);
+  console.log(`   - Yu-Gi-Oh: ${this.memoryCache!.yugioh.names.length} names`);
       
       this.isLoaded = true;
     } catch (error) {
       console.error('❌ Failed to initialize AI memory:', error);
       throw error;
     }
+  }
+
+  /**
+   * Convert artifact JSON structure into runtime memoryCache shape
+   */
+  private _loadMemoryFromArtifact(ai: any): CardMemoryCache {
+    const toMap = (obj: Record<string, any[]>) => {
+      const m = new Map<string, any[]>();
+      if (obj && typeof obj === 'object') {
+        for (const [k, v] of Object.entries(obj)) {
+          m.set(k, v as any[]);
+        }
+      }
+      return m;
+    };
+
+    return {
+      onepiece: {
+        names: Array.isArray(ai.onepiece?.names) ? ai.onepiece.names : [],
+        cards: toMap(ai.onepiece?.cards || {}),
+        setCards: toMap(ai.onepiece?.setCards || {})
+      },
+      pokemon: {
+        names: Array.isArray(ai.pokemon?.names) ? ai.pokemon.names : [],
+        cards: toMap(ai.pokemon?.cards || {}),
+        setCards: toMap(ai.pokemon?.setCards || {})
+      },
+      yugioh: {
+        names: Array.isArray(ai.yugioh?.names) ? ai.yugioh.names : [],
+        cards: toMap(ai.yugioh?.cards || {}),
+        setCards: toMap(ai.yugioh?.setCards || {})
+      }
+    };
   }
 
   /**

@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 import { hotp } from "otplib";
 import path from "path";
 import * as base32 from "thirty-two";
-import { fileURLToPath } from "url";
+// Using CommonJS __dirname for compatibility with the current build
 
 export interface IEmailService {
   sendVerificationOTP(to: string, otpCode: string): Promise<void>;
@@ -30,11 +30,8 @@ export class EmailService implements IEmailService {
   }
 
   async sendVerificationOTP(to: string, otpCode: string): Promise<void> {
-    const __filename = fileURLToPath(import.meta.url);
-    const __dirname = path.dirname(__filename);
-
-    // Use Vietnamese OTP template
-    const templatePath = path.join(__dirname, "config/email-verification-otp-vi.html");
+  // Use CommonJS __dirname (TS compiles to CommonJS) to locate templates
+  const templatePath = path.join(__dirname, "src/shared/config/email-verification-otp-vi.html");
     let html = fs.readFileSync(templatePath, "utf-8");
 
     // Replace placeholders
@@ -52,11 +49,8 @@ export class EmailService implements IEmailService {
   }
 
   async sendPasswordResetOTP(to: string, otpCode: string): Promise<void> {
-    const __filename = fileURLToPath(import.meta.url);
-    const __dirname = path.dirname(__filename);
-
-    // Use Vietnamese template
-    const templatePath = path.join(__dirname, "config/password-reset-email-vi.html");
+  // Use CommonJS __dirname (TS compiles to CommonJS) to locate templates
+  const templatePath = path.join(__dirname, "src/shared/config/password-reset-email-vi.html");
     let html = fs.readFileSync(templatePath, "utf-8");
 
     // Replace placeholders

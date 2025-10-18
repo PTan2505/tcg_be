@@ -1,0 +1,28 @@
+# fly.toml app configuration file generated for tcg-be on 2025-10-18T17:09:57+07:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'tcg-be'
+primary_region = 'sin'
+
+[build]
+
+[env]
+  PORT = '8080'
+  GOOGLE_APPLICATION_CREDENTIALS = "/app/gen-lang-client-0549852682-76c51df076d2.json"
+  APP_URL='https://tcg-be.fly.dev'
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  size = 'shared-cpu-1x'
+  memory = '512mb'
+  kill_timeout = 300
+

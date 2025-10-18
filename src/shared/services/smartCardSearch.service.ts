@@ -3,7 +3,10 @@
  * Finds best matching cards using multiple search strategies
  */
 
+import axios from 'axios';
+import fs from 'fs/promises';
 import Fuse from 'fuse.js';
+import path from 'path';
 import { Card } from '../../database/models/card';
 import { cardNumberFuzzySearch } from './cardNumberFuzzySearch.service';
 
@@ -34,7 +37,7 @@ export class SmartCardSearchService {
   private fuseInstances: Map<string, Fuse<any>> = new Map();
 
   constructor() {
-    // Initialize Fuse.js instances for each game type
+    // Initialize Fuse.js instances for each game type (try artifact first)
     this.initializeFuseInstances();
   }
 
@@ -747,7 +750,58 @@ export class SmartCardSearchService {
     
     for (const gameType of gameTypes) {
       try {
-        const cards = await Card.find({ gameType }).populate('cardSet', 'name abbreviation').lean();
+        // Try to load prebuilt Fuse-ready artifact from local cache first
+        const cacheDir = path.resolve('data', 'cache');
+        const localFile = path.join(cacheDir, `fuse-cards-${gameType}.json`);
+        let cards: any[] = [];
+        let loadedFromArtifact = false;
+
+        try {
+          const raw = await fs.readFile(localFile, 'utf-8');
+          cards = JSON.parse(raw);
+          loadedFromArtifact = true;
+          logger.info(`📚 Loaded fuse-cards artifact from ${localFile} (${cards.length} entries)`);
+        } catch (localErr) {
+          // If artifact not found locally, prefer per-game explicit env URL, then fallback to base URL
+          const perGameEnvMap: Record<string, string | undefined> = {
+            pokemon: process.env.FUSE_CARDS_POKEMON_URL,
+            yugioh: process.env.FUSE_CARDS_YUGIOH_URL,
+            onepiece: process.env.FUSE_CARDS_ONEPIECE_URL
+          };
+
+          const perUrl = perGameEnvMap[gameType];
+          if (perUrl) {
+            try {
+              const resp = await axios.get(perUrl, { timeout: 10000 });
+              cards = resp.data;
+              loadedFromArtifact = true;
+              logger.info(`📚 Fetched fuse-cards-${gameType} from ${perUrl} (${cards.length} entries)`);
+            } catch (remoteErr) {
+              logger.warn(`⚠️ Failed to fetch fuse-cards-${gameType} from ${perUrl}:`, (remoteErr as any)?.message || remoteErr);
+            }
+          } else {
+            // Try the generic base URL if provided
+            const baseUrl = process.env.FUSE_CARDS_BASE_URL; // optional base URL where artifacts are hosted
+            if (baseUrl) {
+              try {
+                const url = `${baseUrl.replace(/\/$/, '')}/fuse-cards-${gameType}.json`;
+                const resp = await axios.get(url, { timeout: 10000 });
+                cards = resp.data;
+                loadedFromArtifact = true;
+                logger.info(`📚 Fetched fuse-cards from ${url} (${cards.length} entries)`);
+              } catch (remoteErr) {
+                logger.warn(`⚠️ Failed to fetch fuse-cards-${gameType} from ${baseUrl}:`, (remoteErr as any)?.message || remoteErr);
+              }
+            }
+          }
+        }
+
+        if (!loadedFromArtifact) {
+          // Fall back to DB build
+          cards = await Card.find({ gameType }).populate('cardSet', 'name abbreviation').lean();
+          logger.info(`📚 Built fuse list from DB for ${gameType}: ${cards.length} cards`);
+        }
+
         const fuse = new Fuse(cards, {
           keys: [
             { name: 'name', weight: 0.8 },
