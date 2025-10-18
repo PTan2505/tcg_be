@@ -13,10 +13,7 @@ deck.delete('/user/:id', authMiddleware, deckController.deleteDeck);
 
 // User deck card management
 deck.post('/user/:id/cards', authMiddleware, deckController.addCardToDeck);
-deck.put('/user/:id/cards/:cardId', authMiddleware, (c) => c.json({ 
-  success: false, 
-  error: 'Update deck card not implemented yet' 
-}, 404));
+deck.patch('/user/:id/cards/:cardId', authMiddleware, deckController.updateCardInDeck);
 deck.delete('/user/:id/cards/:cardId', authMiddleware, deckController.removeCardFromDeck);
 
 // User deck operations

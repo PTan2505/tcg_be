@@ -364,6 +364,47 @@ export class DeckService {
     return await deck.save();
   }
 
+  /**
+   * Update a card's exact quantity in a deck. If quantity <= 0, the card is removed.
+   */
+  async updateCardInDeck(
+    deckId: string,
+    userId: string,
+    cardId: string,
+    quantity: number
+  ): Promise<IDeck> {
+    const deck = await Deck.findOne({
+      _id: deckId,
+      userId: new mongoose.Types.ObjectId(userId),
+    });
+
+    if (!deck) {
+      throw new AppError(getMessage('DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED'), 404);
+    }
+
+    const cardIndex = deck.cards.findIndex(
+      (deckCard) => deckCard.cardId.toString() === cardId
+    );
+
+    if (cardIndex === -1) {
+      throw new AppError(getMessage('CARDS.CARD_NOT_FOUND'), 404);
+    }
+
+    if (!Number.isInteger(quantity) || quantity < 0) {
+      throw new AppError(getMessage('VALIDATION.QUANTITY_INVALID') || 'Invalid quantity', 400);
+    }
+
+    if (quantity === 0) {
+      // remove card
+      deck.cards.splice(cardIndex, 1);
+    } else {
+      const currentQuantity = deck.cards[cardIndex].quantity;
+      deck.cards[cardIndex].quantity = currentQuantity + quantity;
+    }
+
+    return await deck.save();
+  }
+
   async duplicateDeck(
     deckId: string,
     userId: string,
