@@ -8,7 +8,6 @@ import { enhancedOCR } from "../../shared/services/enhancedOCR.service";
 import { gameClassifier } from "../../shared/services/gameClassifier.service";
 import { setCodeRecognition } from "../../shared/services/setCodeRecognition.service";
 import { smartCardSearch } from "../../shared/services/smartCardSearch.service";
-import { visualMatching } from "../../shared/services/visualMatching.service";
 import { UserCardService } from "../collections/userCard.service";
 
 const logger = {
@@ -404,78 +403,78 @@ export class EnhancedCardScanController {
       let cardVariants: any[] = [];
       
       // If high-confidence set detection, only visual match within detected set
-      if (isSetBasedSearch && detectedSetCodes.length > 0) {
-        const topSetCode = detectedSetCodes[0];
-        const setConfidence = topSetCode.confidence * 100;
+      // if (isSetBasedSearch && detectedSetCodes.length > 0) {
+      //   const topSetCode = detectedSetCodes[0];
+      //   const setConfidence = topSetCode.confidence * 100;
         
-        if (setConfidence >= 70) {
-          logger.info(`🎯 High confidence set detection (${setConfidence.toFixed(1)}%), limiting visual matching to set: ${topSetCode.setCode}`);
+      //   if (setConfidence >= 70) {
+      //     logger.info(`🎯 High confidence set detection (${setConfidence.toFixed(1)}%), limiting visual matching to set: ${topSetCode.setCode}`);
           
-          // Get variants from the set-based search results only
-          cardVariants = getSearchResultMatches(searchResults).map((match: any) => ({
-            cardId: match.card._id.toString(),
-            name: match.card.name,
-            imageUrl: match.card.imageUrl,
-            setName: match.card.setName,
-            gameType: match.card.gameType
-          }));
+      //     // Get variants from the set-based search results only
+      //     cardVariants = getSearchResultMatches(searchResults).map((match: any) => ({
+      //       cardId: match.card._id.toString(),
+      //       name: match.card.name,
+      //       imageUrl: match.card.imageUrl,
+      //       setName: match.card.setName,
+      //       gameType: match.card.gameType
+      //     }));
           
-          logger.info(`🎯 Using ${cardVariants.length} variants from set ${topSetCode.setCode} for visual matching`);
-        } else {
-          // Normal case: get variants from entire database
-          cardVariants = await smartCardSearch.getAllCardVariants(
-            gameType as any,
-            ocrData.extractedText.cardName,
-            30  // Get up to 30 variants for visual matching
-          );
-          logger.info(`🖼️ Found ${cardVariants.length} card variants for visual matching`);
-        }
-      } else {
-        // Normal case: get variants from entire database
-        cardVariants = await smartCardSearch.getAllCardVariants(
-          gameType as any,
-          ocrData.extractedText.cardName,
-          30  // Get up to 30 variants for visual matching
-        );
-        logger.info(`🖼️ Found ${cardVariants.length} card variants for visual matching`);
-      }
+      //     logger.info(`🎯 Using ${cardVariants.length} variants from set ${topSetCode.setCode} for visual matching`);
+      //   } else {
+      //     // Normal case: get variants from entire database
+      //     cardVariants = await smartCardSearch.getAllCardVariants(
+      //       gameType as any,
+      //       ocrData.extractedText.cardName,
+      //       30  // Get up to 30 variants for visual matching
+      //     );
+      //     logger.info(`🖼️ Found ${cardVariants.length} card variants for visual matching`);
+      //   }
+      // } else {
+      //   // Normal case: get variants from entire database
+      //   cardVariants = await smartCardSearch.getAllCardVariants(
+      //     gameType as any,
+      //     ocrData.extractedText.cardName,
+      //     30  // Get up to 30 variants for visual matching
+      //   );
+      //   logger.info(`🖼️ Found ${cardVariants.length} card variants for visual matching`);
+      // }
 
-      let visualMatches: any[] = [];
-      if (cardVariants.length > 0) {
-        const visualResults = await visualMatching.findVisualMatches(
-          imageBuffer,
-          cardVariants,
-          {
-            maxCandidates: 25,
-            similarityThreshold: 0.3,
-            timeout: 25000
-          }
-        );
+      // let visualMatches: any[] = [];
+      // if (cardVariants.length > 0) {
+      //   const visualResults = await visualMatching.findVisualMatches(
+      //     imageBuffer,
+      //     cardVariants,
+      //     {
+      //       maxCandidates: 25,
+      //       similarityThreshold: 0.3,
+      //       timeout: 25000
+      //     }
+      //   );
         
-        // Combine visual results with text search results
-        visualMatches = visualResults.map(visualMatch => {
-          // Find the corresponding card data from our search results or database
-          const matchingTextResult = getSearchResultMatches(searchResults).find(
-            (textMatch: any) => textMatch.card._id.toString() === visualMatch.cardId
-          );
+      //   // Combine visual results with text search results
+      //   visualMatches = visualResults.map(visualMatch => {
+      //     // Find the corresponding card data from our search results or database
+      //     const matchingTextResult = getSearchResultMatches(searchResults).find(
+      //       (textMatch: any) => textMatch.card._id.toString() === visualMatch.cardId
+      //     );
           
-          // Safety checks for NaN values
-          const safeVisualSimilarity = isNaN(visualMatch.similarity) ? 0 : visualMatch.similarity;
-          const safeTextConfidence = matchingTextResult ? (isNaN(matchingTextResult.confidence) ? 0 : matchingTextResult.confidence) : 0;
-          const safeCombinedScore = (safeVisualSimilarity * 0.6) + (safeTextConfidence / 100 * 0.4);
+      //     // Safety checks for NaN values
+      //     const safeVisualSimilarity = isNaN(visualMatch.similarity) ? 0 : visualMatch.similarity;
+      //     const safeTextConfidence = matchingTextResult ? (isNaN(matchingTextResult.confidence) ? 0 : matchingTextResult.confidence) : 0;
+      //     const safeCombinedScore = (safeVisualSimilarity * 0.6) + (safeTextConfidence / 100 * 0.4);
           
-          return {
-            cardId: visualMatch.cardId,
-            imageUrl: visualMatch.imageUrl,
-            visualSimilarity: safeVisualSimilarity,
-            matchType: visualMatch.matchType,
-            textConfidence: safeTextConfidence,
-            combinedScore: isNaN(safeCombinedScore) ? 0 : safeCombinedScore
-          };
-        }).sort((a, b) => b.combinedScore - a.combinedScore);
+      //     return {
+      //       cardId: visualMatch.cardId,
+      //       imageUrl: visualMatch.imageUrl,
+      //       visualSimilarity: safeVisualSimilarity,
+      //       matchType: visualMatch.matchType,
+      //       textConfidence: safeTextConfidence,
+      //       combinedScore: isNaN(safeCombinedScore) ? 0 : safeCombinedScore
+      //     };
+      //   }).sort((a, b) => b.combinedScore - a.combinedScore);
 
-        logger.info(`🖼️ Visual matching completed: ${visualMatches.length} visual matches found`);
-      }
+      //   logger.info(`🖼️ Visual matching completed: ${visualMatches.length} visual matches found`);
+      // }
 
       // 📦 STEP 5: Format and Return Results (combine text + visual)
       const processingTime = Date.now() - startTime;
@@ -492,7 +491,7 @@ export class EnhancedCardScanController {
         gameType: match.card.gameType,
         textConfidence: match.confidence,
         // Add visual matching data if available
-        visualMatch: visualMatches.find(vm => vm.cardId === match.card._id.toString()),
+        // visualMatch: visualMatches.find(vm => vm.cardId === match.card._id.toString()),
         // Include game-specific stats
         ...(gameType === 'pokemon' && { 
           hp: match.card.hp,
@@ -552,60 +551,60 @@ export class EnhancedCardScanController {
       }
 
       // 🔄 STEP 6: Smart candidate reordering based on search strategy
-      if (visualMatches.length > 0) {
-        candidates = candidates.map((candidate: any) => {
-          const visualMatch = candidate.visualMatch;
-          if (visualMatch) {
-            const textScore = candidate.textConfidence / 100; // Normalize to 0-1
-            const visualScore = visualMatch.visualSimilarity;
+      // if (visualMatches.length > 0) {
+      //   candidates = candidates.map((candidate: any) => {
+      //     const visualMatch = candidate.visualMatch;
+      //     if (visualMatch) {
+      //       const textScore = candidate.textConfidence / 100; // Normalize to 0-1
+      //       const visualScore = visualMatch.visualSimilarity;
             
-            // For high-confidence set-based search, prioritize text confidence over visual
-            // since we already filtered by the correct set
-            let combinedScore;
-            const topSetCode = detectedSetCodes.length > 0 ? detectedSetCodes[0] : null;
-            const setConfidence = topSetCode ? topSetCode.confidence * 100 : 0;
+      //       // For high-confidence set-based search, prioritize text confidence over visual
+      //       // since we already filtered by the correct set
+      //       let combinedScore;
+      //       const topSetCode = detectedSetCodes.length > 0 ? detectedSetCodes[0] : null;
+      //       const setConfidence = topSetCode ? topSetCode.confidence * 100 : 0;
             
-            if (isSetBasedSearch && topSetCode && setConfidence >= 70) {
-              // High confidence set: prioritize text matching (90%) + visual validation (10%)
-              combinedScore = (textScore * 0.9) + (visualScore * 0.1);
-              logger.info(`🎯 High confidence set mode: ${candidate.name} - Text: ${textScore.toFixed(2)} Visual: ${visualScore.toFixed(2)} Combined: ${combinedScore.toFixed(2)}`);
-            } else {
-              // Normal mode: balanced visual + text scoring
-              combinedScore = (visualScore * 0.7) + (textScore * 0.3);
-            }
+      //       if (isSetBasedSearch && topSetCode && setConfidence >= 70) {
+      //         // High confidence set: prioritize text matching (90%) + visual validation (10%)
+      //         combinedScore = (textScore * 0.9) + (visualScore * 0.1);
+      //         logger.info(`🎯 High confidence set mode: ${candidate.name} - Text: ${textScore.toFixed(2)} Visual: ${visualScore.toFixed(2)} Combined: ${combinedScore.toFixed(2)}`);
+      //       } else {
+      //         // Normal mode: balanced visual + text scoring
+      //         combinedScore = (visualScore * 0.7) + (textScore * 0.3);
+      //       }
             
-            return {
-              ...candidate,
-              combinedScore,
-              confidence: `${Math.round(combinedScore * 100)}%`,
-              matchReason: isSetBasedSearch && topSetCode && setConfidence >= 70 ? 
-                          `Set-based match in ${topSetCode.setCode} (${Math.round(textScore * 100)}% text + ${Math.round(visualScore * 100)}% visual)` :
-                          visualScore > 0.8 ? 'High visual + text match' : 
-                          visualScore > 0.6 ? 'Good visual + text match' : 
-                          candidate.matchReason
-            };
-          }
-          return {
-            ...candidate,
-            combinedScore: candidate.textConfidence / 100
-          };
-        }).sort((a: any, b: any) => {
-          // For card number searches, preserve the original ranking from cardNumberFuzzySearch
-          // which already considers card number + name similarity correctly
-          if (isCardNumberSearch) {
-            // Don't re-sort - preserve the original card number + name similarity ranking
-            return 0;
-          }
-          // For other searches, sort by combined score (visual + text)
-          return (b.combinedScore || 0) - (a.combinedScore || 0);
-        }); // Sort by combined score or preserve card number ranking
+      //       return {
+      //         ...candidate,
+      //         combinedScore,
+      //         confidence: `${Math.round(combinedScore * 100)}%`,
+      //         matchReason: isSetBasedSearch && topSetCode && setConfidence >= 70 ? 
+      //                     `Set-based match in ${topSetCode.setCode} (${Math.round(textScore * 100)}% text + ${Math.round(visualScore * 100)}% visual)` :
+      //                     visualScore > 0.8 ? 'High visual + text match' : 
+      //                     visualScore > 0.6 ? 'Good visual + text match' : 
+      //                     candidate.matchReason
+      //       };
+      //     }
+      //     return {
+      //       ...candidate,
+      //       combinedScore: candidate.textConfidence / 100
+      //     };
+      //   }).sort((a: any, b: any) => {
+      //     // For card number searches, preserve the original ranking from cardNumberFuzzySearch
+      //     // which already considers card number + name similarity correctly
+      //     if (isCardNumberSearch) {
+      //       // Don't re-sort - preserve the original card number + name similarity ranking
+      //       return 0;
+      //     }
+      //     // For other searches, sort by combined score (visual + text)
+      //     return (b.combinedScore || 0) - (a.combinedScore || 0);
+      //   }); // Sort by combined score or preserve card number ranking
 
-        const topSetCode = detectedSetCodes.length > 0 ? detectedSetCodes[0] : null;
-        const setConfidence = topSetCode ? topSetCode.confidence * 100 : 0;
-        const reorderStrategy = isSetBasedSearch && topSetCode && setConfidence >= 70 ? 
-                               'set-priority reordering' : 'visual-priority reordering';
-        logger.info(`🔄 Applied ${reorderStrategy} to candidates`);
-      }
+      //   const topSetCode = detectedSetCodes.length > 0 ? detectedSetCodes[0] : null;
+      //   const setConfidence = topSetCode ? topSetCode.confidence * 100 : 0;
+      //   const reorderStrategy = isSetBasedSearch && topSetCode && setConfidence >= 70 ? 
+      //                          'set-priority reordering' : 'visual-priority reordering';
+      //   logger.info(`🔄 Applied ${reorderStrategy} to candidates`);
+      // }
 
       // Save scan history
       if (user && candidates.length > 0) {
@@ -653,11 +652,11 @@ export class EnhancedCardScanController {
               totalCardsSearched: searchResults.totalCandidates,
               searchTime: searchResults.processingTime
             },
-            step4_visual: {
-              variantsFound: cardVariants.length,
-              visualMatches: visualMatches.length,
-              topVisualMatch: visualMatches[0] || null
-            },
+            // step4_visual: {
+            //   variantsFound: cardVariants.length,
+            //   visualMatches: visualMatches.length,
+            //   topVisualMatch: visualMatches[0] || null
+            // },
             step5_results: {
               topMatch: candidates[0] || null,
               allCandidates: candidates.length,
@@ -669,7 +668,7 @@ export class EnhancedCardScanController {
           candidates,
           
           // Visual matching results (separate for detailed analysis)
-          visualMatches: visualMatches.slice(0, 10), // Top 10 visual matches
+          // visualMatches: visualMatches.slice(0, 10), // Top 10 visual matches
           topMatch: candidates[0] || null,
           
           // Metadata
