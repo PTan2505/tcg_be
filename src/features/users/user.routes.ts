@@ -5,11 +5,11 @@ import { FriendshipController } from "../posts/friendship.controller";
 import { UserController } from "./user.controller";
 import { UserService } from "./user.service";
 import {
-    blockUserSchema,
-    changePasswordSchema,
-    friendshipActionSchema,
-    sendFriendRequestSchema,
-    updateUserSchema,
+  blockUserSchema,
+  changePasswordSchema,
+  friendshipActionSchema,
+  sendFriendRequestSchema,
+  updateUserSchema,
 } from "./user.validator";
 
 const userRoutes = new Hono();
@@ -24,10 +24,14 @@ userRoutes.use('/*', authMiddleware);
 
 // User profile routes
 userRoutes.get("/profile", userController.getProfile);
-userRoutes.post(
+userRoutes.put(
   "/change-password",
   validateRequest(changePasswordSchema),
   userController.changePassword
+);
+userRoutes.put(
+  "/change-avatar",
+  userController.changeAvatar
 );
 
 // Friendship routes (must come before generic /:id routes)
@@ -49,5 +53,8 @@ userRoutes.patch(
   userController.updateUser
 );
 userRoutes.delete("/:id", userController.deleteUser);
+
+// Admin endpoint to toggle premium status for a user
+userRoutes.patch('/:id/premium', userController.setPremium);
 
 export default userRoutes;

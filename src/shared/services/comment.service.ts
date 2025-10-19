@@ -205,7 +205,11 @@ export class CommentService {
     likesCount: number;
   }> {
     const comment = await CommentModel.findById(commentId);
-    if (!comment) throw new Error('Comment not found');
+    if (!comment) {
+      const { getMessage } = require('../constants/messages');
+      const AppError = require('../errors/AppError').default;
+      throw new AppError(getMessage('COMMENTS.COMMENT_NOT_FOUND'), 404);
+    }
 
     const existingReaction = await CommentReactionModel.findOne({
       comment: commentId,

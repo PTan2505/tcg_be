@@ -1,28 +1,17 @@
 import mongoose, { Document, Schema } from 'mongoose';
-import { CardCategory } from './userCard';
-
-export enum DeckFormat {
-  STANDARD = 'standard',
-  EXPANDED = 'expanded',
-  UNLIMITED = 'unlimited',
-  CUSTOM = 'custom'
-}
 
 export interface IDeckCard {
-  cardId: Schema.Types.ObjectId;
-  category: CardCategory;
+  cardId: mongoose.Types.ObjectId;
   quantity: number;
 }
 
 export interface IDeck extends Document {
   name: string;
   description?: string;
-  userId: Schema.Types.ObjectId;
-  category: CardCategory;
-  format: DeckFormat;
+  userId: mongoose.Types.ObjectId;
+  gameType: string;
   cards: IDeckCard[];
   isPublic: boolean;
-  tags: string[];
   createdAt: Date;
   updatedAt: Date;
 }
@@ -31,18 +20,12 @@ const DeckCardSchema = new Schema<IDeckCard>({
   cardId: {
     type: Schema.Types.ObjectId,
     required: true,
-    refPath: 'category'
-  },
-  category: {
-    type: String,
-    enum: Object.values(CardCategory),
-    required: true
+    ref: 'Card'
   },
   quantity: {
     type: Number,
     required: true,
     min: 1,
-    max: 4 // Standard card limit, can be adjusted per game rules
   }
 });
 
@@ -64,34 +47,23 @@ const DeckSchema = new Schema<IDeck>({
     ref: 'User',
     required: true
   },
-  category: {
+  gameType: {
     type: String,
-    enum: Object.values(CardCategory),
+    enum: ['pokemon', 'yugioh', 'onepiece'],
     required: true
-  },
-  format: {
-    type: String,
-    enum: Object.values(DeckFormat),
-    required: true,
-    default: DeckFormat.STANDARD
   },
   cards: [DeckCardSchema],
   isPublic: {
     type: Boolean,
     default: false
   },
-  tags: [{
-    type: String,
-    trim: true,
-    maxlength: 50
-  }]
 }, {
   timestamps: true
 });
 
 // Index for efficient queries
 DeckSchema.index({ userId: 1, name: 1 });
-DeckSchema.index({ category: 1, format: 1 });
+DeckSchema.index({ gameType: 1 });
 DeckSchema.index({ isPublic: 1 });
 
 // Virtual to get total card count

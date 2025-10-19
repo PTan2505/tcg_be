@@ -13,6 +13,9 @@ export interface User {
   emailVerificationOTPExpires?: Date;
   passwordResetSecret?: string;
   passwordResetOTPExpires?: Date;
+  tokenBalance: number;
+  isPremium: boolean;
+  isAdmin: boolean;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -60,6 +63,7 @@ const userSchema = new Schema<User>(
       type: Boolean,
       default: false,
     },
+
     emailVerificationSecret: {
       type: String,
     },
@@ -71,6 +75,19 @@ const userSchema = new Schema<User>(
     },
     passwordResetOTPExpires: {
       type: Date,
+    },
+    tokenBalance: {
+      type: Number,
+      default: 0,
+      min: 0,
+    },
+    isPremium:{
+      type: Boolean,
+      default: false,
+    },
+    isAdmin: {
+      type: Boolean,
+      default: false,
     },
   },
   {

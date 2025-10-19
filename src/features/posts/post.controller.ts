@@ -1,5 +1,7 @@
 import { Context } from "hono";
 import { Types } from "mongoose";
+import { createErrorResponse } from '../../shared/constants/messages';
+import AppError from '../../shared/errors/AppError';
 import { PostService } from "../../shared/services/post.service";
 import { S3Service } from "../../shared/services/s3.service";
 import { TaggingService } from "../../shared/services/tagging.service";
@@ -17,8 +19,9 @@ export class PostController {
 
   createPost = async (c: Context) => {
     try {
-      const user = c.get("user");
-      const body = await c.req.json();
+  const user = c.get("user");
+  const v = c.get("validatedData");
+  const body = v ?? (await c.req.json());
       
       const postData = {
         ...body,
@@ -53,10 +56,12 @@ export class PostController {
       }, 201);
     } catch (error: any) {
       console.error("Error creating post:", error);
-      return c.json({
-        success: false,
-        error: error.message || "Failed to create post"
-      }, 500);
+      if (error instanceof AppError) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: error.statusCode, headers: { 'Content-Type': 'application/json' } });
+      }
+      const body = createErrorResponse(error?.message || 'Failed to create post');
+      return new Response(JSON.stringify(body), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
   };
 
@@ -116,7 +121,7 @@ export class PostController {
             const buffer = Buffer.from(await file.arrayBuffer());
             
             // Upload to S3
-            const imageUrl = await this.s3Service.uploadFile(buffer, file.name, file.type);
+            const imageUrl = await this.s3Service.uploadFile('posts',buffer, file.name, file.type);
             imageUrls.push(imageUrl);
           } catch (uploadError) {
             console.error(`Error uploading file ${file.name}:`, uploadError);
@@ -164,10 +169,12 @@ export class PostController {
       }, 201);
     } catch (error: any) {
       console.error("Error creating post with files:", error);
-      return c.json({
-        success: false,
-        error: error.message || "Failed to create post"
-      }, 500);
+      if (error instanceof AppError) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: error.statusCode, headers: { 'Content-Type': 'application/json' } });
+      }
+      const body = createErrorResponse(error?.message || 'Failed to create post');
+      return new Response(JSON.stringify(body), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
   };
 
@@ -190,10 +197,12 @@ export class PostController {
       });
     } catch (error: any) {
       console.error("Error getting feed:", error);
-      return c.json({
-        success: false,
-        error: error.message || "Failed to get feed"
-      }, 500);
+      if (error instanceof AppError) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: error.statusCode, headers: { 'Content-Type': 'application/json' } });
+      }
+      const body = createErrorResponse(error?.message || 'Failed to get feed');
+      return new Response(JSON.stringify(body), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
   };
 
@@ -229,10 +238,12 @@ export class PostController {
       });
     } catch (error: any) {
       console.error("Error getting post:", error);
-      return c.json({
-        success: false,
-        error: error.message || "Failed to get post"
-      }, 500);
+      if (error instanceof AppError) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: error.statusCode, headers: { 'Content-Type': 'application/json' } });
+      }
+      const body = createErrorResponse(error?.message || 'Failed to get post');
+      return new Response(JSON.stringify(body), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
   };
 
@@ -275,10 +286,12 @@ export class PostController {
       });
     } catch (error: any) {
       console.error("Error updating post:", error);
-      return c.json({
-        success: false,
-        error: error.message || "Failed to update post"
-      }, 500);
+      if (error instanceof AppError) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: error.statusCode, headers: { 'Content-Type': 'application/json' } });
+      }
+      const body = createErrorResponse(error?.message || 'Failed to update post');
+      return new Response(JSON.stringify(body), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
   };
 
@@ -313,10 +326,12 @@ export class PostController {
       });
     } catch (error: any) {
       console.error("Error deleting post:", error);
-      return c.json({
-        success: false,
-        error: error.message || "Failed to delete post"
-      }, 500);
+      if (error instanceof AppError) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: error.statusCode, headers: { 'Content-Type': 'application/json' } });
+      }
+      const body = createErrorResponse(error?.message || 'Failed to delete post');
+      return new Response(JSON.stringify(body), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
   };
 
@@ -347,10 +362,12 @@ export class PostController {
       });
     } catch (error: any) {
       console.error("Error toggling reaction:", error);
-      return c.json({
-        success: false,
-        error: error.message || "Failed to toggle reaction"
-      }, 500);
+      if (error instanceof AppError) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: error.statusCode, headers: { 'Content-Type': 'application/json' } });
+      }
+      const body = createErrorResponse(error?.message || 'Failed to toggle reaction');
+      return new Response(JSON.stringify(body), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
   };
 
@@ -375,10 +392,12 @@ export class PostController {
       });
     } catch (error: any) {
       console.error("Error getting user posts:", error);
-      return c.json({
-        success: false,
-        error: error.message || "Failed to get user posts"
-      }, 500);
+      if (error instanceof AppError) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: error.statusCode, headers: { 'Content-Type': 'application/json' } });
+      }
+      const body = createErrorResponse(error?.message || 'Failed to get user posts');
+      return new Response(JSON.stringify(body), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
   };
 
@@ -395,10 +414,12 @@ export class PostController {
       });
     } catch (error: any) {
       console.error("Error generating upload URL:", error);
-      return c.json({
-        success: false,
-        error: error.message || "Failed to generate upload URL"
-      }, 500);
+      if (error instanceof AppError) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: error.statusCode, headers: { 'Content-Type': 'application/json' } });
+      }
+      const body = createErrorResponse(error?.message || 'Failed to generate upload URL');
+      return new Response(JSON.stringify(body), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
   };
 
@@ -472,10 +493,12 @@ export class PostController {
       });
     } catch (error: any) {
       console.error("Error getting taggable users:", error);
-      return c.json({
-        success: false,
-        error: error.message || "Failed to get taggable users"
-      }, 500);
+      if (error instanceof AppError) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: error.statusCode, headers: { 'Content-Type': 'application/json' } });
+      }
+      const body = createErrorResponse(error?.message || 'Failed to get taggable users');
+      return new Response(JSON.stringify(body), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
   };
 }

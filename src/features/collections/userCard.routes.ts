@@ -23,7 +23,7 @@ userCardRoutes.post(
   userCardController.addCard
 );
 
-// Remove card from collection (requires category in query params)
+// Remove card from collection
 userCardRoutes.delete(
   '/:cardId',
   validateParamsMiddleware(['cardId']),
@@ -36,11 +36,18 @@ userCardRoutes.get(
   userCardController.getUserCollection
 );
 
-// Get user's cards by category
+// Get user's cards by game type
 userCardRoutes.get(
-  '/category/:category',
-  validateParamsMiddleware(['category']),
-  userCardController.getUserCardsByCategory
+  '/cards/:gameType',
+  validateParamsMiddleware(['gameType']),
+  userCardController.getUserCardsByGameType
+);
+
+// Get sets by game type
+userCardRoutes.get(
+  '/sets/:gameType',
+  validateParamsMiddleware(['gameType']),
+  userCardController.getSetsByGameType
 );
 
 // Search user's cards
@@ -49,7 +56,7 @@ userCardRoutes.get(
   userCardController.searchUserCards
 );
 
-// Get detailed information about a specific card (requires category in query params)
+// Get detailed information about a specific card
 userCardRoutes.get(
   '/details/:cardId',
   validateParamsMiddleware(['cardId']),

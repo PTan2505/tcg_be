@@ -22,6 +22,37 @@ interface TCGPlayerCSVRecord {
   marketPrice: string;
   directLowPrice: string;
   subTypeName: string;
+  
+  // Extended fields - varies by game type
+  extNumber?: string;
+  extRarity?: string;
+  extCardType?: string;
+  extDescription?: string;
+  extAttribute?: string; // Used by multiple games
+  
+  // One Piece specific
+  extColor?: string;
+  extLife?: string;
+  extPower?: string;
+  extSubtypes?: string;
+  extCost?: string;
+  extCounterplus?: string;
+  
+  // Pokemon specific
+  extHP?: string;
+  extStage?: string;
+  extCardText?: string;
+  extAttack1?: string;
+  extAttack2?: string;
+  extWeakness?: string;
+  extResistance?: string;
+  extRetreatCost?: string;
+  
+  // Yu-Gi-Oh specific
+  extMonsterType?: string;
+  extAttack?: string;
+  extDefense?: string;
+  extLevel?: string;
 }
 
 // Function to read CSV data from local files
@@ -110,6 +141,69 @@ function parsePrice(priceStr: string): number | undefined {
   return isNaN(parsed) ? undefined : parsed;
 }
 
+// Function to parse numeric extended data
+function parseExtNumber(numStr: string): number | undefined {
+  if (!numStr || numStr.trim() === '' || numStr === 'null') {
+    return undefined;
+  }
+  
+  const parsed = parseFloat(numStr);
+  return isNaN(parsed) ? undefined : parsed;
+}
+
+// Function to clean extended text data
+function parseExtText(textStr: string): string | undefined {
+  if (!textStr || textStr.trim() === '' || textStr === 'null') {
+    return undefined;
+  }
+  
+  return textStr.trim();
+}
+
+// Function to build extended data object from CSV record
+function buildExtendedData(record: TCGPlayerCSVRecord, gameType: string): Record<string, any> {
+  const extData: Record<string, any> = {};
+  
+  // Common fields for all games
+  if (record.extNumber) extData.extNumber = parseExtText(record.extNumber);
+  if (record.extRarity) extData.extRarity = parseExtText(record.extRarity);
+  if (record.extCardType) extData.extCardType = parseExtText(record.extCardType);
+  if (record.extDescription) extData.extDescription = parseExtText(record.extDescription);
+  if (record.extAttribute) extData.extAttribute = parseExtText(record.extAttribute);
+  
+  // Game-specific fields
+  switch (gameType) {
+    case 'onepiece':
+      if (record.extColor) extData.extColor = parseExtText(record.extColor);
+      if (record.extLife) extData.extLife = parseExtNumber(record.extLife);
+      if (record.extPower) extData.extPower = parseExtNumber(record.extPower);
+      if (record.extSubtypes) extData.extSubtypes = parseExtText(record.extSubtypes);
+      if (record.extCost) extData.extCost = parseExtNumber(record.extCost);
+      if (record.extCounterplus) extData.extCounterplus = parseExtNumber(record.extCounterplus);
+      break;
+      
+    case 'pokemon':
+      if (record.extHP) extData.extHP = parseExtNumber(record.extHP);
+      if (record.extStage) extData.extStage = parseExtText(record.extStage);
+      if (record.extCardText) extData.extCardText = parseExtText(record.extCardText);
+      if (record.extAttack1) extData.extAttack1 = parseExtText(record.extAttack1);
+      if (record.extAttack2) extData.extAttack2 = parseExtText(record.extAttack2);
+      if (record.extWeakness) extData.extWeakness = parseExtText(record.extWeakness);
+      if (record.extResistance) extData.extResistance = parseExtText(record.extResistance);
+      if (record.extRetreatCost) extData.extRetreatCost = parseExtNumber(record.extRetreatCost);
+      break;
+      
+    case 'yugioh':
+      if (record.extMonsterType) extData.extMonsterType = parseExtText(record.extMonsterType);
+      if (record.extAttack) extData.extAttack = parseExtNumber(record.extAttack);
+      if (record.extDefense) extData.extDefense = parseExtNumber(record.extDefense);
+      if (record.extLevel) extData.extLevel = parseExtNumber(record.extLevel);
+      break;
+  }
+  
+  return extData;
+}
+
 // Function to extract set code and number from card name
 function extractSetInfo(name: string, setAbbreviation: string): { setCode?: string, number?: string } {
   // Common patterns: "Card Name (SET 123)", "Card Name - SET-123", etc.
@@ -191,6 +285,12 @@ async function importCardsForSet(cardSet: any, forceReimport = false, useLocalFi
         // Extract set info from card name
         const { setCode, number } = extractSetInfo(record.name, abbreviation);
         
+        // Build extended data from CSV fields
+        const extendedData = buildExtendedData(record, gameType);
+        
+        // Set rarity from extended data if available, fallback to subTypeName
+        const rarity = record.extRarity || record.subTypeName || undefined;
+        
         // Prepare card data
         const cardData = {
           productId,
@@ -203,7 +303,8 @@ async function importCardsForSet(cardSet: any, forceReimport = false, useLocalFi
           groupId,
           gameType,
           setCode,
-          number,
+          number: number || record.extNumber,
+          rarity,
           tcgPlayerPrice: {
             productId,
             lowPrice: parsePrice(record.lowPrice),
@@ -217,6 +318,7 @@ async function importCardsForSet(cardSet: any, forceReimport = false, useLocalFi
             normal: record.imageUrl || undefined
           },
           url: record.url || undefined,
+          extendedData,
           lastPriceUpdate: new Date(),
           isActive: true
         };
@@ -230,7 +332,9 @@ async function importCardsForSet(cardSet: any, forceReimport = false, useLocalFi
               { productId },
               { $set: cardData }
             );
-            console.log(`🔄 Updated card: ${cardData.name}`);
+            
+            const extDataCount = Object.keys(extendedData).length;
+            console.log(`🔄 Updated card: ${cardData.name} (${extDataCount} extended fields)`);
             updated++;
           } else {
             console.log(`⏭️  Skipped card: ${cardData.name} (no changes)`);
@@ -238,7 +342,9 @@ async function importCardsForSet(cardSet: any, forceReimport = false, useLocalFi
           }
         } else {
           await Card.create(cardData);
-          console.log(`✅ Imported card: ${cardData.name}`);
+          
+          const extDataCount = Object.keys(extendedData).length;
+          console.log(`✅ Imported card: ${cardData.name} (${extDataCount} extended fields)`);
           imported++;
         }
         
@@ -333,6 +439,35 @@ async function importCardsFromTCGPlayer(forceReimport = false, limitSets?: numbe
                        stat._id === 'yugioh' ? 'Yu-Gi-Oh!' : 'One Piece';
       const avgPrice = stat.avgPrice ? `$${stat.avgPrice.toFixed(2)}` : 'N/A';
       console.log(`   ${gameName}: ${stat.count} cards across ${stat.totalSets} sets (avg price: ${avgPrice})`);
+    }
+    
+    // Show extended data statistics
+    console.log(`\n🔧 Extended Data Statistics:`);
+    const extDataStats = await Card.aggregate([
+      { $match: { extendedData: { $exists: true, $ne: {} } } },
+      {
+        $group: {
+          _id: '$gameType',
+          totalWithExtData: { $sum: 1 },
+          avgExtFieldCount: { 
+            $avg: { 
+              $size: { 
+                $filter: {
+                  input: { $objectToArray: '$extendedData' },
+                  cond: { $ne: ['$$this.v', null] }
+                }
+              }
+            }
+          }
+        }
+      },
+      { $sort: { _id: 1 } }
+    ]);
+    
+    for (const stat of extDataStats) {
+      const gameName = stat._id === 'pokemon' ? 'Pokemon' : 
+                       stat._id === 'yugioh' ? 'Yu-Gi-Oh!' : 'One Piece';
+      console.log(`   ${gameName}: ${stat.totalWithExtData} cards with extended data (avg ${stat.avgExtFieldCount.toFixed(1)} fields per card)`);
     }
     
   } catch (error) {

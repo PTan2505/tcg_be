@@ -1,4 +1,5 @@
 import { Context, Next } from 'hono';
+import { MESSAGES } from '../constants/messages';
 
 /**
  * Middleware to ensure users can only access resources they own
@@ -15,7 +16,7 @@ export const ownershipMiddleware = (resourceType: 'deck' | 'userCard') => {
           error: {
             name: 'AuthenticationError',
             field: 'authorization',
-            message: 'Authentication required'
+            message: MESSAGES.AUTH.AUTHENTICATION_REQUIRED
           }
         }, 401);
       }
@@ -30,7 +31,7 @@ export const ownershipMiddleware = (resourceType: 'deck' | 'userCard') => {
         error: {
           name: 'AuthorizationError',
           field: 'general',
-          message: 'Access denied'
+          message: MESSAGES.AUTH.ACCESS_DENIED
         }
       }, 403);
     }
@@ -52,7 +53,7 @@ export const validateParamsMiddleware = (requiredParams: string[]) => {
             error: {
               name: 'ValidationError',
               field: param,
-              message: `${param} is required`
+              message: MESSAGES.VALIDATION.REQUIRED_FIELD(param)
             }
           }, 400);
         }
@@ -65,7 +66,7 @@ export const validateParamsMiddleware = (requiredParams: string[]) => {
         error: {
           name: 'ValidationError',
           field: 'general',
-          message: 'Invalid request parameters'
+          message: MESSAGES.VALIDATION.INVALID_REQUEST_PARAMETERS
         }
       }, 400);
     }
@@ -99,7 +100,7 @@ export const rateLimitMiddleware = (maxRequests: number = 100, windowMs: number 
           error: {
             name: 'RateLimitError',
             field: 'general',
-            message: 'Too many requests. Please try again later.'
+            message: MESSAGES.RATE_LIMIT.TOO_MANY_REQUESTS
           }
         }, 429);
       }

@@ -1,31 +1,31 @@
-import mongoose, { Schema } from 'mongoose';
+import mongoose from 'mongoose';
 import { Card } from '../../database/models/card';
-import { Deck, DeckFormat, IDeck } from '../../database/models/deck';
-import { CardCategory } from '../../database/models/userCard';
+import { Deck, IDeck } from '../../database/models/deck';
+import UserModel from '../../database/models/user';
+import PREMIUM_CONFIG from '../../shared/config/premium.config';
+import { getMessage } from '../../shared/constants/messages';
+import AppError from '../../shared/errors/AppError';
+import { GameType } from '../cards/card.service';
 
 export interface CreateDeckOptions {
   name: string;
   description?: string;
-  category: CardCategory;
-  format: DeckFormat;
+  gameType: GameType;
   isPublic?: boolean;
-  tags?: string[];
 }
 
 export interface UpdateDeckOptions {
   name?: string;
   description?: string;
-  category?: CardCategory;
-  format?: DeckFormat;
+  gameType?: GameType;
   isPublic?: boolean;
-  tags?: string[];
+  cards?: AddCardToDeckOptions[];
 }
 
 export interface GetDecksOptions {
   page?: number;
   limit?: number;
-  category?: CardCategory;
-  format?: DeckFormat;
+  gameType?: GameType;
   search?: string;
   sortBy?: 'name' | 'createdAt' | 'updatedAt' | 'cardCount';
   sortOrder?: 'asc' | 'desc';
@@ -45,37 +45,35 @@ export interface AddCardToDeckOptions {
 }
 
 export class DeckService {
-  async getUserDecks(userId: string, options: GetDecksOptions = {}): Promise<DecksResult> {
+  async getUserDecks(
+    userId: string,
+    options: GetDecksOptions = {}
+  ): Promise<DecksResult> {
     const {
       page = 1,
       limit = 20,
-      category,
-      format,
+      gameType,
       search,
-      sortBy = 'updatedAt',
-      sortOrder = 'desc'
+      sortBy = "updatedAt",
+      sortOrder = "desc",
     } = options;
 
     const filter: any = { userId: new mongoose.Types.ObjectId(userId) };
 
-    if (category) {
-      filter.category = category;
-    }
-
-    if (format) {
-      filter.format = format;
+    if (gameType) {
+      filter.gameType = gameType;
     }
 
     if (search) {
       filter.$or = [
-        { name: { $regex: search, $options: 'i' } },
-        { description: { $regex: search, $options: 'i' } },
-        { tags: { $in: [new RegExp(search, 'i')] } }
+        { name: { $regex: search, $options: "i" } },
+        { description: { $regex: search, $options: "i" } },
+        { tags: { $in: [new RegExp(search, "i")] } },
       ];
     }
 
     const sort: any = {};
-    sort[sortBy] = sortOrder === 'asc' ? 1 : -1;
+    sort[sortBy] = sortOrder === "asc" ? 1 : -1;
 
     const skip = (page - 1) * limit;
 
@@ -84,8 +82,8 @@ export class DeckService {
         .sort(sort)
         .skip(skip)
         .limit(limit)
-        .populate('cards.cardId', 'name imageUrl gameType'),
-      Deck.countDocuments(filter)
+        .populate("cards.cardId", "name imageUrl gameType"),
+      Deck.countDocuments(filter),
     ]);
 
     return {
@@ -93,7 +91,7 @@ export class DeckService {
       total,
       page,
       limit,
-      hasMore: total > page * limit
+      hasMore: total > page * limit,
     };
   }
 
@@ -101,33 +99,28 @@ export class DeckService {
     const {
       page = 1,
       limit = 20,
-      category,
-      format,
+      gameType,
       search,
-      sortBy = 'updatedAt',
-      sortOrder = 'desc'
+      sortBy = "updatedAt",
+      sortOrder = "desc",
     } = options;
 
     const filter: any = { isPublic: true };
 
-    if (category) {
-      filter.category = category;
-    }
-
-    if (format) {
-      filter.format = format;
+    if (gameType) {
+      filter.gameType = gameType;
     }
 
     if (search) {
       filter.$or = [
-        { name: { $regex: search, $options: 'i' } },
-        { description: { $regex: search, $options: 'i' } },
-        { tags: { $in: [new RegExp(search, 'i')] } }
+        { name: { $regex: search, $options: "i" } },
+        { description: { $regex: search, $options: "i" } },
+        { tags: { $in: [new RegExp(search, "i")] } },
       ];
     }
 
     const sort: any = {};
-    sort[sortBy] = sortOrder === 'asc' ? 1 : -1;
+    sort[sortBy] = sortOrder === "asc" ? 1 : -1;
 
     const skip = (page - 1) * limit;
 
@@ -136,9 +129,9 @@ export class DeckService {
         .sort(sort)
         .skip(skip)
         .limit(limit)
-        .populate('cards.cardId', 'name imageUrl gameType')
-        .populate('userId', 'username'),
-      Deck.countDocuments(filter)
+        .populate("cards.cardId", "name imageUrl gameType")
+        .populate("userId", "username"),
+      Deck.countDocuments(filter),
     ]);
 
     return {
@@ -146,28 +139,68 @@ export class DeckService {
       total,
       page,
       limit,
-      hasMore: total > page * limit
+      hasMore: total > page * limit,
     };
   }
 
   async createDeck(userId: string, options: CreateDeckOptions): Promise<IDeck> {
+    // Enforce freemium deck limit (3 decks)
+    const user = await UserModel.findById(userId);
+    if (user && !user.isPremium) {
+      const existing = await Deck.countDocuments({ userId: new mongoose.Types.ObjectId(userId) });
+      if (existing >= PREMIUM_CONFIG.DECK_LIMIT_FREEMIUM) {
+        throw new AppError(getMessage('PREMIUM.DECK_LIMIT_REACHED'), 403);
+      }
+    }
+
     const deck = new Deck({
       ...options,
-      userId: new Schema.Types.ObjectId(userId),
-      cards: []
+      userId: new mongoose.Types.ObjectId(userId),
+      cards: [],
     });
 
     return await deck.save();
   }
 
-  async updateDeck(deckId: string, userId: string, options: UpdateDeckOptions): Promise<IDeck> {
+  async updateDeck(
+    deckId: string,
+    userId: string,
+    options: UpdateDeckOptions
+  ): Promise<IDeck> {
     const deck = await Deck.findOne({
       _id: deckId,
-      userId: new Schema.Types.ObjectId(userId)
+      userId: new mongoose.Types.ObjectId(userId),
     });
 
     if (!deck) {
-      throw new Error('Deck not found or access denied');
+      throw new AppError(getMessage('DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED'), 404);
+    }
+
+    // If caller supplies cards, ensure all cards belong to same gameType as the deck
+    if (options.cards && Array.isArray(options.cards) && options.cards.length > 0) {
+      const cardIds = options.cards.map((it: AddCardToDeckOptions) => it.cardId).filter(Boolean);
+      // Detect duplicate cardIds in payload
+      const seen = new Set<string>();
+      for (const id of cardIds) {
+        if (seen.has(id)) {
+          throw new AppError(getMessage('VALIDATION.DUPLICATE_CARD_IN_PAYLOAD'), 400);
+        }
+        seen.add(id);
+      }
+      if (cardIds.length !== options.cards.length) {
+        throw new AppError(getMessage('VALIDATION.CARD_ID_REQUIRED'), 400);
+      }
+
+      const cards = await Card.find({ _id: { $in: cardIds } }).select('gameType').lean();
+      if (cards.length !== cardIds.length) {
+        throw new AppError(getMessage('CARDS.CARD_NOT_FOUND'), 404);
+      }
+
+      const deckGameType = deck.gameType;
+      const mismatch = cards.some((card: any) => String(card.gameType) !== String(deckGameType));
+      if (mismatch) {
+        throw new AppError(getMessage('VALIDATION.GAME_TYPE_INVALID'), 400);
+      }
     }
 
     Object.assign(deck, options);
@@ -177,11 +210,11 @@ export class DeckService {
   async deleteDeck(deckId: string, userId: string): Promise<void> {
     const result = await Deck.deleteOne({
       _id: deckId,
-      userId: new Schema.Types.ObjectId(userId)
+      userId: new mongoose.Types.ObjectId(userId),
     });
 
     if (result.deletedCount === 0) {
-      throw new Error('Deck not found or access denied');
+      throw new AppError(getMessage('DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED'), 404);
     }
   }
 
@@ -191,8 +224,8 @@ export class DeckService {
     // If userId is provided, check ownership or public status
     if (userId) {
       filter.$or = [
-        { userId: new Schema.Types.ObjectId(userId) },
-        { isPublic: true }
+        { userId: new mongoose.Types.ObjectId(userId) },
+        { isPublic: true },
       ];
     } else {
       // If no userId provided, only return public decks
@@ -200,15 +233,15 @@ export class DeckService {
     }
 
     return await Deck.findOne(filter)
-      .populate('cards.cardId', 'name imageUrl gameType pricing')
-      .populate('userId', 'username');
+      .populate("cards.cardId", "name imageUrl gameType pricing")
+      .populate("userId", "username");
   }
 
   async getDeckStats(deckId: string, userId?: string): Promise<any> {
     const deck = await this.getDeckById(deckId, userId);
 
     if (!deck) {
-      throw new Error('Deck not found or access denied');
+      throw new AppError(getMessage('DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED'), 404);
     }
 
     const totalCards = deck.cards.reduce((sum, card) => sum + card.quantity, 0);
@@ -216,8 +249,12 @@ export class DeckService {
 
     // Calculate deck value if cards have pricing
     let totalValue = 0;
-    deck.cards.forEach(deckCard => {
-      if (deckCard.cardId && typeof deckCard.cardId === 'object' && 'pricing' in deckCard.cardId) {
+    deck.cards.forEach((deckCard) => {
+      if (
+        deckCard.cardId &&
+        typeof deckCard.cardId === "object" &&
+        "pricing" in deckCard.cardId
+      ) {
         const card = deckCard.cardId as any;
         if (card.pricing?.market) {
           totalValue += card.pricing.market * deckCard.quantity;
@@ -227,11 +264,16 @@ export class DeckService {
 
     // Get card type distribution
     const cardTypeDistribution: { [key: string]: number } = {};
-    deck.cards.forEach(deckCard => {
-      if (deckCard.cardId && typeof deckCard.cardId === 'object' && 'cardType' in deckCard.cardId) {
+    deck.cards.forEach((deckCard) => {
+      if (
+        deckCard.cardId &&
+        typeof deckCard.cardId === "object" &&
+        "cardType" in deckCard.cardId
+      ) {
         const card = deckCard.cardId as any;
-        const type = card.cardType || 'Unknown';
-        cardTypeDistribution[type] = (cardTypeDistribution[type] || 0) + deckCard.quantity;
+        const type = card.cardType || "Unknown";
+        cardTypeDistribution[type] =
+          (cardTypeDistribution[type] || 0) + deckCard.quantity;
       }
     });
 
@@ -240,33 +282,35 @@ export class DeckService {
       uniqueCards,
       totalValue: totalValue > 0 ? totalValue : null,
       cardTypeDistribution,
-      format: deck.format,
-      category: deck.category,
-      isLegal: this.validateDeckFormat(deck)
+      gameType: deck.gameType,
     };
   }
 
-  async addCardToDeck(deckId: string, userId: string, options: AddCardToDeckOptions): Promise<IDeck> {
+  async addCardToDeck(
+    deckId: string,
+    userId: string,
+    options: AddCardToDeckOptions
+  ): Promise<IDeck> {
     const { cardId, quantity } = options;
 
     const deck = await Deck.findOne({
       _id: deckId,
-      userId: new Schema.Types.ObjectId(userId)
+      userId: new mongoose.Types.ObjectId(userId),
     });
 
     if (!deck) {
-      throw new Error('Deck not found or access denied');
+      throw new AppError(getMessage('DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED'), 404);
     }
 
     // Check if card exists
     const card = await Card.findById(cardId);
     if (!card) {
-      throw new Error('Card not found');
+      throw new AppError(getMessage('CARDS.CARD_NOT_FOUND'), 404);
     }
 
     // Check if card is already in deck
     const existingCardIndex = deck.cards.findIndex(
-      deckCard => deckCard.cardId.toString() === cardId
+      (deckCard) => deckCard.cardId.toString() === cardId
     );
 
     if (existingCardIndex >= 0) {
@@ -274,32 +318,37 @@ export class DeckService {
       deck.cards[existingCardIndex].quantity += quantity;
     } else {
       // Add new card
+      // push string id directly and let Mongoose cast it to ObjectId on save
       deck.cards.push({
-        cardId: new Schema.Types.ObjectId(cardId),
-        category: card.gameType as CardCategory, // Map gameType to category
-        quantity
+        cardId: new mongoose.Types.ObjectId(cardId),
+        quantity,
       });
     }
 
     return await deck.save();
   }
 
-  async removeCardFromDeck(deckId: string, userId: string, cardId: string, quantity: number = 1): Promise<IDeck> {
+  async removeCardFromDeck(
+    deckId: string,
+    userId: string,
+    cardId: string,
+    quantity: number = 1
+  ): Promise<IDeck> {
     const deck = await Deck.findOne({
       _id: deckId,
-      userId: new Schema.Types.ObjectId(userId)
+      userId: new mongoose.Types.ObjectId(userId),
     });
 
     if (!deck) {
-      throw new Error('Deck not found or access denied');
+      throw new AppError(getMessage('DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED'), 404);
     }
 
     const cardIndex = deck.cards.findIndex(
-      deckCard => deckCard.cardId.toString() === cardId
+      (deckCard) => deckCard.cardId.toString() === cardId
     );
 
     if (cardIndex === -1) {
-      throw new Error('Card not found in deck');
+      throw new AppError(getMessage('VALIDATION.CARD_ID_REQUIRED') || getMessage('VALIDATION.CARD_ID_REQUIRED'), 404);
     }
 
     const currentQuantity = deck.cards[cardIndex].quantity;
@@ -315,65 +364,106 @@ export class DeckService {
     return await deck.save();
   }
 
-  async duplicateDeck(deckId: string, userId: string, newName?: string): Promise<IDeck> {
+  /**
+   * Update a card's exact quantity in a deck. If quantity <= 0, the card is removed.
+   */
+  async updateCardInDeck(
+    deckId: string,
+    userId: string,
+    cardId: string,
+    quantity: number
+  ): Promise<IDeck> {
+    const deck = await Deck.findOne({
+      _id: deckId,
+      userId: new mongoose.Types.ObjectId(userId),
+    });
+
+    if (!deck) {
+      throw new AppError(getMessage('DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED'), 404);
+    }
+
+    const cardIndex = deck.cards.findIndex(
+      (deckCard) => deckCard.cardId.toString() === cardId
+    );
+
+    if (cardIndex === -1) {
+      throw new AppError(getMessage('CARDS.CARD_NOT_FOUND'), 404);
+    }
+
+    if (!Number.isInteger(quantity) || quantity < 0) {
+      throw new AppError(getMessage('VALIDATION.QUANTITY_INVALID') || 'Invalid quantity', 400);
+    }
+
+    if (quantity === 0) {
+      // remove card
+      deck.cards.splice(cardIndex, 1);
+    } else {
+      const currentQuantity = deck.cards[cardIndex].quantity;
+      deck.cards[cardIndex].quantity = currentQuantity + quantity;
+    }
+
+    return await deck.save();
+  }
+
+  async duplicateDeck(
+    deckId: string,
+    userId: string,
+    newName?: string
+  ): Promise<IDeck> {
     const originalDeck = await Deck.findOne({
       $or: [
-        { _id: deckId, userId: new Schema.Types.ObjectId(userId) },
-        { _id: deckId, isPublic: true }
-      ]
+        { _id: deckId, userId: new mongoose.Types.ObjectId(userId) },
+        { _id: deckId, isPublic: true },
+      ],
     });
 
     if (!originalDeck) {
-      throw new Error('Deck not found or access denied');
+      throw new AppError(getMessage('DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED'), 404);
+    }
+
+    // Enforce freemium deck limit (3 decks) for duplication
+    const user = await UserModel.findById(userId);
+    if (user && !user.isPremium) {
+      const existing = await Deck.countDocuments({ userId: new mongoose.Types.ObjectId(userId) });
+      if (existing >= PREMIUM_CONFIG.DECK_LIMIT_FREEMIUM) {
+        throw new AppError(getMessage('PREMIUM.DECK_LIMIT_REACHED'), 403);
+      }
     }
 
     const duplicatedDeck = new Deck({
       name: newName || `${originalDeck.name} (Copy)`,
       description: originalDeck.description,
-      category: originalDeck.category,
-      format: originalDeck.format,
-      userId: new Schema.Types.ObjectId(userId),
+      gameType: originalDeck.gameType,
+      userId: new mongoose.Types.ObjectId(userId),
       cards: [...originalDeck.cards],
-      tags: [...(originalDeck.tags || [])],
-      isPublic: false // Duplicated decks are private by default
+      isPublic: false, // Duplicated decks are private by default
     });
 
     return await duplicatedDeck.save();
   }
 
-  private validateDeckFormat(deck: IDeck): boolean {
-    const totalCards = deck.cards.reduce((sum, card) => sum + card.quantity, 0);
-
-    switch (deck.format) {
-      case DeckFormat.STANDARD:
-        return totalCards >= 40 && totalCards <= 60;
-      case DeckFormat.EXPANDED:
-        return totalCards >= 40;
-      case DeckFormat.UNLIMITED:
-        return totalCards >= 1;
-      case DeckFormat.CUSTOM:
-        return totalCards >= 1;
-      default:
-        return true;
-    }
-  }
-
-  async searchDecks(query: string, options: GetDecksOptions = {}): Promise<DecksResult> {
+  async searchDecks(
+    query: string,
+    options: GetDecksOptions = {}
+  ): Promise<DecksResult> {
     return await this.getPublicDecks({
       ...options,
-      search: query
+      search: query,
     });
   }
 
-  async getDecksByUser(userId: string, options: GetDecksOptions = {}): Promise<DecksResult> {
+  async getDecksByUser(
+    userId: string,
+    options: GetDecksOptions = {}
+  ): Promise<DecksResult> {
     return await this.getUserDecks(userId, options);
   }
 
   async getPopularDecks(options: GetDecksOptions = {}): Promise<DecksResult> {
     return await this.getPublicDecks({
       ...options,
-      sortBy: 'updatedAt',
-      sortOrder: 'desc'
+      sortBy: "updatedAt",
+      sortOrder: "desc",
     });
   }
 }

@@ -14,7 +14,9 @@ export function isValidObjectId(id: string): boolean {
  */
 export function toObjectId(id: string): Types.ObjectId {
   if (!isValidObjectId(id)) {
-    throw new Error(`Invalid ObjectId: ${id}`);
+    const { getMessage } = require('../constants/messages');
+    const AppError = require('../errors/AppError').default;
+    throw new AppError(getMessage('VALIDATION.INVALID_OBJECT_ID') + `: ${id}`, 400);
   }
   return new Types.ObjectId(id);
 }
@@ -47,7 +49,9 @@ export function ensureObjectId(id: string | Types.ObjectId | any): Types.ObjectI
     return toObjectId(stringId);
   }
   
-  throw new Error(`Cannot convert to ObjectId: ${typeof id} ${id}`);
+  const { getMessage } = require('../constants/messages');
+  const AppError = require('../errors/AppError').default;
+  throw new AppError(getMessage('VALIDATION.CANNOT_CONVERT_TO_OBJECT_ID') + `: ${typeof id} ${id}`, 400);
 }
 
 /**

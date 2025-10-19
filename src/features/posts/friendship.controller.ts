@@ -1,4 +1,6 @@
 import { Context } from "hono";
+import { createErrorResponse } from '../../shared/constants/messages';
+import AppError from '../../shared/errors/AppError';
 import { FriendshipService } from "../../shared/services/friendship.service";
 import { areIdsEqual, ensureObjectId, isValidObjectId, toObjectId } from "../../shared/utils/validation.utils";
 
@@ -11,8 +13,10 @@ export class FriendshipController {
 
   sendFriendRequest = async (c: Context) => {
     try {
-      const user = c.get("user");
-      const { userId } = await c.req.json();
+  const user = c.get("user");
+  // prefer validatedData provided by validation middleware
+  const v = c.get("validatedData");
+  const { userId } = v ?? (await c.req.json());
 
       // Validate userId is provided and is a valid ObjectId
       if (!userId) {
@@ -49,18 +53,21 @@ export class FriendshipController {
       }, 201);
     } catch (error: any) {
       console.error("Error sending friend request:", error);
-      return c.json({
-        success: false,
-        error: error.message || "Failed to send friend request"
-      }, 500);
+      if (error instanceof AppError) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: error.statusCode, headers: { 'Content-Type': 'application/json' } });
+      }
+      const body = createErrorResponse(error?.message || 'Failed to send friend request');
+      return new Response(JSON.stringify(body), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
   };
 
   respondToFriendRequest = async (c: Context) => {
     try {
-      const user = c.get("user");
-      const friendshipId = c.req.param("id");
-      const { action } = await c.req.json();
+  const user = c.get("user");
+  const friendshipId = c.req.param("id");
+  const v = c.get("validatedData");
+  const { action } = v ?? (await c.req.json());
 
       // Validate friendshipId
       if (!isValidObjectId(friendshipId)) {
@@ -98,10 +105,12 @@ export class FriendshipController {
       });
     } catch (error: any) {
       console.error("Error responding to friend request:", error);
-      return c.json({
-        success: false,
-        error: error.message || "Failed to respond to friend request"
-      }, 500);
+      if (error instanceof AppError) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: error.statusCode, headers: { 'Content-Type': 'application/json' } });
+      }
+      const body = createErrorResponse(error?.message || 'Failed to respond to friend request');
+      return new Response(JSON.stringify(body), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
   };
 
@@ -136,17 +145,20 @@ export class FriendshipController {
       });
     } catch (error: any) {
       console.error("Error unfriending:", error);
-      return c.json({
-        success: false,
-        error: error.message || "Failed to unfriend"
-      }, 500);
+      if (error instanceof AppError) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: error.statusCode, headers: { 'Content-Type': 'application/json' } });
+      }
+      const body = createErrorResponse(error?.message || 'Failed to unfriend');
+      return new Response(JSON.stringify(body), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
   };
 
   blockUser = async (c: Context) => {
     try {
-      const user = c.get("user");
-      const { userId } = await c.req.json();
+  const user = c.get("user");
+  const v = c.get("validatedData");
+  const { userId } = v ?? (await c.req.json());
 
       // Validate userId
       if (!userId) {
@@ -182,10 +194,12 @@ export class FriendshipController {
       });
     } catch (error: any) {
       console.error("Error blocking user:", error);
-      return c.json({
-        success: false,
-        error: error.message || "Failed to block user"
-      }, 500);
+      if (error instanceof AppError) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: error.statusCode, headers: { 'Content-Type': 'application/json' } });
+      }
+      const body = createErrorResponse(error?.message || 'Failed to block user');
+      return new Response(JSON.stringify(body), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
   };
 
@@ -220,10 +234,12 @@ export class FriendshipController {
       });
     } catch (error: any) {
       console.error("Error unblocking user:", error);
-      return c.json({
-        success: false,
-        error: error.message || "Failed to unblock user"
-      }, 500);
+      if (error instanceof AppError) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: error.statusCode, headers: { 'Content-Type': 'application/json' } });
+      }
+      const body = createErrorResponse(error?.message || 'Failed to unblock user');
+      return new Response(JSON.stringify(body), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
   };
 
@@ -242,10 +258,12 @@ export class FriendshipController {
       });
     } catch (error: any) {
       console.error("Error getting friends:", error);
-      return c.json({
-        success: false,
-        error: error.message || "Failed to get friends"
-      }, 500);
+      if (error instanceof AppError) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: error.statusCode, headers: { 'Content-Type': 'application/json' } });
+      }
+      const body = createErrorResponse(error?.message || 'Failed to get friends');
+      return new Response(JSON.stringify(body), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
   };
 
@@ -264,10 +282,12 @@ export class FriendshipController {
       });
     } catch (error: any) {
       console.error("Error getting pending requests:", error);
-      return c.json({
-        success: false,
-        error: error.message || "Failed to get pending requests"
-      }, 500);
+      if (error instanceof AppError) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: error.statusCode, headers: { 'Content-Type': 'application/json' } });
+      }
+      const body = createErrorResponse(error?.message || 'Failed to get pending requests');
+      return new Response(JSON.stringify(body), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
   };
 
@@ -296,10 +316,12 @@ export class FriendshipController {
       });
     } catch (error: any) {
       console.error("Error getting friendship status:", error);
-      return c.json({
-        success: false,
-        error: error.message || "Failed to get friendship status"
-      }, 500);
+      if (error instanceof AppError) {
+        const body = createErrorResponse(error.message);
+        return new Response(JSON.stringify(body), { status: error.statusCode, headers: { 'Content-Type': 'application/json' } });
+      }
+      const body = createErrorResponse(error?.message || 'Failed to get friendship status');
+      return new Response(JSON.stringify(body), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
   };
 }
