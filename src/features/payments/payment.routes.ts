@@ -16,4 +16,7 @@ paymentRoutes.post('/create-order', authMiddleware, paymentController.createOrde
 // MoMo notify callback (public)
 paymentRoutes.get('/notify', paymentController.paymentReturn);
 
+// PayOS webhook (public)
+paymentRoutes.post('/webhook', paymentController.webhook);
+
 export default paymentRoutes;
