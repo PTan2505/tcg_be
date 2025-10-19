@@ -11,6 +11,7 @@
         "@hono/node-server": "^1.19.4",
         "@hono/swagger-ui": "^0.5.2",
         "@hono/zod-validator": "^0.7.3",
+        "@payos/node": "^2.0.3",
         "@types/multer": "^2.0.0",
         "@types/uuid": "^11.0.0",
         "axios": "^1.12.2",
@@ -262,6 +263,8 @@
     "@otplib/preset-default": ["@otplib/preset-default@12.0.1", "", { "dependencies": { "@otplib/core": "^12.0.1", "@otplib/plugin-crypto": "^12.0.1", "@otplib/plugin-thirty-two": "^12.0.1" } }, "sha512-xf1v9oOJRyXfluBhMdpOkr+bsE+Irt+0D5uHtvg6x1eosfmHCsCC6ej/m7FXiWqdo0+ZUI6xSKDhJwc8yfiOPQ=="],
 
     "@otplib/preset-v11": ["@otplib/preset-v11@12.0.1", "", { "dependencies": { "@otplib/core": "^12.0.1", "@otplib/plugin-crypto": "^12.0.1", "@otplib/plugin-thirty-two": "^12.0.1" } }, "sha512-9hSetMI7ECqbFiKICrNa4w70deTUfArtwXykPUvSHWOdzOlfa9ajglu7mNCntlvxycTiOAXkQGwjQCzzDEMRMg=="],
+
+    "@payos/node": ["@payos/node@2.0.3", "", {}, "sha512-VDQlpLIo22mfOyFvizBSxJO8tkwxnG8J7WryQMorFNSUi9T7QrUQRBIusdzPsGCG5/DxxURMGHJ8SPNFS4puPg=="],
 
     "@protobufjs/aspromise": ["@protobufjs/aspromise@1.1.2", "", {}, "sha512-j+gKExEuLmKwvz3OgROXtrJ2UG2x8Ch2YZUxahh+s1F2HZ+wAceUNLkvy6zKCPVRkU++ZWQrdxsUeQXmcg4uoQ=="],
 
