@@ -1,8 +1,9 @@
 import { PayOS } from '@payos/node';
 import { createHmac } from 'crypto';
 import { Context } from 'hono';
+import OrderModel from '../../database/models/order.model';
+import UserModel from '../../database/models/user';
 import { createErrorResponse, createSuccessResponse, MESSAGES } from '../../shared/constants/messages';
-import OrderModel from './order.model';
 
 const payOS = new PayOS({
   clientId: process.env.PAYOS_CLIENT_ID,
@@ -80,9 +81,9 @@ export class PaymentController {
         }
       }
 
-      // Persist providerOrderId/paymentLinkId if present
-      if (paymentLinkRes && (paymentLinkRes.paymentLinkId || paymentLinkRes.orderCode)) {
-        order.providerOrderId = (paymentLinkRes.paymentLinkId || paymentLinkRes.orderCode).toString();
+      // Persist providerOrderId if present
+      if (paymentLinkRes && paymentLinkRes.orderCode) {
+        order.providerOrderId = paymentLinkRes.orderCode.toString();
         await order.save();
       }
 
@@ -136,7 +137,8 @@ export class PaymentController {
       const webhookData = body; // example shape from your message
       const sig = webhookData.signature;
       const checksumKey = process.env.PAYOS_CHECKSUM_KEY || "";
-
+      console.info("Received webhook data:", webhookData);
+      
       if (!sig || !checksumKey) {
         console.warn("Missing signature or checksumKey");
         return c.text("INVALID_SIGNATURE", 400);
@@ -149,8 +151,8 @@ export class PaymentController {
       }
 
       // Extract provider id/orderCode and status
-      const providerId = body.paymentLinkId || body.orderCode || body.paymentLink?.paymentLinkId;
-      const statusRaw = (body.status || body.result || '').toString().toUpperCase();
+      const providerId =  body.data.orderCode;
+      const isSuccess = body.success
 
       if (!providerId) {
         console.warn('Webhook missing provider id', body);
@@ -158,27 +160,30 @@ export class PaymentController {
       }
 
       // Find local order by providerOrderId or orderCode in metadata
-      const order = await OrderModel.findOne({ $or: [{ providerOrderId: String(providerId) }, { 'metadata.providerOrderId': String(providerId) }, { 'metadata.orderCode': Number(providerId) }] });
+      const order = await OrderModel.findOne({ providerOrderId: String(providerId) });
       if (!order) {
         console.warn('Webhook received for unknown provider id', providerId);
         return c.text('OK');
       }
 
-      if (statusRaw === 'PAID' || statusRaw === 'SUCCESS') {
+      if (isSuccess) {
         // idempotent: only apply if order wasn't already completed
-        if (order.status !== 'completed') {
-          order.status = 'completed';
+        if (order.status !== "completed") {
+          order.status = "completed";
 
           // apply business effects based on orderType
-          const user = await (await import('../../database/models/user')).default.findById(order.userId);
+          const user = await UserModel.findById(order.userId);
           if (user) {
-            if (order.orderType === 'premium') {
+            if (order.orderType === "premium") {
               if (!user.isPremium) {
                 user.isPremium = true;
                 await user.save();
               }
-            } else if (order.orderType === 'tokens') {
-              const tokens = order.tokenCount || (order.metadata && order.metadata.tokenCount) || 0;
+            } else if (order.orderType === "tokens") {
+              const tokens =
+                order.tokenCount ||
+                (order.metadata && order.metadata.tokenCount) ||
+                0;
               if (tokens > 0) {
                 user.tokenBalance = (user.tokenBalance || 0) + Number(tokens);
                 await user.save();
@@ -186,8 +191,8 @@ export class PaymentController {
             }
           }
         }
-      } else if (statusRaw === 'EXPIRED' || statusRaw === 'CANCELLED' || statusRaw === 'FAILED') {
-        order.status = 'cancelled';
+      } else {
+        order.status = "cancelled";
       }
 
       // persist provider payload for audit
