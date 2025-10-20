@@ -13,10 +13,14 @@ const paymentController = new PaymentController();
 // Create order (authenticated)
 paymentRoutes.post('/create-order', authMiddleware, paymentController.createOrder);
 
-// MoMo notify callback (public)
-paymentRoutes.get('/notify', paymentController.paymentReturn);
-
 // PayOS webhook (public)
 paymentRoutes.post('/webhook', paymentController.webhook);
+
+// Cancel payment link (authenticated)
+paymentRoutes.post('/cancel', authMiddleware, paymentController.cancelPaymentLink);
+
+paymentRoutes.get("/", authMiddleware, paymentController.getPaidOrders);
+
+
 
 export default paymentRoutes;
