@@ -3,12 +3,15 @@ import { Context } from 'hono';
 import OrderModel from '../../database/models/order.model';
 import UserModel from '../../database/models/user';
 import { createErrorResponse, createSuccessResponse, MESSAGES } from '../../shared/constants/messages';
+import { scheduleExpiration } from '../../shared/jobs/agenda.paymentJobs';
 
 const payOS = new PayOS({
   clientId: process.env.PAYOS_CLIENT_ID,
   apiKey: process.env.PAYOS_API_KEY,
   checksumKey: process.env.PAYOS_CHECKSUM_KEY
 });
+
+const paymentExpired = Number(process.env.PAYOS_EXPIRED_SECONDS || "600");
 export class PaymentController {
   // Create an order (premium or tokens), save Order, and request MoMo pay URL
   createOrder = async (c: Context) => {
@@ -50,10 +53,13 @@ export class PaymentController {
       const payload = {
         orderCode,
         amount: amount,
-        description:  orderType === 'premium' ? 'Thanh toán gói Premium' : `Thanh toán ${tokenCount} tokens` ,
+        description:
+          orderType === "premium"
+            ? "Thanh toán gói Premium"
+            : `Thanh toán ${tokenCount} tokens`,
         cancelUrl: "kado://payment/callback",
         returnUrl: "kado://payment/callback",
-        expiredAt: Math.floor(Date.now() / 1000) + 10 * 60, // 10 minutes from now
+        expiredAt: Math.floor(Date.now() / 1000) + paymentExpired, // 10 minutes from now
       };
 
       // Use PayOS SDK to create a payment link and capture response into paymentLinkRes
@@ -63,12 +69,19 @@ export class PaymentController {
       if (paymentLinkRes) {
         order.paymentInfo = paymentLinkRes;
         await order.save();
+
+        // Schedule expiration job (10 minutes by default)
+        try {
+          await scheduleExpiration(order._id?.toString());
+        } catch (e) {
+          console.warn('Failed to schedule expiration job for order', order._id, e);
+        }
       }
 
-      return c.json(createSuccessResponse( paymentLinkRes, MESSAGES.PAYMENTS.PAYMENT_SUCCESS));
+      return c.json(createSuccessResponse( paymentLinkRes, MESSAGES.ORDERS.PAYMENT_SUCCESS));
     } catch (err: any) {
       console.error('createOrder error', err);
-  return c.json(createErrorResponse(err?.message || MESSAGES.PAYMENTS.PAYMENT_FAILED), 500);
+  return c.json(createErrorResponse(err?.message || MESSAGES.ORDERS.PAYMENT_FAILED), 500);
     }
   };
 
@@ -126,14 +139,44 @@ export class PaymentController {
     }
   };
 
-  paymentReturn = async (c: Context) => {
-    // User is redirected here after payment
-    console.log("aaaa");
+  // Cancel a payment link (authenticated)
+  cancelPaymentLink = async (c: Context) => {
+    try {
+      const body = await c.req.json();
+      const { orderCode, reason } = body as { orderCode?: number; reason?: string };
 
-    const data =  c.req.query();
-    console.log(data);
-    
+      if (!orderCode) return c.json(createErrorResponse(MESSAGES.ERRORS.BAD_REQUEST), 400);
 
-    return c.text('Cảm ơn bạn đã thanh toán! Bạn có thể đóng trang này và quay lại ứng dụng.');
-  }
+      // Call PayOS SDK to cancel by orderCode
+      const cancelResp = await payOS.paymentRequests.cancel(orderCode, reason || undefined);
+
+      // Try to find local order and mark cancelled
+      const order = await OrderModel.findOne({ 'paymentInfo.orderCode': orderCode });
+      if (order) {
+        order.paymentInfo = cancelResp;
+        await order.save();
+      }
+
+      return c.json(createSuccessResponse(cancelResp, MESSAGES.ORDERS.PAYMENT_CANCELLED));
+    } catch (err: any) {
+      console.error('cancelPaymentLink error', err);
+      return c.json(createErrorResponse(err?.message || MESSAGES.ORDERS.PAYMENT_FAILED), 500);
+    }
+  };
+
+  getPaidOrders = async (c: Context) => {
+    try {
+      const user = c.get('user');
+      if (!user) return c.json(createErrorResponse(MESSAGES.AUTH.NO_TOKEN_PROVIDED), 401);
+
+      // Return all orders for the user (both paid and unpaid)
+      const orders = await OrderModel.find({ userId: user.id, "paymentInfo.status": "PAID" }).sort({ createdAt: -1 });
+
+      return c.json(createSuccessResponse(orders, MESSAGES.ORDERS.GET_ORDERS_SUCCESS));
+    } catch (err: any) {
+      console.error('getAllOrders error', err);
+      return c.json(createErrorResponse(err?.message || MESSAGES.ORDERS.GET_ORDERS_FAILED), 500);
+    }
+  };
+
 }
