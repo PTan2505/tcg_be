@@ -31,6 +31,7 @@ import setRoutes from "./features/sets/set.routes";
 import userRoutes from "./features/users/user.routes";
 import { initializeSuperuser } from "./scripts/initSuperuser";
 import { swaggerDoc } from "./shared/config/swagger";
+import { createAgenda } from './shared/jobs/agenda.paymentJobs';
 import { getCacheStats } from "./shared/middlewares/cache.middleware";
 import { errorHandler } from './shared/middlewares/error.middleware';
 import { aiCardMemoryService } from "./shared/services/aiCardMemory.service";
@@ -88,6 +89,19 @@ connectDB()
     
     // Initialize superuser
     await initializeSuperuser();
+
+    // Initialize Agenda job scheduler for payment reconciliation (optional)
+    try {
+      const mongoUri = process.env.MONGODB_URI as string;
+      if (mongoUri) {
+        await createAgenda(mongoUri);
+        console.log('✅ Agenda job scheduler started (payment reconciliation)');
+      } else {
+        console.warn('⚠️ MONGODB_URI not set - skipping Agenda initialization');
+      }
+    } catch (e) {
+      console.warn('⚠️ Failed to start Agenda jobs', e);
+    }
 
     const port = Number(process.env.PORT) || 3000;
     console.log(`🚀 Server running on port ${port}`);
@@ -165,7 +179,7 @@ app.route("/decks", deckRoutes);
 app.route("/posts", postRoutes);
 app.route("/market", marketRoutes);
 app.route("/notifications", notificationsRoutes);
-app.route("/payments", paymentRoutes);
+app.route("/orders", paymentRoutes);
 
 
 // Export the app for production environments

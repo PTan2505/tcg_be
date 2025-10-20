@@ -6,7 +6,8 @@
 export const MESSAGES = {
   // Authentication Messages
   AUTH: {
-    REGISTER_SUCCESS: "Đăng ký thành công. Vui lòng kiểm tra email để lấy mã OTP xác thực tài khoản.",
+    REGISTER_SUCCESS:
+      "Đăng ký thành công. Vui lòng kiểm tra email để lấy mã OTP xác thực tài khoản.",
     REGISTER_FAILED: "Đăng ký thất bại",
     LOGIN_SUCCESS: "Đăng nhập thành công",
     LOGIN_FAILED: "Đăng nhập thất bại",
@@ -14,7 +15,8 @@ export const MESSAGES = {
     EMAIL_VERIFICATION_FAILED: "Xác thực email thất bại",
     OTP_RESENT: "Mã OTP mới đã được gửi đến email của bạn",
     OTP_RESEND_FAILED: "Không thể gửi lại mã OTP",
-    FORGOT_PASSWORD_SUCCESS: "Nếu email tồn tại, mã OTP đã được gửi đến hộp thư của bạn",
+    FORGOT_PASSWORD_SUCCESS:
+      "Nếu email tồn tại, mã OTP đã được gửi đến hộp thư của bạn",
     FORGOT_PASSWORD_FAILED: "Không thể xử lý yêu cầu",
     RESET_PASSWORD_SUCCESS: "Đặt lại mật khẩu thành công",
     RESET_PASSWORD_FAILED: "Đặt lại mật khẩu thất bại",
@@ -24,7 +26,7 @@ export const MESSAGES = {
     INVALID_TOKEN: "Token không hợp lệ hoặc đã hết hạn",
     AUTHENTICATION_FAILED: "Xác thực thất bại",
     AUTHENTICATION_REQUIRED: "Yêu cầu xác thực",
-    ACCESS_DENIED: "Truy cập bị từ chối"
+    ACCESS_DENIED: "Truy cập bị từ chối",
   },
 
   // Validation Messages
@@ -36,24 +38,25 @@ export const MESSAGES = {
     SEARCH_QUERY_EMPTY: "Từ khóa tìm kiếm không được để trống",
     SET_ID_REQUIRED: "ID set là bắt buộc",
     CARD_ID_REQUIRED: "ID card là bắt buộc",
-  DUPLICATE_CARD_IN_PAYLOAD: "Payload chứa card trùng lặp (cùng cardId)",
+    DUPLICATE_CARD_IN_PAYLOAD: "Payload chứa card trùng lặp (cùng cardId)",
     PRODUCT_ID_REQUIRED: "ID sản phẩm hợp lệ là bắt buộc",
     GROUP_ID_REQUIRED: "ID nhóm hợp lệ là bắt buộc",
     INVALID_REQUEST_PARAMETERS: "Tham số yêu cầu không hợp lệ",
     REQUIRED_FIELD: (field: string) => `${field} là bắt buộc`,
-  CANNOT_BLOCK_SELF: "Không thể chặn chính bạn",
-  CARD_NOT_FOUND_IN_DECK: "Không tìm thấy thẻ trong deck",
-  INVALID_OBJECT_ID: "ID không hợp lệ",
-  CANNOT_CONVERT_TO_OBJECT_ID: "Không thể chuyển sang ObjectId",
-    
+    CANNOT_BLOCK_SELF: "Không thể chặn chính bạn",
+    CARD_NOT_FOUND_IN_DECK: "Không tìm thấy thẻ trong deck",
+    INVALID_OBJECT_ID: "ID không hợp lệ",
+    CANNOT_CONVERT_TO_OBJECT_ID: "Không thể chuyển sang ObjectId",
+
     // Zod validation messages in Vietnamese
     ZOD_MESSAGES: {
-      "Required": "Trường này là bắt buộc",
+      Required: "Trường này là bắt buộc",
       "String must contain at least": "Phải chứa ít nhất",
       "String must contain at most": "Không được vượt quá",
       "Invalid email": "Email không hợp lệ",
-      "Invalid email format": "Định dạng email không hợp lệ", 
-      "Password must contain at least one uppercase letter, one lowercase letter, and one number": "Mật khẩu phải chứa ít nhất một chữ hoa, một chữ thường và một số",
+      "Invalid email format": "Định dạng email không hợp lệ",
+      "Password must contain at least one uppercase letter, one lowercase letter, and one number":
+        "Mật khẩu phải chứa ít nhất một chữ hoa, một chữ thường và một số",
       "Password must be at least": "Mật khẩu phải có ít nhất",
       "Password must be at most": "Mật khẩu không được vượt quá",
       "Expected string, received": "Mong đợi chuỗi, nhận được",
@@ -61,7 +64,7 @@ export const MESSAGES = {
       "Expected boolean, received": "Mong đợi boolean, nhận được",
       "Expected array, received": "Mong đợi mảng, nhận được",
       "Expected object, received": "Mong đợi object, nhận được",
-      "Invalid": "Không hợp lệ",
+      Invalid: "Không hợp lệ",
       "Too small": "Quá nhỏ",
       "Too big": "Quá lớn",
       "Number must be greater than": "Số phải lớn hơn",
@@ -73,9 +76,9 @@ export const MESSAGES = {
       "Invalid input": "Dữ liệu đầu vào không hợp lệ",
       "Invalid date": "Ngày không hợp lệ",
       "Invalid enum value": "Giá trị enum không hợp lệ",
-      "Expected": "Mong đợi",
-      "received": "nhận được"
-    }
+      Expected: "Mong đợi",
+      received: "nhận được",
+    },
   },
 
   // Card Messages
@@ -88,10 +91,9 @@ export const MESSAGES = {
     STATS_SUCCESS: "Lấy thống kê thẻ thành công",
     STATS_FAILED: "Không thể lấy thống kê thẻ",
     CARDS_BY_SET_SUCCESS: "Lấy thẻ theo set thành công",
-    CARDS_BY_SET_FAILED: "Không thể lấy thẻ theo set"
-    ,
+    CARDS_BY_SET_FAILED: "Không thể lấy thẻ theo set",
     RECOGNITION_FAILED: "Không thể nhận diện thẻ",
-    UNSUPPORTED_GAME_TYPE: "Loại game không được hỗ trợ"
+    UNSUPPORTED_GAME_TYPE: "Loại game không được hỗ trợ",
   },
 
   // OCR specific messages
@@ -100,18 +102,18 @@ export const MESSAGES = {
     NO_SERVICE: "Không có dịch vụ OCR khả dụng",
     EXTRACT_TEXT_FAILED: "Không thể trích xuất văn bản từ ảnh",
     TESSERACT_NOT_INITIALIZED: "Tesseract chưa được khởi tạo. Vui lòng chờ",
-    TESSERACT_FAILED: "Tesseract OCR thất bại"
+    TESSERACT_FAILED: "Tesseract OCR thất bại",
   },
 
   // Visual matching / similarity messages
   VISUAL: {
     FAILED_EXTRACT_FEATURES: "Không thể trích xuất đặc trưng ảnh",
-    FAILED_DOWNLOAD: "Không thể tải ảnh từ URL"
+    FAILED_DOWNLOAD: "Không thể tải ảnh từ URL",
   },
 
   // AI memory messages
   AI: {
-    MEMORY_NOT_INITIALIZED: "Bộ nhớ AI chưa được khởi tạo"
+    MEMORY_NOT_INITIALIZED: "Bộ nhớ AI chưa được khởi tạo",
   },
 
   // Set Messages
@@ -122,7 +124,7 @@ export const MESSAGES = {
     SEARCH_SUCCESS: "Tìm kiếm set thành công",
     SEARCH_FAILED: "Tìm kiếm set thất bại",
     STATS_SUCCESS: "Lấy thống kê set thành công",
-    STATS_FAILED: "Không thể lấy thống kê set"
+    STATS_FAILED: "Không thể lấy thống kê set",
   },
 
   // Collection Messages
@@ -136,7 +138,7 @@ export const MESSAGES = {
     UPDATE_CARD_SUCCESS: "Cập nhật thẻ trong bộ sưu tập thành công",
     UPDATE_CARD_FAILED: "Không thể cập nhật thẻ trong bộ sưu tập",
     CARD_ALREADY_EXISTS: "Thẻ đã tồn tại trong bộ sưu tập",
-    CARD_NOT_FOUND_IN_COLLECTION: "Không tìm thấy thẻ trong bộ sưu tập"
+    CARD_NOT_FOUND_IN_COLLECTION: "Không tìm thấy thẻ trong bộ sưu tập",
   },
 
   // Deck Messages
@@ -150,16 +152,22 @@ export const MESSAGES = {
     DELETE_SUCCESS: "Xóa deck thành công",
     DELETE_FAILED: "Không thể xóa deck",
     DECK_NOT_FOUND: "Không tìm thấy deck",
-    DECK_NOT_FOUND_OR_ACCESS_DENIED: "Không tìm thấy deck hoặc không có quyền truy cập"
+    DECK_NOT_FOUND_OR_ACCESS_DENIED:
+      "Không tìm thấy deck hoặc không có quyền truy cập",
   },
 
   // Premium / Freemium Messages
   PREMIUM: {
-    DECK_LIMIT_REACHED: "Giới hạn deck cho tài khoản freemium đã đạt (tối đa 3). Vui lòng nâng cấp lên Premium để tạo thêm.",
-    SCAN_LIMIT_REACHED: "Giới hạn quét thẻ cho tài khoản freemium đã đạt (tối đa 10). Vui lòng nâng cấp lên Premium để quét thêm.",
-    COLLECTION_LIMIT_REACHED: "Giới hạn bộ sưu tập cho tài khoản freemium đã đạt (tối đa 30 cho mỗi game). Vui lòng nâng cấp lên Premium để thêm thẻ.",
-    SOCIAL_DISABLED: "Tính năng mạng xã hội bị vô hiệu cho tài khoản freemium. Vui lòng nâng cấp lên Premium để sử dụng.",
-    MARKET_DISABLED: "Tính năng thị trường bị vô hiệu cho tài khoản freemium. Vui lòng nâng cấp lên Premium để sử dụng.",
+    DECK_LIMIT_REACHED:
+      "Giới hạn deck cho tài khoản freemium đã đạt (tối đa 3). Vui lòng nâng cấp lên Premium để tạo thêm.",
+    SCAN_LIMIT_REACHED:
+      "Giới hạn quét thẻ cho tài khoản freemium đã đạt (tối đa 10). Vui lòng nâng cấp lên Premium để quét thêm.",
+    COLLECTION_LIMIT_REACHED:
+      "Giới hạn bộ sưu tập cho tài khoản freemium đã đạt (tối đa 30 cho mỗi game). Vui lòng nâng cấp lên Premium để thêm thẻ.",
+    SOCIAL_DISABLED:
+      "Tính năng mạng xã hội bị vô hiệu cho tài khoản freemium. Vui lòng nâng cấp lên Premium để sử dụng.",
+    MARKET_DISABLED:
+      "Tính năng thị trường bị vô hiệu cho tài khoản freemium. Vui lòng nâng cấp lên Premium để sử dụng.",
   },
 
   // Market-specific error messages
@@ -168,7 +176,7 @@ export const MESSAGES = {
     LISTING_NOT_AVAILABLE: "Tin rao không khả dụng",
     INSUFFICIENT_TOKENS: "Số dư token không đủ",
     TRANSACTION_NOT_SHIPPED: "Giao dịch chưa được gửi (chưa shipped)",
-    SELLER_NOT_FOUND: "Người bán không tồn tại"
+    SELLER_NOT_FOUND: "Người bán không tồn tại",
   },
 
   // User Messages
@@ -184,13 +192,13 @@ export const MESSAGES = {
     CHANGE_AVATAR_SUCCESS: "Đổi ảnh đại diện thành công",
     CHANGE_AVATAR_FAILED: "Không thể đổi ảnh đại diện",
     PASSWORD_MISMATCH: "Mật khẩu xác nhận không khớp",
-    CURRENT_PASSWORD_INCORRECT: "Mật khẩu hiện tại không đúng"
+    CURRENT_PASSWORD_INCORRECT: "Mật khẩu hiện tại không đúng",
   },
   // Authentication extras
   AUTH_EXTRAS: {
     EMAIL_ALREADY_EXISTS: "Email đã được sử dụng",
     USERNAME_ALREADY_EXISTS: "Tên đăng nhập đã được sử dụng",
-    INVALID_CREDENTIALS: "Thông tin xác thực không hợp lệ"
+    INVALID_CREDENTIALS: "Thông tin xác thực không hợp lệ",
   },
 
   // Comment Messages
@@ -204,9 +212,10 @@ export const MESSAGES = {
     GET_SUCCESS: "Lấy danh sách bình luận thành công",
     GET_FAILED: "Không thể lấy danh sách bình luận",
     COMMENT_NOT_FOUND: "Không tìm thấy bình luận",
-    COMMENT_NOT_FOUND_OR_ACCESS_DENIED: "Không tìm thấy bình luận hoặc không có quyền truy cập",
+    COMMENT_NOT_FOUND_OR_ACCESS_DENIED:
+      "Không tìm thấy bình luận hoặc không có quyền truy cập",
     GET_REPLIES_SUCCESS: "Lấy phản hồi thành công",
-    GET_REPLIES_FAILED: "Không thể lấy phản hồi"
+    GET_REPLIES_FAILED: "Không thể lấy phản hồi",
   },
 
   // Post Messages
@@ -220,22 +229,26 @@ export const MESSAGES = {
     GET_SUCCESS: "Lấy danh sách bài viết thành công",
     GET_FAILED: "Không thể lấy danh sách bài viết",
     POST_NOT_FOUND: "Không tìm thấy bài viết",
-    POST_NOT_FOUND_OR_ACCESS_DENIED: "Không tìm thấy bài viết hoặc không có quyền truy cập"
+    POST_NOT_FOUND_OR_ACCESS_DENIED:
+      "Không tìm thấy bài viết hoặc không có quyền truy cập",
   },
 
-  PAYMENTS:{
+  ORDERS: {
     PAYMENT_SUCCESS: "Thanh toán thành công",
     PAYMENT_FAILED: "Thanh toán thất bại",
+    PAYMENT_CANCELLED: "Thanh toán đã bị hủy",
     INVALID_PAYMENT_METHOD: "Phương thức thanh toán không hợp lệ",
     INSUFFICIENT_FUNDS: "Không đủ tiền trong tài khoản",
     ORDER_NOT_FOUND: "Không tìm thấy đơn hàng",
+    GET_ORDERS_SUCCESS: "Lấy danh sách đơn hàng thành công",
+    GET_ORDERS_FAILED: "Không thể lấy danh sách đơn hàng",
     REFUND_SUCCESS: "Hoàn tiền thành công",
-    REFUND_FAILED: "Hoàn tiền thất bại"
+    REFUND_FAILED: "Hoàn tiền thất bại",
   },
 
   // Rate Limiting Messages
   RATE_LIMIT: {
-    TOO_MANY_REQUESTS: "Quá nhiều yêu cầu. Vui lòng thử lại sau."
+    TOO_MANY_REQUESTS: "Quá nhiều yêu cầu. Vui lòng thử lại sau.",
   },
 
   // General Error Messages
@@ -246,8 +259,8 @@ export const MESSAGES = {
     NOT_FOUND: "Không tìm thấy",
     BAD_REQUEST: "Yêu cầu không hợp lệ",
     FORBIDDEN: "Bị cấm",
-    UNAUTHORIZED: "Không được phép"
-  }
+    UNAUTHORIZED: "Không được phép",
+  },
 };
 
 /**
