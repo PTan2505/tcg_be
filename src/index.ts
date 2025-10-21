@@ -20,7 +20,7 @@ import aiEnhancedScanRoutes from "./features/cards/aiEnhancedCardScan.routes";
 import cardRoutes from "./features/cards/card.routes";
 import enhancedScanRoutes from "./features/cards/enhancedCardScan.routes";
 import testRoutes from "./features/cards/test.routes";
-import chatbotRoutes from './features/chatbot/chatbot.routes';
+import chatbotRoutes from "./features/chatbot/chatbot.routes";
 import userCardRoutes from "./features/collections/userCard.routes";
 import deckRoutes from "./features/decks/deck.routes";
 import marketRoutes from "./features/market/market.routes";
@@ -31,26 +31,28 @@ import setRoutes from "./features/sets/set.routes";
 import userRoutes from "./features/users/user.routes";
 import { initializeSuperuser } from "./scripts/initSuperuser";
 import { swaggerDoc } from "./shared/config/swagger";
-import { createAgenda } from './shared/jobs/agenda.paymentJobs';
+import { createAgenda } from "./shared/jobs/agenda.paymentJobs";
 import { getCacheStats } from "./shared/middlewares/cache.middleware";
-import { errorHandler } from './shared/middlewares/error.middleware';
+import { errorHandler } from "./shared/middlewares/error.middleware";
 import { aiCardMemoryService } from "./shared/services/aiCardMemory.service";
-import { cardNumberFuzzySearch } from './shared/services/cardNumberFuzzySearch.service';
-import { socketService } from './shared/services/socket.service';
+import { cardNumberFuzzySearch } from "./shared/services/cardNumberFuzzySearch.service";
 
 // Create Hono app
 const app = new Hono();
 
 // Global error handler
-app.use('*', errorHandler);
+app.use("*", errorHandler);
 
 // Configure CORS for React Native Expo - Allow all origins
-app.use("/*", cors({
-  origin: "*", // Allow all origins
-  allowHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
-  allowMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
-  credentials: false // Must be false when origin is "*"
-}));
+app.use(
+  "/*",
+  cors({
+    origin: "*", // Allow all origins
+    allowHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
+    allowMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
+    credentials: false, // Must be false when origin is "*"
+  })
+);
 
 // Extract host and port from APP_URL
 const port = Number(process.env.PORT) || 3000;
@@ -60,33 +62,42 @@ const host = "0.0.0.0";
 connectDB()
   .then(async () => {
     console.log("✅ Database connected successfully");
-    
-      // Optionally preload heavy caches at startup. Disabled by default to reduce
-      // startup memory/IO. Set PRELOAD_CACHES=1 to enable (useful for warm servers).
-      const shouldPreload = (process.env.PRELOAD_CACHES === '1' || (process.env.PRELOAD_CACHES || '').toLowerCase() === 'true');
-      if (shouldPreload) {
-        // Initialize AI Memory with card data at startup
-        console.log("🚀 Preloading heavy caches (AI memory + card-number cache)...");
-        try {
-          console.log("🚀 Initializing AI memory with card data...");
-          await aiCardMemoryService.initializeAIMemory();
-          console.log("✅ AI memory initialized successfully");
-        } catch (error) {
-          console.error("❌ Failed to initialize AI memory:", error);
-        }
 
-        // Preload card number fuzzy search cache to avoid per-request file reads
-        try {
-          console.log('🚀 Preloading card number fuzzy search cache...');
-          await cardNumberFuzzySearch.initialize();
-          console.log('✅ Card number fuzzy search cache preloaded');
-        } catch (err) {
-          console.warn('⚠️ Failed to preload card number cache (continuing):', err);
-        }
-      } else {
-        console.log('ℹ️ PRELOAD_CACHES not set — skipping heavy cache preloads. Services will initialize lazily on first use.');
+    // Optionally preload heavy caches at startup. Disabled by default to reduce
+    // startup memory/IO. Set PRELOAD_CACHES=1 to enable (useful for warm servers).
+    const shouldPreload =
+      process.env.PRELOAD_CACHES === "1" ||
+      (process.env.PRELOAD_CACHES || "").toLowerCase() === "true";
+    if (shouldPreload) {
+      // Initialize AI Memory with card data at startup
+      console.log(
+        "🚀 Preloading heavy caches (AI memory + card-number cache)..."
+      );
+      try {
+        console.log("🚀 Initializing AI memory with card data...");
+        await aiCardMemoryService.initializeAIMemory();
+        console.log("✅ AI memory initialized successfully");
+      } catch (error) {
+        console.error("❌ Failed to initialize AI memory:", error);
       }
-    
+
+      // Preload card number fuzzy search cache to avoid per-request file reads
+      try {
+        console.log("🚀 Preloading card number fuzzy search cache...");
+        await cardNumberFuzzySearch.initialize();
+        console.log("✅ Card number fuzzy search cache preloaded");
+      } catch (err) {
+        console.warn(
+          "⚠️ Failed to preload card number cache (continuing):",
+          err
+        );
+      }
+    } else {
+      console.log(
+        "ℹ️ PRELOAD_CACHES not set — skipping heavy cache preloads. Services will initialize lazily on first use."
+      );
+    }
+
     // Initialize superuser
     await initializeSuperuser();
 
@@ -95,26 +106,22 @@ connectDB()
       const mongoUri = process.env.MONGODB_URI as string;
       if (mongoUri) {
         await createAgenda(mongoUri);
-        console.log('✅ Agenda job scheduler started (payment reconciliation)');
+        console.log("✅ Agenda job scheduler started (payment reconciliation)");
       } else {
-        console.warn('⚠️ MONGODB_URI not set - skipping Agenda initialization');
+        console.warn("⚠️ MONGODB_URI not set - skipping Agenda initialization");
       }
     } catch (e) {
-      console.warn('⚠️ Failed to start Agenda jobs', e);
+      console.warn("⚠️ Failed to start Agenda jobs", e);
     }
 
     const port = Number(process.env.PORT) || 3000;
     console.log(`🚀 Server running on port ${port}`);
-    console.log(`📖 API documentation available at http://localhost:${port}/docs`);
-    console.log(`📊 Cache stats available at http://localhost:${port}/cache-stats`);
-
-    // Start WebSocket server for realtime notifications
-    try {
-      const wsPort = Number(process.env.WEBSOCKET_PORT) || 8080;
-      socketService.start(wsPort);
-    } catch (e) {
-      console.warn('Failed to start WebSocket server', e);
-    }
+    console.log(
+      `📖 API documentation available at http://localhost:${port}/docs`
+    );
+    console.log(
+      `📊 Cache stats available at http://localhost:${port}/cache-stats`
+    );
 
     return { fetch: app.fetch, port };
   })
@@ -139,7 +146,7 @@ app.get("/health", (c) => {
     status: "ok",
     timestamp: new Date().toISOString(),
     uptime: process.uptime(),
-    cache: getCacheStats()
+    cache: getCacheStats(),
   });
 });
 
@@ -157,11 +164,11 @@ app.route("/api/posts", postRoutes);
 app.route("/api/market", marketRoutes);
 app.route("/api/notification", notificationsRoutes);
 app.route("/api/notifications", notificationsRoutes);
-app.route('/api/chatbot', chatbotRoutes);
+app.route("/api/chatbot", chatbotRoutes);
 // WebSocket used for realtime notifications (see src/shared/services/socket.service.ts)
 
 // Chatbot routes
-app.route('/chatbot', chatbotRoutes);
+app.route("/chatbot", chatbotRoutes);
 
 // Mount test routes (no authentication required)
 app.route("/test", testRoutes);
@@ -180,7 +187,6 @@ app.route("/posts", postRoutes);
 app.route("/market", marketRoutes);
 app.route("/notifications", notificationsRoutes);
 app.route("/orders", paymentRoutes);
-
 
 // Export the app for production environments
 export default app;
