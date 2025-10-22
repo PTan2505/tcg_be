@@ -5207,6 +5207,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
       get: {
         tags: ["Market"],
         summary: "List available market listings",
+        security: [{ bearerAuth: [] }],
         parameters: [
           {
             name: "gameType",
@@ -5246,6 +5247,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
       get: {
         tags: ["Market"],
         summary: "Get a market listing by ID",
+        security: [{ bearerAuth: [] }],
         parameters: [
           {
             in: "path",

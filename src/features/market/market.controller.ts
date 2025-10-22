@@ -169,7 +169,7 @@ class MarketController {
   getMarketListUserSell = async (c: Context) => {
     try {
       const user = c.get("user");
-      const listings = await marketService.getListingsBySeller(
+      const listings = await marketService.getTransactionsBySeller(
         user._id,
         c.req.query()
       );

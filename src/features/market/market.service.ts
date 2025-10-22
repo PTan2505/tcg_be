@@ -165,7 +165,7 @@ class MarketService {
     // transfer 95% to seller
     const seller = await UserModel.findById(tx.sellerId);
     if (!seller) throw new AppError(getMessage("MARKET.SELLER_NOT_FOUND"), 404);
-    const payout = Math.floor(tx.priceTokens * 0.95);
+    const payout = tx.priceTokens * 0.95;
     seller.tokenBalance += payout;
     await seller.save();
 
@@ -207,11 +207,10 @@ class MarketService {
   }
 
   // Get listings created by a specific seller (all statuses)
-  async getListingsBySeller(sellerId: string, query: any = {}) {
+  async getTransactionsBySeller(sellerId: string, query: any = {}) {
     const q: any = { sellerId: new Types.ObjectId(sellerId) };
-    if (query.gameType) q.gameType = query.gameType;
-    if (query.cardName) q.cardName = { $regex: query.cardName, $options: "i" };
-    return await MarketListingModel.find(q)
+    if (query.status) q.status = query.status;
+    return await MarketTransactionModel.find(q)
       .sort({ createdAt: -1 })
       .limit(200)
       .populate({
