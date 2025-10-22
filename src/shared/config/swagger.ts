@@ -70,7 +70,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
     },
     {
       name: "Chatbot",
-      description: "AI chatbot for Trading Card Game (Vietnamese only, TCG-focused)",
+      description:
+        "AI chatbot for Trading Card Game (Vietnamese only, TCG-focused)",
     },
   ],
   paths: {
@@ -78,18 +79,19 @@ export const swaggerDoc: OpenAPIV3.Document = {
       get: {
         tags: ["Users"],
         summary: "Get current freemium limits",
-        description: "Returns server-configured freemium limits such as deck, scan and collection caps",
+        description:
+          "Returns server-configured freemium limits such as deck, scan and collection caps",
         responses: {
           "200": {
             description: "Freemium limits",
             content: {
               "application/json": {
-                schema: { $ref: "#/components/schemas/FreemiumLimits" }
-              }
-            }
-          }
-        }
-      }
+                schema: { $ref: "#/components/schemas/FreemiumLimits" },
+              },
+            },
+          },
+        },
+      },
     },
     "/test/emit-notification": {
       post: {
@@ -174,7 +176,8 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
         responses: {
           "200": {
-            description: "Streaming response via Server-Sent Events (text/event-stream). Each data: line contains a chunk of the answer. Final event 'done' indicates completion.",
+            description:
+              "Streaming response via Server-Sent Events (text/event-stream). Each data: line contains a chunk of the answer. Final event 'done' indicates completion.",
             content: {
               "text/event-stream": {
                 schema: {
@@ -1782,7 +1785,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
               type: "string",
             },
             description: "Card ID",
-          },  
+          },
           {
             in: "query",
             name: "quantity",
@@ -2818,7 +2821,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-  "/notifications": {
+    "/notifications": {
       get: {
         tags: ["Notifications"],
         summary: "Get user notifications",
@@ -2865,7 +2868,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-  "/notifications/unread-count": {
+    "/notifications/unread-count": {
       get: {
         tags: ["Notifications"],
         summary: "Get unread notifications count",
@@ -2893,7 +2896,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-  "/notifications/{id}/read": {
+    "/notifications/{id}/read": {
       put: {
         tags: ["Notifications"],
         summary: "Mark notification as read",
@@ -2925,7 +2928,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-  "/notifications/read-all": {
+    "/notifications/read-all": {
       put: {
         tags: ["Notifications"],
         summary: "Mark all notifications as read",
@@ -2954,7 +2957,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-  "/notifications/{id}": {
+    "/notifications/{id}": {
       delete: {
         tags: ["Notifications"],
         summary: "Delete a notification",
@@ -5173,7 +5176,10 @@ export const swaggerDoc: OpenAPIV3.Document = {
                 type: "object",
                 required: ["gameType", "cardName", "priceTokens"],
                 properties: {
-                  gameType: { type: "string", enum: ["pokemon", "yugioh", "onepiece"] },
+                  gameType: {
+                    type: "string",
+                    enum: ["pokemon", "yugioh", "onepiece"],
+                  },
                   cardName: { type: "string" },
                   setCode: { type: "string" },
                   priceTokens: { type: "number", format: "float" },
@@ -5252,7 +5258,9 @@ export const swaggerDoc: OpenAPIV3.Document = {
           "200": {
             description: "Market listing",
             content: {
-              "application/json": { schema: { $ref: "#/components/schemas/MarketListing" } },
+              "application/json": {
+                schema: { $ref: "#/components/schemas/MarketListing" },
+              },
             },
           },
         },
@@ -5262,24 +5270,57 @@ export const swaggerDoc: OpenAPIV3.Document = {
         summary: "Update a market listing",
         security: [{ bearerAuth: [] }],
         parameters: [
-          { in: "path", name: "id", required: true, schema: { type: "string" } },
+          {
+            in: "path",
+            name: "id",
+            required: true,
+            schema: { type: "string" },
+          },
         ],
         requestBody: {
           required: true,
           content: {
-            "application/json": { schema: { $ref: "#/components/schemas/MarketListingCreate" } },
+            "application/json": {
+              schema: { $ref: "#/components/schemas/MarketListingCreate" },
+            },
           },
         },
-        responses: { "200": { description: "Updated", content: { "application/json": { schema: { $ref: "#/components/schemas/MarketListing" } } } } },
+        responses: {
+          "200": {
+            description: "Updated",
+            content: {
+              "application/json": {
+                schema: { $ref: "#/components/schemas/MarketListing" },
+              },
+            },
+          },
+        },
       },
       delete: {
         tags: ["Market"],
         summary: "Remove a market listing",
         security: [{ bearerAuth: [] }],
         parameters: [
-          { in: "path", name: "id", required: true, schema: { type: "string" } },
+          {
+            in: "path",
+            name: "id",
+            required: true,
+            schema: { type: "string" },
+          },
         ],
-        responses: { "200": { description: "Removed", content: { "application/json": { schema: { type: "object", properties: { success: { type: "boolean" } } } } } } },
+        responses: {
+          "200": {
+            description: "Removed",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: { success: { type: "boolean" } },
+                },
+              },
+            },
+          },
+        },
       },
     },
     "/market/{id}/buy": {
@@ -5288,12 +5329,21 @@ export const swaggerDoc: OpenAPIV3.Document = {
         summary: "Buy a market listing (create transaction)",
         security: [{ bearerAuth: [] }],
         parameters: [
-          { in: "path", name: "id", required: true, schema: { type: "string" } },
+          {
+            in: "path",
+            name: "id",
+            required: true,
+            schema: { type: "string" },
+          },
         ],
         responses: {
           "201": {
             description: "Transaction created",
-            content: { "application/json": { schema: { $ref: "#/components/schemas/MarketTransaction" } } },
+            content: {
+              "application/json": {
+                schema: { $ref: "#/components/schemas/MarketTransaction" },
+              },
+            },
           },
           "400": { description: "Bad Request" },
         },
@@ -5304,8 +5354,24 @@ export const swaggerDoc: OpenAPIV3.Document = {
         tags: ["Market"],
         summary: "Seller marks transaction as shipped",
         security: [{ bearerAuth: [] }],
-        parameters: [ { in: "path", name: "id", required: true, schema: { type: "string" } } ],
-        responses: { "200": { description: "Marked shipped", content: { "application/json": { schema: { $ref: "#/components/schemas/MarketTransaction" } } } } },
+        parameters: [
+          {
+            in: "path",
+            name: "id",
+            required: true,
+            schema: { type: "string" },
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Marked shipped",
+            content: {
+              "application/json": {
+                schema: { $ref: "#/components/schemas/MarketTransaction" },
+              },
+            },
+          },
+        },
       },
     },
     "/market/tx/{id}/deliver": {
@@ -5313,8 +5379,117 @@ export const swaggerDoc: OpenAPIV3.Document = {
         tags: ["Market"],
         summary: "Buyer confirms delivery (settles transaction)",
         security: [{ bearerAuth: [] }],
-        parameters: [ { in: "path", name: "id", required: true, schema: { type: "string" } } ],
-        responses: { "200": { description: "Delivered", content: { "application/json": { schema: { $ref: "#/components/schemas/MarketTransaction" } } } } },
+        parameters: [
+          {
+            in: "path",
+            name: "id",
+            required: true,
+            schema: { type: "string" },
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Delivered",
+            content: {
+              "application/json": {
+                schema: { $ref: "#/components/schemas/MarketTransaction" },
+              },
+            },
+          },
+        },
+      },
+    },
+    "/market/user/sell": {
+      get: {
+        tags: ["Market"],
+        summary: "Get listings created by the authenticated user",
+        description:
+          "Returns listings the current user has created (all statuses). Requires authentication.",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            name: "gameType",
+            in: "query",
+            schema: { type: "string" },
+            description: "Filter by game type",
+          },
+          {
+            name: "cardName",
+            in: "query",
+            schema: { type: "string" },
+            description: "Search by card name",
+          },
+          {
+            name: "limit",
+            in: "query",
+            schema: { type: "integer", default: 50 },
+            description: "Max items to return",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "User's listings",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "array",
+                      items: { $ref: "#/components/schemas/MarketListing" },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "401": { $ref: "#/components/responses/Unauthorized" },
+        },
+      },
+    },
+    "/market/user/buy": {
+      get: {
+        tags: ["Market"],
+        summary: "Get transactions where the authenticated user is the buyer",
+        description:
+          "Returns market transactions where the current user is the buyer. Requires authentication.",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            name: "status",
+            in: "query",
+            schema: { type: "string" },
+            description:
+              "Filter by transaction status (processing, shipped, delivered)",
+          },
+          {
+            name: "limit",
+            in: "query",
+            schema: { type: "integer", default: 50 },
+            description: "Max items to return",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Buyer transactions",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "array",
+                      items: { $ref: "#/components/schemas/MarketTransaction" },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "401": { $ref: "#/components/responses/Unauthorized" },
+        },
       },
     },
   },
@@ -6508,21 +6683,24 @@ export const swaggerDoc: OpenAPIV3.Document = {
         properties: {
           _id: { type: "string" },
           sellerId: { type: "string" },
-          gameType: { type: "string", enum: ["pokemon","yugioh","onepiece"] },
+          gameType: { type: "string", enum: ["pokemon", "yugioh", "onepiece"] },
           cardName: { type: "string" },
           setCode: { type: "string" },
           priceTokens: { type: "number" },
           images: { type: "array", items: { type: "string" } },
-          status: { type: "string", enum: ["available","reserved","sold","removed"] },
+          status: {
+            type: "string",
+            enum: ["available", "reserved", "sold", "removed"],
+          },
           createdAt: { type: "string", format: "date-time" },
           updatedAt: { type: "string", format: "date-time" },
         },
       },
       MarketListingCreate: {
         type: "object",
-        required: ["gameType","cardName","priceTokens"],
+        required: ["gameType", "cardName", "priceTokens"],
         properties: {
-          gameType: { type: "string", enum: ["pokemon","yugioh","onepiece"] },
+          gameType: { type: "string", enum: ["pokemon", "yugioh", "onepiece"] },
           cardName: { type: "string" },
           setCode: { type: "string" },
           priceTokens: { type: "number", minimum: 0 },
@@ -6537,7 +6715,10 @@ export const swaggerDoc: OpenAPIV3.Document = {
           buyerId: { type: "string" },
           sellerId: { type: "string" },
           priceTokens: { type: "number" },
-          status: { type: "string", enum: ["processing","shipped","delivered","cancelled"] },
+          status: {
+            type: "string",
+            enum: ["processing", "shipped", "delivered", "cancelled"],
+          },
           createdAt: { type: "string", format: "date-time" },
           updatedAt: { type: "string", format: "date-time" },
         },
@@ -6545,11 +6726,34 @@ export const swaggerDoc: OpenAPIV3.Document = {
       FreemiumLimits: {
         type: "object",
         properties: {
-          deckLimitPerUser: { type: "integer", description: "Maximum number of decks for freemium users", example: 3 },
-          scanLimitPerUser: { type: "integer", description: "Maximum number of scans for freemium users", example: 10 },
-          collectionLimitPerGame: { type: "integer", description: "Maximum number of cards per game in collection for freemium users", example: 30 },
-          socialDisabled: { type: "boolean", description: "Whether social features are disabled for freemium users", example: true },
-          marketDisabled: { type: "boolean", description: "Whether market features are disabled for freemium users", example: true }
+          deckLimitPerUser: {
+            type: "integer",
+            description: "Maximum number of decks for freemium users",
+            example: 3,
+          },
+          scanLimitPerUser: {
+            type: "integer",
+            description: "Maximum number of scans for freemium users",
+            example: 10,
+          },
+          collectionLimitPerGame: {
+            type: "integer",
+            description:
+              "Maximum number of cards per game in collection for freemium users",
+            example: 30,
+          },
+          socialDisabled: {
+            type: "boolean",
+            description:
+              "Whether social features are disabled for freemium users",
+            example: true,
+          },
+          marketDisabled: {
+            type: "boolean",
+            description:
+              "Whether market features are disabled for freemium users",
+            example: true,
+          },
         },
         description: "Server-configured freemium limits and feature toggles",
       },

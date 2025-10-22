@@ -4,7 +4,19 @@ export interface Notification extends Document {
   _id: Types.ObjectId;
   recipient: Types.ObjectId;
   sender: Types.ObjectId;
-  type: 'post_like' | 'post_comment' | 'comment_like' | 'comment_reply' | 'post_tag' | 'comment_tag' | 'friend_request' | 'friend_accept' | 'market:reserved' | 'market:shipped' | 'market:delivered';
+  type:
+    | "post_like"
+    | "post_comment"
+    | "comment_like"
+    | "comment_reply"
+    | "post_tag"
+    | "comment_tag"
+    | "friend_request"
+    | "friend_accept"
+    | "market:reserved"
+    | "market:shipped"
+    | "market:delivered"
+    | "market:cancelled";
   post?: Types.ObjectId;
   comment?: Types.ObjectId;
   isRead: boolean;
@@ -26,7 +38,20 @@ const notificationSchema = new Schema<Notification>(
     },
     type: {
       type: String,
-      enum: ['post_like', 'post_comment', 'comment_like', 'comment_reply', 'post_tag', 'comment_tag', 'friend_request', 'friend_accept', 'market:reserved', 'market:shipped', 'market:delivered'],
+      enum: [
+        "post_like",
+        "post_comment",
+        "comment_like",
+        "comment_reply",
+        "post_tag",
+        "comment_tag",
+        "friend_request",
+        "friend_accept",
+        "market:reserved",
+        "market:shipped",
+        "market:delivered",
+        "market:cancelled",
+      ],
       required: true,
     },
     post: {
@@ -51,5 +76,8 @@ const notificationSchema = new Schema<Notification>(
 notificationSchema.index({ recipient: 1, isRead: 1, createdAt: -1 });
 notificationSchema.index({ sender: 1 });
 
-const NotificationModel = model<Notification>("Notification", notificationSchema);
+const NotificationModel = model<Notification>(
+  "Notification",
+  notificationSchema
+);
 export default NotificationModel;

@@ -1,14 +1,13 @@
-import { Context } from 'hono';
+import { Context } from "hono";
 import { S3Service } from "../../shared/services/s3.service";
-import marketService from './market.service';
-
+import marketService from "./market.service";
 
 class MarketController {
   private s3Service: S3Service;
-  
+
   constructor() {
-      this.s3Service = new S3Service();
-    }
+    this.s3Service = new S3Service();
+  }
 
   createListing = async (c: Context) => {
     try {
@@ -24,7 +23,7 @@ class MarketController {
 
       const imageUrls: string[] = [];
       const files = formData.getAll("images") as File[];
-     
+
       for (const file of files) {
         if (file && file.size > 0) {
           // Validate file type
@@ -145,10 +144,50 @@ class MarketController {
     }
   };
 
+  // Buyer cancels a transaction within 24 hours of purchase
+  cancelTransaction = async (c: Context) => {
+    try {
+      const user = c.get("user");
+      const id = c.req.param("id");
+      const tx = await marketService.cancelTransactionByBuyer(id, user._id);
+      return c.json({ success: true, data: tx });
+    } catch (err: any) {
+      return c.json({ success: false, message: err.message }, 400);
+    }
+  };
+
   listListings = async (c: Context) => {
     try {
       const listings = await marketService.getListings(c.req.query());
       return c.json({ success: true, data: listings });
+    } catch (err: any) {
+      return c.json({ success: false, message: err.message }, 400);
+    }
+  };
+
+  // Listings created by the current user (sell)
+  getMarketListUserSell = async (c: Context) => {
+    try {
+      const user = c.get("user");
+      const listings = await marketService.getListingsBySeller(
+        user._id,
+        c.req.query()
+      );
+      return c.json({ success: true, data: listings });
+    } catch (err: any) {
+      return c.json({ success: false, message: err.message }, 400);
+    }
+  };
+
+  // Transactions where the current user is the buyer (buy)
+  getMarketListUserBuy = async (c: Context) => {
+    try {
+      const user = c.get("user");
+      const txs = await marketService.getTransactionsByBuyer(
+        user._id,
+        c.req.query()
+      );
+      return c.json({ success: true, data: txs });
     } catch (err: any) {
       return c.json({ success: false, message: err.message }, 400);
     }
