@@ -22,7 +22,6 @@ marketRoutes.get("/user/buy", marketController.getMarketListUserBuy);
 marketRoutes.post("/:id/buy", marketController.buyListing);
 marketRoutes.post("/tx/:id/ship", marketController.markShipped);
 marketRoutes.post("/tx/:id/deliver", marketController.confirmDelivered);
-// Buyer cancels a transaction within 24 hours
 marketRoutes.post("/tx/:id/cancel", marketController.cancelTransaction);
 
 export default marketRoutes;

@@ -2,6 +2,9 @@ import { Types } from "mongoose";
 import CommentModel, { Comment } from "../../database/models/comment";
 import CommentReactionModel from "../../database/models/commentReaction";
 import PostModel from "../../database/models/post";
+import UserModel from "../../database/models/user";
+import { getMessage } from "../constants/messages";
+import AppError from "../errors/AppError";
 import { NotificationService } from "./notification.service";
 
 export class CommentService {
@@ -35,18 +38,23 @@ export class CommentService {
       );
     }
 
+    const sender = await UserModel.findById(data.author);
+    if (!sender) throw new AppError(getMessage("AUTH.USER_NOT_FOUND"), 404);
+
     // Get post details for notifications
     const post = await PostModel.findById(data.post).lean();
     if (post) {
       // Notify post author
       if (data.parentComment) {
         // This is a reply - notify the parent comment author
-        const parentComment = await CommentModel.findById(data.parentComment).lean();
+        const parentComment = await CommentModel.findById(
+          data.parentComment
+        ).lean();
         if (parentComment) {
           await this.notificationService.createNotification({
             recipient: parentComment.author,
-            sender: data.author,
-            type: 'comment_reply',
+            sender: sender,
+            type: "comment_reply",
             post: data.post,
             comment: savedComment._id,
           });
@@ -55,8 +63,8 @@ export class CommentService {
         // This is a direct comment on the post - notify post author
         await this.notificationService.createNotification({
           recipient: post.author,
-          sender: data.author,
-          type: 'post_comment',
+          sender: sender,
+          type: "post_comment",
           post: data.post,
           comment: savedComment._id,
         });
@@ -67,8 +75,8 @@ export class CommentService {
         for (const taggedUserId of data.tags) {
           await this.notificationService.createNotification({
             recipient: taggedUserId,
-            sender: data.author,
-            type: 'comment_tag',
+            sender: sender,
+            type: "comment_tag",
             post: data.post,
             comment: savedComment._id,
           });
@@ -79,7 +87,11 @@ export class CommentService {
     return savedComment;
   }
 
-  async getComments(postId: Types.ObjectId, page: number = 1, limit: number = 20): Promise<{
+  async getComments(
+    postId: Types.ObjectId,
+    page: number = 1,
+    limit: number = 20
+  ): Promise<{
     comments: Comment[];
     total: number;
     hasMore: boolean;
@@ -89,23 +101,27 @@ export class CommentService {
     // Get top-level comments (no parent)
     const [comments, total] = await Promise.all([
       CommentModel.find({ post: postId, parentComment: null })
-        .populate('author', 'firstName lastName avatarUrl')
-        .populate('tags', 'firstName lastName avatarUrl')
+        .populate("author", "firstName lastName avatarUrl")
+        .populate("tags", "firstName lastName avatarUrl")
         .sort({ createdAt: -1 })
         .skip(skip)
         .limit(limit)
         .lean(),
-      CommentModel.countDocuments({ post: postId, parentComment: null })
+      CommentModel.countDocuments({ post: postId, parentComment: null }),
     ]);
 
     return {
       comments: comments as Comment[],
       total,
-      hasMore: total > skip + limit
+      hasMore: total > skip + limit,
     };
   }
 
-  async getReplies(commentId: Types.ObjectId, page: number = 1, limit: number = 10): Promise<{
+  async getReplies(
+    commentId: Types.ObjectId,
+    page: number = 1,
+    limit: number = 10
+  ): Promise<{
     replies: Comment[];
     total: number;
     hasMore: boolean;
@@ -114,37 +130,46 @@ export class CommentService {
 
     const [replies, total] = await Promise.all([
       CommentModel.find({ parentComment: commentId })
-        .populate('author', 'firstName lastName avatarUrl')
-        .populate('tags', 'firstName lastName avatarUrl')
+        .populate("author", "firstName lastName avatarUrl")
+        .populate("tags", "firstName lastName avatarUrl")
         .sort({ createdAt: 1 }) // Oldest first for replies
         .skip(skip)
         .limit(limit)
         .lean(),
-      CommentModel.countDocuments({ parentComment: commentId })
+      CommentModel.countDocuments({ parentComment: commentId }),
     ]);
 
     return {
       replies: replies as Comment[],
       total,
-      hasMore: total > skip + limit
+      hasMore: total > skip + limit,
     };
   }
 
-  async updateComment(commentId: Types.ObjectId, userId: Types.ObjectId, content: string, tags?: Types.ObjectId[]): Promise<Comment | null> {
+  async updateComment(
+    commentId: Types.ObjectId,
+    userId: Types.ObjectId,
+    content: string,
+    tags?: Types.ObjectId[]
+  ): Promise<Comment | null> {
     const comment = await CommentModel.findOneAndUpdate(
       { _id: commentId, author: userId },
       { content, tags },
       { new: true }
-    ).populate('author', 'firstName lastName avatarUrl')
-     .populate('tags', 'firstName lastName avatarUrl');
+    )
+      .populate("author", "firstName lastName avatarUrl")
+      .populate("tags", "firstName lastName avatarUrl");
+
+    const sender = await UserModel.findById(userId);
+    if (!sender) throw new AppError(getMessage("AUTH.USER_NOT_FOUND"), 404);
 
     // Create notifications for newly tagged users
     if (comment && tags) {
       for (const taggedUserId of tags) {
         await this.notificationService.createNotification({
           recipient: taggedUserId,
-          sender: userId,
-          type: 'comment_tag',
+          sender: sender,
+          type: "comment_tag",
           post: comment.post,
           comment: commentId,
         });
@@ -154,32 +179,34 @@ export class CommentService {
     return comment;
   }
 
-  async deleteComment(commentId: Types.ObjectId, userId: Types.ObjectId): Promise<boolean> {
-    const comment = await CommentModel.findOne({ _id: commentId, author: userId });
+  async deleteComment(
+    commentId: Types.ObjectId,
+    userId: Types.ObjectId
+  ): Promise<boolean> {
+    const comment = await CommentModel.findOne({
+      _id: commentId,
+      author: userId,
+    });
     if (!comment) return false;
 
     // Count all replies to be deleted
-    const repliesToDelete = await CommentModel.countDocuments({ parentComment: commentId });
+    const repliesToDelete = await CommentModel.countDocuments({
+      parentComment: commentId,
+    });
     const totalCommentsToDelete = 1 + repliesToDelete; // Comment itself + all replies
 
     // Delete the comment and all its replies
     await Promise.all([
-      CommentModel.deleteMany({ 
-        $or: [
-          { _id: commentId },
-          { parentComment: commentId }
-        ]
+      CommentModel.deleteMany({
+        $or: [{ _id: commentId }, { parentComment: commentId }],
       }),
       CommentReactionModel.deleteMany({
-        comment: { 
-          $in: await CommentModel.find({ 
-            $or: [
-              { _id: commentId },
-              { parentComment: commentId }
-            ]
-          }).distinct('_id')
-        }
-      })
+        comment: {
+          $in: await CommentModel.find({
+            $or: [{ _id: commentId }, { parentComment: commentId }],
+          }).distinct("_id"),
+        },
+      }),
     ]);
 
     // Update post comment count
@@ -199,67 +226,74 @@ export class CommentService {
     return true;
   }
 
-  async toggleReaction(commentId: Types.ObjectId, userId: Types.ObjectId, type: 'like'): Promise<{
+  async toggleReaction(
+    commentId: Types.ObjectId,
+    userId: Types.ObjectId,
+    type: "like"
+  ): Promise<{
     success: boolean;
-    action: 'added' | 'removed';
+    action: "added" | "removed";
     likesCount: number;
   }> {
     const comment = await CommentModel.findById(commentId);
     if (!comment) {
-      const { getMessage } = require('../constants/messages');
-      const AppError = require('../errors/AppError').default;
-      throw new AppError(getMessage('COMMENTS.COMMENT_NOT_FOUND'), 404);
+      const { getMessage } = require("../constants/messages");
+      const AppError = require("../errors/AppError").default;
+      throw new AppError(getMessage("COMMENTS.COMMENT_NOT_FOUND"), 404);
     }
 
     const existingReaction = await CommentReactionModel.findOne({
       comment: commentId,
-      user: userId
+      user: userId,
     });
 
-    let action: 'added' | 'removed';
-    
+    let action: "added" | "removed";
+
     if (!existingReaction) {
       // Add new like reaction
       await CommentReactionModel.create({
         comment: commentId,
         user: userId,
-        type: 'like'
+        type: "like",
       });
-      action = 'added';
+      action = "added";
+
+      const sender = await UserModel.findById(userId);
+      if (!sender) throw new AppError(getMessage("AUTH.USER_NOT_FOUND"), 404);
 
       // Create notification
       await this.notificationService.createNotification({
         recipient: comment.author,
-        sender: userId,
-        type: 'comment_like',
+        sender: sender,
+        type: "comment_like",
         post: comment.post,
         comment: commentId,
       });
     } else {
       // Remove existing like reaction (unlike)
       await CommentReactionModel.deleteOne({ _id: existingReaction._id });
-      action = 'removed';
+      action = "removed";
     }
 
     // Update likes count only
-    const likesCount = await CommentReactionModel.countDocuments({ comment: commentId, type: 'like' });
+    const likesCount = await CommentReactionModel.countDocuments({
+      comment: commentId,
+      type: "like",
+    });
 
-    await CommentModel.updateOne(
-      { _id: commentId },
-      { likesCount }
-    );
+    await CommentModel.updateOne({ _id: commentId }, { likesCount });
 
     return {
       success: true,
       action,
-      likesCount
+      likesCount,
     };
   }
 
   async getCommentById(commentId: Types.ObjectId): Promise<Comment | null> {
-    return await CommentModel.findById(commentId)
-      .populate('author', 'firstName lastName avatarUrl')
-      .populate('tags', 'firstName lastName avatarUrl')
-      .lean() as Comment;
+    return (await CommentModel.findById(commentId)
+      .populate("author", "firstName lastName avatarUrl")
+      .populate("tags", "firstName lastName avatarUrl")
+      .lean()) as Comment;
   }
 }

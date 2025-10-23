@@ -3,7 +3,7 @@ import CommentModel from "../../database/models/comment";
 import FriendshipModel from "../../database/models/friendship";
 import PostModel, { Post } from "../../database/models/post";
 import PostReactionModel from "../../database/models/postReaction";
-import UserModel from '../../database/models/user';
+import UserModel from "../../database/models/user";
 import { getMessage } from "../constants/messages";
 import AppError from "../errors/AppError";
 import { NotificationService } from "./notification.service";
@@ -31,13 +31,11 @@ export class PostService {
     tags?: Types.ObjectId[];
   }): Promise<Post> {
     // Disallow posting for freemium users
-    try {
-      const user = await UserModel.findById((data.author as any).toString());
-      if (user && !user.isPremium) {
-        throw new AppError(getMessage('PREMIUM.SOCIAL_DISABLED'), 403);
-      }
-    } catch (e: any) {
-      if (e instanceof AppError) throw e;
+
+    const user = await UserModel.findById(data.author);
+    if (!user) throw new AppError(getMessage("AUTH.USER_NOT_FOUND"), 404);
+    if (!user.isPremium) {
+      throw new AppError(getMessage("PREMIUM.SOCIAL_DISABLED"), 403);
     }
 
     const post = new PostModel(data);
@@ -48,7 +46,7 @@ export class PostService {
       for (const taggedUserId of data.tags) {
         await this.notificationService.createNotification({
           recipient: taggedUserId,
-          sender: data.author,
+          sender: user,
           type: "post_tag",
           post: savedPost._id,
         });
@@ -174,12 +172,14 @@ export class PostService {
       .populate("author", "firstName lastName avatarUrl")
       .populate("tags", "firstName lastName avatarUrl");
 
+    const user = await UserModel.findById(userId);
+    if (!user) throw new AppError(getMessage("AUTH.USER_NOT_FOUND"), 404);
     // Create notifications for newly tagged users
     if (updateData.tags) {
       for (const taggedUserId of updateData.tags) {
         await this.notificationService.createNotification({
           recipient: taggedUserId,
-          sender: userId,
+          sender: user,
           type: "post_tag",
           post: postId,
         });
@@ -228,7 +228,7 @@ export class PostService {
   }> {
     const post = await PostModel.findById(postId);
     if (!post) {
-      throw new AppError(getMessage('POSTS.POST_NOT_FOUND'), 404);
+      throw new AppError(getMessage("POSTS.POST_NOT_FOUND"), 404);
     }
 
     const existingReaction = await PostReactionModel.findOne({
@@ -236,16 +236,13 @@ export class PostService {
       user: userId,
     });
 
-    let action: 'added' | 'removed';
-    
+    let action: "added" | "removed";
+
     // Disallow reactions (social interactions) for freemium users
-    try {
-      const user = await UserModel.findById(userId.toString());
-      if (user && !user.isPremium) {
-        throw new AppError(getMessage('PREMIUM.SOCIAL_DISABLED'), 403);
-      }
-    } catch (e: any) {
-      if (e instanceof AppError) throw e;
+    const user = await UserModel.findById(userId);
+    if (!user) throw new AppError(getMessage("AUTH.USER_NOT_FOUND"), 404);
+    if (user && !user.isPremium) {
+      throw new AppError(getMessage("PREMIUM.SOCIAL_DISABLED"), 403);
     }
 
     if (!existingReaction) {
@@ -260,7 +257,7 @@ export class PostService {
       // Create notification
       await this.notificationService.createNotification({
         recipient: post.author,
-        sender: userId,
+        sender: user,
         type: "post_like",
         post: postId,
       });

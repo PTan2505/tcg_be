@@ -18,7 +18,9 @@ export class TaggingService {
   extractUsernamesFromContent(content: string): string[] {
     const usernameRegex = /@([a-zA-Z0-9_]+)/g;
     const matches = content.match(usernameRegex);
-    return matches ? matches.map(match => match.substring(1).toLowerCase()) : [];
+    return matches
+      ? matches.map((match) => match.substring(1).toLowerCase())
+      : [];
   }
 
   /**
@@ -28,7 +30,7 @@ export class TaggingService {
     content: string,
     authorId: Types.ObjectId,
     context: {
-      type: 'post' | 'comment' | 'reply';
+      type: "post" | "comment" | "reply";
       postId?: Types.ObjectId;
       parentCommentId?: Types.ObjectId;
     }
@@ -41,39 +43,45 @@ export class TaggingService {
     // Get friends list
     const friendships = await FriendshipModel.find({
       $or: [
-        { requester: authorId, status: 'accepted' },
-        { recipient: authorId, status: 'accepted' }
-      ]
-    }).populate('requester recipient', 'username');
+        { requester: authorId, status: "accepted" },
+        { recipient: authorId, status: "accepted" },
+      ],
+    }).populate("requester recipient", "username");
 
     const friendUsernames = new Set<string>();
-    friendships.forEach(friendship => {
-      const friend = friendship.requester._id.toString() === authorId.toString() 
-        ? friendship.recipient 
-        : friendship.requester;
+    friendships.forEach((friendship) => {
+      const friend =
+        friendship.requester._id.toString() === authorId.toString()
+          ? friendship.recipient
+          : friendship.requester;
       friendUsernames.add((friend as any).username.toLowerCase());
     });
 
     // Get allowed usernames based on context
     const allowedUsernames = new Set(friendUsernames);
 
-    if (context.type === 'reply' && context.postId && context.parentCommentId) {
+    if (context.type === "reply" && context.postId && context.parentCommentId) {
       // For replies, also allow post owner and comment owner
       const [post, parentComment] = await Promise.all([
-        PostModel.findById(context.postId).populate('author', 'username'),
-        CommentModel.findById(context.parentCommentId).populate('author', 'username')
+        PostModel.findById(context.postId).populate("author", "username"),
+        CommentModel.findById(context.parentCommentId).populate(
+          "author",
+          "username"
+        ),
       ]);
 
       if (post?.author) {
         allowedUsernames.add((post.author as any).username.toLowerCase());
       }
       if (parentComment?.author) {
-        allowedUsernames.add((parentComment.author as any).username.toLowerCase());
+        allowedUsernames.add(
+          (parentComment.author as any).username.toLowerCase()
+        );
       }
     }
 
     // Filter extracted usernames to only allowed ones
-    const validUsernames = extractedUsernames.filter(username => 
+    const validUsernames = extractedUsernames.filter((username) =>
       allowedUsernames.has(username.toLowerCase())
     );
 
@@ -83,10 +91,12 @@ export class TaggingService {
 
     // Get user IDs for valid usernames (case-insensitive search)
     const users = await UserModel.find({
-      username: { $in: validUsernames.map(username => new RegExp(`^${username}$`, 'i')) }
-    }).select('_id username');
+      username: {
+        $in: validUsernames.map((username) => new RegExp(`^${username}$`, "i")),
+      },
+    }).select("_id username");
 
-    return users.map(user => user._id);
+    return users.map((user) => user._id);
   }
 
   /**
@@ -96,33 +106,25 @@ export class TaggingService {
     taggedUserIds: Types.ObjectId[],
     authorId: Types.ObjectId,
     context: {
-      type: 'post' | 'comment';
+      type: "post" | "comment";
       postId: Types.ObjectId;
       commentId?: Types.ObjectId;
       content: string;
     }
   ): Promise<void> {
-    const author = await UserModel.findById(authorId).select('firstName lastName username');
+    const author = await UserModel.findById(authorId);
     if (!author) return;
 
     const notificationPromises = taggedUserIds.map(async (userId) => {
       // Don't notify if user is tagging themselves
       if (userId.toString() === authorId.toString()) return;
 
-      const message = context.type === 'post' 
-        ? `${author.firstName} ${author.lastName} tagged you in a post`
-        : `${author.firstName} ${author.lastName} tagged you in a comment`;
-
-      const relatedData = context.type === 'post' 
-        ? { postId: context.postId }
-        : { postId: context.postId, commentId: context.commentId };
-
       await this.notificationService.createNotification({
         recipient: userId,
-        sender: authorId,
-        type: context.type === 'post' ? 'post_tag' : 'comment_tag',
+        sender: author,
+        type: context.type === "post" ? "post_tag" : "comment_tag",
         post: context.postId,
-        comment: context.commentId
+        comment: context.commentId,
       });
     });
 
@@ -137,15 +139,19 @@ export class TaggingService {
     authorId: Types.ObjectId,
     postId: Types.ObjectId
   ): Promise<Types.ObjectId[]> {
-    const taggedUserIds = await this.validateAndGetTaggedUsers(content, authorId, {
-      type: 'post'
-    });
+    const taggedUserIds = await this.validateAndGetTaggedUsers(
+      content,
+      authorId,
+      {
+        type: "post",
+      }
+    );
 
     if (taggedUserIds.length > 0) {
       await this.sendTagNotifications(taggedUserIds, authorId, {
-        type: 'post',
+        type: "post",
         postId,
-        content
+        content,
       });
     }
 
@@ -162,18 +168,22 @@ export class TaggingService {
     commentId: Types.ObjectId,
     parentCommentId?: Types.ObjectId
   ): Promise<Types.ObjectId[]> {
-    const context = parentCommentId 
-      ? { type: 'reply' as const, postId, parentCommentId }
-      : { type: 'comment' as const, postId };
+    const context = parentCommentId
+      ? { type: "reply" as const, postId, parentCommentId }
+      : { type: "comment" as const, postId };
 
-    const taggedUserIds = await this.validateAndGetTaggedUsers(content, authorId, context);
+    const taggedUserIds = await this.validateAndGetTaggedUsers(
+      content,
+      authorId,
+      context
+    );
 
     if (taggedUserIds.length > 0) {
       await this.sendTagNotifications(taggedUserIds, authorId, {
-        type: 'comment',
+        type: "comment",
         postId,
         commentId,
-        content
+        content,
       });
     }
 
@@ -186,41 +196,58 @@ export class TaggingService {
   async getTaggableUsers(
     authorId: Types.ObjectId,
     context: {
-      type: 'post' | 'comment' | 'reply';
+      type: "post" | "comment" | "reply";
       postId?: Types.ObjectId;
       parentCommentId?: Types.ObjectId;
     }
-  ): Promise<{ _id: Types.ObjectId; username: string; firstName: string; lastName: string }[]> {
+  ): Promise<
+    {
+      _id: Types.ObjectId;
+      username: string;
+      firstName: string;
+      lastName: string;
+    }[]
+  > {
     // Get friends
     const friendships = await FriendshipModel.find({
       $or: [
-        { requester: authorId, status: 'accepted' },
-        { recipient: authorId, status: 'accepted' }
-      ]
-    }).populate('requester recipient', 'username firstName lastName');
+        { requester: authorId, status: "accepted" },
+        { recipient: authorId, status: "accepted" },
+      ],
+    }).populate("requester recipient", "username firstName lastName");
 
     const taggableUsers = new Map<string, any>();
-    
+
     // Add friends
-    friendships.forEach(friendship => {
-      const friend = friendship.requester._id.toString() === authorId.toString() 
-        ? friendship.recipient 
-        : friendship.requester;
+    friendships.forEach((friendship) => {
+      const friend =
+        friendship.requester._id.toString() === authorId.toString()
+          ? friendship.recipient
+          : friendship.requester;
       taggableUsers.set(friend._id.toString(), friend);
     });
 
     // For replies, also add post owner and comment owner
-    if (context.type === 'reply' && context.postId && context.parentCommentId) {
+    if (context.type === "reply" && context.postId && context.parentCommentId) {
       const [post, parentComment] = await Promise.all([
-        PostModel.findById(context.postId).populate('author', 'username firstName lastName'),
-        CommentModel.findById(context.parentCommentId).populate('author', 'username firstName lastName')
+        PostModel.findById(context.postId).populate(
+          "author",
+          "username firstName lastName"
+        ),
+        CommentModel.findById(context.parentCommentId).populate(
+          "author",
+          "username firstName lastName"
+        ),
       ]);
 
       if (post?.author) {
         taggableUsers.set((post.author as any)._id.toString(), post.author);
       }
       if (parentComment?.author) {
-        taggableUsers.set((parentComment.author as any)._id.toString(), parentComment.author);
+        taggableUsers.set(
+          (parentComment.author as any)._id.toString(),
+          parentComment.author
+        );
       }
     }
 
