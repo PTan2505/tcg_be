@@ -1,7 +1,6 @@
-import { Hono } from 'hono';
-import { authMiddleware } from '../../shared/middlewares/auth.middleware';
-import { PaymentController } from './payment.controller';
-
+import { Hono } from "hono";
+import { authMiddleware } from "../../shared/middlewares/auth.middleware";
+import { PaymentController } from "./payment.controller";
 
 export const paymentRoutes = new Hono();
 
@@ -11,16 +10,32 @@ const paymentController = new PaymentController();
 // paymentRoutes.use('/*', rateLimitMiddleware(300, 60000)); // 300 requests per minute
 
 // Create order (authenticated)
-paymentRoutes.post('/create-order', authMiddleware, paymentController.createOrder);
+paymentRoutes.post(
+  "/create-order",
+  authMiddleware,
+  paymentController.createOrder
+);
 
 // PayOS webhook (public)
-paymentRoutes.post('/webhook', paymentController.webhook);
+paymentRoutes.post("/webhook", paymentController.webhook);
 
 // Cancel payment link (authenticated)
-paymentRoutes.post('/cancel', authMiddleware, paymentController.cancelPaymentLink);
+paymentRoutes.post(
+  "/cancel",
+  authMiddleware,
+  paymentController.cancelPaymentLink
+);
 
 paymentRoutes.get("/", authMiddleware, paymentController.getPaidOrders);
 
+// Admin: list all orders with filters & pagination
+paymentRoutes.get("/admin", authMiddleware, paymentController.listAllOrders);
 
+// Admin: list paid orders with total amount (filters + pagination)
+paymentRoutes.get(
+  "/admin/paid-summary",
+  authMiddleware,
+  paymentController.listPaidOrdersSummary
+);
 
 export default paymentRoutes;
