@@ -3,7 +3,14 @@ import { Document, Schema, Types, model } from "mongoose";
 export interface Notification extends Document {
   _id: Types.ObjectId;
   recipient: Types.ObjectId;
-  sender: Types.ObjectId;
+  // sender is stored as a snapshot object to avoid extra lookups
+  sender: {
+    _id: Types.ObjectId;
+    username?: string;
+    firstName?: string;
+    lastName?: string;
+    avatarUrl?: string;
+  };
   type:
     | "post_like"
     | "post_comment"
@@ -19,6 +26,7 @@ export interface Notification extends Document {
     | "market:cancelled";
   post?: Types.ObjectId;
   comment?: Types.ObjectId;
+  transaction?: Types.ObjectId;
   isRead: boolean;
   createdAt: Date;
   updatedAt: Date;
@@ -31,10 +39,13 @@ const notificationSchema = new Schema<Notification>(
       ref: "User",
       required: true,
     },
+    // store sender as a lightweight embedded snapshot to keep notifications immutable
     sender: {
-      type: Schema.Types.ObjectId,
-      ref: "User",
-      required: true,
+      _id: { type: Schema.Types.ObjectId, required: true },
+      username: { type: String },
+      firstName: { type: String },
+      lastName: { type: String },
+      avatarUrl: { type: String },
     },
     type: {
       type: String,
@@ -61,6 +72,10 @@ const notificationSchema = new Schema<Notification>(
     comment: {
       type: Schema.Types.ObjectId,
       ref: "Comment",
+    },
+    transaction: {
+      type: Schema.Types.ObjectId,
+      ref: "MarketTransaction",
     },
     isRead: {
       type: Boolean,

@@ -92,8 +92,9 @@ class MarketService {
     try {
       await this.notificationService.createNotification({
         recipient: listing.sellerId as any,
-        sender: new Types.ObjectId(buyerId) as any,
+        sender: buyer,
         type: "market:reserved",
+        transaction: tx._id,
         post: undefined,
         comment: undefined,
       } as any);
@@ -128,8 +129,9 @@ class MarketService {
     try {
       await this.notificationService.createNotification({
         recipient: tx.buyerId as any,
-        sender: tx.sellerId as any,
+        sender: seller,
         type: "market:shipped",
+        transaction: tx._id,
         post: undefined,
         comment: undefined,
       } as any);
@@ -178,8 +180,9 @@ class MarketService {
     try {
       await this.notificationService.createNotification({
         recipient: tx.sellerId as any,
-        sender: tx.buyerId as any,
+        sender: buyer,
         type: "market:delivered",
+        transaction: tx._id,
         post: undefined,
         comment: undefined,
       } as any);
@@ -293,8 +296,9 @@ class MarketService {
     try {
       await this.notificationService.createNotification({
         recipient: tx.sellerId as any,
-        sender: tx.buyerId as any,
+        sender: buyer,
         type: "market:cancelled",
+        transaction: tx._id,
         post: undefined,
         comment: undefined,
       } as any);

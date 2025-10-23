@@ -6692,7 +6692,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
           images: { type: "array", items: { type: "string" } },
           status: {
             type: "string",
-            enum: ["available", "reserved", "sold", "removed"],
+            enum: ["available", "private", "sold", "removed"],
           },
           createdAt: { type: "string", format: "date-time" },
           updatedAt: { type: "string", format: "date-time" },
