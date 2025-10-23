@@ -5494,6 +5494,42 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
+    "/market/bulk-buy": {
+      post: {
+        tags: ["Market"],
+        summary: "Bulk buy market listings (create multiple transactions)",
+        security: [{ bearerAuth: [] }],
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: { $ref: "#/components/schemas/BulkBuyRequest" },
+            },
+          },
+        },
+        responses: {
+          "201": {
+            description: "Transactions created",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "array",
+                      items: { $ref: "#/components/schemas/MarketTransaction" },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "400": { description: "Bad Request" },
+          "401": { $ref: "#/components/responses/Unauthorized" },
+        },
+      },
+    },
     "/orders/admin": {
       get: {
         tags: ["Payments"],
@@ -6841,6 +6877,17 @@ export const swaggerDoc: OpenAPIV3.Document = {
           },
           createdAt: { type: "string", format: "date-time" },
           updatedAt: { type: "string", format: "date-time" },
+        },
+      },
+      BulkBuyRequest: {
+        type: "object",
+        required: ["listingIds"],
+        properties: {
+          listingIds: {
+            type: "array",
+            items: { type: "string" },
+            description: "Array of MarketListing IDs to purchase",
+          },
         },
       },
       Order: {

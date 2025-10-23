@@ -1,4 +1,5 @@
-import { Types } from "mongoose";
+import { UpdateResult } from "mongodb";
+import mongoose, { Types } from "mongoose";
 import UserModel from "../../database/models/user";
 import { getMessage } from "../../shared/constants/messages";
 import AppError from "../../shared/errors/AppError";
@@ -108,6 +109,159 @@ class MarketService {
     }
 
     return tx;
+  }
+
+  // Bulk buy multiple listings in a single transaction. Returns created transactions.
+  async bulkBuy(buyerId: string, listingIds: string[]) {
+    if (!Array.isArray(listingIds) || listingIds.length === 0) {
+      throw new AppError(
+        getMessage("MARKET.INVALID_INPUT") || "No listings provided",
+        400
+      );
+    }
+
+    // dedupe ids
+    const uniqueIds = Array.from(new Set(listingIds));
+
+    const session = await mongoose.startSession();
+    session.startTransaction();
+    try {
+      // Load listings
+      const objectIds = uniqueIds.map((id) => new Types.ObjectId(id));
+      const listings = await MarketListingModel.find({
+        _id: { $in: objectIds },
+      }).session(session);
+      if (listings.length !== uniqueIds.length) {
+        throw new AppError(
+          getMessage("MARKET.LISTING_NOT_FOUND") ||
+            "One or more listings not found",
+          404
+        );
+      }
+
+      // Ensure all listings are available
+      for (const l of listings) {
+        if (l.status !== "available") {
+          throw new AppError(
+            getMessage("MARKET.LISTING_NOT_AVAILABLE") ||
+              "One or more listings not available",
+            400
+          );
+        }
+      }
+
+      // Calculate total price
+      const total = listings.reduce(
+        (sum, l) => sum + (l.priceTokens as number),
+        0
+      );
+
+      // Load buyer and check balance & premium status
+      const buyer = await UserModel.findById(buyerId).session(session);
+      if (!buyer) throw new AppError(getMessage("AUTH.USER_NOT_FOUND"), 404);
+      if (!buyer.isPremium)
+        throw new AppError(getMessage("PREMIUM.MARKET_DISABLED"), 403);
+      if (buyer.tokenBalance < total)
+        throw new AppError(getMessage("MARKET.INSUFFICIENT_TOKENS"), 400);
+
+      // Decrement buyer balance (hold)
+      buyer.tokenBalance -= total;
+      await buyer.save({ session });
+
+      // Reserve listings (atomic update)
+      const updateResult = (await MarketListingModel.updateMany(
+        { _id: { $in: objectIds }, status: "available" },
+        { $set: { status: "reserved" } },
+        { session }
+      )) as unknown as UpdateResult;
+
+      // Prefer modifiedCount from modern drivers, fall back to matchedCount
+      const modified =
+        updateResult.modifiedCount ?? updateResult.matchedCount ?? 0;
+      if (modified !== listings.length) {
+        throw new AppError(
+          getMessage("MARKET.LISTING_NOT_AVAILABLE") ||
+            "Failed to reserve all listings",
+          400
+        );
+      }
+
+      // Create transactions
+      const txDocs = listings.map((l) => ({
+        listingId: l._id,
+        buyerId: new Types.ObjectId(buyerId),
+        sellerId: l.sellerId,
+        priceTokens: l.priceTokens,
+        status: "processing",
+      }));
+
+      const txs = await MarketTransactionModel.insertMany(txDocs, { session });
+
+      await session.commitTransaction();
+      session.endSession();
+
+      // After commit, notify sellers and emit sockets
+      for (const tx of txs) {
+        try {
+          const listing = listings.find(
+            (l) => l._id.toString() === (tx.listingId as any).toString()
+          );
+          const sellerId = (tx.sellerId as any).toString();
+          const buyerDoc = buyer; // from earlier
+          await this.notificationService.createNotification({
+            recipient: tx.sellerId as any,
+            sender: buyerDoc,
+            type: "market:reserved",
+            transaction: tx._id,
+            post: undefined,
+            comment: undefined,
+          } as any);
+          socketService.emitToUser(sellerId, "market:reserved", tx);
+        } catch (e) {
+          console.error("Failed to notify seller for bulk buy tx", e);
+        }
+      }
+
+      // Create a buyer-facing notification and emit the same event used for sellers
+      try {
+        // Build a lightweight sender snapshot for the notification (use buyer info)
+        const buyerSnapshot = {
+          _id: buyer._id,
+          username: (buyer as any).username,
+          firstName: (buyer as any).firstName,
+          lastName: (buyer as any).lastName,
+          avatarUrl: (buyer as any).avatarUrl,
+        };
+
+        // Create a single notification for the buyer using the same 'market:reserved' type
+        await this.notificationService.createNotification({
+          recipient: buyer._id as any,
+          sender: buyerSnapshot as any,
+          type: "market:reserved",
+          // link to first transaction for convenience
+          transaction: txs[0]._id as any,
+        } as any);
+
+        // Emit the same websocket event name 'market:reserved' to the buyer with the created transactions
+        try {
+          socketService.emitToUser(
+            (buyer._id as any).toString(),
+            "market:reserved",
+            txs
+          );
+        } catch (e) {
+          console.warn("Failed to emit reserved websocket to buyer", e);
+        }
+      } catch (e) {
+        console.warn("Failed to create/emit buyer reserved notification", e);
+      }
+
+      return txs;
+    } catch (err) {
+      await session.abortTransaction();
+      session.endSession();
+      throw err;
+    }
   }
 
   async markShipped(transactionId: string, sellerId: string) {
