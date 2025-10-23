@@ -20,6 +20,8 @@ marketRoutes.get("/user/buy", marketController.getMarketListUserBuy);
 
 // Purchase flow
 marketRoutes.post("/:id/buy", marketController.buyListing);
+// Bulk purchase (buy multiple listings from cart)
+marketRoutes.post("/bulk-buy", marketController.bulkBuy);
 marketRoutes.post("/tx/:id/ship", marketController.markShipped);
 marketRoutes.post("/tx/:id/deliver", marketController.confirmDelivered);
 marketRoutes.post("/tx/:id/cancel", marketController.cancelTransaction);

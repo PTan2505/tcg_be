@@ -156,6 +156,19 @@ class MarketController {
     }
   };
 
+  // Bulk buy multiple listings from cart
+  bulkBuy = async (c: Context) => {
+    try {
+      const user = c.get("user");
+      const body = await c.req.json();
+      const listingIds = Array.isArray(body.listingIds) ? body.listingIds : [];
+      const txs = await marketService.bulkBuy(user._id, listingIds);
+      return c.json({ success: true, data: txs }, 201);
+    } catch (err: any) {
+      return c.json({ success: false, message: err.message }, 400);
+    }
+  };
+
   listListings = async (c: Context) => {
     try {
       const listings = await marketService.getListings(c.req.query());
