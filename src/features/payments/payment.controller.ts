@@ -269,7 +269,7 @@ export class PaymentController {
 
       return c.json(
         createSuccessResponse(
-          { data, total, page: pageNum, limit: lim },
+          { listOrders: data, total, page: pageNum, limit: lim },
           MESSAGES.ORDERS.GET_ORDERS_SUCCESS
         )
       );
@@ -326,7 +326,7 @@ export class PaymentController {
 
       return c.json(
         createSuccessResponse(
-          { data, total, totalAmount, page: pageNum, limit: lim },
+          { listOrders: data, total, totalAmount, page: pageNum, limit: lim },
           MESSAGES.ORDERS.GET_ORDERS_SUCCESS
         )
       );
