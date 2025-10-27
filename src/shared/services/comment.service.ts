@@ -61,13 +61,15 @@ export class CommentService {
         }
       } else {
         // This is a direct comment on the post - notify post author
-        await this.notificationService.createNotification({
-          recipient: post.author,
-          sender: sender,
-          type: "post_comment",
-          post: data.post,
-          comment: savedComment._id,
-        });
+        if (post.author !== sender._id) {
+          await this.notificationService.createNotification({
+            recipient: post.author,
+            sender: sender,
+            type: "post_comment",
+            post: data.post,
+            comment: savedComment._id,
+          });
+        }
       }
 
       // Notify tagged users

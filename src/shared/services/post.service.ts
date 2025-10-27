@@ -255,12 +255,14 @@ export class PostService {
       action = "added";
 
       // Create notification
-      await this.notificationService.createNotification({
-        recipient: post.author,
-        sender: user,
-        type: "post_like",
-        post: postId,
-      });
+      if (post.author !== userId) {
+        await this.notificationService.createNotification({
+          recipient: post.author,
+          sender: user,
+          type: "post_like",
+          post: postId,
+        });
+      }
     } else {
       // Remove existing like reaction (unlike)
       await PostReactionModel.deleteOne({ _id: existingReaction._id });
