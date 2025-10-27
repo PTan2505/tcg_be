@@ -1936,6 +1936,82 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
+    "/decks/public": {
+      get: {
+        tags: ["Public Decks"],
+        summary: "Get public decks with pagination and filtering",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "query",
+            name: "page",
+            schema: { type: "integer", minimum: 1, default: 1 },
+            description: "Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: { type: "integer", minimum: 1, maximum: 100, default: 20 },
+            description: "Items per page",
+          },
+          {
+            in: "query",
+            name: "gameType",
+            schema: { type: "string", enum: ["pokemon", "yugioh", "onepiece"] },
+            description: "Filter by game type",
+          },
+          {
+            in: "query",
+            name: "search",
+            schema: { type: "string" },
+            description: "Search by deck name, description or tags",
+          },
+          {
+            in: "query",
+            name: "sortBy",
+            schema: {
+              type: "string",
+              enum: ["name", "createdAt", "updatedAt", "cardCount"],
+            },
+            description: "Sort field",
+          },
+          {
+            in: "query",
+            name: "sortOrder",
+            schema: { type: "string", enum: ["asc", "desc"] },
+            description: "Sort order",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Public decks retrieved successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "array",
+                      items: { $ref: "#/components/schemas/Deck" },
+                    },
+                    meta: {
+                      type: "object",
+                      properties: {
+                        pagination: {
+                          $ref: "#/components/schemas/PaginationInfo",
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "401": { $ref: "#/components/responses/Unauthorized" },
+        },
+      },
+    },
     "/posts": {
       post: {
         tags: ["Social Posts"],

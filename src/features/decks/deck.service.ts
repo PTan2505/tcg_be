@@ -1,11 +1,11 @@
-import mongoose from 'mongoose';
-import { Card } from '../../database/models/card';
-import { Deck, IDeck } from '../../database/models/deck';
-import UserModel from '../../database/models/user';
-import PREMIUM_CONFIG from '../../shared/config/premium.config';
-import { getMessage } from '../../shared/constants/messages';
-import AppError from '../../shared/errors/AppError';
-import { GameType } from '../cards/card.service';
+import mongoose from "mongoose";
+import { Card } from "../../database/models/card";
+import { Deck, IDeck } from "../../database/models/deck";
+import UserModel from "../../database/models/user";
+import PREMIUM_CONFIG from "../../shared/config/premium.config";
+import { getMessage } from "../../shared/constants/messages";
+import AppError from "../../shared/errors/AppError";
+import { GameType } from "../cards/card.service";
 
 export interface CreateDeckOptions {
   name: string;
@@ -27,8 +27,8 @@ export interface GetDecksOptions {
   limit?: number;
   gameType?: GameType;
   search?: string;
-  sortBy?: 'name' | 'createdAt' | 'updatedAt' | 'cardCount';
-  sortOrder?: 'asc' | 'desc';
+  sortBy?: "name" | "createdAt" | "updatedAt" | "cardCount";
+  sortOrder?: "asc" | "desc";
 }
 
 export interface DecksResult {
@@ -129,7 +129,7 @@ export class DeckService {
         .sort(sort)
         .skip(skip)
         .limit(limit)
-        .populate("cards.cardId", "name imageUrl gameType")
+        .populate("cards.cardId")
         .populate("userId", "username"),
       Deck.countDocuments(filter),
     ]);
@@ -147,9 +147,11 @@ export class DeckService {
     // Enforce freemium deck limit (3 decks)
     const user = await UserModel.findById(userId);
     if (user && !user.isPremium) {
-      const existing = await Deck.countDocuments({ userId: new mongoose.Types.ObjectId(userId) });
+      const existing = await Deck.countDocuments({
+        userId: new mongoose.Types.ObjectId(userId),
+      });
       if (existing >= PREMIUM_CONFIG.DECK_LIMIT_FREEMIUM) {
-        throw new AppError(getMessage('PREMIUM.DECK_LIMIT_REACHED'), 403);
+        throw new AppError(getMessage("PREMIUM.DECK_LIMIT_REACHED"), 403);
       }
     }
 
@@ -173,33 +175,49 @@ export class DeckService {
     });
 
     if (!deck) {
-      throw new AppError(getMessage('DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED'), 404);
+      throw new AppError(
+        getMessage("DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED"),
+        404
+      );
     }
 
     // If caller supplies cards, ensure all cards belong to same gameType as the deck
-    if (options.cards && Array.isArray(options.cards) && options.cards.length > 0) {
-      const cardIds = options.cards.map((it: AddCardToDeckOptions) => it.cardId).filter(Boolean);
+    if (
+      options.cards &&
+      Array.isArray(options.cards) &&
+      options.cards.length > 0
+    ) {
+      const cardIds = options.cards
+        .map((it: AddCardToDeckOptions) => it.cardId)
+        .filter(Boolean);
       // Detect duplicate cardIds in payload
       const seen = new Set<string>();
       for (const id of cardIds) {
         if (seen.has(id)) {
-          throw new AppError(getMessage('VALIDATION.DUPLICATE_CARD_IN_PAYLOAD'), 400);
+          throw new AppError(
+            getMessage("VALIDATION.DUPLICATE_CARD_IN_PAYLOAD"),
+            400
+          );
         }
         seen.add(id);
       }
       if (cardIds.length !== options.cards.length) {
-        throw new AppError(getMessage('VALIDATION.CARD_ID_REQUIRED'), 400);
+        throw new AppError(getMessage("VALIDATION.CARD_ID_REQUIRED"), 400);
       }
 
-      const cards = await Card.find({ _id: { $in: cardIds } }).select('gameType').lean();
+      const cards = await Card.find({ _id: { $in: cardIds } })
+        .select("gameType")
+        .lean();
       if (cards.length !== cardIds.length) {
-        throw new AppError(getMessage('CARDS.CARD_NOT_FOUND'), 404);
+        throw new AppError(getMessage("CARDS.CARD_NOT_FOUND"), 404);
       }
 
       const deckGameType = deck.gameType;
-      const mismatch = cards.some((card: any) => String(card.gameType) !== String(deckGameType));
+      const mismatch = cards.some(
+        (card: any) => String(card.gameType) !== String(deckGameType)
+      );
       if (mismatch) {
-        throw new AppError(getMessage('VALIDATION.GAME_TYPE_INVALID'), 400);
+        throw new AppError(getMessage("VALIDATION.GAME_TYPE_INVALID"), 400);
       }
     }
 
@@ -214,7 +232,10 @@ export class DeckService {
     });
 
     if (result.deletedCount === 0) {
-      throw new AppError(getMessage('DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED'), 404);
+      throw new AppError(
+        getMessage("DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED"),
+        404
+      );
     }
   }
 
@@ -241,7 +262,10 @@ export class DeckService {
     const deck = await this.getDeckById(deckId, userId);
 
     if (!deck) {
-      throw new AppError(getMessage('DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED'), 404);
+      throw new AppError(
+        getMessage("DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED"),
+        404
+      );
     }
 
     const totalCards = deck.cards.reduce((sum, card) => sum + card.quantity, 0);
@@ -299,13 +323,16 @@ export class DeckService {
     });
 
     if (!deck) {
-      throw new AppError(getMessage('DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED'), 404);
+      throw new AppError(
+        getMessage("DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED"),
+        404
+      );
     }
 
     // Check if card exists
     const card = await Card.findById(cardId);
     if (!card) {
-      throw new AppError(getMessage('CARDS.CARD_NOT_FOUND'), 404);
+      throw new AppError(getMessage("CARDS.CARD_NOT_FOUND"), 404);
     }
 
     // Check if card is already in deck
@@ -340,7 +367,10 @@ export class DeckService {
     });
 
     if (!deck) {
-      throw new AppError(getMessage('DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED'), 404);
+      throw new AppError(
+        getMessage("DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED"),
+        404
+      );
     }
 
     const cardIndex = deck.cards.findIndex(
@@ -348,7 +378,11 @@ export class DeckService {
     );
 
     if (cardIndex === -1) {
-      throw new AppError(getMessage('VALIDATION.CARD_ID_REQUIRED') || getMessage('VALIDATION.CARD_ID_REQUIRED'), 404);
+      throw new AppError(
+        getMessage("VALIDATION.CARD_ID_REQUIRED") ||
+          getMessage("VALIDATION.CARD_ID_REQUIRED"),
+        404
+      );
     }
 
     const currentQuantity = deck.cards[cardIndex].quantity;
@@ -379,7 +413,10 @@ export class DeckService {
     });
 
     if (!deck) {
-      throw new AppError(getMessage('DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED'), 404);
+      throw new AppError(
+        getMessage("DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED"),
+        404
+      );
     }
 
     const cardIndex = deck.cards.findIndex(
@@ -387,11 +424,14 @@ export class DeckService {
     );
 
     if (cardIndex === -1) {
-      throw new AppError(getMessage('CARDS.CARD_NOT_FOUND'), 404);
+      throw new AppError(getMessage("CARDS.CARD_NOT_FOUND"), 404);
     }
 
     if (!Number.isInteger(quantity) || quantity < 0) {
-      throw new AppError(getMessage('VALIDATION.QUANTITY_INVALID') || 'Invalid quantity', 400);
+      throw new AppError(
+        getMessage("VALIDATION.QUANTITY_INVALID") || "Invalid quantity",
+        400
+      );
     }
 
     if (quantity === 0) {
@@ -418,15 +458,20 @@ export class DeckService {
     });
 
     if (!originalDeck) {
-      throw new AppError(getMessage('DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED'), 404);
+      throw new AppError(
+        getMessage("DECKS.DECK_NOT_FOUND_OR_ACCESS_DENIED"),
+        404
+      );
     }
 
     // Enforce freemium deck limit (3 decks) for duplication
     const user = await UserModel.findById(userId);
     if (user && !user.isPremium) {
-      const existing = await Deck.countDocuments({ userId: new mongoose.Types.ObjectId(userId) });
+      const existing = await Deck.countDocuments({
+        userId: new mongoose.Types.ObjectId(userId),
+      });
       if (existing >= PREMIUM_CONFIG.DECK_LIMIT_FREEMIUM) {
-        throw new AppError(getMessage('PREMIUM.DECK_LIMIT_REACHED'), 403);
+        throw new AppError(getMessage("PREMIUM.DECK_LIMIT_REACHED"), 403);
       }
     }
 
