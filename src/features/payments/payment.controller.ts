@@ -231,4 +231,111 @@ export class PaymentController {
       );
     }
   };
+
+  // Admin: list all orders with filters (startDate/endDate, minAmount/maxAmount, orderType) and pagination
+  listAllOrders = async (c: Context) => {
+    try {
+      const user = c.get("user");
+      if (!user || !(user as any).isAdmin)
+        return c.json(createErrorResponse(MESSAGES.AUTH.ACCESS_DENIED), 403);
+
+      const {
+        startDate,
+        endDate,
+        minAmount,
+        maxAmount,
+        orderType,
+        page = "1",
+        limit = "50",
+      } = c.req.query();
+      const q: any = {};
+      if (orderType) q.orderType = orderType;
+      if (minAmount)
+        q.amount = { ...(q.amount || {}), $gte: Number(minAmount) };
+      if (maxAmount)
+        q.amount = { ...(q.amount || {}), $lte: Number(maxAmount) };
+      if (startDate || endDate) q.createdAt = {};
+      if (startDate) q.createdAt.$gte = new Date(startDate as string);
+      if (endDate) q.createdAt.$lte = new Date(endDate as string);
+
+      const pageNum = Math.max(1, Number(page));
+      const lim = Math.min(1000, Math.max(1, Number(limit)));
+
+      const total = await OrderModel.countDocuments(q);
+      const data = await OrderModel.find(q)
+        .sort({ createdAt: -1 })
+        .skip((pageNum - 1) * lim)
+        .limit(lim);
+
+      return c.json(
+        createSuccessResponse(
+          { listOrders: data, total, page: pageNum, limit: lim },
+          MESSAGES.ORDERS.GET_ORDERS_SUCCESS
+        )
+      );
+    } catch (err: any) {
+      console.error("listAllOrders error", err);
+      return c.json(
+        createErrorResponse(err?.message || MESSAGES.ORDERS.GET_ORDERS_FAILED),
+        500
+      );
+    }
+  };
+
+  // Admin: list paid orders (filtered) and return totalAmount across results
+  listPaidOrdersSummary = async (c: Context) => {
+    try {
+      const user = c.get("user");
+      if (!user || !(user as any).isAdmin)
+        return c.json(createErrorResponse(MESSAGES.AUTH.ACCESS_DENIED), 403);
+
+      const {
+        startDate,
+        endDate,
+        minAmount,
+        maxAmount,
+        orderType,
+        page = "1",
+        limit = "50",
+      } = c.req.query();
+      const q: any = { isPaid: true };
+      if (orderType) q.orderType = orderType;
+      if (minAmount)
+        q.amount = { ...(q.amount || {}), $gte: Number(minAmount) };
+      if (maxAmount)
+        q.amount = { ...(q.amount || {}), $lte: Number(maxAmount) };
+      if (startDate || endDate) q.createdAt = {};
+      if (startDate) q.createdAt.$gte = new Date(startDate as string);
+      if (endDate) q.createdAt.$lte = new Date(endDate as string);
+
+      const pageNum = Math.max(1, Number(page));
+      const lim = Math.min(1000, Math.max(1, Number(limit)));
+
+      const total = await OrderModel.countDocuments(q);
+      const data = await OrderModel.find(q)
+        .sort({ createdAt: -1 })
+        .skip((pageNum - 1) * lim)
+        .limit(lim);
+
+      // totalAmount across matching paid orders (aggregation)
+      const aggRes = await OrderModel.aggregate([
+        { $match: q },
+        { $group: { _id: null, totalAmount: { $sum: "$amount" } } },
+      ]);
+      const totalAmount = aggRes[0]?.totalAmount || 0;
+
+      return c.json(
+        createSuccessResponse(
+          { listOrders: data, total, totalAmount, page: pageNum, limit: lim },
+          MESSAGES.ORDERS.GET_ORDERS_SUCCESS
+        )
+      );
+    } catch (err: any) {
+      console.error("listPaidOrdersSummary error", err);
+      return c.json(
+        createErrorResponse(err?.message || MESSAGES.ORDERS.GET_ORDERS_FAILED),
+        500
+      );
+    }
+  };
 }

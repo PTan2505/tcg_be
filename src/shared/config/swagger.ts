@@ -5494,6 +5494,160 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
+    "/market/bulk-buy": {
+      post: {
+        tags: ["Market"],
+        summary: "Bulk buy market listings (create multiple transactions)",
+        security: [{ bearerAuth: [] }],
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: { $ref: "#/components/schemas/BulkBuyRequest" },
+            },
+          },
+        },
+        responses: {
+          "201": {
+            description: "Transactions created",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    data: {
+                      type: "array",
+                      items: { $ref: "#/components/schemas/MarketTransaction" },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "400": { description: "Bad Request" },
+          "401": { $ref: "#/components/responses/Unauthorized" },
+        },
+      },
+    },
+    "/orders/admin": {
+      get: {
+        tags: ["Payments"],
+        summary: "Admin: list orders with filters and pagination",
+        description:
+          "Return paginated list of orders. Requires admin privileges.",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "query",
+            name: "startDate",
+            schema: { type: "string", format: "date-time" },
+            description: "Filter: order createdAt >= startDate",
+          },
+          {
+            in: "query",
+            name: "endDate",
+            schema: { type: "string", format: "date-time" },
+            description: "Filter: order createdAt <= endDate",
+          },
+          {
+            in: "query",
+            name: "minAmount",
+            schema: { type: "number" },
+            description: "Filter: minimum amount",
+          },
+          {
+            in: "query",
+            name: "maxAmount",
+            schema: { type: "number" },
+            description: "Filter: maximum amount",
+          },
+          {
+            in: "query",
+            name: "orderType",
+            schema: { type: "string" },
+            description: "Filter by order type (provider or internal type)",
+          },
+          {
+            in: "query",
+            name: "page",
+            schema: { type: "integer", default: 1 },
+            description: "Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: { type: "integer", default: 20 },
+            description: "Items per page",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Paginated orders list",
+            content: {
+              "application/json": {
+                schema: { $ref: "#/components/schemas/OrdersListResponse" },
+              },
+            },
+          },
+          "401": { $ref: "#/components/responses/Unauthorized" },
+          "403": { $ref: "#/components/responses/Forbidden" },
+        },
+      },
+    },
+    "/orders/admin/paid-summary": {
+      get: {
+        tags: ["Payments"],
+        summary: "Admin: summary of paid orders",
+        description:
+          "Return aggregated totalAmount for paid orders matching filters. Requires admin privileges.",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "query",
+            name: "startDate",
+            schema: { type: "string", format: "date-time" },
+            description: "Filter: order createdAt >= startDate",
+          },
+          {
+            in: "query",
+            name: "endDate",
+            schema: { type: "string", format: "date-time" },
+            description: "Filter: order createdAt <= endDate",
+          },
+          {
+            in: "query",
+            name: "minAmount",
+            schema: { type: "number" },
+            description: "Filter: minimum amount",
+          },
+          {
+            in: "query",
+            name: "maxAmount",
+            schema: { type: "number" },
+            description: "Filter: maximum amount",
+          },
+          {
+            in: "query",
+            name: "orderType",
+            schema: { type: "string" },
+            description: "Filter by order type (provider or internal type)",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Paid orders summary",
+            content: {
+              "application/json": {
+                schema: { $ref: "#/components/schemas/OrdersPaidSummary" },
+              },
+            },
+          },
+          "401": { $ref: "#/components/responses/Unauthorized" },
+          "403": { $ref: "#/components/responses/Forbidden" },
+        },
+      },
+    },
   },
   components: {
     securitySchemes: {
@@ -6692,7 +6846,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
           images: { type: "array", items: { type: "string" } },
           status: {
             type: "string",
-            enum: ["available", "private", "sold", "removed"],
+            enum: ["available", "reserved", "sold", "removed"],
           },
           createdAt: { type: "string", format: "date-time" },
           updatedAt: { type: "string", format: "date-time" },
@@ -6723,6 +6877,52 @@ export const swaggerDoc: OpenAPIV3.Document = {
           },
           createdAt: { type: "string", format: "date-time" },
           updatedAt: { type: "string", format: "date-time" },
+        },
+      },
+      BulkBuyRequest: {
+        type: "object",
+        required: ["listingIds"],
+        properties: {
+          listingIds: {
+            type: "array",
+            items: { type: "string" },
+            description: "Array of MarketListing IDs to purchase",
+          },
+        },
+      },
+      Order: {
+        type: "object",
+        properties: {
+          _id: { type: "string" },
+          userId: { type: "string" },
+          amount: { type: "number" },
+          currency: { type: "string" },
+          provider: { type: "string" },
+          providerPaymentId: { type: "string" },
+          isPaid: { type: "boolean" },
+          status: { type: "string" },
+          createdAt: { type: "string", format: "date-time" },
+          updatedAt: { type: "string", format: "date-time" },
+        },
+      },
+      OrdersListResponse: {
+        type: "object",
+        properties: {
+          success: { type: "boolean" },
+          data: {
+            type: "array",
+            items: { $ref: "#/components/schemas/Order" },
+          },
+          total: { type: "integer" },
+          page: { type: "integer" },
+          limit: { type: "integer" },
+        },
+      },
+      OrdersPaidSummary: {
+        type: "object",
+        properties: {
+          success: { type: "boolean" },
+          totalAmount: { type: "number" },
         },
       },
       FreemiumLimits: {
@@ -6758,6 +6958,25 @@ export const swaggerDoc: OpenAPIV3.Document = {
           },
         },
         description: "Server-configured freemium limits and feature toggles",
+      },
+      // common response objects
+    },
+    responses: {
+      Unauthorized: {
+        description: "Unauthorized - missing or invalid token",
+        content: {
+          "application/json": {
+            schema: { $ref: "#/components/schemas/Error" },
+          },
+        },
+      },
+      Forbidden: {
+        description: "Forbidden - insufficient permissions",
+        content: {
+          "application/json": {
+            schema: { $ref: "#/components/schemas/Error" },
+          },
+        },
       },
     },
   },

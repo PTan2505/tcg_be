@@ -23,7 +23,8 @@ export interface Notification extends Document {
     | "market:reserved"
     | "market:shipped"
     | "market:delivered"
-    | "market:cancelled";
+    | "market:cancelled"
+    | "market:bulk-purchased";
   post?: Types.ObjectId;
   comment?: Types.ObjectId;
   transaction?: Types.ObjectId;
@@ -62,6 +63,7 @@ const notificationSchema = new Schema<Notification>(
         "market:shipped",
         "market:delivered",
         "market:cancelled",
+        "market:bulk-purchased",
       ],
       required: true,
     },
