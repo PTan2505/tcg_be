@@ -8,6 +8,7 @@ import { socketService } from "../../shared/services/socket.service";
 import MarketListingModel from "./market.model";
 import MarketTransactionModel from "./market.transaction.model";
 
+const commission = Number(process.env.PERCENT_PER_TRANSACTION) / 100;
 class MarketService {
   private notificationService: NotificationService;
 
@@ -321,7 +322,7 @@ class MarketService {
     // transfer 95% to seller
     const seller = await UserModel.findById(tx.sellerId);
     if (!seller) throw new AppError(getMessage("MARKET.SELLER_NOT_FOUND"), 404);
-    const payout = tx.priceTokens * 0.95;
+    const payout = tx.priceTokens * (1 - commission);
     seller.tokenBalance += payout;
     await seller.save();
 
