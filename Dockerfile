@@ -51,6 +51,12 @@ COPY --from=build /app/data/sets /app/data/sets
 # ✅ Copy credentials file
 COPY --from=build /app/gen-lang-client-0549852682-76c51df076d2.json /app/gen-lang-client-0549852682-76c51df076d2.json
 
+# ✅ Copy non-TypeScript static assets (email templates, swagger HTML, etc.)
+# TypeScript compilation doesn't copy non-TS files, so we need to copy the
+# source config/templates into the runtime dist folder so `__dirname` paths
+# used in the compiled code (e.g. `/app/dist/shared/config/...`) exist.
+COPY --from=build /app/src/shared/config /app/dist/shared/config
+
 # Set environment variables
 ENV NODE_ENV=production
 ENV GOOGLE_APPLICATION_CREDENTIALS="/app/gen-lang-client-0549852682-76c51df076d2.json"
