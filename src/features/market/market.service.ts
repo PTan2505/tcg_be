@@ -357,11 +357,14 @@ class MarketService {
     const q: any = { status: "available" };
     if (query.gameType) q.gameType = query.gameType;
     if (query.cardName) q.cardName = { $regex: query.cardName, $options: "i" };
-    return await MarketListingModel.find(q).sort({ createdAt: -1 }).limit(100);
+    return await MarketListingModel.find(q)
+      .populate("sellerId")
+      .sort({ createdAt: -1 })
+      .limit(100);
   }
 
   async getListingById(id: string) {
-    return await MarketListingModel.findById(id);
+    return await MarketListingModel.findById(id).populate("sellerId");
   }
 
   // Get listings created by a specific seller (all statuses)
