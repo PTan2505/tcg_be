@@ -214,17 +214,63 @@ export class PaymentController {
           401
         );
 
-      // Return all orders for the user (both paid and unpaid)
-      const orders = await OrderModel.find({
+      // Get query parameters for pagination and filters
+      const {
+        page = "1",
+        limit = "20",
+        orderType,
+        startDate,
+        endDate,
+      } = c.req.query();
+
+      // Build query
+      const query: any = {
         userId: user.id,
-        "paymentInfo.status": "PAID",
-      }).sort({ createdAt: -1 });
+        isPaid: true,
+      };
+
+      // Add orderType filter
+      if (orderType && (orderType === "premium" || orderType === "tokens")) {
+        query.orderType = orderType;
+      }
+
+      // Add date range filters
+      if (startDate || endDate) {
+        query.createdAt = {};
+        if (startDate) query.createdAt.$gte = new Date(startDate as string);
+        if (endDate) query.createdAt.$lte = new Date(endDate as string);
+      }
+
+      // Pagination
+      const pageNum = Math.max(1, Number(page));
+      const lim = Math.min(100, Math.max(1, Number(limit))); // Max 100 items per page
+      const skip = (pageNum - 1) * lim;
+
+      // Get total count and orders
+      const [total, orders] = await Promise.all([
+        OrderModel.countDocuments(query),
+        OrderModel.find(query).sort({ createdAt: -1 }).skip(skip).limit(lim),
+      ]);
+
+      // Calculate total pages
+      const totalPages = Math.ceil(total / lim);
 
       return c.json(
-        createSuccessResponse(orders, MESSAGES.ORDERS.GET_ORDERS_SUCCESS)
+        createSuccessResponse(
+          {
+            orders,
+            pagination: {
+              total,
+              page: pageNum,
+              limit: lim,
+              totalPages,
+            },
+          },
+          MESSAGES.ORDERS.GET_ORDERS_SUCCESS
+        )
       );
     } catch (err: any) {
-      console.error("getAllOrders error", err);
+      console.error("getPaidOrders error", err);
       return c.json(
         createErrorResponse(err?.message || MESSAGES.ORDERS.GET_ORDERS_FAILED),
         500
