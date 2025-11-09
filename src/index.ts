@@ -21,6 +21,7 @@ import aiEnhancedScanRoutes from "./features/cards/aiEnhancedCardScan.routes";
 import cardRoutes from "./features/cards/card.routes";
 import enhancedScanRoutes from "./features/cards/enhancedCardScan.routes";
 import testRoutes from "./features/cards/test.routes";
+import cashOutRoutes from "./features/cashOut/cashOut.routes";
 import chatbotRoutes from "./features/chatbot/chatbot.routes";
 import userCardRoutes from "./features/collections/userCard.routes";
 import deckRoutes from "./features/decks/deck.routes";
@@ -188,6 +189,7 @@ app.route("/posts", postRoutes);
 app.route("/market", marketRoutes);
 app.route("/notifications", notificationsRoutes);
 app.route("/orders", paymentRoutes);
+app.route("/cashouts", cashOutRoutes);
 
 // Export the app for production environments
 export default app;
