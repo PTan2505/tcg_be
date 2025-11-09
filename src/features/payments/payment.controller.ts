@@ -72,6 +72,7 @@ export class PaymentController {
             : `Thanh toán ${tokenCount} tokens`,
         cancelUrl: "kado://payment/callback",
         returnUrl: "kado://payment/callback",
+        buyerEmail: user.email,
         expiredAt: Math.floor(Date.now() / 1000) + paymentExpired, // 10 minutes from now
       };
 
