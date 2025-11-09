@@ -5729,7 +5729,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/cashout": {
+    "/cashouts": {
       post: {
         tags: ["CashOut"],
         summary: "Create a cash-out request",
@@ -5863,7 +5863,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/cashout/my": {
+    "/cashouts/my": {
       get: {
         tags: ["CashOut"],
         summary: "Get my cash-out requests",
@@ -5917,7 +5917,7 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
-    "/cashout/{id}/paid": {
+    "/cashouts/{id}/paid": {
       post: {
         tags: ["CashOut"],
         summary: "Mark cash-out request as paid (Admin only)",
