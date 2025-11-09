@@ -5,6 +5,7 @@ import { cors } from "hono/cors";
 import { connectDB } from "./database/db/db";
 import "./database/models/card"; // Import unified Card model
 import "./database/models/cardSet"; // Import CardSet model
+import "./database/models/cashOut";
 import "./database/models/comment"; // Import Comment model
 import "./database/models/commentReaction"; // Import CommentReaction model
 import "./database/models/deck"; // Import Deck model
