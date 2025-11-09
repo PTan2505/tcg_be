@@ -73,6 +73,11 @@ export const swaggerDoc: OpenAPIV3.Document = {
       description:
         "AI chatbot for Trading Card Game (Vietnamese only, TCG-focused)",
     },
+    {
+      name: "CashOut",
+      description:
+        "Cash-out management for withdrawing tokens to bank accounts",
+    },
   ],
   paths: {
     "/freemium/limits": {
@@ -5724,6 +5729,236 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
+    "/cashout": {
+      post: {
+        tags: ["CashOut"],
+        summary: "Create a cash-out request",
+        description: "Request to withdraw tokens to a bank account",
+        security: [{ bearerAuth: [] }],
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                required: ["amount", "bankInfo"],
+                properties: {
+                  amount: {
+                    type: "number",
+                    description: "Amount of tokens to withdraw",
+                    example: 1000,
+                  },
+                  bankInfo: {
+                    type: "object",
+                    properties: {
+                      bankName: {
+                        type: "string",
+                        description: "Bank name or code",
+                        example: "Vietcombank",
+                      },
+                      bankFullName: {
+                        type: "string",
+                        description: "Full bank name",
+                        example: "Ngân hàng TMCP Ngoại thương Việt Nam",
+                      },
+                      accountNumber: {
+                        type: "string",
+                        description: "Bank account number",
+                        example: "1234567890",
+                      },
+                      accountName: {
+                        type: "string",
+                        description: "Account holder name",
+                        example: "Nguyen Van A",
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+        responses: {
+          "201": {
+            description: "Cash-out request created successfully",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean", example: true },
+                    message: {
+                      type: "string",
+                      example: "Yêu cầu rút tiền đã được tạo",
+                    },
+                    data: { $ref: "#/components/schemas/CashOut" },
+                  },
+                },
+              },
+            },
+          },
+          "400": {
+            description: "Bad request - invalid amount or insufficient balance",
+          },
+          "401": { $ref: "#/components/responses/Unauthorized" },
+          "404": { description: "User not found" },
+        },
+      },
+      get: {
+        tags: ["CashOut"],
+        summary: "Get all cash-out requests (Admin only)",
+        description: "Retrieve a paginated list of all cash-out requests",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            name: "page",
+            in: "query",
+            schema: { type: "integer", default: 1 },
+            description: "Page number",
+          },
+          {
+            name: "limit",
+            in: "query",
+            schema: { type: "integer", default: 20 },
+            description: "Items per page",
+          },
+          {
+            name: "isCashOut",
+            in: "query",
+            schema: { type: "boolean" },
+            description: "Filter by payment status",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "List of cash-out requests",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean", example: true },
+                    message: {
+                      type: "string",
+                      example: "Lấy danh sách yêu cầu rút tiền thành công",
+                    },
+                    data: {
+                      type: "object",
+                      properties: {
+                        items: {
+                          type: "array",
+                          items: { $ref: "#/components/schemas/CashOut" },
+                        },
+                        pagination: {
+                          $ref: "#/components/schemas/Pagination",
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "401": { $ref: "#/components/responses/Unauthorized" },
+        },
+      },
+    },
+    "/cashout/my": {
+      get: {
+        tags: ["CashOut"],
+        summary: "Get my cash-out requests",
+        description: "Retrieve current user's cash-out requests",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            name: "page",
+            in: "query",
+            schema: { type: "integer", default: 1 },
+            description: "Page number",
+          },
+          {
+            name: "limit",
+            in: "query",
+            schema: { type: "integer", default: 10 },
+            description: "Items per page",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "User's cash-out requests",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean", example: true },
+                    message: {
+                      type: "string",
+                      example: "Lấy danh sách yêu cầu rút tiền thành công",
+                    },
+                    data: {
+                      type: "object",
+                      properties: {
+                        items: {
+                          type: "array",
+                          items: { $ref: "#/components/schemas/CashOut" },
+                        },
+                        pagination: {
+                          $ref: "#/components/schemas/Pagination",
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "401": { $ref: "#/components/responses/Unauthorized" },
+        },
+      },
+    },
+    "/cashout/{id}/paid": {
+      post: {
+        tags: ["CashOut"],
+        summary: "Mark cash-out request as paid (Admin only)",
+        description: "Mark a cash-out request as paid and processed",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            name: "id",
+            in: "path",
+            required: true,
+            schema: { type: "string" },
+            description: "Cash-out request ID",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "Cash-out request marked as paid",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean", example: true },
+                    message: {
+                      type: "string",
+                      example: "Đã đánh dấu yêu cầu rút tiền là đã thanh toán",
+                    },
+                    data: { $ref: "#/components/schemas/CashOut" },
+                  },
+                },
+              },
+            },
+          },
+          "400": {
+            description: "Bad request - already processed or invalid ID",
+          },
+          "401": { $ref: "#/components/responses/Unauthorized" },
+          "404": { description: "Cash-out request not found" },
+        },
+      },
+    },
   },
   components: {
     securitySchemes: {
@@ -7000,6 +7235,67 @@ export const swaggerDoc: OpenAPIV3.Document = {
           success: { type: "boolean" },
           totalAmount: { type: "number" },
         },
+      },
+      CashOut: {
+        type: "object",
+        properties: {
+          _id: {
+            type: "string",
+            description: "Cash-out request ID",
+            example: "507f1f77bcf86cd799439011",
+          },
+          user: {
+            type: "string",
+            description: "User ID who created the request",
+            example: "507f1f77bcf86cd799439012",
+          },
+          amount: {
+            type: "number",
+            description: "Amount of tokens requested",
+            example: 1000,
+          },
+          bankInfo: {
+            type: "object",
+            properties: {
+              bankName: { type: "string", example: "Vietcombank" },
+              bankFullName: {
+                type: "string",
+                example: "Ngân hàng TMCP Ngoại thương Việt Nam",
+              },
+              accountNumber: { type: "string", example: "1234567890" },
+              accountName: { type: "string", example: "Nguyen Van A" },
+            },
+          },
+          isCashOut: {
+            type: "boolean",
+            description: "Whether the request has been paid",
+            example: false,
+          },
+          processedAt: {
+            type: "string",
+            format: "date-time",
+            nullable: true,
+            description: "Date and time when the request was processed",
+          },
+          processedBy: {
+            type: "string",
+            nullable: true,
+            description: "Admin user ID who processed the request",
+            example: "507f1f77bcf86cd799439013",
+          },
+          createdAt: {
+            type: "string",
+            format: "date-time",
+            description: "Date and time when the request was created",
+          },
+          updatedAt: {
+            type: "string",
+            format: "date-time",
+            description: "Date and time when the request was last updated",
+          },
+        },
+        description:
+          "Cash-out request for withdrawing tokens to a bank account",
       },
       FreemiumLimits: {
         type: "object",
