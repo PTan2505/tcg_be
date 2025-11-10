@@ -5611,6 +5611,76 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
+    "/orders": {
+      get: {
+        tags: ["Payments"],
+        summary: "Get my paid orders",
+        description:
+          "Retrieve authenticated user's paid orders with pagination and filters",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "query",
+            name: "page",
+            schema: { type: "integer", default: 1 },
+            description: "Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: { type: "integer", default: 20 },
+            description: "Items per page (max 100)",
+          },
+          {
+            in: "query",
+            name: "orderType",
+            schema: { type: "string", enum: ["premium", "tokens"] },
+            description: "Filter by order type",
+          },
+          {
+            in: "query",
+            name: "startDate",
+            schema: { type: "string", format: "date-time" },
+            description: "Filter orders created after this date",
+          },
+          {
+            in: "query",
+            name: "endDate",
+            schema: { type: "string", format: "date-time" },
+            description: "Filter orders created before this date",
+          },
+        ],
+        responses: {
+          "200": {
+            description: "User's paid orders with pagination",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean", example: true },
+                    message: { type: "string" },
+                    data: {
+                      type: "object",
+                      properties: {
+                        orders: {
+                          type: "array",
+                          items: { $ref: "#/components/schemas/Order" },
+                        },
+                        pagination: {
+                          $ref: "#/components/schemas/Pagination",
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "401": { $ref: "#/components/responses/Unauthorized" },
+        },
+      },
+    },
     "/orders/admin": {
       get: {
         tags: ["Payments"],
@@ -7204,16 +7274,51 @@ export const swaggerDoc: OpenAPIV3.Document = {
       Order: {
         type: "object",
         properties: {
-          _id: { type: "string" },
-          userId: { type: "string" },
-          amount: { type: "number" },
-          currency: { type: "string" },
-          provider: { type: "string" },
-          providerPaymentId: { type: "string" },
-          isPaid: { type: "boolean" },
-          status: { type: "string" },
-          createdAt: { type: "string", format: "date-time" },
-          updatedAt: { type: "string", format: "date-time" },
+          _id: { type: "string", description: "Order ID" },
+          userId: {
+            type: "string",
+            description: "User ID who created the order",
+          },
+          orderType: {
+            type: "string",
+            enum: ["premium", "tokens"],
+            description: "Type of order",
+          },
+          amount: {
+            type: "number",
+            description: "Order amount in specified currency",
+          },
+          currency: {
+            type: "string",
+            default: "VND",
+            description: "Currency code",
+          },
+          provider: {
+            type: "string",
+            description: "Payment provider (e.g., 'payOS')",
+          },
+          paymentInfo: {
+            type: "object",
+            description: "Payment provider response data",
+          },
+          tokenCount: {
+            type: "number",
+            description: "Number of tokens (if orderType is 'tokens')",
+          },
+          isPaid: {
+            type: "boolean",
+            description: "Whether the order has been paid",
+          },
+          createdAt: {
+            type: "string",
+            format: "date-time",
+            description: "Order creation timestamp",
+          },
+          updatedAt: {
+            type: "string",
+            format: "date-time",
+            description: "Last update timestamp",
+          },
         },
       },
       OrdersListResponse: {
