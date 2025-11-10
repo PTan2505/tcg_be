@@ -29,7 +29,10 @@ class SocketService {
 
     this.wss = new WebSocketServer({ noServer: true });
 
+    console.log("🔌 WebSocket server attached to HTTP server");
+
     server.on("upgrade", (request, socket, head) => {
+      console.log("📡 WebSocket upgrade request received:", request.url);
       // Parse token early to decide whether to accept upgrade
       try {
         const url = new URL(
@@ -38,6 +41,7 @@ class SocketService {
         );
         const token = url.searchParams.get("token");
         if (!token) {
+          console.log("❌ WebSocket upgrade rejected: No token");
           socket.write("HTTP/1.1 401 Unauthorized\r\n\r\n");
           socket.destroy();
           return;
@@ -45,17 +49,20 @@ class SocketService {
         const decoded = jwt.verify(token, process.env.JWT_SECRET || "") as any;
         const userId = decoded.userId;
         if (!userId) {
+          console.log("❌ WebSocket upgrade rejected: Invalid token");
           socket.write("HTTP/1.1 401 Unauthorized\r\n\r\n");
           socket.destroy();
           return;
         }
 
+        console.log("✅ WebSocket upgrade accepted for user:", userId);
         this.wss!.handleUpgrade(request, socket, head, (ws) => {
           // attach user info and emit connection
           (ws as any).__userId = userId;
           this.wss!.emit("connection", ws, request);
         });
       } catch (e) {
+        console.log("❌ WebSocket upgrade error:", e);
         try {
           socket.destroy();
         } catch (_e) {}
@@ -78,16 +85,20 @@ class SocketService {
         const url = new URL(req.url || "", `http://${req.headers.host}`);
         const token = url.searchParams.get("token");
         if (!token) {
+          console.log("❌ WebSocket connection rejected: No token");
           ws.close(4001, "No token");
           return;
         }
         const decoded = jwt.verify(token, process.env.JWT_SECRET || "") as any;
         userId = decoded.userId;
         if (!userId) {
+          console.log("❌ WebSocket connection rejected: Invalid token");
           ws.close(4002, "Invalid token");
           return;
         }
       }
+
+      console.log("✅ WebSocket connected for user:", userId);
 
       // store socket
       if (!this.clients.has(userId)) this.clients.set(userId, new Set());

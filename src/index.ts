@@ -30,6 +30,7 @@ import notificationsRoutes from "./features/notifications/notifications.routes";
 import paymentRoutes from "./features/payments/payment.routes";
 import postRoutes from "./features/posts/post.routes";
 import setRoutes from "./features/sets/set.routes";
+import tokenTransactionRoutes from "./features/tokenTransactions/tokenTransaction.routes";
 import userRoutes from "./features/users/user.routes";
 import { initializeSuperuser } from "./scripts/initSuperuser";
 import { swaggerDoc } from "./shared/config/swagger";
@@ -190,6 +191,7 @@ app.route("/market", marketRoutes);
 app.route("/notifications", notificationsRoutes);
 app.route("/orders", paymentRoutes);
 app.route("/cashouts", cashOutRoutes);
+app.route("/token-transactions", tokenTransactionRoutes);
 
 // Export the app for production environments
 export default app;

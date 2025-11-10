@@ -78,6 +78,11 @@ export const swaggerDoc: OpenAPIV3.Document = {
       description:
         "Cash-out management for withdrawing tokens to bank accounts",
     },
+    {
+      name: "Token Transactions",
+      description:
+        "Token transaction history and statistics for tracking balance changes",
+    },
   ],
   paths: {
     "/freemium/limits": {
@@ -6029,6 +6034,159 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
       },
     },
+    "/token-transactions": {
+      get: {
+        tags: ["Token Transactions"],
+        summary: "Get my token transaction history",
+        description:
+          "Retrieve authenticated user's token transaction history with pagination and filters",
+        security: [{ bearerAuth: [] }],
+        parameters: [
+          {
+            in: "query",
+            name: "page",
+            schema: { type: "integer", default: 1 },
+            description: "Page number",
+          },
+          {
+            in: "query",
+            name: "limit",
+            schema: { type: "integer", default: 20 },
+            description: "Items per page (max 100)",
+          },
+          {
+            in: "query",
+            name: "transactionType",
+            schema: {
+              type: "string",
+              enum: ["buy_tokens", "cashout", "market_purchase", "market_sale"],
+            },
+            description: "Filter by transaction type",
+          },
+          {
+            in: "query",
+            name: "startDate",
+            schema: { type: "string", format: "date-time" },
+            description: "Filter transactions created after this date",
+          },
+          {
+            in: "query",
+            name: "endDate",
+            schema: { type: "string", format: "date-time" },
+            description: "Filter transactions created before this date",
+          },
+        ],
+        responses: {
+          "200": {
+            description:
+              "Token transaction history with pagination and summary",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean", example: true },
+                    message: {
+                      type: "string",
+                      example: "Lấy lịch sử giao dịch thành công",
+                    },
+                    data: {
+                      type: "object",
+                      properties: {
+                        transactions: {
+                          type: "array",
+                          items: {
+                            $ref: "#/components/schemas/TokenTransaction",
+                          },
+                        },
+                        pagination: {
+                          $ref: "#/components/schemas/Pagination",
+                        },
+                        summary: {
+                          type: "array",
+                          items: {
+                            type: "object",
+                            properties: {
+                              _id: {
+                                type: "string",
+                                description: "Transaction type",
+                                example: "buy_tokens",
+                              },
+                              total: {
+                                type: "number",
+                                description: "Total amount for this type",
+                                example: 5000,
+                              },
+                              count: {
+                                type: "integer",
+                                description: "Number of transactions",
+                                example: 5,
+                              },
+                            },
+                          },
+                          description: "Summary by transaction type",
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "401": { $ref: "#/components/responses/Unauthorized" },
+        },
+      },
+    },
+    "/token-transactions/stats": {
+      get: {
+        tags: ["Token Transactions"],
+        summary: "Get my token transaction statistics",
+        description:
+          "Retrieve aggregated statistics for user's token transactions",
+        security: [{ bearerAuth: [] }],
+        responses: {
+          "200": {
+            description: "Token transaction statistics",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean", example: true },
+                    message: {
+                      type: "string",
+                      example: "Lấy thống kê giao dịch thành công",
+                    },
+                    data: {
+                      type: "object",
+                      properties: {
+                        totalCredits: {
+                          type: "number",
+                          description:
+                            "Total tokens received (positive amounts)",
+                          example: 5000,
+                        },
+                        totalDebits: {
+                          type: "number",
+                          description: "Total tokens spent (negative amounts)",
+                          example: -2500,
+                        },
+                        totalTransactions: {
+                          type: "integer",
+                          description: "Total number of transactions",
+                          example: 15,
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "401": { $ref: "#/components/responses/Unauthorized" },
+        },
+      },
+    },
   },
   components: {
     securitySchemes: {
@@ -7401,6 +7559,59 @@ export const swaggerDoc: OpenAPIV3.Document = {
         },
         description:
           "Cash-out request for withdrawing tokens to a bank account",
+      },
+      TokenTransaction: {
+        type: "object",
+        properties: {
+          _id: {
+            type: "string",
+            description: "Transaction ID",
+            example: "507f1f77bcf86cd799439011",
+          },
+          userId: {
+            type: "string",
+            description: "User ID who made the transaction",
+            example: "507f1f77bcf86cd799439012",
+          },
+          amount: {
+            type: "number",
+            description:
+              "Amount of tokens (positive for credits, negative for debits)",
+            example: 1000,
+          },
+          transactionType: {
+            type: "string",
+            enum: ["buy_tokens", "cashout", "market_purchase", "market_sale"],
+            description: "Type of transaction",
+            example: "buy_tokens",
+          },
+          referenceId: {
+            type: "string",
+            nullable: true,
+            description:
+              "ID of the related entity (payment order, cashout, market transaction)",
+            example: "507f1f77bcf86cd799439013",
+          },
+          referenceModel: {
+            type: "string",
+            enum: ["Order", "CashOut", "MarketTransaction"],
+            nullable: true,
+            description: "Model type of the reference ID",
+            example: "Order",
+          },
+          description: {
+            type: "string",
+            nullable: true,
+            description: "Human-readable description of the transaction",
+            example: "Mua 1000 tokens qua PayOS",
+          },
+          createdAt: {
+            type: "string",
+            format: "date-time",
+            description: "Date and time when the transaction was created",
+          },
+        },
+        description: "Immutable audit log entry for token balance changes",
       },
       FreemiumLimits: {
         type: "object",

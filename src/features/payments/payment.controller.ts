@@ -9,6 +9,7 @@ import {
 } from "../../shared/constants/messages";
 import { scheduleExpiration } from "../../shared/jobs/agenda.paymentJobs";
 import { socketService } from "../../shared/services/socket.service";
+import tokenTransactionService from "../tokenTransactions/tokenTransaction.service";
 
 const payOS = new PayOS({
   clientId: process.env.PAYOS_CLIENT_ID,
@@ -150,6 +151,20 @@ export class PaymentController {
           if (tokens > 0) {
             user.tokenBalance = (user.tokenBalance || 0) + Number(tokens);
             await user.save();
+
+            // Log token transaction
+            try {
+              await tokenTransactionService.createTransaction({
+                userId: user._id,
+                amount: tokens, // Positive for credit
+                transactionType: "buy_tokens",
+                description: `Mua ${tokens} tokens`,
+                referenceId: order._id,
+                referenceModel: "Order",
+              });
+            } catch (e) {
+              console.error("Failed to create token transaction record", e);
+            }
           }
         }
       }

@@ -6,6 +6,7 @@ import CashOutModel, {
 import UserModel from "../../database/models/user";
 import { getMessage } from "../../shared/constants/messages";
 import AppError from "../../shared/errors/AppError";
+import tokenTransactionService from "../tokenTransactions/tokenTransaction.service";
 
 interface CreateCashOutPayload {
   amount: number;
@@ -78,6 +79,20 @@ class CashOutService {
       amount,
       bankInfo,
     });
+
+    // Log token transaction
+    try {
+      await tokenTransactionService.createTransaction({
+        userId: user._id,
+        amount: -amount, // Negative for debit
+        transactionType: "cashout",
+        description: `Rút ${amount} tokens`,
+        referenceId: cashOut._id?.toString(),
+        referenceModel: "CashOut",
+      });
+    } catch (e) {
+      console.error("Failed to create token transaction record", e);
+    }
 
     return cashOut;
   }

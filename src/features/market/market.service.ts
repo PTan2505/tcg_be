@@ -5,6 +5,7 @@ import { getMessage } from "../../shared/constants/messages";
 import AppError from "../../shared/errors/AppError";
 import { NotificationService } from "../../shared/services/notification.service";
 import { socketService } from "../../shared/services/socket.service";
+import tokenTransactionService from "../tokenTransactions/tokenTransaction.service";
 import MarketListingModel from "./market.model";
 import MarketTransactionModel from "./market.transaction.model";
 
@@ -89,6 +90,20 @@ class MarketService {
       priceTokens: listing.priceTokens,
       status: "processing",
     });
+
+    // Log token transaction for market purchase
+    try {
+      await tokenTransactionService.createTransaction({
+        userId: buyer._id,
+        amount: -listing.priceTokens, // Negative for debit
+        transactionType: "market_purchase",
+        description: `Mua "${listing.cardName}" (${listing.setCode || "N/A"})`,
+        referenceId: tx._id?.toString(),
+        referenceModel: "MarketTransaction",
+      });
+    } catch (e) {
+      console.error("Failed to create token transaction record", e);
+    }
 
     // Notify seller that their listing has been reserved
     try {
@@ -197,6 +212,28 @@ class MarketService {
       }));
 
       const txs = await MarketTransactionModel.insertMany(txDocs, { session });
+
+      // Log token transactions for each purchase (within transaction)
+      try {
+        for (let i = 0; i < listings.length; i++) {
+          const listing = listings[i];
+          await tokenTransactionService.createTransaction({
+            userId: buyer._id,
+            amount: -(listing.priceTokens as number), // Negative for debit
+            transactionType: "market_purchase",
+            description: `Mua "${listing.cardName}" (${
+              listing.setCode || "N/A"
+            })`,
+            referenceId: txs[i]._id?.toString(),
+            referenceModel: "MarketTransaction",
+          });
+        }
+      } catch (e) {
+        console.error(
+          "Failed to create token transaction records for bulk buy",
+          e
+        );
+      }
 
       await session.commitTransaction();
       session.endSession();
@@ -331,6 +368,23 @@ class MarketService {
       status: "sold",
     });
 
+    // Log token transaction for market sale
+    try {
+      const listing = await MarketListingModel.findById(tx.listingId);
+      await tokenTransactionService.createTransaction({
+        userId: seller._id,
+        amount: payout, // Positive for credit
+        transactionType: "market_sale",
+        description: `Bán "${listing?.cardName || "N/A"}" (${
+          listing?.setCode || "N/A"
+        })`,
+        referenceId: tx._id?.toString(),
+        referenceModel: "MarketTransaction",
+      });
+    } catch (e) {
+      console.error("Failed to create token transaction record", e);
+    }
+
     // Notify seller in DB and realtime
     try {
       await this.notificationService.createNotification({
@@ -440,6 +494,21 @@ class MarketService {
     // Mark tx cancelled
     tx.status = "cancelled";
     await tx.save();
+
+    // Log token transaction for refund (cancelled purchase)
+    try {
+      const listing = await MarketListingModel.findById(tx.listingId);
+      await tokenTransactionService.createTransaction({
+        userId: buyer._id,
+        amount: tx.priceTokens, // Positive for refund
+        transactionType: "market_purchase", // Still market_purchase type, but positive amount
+        description: `Hoàn tiền hủy mua "${listing?.cardName || "N/A"}"`,
+        referenceId: tx._id?.toString(),
+        referenceModel: "MarketTransaction",
+      });
+    } catch (e) {
+      console.error("Failed to create token transaction record for refund", e);
+    }
 
     // Make listing available again
     try {

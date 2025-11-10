@@ -40,7 +40,7 @@ console.log(`🚀 Starting server on http://${host}:${port}`);
       console.warn("Failed to attach WebSocket service to HTTP server", e);
     }
 
-    server.listen(port, () => {
+    server.listen(port, host, () => {
       console.log(`✅ Running with Node on http://${host}:${port}`);
     });
   }
