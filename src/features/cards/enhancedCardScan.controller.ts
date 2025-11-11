@@ -611,17 +611,40 @@ export class EnhancedCardScanController {
             const safeCombinedScore =
               safeVisualSimilarity * 0.6 + (safeTextConfidence / 100) * 0.4;
 
+            // Get card data from matching text result or variant
+            const cardData = matchingTextResult?.card || cardVariant;
+
             return {
               cardId: visualMatch.cardId,
-              name:
-                matchingTextResult?.card?.name ||
-                cardVariant?.name ||
-                "Unknown",
+              name: cardData?.name || "Unknown",
+              rarity: cardData?.rarity || null,
               imageUrl: visualMatch.imageUrl,
+              confidence: `${Math.round(safeCombinedScore * 100)}%`,
+              matchReason: `Visual match (${Math.round(
+                safeVisualSimilarity * 100
+              )}% similarity)`,
+              matchedFields: ["visual", "image"],
+              gameType: cardData?.gameType || gameType,
+              textConfidence: safeTextConfidence,
               visualSimilarity: safeVisualSimilarity,
               matchType: visualMatch.matchType,
-              textConfidence: safeTextConfidence,
               combinedScore: isNaN(safeCombinedScore) ? 0 : safeCombinedScore,
+              // Include game-specific stats
+              ...(gameType === "pokemon" && {
+                hp: cardData?.hp,
+                types: cardData?.types,
+              }),
+              ...(gameType === "yugioh" && {
+                attack: cardData?.attack,
+                defense: cardData?.defense,
+                level: cardData?.level,
+                attribute: cardData?.attribute,
+              }),
+              ...(gameType === "onepiece" && {
+                power: cardData?.power,
+                cost: cardData?.cost,
+                life: cardData?.life,
+              }),
             };
           })
           .sort((a, b) => b.combinedScore - a.combinedScore);
