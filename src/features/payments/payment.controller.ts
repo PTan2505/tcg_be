@@ -19,7 +19,6 @@ const payOS = new PayOS({
 
 const paymentExpired = Number(process.env.PAYOS_EXPIRED_SECONDS || "600");
 export class PaymentController {
-  // Create an order (premium or tokens), save Order, and request MoMo pay URL
   createOrder = async (c: Context) => {
     try {
       const user = c.get("user");

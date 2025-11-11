@@ -32,7 +32,7 @@ const cashOutSchema = new Schema<ICashOut>(
   {
     user: {
       type: Schema.Types.ObjectId,
-      ref: "users",
+      ref: "User",
       required: true,
     },
     amount: { type: Number, required: true },
@@ -41,7 +41,7 @@ const cashOutSchema = new Schema<ICashOut>(
     processedAt: { type: Date, default: null },
     processedBy: {
       type: Schema.Types.ObjectId,
-      ref: "users",
+      ref: "User",
       default: null,
     },
   },
