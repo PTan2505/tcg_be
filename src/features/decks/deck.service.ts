@@ -130,7 +130,7 @@ export class DeckService {
         .skip(skip)
         .limit(limit)
         .populate("cards.cardId")
-        .populate("userId", "username"),
+        .populate("userId", "username avatarUrl"),
       Deck.countDocuments(filter),
     ]);
 
