@@ -370,7 +370,7 @@ class MarketService {
       const listing = await MarketListingModel.findById(tx.listingId);
       await RevenueModel.create({
         revenueType: "marketplace_commission",
-        amount: commissionAmount,
+        amount: commissionAmount * Number(process.env.TOKEN_PRICE_VND || 1000),
         currency: "VND",
         transactionId: tx._id,
         userId: seller._id,
