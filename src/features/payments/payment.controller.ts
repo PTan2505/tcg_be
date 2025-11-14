@@ -1,6 +1,7 @@
 import { PayOS } from "@payos/node";
 import { Context } from "hono";
 import OrderModel from "../../database/models/order.model";
+import RevenueModel from "../../database/models/revenue";
 import UserModel from "../../database/models/user";
 import {
   createErrorResponse,
@@ -27,9 +28,9 @@ export class PaymentController {
           createErrorResponse(MESSAGES.AUTH.NO_TOKEN_PROVIDED),
           401
         );
-
       const body = await c.req.json();
-      const { orderType, tokenCount } = body as {
+      const { userId, orderType, tokenCount } = body as {
+        userId?: string;
         orderType?: string;
         tokenCount?: number;
       };
@@ -50,9 +51,14 @@ export class PaymentController {
         amount = count * pricePer;
       }
 
+      let userEmail = "";
+      if (userId) {
+        const userFind = await UserModel.findById(userId);
+        userEmail = userFind?.email || "";
+      }
       // Save order
       const order = await OrderModel.create({
-        userId: user.id,
+        userId: user.isAdmin ? userId : user.id,
         orderType,
         amount,
         currency: "VND",
@@ -72,7 +78,7 @@ export class PaymentController {
             : `Thanh toán ${tokenCount} tokens`,
         cancelUrl: "kado://payment/callback",
         returnUrl: "kado://payment/callback",
-        buyerEmail: user.email,
+        buyerEmail: user.isAdmin ? userEmail : user.email,
         expiredAt: Math.floor(Date.now() / 1000) + paymentExpired, // 10 minutes from now
       };
 
@@ -139,11 +145,30 @@ export class PaymentController {
       await order.save();
 
       const user = await UserModel.findById(order.userId);
-      if (user) {
+      if (user && isSuccess) {
         if (order.orderType === "premium") {
           if (!user.isPremium) {
             user.isPremium = true;
             await user.save();
+          }
+
+          // Log revenue from premium subscription
+          try {
+            await RevenueModel.create({
+              revenueType: "premium_subscription",
+              amount: order.amount,
+              currency: order.currency || "VND",
+              orderId: order._id,
+              userId: user._id,
+              description: `Premium subscription - ${
+                user.username || user.email
+              }`,
+              metadata: {
+                premiumDuration: "lifetime", // or specify duration if applicable
+              },
+            });
+          } catch (e) {
+            console.error("Failed to log premium revenue record", e);
           }
         } else if (order.orderType === "tokens") {
           const tokens = order.tokenCount ?? 0;
@@ -308,6 +333,7 @@ export class PaymentController {
         orderType,
         page = "1",
         limit = "50",
+        isPaid,
       } = c.req.query();
       const q: any = {};
       if (orderType) q.orderType = orderType;
@@ -318,6 +344,7 @@ export class PaymentController {
       if (startDate || endDate) q.createdAt = {};
       if (startDate) q.createdAt.$gte = new Date(startDate as string);
       if (endDate) q.createdAt.$lte = new Date(endDate as string);
+      if (isPaid && isPaid !== "") q.isPaid = isPaid;
 
       const pageNum = Math.max(1, Number(page));
       const lim = Math.min(1000, Math.max(1, Number(limit)));
@@ -358,8 +385,9 @@ export class PaymentController {
         orderType,
         page = "1",
         limit = "50",
+        isPaid,
       } = c.req.query();
-      const q: any = { isPaid: true };
+      const q: any = {};
       if (orderType) q.orderType = orderType;
       if (minAmount)
         q.amount = { ...(q.amount || {}), $gte: Number(minAmount) };
@@ -368,12 +396,14 @@ export class PaymentController {
       if (startDate || endDate) q.createdAt = {};
       if (startDate) q.createdAt.$gte = new Date(startDate as string);
       if (endDate) q.createdAt.$lte = new Date(endDate as string);
+      if (isPaid && isPaid !== "") q.isPaid = isPaid === "true";
 
       const pageNum = Math.max(1, Number(page));
       const lim = Math.min(1000, Math.max(1, Number(limit)));
 
       const total = await OrderModel.countDocuments(q);
       const data = await OrderModel.find(q)
+        .populate("userId", "username email")
         .sort({ createdAt: -1 })
         .skip((pageNum - 1) * lim)
         .limit(lim);

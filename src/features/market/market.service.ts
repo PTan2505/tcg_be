@@ -1,5 +1,6 @@
 import { UpdateResult } from "mongodb";
 import mongoose, { Types } from "mongoose";
+import RevenueModel from "../../database/models/revenue";
 import UserModel from "../../database/models/user";
 import { getMessage } from "../../shared/constants/messages";
 import AppError from "../../shared/errors/AppError";
@@ -9,7 +10,7 @@ import tokenTransactionService from "../tokenTransactions/tokenTransaction.servi
 import MarketListingModel from "./market.model";
 import MarketTransactionModel from "./market.transaction.model";
 
-const commission = Number(process.env.PERCENT_PER_TRANSACTION) / 100;
+const commission = Number(process.env.PERCENT_PER_TRANSACTION || "10") / 100;
 class MarketService {
   private notificationService: NotificationService;
 
@@ -360,8 +361,31 @@ class MarketService {
     const seller = await UserModel.findById(tx.sellerId);
     if (!seller) throw new AppError(getMessage("MARKET.SELLER_NOT_FOUND"), 404);
     const payout = tx.priceTokens * (1 - commission);
+    const commissionAmount = tx.priceTokens * commission;
     seller.tokenBalance += payout;
     await seller.save();
+
+    // Log revenue from marketplace commission
+    try {
+      const listing = await MarketListingModel.findById(tx.listingId);
+      await RevenueModel.create({
+        revenueType: "marketplace_commission",
+        amount: commissionAmount,
+        currency: "VND",
+        transactionId: tx._id,
+        userId: seller._id,
+        description: `Commission từ bán "${listing?.cardName || "N/A"}" (${
+          listing?.setCode || "N/A"
+        })`,
+        metadata: {
+          commissionRate: commission,
+          originalAmount: tx.priceTokens,
+          sellerPayout: payout,
+        },
+      });
+    } catch (e) {
+      console.error("Failed to log revenue record", e);
+    }
 
     // mark listing sold
     await MarketListingModel.findByIdAndUpdate(tx.listingId, {

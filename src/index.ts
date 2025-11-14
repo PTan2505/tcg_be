@@ -29,6 +29,7 @@ import marketRoutes from "./features/market/market.routes";
 import notificationsRoutes from "./features/notifications/notifications.routes";
 import paymentRoutes from "./features/payments/payment.routes";
 import postRoutes from "./features/posts/post.routes";
+import revenueRoutes from "./features/revenue/revenue.routes";
 import setRoutes from "./features/sets/set.routes";
 import tokenTransactionRoutes from "./features/tokenTransactions/tokenTransaction.routes";
 import userRoutes from "./features/users/user.routes";
@@ -192,6 +193,7 @@ app.route("/notifications", notificationsRoutes);
 app.route("/orders", paymentRoutes);
 app.route("/cashouts", cashOutRoutes);
 app.route("/token-transactions", tokenTransactionRoutes);
+app.route("/revenue", revenueRoutes);
 
 // Export the app for production environments
 export default app;

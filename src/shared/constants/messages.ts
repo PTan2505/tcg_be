@@ -246,6 +246,22 @@ export const MESSAGES = {
     REFUND_FAILED: "Hoàn tiền thất bại",
   },
 
+  // Revenue Messages
+  REVENUE: {
+    GET_SUCCESS: "Lấy dữ liệu doanh thu thành công",
+    GET_FAILED: "Không thể lấy dữ liệu doanh thu",
+    TOTAL_SUCCESS: "Lấy tổng doanh thu thành công",
+    BREAKDOWN_SUCCESS: "Lấy chi tiết doanh thu theo loại thành công",
+    TIMELINE_SUCCESS: "Lấy doanh thu theo khoảng thời gian thành công",
+    SUMMARY_SUCCESS: "Lấy tổng quan doanh thu thành công",
+    RECENT_SUCCESS: "Lấy doanh thu gần đây thành công",
+    DATE_RANGE_REQUIRED: "Ngày bắt đầu và ngày kết thúc là bắt buộc",
+    INVALID_DATE_RANGE: "Ngày bắt đầu phải nhỏ hơn ngày kết thúc",
+    INVALID_GROUP_BY:
+      "Tham số groupBy không hợp lệ. Chỉ chấp nhận: day, week, month, year",
+    INVALID_REVENUE_TYPE: "Loại doanh thu không hợp lệ",
+  },
+
   // Rate Limiting Messages
   RATE_LIMIT: {
     TOO_MANY_REQUESTS: "Quá nhiều yêu cầu. Vui lòng thử lại sau.",
@@ -268,14 +284,16 @@ export const MESSAGES = {
  */
 export const translateZodMessage = (originalMessage: string): string => {
   const zodMessages = MESSAGES.VALIDATION.ZOD_MESSAGES;
-  
+
   // Exact match first
   if (zodMessages[originalMessage as keyof typeof zodMessages]) {
     return zodMessages[originalMessage as keyof typeof zodMessages];
   }
-  
+
   // Pattern matching for common cases
-  for (const [englishPattern, vietnameseTranslation] of Object.entries(zodMessages)) {
+  for (const [englishPattern, vietnameseTranslation] of Object.entries(
+    zodMessages
+  )) {
     if (originalMessage.includes(englishPattern)) {
       // Handle special cases with dynamic values
       if (englishPattern.includes("at least") && originalMessage.match(/\d+/)) {
@@ -293,7 +311,7 @@ export const translateZodMessage = (originalMessage: string): string => {
           return `Số phải lớn hơn ${number}`;
         }
       }
-      
+
       if (englishPattern.includes("at most") && originalMessage.match(/\d+/)) {
         const number = originalMessage.match(/\d+/)?.[0];
         if (originalMessage.includes("String must contain at most")) {
@@ -306,30 +324,35 @@ export const translateZodMessage = (originalMessage: string): string => {
           return `Mảng không được vượt quá ${number} phần tử`;
         }
       }
-      
+
       // Type mismatch messages
-      if (originalMessage.includes("Expected") && originalMessage.includes("received")) {
+      if (
+        originalMessage.includes("Expected") &&
+        originalMessage.includes("received")
+      ) {
         const match = originalMessage.match(/Expected (\w+), received (\w+)/);
         if (match) {
           const expected = match[1];
           const received = match[2];
           const typeTranslations: Record<string, string> = {
-            'string': 'chuỗi',
-            'number': 'số',
-            'boolean': 'boolean',
-            'array': 'mảng',
-            'object': 'object',
-            'undefined': 'undefined',
-            'null': 'null'
+            string: "chuỗi",
+            number: "số",
+            boolean: "boolean",
+            array: "mảng",
+            object: "object",
+            undefined: "undefined",
+            null: "null",
           };
-          return `Mong đợi ${typeTranslations[expected] || expected}, nhận được ${typeTranslations[received] || received}`;
+          return `Mong đợi ${
+            typeTranslations[expected] || expected
+          }, nhận được ${typeTranslations[received] || received}`;
         }
       }
-      
+
       return vietnameseTranslation;
     }
   }
-  
+
   // Fallback to original message if no translation found
   return originalMessage;
 };
@@ -339,43 +362,50 @@ export const translateZodMessage = (originalMessage: string): string => {
  * Ví dụ: getMessage('AUTH.LOGIN_SUCCESS')
  */
 export const getMessage = (keyPath: string): string => {
-  const keys = keyPath.split('.');
+  const keys = keyPath.split(".");
   let value: any = MESSAGES;
-  
+
   for (const key of keys) {
-    if (value && typeof value === 'object' && key in value) {
+    if (value && typeof value === "object" && key in value) {
       value = value[key];
     } else {
-      return 'Message not found';
+      return "Message not found";
     }
   }
-  
-  return typeof value === 'string' ? value : 'Invalid message key';
+
+  return typeof value === "string" ? value : "Invalid message key";
 };
 
 /**
  * Helper function để tạo response object với message tiếng Việt
  */
-export const createSuccessResponse = (data?: any, message?: string, pagination?: any) => {
+export const createSuccessResponse = (
+  data?: any,
+  message?: string,
+  pagination?: any
+) => {
   const response: any = {
     success: true,
-    data
+    data,
   };
-  
+
   if (message) {
     response.message = message;
   }
-  
+
   if (pagination) {
     response.pagination = pagination;
   }
-  
+
   return response;
 };
 
-export const createErrorResponse = (error: string | { name: string; field: string; message: string }, statusCode?: number) => {
+export const createErrorResponse = (
+  error: string | { name: string; field: string; message: string },
+  statusCode?: number
+) => {
   return {
     success: false,
-    error: typeof error === 'string' ? { message: error } : error
+    error: typeof error === "string" ? { message: error } : error,
   };
 };
